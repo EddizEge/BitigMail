@@ -1,0 +1,21 @@
+{
+  "completed": true,
+  "results": [
+    {
+      "width": 1660,
+      "entry": "job-center",
+      "jobId": "job-9fb7a817c432",
+      "archiveId": "arc_cc9f6c23217d42ae",
+      "physicalMessages": 12,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "entry": "bridge-workflow",
+      "jobId": "job-171a385f47f5",
+      "archiveId": "arc_c7488162f06a4863",
+      "physicalMessages": 12,
+      "errors": []
+    }
+  ]
+}

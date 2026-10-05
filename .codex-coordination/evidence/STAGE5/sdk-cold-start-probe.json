@@ -1,0 +1,72 @@
+[
+  {
+    "Mode": "cold",
+    "Iteration": 1,
+    "ExitCode": 1,
+    "Result": {
+      "Warm": false,
+      "Concurrency": 32,
+      "Failures": 1,
+      "Errors": [
+        "ArgumentException: An item with the same key has already been added. Key: Tag:'PidTagImportance':0x17:Integer32"
+      ]
+    }
+  },
+  {
+    "Mode": "cold",
+    "Iteration": 2,
+    "ExitCode": 1,
+    "Result": {
+      "Warm": false,
+      "Concurrency": 32,
+      "Failures": 1,
+      "Errors": [
+        "InvalidOperationException: Operations that change non-concurrent collections must have exclusive access. A concurrent update was performed on this collection and corrupted its state. The collection's state is no longer correct."
+      ]
+    }
+  },
+  {
+    "Mode": "cold",
+    "Iteration": 3,
+    "ExitCode": 0,
+    "Result": {
+      "Warm": false,
+      "Concurrency": 32,
+      "Failures": 0,
+      "Errors": []
+    }
+  },
+  {
+    "Mode": "warm",
+    "Iteration": 1,
+    "ExitCode": 0,
+    "Result": {
+      "Warm": true,
+      "Concurrency": 32,
+      "Failures": 0,
+      "Errors": []
+    }
+  },
+  {
+    "Mode": "warm",
+    "Iteration": 2,
+    "ExitCode": 0,
+    "Result": {
+      "Warm": true,
+      "Concurrency": 32,
+      "Failures": 0,
+      "Errors": []
+    }
+  },
+  {
+    "Mode": "warm",
+    "Iteration": 3,
+    "ExitCode": 0,
+    "Result": {
+      "Warm": true,
+      "Concurrency": 32,
+      "Failures": 0,
+      "Errors": []
+    }
+  }
+]

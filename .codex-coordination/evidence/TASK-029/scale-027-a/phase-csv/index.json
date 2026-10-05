@@ -1,0 +1,27 @@
+{
+  "sourceAttempt": "C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\.codex-coordination\\evidence\\TASK-029\\scale-027-a\\attempt-47534874",
+  "phaseSamples": {
+    "idle-preflight": 25,
+    "import-preview": 79,
+    "import-starting": 2,
+    "import-transfer": 17561,
+    "import-verifying": 2179,
+    "idle-after-import": 2,
+    "mbox-preview": 1871,
+    "mbox-transfer": 11700,
+    "idle-after-mbox": 4,
+    "eml-preview": 1836,
+    "eml-transfer": 6901,
+    "eml-verifying": 5,
+    "idle-after-eml": 2,
+    "archive-preview": 9,
+    "archive-starting": 1,
+    "archive-transfer": 553,
+    "archive-verifying": 347,
+    "idle-after-archive": 1,
+    "independent-oracle": 2033,
+    "archive-search": 686
+  },
+  "summaryAgreement": true,
+  "discrepancies": {}
+}

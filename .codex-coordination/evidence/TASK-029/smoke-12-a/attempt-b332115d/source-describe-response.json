@@ -1,0 +1,27 @@
+{
+  "sourceHandle": "msrc_3ea0d697696540a594b1e0d99d384764",
+  "sourceKind": "eml-tree",
+  "dialect": "rfc822",
+  "displayPath": "corpus-tree (özgün klasör haritası)",
+  "totalFiles": 12,
+  "totalItems": 12,
+  "totalSizeBytes": 13013,
+  "folders": [
+    {
+      "folderName": "Gelen Kutusu",
+      "itemCount": 5,
+      "totalSizeBytes": 5860
+    },
+    {
+      "folderName": "Gönderilenler",
+      "itemCount": 3,
+      "totalSizeBytes": 2573
+    },
+    {
+      "folderName": "Projeler/İstanbul",
+      "itemCount": 4,
+      "totalSizeBytes": 4580
+    }
+  ],
+  "ignoredNonEmlFilesCount": 1
+}

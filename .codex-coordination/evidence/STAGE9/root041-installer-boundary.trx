@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="731d15e8-07fe-4e9a-a81a-6d371fe7f3a0" name="Eddiz@MERCAN-PC 2026-09-21 12:01:31" runUser="MERCAN-PC\Eddiz" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-21T12:01:31.7961986+03:00" queuing="2026-09-21T12:01:31.7961991+03:00" start="2026-09-21T12:01:30.8991557+03:00" finish="2026-09-21T12:01:31.8014232+03:00" />
+  <TestSettings name="default" id="b30195fa-d9d0-47ae-a806-c53d40e109b0">
+    <Deployment runDeploymentRoot="Eddiz_MERCAN-PC_2026-09-21_12_01_31" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="dac7fb62-4ef9-4cb7-a6e7-41465f82199c" testId="9f4c5c28-a136-ddb7-4d5c-070122788c20" testName="InstallerBoundaryTests.ReceiptFilenameMismatchCannotAuthorizeDeletion" computerName="MERCAN-PC" duration="00:00:00.0284397" startTime="2026-09-21T12:01:31.5290554+03:00" endTime="2026-09-21T12:01:31.5644842+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dac7fb62-4ef9-4cb7-a6e7-41465f82199c">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.ThrowsAny() Failure: No exception was thrown&#xD;
+Expected: typeof(System.Exception)</Message>
+          <StackTrace>   at InstallerBoundaryTests.ReceiptFilenameMismatchCannotAuthorizeDeletion() in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\probes\InstallerBoundaryTests\InstallerBoundaryTests.cs:line 106&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c656198e-d608-4b90-bcee-9d6705ebbe49" testId="9fceb7ae-0635-cf1b-45c2-ec80f5ef741c" testName="InstallerBoundaryTests.CompatibleRollbackAndUninstallPreserveUserData" computerName="MERCAN-PC" duration="00:00:00.1149284" startTime="2026-09-21T12:01:31.3759994+03:00" endTime="2026-09-21T12:01:31.4996754+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c656198e-d608-4b90-bcee-9d6705ebbe49" />
+    <UnitTestResult executionId="77ec6a79-2080-4c7c-a2b8-83539efe1cc7" testId="6f7cb247-0716-cbc2-36e9-31c9484f63fd" testName="InstallerBoundaryTests.TamperedUpdateDoesNotChangeActiveVersionOrUserData" computerName="MERCAN-PC" duration="00:00:00.0259413" startTime="2026-09-21T12:01:31.5674919+03:00" endTime="2026-09-21T12:01:31.5904028+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77ec6a79-2080-4c7c-a2b8-83539efe1cc7" />
+    <UnitTestResult executionId="dd406d29-0ba9-4795-9396-c582a68a43e5" testId="ad126ded-e87e-c122-4c2e-2aba9b0c0c11" testName="InstallerBoundaryTests.SchemaIncompatibleRollbackPreservesActivePointerAndMarker" computerName="MERCAN-PC" duration="00:00:00.0374374" startTime="2026-09-21T12:01:31.6688533+03:00" endTime="2026-09-21T12:01:31.7065401+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dd406d29-0ba9-4795-9396-c582a68a43e5" />
+    <UnitTestResult executionId="c4158889-0246-41b5-8022-a6adf4667b5a" testId="d43a401d-220b-42ee-9e40-90dc019def53" testName="InstallerBoundaryTests.WrongProductReceiptCannotAuthorizeDeletion" computerName="MERCAN-PC" duration="00:00:00.0263277" startTime="2026-09-21T12:01:31.6164901+03:00" endTime="2026-09-21T12:01:31.6433361+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c4158889-0246-41b5-8022-a6adf4667b5a">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.ThrowsAny() Failure: No exception was thrown&#xD;
+Expected: typeof(System.Exception)</Message>
+          <StackTrace>   at InstallerBoundaryTests.WrongProductReceiptCannotAuthorizeDeletion() in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\probes\InstallerBoundaryTests\InstallerBoundaryTests.cs:line 97&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4f1175b2-5eb8-4029-a76e-07865297bcb1" testId="bd6d70b6-08cb-cd7e-8406-755b105e955e" testName="InstallerBoundaryTests.InvalidLaterReceiptEntryCausesNoEarlierDeletion" computerName="MERCAN-PC" duration="00:00:00.0275842" startTime="2026-09-21T12:01:31.5064330+03:00" endTime="2026-09-21T12:01:31.5286083+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f1175b2-5eb8-4029-a76e-07865297bcb1" />
+    <UnitTestResult executionId="c53f3fd1-fcd8-4d97-8dcf-5cd7670bc734" testId="a0061bbc-5726-7928-8dcc-21521f9818f4" testName="InstallerBoundaryTests.ActiveProfileRefusesUpdateAndUninstall" computerName="MERCAN-PC" duration="00:00:00.0250787" startTime="2026-09-21T12:01:31.6440451+03:00" endTime="2026-09-21T12:01:31.6687042+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c53f3fd1-fcd8-4d97-8dcf-5cd7670bc734" />
+    <UnitTestResult executionId="3956701c-ffa6-4f3a-bb05-32fa46b89cd0" testId="ef22abc7-9dbb-ce07-10a4-6859c9fc68b0" testName="InstallerBoundaryTests.UninstallKeepsModifiedUnknownAndUserDataFiles" computerName="MERCAN-PC" duration="00:00:00.0256068" startTime="2026-09-21T12:01:31.5905500+03:00" endTime="2026-09-21T12:01:31.6163438+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3956701c-ffa6-4f3a-bb05-32fa46b89cd0" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="InstallerBoundaryTests.TamperedUpdateDoesNotChangeActiveVersionOrUserData" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root041-installer\bin\installerboundarytests\release\installerboundarytests.dll" id="6f7cb247-0716-cbc2-36e9-31c9484f63fd">
+      <Execution id="77ec6a79-2080-4c7c-a2b8-83539efe1cc7" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root041-installer\bin\InstallerBoundaryTests\release\InstallerBoundaryTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="InstallerBoundaryTests" name="TamperedUpdateDoesNotChangeActiveVersionOrUserData" />
+    </UnitTest>
+    <UnitTest name="InstallerBoundaryTests.ActiveProfileRefusesUpdateAndUninstall" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root041-installer\bin\installerboundarytests\release\installerboundarytests.dll" id="a0061bbc-5726-7928-8dcc-21521f9818f4">
+      <Execution id="c53f3fd1-fcd8-4d97-8dcf-5cd7670bc734" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root041-installer\bin\InstallerBoundaryTests\release\InstallerBoundaryTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="InstallerBoundaryTests" name="ActiveProfileRefusesUpdateAndUninstall" />
+    </UnitTest>
+    <UnitTest name="InstallerBoundaryTests.CompatibleRollbackAndUninstallPreserveUserData" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root041-installer\bin\installerboundarytests\release\installerboundarytests.dll" id="9fceb7ae-0635-cf1b-45c2-ec80f5ef741c">
+      <Execution id="c656198e-d608-4b90-bcee-9d6705ebbe49" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root041-installer\bin\InstallerBoundaryTests\release\InstallerBoundaryTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="InstallerBoundaryTests" name="CompatibleRollbackAndUninstallPreserveUserData" />
+    </UnitTest>
+    <UnitTest name="InstallerBoundaryTests.SchemaIncompatibleRollbackPreservesActivePointerAndMarker" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root041-installer\bin\installerboundarytests\release\installerboundarytests.dll" id="ad126ded-e87e-c122-4c2e-2aba9b0c0c11">
+      <Execution id="dd406d29-0ba9-4795-9396-c582a68a43e5" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root041-installer\bin\InstallerBoundaryTests\release\InstallerBoundaryTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="InstallerBoundaryTests" name="SchemaIncompatibleRollbackPreservesActivePointerAndMarker" />
+    </UnitTest>
+    <UnitTest name="InstallerBoundaryTests.InvalidLaterReceiptEntryCausesNoEarlierDeletion" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root041-installer\bin\installerboundarytests\release\installerboundarytests.dll" id="bd6d70b6-08cb-cd7e-8406-755b105e955e">
+      <Execution id="4f1175b2-5eb8-4029-a76e-07865297bcb1" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root041-installer\bin\InstallerBoundaryTests\release\InstallerBoundaryTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="InstallerBoundaryTests" name="InvalidLaterReceiptEntryCausesNoEarlierDeletion" />
+    </UnitTest>
+    <UnitTest name="InstallerBoundaryTests.ReceiptFilenameMismatchCannotAuthorizeDeletion" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root041-installer\bin\installerboundarytests\release\installerboundarytests.dll" id="9f4c5c28-a136-ddb7-4d5c-070122788c20">
+      <Execution id="dac7fb62-4ef9-4cb7-a6e7-41465f82199c" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root041-installer\bin\InstallerBoundaryTests\release\InstallerBoundaryTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="InstallerBoundaryTests" name="ReceiptFilenameMismatchCannotAuthorizeDeletion" />
+    </UnitTest>
+    <UnitTest name="InstallerBoundaryTests.WrongProductReceiptCannotAuthorizeDeletion" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root041-installer\bin\installerboundarytests\release\installerboundarytests.dll" id="d43a401d-220b-42ee-9e40-90dc019def53">
+      <Execution id="c4158889-0246-41b5-8022-a6adf4667b5a" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root041-installer\bin\InstallerBoundaryTests\release\InstallerBoundaryTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="InstallerBoundaryTests" name="WrongProductReceiptCannotAuthorizeDeletion" />
+    </UnitTest>
+    <UnitTest name="InstallerBoundaryTests.UninstallKeepsModifiedUnknownAndUserDataFiles" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root041-installer\bin\installerboundarytests\release\installerboundarytests.dll" id="ef22abc7-9dbb-ce07-10a4-6859c9fc68b0">
+      <Execution id="3956701c-ffa6-4f3a-bb05-32fa46b89cd0" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root041-installer\bin\InstallerBoundaryTests\release\InstallerBoundaryTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="InstallerBoundaryTests" name="UninstallKeepsModifiedUnknownAndUserDataFiles" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="9f4c5c28-a136-ddb7-4d5c-070122788c20" executionId="dac7fb62-4ef9-4cb7-a6e7-41465f82199c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9fceb7ae-0635-cf1b-45c2-ec80f5ef741c" executionId="c656198e-d608-4b90-bcee-9d6705ebbe49" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6f7cb247-0716-cbc2-36e9-31c9484f63fd" executionId="77ec6a79-2080-4c7c-a2b8-83539efe1cc7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ad126ded-e87e-c122-4c2e-2aba9b0c0c11" executionId="dd406d29-0ba9-4795-9396-c582a68a43e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d43a401d-220b-42ee-9e40-90dc019def53" executionId="c4158889-0246-41b5-8022-a6adf4667b5a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bd6d70b6-08cb-cd7e-8406-755b105e955e" executionId="4f1175b2-5eb8-4029-a76e-07865297bcb1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a0061bbc-5726-7928-8dcc-21521f9818f4" executionId="c53f3fd1-fcd8-4d97-8dcf-5cd7670bc734" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ef22abc7-9dbb-ce07-10a4-6859c9fc68b0" executionId="3956701c-ffa6-4f3a-bb05-32fa46b89cd0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Bir Listede Olmayan Sonuçlar" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Yüklenen Tüm Sonuçlar" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="8" executed="8" passed="6" failed="2" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 8.0.31)&#xD;
+[xUnit.net 00:00:00.06]   Discovering: InstallerBoundaryTests&#xD;
+[xUnit.net 00:00:00.09]   Discovered:  InstallerBoundaryTests&#xD;
+[xUnit.net 00:00:00.11]   Starting:    InstallerBoundaryTests&#xD;
+[xUnit.net 00:00:00.31]       Assert.ThrowsAny() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:00.31]       Expected: typeof(System.Exception)&#xD;
+[xUnit.net 00:00:00.31]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.31]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\probes\InstallerBoundaryTests\InstallerBoundaryTests.cs(106,0): at InstallerBoundaryTests.ReceiptFilenameMismatchCannotAuthorizeDeletion()&#xD;
+[xUnit.net 00:00:00.31]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:00.39]       Assert.ThrowsAny() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:00.39]       Expected: typeof(System.Exception)&#xD;
+[xUnit.net 00:00:00.39]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.39]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\probes\InstallerBoundaryTests\InstallerBoundaryTests.cs(97,0): at InstallerBoundaryTests.WrongProductReceiptCannotAuthorizeDeletion()&#xD;
+[xUnit.net 00:00:00.39]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:00.46]   Finished:    InstallerBoundaryTests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="MERCAN-PC" outcome="Error" timestamp="2026-09-21T12:01:31.5662164+03:00">
+        <Text>[xUnit.net 00:00:00.31]     InstallerBoundaryTests.ReceiptFilenameMismatchCannotAuthorizeDeletion [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="MERCAN-PC" outcome="Error" timestamp="2026-09-21T12:01:31.6437482+03:00">
+        <Text>[xUnit.net 00:00:00.39]     InstallerBoundaryTests.WrongProductReceiptCannotAuthorizeDeletion [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

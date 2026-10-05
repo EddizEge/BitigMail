@@ -1,0 +1,26 @@
+{
+  "overallPeakWsBytes": 1410404352,
+  "overallPeakPrivateBytes": 1501650944,
+  "phases": {
+    "transfer": {
+      "samples": 1,
+      "peakWsBytes": 668327936,
+      "minWsBytes": 668327936,
+      "peakPrivateBytes": 686764032,
+      "minPrivateBytes": 686764032,
+      "peakCpuPct": 0.0,
+      "startTime": "2026-09-15T13:08:19.892691+00:00",
+      "endTime": "2026-09-15T13:08:19.930542+00:00"
+    },
+    "transferring": {
+      "samples": 190,
+      "peakWsBytes": 1410404352,
+      "minWsBytes": 671727616,
+      "peakPrivateBytes": 1501650944,
+      "minPrivateBytes": 692236288,
+      "peakCpuPct": 468.7,
+      "startTime": "2026-09-15T13:08:19.930542+00:00",
+      "endTime": "2026-09-15T13:08:40.337782+00:00"
+    }
+  }
+}

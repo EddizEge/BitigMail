@@ -1,0 +1,40 @@
+From sender@example.test Mon Jan  1 00:30:00 2024
+From: Edge Sender <sender@example.test>
+To: Edge Receiver <receiver@example.test>
+Subject: From escaping qp
+Message-ID: <escape-qp@example.test>
+Date: Mon, 01 Jan 2024 00:30:00 +0300
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+=46rom QP literal
+=3EFrom QP quoted
+=3E=3EFrom QP twice
+
+From sender@example.test Mon Jan  1 00:30:00 2024
+From: Edge Sender <sender@example.test>
+To: Edge Receiver <receiver@example.test>
+Subject: From escaping base64
+Message-ID: <escape-base64@example.test>
+Date: Mon, 01 Jan 2024 00:30:00 +0300
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+RnJvbSBiYXNlNjQgbGl0ZXJhbA0KPkZyb20gYmFzZTY0IHF1b3RlZA0KPj5Gcm9tIGJhc2U2NCB0d2ljZQ0K
+
+From sender@example.test Mon Jan  1 00:30:00 2024
+From: Edge Sender <sender@example.test>
+To: Edge Receiver <receiver@example.test>
+Subject: From escaping raw
+Message-ID: <escape-raw@example.test>
+Date: Mon, 01 Jan 2024 00:30:00 +0300
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+>From raw literal
+>>From raw quoted
+>>>From raw twice
+

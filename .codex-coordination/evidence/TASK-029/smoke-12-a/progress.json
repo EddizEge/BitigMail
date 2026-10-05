@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-15T13:13:22.936262+00:00",
+  "phase": "archive",
+  "jobId": "job-21c36c21001d",
+  "status": "completed",
+  "itemsWritten": 12,
+  "totalItems": 12,
+  "phaseCompleted": null,
+  "phaseTotal": null,
+  "segmentElapsedSec": 0.5424539000086952
+}

@@ -1,0 +1,12 @@
+{
+  "completed": false,
+  "results": [
+    {
+      "width": 1660,
+      "error": "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  getByTestId('preview-location-company')\nExpected: \"B Şirketi api-f420241575\"\nReceived: \"api-f420241575-b\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveText\" getByTestId('preview-location-company') with timeout 5000ms\n  - waiting for getByTestId('preview-location-company')\n    14 × locator resolved to <span data-testid=\"preview-location-company\">api-f420241575-b</span>\n       - unexpected value \"api-f420241575-b\"\n",
+      "errors": [],
+      "beacons": []
+    }
+  ],
+  "sourceApiReport": ".codex-coordination/evidence/TASK-018/api-f420241575/report.json"
+}

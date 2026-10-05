@@ -1,0 +1,15 @@
+TASK-012 consolidated backend compile + publication-safety correction. FILE EDITS ONLY; run nothing and do not edit frontend.
+
+LocalHost build has 28 errors. Reconcile models/call sites rather than creating duplicate semantics:
+- JobManager references missing RegisteredSplitPlan CanSplit, BlockerReason, SplitMode, SizeCapBytes; PstSplitter.Split call missing/reordered options.
+- LocalEngineApiEndpoints: SplitOptions.Validate called with wrong signature/assigned from void; missing SplitYearGroupPreview; missing SplitOptions ModeYear/ModeSize; RegisteredSplitPlan missing SelectionId/SplitMode/SizeCapBytes/CanSplit/BlockerReason; FolderInfo has no ExtractMessage (use owning PersonalStorage production traversal, as prior analyzer/converter do).
+Use one coherent set of property names/types across Engine, LocalHost, tests, persistence, and JSON. Preserve canonical request fingerprint from fix1 and SynchronousConversionProgress.
+
+Critical publication safety fixes in PstSplitter:
+1. NEVER recursively delete an existing `arsiv-{jobId}.partial` directory. If stage path already exists as file or directory, fail closed and preserve it. If final path exists as file or directory, fail closed; never File.Delete/overwrite. Validate canonical output parent/stage/final containment and a safe single-path-segment jobId even for direct public engine calls.
+2. Manifest serialized inside staging must describe the post-rename final bundle: PartFullPath values must be canonical final-directory paths (or durable relative filename plus correctly resolved final full path), never `.partial` paths. Persisted report likewise uses final paths.
+3. Measure each part actual bytes/SHA only AFTER part verification/fault hook. After BeforePublicationHook, re-open/recompute every finalized candidate's size/hash, enforce cap, exact PST file-set versus manifest, and verification/coverage invariants; any mutation/addition/removal prevents publication. Manifest itself must correspond exactly to final PST filenames; no leftover candidate PST.
+
+Add production-connected tests: existing partial directory/file sentinel preserved; existing final file/directory sentinel preserved; unsafe/multisegment jobId and containment rejected; later-part tamper after verification or BeforePublicationHook blocks entire bundle; extra/missing candidate file blocks publish; manifest/report PartFullPath points to final bundle and exists after rename; cap/hash are post-hook final values.
+
+Keep source lock/hash, aggregate physical coverage, typed handles, no arbitrary paths, legacy OST APIs and no shared cleanup. Update backend-pending result without claiming execution.

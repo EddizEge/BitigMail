@@ -1,0 +1,24 @@
+[
+  {
+    "width": 1660,
+    "title": "BitigMail — Yerel çalışma alanı",
+    "content": 490,
+    "brand": true,
+    "scrollWidth": 1660,
+    "overlay": false,
+    "detailsVisible": true,
+    "exceptions": [],
+    "pass": true
+  },
+  {
+    "width": 390,
+    "title": "BitigMail — Yerel çalışma alanı",
+    "content": 490,
+    "brand": true,
+    "scrollWidth": 390,
+    "overlay": false,
+    "detailsVisible": true,
+    "exceptions": [],
+    "pass": true
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "status": "DONE",
+  "observedBackendTests": 229,
+  "observedFrontendTests": 65,
+  "observedTypecheck": "PASS",
+  "observedLint": "PASS",
+  "observedBuild": "PASS",
+  "accountApiChecks": 120,
+  "transferApiChecks": 155,
+  "normalSecurityChecks": 20,
+  "normalImapChecks": 4,
+  "realUiViewports": [
+    1660,
+    390
+  ],
+  "resumeScenario": "Synthetic durable snapshot with two Verified and one AppendIntent; actual API/UI reconciliation on real Dovecot",
+  "resumeNewCopies": 0,
+  "phonePreviewUrl": "http://192.168.1.51:5176/",
+  "physicalPhoneAccessConfirmed": false,
+  "scopeLimit": "Synthetic 12-message pilot; no OAuth, provider-specific, or 100GB acceptance"
+}

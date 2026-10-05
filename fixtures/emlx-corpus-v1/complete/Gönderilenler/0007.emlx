@@ -1,0 +1,39 @@
+929
+From: =?utf-8?q?Burak_Akta=C5=9F?= <burak.aktas@lojistik.example>
+To: =?utf-8?q?Ay=C5=9Fe_Demir?= <ayse.demir@sirket.example>
+Subject: =?utf-8?b?QXlsxLFrIERhxJ/EsXTEsW0gUmFwb3J1IHZlIEdyYWZpaw==?=
+Date: Mon, 08 Jul 2024 08:30:00 +0200
+Message-ID: <msg-2024-07-png-ek@lojistik.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============_bound_msg07_mix_=="
+
+--===============_bound_msg07_mix_==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Ayşe Hanım,
+
+Aylık dağıtım raporuna ait özet grafik PNG biçiminde eklenmiştir.
+
+Saygılarımla,
+Burak Aktaş
+--===============_bound_msg07_mix_==
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="rapor_grafik.png"
+
+iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEUlEQVR42mOQm/AfjhiI4wAAq2Ia
+0WIgvAwAAAAASUVORK5CYII=
+--===============_bound_msg07_mix_==--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>flags</key>
+	<integer>7</integer>
+	<key>source-id</key>
+	<string>msg-07</string>
+	<key>synthetic-fixture</key>
+	<true/>
+</dict>
+</plist>

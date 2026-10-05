@@ -1,0 +1,28 @@
+{
+  "previewId": "bprev_c5f08366c3294c8ab2c384d02d65a62f",
+  "companyId": "task017-ext-ebb2e9538e",
+  "projectId": "extended-pilot",
+  "sourceHandle": "msrc_065a6f041d8749539af893162b4ffd7e",
+  "sourceFingerprint": "b2b99494b1c464b57c924ba150063af465d9cc1e3f31d0b9e7926bbdf7e1b09a",
+  "sourceKind": "eml-files",
+  "targetAccountId": "acc_cb0d4d14b3c64a42b87e22e924efeee5",
+  "targetAccountVersion": 1,
+  "totalSourceItems": 12,
+  "eligibleItemsCount": 3,
+  "excludedCount": 9,
+  "missingDateExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "Corpus",
+      "targetFolder": "TASK017-ext-ebb2e9538e-istanbul-imp",
+      "totalItems": 12,
+      "eligibleItems": 3,
+      "excludedCount": 9,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-13T22:44:44.8230474+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

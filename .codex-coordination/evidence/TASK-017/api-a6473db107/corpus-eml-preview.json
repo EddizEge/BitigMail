@@ -1,0 +1,28 @@
+{
+  "previewId": "bprev_3f33aa28701c4d5fbc6fa11ddcb8d778",
+  "companyId": "root-bridge-83f6a9e7",
+  "projectId": "local-pilot",
+  "sourceHandle": "msrc_532069b3a6174b0aafe9de38447d7e87",
+  "sourceFingerprint": "b2b99494b1c464b57c924ba150063af465d9cc1e3f31d0b9e7926bbdf7e1b09a",
+  "sourceKind": "eml-files",
+  "targetAccountId": "acc_677101107eaf41e68d3bd877a9752725",
+  "targetAccountVersion": 1,
+  "totalSourceItems": 12,
+  "eligibleItemsCount": 12,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "Corpus",
+      "targetFolder": "TASK017-api-a6473db107-corpus-eml",
+      "totalItems": 12,
+      "eligibleItems": 12,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-13T21:53:49.8292576+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

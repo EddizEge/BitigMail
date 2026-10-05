@@ -1,0 +1,38 @@
+{
+  "completed": false,
+  "stage": "128m",
+  "checks": [
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "at least1024 physical source messages",
+      "pass": true
+    },
+    {
+      "name": "source size within2percent target",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-40c4d33f6ccf no-store",
+      "pass": true
+    },
+    {
+      "name": "completed owned export job-40c4d33f6ccf",
+      "pass": false
+    }
+  ],
+  "exports": [],
+  "archives": [],
+  "timings": [
+    {
+      "route": "/api/session",
+      "httpAndJsonMs": 215.59209999395534
+    },
+    {
+      "route": "/api/jobs/job-40c4d33f6ccf",
+      "httpAndJsonMs": 529.2158999945968
+    }
+  ]
+}

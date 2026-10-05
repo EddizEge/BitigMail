@@ -1,0 +1,33 @@
+{
+  "previewId": "aprv_e050cc518d7a4214aaa9321da6959448",
+  "archiveName": "Bridge diagnostic",
+  "companyId": "comp-ornek",
+  "projectId": "proj-ornek-gecis",
+  "companyName": "Örnek Şirket",
+  "projectName": "Sistem Geçişi 2024",
+  "sourceKind": "bridge-export",
+  "dialect": "mboxrd",
+  "sourceFingerprint": "export:job-3b6cab7b2f7c:2026-09-13T23:00:58.9983360+00:00",
+  "totalFiles": 12,
+  "totalItems": 12,
+  "totalSizeBytes": 58493,
+  "folders": [
+    {
+      "folderName": "Gönderilenler",
+      "itemCount": 3,
+      "totalSizeBytes": 8304
+    },
+    {
+      "folderName": "INBOX",
+      "itemCount": 5,
+      "totalSizeBytes": 30865
+    },
+    {
+      "folderName": "Projeler/İstanbul",
+      "itemCount": 4,
+      "totalSizeBytes": 19324
+    }
+  ],
+  "canIngest": true,
+  "blockerReason": null
+}

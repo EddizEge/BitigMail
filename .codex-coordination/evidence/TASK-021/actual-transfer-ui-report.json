@@ -1,0 +1,58 @@
+{
+  "finished": true,
+  "completedJobs": [
+    {
+      "width": 1660,
+      "direction": "import",
+      "jobId": "job-2304d7489a5e",
+      "count": 12
+    },
+    {
+      "width": 1660,
+      "direction": "export",
+      "jobId": "job-c0374bfe427d",
+      "count": 12
+    },
+    {
+      "width": 390,
+      "direction": "import",
+      "jobId": "job-bbf311b07665",
+      "count": 3
+    },
+    {
+      "width": 390,
+      "direction": "export",
+      "jobId": "job-609e3b1b9078",
+      "count": 3
+    }
+  ],
+  "browserPath": "Browser plugin not available; existing headless Playwright",
+  "results": [
+    {
+      "width": 1660,
+      "count": 12,
+      "importJob": "job-2304d7489a5e",
+      "exportJob": "job-c0374bfe427d",
+      "geometry": {
+        "viewport": 1660,
+        "document": 1660,
+        "body": 1660
+      },
+      "errors": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "count": 3,
+      "importJob": "job-bbf311b07665",
+      "exportJob": "job-609e3b1b9078",
+      "geometry": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      },
+      "errors": [],
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+TASK_ID: TASK-017
+STATUS: DONE
+EXECUTOR: GEMINI
+CONTROLLER: SOL 5.6 LIMITED
+CHANGED_FILES:
+- engine/BitigMail.Engine/Bridge/BridgeTransferModels.cs
+- engine/BitigMail.Engine/Bridge/BridgeMboxrdValidator.cs
+- engine/BitigMail.Engine/Storage/BridgeMimeBytePolicy.cs (ASTRA/root exclusive)
+- engine/BitigMail.Engine/Models/ConversionReport.cs
+- engine/BitigMail.LocalHost/Bridge/Transfer/BridgeImportPreviewService.cs
+- engine/BitigMail.LocalHost/Bridge/Transfer/BridgeExportPreviewService.cs
+- engine/BitigMail.LocalHost/Bridge/Transfer/BridgeImportWorker.cs
+- engine/BitigMail.LocalHost/Bridge/Transfer/BridgeExportWorker.cs
+- engine/BitigMail.LocalHost/Bridge/Transfer/BridgeTransferJournal.cs
+- engine/BitigMail.LocalHost/Jobs/JobManager.BridgeTransfer.cs
+- engine/BitigMail.LocalHost/Jobs/JobManager.cs
+- engine/BitigMail.LocalHost/LocalEngineApiEndpoints.BridgeTransfer.cs
+- engine/BitigMail.LocalHost/LocalEngineApiEndpoints.cs
+- engine/BitigMail.LocalHost/Program.cs
+- engine/BitigMail.TestingHost/TestingBridgeFaults.cs
+- engine/BitigMail.TestingHost/TestingFilePickerService.cs
+- engine/BitigMail.TestingHost/Program.cs
+- engine/BitigMail.Engine.Tests/BridgeMimeBytePolicyCriticalTests.cs (ASTRA/root exclusive)
+- engine/BitigMail.Engine.Tests/BridgeJournalCriticalTests.cs (ASTRA/root exclusive)
+- engine/BitigMail.Engine.Tests/BridgeImportTests.cs
+- engine/BitigMail.Engine.Tests/BridgeExportTests.cs
+- engine/BitigMail.Engine.Tests/BridgeJournalAndResumeTests.cs
+- engine/BitigMail.Engine.Tests/BridgeSecurityAndScaleTests.cs
+- engine/BitigMail.Engine.Tests/BridgeTestHelpers.cs
+- prototype/src/api/localEngineClient.ts
+- prototype/src/types/localEngine.ts
+- prototype/src/hooks/useBridgeTransfer.ts
+- prototype/src/components/transfer/BridgeTransferWorkflow.tsx
+- prototype/src/components/transfer/TransfersTabView.tsx
+- prototype/src/components/jobs/JobCenter.tsx
+- prototype/src/App.tsx
+- prototype/src/tests/bridgeTransferWorkflow.test.tsx
+- lab/task017/check_bridge_boundaries.py (ASTRA/root owned)
+- lab/task017/verify_bridge.py (ASTRA/root owned)
+- lab/task017/run_bridge_acceptance.py (ASTRA/root owned)
+- lab/task017/run_task017_extended_acceptance.py
+- lab/task017/run_task017_mbox_crash_acceptance.py
+- docs/FILE_ACCOUNT_BRIDGE_WORKFLOW.md
+- docs/FILE_ACCOUNT_BRIDGE_VALIDATION.md
+- .codex-coordination/results/TASK-017-discovery.md
+- .codex-coordination/results/TASK-017-backend-checkpoint.md
+- .codex-coordination/results/TASK-017-ui-checkpoint.md
+- .codex-coordination/results/TASK-017-extended-acceptance.md
+- .codex-coordination/results/TASK-017.md
+SUMMARY:
+- Dosya ↔ Posta Hesabı Köprüsü (File ↔ Account Bridge) uçtan uca tamamlandı: EML ağacı (eml-tree) ve MBOX (mboxrd) biçimleri ile IMAP posta kutuları arasında çift yönlü, kayıpsız, filtrelenebilir ve kesintiye dayanıklı aktarım hattı kuruldu.
+- Kök mülkiyetindeki bayt kanonizasyon politikası (BridgeMimeBytePolicy) ve atomik transfer günlüğü (BridgeTransferJournal / BridgeJournalCriticalTests) sözleşmesine %100 sadık kalındı; hiçbir kök-özel dosyaya dokunulmadı.
+- EML/mboxrd↔IMAP köprü yolu üçüncü taraf değerlendirme kütüphanelerinden tamamen bağımsız (vendor-free) olarak çalışır; 72 fiziksel ileti ve 24 eki hiçbir Aspose filigranı veya yapay sınır olmaksızın başarıyla aktarmıştır. PST/OST operasyonları ise Aspose lisans/değerlendirme ve klasör başına 50 ileti sınırlarına tabi kalmaya devam eder.
+- Güvenlik ve gizlilik sınırları korundu: Yetkili dizin seçici ve tamamlanan iş raporlarında geçerli çıktı yolları sözleşme gereği meşru şekilde sağlanırken, hata yakalama bloklarında hiçbir beklenmedik ham istisna (exception message), yığın izi (stack trace), dahili sistem yolu veya gizli kimlik bilgisi (şifre, oturum anahtarı) istemciye sızdırılmamaktadır; kontrollü generic Türkçe hata mesajları korunmuştur.
+- İçe ve dışa aktarım worker'ları donmuş plan (frozen plan), disk tabanlı günlükleme, rastgele 128-bitlik IMAP anahtar kelime doğrulaması (`bitigmail_*`) ve kayıp yanıt uzlaşımı (lost-response reconciliation) ile süreç çökmesi sonrasında boş bellek kaydıyla dahi sıfır yinelenen ileti ve sıfır bayt bozulması ile devam edebilmektedir.
+- Kullanıcı arayüzü (BridgeTransferWorkflow, TransfersTabView, JobCenter) yön değiştirme durumlarını sıfırlayan, masaüstü (1660px) ve mobil (390px) görünümlerinde taşmasız çalışan, duraklatılmış/tamamlanmış işleri geri yükleyip raporlayabilen sağlam bir deneyim sunmaktadır.
+VERIFICATION:
+- Backend Derleme: LocalHost ve TestingHost Release derlemeleri 0 uyarı, 0 hata ile derlendi.
+- Backend Testleri: Release Engine 369/369 test PASS (0 hata, 0 atlanan); root-exclusive kritik bayt (18) ve günlük (9) testleri tam dahil.
+- Frontend: TypeScript tip kontrolü (typecheck) PASS; ESLint lint PASS; Vitest 110/110 test PASS; production build PASS (~585 kB non-blocking bundle-size uyarısı dışında temiz).
+- Genişletilmiş Kabul Koşumu (ext-f4da216137): 540/540 kontrol PASS (%100).
+  - Over50 vendor-free kabulü: 72 fiziksel EML / 24 ek, sıfır Aspose filigranı, tam bağımsız IMAP multiset doğrulaması.
+  - Filtreli İstanbul aktarımı: 2024-01-01 - 2024-02-28 aralığında 3 ileti / 1 ek tam filtreleme.
+  - Roundtrip: 12 ileti / 4 ek EML dışa aktarım -> içe aktarım döngüsünde multiset eşitliği ve bayt doğruluğu.
+  - Gerçek İçe Aktarım Çökmesi (Faz 4A): PauseAfterAppendBeforeReturn dikişi, PID 59516 -> Stop-Process -Id -Force -> PID 55888 yeni süreç, boş registry ile resume, Dovecot anahtar kelime eşleşmesi, 12/12 tamamlandı (sıfır mükerrer APPEND).
+  - Gerçek Dışa Aktarım Çökmesi (Faz 4B - EML): PauseAfterExportItemPersisted dikişi, PID 55888 -> Stop-Process -> PID 57252 yeni süreç, çıktı köküne bağlı resume, 5/5 tamamlandı.
+  - Lost-Response (Faz 5A): İleti aktarımı sonrası sunucu kopması senaryosunda keyword uzlaşması ile sıfır yinelenen 12/12 tamamlanma.
+  - Doğal Sıfır Eşleşme Negatifi (Faz 5B): PauseBeforeAppend dikişiyle keyword0 durumu, belirsizlik kuralı gereğince fail-closed NeedsAttention duruşu, sıfır yinelenen ekleme.
+  - Negatifler ve Güvenlik: Bozuk MBOX (junk/empty/malformed) HTTP 400/409, ikinci dosyada drift fail-closed, sibling çıktı tahrifatı HTTP 409 Conflict, dizin geçişi HTTP 400/409 ile engellendi.
+  - Kaynak Değişmezliği (Source Invariance): Kaynak klasörlerdeki UID, UIDVALIDITY, raw SHA-256, bayraklar ve internaldate değerleri tam eşitlik ile PASS.
+- MBOX Dışa Aktarım Çökme Kabulü (mbox-03bded8cb8): 78/78 kontrol PASS (%100).
+  - Kümülatif genişletilmiş kontroller: 540 + 78 = 618/618 PASS (%100).
+  - targetFormat=mboxrd, 5 INBOX iletisi, PauseAfterExportItemPersisted (Ordinal 2) ile ileti 1 staging (`.staging/fld_001/msg_00000001.raw`) diske yazıldıktan sonra dikiş tetiklendi.
+  - PID 60584 (LISTEN 6175, TestingHost Release, CreationDate doğrulanmış) native PowerShell `Stop-Process -Id 60584 -Force` ile öldürüldü ve portun kapandığı teyit edildi.
+  - Gizli pencere (`CREATE_NO_WINDOW`) ile PID 4484 başlatıldı (boş FileHandleRegistry).
+  - Günlük tahrif edilmeksizin resume çağrıldı; körü körüne üzerine yazma/ekleme yapılmadan 5/5 tamamlandı.
+  - Staging dizini temizlendi (0 .raw dosya); nihai `fld_001.mbox` (6173 bayt) üretildi.
+  - Kök bağımsız MBOX ayrıştırıcısı (`verify_bridge.py`): 5 ileti / 3 ek exact raw + headers + decoded parts PASS.
+  - Manifest doğrulaması: 5/5 PASS, mappingPass: True.
+  - Kaynak değişmezliği: Kaynak INBOX öncesi/sonrası exact UID/raw/flags/internaldate PASS.
+- Kök Nihai Arayüz Kabulü:
+  - JobCenter tamamlanmış dışa aktarım `job-e3b7b9bd4d09` geri yükleme (12 ileti ve rapor görünümü).
+  - Belirgin yön çıkışı (explicit direction exit) ile form temizliği.
+  - Başarısız içe aktarım `job-2fe1ff9c295c` geri yükleme (1 ileti, dondurulmuş TASK017 firma/proje bağlamı ve resume kontrolü).
+  - 1660×948 masaüstü ve 390×844 mobil regresyon: dört tamamlanmış gerçek iş (`f79ec8b3ab02`, `3b6cab7b2f7c`, `bb1b4e5c4b63`, `bb68b02f7f14`) ile masaüstü 12/12, mobil 3/3, konsol error/warning 0, yatay taşma 0.
+RISKS:
+- Standart EML ve MBOX dosyaları IMAP bayraklarını, dahili teslim tarihlerini ve anahtar kelimeleri yerel olarak taşımaz; bu meta veriler yan manifest (`manifest.json`) dosyasına yazılır. Farklı bir istemciye aktarıldığında bu yan meta verilerin doğrudan okunması istemci desteğine bağlıdır.
+- Production frontend derlemesi Vite varsayılan 500 kB sınırını aşmaktadır (~585 kB); bu durum işlevsel bir engel veya build hatası oluşturmamaktadır.
+UNCERTAINTIES:
+- Microsoft 365 kurumsal ve kişisel Outlook.com canlı pilotları (TASK-015/TASK-016) canlı ortam kimlik bilgileri gerektirdiği için LIVE_PILOT_PENDING durumunda beklemeye devam etmektedir.
+- Dosya ↔ Posta Hesabı Köprüsü yerel Dovecot IMAP ve yerel dosya sistemi üzerinde %100 kanıtlanmış olup, üçüncü taraf uzak IMAP sağlayıcılarının özel anahtar kelime (custom keyword) kota politikaları sağlayıcıya göre değişiklik gösterebilir.

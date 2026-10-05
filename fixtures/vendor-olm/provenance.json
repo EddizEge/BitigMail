@@ -1,0 +1,8 @@
+{
+  "source": "https://github.com/aspose-email/Aspose.Email-for-.NET/blob/c4f369a6770490ab11bef2630b57731191354a2e/Examples/Data/MAPI/SampleOLM.olm",
+  "length": 997508,
+  "commit": "c4f369a6770490ab11bef2630b57731191354a2e",
+  "retrieved": "2026-09-15",
+  "purpose": "Public vendor fixture for local OLM reader validation; not customer mail or proof of comprehensive OLM support",
+  "sha256": "A3AA54A01157618B1A45949F25F750D2A762984BE098B786F285930A6A468CE7"
+}

@@ -1,0 +1,6 @@
+{
+  "ProcessId": 38088,
+  "ExecutablePath": "C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\.tools\\dotnet\\dotnet.exe",
+  "CommandLine": "\"C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\.tools\\dotnet\\dotnet.exe\" \"C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\engine\\BitigMail.TestingHost\\bin\\Release\\net8.0-windows\\BitigMail.TestingHost.dll\"",
+  "CreationDate": "2026-09-14T05:05:51.300757+03:00"
+}

@@ -1,0 +1,48 @@
+# TASK-015 — Microsoft 365 bağlantısı ve pilot sözleşmesi
+
+Durum: DONE — LOCAL_READY / LIVE_PILOT_PENDING, 2026-09-13. Yerel geliştirme ve deterministik kabul tamamlandı. Gerçek Microsoft tenant/test hesabı ile giriş ve sağlayıcı pilotu çalıştırılmadı; gerçek Microsoft kabulü yerel sahte sağlayıcı testinden ayrı ve beklemededir.
+
+## Teslim
+Müşteri/proje altında Microsoft 365 hesabı bağlama, bağlantıyı sınama/klasörleri okuma, mevcut IMAP kaynak/hedef seçimi ve transfer motorunda OAuth kullanımı, yeniden yetkilendirme ve yerel bağlantı kaldırma. Önce Exchange Online global cloud ve kullanıcının kendi posta kutusu. Google, şirket içi Exchange, paylaşılan kutular, app-only/tenant-wide yetki, Graph, takvim/kişi ve 100GB bu görevin kabulü değildir.
+
+## Root güvenlik kararı
+- Resmi MSAL.NET public client: Authorization Code + PKCE, sistem tarayıcısı, `http://localhost` dinamik loopback redirect. Client secret YOK; ROPC/parola/device-code/embedded-browser fallback YOK.
+- MSAL `AcquireTokenInteractive`, `WithUseEmbeddedWebView(false)`, `WithSystemWebViewOptions` ve `OpenBrowserAsync` callback ile üretilen authorization URL'sini kısa ömürlü operasyona aktar. Backend tarayıcı açmaz; kullanıcı UI'daki güvenilir Microsoft bağlantısına tıklar. MSAL redirect/state/PKCE doğrular ve kendi yalnız-loopback listener'ını yönetir. Normal6174 CSRF sınırını gevşetme; callback için genel API muafiyeti ekleme.
+- HTTPS authority yalnız `https://login.microsoftonline.com/{tenantGuid}`, tenant ve client kimlikleri boş olmayan canonical GUID. Arbitrary authority, redirect, scopes, host kabul etme. İlk pilot için müşteri bazında kendi tek-tenant uygulama kaydı (clientId ve tenantId sır değildir).
+- Scope yalnız `https://outlook.office.com/IMAP.AccessAsUser.All`; MSAL standart openid/profile/offline_access kapsamlarını kendi yönetir. Graph/SMTP/POP/app-only kapsamı ekleme.
+- Exchange endpoint yalnız `outlook.office365.com:993` SslOnConnect, standart sertifika doğrulama. `SaslMechanismOAuth2` ile giriş. Bearer token hiçbir durumda password Authenticate overload'una gitmez. TLS veya keyword/bütünlük şartlarında gevşeme yok.
+- Login sonucunda MSAL TenantId tam istenen GUID ile eşleşir; Account/HomeAccountId boş olamaz. Kendi-kutu pilotunda authenticated Username istenen email ile ordinal-ignore-case eşleşir (alias/shared mailbox kapsam dışı). Yeniden bağlama aynı tenant + HomeAccountId + mailbox ile sınırlı; hesap değiştirmek yeni hesap oluşturur.
+- Microsoft auth SDK dependency exact version root approval after NuGet check; mevcut MailKit4.17/MimeKit4.17/Aspose24.8/Asn1 8.0.1 korunur. MSAL cache dışında JWT/PKCE kodunu kendin yazma.
+
+## Kalıcılık ve auth ayrımı
+- Eski hesap JSON'ları authKind yokken `password` olarak okunur. Yeni `microsoft365` discriminator ve immutable tenantId/clientId/homeAccountId ekle. Public DTO authKind/tenantId/clientId/status gösterebilir; cache/accessToken/refreshToken/idToken/cipher/secret/protocol yok.
+- Mevcut atomic hesap envelope ve DPAPI CurrentUser korumasını genişlet: OAuth secret içeriği MSAL serialized user cache (base64 wrapped) olabilir; generic protectedCredential alanı veya legacy alanla uyumlu migration seç. OAuth hesaplarını GetInternalAccountWithPassword API'sine düşürme: açık auth türü ve scoped async credential resolver kullan.
+- Cache her BitigMail accountId için ayrıdır, global paylaşımlı cache veya GetAccounts.First() yok. Silent acquire tam HomeAccountId ile. Cache başka şirket/hesaba kopyalanamaz (account-bound DPAPI entropy).
+- İlk oturum geçici bellekte tutulur. Başarılı kimlik eşleştirme + gerçek IMAP authentication sağlanmadan hesap kalıcı `connected` olmaz. Hata/iptal/zaman aşımı kalıcı hesap oluşturmaz. Cache yalnız tüm geçitlerden sonra tek atomic envelope içinde hesapla kaydedilir.
+- Her silent acquire cache'i kalıcı diskten yükler; MSAL cache changes operasyon içinde toplanır, başarılı işlem sonunda atomik kaydet. Refresh token her çalıştırma/yeni IMAP bağlantısından önce AcquireTokenSilent ile sağlanır. Cache kaydı başarısızsa başarı yayımlama; sır içermeyen hata dön. Silinmiş/değişmiş hesap refresh veya geç biten login ile diriltilmez. Per-account serialization ve expected metadata/auth generation kontrolleri zorunlu. Refresh yalnız secret günceller, iş planındaki account metadata version'ını gereksiz değiştirmez.
+- OAuth hesap güncellemede sadece displayName; host/port/TLS/username/email/password/client/tenant/authKind genel password edit üzerinden değiştirilemez. Disconnect/delete yerel cache + metadata'yı atomik mevcut silme semantiğiyle kaldırır. UI 'yerel bağlantıyı kaldır' der; Microsoft grant revocation iddiası yok.
+
+## Operasyon API / UI
+- İptal yanıtı gerçek terminal `status`, `message` ve varsa `accountId` döndürür. Bağlantı kaydı iptalden önce tamamlandıysa sonuç `connected` kalır; kullanıcıya iptal edilmiş gibi gösterilmez. İptal isteği ağ hatasında başarı sayılmaz; arayüz aynı kapsamdaki işlem durumunu yeniden okur ve geç yanıtı başka işlem/kapsama uygulamaz.
+- Korunan API altında POST /api/oauth/microsoft/start: companyId,projectId,displayName,email,clientId,tenantId; reconnect için accountId+expectedVersion. ClientToken veya callback/code almaz.
+- GET /api/oauth/microsoft/operations/{id}?companyId=&projectId= : random128bit id, kapsam eşleşmesi; durum preparing/awaiting-signin/verifying/connected/cancelled/expired/failed; authorizationUrl yalnız awaiting-signin sırasında; terminal DTO public accountId+redacted message. Token yok. POST .../{id}/cancel aynı kapsam altında.
+- Login zaman aşımı en çok5dk, bounded operations (örn32) + terminal TTL cleanup; iptal/timeout/dispose MSAL listener/tasks kapatır. Geç callback terminal durumu değiştiremez. İdempotent cancel, yanlış kapsam404/409; loglarda URL/code/state/token/provider exception dump yok. Dev ASP.NET request logging query'ye auth callback almaz.
+- Authorization URL backendde HTTPS login.microsoftonline.com ve tenant path olarak doğrulanır; frontend de linki allowlist eder, rel=noreferrer noopener. Authorization URL sadece React memory, localStorage/durable job/report yok. Sayfa/scope/unmount/reconnect değişimi eski sonuçları uygulamaz; aktif login iptal edilir veya kısa TTL dolmasına bırakılır. Tekrarlanan tıklama bir işlem üretir.
+- Hesap ekleme bölümünde 'IMAP' / 'Microsoft 365' seçimi. Microsoft formu displayName/email + açıklamalı Application(client) ID/Tenant ID, parola yok. Türkçe hazırlık yardımı ve desktop browser login bağlantısı. Mobil LAN sayfası önizleme olmaya devam eder; PC loopback login linki telefonda tamamlanabilir iddiası yok.
+- Awaiting/cancel/error/reconnect durumları görünür. Müşteri/proje bağlamı değişiminde eski authorization URL/kod kalmaz. Bağlanan hesap mevcut source/target listesinde görünür; generic hesap test/folders/preview/worker/resume yeni credential resolver'a bağlanır.
+- Silent auth `MsalUiRequiredException` stable `reauthorization_required` ile sunulur; aktarım durur ve mevcut journal korunur; yeniden bağlandıktan sonra mevcut resume mekanizması kullanılır. Kör APPEND retry veya kaynak silme yok. Sağlayıcı tam raw/keyword/date gereksinimlerini karşılamazsa preflight/worker açık engel döner; Microsoft için bütünlük kriterlerini azaltma.
+
+## Doğrulama ve teslim sınırı
+- Yeni testlerde injectable OAuth provider seam, fake deterministic provider yalnız test assembly/TestingHost DI. Normal hostta body/query/env ile fake auth açma. Mock provider başarıları Microsoft canlı kabulü diye yazılmaz.
+- Auth policy invalidGUID/URL/tenant/mailbox/home mismatch; cancelled/expired delayed callback; cross-scope; duplicate starts bounded; refresh afterdelete/update; persistfailure no success; DPAPI no plaintext/wrongaccount; secret-free API/errors; oldpassword regression. Root kritik test/bağımsız acceptance; Gemini normal implementation/tests.
+- Gerçek MSAL package/authorization construction PKCE/state/scope/loopback ve XOAUTH2 mekanizma seçimi test et; otomatik gerçek tenant login yok. Fake provider ile gerçek protected API+UI start/pending/cancel/success/reconnect ve source/target entegrasyonu kabulü.
+- Backend229 ve frontend65 eski testleri korunur; final backend/frontend/type/lint/build. Desktop1660/mobile390 rendered test. Testing6175 SOL kontrolünde, normal6174 final kabul sonrası root restart; LANdist güncelle. Orijinal lablar/Outlook/arşiv/test evidence silinmez.
+- Gerçek pilot ancak kullanıcı testhesabı/uygun kayıt sağladığında ve kendisi giriş yaptığında: source→M365 küçük seçili kopya, M365→lab ters kopya, raw/body/attachment/date/flags/keywords ve source unchanged bağımsız karşılaştırma. Kurum koşulu veya APPEND/keyword engeli olursa dürüst sınırlama kaydı; güvenlik politikasını kapatma. Testhesabı yoksa teslim `LOCAL_READY / LIVE_PILOT_PENDING`, DONE provider acceptance iddiası yok.
+- docs/MICROSOFT365_SETUP.md: Entra singletenant desktop app registration, localhost redirect, delegated Exchange IMAP permission, user/admin consent policy, mailbox IMAP enablement requirement, setup IDs, login/logout scope, pilot procedure. Tenant ayarlarını araçlarla değiştirme.
+
+## Resmi kaynaklar — 2026-09-13 kontrol edildi
+- https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth
+- https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/pop3-and-imap4
+- https://learn.microsoft.com/en-us/entra/msal/dotnet/acquiring-tokens/using-web-browsers
+- https://learn.microsoft.com/en-us/entra/msal/dotnet/how-to/token-cache-serialization
+- https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow

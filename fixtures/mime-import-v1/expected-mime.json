@@ -1,0 +1,953 @@
+{
+  "schemaVersion": 1,
+  "corpusPath": "fixtures/mail-corpus-v1",
+  "reader": "Python stdlib email + explicit one-pass mboxrd unescape",
+  "normalization": "Decoded text CRLF/CR -> LF only; no trimming or watermark removal.",
+  "physicalMessages": 12,
+  "attachments": 4,
+  "cidCount": 1,
+  "sourceHashes": {
+    "eml/msg-01.eml": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+    "eml/msg-02.eml": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+    "eml/msg-03.eml": "e2273fca875fcf29b480af37a24848dc3491f26495c19e771ca61d3bede6021e",
+    "eml/msg-04.eml": "2458f638598e26cbaafacca649667da6c318c04abbc607f7fe8593c841ef7f62",
+    "eml/msg-05.eml": "9e4fce34ec9eabd76f408039e137c712a36c7d5e996ac840c13b1c956b00d860",
+    "eml/msg-06.eml": "f8523c4af2881004182f6805a7b1097969c56741c8c2bce672ad2302bd191916",
+    "eml/msg-07.eml": "1c85536698518e71b39c167f034261d39baeac47d6d0848360cc20f51ff09f6a",
+    "eml/msg-08.eml": "1d85d15dd3d7523c9004d415719f71c01ce8db1d0ae96cf2b4aaf51ad6496111",
+    "eml/msg-09.eml": "329bc919305ed0d8d6b827c471260d8919db7847de16be2d530a5b7230dd4b2d",
+    "eml/msg-10.eml": "ca5c3bb027877e2832e275bddd4c1a10f478b2b0c738bed9cf7260e032acf88e",
+    "eml/msg-11.eml": "0772a5fa6725b9e34e78ee5b184b49348741bd09a2e358b15afd12113380e2de",
+    "eml/msg-12.eml": "ac1eafc9308cbe497810bd86662d957b368ef954f0db07b41b6f2c0226ac6926"
+  },
+  "mboxSha256": "c5b1c21511da24177704be4671392b80c49556c37668e5c85e280d094c1738b7",
+  "localYears": {
+    "2023": 2,
+    "2024": 8,
+    "2022": 1,
+    "2025": 1
+  },
+  "filteredIstanbulJan1ToFeb16": [
+    "msg-03",
+    "msg-04",
+    "msg-11"
+  ],
+  "messages": [
+    {
+      "messageId": "<msg-2023-01-hosgeldiniz@posta.example>",
+      "subject": "Sisteme Hoş Geldiniz - Bilgilendirme",
+      "from": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "to": [
+        [
+          "Mehmet Kaya",
+          "mehmet.kaya@destek.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2023-04-10T06:00:00+00:00",
+      "localDate": "2023-04-10",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Merhaba Mehmet Bey,\n\nSisteme hoş geldiniz. Kaydınız başarıyla tamamlanmıştır.\nHerhangi bir sorunuz olursa lütfen bu adrese yanıt veriniz.\n\nİyi çalışmalar,\nAhmet Yılmaz",
+          "sha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Merhaba Mehmet Bey,</p><p>Sisteme hoş geldiniz. Kaydınız başarıyla tamamlanmıştır.</p><p>Herhangi bir sorunuz olursa lütfen bu adrese yanıt veriniz.</p><p>İyi çalışmalar,<br>Ahmet Yılmaz</p>",
+          "sha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-01",
+      "mappedFolder": "Gelen Kutusu",
+      "sourceSha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1"
+    },
+    {
+      "messageId": "<msg-2023-01-hosgeldiniz@posta.example>",
+      "subject": "Sisteme Hoş Geldiniz - Bilgilendirme",
+      "from": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "to": [
+        [
+          "Mehmet Kaya",
+          "mehmet.kaya@destek.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2023-04-10T06:00:00+00:00",
+      "localDate": "2023-04-10",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Merhaba Mehmet Bey,\n\nSisteme hoş geldiniz. Kaydınız başarıyla tamamlanmıştır.\nHerhangi bir sorunuz olursa lütfen bu adrese yanıt veriniz.\n\nİyi çalışmalar,\nAhmet Yılmaz",
+          "sha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Merhaba Mehmet Bey,</p><p>Sisteme hoş geldiniz. Kaydınız başarıyla tamamlanmıştır.</p><p>Herhangi bir sorunuz olursa lütfen bu adrese yanıt veriniz.</p><p>İyi çalışmalar,<br>Ahmet Yılmaz</p>",
+          "sha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-02",
+      "mappedFolder": "Gelen Kutusu",
+      "sourceSha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1"
+    },
+    {
+      "messageId": "<ortak-kimlik-2024-revizyon@projeler.example>",
+      "subject": "İstanbul Saha Raporu - İlk Taslak",
+      "from": [
+        [
+          "Canan Özkan",
+          "canan.ozkan@muhendislik.example"
+        ]
+      ],
+      "to": [
+        [
+          "Proje Grubu",
+          "proje.ekibi@sirket.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-02-15T11:30:00+00:00",
+      "localDate": "2024-02-15",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Merhabalar,\n\nİstanbul saha çalışmasına ait ilk taslak rapor hazırlandı. İncelenmesini rica ederim.\n\nSaygılarımla,\nCanan Özkan",
+          "sha256": "4aa2c0ef74eb8f1458cde171b29a5b575b0e262dab11412e730dd5a94d8cb538"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Merhabalar,</p><p>İstanbul saha çalışmasına ait ilk taslak rapor hazırlandı. İncelenmesini rica ederim.</p><p>Saygılarımla,<br>Canan Özkan</p>",
+          "sha256": "f4159303680b882297966a2119e7fca06727d79fb0ea8b4a3e813b235b24f6aa"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-03",
+      "mappedFolder": "Projeler/İstanbul",
+      "sourceSha256": "e2273fca875fcf29b480af37a24848dc3491f26495c19e771ca61d3bede6021e"
+    },
+    {
+      "messageId": "<ortak-kimlik-2024-revizyon@projeler.example>",
+      "subject": "İstanbul Saha Raporu - Güncellenmiş İkinci Taslak",
+      "from": [
+        [
+          "Burak Aktaş",
+          "burak.aktas@lojistik.example"
+        ]
+      ],
+      "to": [
+        [
+          "Proje Grubu",
+          "proje.ekibi@sirket.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-02-16T07:15:00+00:00",
+      "localDate": "2024-02-16",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Merhaba,\n\nDünkü toplantıda konuşulan revizyonlar doğrultusunda metin güncellendi. Ek bütçe kalemleri eklendi.\n\nİyi günler,\nBurak Aktaş",
+          "sha256": "55264d71eb6eecfab37b918f7d635aea779a95b554d83a75b0d9ced616146756"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Merhaba,</p><p>Dünkü toplantıda konuşulan revizyonlar doğrultusunda metin güncellendi. Ek bütçe kalemleri eklendi.</p><p>İyi günler,<br>Burak Aktaş</p>",
+          "sha256": "c83740a04d09e9c6a31346d8fb17407ff768cbdb9d6cba555d20912892d5c635"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-04",
+      "mappedFolder": "Projeler/İstanbul",
+      "sourceSha256": "2458f638598e26cbaafacca649667da6c318c04abbc607f7fe8593c841ef7f62"
+    },
+    {
+      "messageId": "<msg-2024-05-sartname@destek.example>",
+      "subject": "İhale Şartnamesi Özeti ve Ek Dosya",
+      "from": [
+        [
+          "Ayşe Demir",
+          "ayse.demir@sirket.example"
+        ]
+      ],
+      "to": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-05-20T08:00:00+00:00",
+      "localDate": "2024-05-20",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Ahmet Bey,\n\nİhale şartname özeti ekte yer almaktadır. Türkçe karakter içeren metin dosyasıdır.\n\nSelamlar,\nAyşe Demir",
+          "sha256": "2bd6d5ff99c70cc5983f6c3db8f1b4c46fad401e9433ad5a55e2f6c5f9182d23"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Ahmet Bey,</p><p>İhale şartname özeti ekte yer almaktadır. Türkçe karakter içeren metin dosyasıdır.</p><p>Selamlar,<br>Ayşe Demir</p>",
+          "sha256": "e5013fbd0b5e3a3c1be52ce3051159a9f1bf53cc7243182e15de92520776b9ee"
+        }
+      ],
+      "attachments": [
+        {
+          "name": "şartname_özeti_2024.txt",
+          "bytes": 226,
+          "sha256": "fb65193a9204c3f73cb568bf3e7532cb7c37990affaa9161bcbf4097dbc8543d",
+          "cid": "",
+          "disposition": "attachment"
+        }
+      ],
+      "defects": [],
+      "fixtureId": "msg-05",
+      "mappedFolder": "Gelen Kutusu",
+      "sourceSha256": "9e4fce34ec9eabd76f408039e137c712a36c7d5e996ac840c13b1c956b00d860"
+    },
+    {
+      "messageId": "<msg-2024-06-ikili-ek@muhendislik.example>",
+      "subject": "Deterministik İkili Veri Dosyası (Sistem Parametreleri)",
+      "from": [
+        [
+          "Mehmet Kaya",
+          "mehmet.kaya@destek.example"
+        ]
+      ],
+      "to": [
+        [
+          "Canan Özkan",
+          "canan.ozkan@muhendislik.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-06-12T16:45:00+00:00",
+      "localDate": "2024-06-12",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Canan Hanım,\n\nTest için üretilen 256 baytlık deterministik ikili test dosyasını iletiyorum.\n\nİyi çalışmalar,\nMehmet Kaya",
+          "sha256": "614e308769dd97acdb17015d0959ce4fb1004e6b60b146b829700dd472e0806a"
+        }
+      ],
+      "attachments": [
+        {
+          "name": "sistem_parametreleri.bin",
+          "bytes": 256,
+          "sha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+          "cid": "",
+          "disposition": "attachment"
+        }
+      ],
+      "defects": [],
+      "fixtureId": "msg-06",
+      "mappedFolder": "Gelen Kutusu",
+      "sourceSha256": "f8523c4af2881004182f6805a7b1097969c56741c8c2bce672ad2302bd191916"
+    },
+    {
+      "messageId": "<msg-2024-07-png-ek@lojistik.example>",
+      "subject": "Aylık Dağıtım Raporu ve Grafik",
+      "from": [
+        [
+          "Burak Aktaş",
+          "burak.aktas@lojistik.example"
+        ]
+      ],
+      "to": [
+        [
+          "Ayşe Demir",
+          "ayse.demir@sirket.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-07-08T06:30:00+00:00",
+      "localDate": "2024-07-08",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Ayşe Hanım,\n\nAylık dağıtım raporuna ait özet grafik PNG biçiminde eklenmiştir.\n\nSaygılarımla,\nBurak Aktaş",
+          "sha256": "10859f3225332e97be59d73f1d3220e34a4c337c0c4d3c4a3c7c71bdef36d897"
+        }
+      ],
+      "attachments": [
+        {
+          "name": "rapor_grafik.png",
+          "bytes": 74,
+          "sha256": "e3a1f03fed3df18f6ed537efa47a526d71f792566b0e2dd52dc62f1d18f41b20",
+          "cid": "",
+          "disposition": "attachment"
+        }
+      ],
+      "defects": [],
+      "fixtureId": "msg-07",
+      "mappedFolder": "Gelen Kutusu",
+      "sourceSha256": "1c85536698518e71b39c167f034261d39baeac47d6d0848360cc20f51ff09f6a"
+    },
+    {
+      "messageId": "<msg-2024-08-mbox-kacis@posta.example>",
+      "subject": "MBOX Kaçış Kuralları ve Alıntı Denemesi",
+      "from": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "to": [
+        [
+          "Mühendislik Ekibi",
+          "ekip@muhendislik.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-08-25T10:20:00+00:00",
+      "localDate": "2024-08-25",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Ekip merhaba,\n\nAşağıda alıntılanan e-posta satırları MBOX mboxrd kaçış semantiğini doğrulamak için hazırlanmıştır:\n\nFrom Ahmet Yılmaz <ahmet.yilmaz@posta.example>\nTarih: 2024-08-24 10:00\n\n>From Canan Özkan <canan.ozkan@muhendislik.example>\n>Tarih: 2024-08-23 15:30\n\nBu satırların başındaki 'From ' ve '>From ' ifadeleri mboxrd standartlarında dönüştürülmelidir.\nSelamlar,\nAhmet",
+          "sha256": "49dc23a699c2b8fb5dfe66d321389f52e2eed5b17e46c26fbed04d5ea554032d"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Ekip merhaba,</p><p>Aşağıda alıntılanan e-posta satırları MBOX mboxrd kaçış semantiğini doğrulamak için hazırlanmıştır:</p><pre>From Ahmet Yılmaz &lt;ahmet.yilmaz@posta.example&gt;&#10;Tarih: 2024-08-24 10:00&#10;&#10;&gt;From Canan Özkan &lt;canan.ozkan@muhendislik.example&gt;&#10;&gt;Tarih: 2024-08-23 15:30</pre><p>Bu satırların başındaki 'From ' ve '&gt;From ' ifadeleri mboxrd standartlarında dönüştürülmelidir.<br>Selamlar,<br>Ahmet</p>",
+          "sha256": "71604ac84b4cf2c1c66b179c3f128687db3936620f0e20509b664404d8d9a965"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-08",
+      "mappedFolder": "Gönderilenler",
+      "sourceSha256": "1d85d15dd3d7523c9004d415719f71c01ce8db1d0ae96cf2b4aaf51ad6496111"
+    },
+    {
+      "messageId": "<msg-2022-09-arsiv@posta.example>",
+      "subject": "Eski Arşiv Kaydı - 2022 Yılı Bilgilendirmesi",
+      "from": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "to": [
+        [
+          "Mehmet Kaya",
+          "mehmet.kaya@destek.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2022-11-05T12:00:00+00:00",
+      "localDate": "2022-11-05",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Mehmet Bey,\n\n2022 yılına ait eski arşiv kaydı kontrol amacıyla saklanmaktadır.\n\nİyi çalışmalar,\nAhmet Yılmaz\n",
+          "sha256": "bd53768516a6b87fb3748344941d2e93cf1f07eb8a68bd3d1255039d23d1537e"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-09",
+      "mappedFolder": "Gönderilenler",
+      "sourceSha256": "329bc919305ed0d8d6b827c471260d8919db7847de16be2d530a5b7230dd4b2d"
+    },
+    {
+      "messageId": "<msg-2025-10-planlama@posta.example>",
+      "subject": "2025 Yılı İlk Çeyrek Hedefleri",
+      "from": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "to": [
+        [
+          "Canan Özkan",
+          "canan.ozkan@muhendislik.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2025-01-15T08:30:00+00:00",
+      "localDate": "2025-01-15",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Canan Hanım,\n\n2025 yılı hedeflerimiz için toplantı gündemi belirlenmiştir.\n\nBaşarılar,\nAhmet Yılmaz\n",
+          "sha256": "02446853487bc8c8eb2c3ff618460005530d362ab99c96b8cd39f2be11912057"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-10",
+      "mappedFolder": "Gönderilenler",
+      "sourceSha256": "ca5c3bb027877e2832e275bddd4c1a10f478b2b0c738bed9cf7260e032acf88e"
+    },
+    {
+      "messageId": "<msg-2024-11-inline-cid@projeler.example>",
+      "subject": "İstanbul Projesi Kurumsal Kimlik ve Amblem",
+      "from": [
+        [
+          "Canan Özkan",
+          "canan.ozkan@muhendislik.example"
+        ]
+      ],
+      "to": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2023-12-31T21:30:00+00:00",
+      "localDate": "2024-01-01",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Ahmet Bey,\n\nProje kurumsal kimliği için onaylanan logo aşağıda sunulmuştur.\n[Gömülü Görsel: logo.png]\n\nİyi çalışmalar,\nCanan Özkan",
+          "sha256": "7d1959a0e77495bbf0a48d432190e8cfdbfd7d5c5401b564e677b1c81379c7ea"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Ahmet Bey,</p><p>Proje kurumsal kimliği için onaylanan logo aşağıda sunulmuştur:</p><p><img src=\"cid:proje_logo_cid\" alt=\"İstanbul Proje Logosu\"></p><p>İyi çalışmalar,<br>Canan Özkan</p>",
+          "sha256": "6aca1ce092b1b914edc317c2ea01aab85fcaf161376aef78173b55c241127ae4"
+        }
+      ],
+      "attachments": [
+        {
+          "name": "logo.png",
+          "bytes": 73,
+          "sha256": "411e320c1d42fe6857fdf02eb7ee4ae020fe6522782476c81d083014fd56c61f",
+          "cid": "proje_logo_cid",
+          "disposition": "inline"
+        }
+      ],
+      "defects": [],
+      "fixtureId": "msg-11",
+      "mappedFolder": "Projeler/İstanbul",
+      "sourceSha256": "0772a5fa6725b9e34e78ee5b184b49348741bd09a2e358b15afd12113380e2de"
+    },
+    {
+      "messageId": "<msg-2024-12-saha-kapanis@projeler.example>",
+      "subject": "İstanbul Saha Çalışmaları Tamamlanma Tutanağı",
+      "from": [
+        [
+          "Burak Aktaş",
+          "burak.aktas@lojistik.example"
+        ]
+      ],
+      "to": [
+        [
+          "Proje Grubu",
+          "proje.ekibi@sirket.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-11-30T10:00:00+00:00",
+      "localDate": "2024-11-30",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Değerli Çalışma Arkadaşlarımız,\n\nİstanbul saha çalışmalarımız belirlenen takvime uygun biçimde tamamlanmıştır.\nTüm paydaşlarımıza teşekkür ederiz.\n\nLojistik Koordinatörlüğü",
+          "sha256": "188847d7f28686569829e4fffea2b333cd036fc6aa93872d0e74a906e146aa00"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Değerli Çalışma Arkadaşlarımız,</p><p>İstanbul saha çalışmalarımız belirlenen takvime uygun biçimde tamamlanmıştır.<br>Tüm paydaşlarımıza teşekkür ederiz.</p><p><strong>Lojistik Koordinatörlüğü</strong></p>",
+          "sha256": "dea425f032fbf8601ec89243e9282988106a86721dbc5264e3af64c08fb83419"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-12",
+      "mappedFolder": "Projeler/İstanbul",
+      "sourceSha256": "ac1eafc9308cbe497810bd86662d957b368ef954f0db07b41b6f2c0226ac6926"
+    }
+  ],
+  "mboxMessages": [
+    {
+      "messageId": "<msg-2023-01-hosgeldiniz@posta.example>",
+      "subject": "Sisteme Hoş Geldiniz - Bilgilendirme",
+      "from": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "to": [
+        [
+          "Mehmet Kaya",
+          "mehmet.kaya@destek.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2023-04-10T06:00:00+00:00",
+      "localDate": "2023-04-10",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Merhaba Mehmet Bey,\n\nSisteme hoş geldiniz. Kaydınız başarıyla tamamlanmıştır.\nHerhangi bir sorunuz olursa lütfen bu adrese yanıt veriniz.\n\nİyi çalışmalar,\nAhmet Yılmaz",
+          "sha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Merhaba Mehmet Bey,</p><p>Sisteme hoş geldiniz. Kaydınız başarıyla tamamlanmıştır.</p><p>Herhangi bir sorunuz olursa lütfen bu adrese yanıt veriniz.</p><p>İyi çalışmalar,<br>Ahmet Yılmaz</p>",
+          "sha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-01",
+      "mappedFolder": "corpus"
+    },
+    {
+      "messageId": "<msg-2023-01-hosgeldiniz@posta.example>",
+      "subject": "Sisteme Hoş Geldiniz - Bilgilendirme",
+      "from": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "to": [
+        [
+          "Mehmet Kaya",
+          "mehmet.kaya@destek.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2023-04-10T06:00:00+00:00",
+      "localDate": "2023-04-10",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Merhaba Mehmet Bey,\n\nSisteme hoş geldiniz. Kaydınız başarıyla tamamlanmıştır.\nHerhangi bir sorunuz olursa lütfen bu adrese yanıt veriniz.\n\nİyi çalışmalar,\nAhmet Yılmaz",
+          "sha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Merhaba Mehmet Bey,</p><p>Sisteme hoş geldiniz. Kaydınız başarıyla tamamlanmıştır.</p><p>Herhangi bir sorunuz olursa lütfen bu adrese yanıt veriniz.</p><p>İyi çalışmalar,<br>Ahmet Yılmaz</p>",
+          "sha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-02",
+      "mappedFolder": "corpus"
+    },
+    {
+      "messageId": "<ortak-kimlik-2024-revizyon@projeler.example>",
+      "subject": "İstanbul Saha Raporu - İlk Taslak",
+      "from": [
+        [
+          "Canan Özkan",
+          "canan.ozkan@muhendislik.example"
+        ]
+      ],
+      "to": [
+        [
+          "Proje Grubu",
+          "proje.ekibi@sirket.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-02-15T11:30:00+00:00",
+      "localDate": "2024-02-15",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Merhabalar,\n\nİstanbul saha çalışmasına ait ilk taslak rapor hazırlandı. İncelenmesini rica ederim.\n\nSaygılarımla,\nCanan Özkan",
+          "sha256": "4aa2c0ef74eb8f1458cde171b29a5b575b0e262dab11412e730dd5a94d8cb538"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Merhabalar,</p><p>İstanbul saha çalışmasına ait ilk taslak rapor hazırlandı. İncelenmesini rica ederim.</p><p>Saygılarımla,<br>Canan Özkan</p>",
+          "sha256": "f4159303680b882297966a2119e7fca06727d79fb0ea8b4a3e813b235b24f6aa"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-03",
+      "mappedFolder": "corpus"
+    },
+    {
+      "messageId": "<ortak-kimlik-2024-revizyon@projeler.example>",
+      "subject": "İstanbul Saha Raporu - Güncellenmiş İkinci Taslak",
+      "from": [
+        [
+          "Burak Aktaş",
+          "burak.aktas@lojistik.example"
+        ]
+      ],
+      "to": [
+        [
+          "Proje Grubu",
+          "proje.ekibi@sirket.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-02-16T07:15:00+00:00",
+      "localDate": "2024-02-16",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Merhaba,\n\nDünkü toplantıda konuşulan revizyonlar doğrultusunda metin güncellendi. Ek bütçe kalemleri eklendi.\n\nİyi günler,\nBurak Aktaş",
+          "sha256": "55264d71eb6eecfab37b918f7d635aea779a95b554d83a75b0d9ced616146756"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Merhaba,</p><p>Dünkü toplantıda konuşulan revizyonlar doğrultusunda metin güncellendi. Ek bütçe kalemleri eklendi.</p><p>İyi günler,<br>Burak Aktaş</p>",
+          "sha256": "c83740a04d09e9c6a31346d8fb17407ff768cbdb9d6cba555d20912892d5c635"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-04",
+      "mappedFolder": "corpus"
+    },
+    {
+      "messageId": "<msg-2024-05-sartname@destek.example>",
+      "subject": "İhale Şartnamesi Özeti ve Ek Dosya",
+      "from": [
+        [
+          "Ayşe Demir",
+          "ayse.demir@sirket.example"
+        ]
+      ],
+      "to": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-05-20T08:00:00+00:00",
+      "localDate": "2024-05-20",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Ahmet Bey,\n\nİhale şartname özeti ekte yer almaktadır. Türkçe karakter içeren metin dosyasıdır.\n\nSelamlar,\nAyşe Demir",
+          "sha256": "2bd6d5ff99c70cc5983f6c3db8f1b4c46fad401e9433ad5a55e2f6c5f9182d23"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Ahmet Bey,</p><p>İhale şartname özeti ekte yer almaktadır. Türkçe karakter içeren metin dosyasıdır.</p><p>Selamlar,<br>Ayşe Demir</p>",
+          "sha256": "e5013fbd0b5e3a3c1be52ce3051159a9f1bf53cc7243182e15de92520776b9ee"
+        }
+      ],
+      "attachments": [
+        {
+          "name": "şartname_özeti_2024.txt",
+          "bytes": 226,
+          "sha256": "fb65193a9204c3f73cb568bf3e7532cb7c37990affaa9161bcbf4097dbc8543d",
+          "cid": "",
+          "disposition": "attachment"
+        }
+      ],
+      "defects": [],
+      "fixtureId": "msg-05",
+      "mappedFolder": "corpus"
+    },
+    {
+      "messageId": "<msg-2024-06-ikili-ek@muhendislik.example>",
+      "subject": "Deterministik İkili Veri Dosyası (Sistem Parametreleri)",
+      "from": [
+        [
+          "Mehmet Kaya",
+          "mehmet.kaya@destek.example"
+        ]
+      ],
+      "to": [
+        [
+          "Canan Özkan",
+          "canan.ozkan@muhendislik.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-06-12T16:45:00+00:00",
+      "localDate": "2024-06-12",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Canan Hanım,\n\nTest için üretilen 256 baytlık deterministik ikili test dosyasını iletiyorum.\n\nİyi çalışmalar,\nMehmet Kaya",
+          "sha256": "614e308769dd97acdb17015d0959ce4fb1004e6b60b146b829700dd472e0806a"
+        }
+      ],
+      "attachments": [
+        {
+          "name": "sistem_parametreleri.bin",
+          "bytes": 256,
+          "sha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+          "cid": "",
+          "disposition": "attachment"
+        }
+      ],
+      "defects": [],
+      "fixtureId": "msg-06",
+      "mappedFolder": "corpus"
+    },
+    {
+      "messageId": "<msg-2024-07-png-ek@lojistik.example>",
+      "subject": "Aylık Dağıtım Raporu ve Grafik",
+      "from": [
+        [
+          "Burak Aktaş",
+          "burak.aktas@lojistik.example"
+        ]
+      ],
+      "to": [
+        [
+          "Ayşe Demir",
+          "ayse.demir@sirket.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-07-08T06:30:00+00:00",
+      "localDate": "2024-07-08",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Ayşe Hanım,\n\nAylık dağıtım raporuna ait özet grafik PNG biçiminde eklenmiştir.\n\nSaygılarımla,\nBurak Aktaş",
+          "sha256": "10859f3225332e97be59d73f1d3220e34a4c337c0c4d3c4a3c7c71bdef36d897"
+        }
+      ],
+      "attachments": [
+        {
+          "name": "rapor_grafik.png",
+          "bytes": 74,
+          "sha256": "e3a1f03fed3df18f6ed537efa47a526d71f792566b0e2dd52dc62f1d18f41b20",
+          "cid": "",
+          "disposition": "attachment"
+        }
+      ],
+      "defects": [],
+      "fixtureId": "msg-07",
+      "mappedFolder": "corpus"
+    },
+    {
+      "messageId": "<msg-2024-08-mbox-kacis@posta.example>",
+      "subject": "MBOX Kaçış Kuralları ve Alıntı Denemesi",
+      "from": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "to": [
+        [
+          "Mühendislik Ekibi",
+          "ekip@muhendislik.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-08-25T10:20:00+00:00",
+      "localDate": "2024-08-25",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Ekip merhaba,\n\nAşağıda alıntılanan e-posta satırları MBOX mboxrd kaçış semantiğini doğrulamak için hazırlanmıştır:\n\nFrom Ahmet Yılmaz <ahmet.yilmaz@posta.example>\nTarih: 2024-08-24 10:00\n\n>From Canan Özkan <canan.ozkan@muhendislik.example>\n>Tarih: 2024-08-23 15:30\n\nBu satırların başındaki 'From ' ve '>From ' ifadeleri mboxrd standartlarında dönüştürülmelidir.\nSelamlar,\nAhmet",
+          "sha256": "49dc23a699c2b8fb5dfe66d321389f52e2eed5b17e46c26fbed04d5ea554032d"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Ekip merhaba,</p><p>Aşağıda alıntılanan e-posta satırları MBOX mboxrd kaçış semantiğini doğrulamak için hazırlanmıştır:</p><pre>From Ahmet Yılmaz &lt;ahmet.yilmaz@posta.example&gt;&#10;Tarih: 2024-08-24 10:00&#10;&#10;&gt;From Canan Özkan &lt;canan.ozkan@muhendislik.example&gt;&#10;&gt;Tarih: 2024-08-23 15:30</pre><p>Bu satırların başındaki 'From ' ve '&gt;From ' ifadeleri mboxrd standartlarında dönüştürülmelidir.<br>Selamlar,<br>Ahmet</p>",
+          "sha256": "71604ac84b4cf2c1c66b179c3f128687db3936620f0e20509b664404d8d9a965"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-08",
+      "mappedFolder": "corpus"
+    },
+    {
+      "messageId": "<msg-2022-09-arsiv@posta.example>",
+      "subject": "Eski Arşiv Kaydı - 2022 Yılı Bilgilendirmesi",
+      "from": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "to": [
+        [
+          "Mehmet Kaya",
+          "mehmet.kaya@destek.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2022-11-05T12:00:00+00:00",
+      "localDate": "2022-11-05",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Mehmet Bey,\n\n2022 yılına ait eski arşiv kaydı kontrol amacıyla saklanmaktadır.\n\nİyi çalışmalar,\nAhmet Yılmaz\n\n",
+          "sha256": "8446c11914bca695b05b035c9d00aaf30aa25ea12eb5aa55e3ffef0611360472"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-09",
+      "mappedFolder": "corpus"
+    },
+    {
+      "messageId": "<msg-2025-10-planlama@posta.example>",
+      "subject": "2025 Yılı İlk Çeyrek Hedefleri",
+      "from": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "to": [
+        [
+          "Canan Özkan",
+          "canan.ozkan@muhendislik.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2025-01-15T08:30:00+00:00",
+      "localDate": "2025-01-15",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Canan Hanım,\n\n2025 yılı hedeflerimiz için toplantı gündemi belirlenmiştir.\n\nBaşarılar,\nAhmet Yılmaz\n\n",
+          "sha256": "e1fb6d95d44e9239c455efa48180b82cf8e41297911c7ae0e4973972607cd4f6"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-10",
+      "mappedFolder": "corpus"
+    },
+    {
+      "messageId": "<msg-2024-11-inline-cid@projeler.example>",
+      "subject": "İstanbul Projesi Kurumsal Kimlik ve Amblem",
+      "from": [
+        [
+          "Canan Özkan",
+          "canan.ozkan@muhendislik.example"
+        ]
+      ],
+      "to": [
+        [
+          "Ahmet Yılmaz",
+          "ahmet.yilmaz@posta.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2023-12-31T21:30:00+00:00",
+      "localDate": "2024-01-01",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Ahmet Bey,\n\nProje kurumsal kimliği için onaylanan logo aşağıda sunulmuştur.\n[Gömülü Görsel: logo.png]\n\nİyi çalışmalar,\nCanan Özkan",
+          "sha256": "7d1959a0e77495bbf0a48d432190e8cfdbfd7d5c5401b564e677b1c81379c7ea"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Ahmet Bey,</p><p>Proje kurumsal kimliği için onaylanan logo aşağıda sunulmuştur:</p><p><img src=\"cid:proje_logo_cid\" alt=\"İstanbul Proje Logosu\"></p><p>İyi çalışmalar,<br>Canan Özkan</p>",
+          "sha256": "6aca1ce092b1b914edc317c2ea01aab85fcaf161376aef78173b55c241127ae4"
+        }
+      ],
+      "attachments": [
+        {
+          "name": "logo.png",
+          "bytes": 73,
+          "sha256": "411e320c1d42fe6857fdf02eb7ee4ae020fe6522782476c81d083014fd56c61f",
+          "cid": "proje_logo_cid",
+          "disposition": "inline"
+        }
+      ],
+      "defects": [],
+      "fixtureId": "msg-11",
+      "mappedFolder": "corpus"
+    },
+    {
+      "messageId": "<msg-2024-12-saha-kapanis@projeler.example>",
+      "subject": "İstanbul Saha Çalışmaları Tamamlanma Tutanağı",
+      "from": [
+        [
+          "Burak Aktaş",
+          "burak.aktas@lojistik.example"
+        ]
+      ],
+      "to": [
+        [
+          "Proje Grubu",
+          "proje.ekibi@sirket.example"
+        ]
+      ],
+      "cc": [],
+      "dateUtc": "2024-11-30T10:00:00+00:00",
+      "localDate": "2024-11-30",
+      "bodies": [
+        {
+          "type": "text/plain",
+          "text": "Değerli Çalışma Arkadaşlarımız,\n\nİstanbul saha çalışmalarımız belirlenen takvime uygun biçimde tamamlanmıştır.\nTüm paydaşlarımıza teşekkür ederiz.\n\nLojistik Koordinatörlüğü",
+          "sha256": "188847d7f28686569829e4fffea2b333cd036fc6aa93872d0e74a906e146aa00"
+        },
+        {
+          "type": "text/html",
+          "text": "<p>Değerli Çalışma Arkadaşlarımız,</p><p>İstanbul saha çalışmalarımız belirlenen takvime uygun biçimde tamamlanmıştır.<br>Tüm paydaşlarımıza teşekkür ederiz.</p><p><strong>Lojistik Koordinatörlüğü</strong></p>",
+          "sha256": "dea425f032fbf8601ec89243e9282988106a86721dbc5264e3af64c08fb83419"
+        }
+      ],
+      "attachments": [],
+      "defects": [],
+      "fixtureId": "msg-12",
+      "mappedFolder": "corpus"
+    }
+  ],
+  "preExistingSerializationDifferences": [
+    {
+      "fixtureId": "msg-09",
+      "field": "bodies",
+      "original": [
+        {
+          "type": "text/plain",
+          "text": "Mehmet Bey,\n\n2022 yılına ait eski arşiv kaydı kontrol amacıyla saklanmaktadır.\n\nİyi çalışmalar,\nAhmet Yılmaz\n",
+          "sha256": "bd53768516a6b87fb3748344941d2e93cf1f07eb8a68bd3d1255039d23d1537e"
+        }
+      ],
+      "mbox": [
+        {
+          "type": "text/plain",
+          "text": "Mehmet Bey,\n\n2022 yılına ait eski arşiv kaydı kontrol amacıyla saklanmaktadır.\n\nİyi çalışmalar,\nAhmet Yılmaz\n\n",
+          "sha256": "8446c11914bca695b05b035c9d00aaf30aa25ea12eb5aa55e3ffef0611360472"
+        }
+      ]
+    },
+    {
+      "fixtureId": "msg-10",
+      "field": "bodies",
+      "original": [
+        {
+          "type": "text/plain",
+          "text": "Canan Hanım,\n\n2025 yılı hedeflerimiz için toplantı gündemi belirlenmiştir.\n\nBaşarılar,\nAhmet Yılmaz\n",
+          "sha256": "02446853487bc8c8eb2c3ff618460005530d362ab99c96b8cd39f2be11912057"
+        }
+      ],
+      "mbox": [
+        {
+          "type": "text/plain",
+          "text": "Canan Hanım,\n\n2025 yılı hedeflerimiz için toplantı gündemi belirlenmiştir.\n\nBaşarılar,\nAhmet Yılmaz\n\n",
+          "sha256": "e1fb6d95d44e9239c455efa48180b82cf8e41297911c7ae0e4973972607cd4f6"
+        }
+      ]
+    }
+  ]
+}

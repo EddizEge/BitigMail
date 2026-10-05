@@ -1,0 +1,37 @@
+{
+  "sourceHandle": "msrc_da159f351c6942b0b8cc9fd1cb105c6d",
+  "sourceKind": "eml-tree",
+  "dialect": "rfc822",
+  "displayPath": "task019-tree-1g",
+  "totalFiles": 8192,
+  "totalItems": 8192,
+  "totalSizeBytes": 1070776928,
+  "folders": [
+    {
+      "folderName": "Arşiv/2026/Finans",
+      "itemCount": 1200,
+      "totalSizeBytes": 120014392
+    },
+    {
+      "folderName": "Gelen Kutusu",
+      "itemCount": 3200,
+      "totalSizeBytes": 470948208
+    },
+    {
+      "folderName": "Gönderilenler",
+      "itemCount": 1600,
+      "totalSizeBytes": 224059632
+    },
+    {
+      "folderName": "Müşteri İlişkileri/Talepler",
+      "itemCount": 592,
+      "totalSizeBytes": 39263024
+    },
+    {
+      "folderName": "Projeler/Anadolu",
+      "itemCount": 1600,
+      "totalSizeBytes": 216491672
+    }
+  ],
+  "ignoredNonEmlFilesCount": 0
+}

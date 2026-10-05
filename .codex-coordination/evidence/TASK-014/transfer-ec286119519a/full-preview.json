@@ -1,0 +1,43 @@
+{
+  "previewId": "iprev_3e386a8b747a4d5887891a6948d15fc8",
+  "companyId": "astra-imap-2e18a206",
+  "projectId": "imap-pilot",
+  "sourceAccountId": "acc_1e80740689184ec680b19fd8b55b5af2",
+  "sourceAccountVersion": 2,
+  "targetAccountId": "acc_d91fa97e55c64e7487ae176fa54df8c2",
+  "targetAccountVersion": 1,
+  "totalSourceItems": 12,
+  "eligibleItemsCount": 12,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "deletedExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "INBOX",
+      "targetFolder": "AstraProduct9ed23eed5d/Full/INBOX",
+      "sourceUidValidity": 1789299650,
+      "totalItems": 5,
+      "eligibleItems": 5,
+      "excludedCount": 0
+    },
+    {
+      "sourceFolder": "Gönderilenler",
+      "targetFolder": "AstraProduct9ed23eed5d/Full/Gönderilenler",
+      "sourceUidValidity": 1789299651,
+      "totalItems": 3,
+      "eligibleItems": 3,
+      "excludedCount": 0
+    },
+    {
+      "sourceFolder": "Projeler/İstanbul",
+      "targetFolder": "AstraProduct9ed23eed5d/Full/Projeler/İstanbul",
+      "sourceUidValidity": 1789299653,
+      "totalItems": 4,
+      "eligibleItems": 4,
+      "excludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-13T13:05:02.5783598+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

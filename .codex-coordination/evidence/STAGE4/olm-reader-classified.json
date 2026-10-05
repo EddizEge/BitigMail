@@ -1,0 +1,361 @@
+{
+  "status": "READ_WITH_UNRESOLVED_ATTACHMENTS",
+  "sdk": "24.8.0.0",
+  "before": "A3AA54A01157618B1A45949F25F750D2A762984BE098B786F285930A6A468CE7",
+  "after": "A3AA54A01157618B1A45949F25F750D2A762984BE098B786F285930A6A468CE7",
+  "messages": 25,
+  "messageClasses": {
+    "IPM.Contact": 3,
+    "IPM.Note": 22
+  },
+  "attachments": 38,
+  "unresolvedAttachments": 3,
+  "folders": [
+    {
+      "ordinal": 1,
+      "depth": 0,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 2,
+      "depth": 1,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 3,
+      "depth": 1,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 4,
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 5,
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 6,
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 7,
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 8,
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 9,
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 10,
+      "depth": 1,
+      "messages": 6,
+      "attachments": 17,
+      "attachmentHashes": [
+        "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "629EB59096A74D716FCD9A838DC827BBBD7314CCD0CF491065F5DC5F94063C3D",
+        "24F2BA93E1962ABBB4D03530828A616F303FAA090C1617A5C185E6C7FD4B09E6",
+        "A7962FFAD6F5D2CF2250B4A54A6A8DC31CE0017375F4CB62D9372E87E981B178",
+        "5D0301D30A29F2505FC3420F89B82AB68BEB42194E9F35CC9E57246883FC1972",
+        "2C10488A0DB40C74388FB5EF28E8709EE0C25CC96831930489DA12C7A427BF8B",
+        "A85D01FC93371E077E567E0B7730962BFE8D0486CF7A3B55B72F73F09973322E",
+        "2F9617EEE2486FAFEBC5576AA6E1947FDA71ACD8F7EA81E61BF332E93DE94915",
+        "E969CAB2DF07E8EEAEE929E42328D83EFBC9A5314622ABEC4FECA0E4AE15584F",
+        "C3AECC45DA1DC28E361750BBBCC83CD85E52CED2A33BAA6E662FDDD2213A0354",
+        "7B8747E216189C615F9EC6FC1A5723EDCFB080D388CECF313780A526B10087BD",
+        "912DBE6A306CCE82390B1911CCE7D522EFACC26BAE3314BB2145BB121AB7F1B9",
+        "C8AA6C2B38A148293CF39C86766DD831A5C213BA848C5E04DBB9BE26FA19FE14",
+        "A18FA102A4395A08671BBA2451AC99BF2C7407873E63E0EA29A5A47B2CB439EF",
+        "8782666B98DC1B063A715C85CEB01CB5DFE163366B1E553AE901A4FB42F7860F",
+        "EA3B1238A38F72B330AAC53364BD0A0481946B93FC757DDE7314CE3319F1840E",
+        "62E85A0F3A4CBC01B6D3390D63DE0F7D051E1E723AEB071416A38799C50738EA"
+      ]
+    },
+    {
+      "ordinal": 11,
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 12,
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 13,
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 14,
+      "depth": 1,
+      "messages": 6,
+      "attachments": 17,
+      "attachmentHashes": [
+        "8782666B98DC1B063A715C85CEB01CB5DFE163366B1E553AE901A4FB42F7860F",
+        "EA3B1238A38F72B330AAC53364BD0A0481946B93FC757DDE7314CE3319F1840E",
+        "62E85A0F3A4CBC01B6D3390D63DE0F7D051E1E723AEB071416A38799C50738EA",
+        "24F2BA93E1962ABBB4D03530828A616F303FAA090C1617A5C185E6C7FD4B09E6",
+        "A7962FFAD6F5D2CF2250B4A54A6A8DC31CE0017375F4CB62D9372E87E981B178",
+        "5D0301D30A29F2505FC3420F89B82AB68BEB42194E9F35CC9E57246883FC1972",
+        "2C10488A0DB40C74388FB5EF28E8709EE0C25CC96831930489DA12C7A427BF8B",
+        "A85D01FC93371E077E567E0B7730962BFE8D0486CF7A3B55B72F73F09973322E",
+        "2F9617EEE2486FAFEBC5576AA6E1947FDA71ACD8F7EA81E61BF332E93DE94915",
+        "E969CAB2DF07E8EEAEE929E42328D83EFBC9A5314622ABEC4FECA0E4AE15584F",
+        "C3AECC45DA1DC28E361750BBBCC83CD85E52CED2A33BAA6E662FDDD2213A0354",
+        "7B8747E216189C615F9EC6FC1A5723EDCFB080D388CECF313780A526B10087BD",
+        "912DBE6A306CCE82390B1911CCE7D522EFACC26BAE3314BB2145BB121AB7F1B9",
+        "C8AA6C2B38A148293CF39C86766DD831A5C213BA848C5E04DBB9BE26FA19FE14",
+        "A18FA102A4395A08671BBA2451AC99BF2C7407873E63E0EA29A5A47B2CB439EF",
+        "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "C84ACEE971A1E5C2552D3DBB19B971EDDD8652BA79852E29A412D92991CDAE6F"
+      ]
+    },
+    {
+      "ordinal": 15,
+      "depth": 2,
+      "messages": 2,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 16,
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 17,
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 18,
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 19,
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 20,
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 21,
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 22,
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 23,
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 24,
+      "depth": 2,
+      "messages": 1,
+      "attachments": 1,
+      "attachmentHashes": [
+        "UNRESOLVED_BINARY_DATA"
+      ]
+    },
+    {
+      "ordinal": 25,
+      "depth": 3,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 26,
+      "depth": 2,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 27,
+      "depth": 3,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 28,
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 29,
+      "depth": 2,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 30,
+      "depth": 3,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 31,
+      "depth": 4,
+      "messages": 1,
+      "attachments": 1,
+      "attachmentHashes": [
+        "UNRESOLVED_BINARY_DATA"
+      ]
+    },
+    {
+      "ordinal": 32,
+      "depth": 4,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 33,
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 34,
+      "depth": 2,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 35,
+      "depth": 3,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 36,
+      "depth": 4,
+      "messages": 1,
+      "attachments": 1,
+      "attachmentHashes": [
+        "9D7D9CC32A02FAF463FA359CCC49AE3484B03565415D5F8C5B783F4AA533931D"
+      ]
+    },
+    {
+      "ordinal": 37,
+      "depth": 4,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 38,
+      "depth": 3,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 39,
+      "depth": 4,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 40,
+      "depth": 5,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 41,
+      "depth": 6,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": []
+    },
+    {
+      "ordinal": 42,
+      "depth": 7,
+      "messages": 1,
+      "attachments": 1,
+      "attachmentHashes": [
+        "UNRESOLVED_BINARY_DATA"
+      ]
+    },
+    {
+      "ordinal": 43,
+      "depth": 7,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": []
+    }
+  ],
+  "qualification": "One public vendor fixture; trial SDK. Items include non-mail classes, not all emails. No conversion, general format, or UI acceptance. Initial probe failed on null attachment BinaryData; this probe records it explicitly."
+}

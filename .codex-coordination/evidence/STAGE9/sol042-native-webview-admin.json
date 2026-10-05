@@ -1,0 +1,30 @@
+{
+  "taskId": "TASK-042",
+  "release": "artifacts/BitigMail-Internal-0.9.2",
+  "releaseBytes": 589228792,
+  "hashEntries": 1118,
+  "hashFailures": 0,
+  "authenticode": "NotSigned",
+  "actualWebView": {
+    "fixture": "C:/Users/Eddiz/AppData/Local/Temp/BitigMail-SetupProof-Reload-7ebd24d8ca40493f8a4020fe003d5178",
+    "installExit": 0,
+    "launchExit": 0,
+    "reloadedBeforeSubmit": true,
+    "nativeRefreshRequested": true,
+    "refreshMacMatched": true,
+    "refreshAcknowledged": true,
+    "createAdminButtonClicked": true,
+    "identityGateAfterSubmit": false,
+    "adminBarAfterSubmit": true,
+    "captureBytes": 58821,
+    "engineProcessesAfterExit": 0,
+    "error": null
+  },
+  "verification": {
+    "rootProofCatalogTests": "18/18 PASS",
+    "rootNativeProtocol": "7/7 PASS",
+    "solFocusedBackend": "54/54 PASS",
+    "frontend": "151/151 PASS; typecheck/lint/build PASS",
+    "desktopBuild": "PASS; 0 warnings / 0 errors"
+  }
+}

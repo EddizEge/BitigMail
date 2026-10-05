@@ -1,0 +1,49 @@
+{
+  "browser": "Playwright Chromium",
+  "reason": "Browser plugin not available",
+  "data": "Mocked synthetic UI only; realAPI verified separately",
+  "checks": [
+    {
+      "width": 1263,
+      "url": "http://127.0.0.1:5173/",
+      "layout": {
+        "width": 1263,
+        "documentWidth": 1263,
+        "overlay": false,
+        "title": "BitigMail — Yerel çalışma alanı",
+        "bodyLength": 2021
+      },
+      "errors": [],
+      "transfer": "C:/Users/Eddiz/AppData/Local/Temp/root043-final-transfer-1263.png",
+      "management": "C:/Users/Eddiz/AppData/Local/Temp/root043-final-management-1263.png",
+      "interactions": [
+        "login",
+        "conversion selection",
+        "migration selection",
+        "expand advanced filter",
+        "open management"
+      ]
+    },
+    {
+      "width": 390,
+      "url": "http://127.0.0.1:5173/",
+      "layout": {
+        "width": 390,
+        "documentWidth": 390,
+        "overlay": false,
+        "title": "BitigMail — Yerel çalışma alanı",
+        "bodyLength": 2011
+      },
+      "errors": [],
+      "transfer": "C:/Users/Eddiz/AppData/Local/Temp/root043-final-transfer-390.png",
+      "management": "C:/Users/Eddiz/AppData/Local/Temp/root043-final-management-390.png",
+      "interactions": [
+        "login",
+        "conversion selection",
+        "migration selection",
+        "expand advanced filter",
+        "open management"
+      ]
+    }
+  ]
+}

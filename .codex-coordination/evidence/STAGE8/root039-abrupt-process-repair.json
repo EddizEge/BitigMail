@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "boundary": "after directory publication, before receipt/index update; Environment.Exit skips catch and finally",
+  "profile": "C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\runtime\\root039-process-2178e3661b8640179641262b4117ca25",
+  "interruptionExit": 73,
+  "repairProcesses": 2
+}

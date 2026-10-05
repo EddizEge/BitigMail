@@ -1,0 +1,6 @@
+{
+  "task_id": "TASK-002",
+  "nonce": "terminal-only-64bd9a",
+  "executor": "GEMINI",
+  "squares": [1, 4, 9, 16, 25]
+}

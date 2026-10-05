@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "mboxSha256": "9eada49b4bed1b7c494480d46a0e1330f3acdcf37c99e35c46ac1c2d73dffcf5",
+  "messages": [
+    {
+      "file": "qp.eml",
+      "messageId": "<escape-qp@example.test>",
+      "sha256": "8113cbc5507d7676f63ea6351edd5ebedefb8b6b94dc4cde819419ffcd59c87b",
+      "text": "From QP literal\n>From QP quoted\n>>From QP twice\n",
+      "mboxText": "From QP literal\n>From QP quoted\n>>From QP twice\n\n",
+      "preExistingMboxTrailingLfAdded": true
+    },
+    {
+      "file": "base64.eml",
+      "messageId": "<escape-base64@example.test>",
+      "sha256": "364132a8034318771fd39fd164a687d4bc15034866b230003ab0ab8b81ccb314",
+      "text": "From base64 literal\n>From base64 quoted\n>>From base64 twice\n",
+      "mboxText": "From base64 literal\n>From base64 quoted\n>>From base64 twice\n",
+      "preExistingMboxTrailingLfAdded": false
+    },
+    {
+      "file": "raw.eml",
+      "messageId": "<escape-raw@example.test>",
+      "sha256": "05f5e398de21b312b2bdbdb367a15d6c2c0cc99935c2ddb9e34e7b79d44df09a",
+      "text": "From raw literal\n>From raw quoted\n>>From raw twice\n",
+      "mboxText": "From raw literal\n>From raw quoted\n>>From raw twice\n\n",
+      "preExistingMboxTrailingLfAdded": true
+    }
+  ],
+  "purpose": "Exactly one raw mboxrd unescape before MIME transfer decoding; QP/base64 decoded From lines must not be unescaped again."
+}

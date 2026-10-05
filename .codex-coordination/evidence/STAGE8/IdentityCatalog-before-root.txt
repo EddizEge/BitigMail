@@ -1,0 +1,59 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Identity;
+
+namespace BitigMail.LocalHost.Security;
+
+public enum LocalUserRole { Admin, Operator }
+public sealed record CompanyGrant(string CompanyId, IReadOnlyList<string> ProjectIds);
+public sealed record LocalUser(string UserId,string UserName,string NormalizedUserName,string PasswordHash,LocalUserRole Role,bool Active,long SecurityVersion,IReadOnlyList<CompanyGrant> Grants,DateTimeOffset CreatedAtUtc);
+public sealed record LocalCompany(string CompanyId,string Name,bool Active,IReadOnlyList<LocalProject> Projects);
+public sealed record LocalProject(string ProjectId,string Name,bool Active);
+public sealed record IdentityCatalogDocument(int Version,IReadOnlyList<LocalUser> Users,IReadOnlyList<LocalCompany> Companies);
+public sealed record AuthenticatedUserView(string UserId,string UserName,LocalUserRole Role,long SecurityVersion,IReadOnlyList<CompanyGrant> Grants);
+
+public sealed class IdentityCatalog
+{
+    private static readonly JsonSerializerOptions Json = new(JsonSerializerDefaults.Web){WriteIndented=true,UnmappedMemberHandling=JsonUnmappedMemberHandling.Disallow};
+    private readonly string _profileDirectory,_path; private readonly object _gate=new(); private readonly PasswordHasher<LocalUser> _hasher=new();private readonly SemaphoreSlim _passwordVerifications=new(4,4);
+    public IdentityCatalog(string profileDirectory){Directory.CreateDirectory(profileDirectory);_profileDirectory=profileDirectory;_path=Path.Combine(profileDirectory,"identity-catalog.json");}
+    public bool IsInitialized { get { lock(_gate)return File.Exists(_path)&&Load().Users.Any(x=>x.Active&&x.Role==LocalUserRole.Admin); } }
+    public long? CurrentSecurityVersion(string userId){lock(_gate){var user=Load().Users.SingleOrDefault(x=>x.UserId==userId&&x.Active);return user?.SecurityVersion;}}
+    public async Task<AuthenticatedUserView?> AuthenticateAsync(string userName,string password,CancellationToken cancellationToken=default)
+    {
+        if(string.IsNullOrWhiteSpace(userName)||userName.Length>128||password is null||password.Length>256)return null;
+        LocalUser? user;lock(_gate)user=Load().Users.SingleOrDefault(x=>x.Active&&x.NormalizedUserName==Normalize(userName));if(user is null)return null;PasswordVerificationResult result;await _passwordVerifications.WaitAsync(cancellationToken);try{result=_hasher.VerifyHashedPassword(user,user.PasswordHash,password);}finally{_passwordVerifications.Release();}if(result==PasswordVerificationResult.Failed)return null;lock(_gate){var current=Load().Users.SingleOrDefault(x=>x.Active&&x.UserId==user.UserId&&x.SecurityVersion==user.SecurityVersion);return current is null?null:View(current);}
+    }
+    public async Task<AuthenticatedUserView> BootstrapAdministratorAsync(string userName,string password,Func<bool> consumeNativeProof,CancellationToken cancellationToken=default)
+    {
+        ValidateUserName(userName);ValidatePassword(password);
+        var shell=new LocalUser("usr_"+Guid.NewGuid().ToString("N"),userName.Trim(),Normalize(userName),"",LocalUserRole.Admin,true,1,Array.Empty<CompanyGrant>(),DateTimeOffset.UtcNow);var user=shell with{PasswordHash=_hasher.HashPassword(shell,password)};
+        await using var lease=await ProfileWriteLease.AcquireAsync(_profileDirectory,cancellationToken);lock(_gate){var current=Load();if(current.Users.Any())throw new InvalidOperationException("İlk yönetici kurulumu daha önce tamamlandı.");if(!consumeNativeProof())throw new UnauthorizedAccessException();Save(current with{Users=new[]{user}});return View(user);}
+    }
+    public IReadOnlyList<LocalCompany> ListCompanies(AuthenticatedSessionPrincipal actor){lock(_gate){var user=Require(actor);var all=Load().Companies.Where(x=>x.Active);if(user.Role==LocalUserRole.Admin)return all.ToArray();return all.Select(c=>(Company:c,Grant:user.Grants.SingleOrDefault(g=>g.CompanyId==c.CompanyId))).Where(x=>x.Grant is not null).Select(x=>x.Company with{Projects=x.Company.Projects.Where(p=>p.Active&&x.Grant!.ProjectIds.Contains(p.ProjectId,StringComparer.Ordinal)).ToArray()}).Where(c=>c.Projects.Count>0).ToArray();}}
+    public async Task<LocalCompany> CreateCompanyAsync(AuthenticatedSessionPrincipal actor,string name,string projectName,CancellationToken cancellationToken=default)
+    {
+        if(string.IsNullOrWhiteSpace(name)||name.Length>128||string.IsNullOrWhiteSpace(projectName)||projectName.Length>128)throw new ArgumentException("Şirket ve proje adı geçersiz.");
+        await using var lease=await ProfileWriteLease.AcquireAsync(_profileDirectory,cancellationToken);lock(_gate){RequireAdmin(actor);var doc=Load();var company=new LocalCompany("cmp_"+Guid.NewGuid().ToString("N"),name.Trim(),true,new[]{new LocalProject("prj_"+Guid.NewGuid().ToString("N"),projectName.Trim(),true)});Save(doc with{Companies=doc.Companies.Append(company).ToArray()});return company;}
+    }
+    public bool CanAccess(AuthenticatedSessionPrincipal actor,string companyId,string? projectId=null)
+    {
+        lock(_gate){var user=Require(actor);var company=Load().Companies.SingleOrDefault(x=>x.Active&&x.CompanyId==companyId);if(company is null)return false;if(projectId is not null&&!company.Projects.Any(x=>x.Active&&x.ProjectId==projectId))return false;if(user.Role==LocalUserRole.Admin)return true;var grant=user.Grants.SingleOrDefault(x=>x.CompanyId==companyId);return grant is not null&&(projectId is null||grant.ProjectIds.Contains(projectId,StringComparer.Ordinal));}
+    }
+    public bool IsAdmin(AuthenticatedSessionPrincipal actor){lock(_gate)return Require(actor).Role==LocalUserRole.Admin;}
+    public IReadOnlyList<AuthenticatedUserView> ListUsers(AuthenticatedSessionPrincipal actor){lock(_gate){RequireAdmin(actor);return Load().Users.Select(View).ToArray();}}
+    public async Task<AuthenticatedUserView> CreateUserAsync(AuthenticatedSessionPrincipal actor,string userName,string password,LocalUserRole role,IReadOnlyList<CompanyGrant>? grants,CancellationToken cancellationToken=default)
+    {
+        ValidateUserName(userName);ValidatePassword(password);var shell=new LocalUser("usr_"+Guid.NewGuid().ToString("N"),userName.Trim(),Normalize(userName),"",role,true,1,grants??Array.Empty<CompanyGrant>(),DateTimeOffset.UtcNow);var user=shell with{PasswordHash=_hasher.HashPassword(shell,password)};
+        await using var lease=await ProfileWriteLease.AcquireAsync(_profileDirectory,cancellationToken);lock(_gate){RequireAdmin(actor);var doc=Load();if(doc.Users.Any(x=>x.NormalizedUserName==user.NormalizedUserName))throw new InvalidOperationException("Kullanıcı adı zaten var.");foreach(var grant in user.Grants)if(!doc.Companies.Any(c=>c.Active&&c.CompanyId==grant.CompanyId&&grant.ProjectIds.All(p=>c.Projects.Any(x=>x.Active&&x.ProjectId==p))))throw new ArgumentException("Kullanıcı kapsamı geçersiz.");Save(doc with{Users=doc.Users.Append(user).ToArray()});return View(user);}
+    }
+    private LocalUser Require(AuthenticatedSessionPrincipal actor)=>Load().Users.SingleOrDefault(x=>x.Active&&x.UserId==actor.UserId&&x.SecurityVersion==actor.SecurityVersion)??throw new UnauthorizedAccessException();
+    private void RequireAdmin(AuthenticatedSessionPrincipal actor){if(Require(actor).Role!=LocalUserRole.Admin)throw new UnauthorizedAccessException();}
+    private IdentityCatalogDocument Load(){if(!File.Exists(_path))return new(1,Array.Empty<LocalUser>(),Array.Empty<LocalCompany>());try{var info=new FileInfo(_path);if(info.Length>4*1024*1024)throw new InvalidDataException("Kimlik kataloğu boyut sınırını aşıyor.");var doc=JsonSerializer.Deserialize<IdentityCatalogDocument>(File.ReadAllText(_path),Json)??throw new InvalidDataException("Kimlik kataloğu boş.");Validate(doc);return doc;}catch(Exception ex)when(ex is JsonException or IOException or InvalidDataException){throw new InvalidDataException("Kimlik kataloğu bozuk; güvenli biçimde başlatma durduruldu.",ex);}}
+    private static void Validate(IdentityCatalogDocument doc){if(doc.Version!=1||doc.Users.Count>1000||doc.Companies.Count>10000||doc.Users.Select(x=>x.UserId).Distinct(StringComparer.Ordinal).Count()!=doc.Users.Count||doc.Users.Select(x=>x.NormalizedUserName).Distinct(StringComparer.Ordinal).Count()!=doc.Users.Count||doc.Companies.Select(x=>x.CompanyId).Distinct(StringComparer.Ordinal).Count()!=doc.Companies.Count||doc.Users.Any(x=>x.SecurityVersion<1||string.IsNullOrWhiteSpace(x.PasswordHash)||!Enum.IsDefined(x.Role)))throw new InvalidDataException();var projects=doc.Companies.SelectMany(c=>c.Projects.Select(p=>(c.CompanyId,p.ProjectId))).ToArray();if(projects.Distinct().Count()!=projects.Length||doc.Users.SelectMany(x=>x.Grants).Any(g=>!doc.Companies.Any(c=>c.CompanyId==g.CompanyId&&g.ProjectIds.All(p=>c.Projects.Any(x=>x.ProjectId==p)))))throw new InvalidDataException();}
+    private void Save(IdentityCatalogDocument doc){string temp=_path+"."+Guid.NewGuid().ToString("N")+".tmp";File.WriteAllText(temp,JsonSerializer.Serialize(doc,Json));File.Move(temp,_path,true);}
+    private static string Normalize(string value)=>value.Trim().Normalize().ToUpperInvariant();
+    private static void ValidateUserName(string value){if(string.IsNullOrWhiteSpace(value)||value.Length>128)throw new ArgumentException("Kullanıcı adı geçersiz.");}
+    private static void ValidatePassword(string value){if(value is null||value.Length<12||value.Length>256)throw new ArgumentException("Parola 12-256 karakter olmalıdır.");}
+    private static AuthenticatedUserView View(LocalUser user)=>new(user.UserId,user.UserName,user.Role,user.SecurityVersion,user.Grants);
+}

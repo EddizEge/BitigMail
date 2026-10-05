@@ -1,0 +1,9 @@
+TASK-011 two final backend failures. FILE EDITS ONLY; run nothing.
+
+Current 67 backend tests: 65 pass, 2 fail.
+
+1) SelectionEvaluation_WholeSourceTrialBlocker_RejectsEvenIfSubsetIsSmall line ~321 expects blocker reason containing `ÖN KONTROL ENGELİ`, but got zero-match text. Production precedence is wrong: a whole-source preflight/trial blocker must remain the authoritative BlockerReason and must not be overwritten by a selected-count-zero message. Fix precedence while retaining counts.
+
+2) SelectionEvaluation_NonTrialWholeSourceBlocker_RejectsJobStartAndConverter line ~381 expects exact InvalidOperationException but gets InvalidDataException because the test feeds a synthetic PST into the OST converter, so format validation rejects before the selection defense. Keep authoritative OST signature validation. Make the converter defense test production-valid by using a copied genuine OST fixture and a blocked RegisteredSelection bound to its real SHA, or otherwise assert at the production layer that actually reaches selection defense. Prove no target PST publication. Do not loosen Assert.Throws merely to accept the unrelated format failure.
+
+Preserve all prior fixes and pending status. Do not edit JobManager synchronous progress behavior.

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checks": {
+    "source-snapshot.json unchanged": true,
+    "imap-snapshot.json unchanged": true,
+    "baseline-5e7cdfab/source-to-imap.json": true,
+    "baseline-5e7cdfab/imap-to-mbox.json": true,
+    "baseline-5e7cdfab/sidecar.json": true,
+    "baseline-5e7cdfab/source-after.json": true,
+    "baseline-5e7cdfab/preview_active sampled": true,
+    "baseline-5e7cdfab/export_active sampled": true,
+    "after-a2f1b2ee/source-to-imap.json": true,
+    "after-a2f1b2ee/imap-to-mbox.json": true,
+    "after-a2f1b2ee/sidecar.json": true,
+    "after-a2f1b2ee/source-after.json": true,
+    "after-a2f1b2ee/preview_active sampled": true,
+    "after-a2f1b2ee/export_active sampled": true
+  },
+  "sourceRawBytes": 133847116,
+  "baseline": "baseline-5e7cdfab",
+  "after": "after-a2f1b2ee",
+  "previewReductionPercent": 15.979916700934304,
+  "exportReductionPercent": 9.594595803950966,
+  "limitations": "One paired local run; no causal or general memory improvement claim. Preview peak memory increased. No 1GiB/100GB conclusion."
+}

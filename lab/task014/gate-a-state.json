@@ -1,0 +1,110 @@
+[
+  {
+    "FixtureId": "msg-01",
+    "SourceMailbox": "INBOX",
+    "SourceUid": 1,
+    "SourceSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+    "Keyword": "bitigmail_adbe1eb723db739bf5c17a82de674b5c",
+    "TargetUid": 1,
+    "TargetMailbox": "GateA"
+  },
+  {
+    "FixtureId": "msg-02",
+    "SourceMailbox": "INBOX",
+    "SourceUid": 2,
+    "SourceSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+    "Keyword": "bitigmail_ee9d6a9483e8351dc0f3b2c371eb3fe5",
+    "TargetUid": 2,
+    "TargetMailbox": "GateA"
+  },
+  {
+    "FixtureId": "msg-05",
+    "SourceMailbox": "INBOX",
+    "SourceUid": 3,
+    "SourceSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+    "Keyword": "bitigmail_60642042735f11c526fd105408e0cac9",
+    "TargetUid": 3,
+    "TargetMailbox": "GateA"
+  },
+  {
+    "FixtureId": "msg-06",
+    "SourceMailbox": "INBOX",
+    "SourceUid": 4,
+    "SourceSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+    "Keyword": "bitigmail_acbd0e5c621b878dbf659df40b864f43",
+    "TargetUid": 4,
+    "TargetMailbox": "GateA"
+  },
+  {
+    "FixtureId": "msg-07",
+    "SourceMailbox": "INBOX",
+    "SourceUid": 5,
+    "SourceSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+    "Keyword": "bitigmail_79c923c4ffe1e4947375e396db8c4ea0",
+    "TargetUid": 5,
+    "TargetMailbox": "GateA"
+  },
+  {
+    "FixtureId": "msg-08",
+    "SourceMailbox": "G\u00F6nderilenler",
+    "SourceUid": 1,
+    "SourceSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+    "Keyword": "bitigmail_fdf9fa9b128afd126546bb596e8c90a3",
+    "TargetUid": 6,
+    "TargetMailbox": "GateA"
+  },
+  {
+    "FixtureId": "msg-09",
+    "SourceMailbox": "G\u00F6nderilenler",
+    "SourceUid": 2,
+    "SourceSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+    "Keyword": "bitigmail_9e8615fdac113d79c0718d94cf0fec11",
+    "TargetUid": 7,
+    "TargetMailbox": "GateA"
+  },
+  {
+    "FixtureId": "msg-10",
+    "SourceMailbox": "G\u00F6nderilenler",
+    "SourceUid": 3,
+    "SourceSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+    "Keyword": "bitigmail_d6faf6c803a71434ace1af7e57d03d96",
+    "TargetUid": 8,
+    "TargetMailbox": "GateA"
+  },
+  {
+    "FixtureId": "msg-03",
+    "SourceMailbox": "Projeler.\u0130stanbul",
+    "SourceUid": 1,
+    "SourceSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+    "Keyword": "bitigmail_a478307416faa27f071f7dda850cd749",
+    "TargetUid": 9,
+    "TargetMailbox": "GateA"
+  },
+  {
+    "FixtureId": "msg-04",
+    "SourceMailbox": "Projeler.\u0130stanbul",
+    "SourceUid": 2,
+    "SourceSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+    "Keyword": "bitigmail_257d8624b4e3f1d28eb59c8bd013da8d",
+    "TargetUid": 10,
+    "TargetMailbox": "GateA"
+  },
+  {
+    "FixtureId": "msg-11",
+    "SourceMailbox": "Projeler.\u0130stanbul",
+    "SourceUid": 3,
+    "SourceSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+    "Keyword": "bitigmail_8c978ba3e6e5eeb1b082b81f153d6dce",
+    "TargetUid": 11,
+    "TargetMailbox": "GateA"
+  },
+  {
+    "FixtureId": "msg-12",
+    "SourceMailbox": "Projeler.\u0130stanbul",
+    "SourceUid": 4,
+    "SourceSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+    "Keyword": "bitigmail_dd12fc17ff90182d90f2d86e5d97c8b1",
+    "TargetUid": 12,
+    "TargetMailbox": "GateA"
+  }
+]

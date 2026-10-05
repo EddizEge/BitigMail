@@ -1,0 +1,12 @@
+{
+  "oracle": "Independent physical-message multiset",
+  "pass": false,
+  "exactRaw": true,
+  "metadataCompared": false,
+  "sourceCount": 12,
+  "targetCount": 12,
+  "missing": 12,
+  "extra": 12,
+  "sourceAttachments": 4,
+  "targetAttachments": 4
+}

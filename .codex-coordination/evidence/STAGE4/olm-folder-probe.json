@@ -1,0 +1,833 @@
+{
+  "status": "READ_WITH_UNRESOLVED_ATTACHMENTS",
+  "sdk": "24.8.0.0",
+  "before": "A3AA54A01157618B1A45949F25F750D2A762984BE098B786F285930A6A468CE7",
+  "after": "A3AA54A01157618B1A45949F25F750D2A762984BE098B786F285930A6A468CE7",
+  "messages": 25,
+  "messageClasses": {
+    "IPM.Contact": 3,
+    "IPM.Note": 22
+  },
+  "attachments": 38,
+  "unresolvedAttachments": 3,
+  "folders": [
+    {
+      "ordinal": 1,
+      "folderPath": "/Address Book",
+      "mailIdentities": [],
+      "depth": 0,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": [
+        "AAAAAMUAAQB7FQAAAAAAAA=="
+      ]
+    },
+    {
+      "ordinal": 2,
+      "folderPath": "/Address Book/Address Book (Outlook for Mac Archive_2010 OLM) (Outlook for Mac ArchiveZZZ OLM)",
+      "mailIdentities": [],
+      "depth": 1,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": [
+        "AAAAAMUAAQAwIQAAAAAAAA=="
+      ]
+    },
+    {
+      "ordinal": 3,
+      "folderPath": "/Address Book/Address Book (Outlook for Mac ArchiveZZZ OLM)",
+      "mailIdentities": [],
+      "depth": 1,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": [
+        "AAAAAMUAAQBvLQAAAAAAAA=="
+      ]
+    },
+    {
+      "ordinal": 4,
+      "folderPath": "/Accounts",
+      "mailIdentities": [],
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 5,
+      "folderPath": "/Calendar",
+      "mailIdentities": [],
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 6,
+      "folderPath": "/Tasks",
+      "mailIdentities": [],
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 7,
+      "folderPath": "/Notes",
+      "mailIdentities": [],
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 8,
+      "folderPath": "/Sent Items",
+      "mailIdentities": [],
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 9,
+      "folderPath": "/Outlook2 PST",
+      "mailIdentities": [],
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 10,
+      "folderPath": "/Outlook2 PST/Sent Items",
+      "mailIdentities": [
+        "BE0A5FA7DBEAF9F44AA2125CE94FC05A0CA290CA073A3DA0D708C0D582A29E66",
+        "B8F11E6723686C135056115A66107E1F00A7FADF29169EAC0511580A6D62541C",
+        "206A6F8111B211CDF0FE6CB3EE72C361BE3AB65A3D4D0FDC5FB3FD07D5A043C0",
+        "5B31EA8890133C441DB5E24B84A819F5C12AC16F2F92EBA919D8ABAB8E1828B3",
+        "793DEAA8260599D5A5D742571CC0C6B4FADE0BA2DC8A54986999466ECDEEDF1D",
+        "DEABDE7A522236E5CDF7A4FE7F046114710192646404DB3BD270A3C7BF765FC8"
+      ],
+      "depth": 1,
+      "messages": 6,
+      "attachments": 17,
+      "attachmentHashes": [
+        "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "629EB59096A74D716FCD9A838DC827BBBD7314CCD0CF491065F5DC5F94063C3D",
+        "24F2BA93E1962ABBB4D03530828A616F303FAA090C1617A5C185E6C7FD4B09E6",
+        "A7962FFAD6F5D2CF2250B4A54A6A8DC31CE0017375F4CB62D9372E87E981B178",
+        "5D0301D30A29F2505FC3420F89B82AB68BEB42194E9F35CC9E57246883FC1972",
+        "2C10488A0DB40C74388FB5EF28E8709EE0C25CC96831930489DA12C7A427BF8B",
+        "A85D01FC93371E077E567E0B7730962BFE8D0486CF7A3B55B72F73F09973322E",
+        "2F9617EEE2486FAFEBC5576AA6E1947FDA71ACD8F7EA81E61BF332E93DE94915",
+        "E969CAB2DF07E8EEAEE929E42328D83EFBC9A5314622ABEC4FECA0E4AE15584F",
+        "C3AECC45DA1DC28E361750BBBCC83CD85E52CED2A33BAA6E662FDDD2213A0354",
+        "7B8747E216189C615F9EC6FC1A5723EDCFB080D388CECF313780A526B10087BD",
+        "912DBE6A306CCE82390B1911CCE7D522EFACC26BAE3314BB2145BB121AB7F1B9",
+        "C8AA6C2B38A148293CF39C86766DD831A5C213BA848C5E04DBB9BE26FA19FE14",
+        "A18FA102A4395A08671BBA2451AC99BF2C7407873E63E0EA29A5A47B2CB439EF",
+        "8782666B98DC1B063A715C85CEB01CB5DFE163366B1E553AE901A4FB42F7860F",
+        "EA3B1238A38F72B330AAC53364BD0A0481946B93FC757DDE7314CE3319F1840E",
+        "62E85A0F3A4CBC01B6D3390D63DE0F7D051E1E723AEB071416A38799C50738EA"
+      ],
+      "attachmentSaveResults": [
+        {
+          "status": "READ",
+          "hash": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "629EB59096A74D716FCD9A838DC827BBBD7314CCD0CF491065F5DC5F94063C3D",
+          "bytes": 2674,
+          "isEmbeddedMessage": true
+        },
+        {
+          "status": "READ",
+          "hash": "24F2BA93E1962ABBB4D03530828A616F303FAA090C1617A5C185E6C7FD4B09E6",
+          "bytes": 90089,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "A7962FFAD6F5D2CF2250B4A54A6A8DC31CE0017375F4CB62D9372E87E981B178",
+          "bytes": 7352,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "5D0301D30A29F2505FC3420F89B82AB68BEB42194E9F35CC9E57246883FC1972",
+          "bytes": 5675,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "2C10488A0DB40C74388FB5EF28E8709EE0C25CC96831930489DA12C7A427BF8B",
+          "bytes": 10385,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "A85D01FC93371E077E567E0B7730962BFE8D0486CF7A3B55B72F73F09973322E",
+          "bytes": 5473,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "2F9617EEE2486FAFEBC5576AA6E1947FDA71ACD8F7EA81E61BF332E93DE94915",
+          "bytes": 13901,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "E969CAB2DF07E8EEAEE929E42328D83EFBC9A5314622ABEC4FECA0E4AE15584F",
+          "bytes": 6588,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "C3AECC45DA1DC28E361750BBBCC83CD85E52CED2A33BAA6E662FDDD2213A0354",
+          "bytes": 7352,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "7B8747E216189C615F9EC6FC1A5723EDCFB080D388CECF313780A526B10087BD",
+          "bytes": 20959,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "912DBE6A306CCE82390B1911CCE7D522EFACC26BAE3314BB2145BB121AB7F1B9",
+          "bytes": 2560,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "C8AA6C2B38A148293CF39C86766DD831A5C213BA848C5E04DBB9BE26FA19FE14",
+          "bytes": 3878,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "A18FA102A4395A08671BBA2451AC99BF2C7407873E63E0EA29A5A47B2CB439EF",
+          "bytes": 2275,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "8782666B98DC1B063A715C85CEB01CB5DFE163366B1E553AE901A4FB42F7860F",
+          "bytes": 29,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "EA3B1238A38F72B330AAC53364BD0A0481946B93FC757DDE7314CE3319F1840E",
+          "bytes": 71189,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "62E85A0F3A4CBC01B6D3390D63DE0F7D051E1E723AEB071416A38799C50738EA",
+          "bytes": 28521,
+          "isEmbeddedMessage": false
+        }
+      ],
+      "sampleEntryIds": [
+        "AAAAAMUAAQDpQwAAAAAAAA==",
+        "AAAAAMUAAQAKjwAAAAAAAA==",
+        "AAAAAMUAAQCj4AAAAAAAAA=="
+      ]
+    },
+    {
+      "ordinal": 11,
+      "folderPath": "/Outlook2 PST/RSS Feeds",
+      "mailIdentities": [],
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 12,
+      "folderPath": "/Outlook2 PST/Outbox",
+      "mailIdentities": [],
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 13,
+      "folderPath": "/Outlook2 PST/Junk E-mail",
+      "mailIdentities": [],
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 14,
+      "folderPath": "/Outlook2 PST/Inbox",
+      "mailIdentities": [
+        "1FF249FA0AB87202AB41BBFAAADB8499C589CF9D46F60AC660C3AECCE92EB75A",
+        "79FBC1F00C7EE23C7430E949B05A4DBE8A2A545CEC492B8AA772A2D715236098",
+        "4A844D824D299510A1FCFB4EF8ED96419669D81208C84A3E3C8646516DE654FA",
+        "D2B5F7E69F7FCF3074BEE475CCC60328B3F84ABEC79612B28AC4CE5EBC1B46B1",
+        "47C0752420373AF3596A884E61C1E24CE0C06D6A5BCF690975145EA0A463A727",
+        "9EAD6D9589124DBA720DFF1A47F3C1403BD918AB957C8D2F954342E9F52C8812"
+      ],
+      "depth": 1,
+      "messages": 6,
+      "attachments": 17,
+      "attachmentHashes": [
+        "8782666B98DC1B063A715C85CEB01CB5DFE163366B1E553AE901A4FB42F7860F",
+        "EA3B1238A38F72B330AAC53364BD0A0481946B93FC757DDE7314CE3319F1840E",
+        "62E85A0F3A4CBC01B6D3390D63DE0F7D051E1E723AEB071416A38799C50738EA",
+        "24F2BA93E1962ABBB4D03530828A616F303FAA090C1617A5C185E6C7FD4B09E6",
+        "A7962FFAD6F5D2CF2250B4A54A6A8DC31CE0017375F4CB62D9372E87E981B178",
+        "5D0301D30A29F2505FC3420F89B82AB68BEB42194E9F35CC9E57246883FC1972",
+        "2C10488A0DB40C74388FB5EF28E8709EE0C25CC96831930489DA12C7A427BF8B",
+        "A85D01FC93371E077E567E0B7730962BFE8D0486CF7A3B55B72F73F09973322E",
+        "2F9617EEE2486FAFEBC5576AA6E1947FDA71ACD8F7EA81E61BF332E93DE94915",
+        "E969CAB2DF07E8EEAEE929E42328D83EFBC9A5314622ABEC4FECA0E4AE15584F",
+        "C3AECC45DA1DC28E361750BBBCC83CD85E52CED2A33BAA6E662FDDD2213A0354",
+        "7B8747E216189C615F9EC6FC1A5723EDCFB080D388CECF313780A526B10087BD",
+        "912DBE6A306CCE82390B1911CCE7D522EFACC26BAE3314BB2145BB121AB7F1B9",
+        "C8AA6C2B38A148293CF39C86766DD831A5C213BA848C5E04DBB9BE26FA19FE14",
+        "A18FA102A4395A08671BBA2451AC99BF2C7407873E63E0EA29A5A47B2CB439EF",
+        "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "C84ACEE971A1E5C2552D3DBB19B971EDDD8652BA79852E29A412D92991CDAE6F"
+      ],
+      "attachmentSaveResults": [
+        {
+          "status": "READ",
+          "hash": "8782666B98DC1B063A715C85CEB01CB5DFE163366B1E553AE901A4FB42F7860F",
+          "bytes": 29,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "EA3B1238A38F72B330AAC53364BD0A0481946B93FC757DDE7314CE3319F1840E",
+          "bytes": 71189,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "62E85A0F3A4CBC01B6D3390D63DE0F7D051E1E723AEB071416A38799C50738EA",
+          "bytes": 28521,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "24F2BA93E1962ABBB4D03530828A616F303FAA090C1617A5C185E6C7FD4B09E6",
+          "bytes": 90089,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "A7962FFAD6F5D2CF2250B4A54A6A8DC31CE0017375F4CB62D9372E87E981B178",
+          "bytes": 7352,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "5D0301D30A29F2505FC3420F89B82AB68BEB42194E9F35CC9E57246883FC1972",
+          "bytes": 5675,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "2C10488A0DB40C74388FB5EF28E8709EE0C25CC96831930489DA12C7A427BF8B",
+          "bytes": 10385,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "A85D01FC93371E077E567E0B7730962BFE8D0486CF7A3B55B72F73F09973322E",
+          "bytes": 5473,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "2F9617EEE2486FAFEBC5576AA6E1947FDA71ACD8F7EA81E61BF332E93DE94915",
+          "bytes": 13901,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "E969CAB2DF07E8EEAEE929E42328D83EFBC9A5314622ABEC4FECA0E4AE15584F",
+          "bytes": 6588,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "C3AECC45DA1DC28E361750BBBCC83CD85E52CED2A33BAA6E662FDDD2213A0354",
+          "bytes": 7352,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "7B8747E216189C615F9EC6FC1A5723EDCFB080D388CECF313780A526B10087BD",
+          "bytes": 20959,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "912DBE6A306CCE82390B1911CCE7D522EFACC26BAE3314BB2145BB121AB7F1B9",
+          "bytes": 2560,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "C8AA6C2B38A148293CF39C86766DD831A5C213BA848C5E04DBB9BE26FA19FE14",
+          "bytes": 3878,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "A18FA102A4395A08671BBA2451AC99BF2C7407873E63E0EA29A5A47B2CB439EF",
+          "bytes": 2275,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+          "bytes": 0,
+          "isEmbeddedMessage": false
+        },
+        {
+          "status": "READ",
+          "hash": "C84ACEE971A1E5C2552D3DBB19B971EDDD8652BA79852E29A412D92991CDAE6F",
+          "bytes": 2682,
+          "isEmbeddedMessage": true
+        }
+      ],
+      "sampleEntryIds": [
+        "AAAAAMUAAQAduxgAAAAAAA==",
+        "AAAAAMUAAQCHPyEAAAAAAA==",
+        "AAAAAMUAAQCKuyYAAAAAAA=="
+      ]
+    },
+    {
+      "ordinal": 15,
+      "folderPath": "/Outlook2 PST/Inbox/Custom Folder",
+      "mailIdentities": [
+        "828FA24BC9A4D529F9218B5D042659521C6E0E23B492740E1D4DE8CCF39320FD",
+        "F7E1754490FAAAE745E9AD14FAD82B3905CC1C45A0D5C18FBE5FBBA78DE455FD"
+      ],
+      "depth": 2,
+      "messages": 2,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": [
+        "AAAAAMUAAQBtyCcAAAAAAA==",
+        "AAAAAMUAAQC16ScAAAAAAA=="
+      ]
+    },
+    {
+      "ordinal": 16,
+      "folderPath": "/Outlook2 PST/Drafts",
+      "mailIdentities": [],
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 17,
+      "folderPath": "/Outlook2 PST/Deleted Items",
+      "mailIdentities": [],
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 18,
+      "folderPath": "/Outbox",
+      "mailIdentities": [],
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 19,
+      "folderPath": "/Junk E-mail",
+      "mailIdentities": [],
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 20,
+      "folderPath": "/Inbox",
+      "mailIdentities": [],
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 21,
+      "folderPath": "/Drafts",
+      "mailIdentities": [],
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 22,
+      "folderPath": "/Deleted Items",
+      "mailIdentities": [],
+      "depth": 0,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 23,
+      "folderPath": "/Deleted Items/test_olm2010 PST",
+      "mailIdentities": [],
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 24,
+      "folderPath": "/Deleted Items/test_olm2010 PST/Folder",
+      "mailIdentities": [
+        "162DC4F543A06190B0F6634C6447F03BFF4235C33B4A734463DDAC643A49A529"
+      ],
+      "depth": 2,
+      "messages": 1,
+      "attachments": 1,
+      "attachmentHashes": [
+        "UNRESOLVED_BINARY_DATA"
+      ],
+      "attachmentSaveResults": [
+        {
+          "status": "READ",
+          "hash": "29F277D914053F033833EA339B6720E2781C6E228F2ADDEB5E3C67E5596317A0",
+          "bytes": 25600,
+          "isEmbeddedMessage": true
+        }
+      ],
+      "sampleEntryIds": [
+        "AAAAAMUAAQBmmCgAAAAAAA=="
+      ]
+    },
+    {
+      "ordinal": 25,
+      "folderPath": "/Deleted Items/test_olm2010 PST/Folder/Subfolder",
+      "mailIdentities": [],
+      "depth": 3,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 26,
+      "folderPath": "/Deleted Items/test_olm2010 PST/Deleted Items",
+      "mailIdentities": [
+        "0B40A95EF8423110B60F3214AB3D7601FDE8F732A9AF8CCB23CD5A2C964141FE"
+      ],
+      "depth": 2,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": [
+        "AAAAAMUAAQCdACkAAAAAAA=="
+      ]
+    },
+    {
+      "ordinal": 27,
+      "folderPath": "/Deleted Items/test_olm2010 PST/Deleted Items/Calendar",
+      "mailIdentities": [],
+      "depth": 3,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 28,
+      "folderPath": "/Deleted Items/Outlook for Mac Archive_2010 OLM",
+      "mailIdentities": [],
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 29,
+      "folderPath": "/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer",
+      "mailIdentities": [],
+      "depth": 2,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 30,
+      "folderPath": "/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST",
+      "mailIdentities": [],
+      "depth": 3,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 31,
+      "folderPath": "/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST/Folder",
+      "mailIdentities": [
+        "162DC4F543A06190B0F6634C6447F03BFF4235C33B4A734463DDAC643A49A529"
+      ],
+      "depth": 4,
+      "messages": 1,
+      "attachments": 1,
+      "attachmentHashes": [
+        "UNRESOLVED_BINARY_DATA"
+      ],
+      "attachmentSaveResults": [
+        {
+          "status": "READ",
+          "hash": "362ED32D2786B4BC7E20A9620CF4B8D0B3B688BA04A296060CA1D49D7C97CD3C",
+          "bytes": 25600,
+          "isEmbeddedMessage": true
+        }
+      ],
+      "sampleEntryIds": [
+        "AAAAAMUAAQC\u002BtCkAAAAAAA=="
+      ]
+    },
+    {
+      "ordinal": 32,
+      "folderPath": "/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST/Deleted Items",
+      "mailIdentities": [
+        "0B40A95EF8423110B60F3214AB3D7601FDE8F732A9AF8CCB23CD5A2C964141FE"
+      ],
+      "depth": 4,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": [
+        "AAAAAMUAAQC8HCoAAAAAAA=="
+      ]
+    },
+    {
+      "ordinal": 33,
+      "folderPath": "/Deleted Items/Outlook for Mac ArchiveZZZ OLM",
+      "mailIdentities": [],
+      "depth": 1,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 34,
+      "folderPath": "/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer",
+      "mailIdentities": [],
+      "depth": 2,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 35,
+      "folderPath": "/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/test_olm2010 PST",
+      "mailIdentities": [],
+      "depth": 3,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 36,
+      "folderPath": "/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/test_olm2010 PST/Folder",
+      "mailIdentities": [
+        "162DC4F543A06190B0F6634C6447F03BFF4235C33B4A734463DDAC643A49A529"
+      ],
+      "depth": 4,
+      "messages": 1,
+      "attachments": 1,
+      "attachmentHashes": [
+        "9D7D9CC32A02FAF463FA359CCC49AE3484B03565415D5F8C5B783F4AA533931D"
+      ],
+      "attachmentSaveResults": [
+        {
+          "status": "READ",
+          "hash": "9D7D9CC32A02FAF463FA359CCC49AE3484B03565415D5F8C5B783F4AA533931D",
+          "bytes": 7390,
+          "isEmbeddedMessage": false
+        }
+      ],
+      "sampleEntryIds": [
+        "AAAAAMUAAQDQzioAAAAAAA=="
+      ]
+    },
+    {
+      "ordinal": 37,
+      "folderPath": "/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/test_olm2010 PST/Deleted Items",
+      "mailIdentities": [
+        "0B40A95EF8423110B60F3214AB3D7601FDE8F732A9AF8CCB23CD5A2C964141FE"
+      ],
+      "depth": 4,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": [
+        "AAAAAMUAAQDmNisAAAAAAA=="
+      ]
+    },
+    {
+      "ordinal": 38,
+      "folderPath": "/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/Deleted Items",
+      "mailIdentities": [],
+      "depth": 3,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 39,
+      "folderPath": "/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/Deleted Items/Outlook for Mac Archive_2010 OLM",
+      "mailIdentities": [],
+      "depth": 4,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 40,
+      "folderPath": "/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer",
+      "mailIdentities": [],
+      "depth": 5,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 41,
+      "folderPath": "/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST",
+      "mailIdentities": [],
+      "depth": 6,
+      "messages": 0,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": []
+    },
+    {
+      "ordinal": 42,
+      "folderPath": "/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST/Folder",
+      "mailIdentities": [
+        "162DC4F543A06190B0F6634C6447F03BFF4235C33B4A734463DDAC643A49A529"
+      ],
+      "depth": 7,
+      "messages": 1,
+      "attachments": 1,
+      "attachmentHashes": [
+        "UNRESOLVED_BINARY_DATA"
+      ],
+      "attachmentSaveResults": [
+        {
+          "status": "READ",
+          "hash": "BBB7FAEEABB83DE350FB3E20B63460F4CFC810E4D41AE833977D59059F968988",
+          "bytes": 25600,
+          "isEmbeddedMessage": true
+        }
+      ],
+      "sampleEntryIds": [
+        "AAAAAMUAAQAh7ysAAAAAAA=="
+      ]
+    },
+    {
+      "ordinal": 43,
+      "folderPath": "/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST/Deleted Items",
+      "mailIdentities": [
+        "0B40A95EF8423110B60F3214AB3D7601FDE8F732A9AF8CCB23CD5A2C964141FE"
+      ],
+      "depth": 7,
+      "messages": 1,
+      "attachments": 0,
+      "attachmentHashes": [],
+      "attachmentSaveResults": [],
+      "sampleEntryIds": [
+        "AAAAAMUAAQDvWSwAAAAAAA=="
+      ]
+    }
+  ],
+  "qualification": "One public vendor fixture; trial SDK. Items include non-mail classes, not all emails. No conversion, general format, or UI acceptance. Initial probe failed on null attachment BinaryData; this probe records it explicitly."
+}

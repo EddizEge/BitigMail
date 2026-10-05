@@ -1,0 +1,837 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "name": "/api/session HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/archive-source HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/archive-source no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "closed synthetic fixture72",
+      "pass": true
+    },
+    {
+      "name": "plan exact owner",
+      "pass": true
+    },
+    {
+      "name": "every frozen source hash verified before test",
+      "pass": true
+    },
+    {
+      "name": "exact TestingHost executable and command",
+      "pass": true
+    },
+    {
+      "name": "exact TestingHost executable and command",
+      "pass": true
+    },
+    {
+      "name": "stable process identity before arming",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start no-store",
+      "pass": true
+    },
+    {
+      "name": "actual mid-job termination occurred",
+      "pass": true
+    },
+    {
+      "name": "same process handle exited",
+      "pass": true
+    },
+    {
+      "name": "old testing listener closed",
+      "pass": true
+    },
+    {
+      "name": "real partial staging retained",
+      "pass": true
+    },
+    {
+      "name": "partial archive not published",
+      "pass": true
+    },
+    {
+      "name": "testing listener free before restart",
+      "pass": true
+    },
+    {
+      "name": "new listener running",
+      "pass": true
+    },
+    {
+      "name": "new PID published",
+      "pass": true
+    },
+    {
+      "name": "/api/session HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 no-store",
+      "pass": true
+    },
+    {
+      "name": "startup marks real interrupted job",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/resume HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/resume no-store",
+      "pass": true
+    },
+    {
+      "name": "resume uses same job and archive",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-3d67c0326f51 no-store",
+      "pass": true
+    },
+    {
+      "name": "job completed job-3d67c0326f51",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/arc_5d6b041ad12d4191/manifest HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/arc_5d6b041ad12d4191/manifest no-store",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "exact physical raw multiset",
+      "pass": true
+    },
+    {
+      "name": "distinct physical IDs",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "no original fixture changes",
+      "pass": true
+    }
+  ],
+  "archives": [
+    {
+      "archiveId": "arc_5d6b041ad12d4191",
+      "archiveName": "72 ileti gerçek kesinti",
+      "companyId": "root-archive-crash-70007c63",
+      "projectId": "partial-ingest",
+      "companyName": "Kesinti Laboratuvarı",
+      "projectName": "Gerçek süreç kesintisi",
+      "sourceKind": "eml-tree",
+      "dialect": "rfc822",
+      "sourceFingerprint": "afb58c5687ce3b7556325005e5a428c844c6e0cdbadbd9720f2ef012f08deb86",
+      "totalItems": 72,
+      "totalSizeBytes": 78078,
+      "truncatedItemsCount": 0,
+      "status": "ready",
+      "createdAtUtc": "2026-09-14T00:45:34.6793383+00:00",
+      "indexedAtUtc": "2026-09-14T00:45:35.0880827+00:00",
+      "indexGeneration": 1
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "overall_peak_ws_bytes": 880582656,
+  "overall_peak_ws_mib": 839.79,
+  "overall_peak_private_bytes": 897409024,
+  "overall_peak_private_mib": 855.84,
+  "phases": {
+    "idle_pre_resume": {
+      "samples": 27,
+      "peak_ws": 299913216,
+      "min_ws": 65089536,
+      "peak_private": 297336832,
+      "min_private": 52469760,
+      "peak_cpu": 272.4,
+      "start_time": "2026-09-14T18:29:11.791975+00:00",
+      "end_time": "2026-09-14T18:29:14.737334+00:00"
+    },
+    "search_active": {
+      "samples": 125,
+      "peak_ws": 863129600,
+      "min_ws": 356569088,
+      "peak_private": 880013312,
+      "min_private": 371998720,
+      "peak_cpu": 186.4,
+      "start_time": "2026-09-14T18:29:14.737334+00:00",
+      "end_time": "2026-09-14T18:29:50.725113+00:00"
+    },
+    "idle_post_search": {
+      "samples": 1804,
+      "peak_ws": 880582656,
+      "min_ws": 871153664,
+      "peak_private": 897409024,
+      "min_private": 886915072,
+      "peak_cpu": 57.3,
+      "start_time": "2026-09-14T18:29:50.725113+00:00",
+      "end_time": "2026-09-14T18:33:21.957383+00:00"
+    }
+  }
+}

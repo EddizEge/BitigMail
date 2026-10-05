@@ -1,0 +1,43 @@
+{
+  "oracle": "Independent export sidecar metadata and folder mapping",
+  "pass": true,
+  "count": 5,
+  "mappingPass": true,
+  "items": [
+    {
+      "identity": [
+        "INBOX",
+        "1789299650:1"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "INBOX",
+        "1789299650:2"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "INBOX",
+        "1789299650:3"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "INBOX",
+        "1789299650:4"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "INBOX",
+        "1789299650:5"
+      ],
+      "pass": true
+    }
+  ]
+}

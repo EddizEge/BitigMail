@@ -1,0 +1,96 @@
+using System;
+using System.Linq;
+using System.Security;
+
+namespace BitigMail.Engine.Imap;
+
+/// <summary>
+/// Typed and validated configuration for an IMAP account.
+/// Enforces RFC and security boundaries specified in docs/IMAP_TRANSFER_WORKFLOW.md.
+/// </summary>
+public sealed class ImapAccountConfig
+{
+    public required string AccountId { get; init; }
+    public required string DisplayName { get; init; }
+    public required string Email { get; init; }
+    public required string Host { get; init; }
+    public required int Port { get; init; }
+    public required string Username { get; init; }
+    public required string Password { get; init; }
+    public required ImapSecurityMode SecurityMode { get; init; }
+    public DateTimeOffset CreatedAtUtc { get; init; } = DateTimeOffset.UtcNow;
+
+    /// <summary>
+    /// Validates configuration fields against security and protocol rules.
+    /// Throws ArgumentException or SecurityException on violation.
+    /// </summary>
+    public void Validate()
+    {
+        if (string.IsNullOrWhiteSpace(AccountId))
+            throw new ArgumentException("AccountId cannot be empty.", nameof(AccountId));
+
+        if (string.IsNullOrWhiteSpace(Email) || !Email.Contains('@'))
+            throw new ArgumentException("Email must be a valid email address.", nameof(Email));
+
+        // Host validation: DNS name or IP only, no control chars, whitespace, URLs, or delimiters
+        if (string.IsNullOrWhiteSpace(Host))
+            throw new ArgumentException("Host cannot be empty.", nameof(Host));
+
+        if (Host.Any(char.IsControl) || Host.Any(char.IsWhiteSpace) || Host.Contains('/') || Host.Contains('\\') || Host.Contains(':') || Host.Contains('?') || Host.Contains('#'))
+            throw new ArgumentException($"Host contains invalid characters or protocol delimiters: '{Host}'.", nameof(Host));
+
+        var hostType = Uri.CheckHostName(Host);
+        if (hostType != UriHostNameType.Dns && hostType != UriHostNameType.IPv4 && hostType != UriHostNameType.IPv6)
+            throw new ArgumentException($"Host '{Host}' is neither a valid DNS hostname nor a valid IP address.", nameof(Host));
+
+        // Port validation
+        if (Port < 1 || Port > 65535)
+            throw new ArgumentOutOfRangeException(nameof(Port), Port, "Port must be in range 1..65535.");
+
+        // Username and password validation
+        if (string.IsNullOrWhiteSpace(Username))
+            throw new ArgumentException("Username cannot be empty.", nameof(Username));
+
+        if (Username.Any(char.IsControl))
+            throw new ArgumentException("Username contains protocol control characters.", nameof(Username));
+
+        if (string.IsNullOrEmpty(Password))
+            throw new ArgumentException("Password cannot be empty.", nameof(Password));
+
+        if (Password.Contains('\r') || Password.Contains('\n'))
+            throw new ArgumentException("Password contains carriage return or line feed characters.", nameof(Password));
+
+        // Security boundary validation
+        if (SecurityMode == ImapSecurityMode.PlaintextLoopbackLabOnly)
+        {
+            bool isLoopback = Host == "127.0.0.1" || Host.Equals("localhost", StringComparison.OrdinalIgnoreCase);
+            if (!isLoopback || Port != 4143)
+            {
+                throw new SecurityException(
+                    $"Plaintext IMAP is strictly prohibited for non-lab endpoints. Target '{Host}:{Port}' does not match permitted '127.0.0.1:4143'.");
+            }
+        }
+        else if (SecurityMode != ImapSecurityMode.SslOnConnect && SecurityMode != ImapSecurityMode.StartTls)
+        {
+            throw new SecurityException($"Unsupported or unapproved security mode: {SecurityMode}. Production requires SslOnConnect or StartTls.");
+        }
+    }
+
+    /// <summary>
+    /// Projects to a safe public DTO, stripping passwords and internal data.
+    /// </summary>
+    public ImapAccountPublicDto ToPublicDto() => new()
+    {
+        AccountId = AccountId,
+        DisplayName = DisplayName,
+        Email = Email,
+        Host = Host,
+        Port = Port,
+        Username = Username,
+        SecurityMode = SecurityMode,
+        CreatedAtUtc = CreatedAtUtc
+    };
+
+    public override string ToString() =>
+        $"ImapAccount[{AccountId}]: {Email} ({Username}@{Host}:{Port}, {SecurityMode})";
+}

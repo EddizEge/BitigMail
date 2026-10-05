@@ -1,0 +1,18 @@
+{
+  "accountId": "acc_faf3480d4f9f4f0c8a00306c22551d93",
+  "companyId": "task017-mbox-9683502c52",
+  "projectId": "mbox-crash-pilot",
+  "displayName": "TASK017 Mbox Source",
+  "email": "source@bitigmail.example",
+  "host": "127.0.0.1",
+  "port": 5143,
+  "username": "source",
+  "authKind": "password",
+  "tenantId": null,
+  "clientId": null,
+  "tlsMode": "none",
+  "securityMode": 3,
+  "version": 1,
+  "createdAtUtc": "2026-09-13T22:55:29.7148398+00:00",
+  "updatedAtUtc": "2026-09-13T22:55:29.7148714+00:00"
+}

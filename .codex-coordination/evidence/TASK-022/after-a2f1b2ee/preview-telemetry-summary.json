@@ -1,0 +1,36 @@
+{
+  "overallPeakWsBytes": 561823744,
+  "overallPeakPrivateBytes": 596025344,
+  "phases": {
+    "idle_pre_preview": {
+      "samples": 19,
+      "peakWsBytes": 328036352,
+      "minWsBytes": 327356416,
+      "peakPrivateBytes": 325427200,
+      "minPrivateBytes": 325279744,
+      "peakCpuPct": 99.4,
+      "startTime": "2026-09-14T19:56:19.739024+00:00",
+      "endTime": "2026-09-14T19:56:21.739832+00:00"
+    },
+    "preview_active": {
+      "samples": 82,
+      "peakWsBytes": 561823744,
+      "minWsBytes": 313503744,
+      "peakPrivateBytes": 596025344,
+      "minPrivateBytes": 311349248,
+      "peakCpuPct": 227.3,
+      "startTime": "2026-09-14T19:56:21.739832+00:00",
+      "endTime": "2026-09-14T19:56:30.670504+00:00"
+    },
+    "idle_post_preview": {
+      "samples": 19,
+      "peakWsBytes": 530296832,
+      "minWsBytes": 528039936,
+      "peakPrivateBytes": 549011456,
+      "minPrivateBytes": 546557952,
+      "peakCpuPct": 43.0,
+      "startTime": "2026-09-14T19:56:30.670504+00:00",
+      "endTime": "2026-09-14T19:56:32.671261+00:00"
+    }
+  }
+}

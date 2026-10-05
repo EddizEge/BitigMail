@@ -1,0 +1,44 @@
+1568
+From: =?utf-8?q?Ahmet_Y=C4=B1lmaz?= <ahmet.yilmaz@posta.example>
+To: =?utf-8?q?M=C3=BChendislik_Ekibi?= <ekip@muhendislik.example>
+Subject: =?utf-8?b?TUJPWCBLYcOnxLHFnyBLdXJhbGxhcsSxIHZlIEFsxLFudMSxIERlbmVtZXNp?=
+Date: Sun, 25 Aug 2024 13:20:00 +0300
+Message-ID: <msg-2024-08-mbox-kacis@posta.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="===============_bound_msg08_alt_=="
+
+--===============_bound_msg08_alt_==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Ekip merhaba,
+
+Aşağıda alıntılanan e-posta satırları MBOX mboxrd kaçış semantiğini doğrulamak için hazırlanmıştır:
+
+From Ahmet Yılmaz <ahmet.yilmaz@posta.example>
+Tarih: 2024-08-24 10:00
+
+>From Canan Özkan <canan.ozkan@muhendislik.example>
+>Tarih: 2024-08-23 15:30
+
+Bu satırların başındaki 'From ' ve '>From ' ifadeleri mboxrd standartlarında dönüştürülmelidir.
+Selamlar,
+Ahmet
+--===============_bound_msg08_alt_==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<p>Ekip merhaba,</p><p>Aşağıda alıntılanan e-posta satırları MBOX mboxrd kaçış semantiğini doğrulamak için hazırlanmıştır:</p><pre>From Ahmet Yılmaz &lt;ahmet.yilmaz@posta.example&gt;&#10;Tarih: 2024-08-24 10:00&#10;&#10;&gt;From Canan Özkan &lt;canan.ozkan@muhendislik.example&gt;&#10;&gt;Tarih: 2024-08-23 15:30</pre><p>Bu satırların başındaki 'From ' ve '&gt;From ' ifadeleri mboxrd standartlarında dönüştürülmelidir.<br>Selamlar,<br>Ahmet</p>
+--===============_bound_msg08_alt_==--
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>flags</key>
+	<integer>8</integer>
+	<key>source-id</key>
+	<string>msg-08</string>
+	<key>synthetic-fixture</key>
+	<true/>
+</dict>
+</plist>

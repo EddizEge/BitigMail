@@ -1,0 +1,13 @@
+TASK-013 Gate A, simplified bounded experiment. Edit files only; do not run commands. No product/API/UI/dependency changes.
+
+Read docs/MIME_IMPORT_WORKFLOW.md, the installed Aspose.Email 24.8 XML API docs, and the already-built independent source oracle at C:\Users\Eddiz\AppData\Local\Temp\bitigmail-task013-qa\oracle-ce4c5897\report.json. Do NOT implement a second BCL/raw MIME parser. Treat oracle.messages as EML source baseline and oracle.mboxMessages as MBOX baseline; specifically do not trim the pre-existing extra LF in MBOX msg09/msg10.
+
+Add one isolated xUnit experiment file (and a small helper/model file only if essential) to engine/BitigMail.Engine.Tests. It must:
+- Load the 12 immutable EML files with actual pinned MailMessage/EmlLoadOptions APIs, convert each to MapiMessage, write all physical copies into a new temp PST, close/reopen it, and record SDK MailMessage -> MAPI -> reopened-PST observations separately.
+- Read corpus.mbox with the exact pinned APIs for explicit mboxrd and mboxo interpretation if supported. Static XML inspection must determine the true enum/options/reader names; unsupported mode is a recorded limitation, never guessed. Record physical count and literal `From `, `>From `, `>>From ` body behavior per stage.
+- Compare each stage to the root oracle for count, physical duplicates, subject (including exact evaluation additions), from/to, Message-ID, date, text/HTML, four attachment names/sizes/SHA, and one CID. Do not remove watermarks and do not fail merely because a difference is observed; report differences precisely. Lost physical messages/attachments must be marked as failed observations.
+- Create each new PST and report only under %LOCALAPPDATA%\Temp\bitigmail-task013-gate-a\<unique-run>. Reopen outputs and assert structural counts. Original fixtures and TASK012 evidence remain untouched.
+- Emit deterministic concise JSON report.json with actual API names, source oracle path, source/output SHA and paths, per-stage field diffs, mbox mode results, trial observations, risks, and `decisionNeeded`; print `TASK013_GATE_A_REPORT=<absolute path>` via ITestOutputHelper.
+- Assert oracle physicalMessages=12, attachments=4, cidCount=1; duplicate physical records stay distinct; output PST exists and reopens. Use a single clearly filterable test class/name.
+
+Keep code small and direct. Reply with exact changed files and exact dotnet test filter. Do not claim runtime results.

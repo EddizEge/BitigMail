@@ -1,0 +1,3 @@
+timestamp_utc,phase,cpu_pct,working_set_bytes,private_bytes
+2026-09-15T14:38:25.006333+00:00,idle-after-eml,0.0,2710417408,2736267264
+2026-09-15T14:38:25.114433+00:00,idle-after-eml,0.0,2710478848,2736332800

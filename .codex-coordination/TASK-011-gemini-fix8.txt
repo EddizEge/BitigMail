@@ -1,0 +1,5 @@
+TASK-011 test-only acceptance correction. FILE EDITS ONLY; run nothing and do not touch product code or services.
+
+In the real filtered UI E2E, zero-match correctly blocks conversion by omitting the start button entirely. The test currently requires getByTestId('start-conversion-btn').toBeDisabled(), so it fails because the element is absent. Update the assertion to accept the actual safe contract: start control is absent OR present and disabled. After restoring the valid 3-message selection, reacquire the start button locator and require it visible/enabled before clicking. Preserve all 3/1/10, reload, report, and responsive assertions.
+
+Do not claim tests ran. Keep pending result.

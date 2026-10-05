@@ -1,0 +1,183 @@
+{
+  "completed": true,
+  "stage": "128m",
+  "checks": [
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "at least1024 physical source messages",
+      "pass": true
+    },
+    {
+      "name": "source size within2percent target",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-89b7d45b64ed no-store",
+      "pass": true
+    },
+    {
+      "name": "completed owned export job-89b7d45b64ed",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-89b7d45b64ed/report no-store",
+      "pass": true
+    },
+    {
+      "name": "only owned target folders",
+      "pass": true
+    },
+    {
+      "name": "source to IMAP canonical/header/MIME physical multiset",
+      "pass": true
+    },
+    {
+      "name": "IMAP to export exact raw/header/MIME physical multiset",
+      "pass": true
+    },
+    {
+      "name": "export folder/date/flags/UID sidecar",
+      "pass": true
+    },
+    {
+      "name": "target not deleted",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-8c0f78e599bb no-store",
+      "pass": true
+    },
+    {
+      "name": "completed owned export job-8c0f78e599bb",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-8c0f78e599bb/report no-store",
+      "pass": true
+    },
+    {
+      "name": "only owned target folders",
+      "pass": true
+    },
+    {
+      "name": "source to IMAP canonical/header/MIME physical multiset",
+      "pass": true
+    },
+    {
+      "name": "IMAP to export exact raw/header/MIME physical multiset",
+      "pass": true
+    },
+    {
+      "name": "export folder/date/flags/UID sidecar",
+      "pass": true
+    },
+    {
+      "name": "target not deleted",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog no-store",
+      "pass": true
+    },
+    {
+      "name": "source immutable throughout read-only audit",
+      "pass": true
+    },
+    {
+      "name": "original source12/4 unchanged",
+      "pass": true
+    }
+  ],
+  "exports": [
+    {
+      "jobId": "job-89b7d45b64ed",
+      "format": "mboxrd",
+      "output": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-qa-split\\split-out-ac5dfc7c620a4d67a2ca9bad11959c69\\bridge-export-job-89b7d45b64ed",
+      "sourceToImap": {
+        "oracle": "Independent physical-message multiset",
+        "pass": true,
+        "exactRaw": false,
+        "metadataCompared": false,
+        "sourceCount": 1024,
+        "targetCount": 1024,
+        "missing": 0,
+        "extra": 0,
+        "sourceAttachments": 308,
+        "targetAttachments": 308
+      },
+      "imapToFile": {
+        "oracle": "Independent physical-message multiset",
+        "pass": true,
+        "exactRaw": true,
+        "metadataCompared": false,
+        "sourceCount": 1024,
+        "targetCount": 1024,
+        "missing": 0,
+        "extra": 0,
+        "sourceAttachments": 308,
+        "targetAttachments": 308
+      },
+      "sidecarPass": true
+    },
+    {
+      "jobId": "job-8c0f78e599bb",
+      "format": "eml-tree",
+      "output": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-qa-split\\split-out-49b33c5236b14c4eab4d85a12bed6e82\\bridge-export-job-8c0f78e599bb",
+      "sourceToImap": {
+        "oracle": "Independent physical-message multiset",
+        "pass": true,
+        "exactRaw": false,
+        "metadataCompared": false,
+        "sourceCount": 1024,
+        "targetCount": 1024,
+        "missing": 0,
+        "extra": 0,
+        "sourceAttachments": 308,
+        "targetAttachments": 308
+      },
+      "imapToFile": {
+        "oracle": "Independent physical-message multiset",
+        "pass": true,
+        "exactRaw": true,
+        "metadataCompared": false,
+        "sourceCount": 1024,
+        "targetCount": 1024,
+        "missing": 0,
+        "extra": 0,
+        "sourceAttachments": 308,
+        "targetAttachments": 308
+      },
+      "sidecarPass": true
+    }
+  ],
+  "archives": [],
+  "timings": [
+    {
+      "route": "/api/session",
+      "httpAndJsonMs": 27.249200000369456
+    },
+    {
+      "route": "/api/jobs/job-89b7d45b64ed",
+      "httpAndJsonMs": 8.233299995481502
+    },
+    {
+      "route": "/api/jobs/job-89b7d45b64ed/report",
+      "httpAndJsonMs": 22.231699993426446
+    },
+    {
+      "route": "/api/jobs/job-8c0f78e599bb",
+      "httpAndJsonMs": 5.711000005248934
+    },
+    {
+      "route": "/api/jobs/job-8c0f78e599bb/report",
+      "httpAndJsonMs": 4.532899998594075
+    },
+    {
+      "route": "/api/archive/catalog",
+      "httpAndJsonMs": 90.79560000100173
+    }
+  ]
+}

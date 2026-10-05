@@ -1,0 +1,11 @@
+{
+  "checkedSourceCount": 62,
+  "changedFiles": [
+    "C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\engine\\BitigMail.Engine\\Archive\\ArchiveModels.cs",
+    "C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\engine\\BitigMail.Engine\\Bridge\\BridgeTransferModels.cs",
+    "C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\engine\\BitigMail.Engine\\Imap\\Transfer\\ImapTransferPreviewModels.cs"
+  ],
+  "recordedAt": "2026-09-15T17:48:42.7139498+03:00",
+  "snapshot": "runtime/task029/snapshot027-ec18950f",
+  "interpretation": "Only request DTO containers differ for optional queue flags. Data worker and IMAP client source hashes unchanged; queue lifecycle validated separately by TASK028."
+}

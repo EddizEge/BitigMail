@@ -1,0 +1,33 @@
+{
+  "previewId": "aprv_55fc6510e75842308a3432f9cf97a73f",
+  "archiveName": "Aktarım-api-f952de49c9",
+  "companyId": "comp-ornek",
+  "projectId": "proj-ornek-gecis",
+  "companyName": "Örnek Şirket",
+  "projectName": "Sistem Geçişi 2024",
+  "sourceKind": "bridge-export",
+  "dialect": "mboxrd",
+  "sourceFingerprint": "bridge-export:job-3b6cab7b2f7c:2026-09-13T23:00:58.9983360+00:00:639bc015ff57951610bb564a4c7a965fb0c0dc0a8d2f76e1fc67ae09de99bb6c",
+  "totalFiles": 3,
+  "totalItems": 12,
+  "totalSizeBytes": 13086,
+  "folders": [
+    {
+      "folderName": "Gönderilenler",
+      "itemCount": 3,
+      "totalSizeBytes": 2595
+    },
+    {
+      "folderName": "INBOX",
+      "itemCount": 5,
+      "totalSizeBytes": 5888
+    },
+    {
+      "folderName": "Projeler/İstanbul",
+      "itemCount": 4,
+      "totalSizeBytes": 4603
+    }
+  ],
+  "canIngest": true,
+  "blockerReason": null
+}

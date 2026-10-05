@@ -1,0 +1,4 @@
+{
+  "error": "Check failed: Staging directory cleaned up after completion",
+  "type": "AssertionError"
+}

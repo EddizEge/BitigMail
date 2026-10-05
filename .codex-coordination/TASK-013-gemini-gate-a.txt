@@ -1,0 +1,21 @@
+You are Gemini executor for TASK-013 Gate A only in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager. Edit files directly; do NOT run builds/tests/servers. The SOL controller runs all commands. Do not implement product/API/UI and do not add/upgrade dependencies.
+
+Read completely:
+- .codex-coordination/inbox/TASK-013.md
+- docs/MIME_IMPORT_WORKFLOW.md
+- fixtures/mail-corpus-v1/README.md and manifest.json
+- current engine test project patterns and existing PST verification helpers
+- installed API documentation/signatures at C:\Users\Eddiz\.nuget\packages\aspose.email\24.8.0\lib\net6.0\Aspose.Email.xml and the pinned assembly/API metadata. Do not guess APIs.
+
+Create a bounded, independently runnable xUnit Gate A experiment in the existing test project (supporting helper/model files are fine). It must use only Aspose.Email 24.8 already referenced and must never modify the original fixture corpus. All PSTs/reports go into a unique task-owned temp directory outside the repository and preserve paths in test output/report.
+
+Experiment requirements:
+1. Establish a source-before-SDK oracle from the original bytes for all 12 EML files and corpus.mbox: physical ordinal/path, raw relevant headers, Message-ID multiplicity, decoded RFC subject/address/date where safely observable, primary text/HTML, attachment filename/content bytes/SHA-256/content-id, and the exact body-line cases `From `, `>From `, `>>From `. This can use .NET BCL plus narrowly scoped corpus-specific raw inspection, but do not write a handwritten general MIME parser and do not normalize away evidence. Record byte facts separately from semantic observations.
+2. Load each EML using actual MailMessage/EmlLoadOptions APIs; convert MIME -> MapiMessage using the installed API; add each physical copy to a NEW PST; close and reopen PST. Capture observations at SDK MailMessage, MAPI, and reopened-PST stages separately. Do not deduplicate equal Message-ID/hash messages.
+3. Read corpus.mbox twice with explicit installed mboxrd and mboxo modes/readers/options if the pinned SDK truly exposes both. If it exposes different exact names or lacks a mode, record that deterministically instead of inventing it. For each interpretation, record physical count and how literal/quoted From-body lines appear after SDK read, MAPI conversion, and reopened PST.
+4. Capture source vs each stage for: physical message count, subjects including any evaluation/trial additions, sender/recipient, Message-ID, valid/missing date behavior, plain/HTML body, attachment count/name/size/SHA, attachment Content-ID/CID, and folder mapping used by the experiment. Precisely record evaluation watermark/subject/body changes; never strip them.
+5. Exercise a small EML->PST and each supported MBOX-mode->PST path. Reopen every output. Assert only hard structural invariants needed for the experiment (no crash, physical multiplicity, actual output exists/reopens); do not falsely make fidelity differences fail before they are reported. But any lost physical message or attachment should be an explicit failed observation.
+6. Emit one concise deterministic JSON report under %LOCALAPPDATA%\Temp\bitigmail-task013-gate-a\<unique-run>\report.json, with source/output hashes and paths, API names actually used, per-stage diffs, mbox mode observations, trial/evaluation observations, risks and decision-needed fields. Print `TASK013_GATE_A_REPORT=<absolute path>` to test output/console so SOL can retrieve it.
+7. Add focused test assertions that the immutable corpus still contains 12 EMLs, MBOX physical count is measured, duplicate physical copies remain separate, and source attachment/CID facts are captured. Never modify fixtures or existing TASK-012 evidence.
+
+Keep the implementation intentionally experimental and isolated (name it GateA/Experiment); no production abstractions yet. When done, reply with changed files, the exact test filter/name to run, and any API limitation discovered from static inspection. Do not claim runtime results.

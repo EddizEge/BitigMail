@@ -1,0 +1,55 @@
+.firecrawl/
+node_modules/
+dist/
+prototype/node_modules/
+prototype/dist/
+prototype/.playwright/
+prototype/test-results/
+prototype/qa/*.png
+
+# Local tools and dev dependencies (TASK-008)
+.tools/
+
+# Lab runtime artifacts and local credentials (TASK-008)
+lab/ost-spike/local-credentials.json
+lab/ost-spike/output/
+lab/ost-spike/input/
+lab/ost-spike/**/bin/
+lab/ost-spike/**/obj/
+
+# Lab runtime artifacts and local credentials (TASK-014)
+lab/task014/local-credentials.json
+lab/task014/output/
+lab/task014/input/
+lab/task014/**/bin/
+lab/task014/**/obj/
+
+# Local engine runtime and build artifacts (TASK-010)
+runtime/local-engine/
+runtime/testing-engine/
+engine/**/bin/
+engine/**/obj/
+*.partial
+
+
+# Repository baseline (2026-10-05): build outputs, runtime data, secrets, bulky evidence
+artifacts/
+runtime/
+**/bin/
+**/obj/
+**/TestResults/
+**/local-credentials.json
+*.dmp
+*.pid
+*.log
+*.pst
+*.ost
+*.olm
+*.tsbuildinfo
+prototype/playwright-report/
+.codex-coordination/artifacts/
+.codex-coordination/build/
+.codex-coordination/probes/
+.codex-coordination/task017-byte-tests/
+.codex-coordination/task018-policy-tests/
+.codex-coordination/task018-sqlite-probe/

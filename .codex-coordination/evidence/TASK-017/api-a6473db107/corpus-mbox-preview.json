@@ -1,0 +1,28 @@
+{
+  "previewId": "bprev_36d5ee76baaa430e9c425e555ad83b7a",
+  "companyId": "root-bridge-83f6a9e7",
+  "projectId": "local-pilot",
+  "sourceHandle": "msrc_a5302e18ea5743edba7c28098b4d6b75",
+  "sourceFingerprint": "d14374c2e6991ea6d1dd51f7b1d6c44a90b184433b806caa928c3d2a23f85e12",
+  "sourceKind": "mbox",
+  "targetAccountId": "acc_677101107eaf41e68d3bd877a9752725",
+  "targetAccountVersion": 1,
+  "totalSourceItems": 12,
+  "eligibleItemsCount": 12,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "corpus",
+      "targetFolder": "TASK017-api-a6473db107-corpus-mbox",
+      "totalItems": 12,
+      "eligibleItems": 12,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-13T21:53:51.099692+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

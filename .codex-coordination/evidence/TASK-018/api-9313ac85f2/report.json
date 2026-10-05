@@ -1,0 +1,1437 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "name": "/api/session HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/archive-source HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/archive-source no-store",
+      "pass": true
+    },
+    {
+      "name": "source picked corpus-eml",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "physical preview count EML-api-9313ac85f2",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start no-store",
+      "pass": true
+    },
+    {
+      "name": "same key same job",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start no-store",
+      "pass": true
+    },
+    {
+      "name": "same plan different key same job",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-a31aa8bb9980 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-a31aa8bb9980 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-a31aa8bb9980 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-a31aa8bb9980 no-store",
+      "pass": true
+    },
+    {
+      "name": "job completed job-a31aa8bb9980",
+      "pass": true
+    },
+    {
+      "name": "archive job kind",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog no-store",
+      "pass": true
+    },
+    {
+      "name": "catalog count/status",
+      "pass": true
+    },
+    {
+      "name": "frozen ownership",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/archive-source HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/archive-source no-store",
+      "pass": true
+    },
+    {
+      "name": "source picked corpus-mbox",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "physical preview count MBOX-api-9313ac85f2",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start no-store",
+      "pass": true
+    },
+    {
+      "name": "same key same job",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start no-store",
+      "pass": true
+    },
+    {
+      "name": "same plan different key same job",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-72dce6652aa4 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-72dce6652aa4 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-72dce6652aa4 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-72dce6652aa4 no-store",
+      "pass": true
+    },
+    {
+      "name": "job completed job-72dce6652aa4",
+      "pass": true
+    },
+    {
+      "name": "archive job kind",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog no-store",
+      "pass": true
+    },
+    {
+      "name": "catalog count/status",
+      "pass": true
+    },
+    {
+      "name": "frozen ownership",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/archive-source HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/archive-source no-store",
+      "pass": true
+    },
+    {
+      "name": "source picked archive-edgecases",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "physical preview count Sınırlar-api-9313ac85f2",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start no-store",
+      "pass": true
+    },
+    {
+      "name": "same key same job",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start no-store",
+      "pass": true
+    },
+    {
+      "name": "same plan different key same job",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-6395afd54339 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-6395afd54339 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-6395afd54339 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-6395afd54339 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-6395afd54339 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-6395afd54339 no-store",
+      "pass": true
+    },
+    {
+      "name": "job completed job-6395afd54339",
+      "pass": true
+    },
+    {
+      "name": "archive job kind",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog no-store",
+      "pass": true
+    },
+    {
+      "name": "catalog count/status",
+      "pass": true
+    },
+    {
+      "name": "frozen ownership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/arc_e4cbdb4d5dbe4a70/manifest HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/arc_e4cbdb4d5dbe4a70/manifest no-store",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "exact physical raw multiset",
+      "pass": true
+    },
+    {
+      "name": "distinct physical IDs",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/arc_b91f1b5a4bb44369/manifest HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/arc_b91f1b5a4bb44369/manifest no-store",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "exact physical raw multiset",
+      "pass": true
+    },
+    {
+      "name": "distinct physical IDs",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/arc_2b5aee44c3e9481a/manifest HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/arc_2b5aee44c3e9481a/manifest no-store",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "stored path contained",
+      "pass": true
+    },
+    {
+      "name": "stored hash and length",
+      "pass": true
+    },
+    {
+      "name": "exact physical raw multiset",
+      "pass": true
+    },
+    {
+      "name": "distinct physical IDs",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'field': 'subject', 'query': 'İstanbul'}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "query physical identities {'field': 'subject', 'query': 'İstanbul'}",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'field': 'subject', 'query': 'istanbul'}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "query physical identities {'field': 'subject', 'query': 'istanbul'}",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'field': 'subject', 'query': 'bilgilendirme'}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "query physical identities {'field': 'subject', 'query': 'bilgilendirme'}",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'field': 'body', 'query': 'Ahmet'}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "query physical identities {'field': 'body', 'query': 'Ahmet'}",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'field': 'attachmentName', 'query': 'şartname'}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "query physical identities {'field': 'attachmentName', 'query': 'şartname'}",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'field': 'attachmentName', 'query': 'logo'}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "query physical identities {'field': 'attachmentName', 'query': 'logo'}",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'field': 'sender', 'query': 'Ahmet'}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "query physical identities {'field': 'sender', 'query': 'Ahmet'}",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'hasAttachment': True}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "query physical identities {'hasAttachment': True}",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'hasAttachment': False}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "query physical identities {'hasAttachment': False}",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'startDate': '2024-01-01', 'endDate': '2024-02-16'}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/message/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "query physical identities {'startDate': '2024-01-01', 'endDate': '2024-02-16'}",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'query': 'istanbul', 'field': 'subject'}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'page': 1, 'pageSize': 5}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'page': 2, 'pageSize': 5}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'page': 3, 'pageSize': 5}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'page': 4, 'pageSize': 5}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {'page': 5, 'pageSize': 5}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "pagination all24 exactly once",
+      "pass": false
+    }
+  ],
+  "archives": [
+    {
+      "archiveId": "arc_e4cbdb4d5dbe4a70",
+      "archiveName": "EML-api-9313ac85f2",
+      "companyId": "api-9313ac85f2-a",
+      "projectId": "proje-a",
+      "companyName": "A Şirketi api-9313ac85f2",
+      "projectName": "Arşiv Kontrolü",
+      "sourceKind": "eml-files",
+      "dialect": "rfc822",
+      "sourceFingerprint": "b2b99494b1c464b57c924ba150063af465d9cc1e3f31d0b9e7926bbdf7e1b09a",
+      "totalItems": 12,
+      "totalSizeBytes": 13013,
+      "truncatedItemsCount": 0,
+      "status": "ready",
+      "createdAtUtc": "2026-09-14T00:02:10.2900232+00:00",
+      "indexedAtUtc": "2026-09-14T00:02:10.3561259+00:00",
+      "indexGeneration": 1
+    },
+    {
+      "archiveId": "arc_b91f1b5a4bb44369",
+      "archiveName": "MBOX-api-9313ac85f2",
+      "companyId": "api-9313ac85f2-b",
+      "projectId": "proje-b",
+      "companyName": "B Şirketi api-9313ac85f2",
+      "projectName": "İstanbul",
+      "sourceKind": "mbox",
+      "dialect": "mboxrd",
+      "sourceFingerprint": "d14374c2e6991ea6d1dd51f7b1d6c44a90b184433b806caa928c3d2a23f85e12",
+      "totalItems": 12,
+      "totalSizeBytes": 13025,
+      "truncatedItemsCount": 0,
+      "status": "ready",
+      "createdAtUtc": "2026-09-14T00:02:10.5320356+00:00",
+      "indexedAtUtc": "2026-09-14T00:02:10.5781091+00:00",
+      "indexGeneration": 1
+    },
+    {
+      "archiveId": "arc_2b5aee44c3e9481a",
+      "archiveName": "Sınırlar-api-9313ac85f2",
+      "companyId": "api-9313ac85f2-a",
+      "projectId": "proje-a",
+      "companyName": "A Şirketi api-9313ac85f2",
+      "projectName": "Arşiv Kontrolü",
+      "sourceKind": "eml-tree",
+      "dialect": "rfc822",
+      "sourceFingerprint": "dc7813aba3a39b2fc487a301b30a450836d92a8ca0ba4cd35b38b1d17e8e87a3",
+      "totalItems": 4,
+      "totalSizeBytes": 526845,
+      "truncatedItemsCount": 1,
+      "status": "ready",
+      "createdAtUtc": "2026-09-14T00:02:10.9493565+00:00",
+      "indexedAtUtc": "2026-09-14T00:02:11.0132237+00:00",
+      "indexGeneration": 1
+    }
+  ]
+}

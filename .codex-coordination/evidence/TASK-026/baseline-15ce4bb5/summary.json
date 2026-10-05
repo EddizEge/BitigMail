@@ -1,0 +1,70 @@
+{
+  "taskId": "TASK-026",
+  "mode": "baseline",
+  "runId": "baseline-15ce4bb5",
+  "status": "PASS",
+  "jobId": "job-5bce3b092263",
+  "targetFolder": "TASK026/baseline-15ce4bb5",
+  "elapsedSec": 0.8308259999903385,
+  "verifyingObservedSec": 0.08832569999503903,
+  "verifyingTelemetry": {
+    "samples": 1,
+    "peakWsBytes": 259670016,
+    "minWsBytes": 259670016,
+    "peakPrivateBytes": 248406016,
+    "minPrivateBytes": 248406016,
+    "peakCpuPct": 28.7,
+    "startTime": "2026-09-15T12:59:47.045287+00:00",
+    "endTime": "2026-09-15T12:59:47.133629+00:00"
+  },
+  "checks": [
+    {
+      "name": "6175 free",
+      "pass": true
+    },
+    {
+      "name": "protected hosts present",
+      "pass": true
+    },
+    {
+      "name": "source 12/4 before",
+      "pass": true
+    },
+    {
+      "name": "Refuse to adopt or stop a pre-existing listener",
+      "pass": true
+    },
+    {
+      "name": "Launched exact project runtime and TestingHost DLL",
+      "pass": true
+    },
+    {
+      "name": "Started TestingHost responded to /api/session",
+      "pass": true
+    },
+    {
+      "name": "PID file/listener match the newly launched Popen child",
+      "pass": true
+    },
+    {
+      "name": "Ready process retains exact launch identity",
+      "pass": true
+    },
+    {
+      "name": "preview 12",
+      "pass": true
+    },
+    {
+      "name": "job completed",
+      "pass": true
+    },
+    {
+      "name": "independent oracle",
+      "pass": true
+    },
+    {
+      "name": "source 12/4 after",
+      "pass": true
+    }
+  ]
+}

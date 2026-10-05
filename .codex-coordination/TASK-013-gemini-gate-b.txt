@@ -1,0 +1,20 @@
+TASK-013 Gate B experiment only. Root has explicitly approved adding MimeKitLite 4.17.0 to the TEST PROJECT first. Edit files only; do not run commands/tests/servers. Do not change production/API/UI/docs/fixtures or existing Gate A evidence. Aspose.Email remains pinned 24.8.0.
+
+Read:
+- docs/MIME_IMPORT_WORKFLOW.md, especially the appended Gate A decision
+- GateA experiment files and latest report C:\Users\Eddiz\AppData\Local\Temp\bitigmail-task013-gate-a\run-6acc172d26834641b5ef633c6c6ba102\report.json
+- independent oracle C:\Users\Eddiz\AppData\Local\Temp\bitigmail-task013-qa\oracle-ce4c5897\report.json
+- independent first-output evidence directories/reports `independent-d6df49fc` and `independent-d7cb59c8` under C:\Users\Eddiz\AppData\Local\Temp\bitigmail-task013-qa
+- installed Aspose 24.8 docs and existing working body/property helpers.
+
+Implement one isolated GateB xUnit experiment (new GateB folder/files) and add exactly `<PackageReference Include="MimeKitLite" Version="4.17.0" />` to engine/BitigMail.Engine.Tests/BitigMail.Engine.Tests.csproj. No other dependency changes.
+
+Required measurements:
+1. Parse the original 12 EML files with MimeKitLite. Compare MimeKit source-stage fields against oracle.messages: physical multiplicity, decoded subject/from/to/Message-ID/date, original text/plain and text/html separately, attachment name/bytes/SHA, disposition and true CID. Source MIME parse must match the Python oracle or explicitly fail/report exact diffs.
+2. Parse corpus.mbox as explicit mboxrd only. Preserve 12 physical records. Resolve mboxrd container quoting exactly once BEFORE MIME transfer decoding: raw `>From` -> MIME body `From`, raw `>>From` -> MIME body `>From`. Do not globally trim or remove msg09/msg10's pre-existing extra LF; compare to oracle.mboxMessages, not oracle.messages. Use MimeKit's real mbox parser behavior if it performs this correctly; if not, a narrow task-owned mboxrd container decoding step may wrap record extraction, but do not implement a general MIME parser. Record actual API/strategy and raw/decoded line facts.
+3. Convert the parsed MimeKit message into the pinned Aspose MailMessage/MapiMessage path while preserving evidence. Evaluation strings must never be stripped. The critical mapping experiment must explicitly preserve BOTH `MailMessage.Body` plain text and `MailMessage.HtmlBody` across MAPI/PST. Test candidate property mappings supported by actual Aspose 24.8 (inspect signatures/working code; no guesses). Record candidate name and exact properties set. The goal is: Original/Oracle -> MimeKit exact; MimeKit -> Aspose SDK may contain measured evaluation additions; SDK plain+HTML -> reopened PST both preserved exactly relative to SDK stage, including evaluation content.
+4. Preserve all 4 attachment byte hashes and the true inline CID `proje_logo_cid`; distinguish any generated CID additions on ordinary attachments. Keep duplicate physical messages and same Message-ID/different-content messages separate.
+5. Create new output PSTs/report only under %LOCALAPPDATA%\Temp\bitigmail-task013-gate-b\<unique-run>. Reopen outputs. Emit concise JSON with EML and mboxrd stage counts/diffs, exact evaluation additions, body mapping candidates/results, attachment/CID results, mboxrd escape result, source/output hashes/paths, risks, and decisionNeeded. Print `TASK013_GATE_B_REPORT=<absolute path>` through ITestOutputHelper.
+6. Hard assertions: MimeKit EML source stage 12 messages and oracle exact semantic/content match; explicit mboxrd 12 and correct one-pass From unescape vs oracle.mboxMessages; no physical duplicate loss; reopened PST 12; 4 attachment hashes preserved; true CID preserved. For body candidates, assert only the selected successful mapping if one achieves exact SDK->PST plain+HTML; if none works, report all failures and keep the test structurally passable so Root can make the decision—do not fake success. Evaluation/original diffs are explicit DIFFERENCES, never lossless PASS.
+
+Name one clearly filterable GateB test class. Keep code bounded and direct. Reply with changed files and exact dotnet filter, no claimed runtime results.

@@ -1,0 +1,1 @@
+TASK-011 final one-string UI edit only. Run nothing. Replace the user-visible heading `YETKİLİ SUNUCU SEÇİM ÖNİZLEMESİ` with `SEÇİM ÖZETİ` in the real filter workflow and update exact-copy tests if needed. No other product/test changes. Keep result pending SOL verification.

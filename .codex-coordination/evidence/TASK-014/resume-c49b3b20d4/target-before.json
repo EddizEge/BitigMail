@@ -1,0 +1,199 @@
+{
+  "oracle": "Python stdlib IMAP BODY.PEEK + email parser",
+  "folders": [
+    {
+      "path": "AstraUie0e2f40b609f/İstanbul",
+      "uidValidity": 1789299748,
+      "messages": [
+        {
+          "uid": 1,
+          "rawSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+          "rawBytes": 957,
+          "flags": [
+            "\\Seen",
+            "bitigmail_02d4486e660bd1299ab8f211bcbe62fe"
+          ],
+          "internalDateUtc": "2024-02-15T11:30:00+00:00",
+          "headers": [
+            [
+              "From",
+              "Canan Özkan <canan.ozkan@muhendislik.example>"
+            ],
+            [
+              "To",
+              "Proje Grubu <proje.ekibi@sirket.example>"
+            ],
+            [
+              "Subject",
+              "İstanbul Saha Raporu - İlk Taslak"
+            ],
+            [
+              "Date",
+              "Thu, 15 Feb 2024 14:30:00 +0300"
+            ],
+            [
+              "Message-ID",
+              "<ortak-kimlik-2024-revizyon@projeler.example>"
+            ],
+            [
+              "MIME-Version",
+              "1.0"
+            ],
+            [
+              "Content-Type",
+              "multipart/alternative; boundary=\"===============_bound_msg03_alt_==\""
+            ]
+          ],
+          "parts": [
+            {
+              "type": "text/plain",
+              "disposition": null,
+              "fileName": null,
+              "cid": "",
+              "decodedBytes": 141,
+              "decodedSha256": "1ec91d49bf2aa3f17623269c85b9cf60bf20a02f04ad1f05b3e32ee62fc71a26"
+            },
+            {
+              "type": "text/html",
+              "disposition": null,
+              "fileName": null,
+              "cid": "",
+              "decodedBytes": 156,
+              "decodedSha256": "f4159303680b882297966a2119e7fca06727d79fb0ea8b4a3e813b235b24f6aa"
+            }
+          ],
+          "attachments": 0
+        },
+        {
+          "uid": 2,
+          "rawSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+          "rawBytes": 1013,
+          "flags": [
+            "\\Seen",
+            "bitigmail_c7224d536e39e8fdcf72a5f50d8639ac"
+          ],
+          "internalDateUtc": "2024-02-16T07:15:00+00:00",
+          "headers": [
+            [
+              "From",
+              "Burak Aktaş <burak.aktas@lojistik.example>"
+            ],
+            [
+              "To",
+              "Proje Grubu <proje.ekibi@sirket.example>"
+            ],
+            [
+              "Subject",
+              "İstanbul Saha Raporu - Güncellenmiş İkinci Taslak"
+            ],
+            [
+              "Date",
+              "Fri, 16 Feb 2024 10:15:00 +0300"
+            ],
+            [
+              "Message-ID",
+              "<ortak-kimlik-2024-revizyon@projeler.example>"
+            ],
+            [
+              "MIME-Version",
+              "1.0"
+            ],
+            [
+              "Content-Type",
+              "multipart/alternative; boundary=\"===============_bound_msg04_alt_==\""
+            ]
+          ],
+          "parts": [
+            {
+              "type": "text/plain",
+              "disposition": null,
+              "fileName": null,
+              "cid": "",
+              "decodedBytes": 150,
+              "decodedSha256": "edc59c48c90648d33fadebb432d80dc8a8eda625f38bae701867e0df9ab69910"
+            },
+            {
+              "type": "text/html",
+              "disposition": null,
+              "fileName": null,
+              "cid": "",
+              "decodedBytes": 165,
+              "decodedSha256": "c83740a04d09e9c6a31346d8fb17407ff768cbdb9d6cba555d20912892d5c635"
+            }
+          ],
+          "attachments": 0
+        },
+        {
+          "uid": 3,
+          "rawSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+          "rawBytes": 1494,
+          "flags": [
+            "\\Seen",
+            "bitigmail_044bbcb705b1f3f6af01af9ee405d854"
+          ],
+          "internalDateUtc": "2023-12-31T21:30:00+00:00",
+          "headers": [
+            [
+              "From",
+              "Canan Özkan <canan.ozkan@muhendislik.example>"
+            ],
+            [
+              "To",
+              "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+            ],
+            [
+              "Subject",
+              "İstanbul Projesi Kurumsal Kimlik ve Amblem"
+            ],
+            [
+              "Date",
+              "Mon, 01 Jan 2024 00:30:00 +0300"
+            ],
+            [
+              "Message-ID",
+              "<msg-2024-11-inline-cid@projeler.example>"
+            ],
+            [
+              "MIME-Version",
+              "1.0"
+            ],
+            [
+              "Content-Type",
+              "multipart/related; boundary=\"===============_bound_msg11_rel_==\"; type=\"text/html\""
+            ]
+          ],
+          "parts": [
+            {
+              "type": "text/plain",
+              "disposition": null,
+              "fileName": null,
+              "cid": "",
+              "decodedBytes": 151,
+              "decodedSha256": "4372722fbfc8b39070607c76c3e51fd67ddd06669a47dfb14c0bb7cefe9f232d"
+            },
+            {
+              "type": "text/html",
+              "disposition": null,
+              "fileName": null,
+              "cid": "",
+              "decodedBytes": 201,
+              "decodedSha256": "6aca1ce092b1b914edc317c2ea01aab85fcaf161376aef78173b55c241127ae4"
+            },
+            {
+              "type": "image/png",
+              "disposition": "inline",
+              "fileName": "logo.png",
+              "cid": "<proje_logo_cid>",
+              "decodedBytes": 73,
+              "decodedSha256": "411e320c1d42fe6857fdf02eb7ee4ae020fe6522782476c81d083014fd56c61f"
+            }
+          ],
+          "attachments": 1
+        }
+      ],
+      "count": 3
+    }
+  ],
+  "totalMessages": 3,
+  "attachments": 1
+}

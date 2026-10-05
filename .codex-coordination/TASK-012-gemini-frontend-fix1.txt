@@ -1,0 +1,8 @@
+TASK-012 controller verification found three failures in your new real TestingHost Playwright spec. Fix the frontend/E2E files only; do not edit backend, docs, coordination results, or protected files. Do not run tests/build/server.
+
+Observed failures:
+1) testinghost-real-split.spec.ts line 257 expects output directory handle /^outdir_/ but the real typed handle is `dir_<hex>`. Correct the assertion to the actual server contract; do not loosen it to arbitrary text.
+2) size direct test uses `part.partFilePath`; backend report contract is `partFullPath`. Correct all such field mismatches and ensure checks cover actual closed bytes/SHA/parts without inventing properties.
+3) year UI test cannot find start-split-btn because earlier direct tests left a completed split job; the hook correctly auto-restored the latest completed split and the page showed its report. Make the real E2E deterministic and isolated while preserving the required production reload/history behavior. Use an existing allowlisted TestingHost-only reset/control endpoint if one exists; otherwise structure/reorder the spec so a fresh UI workflow is not preempted by prior persisted jobs. Do not weaken product auto-restore and do not add arbitrary file/path test APIs. After completion, reload must still restore the exact just-started split job, and Job Center must open the exact selected job.
+
+Also check the spec for any other wrong backend wire property names (notably partFullPath) and incorrect assumptions. Reply with changed files and concise rationale only.

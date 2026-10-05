@@ -1,0 +1,5 @@
+TASK-013 Gate A: previous fix attempt made no file change; the same 3 compile errors remain at lines 564, 575, 579. Make the actual edit now.
+
+Important measured existing implementation: engine AttachmentHelper.GetAttachmentContentId(att) already reads Unicode/ANSI CID MAPI properties and is used by current converter. Reuse that helper if accessible instead of new TryGetPropertyString/reflection guesses. For other MAPI string properties, inspect existing working code and Aspose 24.8 signatures and use the correct overload/return value (the compiler says current descriptor-vs-long and out parameters are wrong).
+
+GateA files only, no commands/tests. Confirm exact changed line behavior.

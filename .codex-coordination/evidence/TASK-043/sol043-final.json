@@ -1,0 +1,48 @@
+{
+  "taskId": "TASK-043",
+  "release": "artifacts/BitigMail-Internal-0.9.3",
+  "package": {
+    "version": "0.9.3",
+    "manifestEntries": 1112,
+    "payloadFiles": 1112,
+    "manifestHashFailures": 0,
+    "sha256SumEntries": 1118,
+    "sha256SumFailures": 0,
+    "setupSha256": "096E990B540325F58B4966E636D6C931C67435212C1B416F84882EC4D7ED82B7",
+    "authenticode": "NotSigned"
+  },
+  "frontend": {
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "unitTests": "151/151 PASS",
+    "productionIdentityDesktop": "PASS 1440x900",
+    "productionIdentityMobile": "PASS 390x844",
+    "authorizedCatalogAccountSave": "PASS",
+    "existingCompanyProjectCreate": "PASS",
+    "browserConsoleErrors": 0,
+    "desktopHorizontalOverflow": false,
+    "mobileDocumentHorizontalOverflow": false,
+    "redundantRealTransferModeControl": "REMOVED"
+  },
+  "backend": {
+    "fullSuite": "892/892 PASS",
+    "transportConsentAndSocketScenarios": "PASS",
+    "catalogSecurityFocused": "48/48 PASS"
+  },
+  "native": {
+    "fixture": "C:/Users/Eddiz/AppData/Local/Temp/BitigMail-TASK043-NativeFinal-548739bec5964b7abfb1fec5925fb303",
+    "capture": "authenticated.png",
+    "captureBytes": 31428,
+    "visualReview": "PASS at actual 1263px desktop width; Raporlar visible and footer is Calisma alani secilmedi",
+    "error": null,
+    "fixtureProcessesAfterExit": 0
+  },
+  "browserEvidence": {
+    "directory": "C:/Users/Eddiz/AppData/Local/Temp/BitigMail-TASK043",
+    "desktopScreenshots": ["management-1440x900.png", "transfer-1440x900.png"],
+    "mobileScreenshots": ["management-390x844.png", "transfer-390x844.png"],
+    "layoutReports": ["layout-1440x900.json", "layout-390x844.json"]
+  },
+  "installedApp": "0.9.2 left open and untouched pending root acceptance"
+}

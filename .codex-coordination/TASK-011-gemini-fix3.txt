@@ -1,0 +1,8 @@
+TASK-011 final narrow UI contract edit. FILE EDITS ONLY; run nothing.
+
+Fix the concrete wire/UI issues:
+- C# SelectionPreview serializes `BlockerReason` as JSON `blockerReason`; current JSX reads `selectionPreview.blockReason`. Align TypeScript and UI with the actual wire property so zero/blocked selection messages render correctly.
+- In persisted report-selected-folders, prefer the full `folderPath` over `displayName` so identical leaf names under different parents remain distinguishable; displayName may be fallback only.
+- Change the new preview attachment-count accent from hard-coded blue `#2563eb` to `var(--brand-orange)`; keep success green unchanged.
+
+Add/update focused frontend tests for blockerReason and folderPath rendering if missing. No broader redesign. Keep TASK-011 pending SOL verification.

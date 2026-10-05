@@ -1,0 +1,12 @@
+{
+  "companyId": "root-bridge-83f6a9e7",
+  "projectId": "local-pilot",
+  "sourceAccountId": "acc_2fe8eb7af4f1498d960ba324603be4d7",
+  "targetDirHandle": "dir_72690f5dfc814460abeaa4289c063c4e",
+  "targetFormat": "eml-tree",
+  "selectedFolders": [
+    "INBOX",
+    "Gönderilenler",
+    "Projeler/İstanbul"
+  ]
+}

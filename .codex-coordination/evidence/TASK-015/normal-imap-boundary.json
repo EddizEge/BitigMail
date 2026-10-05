@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "production rejects lab plaintext before connection",
+      "pass": true
+    },
+    {
+      "name": "accounts require session",
+      "pass": true
+    },
+    {
+      "name": "normal host cannot access testing account store",
+      "pass": true
+    },
+    {
+      "name": "transfer requires session",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "archiveId": "arc_2b5aee44c3e9481a",
+  "archiveName": "Sınırlar-api-9313ac85f2",
+  "companyId": "api-9313ac85f2-a",
+  "projectId": "proje-a",
+  "companyName": "A Şirketi api-9313ac85f2",
+  "projectName": "Arşiv Kontrolü",
+  "sourceKind": "eml-tree",
+  "dialect": "rfc822",
+  "sourceFingerprint": "dc7813aba3a39b2fc487a301b30a450836d92a8ca0ba4cd35b38b1d17e8e87a3",
+  "totalItems": 4,
+  "totalSizeBytes": 526845,
+  "truncatedItemsCount": 1,
+  "createdAtUtc": "2026-09-14T00:02:10.9493565+00:00",
+  "completedAtUtc": null,
+  "folders": [
+    {
+      "folderName": "archive-edges-cbab019c",
+      "itemCount": 4,
+      "totalSizeBytes": 526845
+    }
+  ],
+  "items": [
+    {
+      "ordinal": 1,
+      "itemId": "msg_00000001",
+      "relativeEmlPath": "messages/000001.eml",
+      "sourceSha256": "e120f61e5208698a896886e471e274690af94e9db0786f853758a15c2d183401",
+      "storedSha256": "e120f61e5208698a896886e471e274690af94e9db0786f853758a15c2d183401",
+      "byteLength": 891,
+      "originalFolder": "archive-edges-cbab019c",
+      "originalMimeDateUtc": "2024-01-02T09:00:00+00:00",
+      "messageIdHeader": null,
+      "envelopeFrom": null,
+      "isBodyTruncated": false
+    },
+    {
+      "ordinal": 2,
+      "itemId": "msg_00000002",
+      "relativeEmlPath": "messages/000002.eml",
+      "sourceSha256": "97929df356d54597f3ebfd0809f54747f382234b52ad65b2295ea9fff1b267ca",
+      "storedSha256": "97929df356d54597f3ebfd0809f54747f382234b52ad65b2295ea9fff1b267ca",
+      "byteLength": 871,
+      "originalFolder": "archive-edges-cbab019c",
+      "originalMimeDateUtc": "2024-01-02T09:00:00+00:00",
+      "messageIdHeader": null,
+      "envelopeFrom": null,
+      "isBodyTruncated": false
+    },
+    {
+      "ordinal": 3,
+      "itemId": "msg_00000003",
+      "relativeEmlPath": "messages/000003.eml",
+      "sourceSha256": "5940534c92ca1c631321e2c74efdeebe0a58b98d95eee69a0bdfaa1a9cde6dae",
+      "storedSha256": "5940534c92ca1c631321e2c74efdeebe0a58b98d95eee69a0bdfaa1a9cde6dae",
+      "byteLength": 364,
+      "originalFolder": "archive-edges-cbab019c",
+      "originalMimeDateUtc": null,
+      "messageIdHeader": null,
+      "envelopeFrom": null,
+      "isBodyTruncated": false
+    },
+    {
+      "ordinal": 4,
+      "itemId": "msg_00000004",
+      "relativeEmlPath": "messages/000004.eml",
+      "sourceSha256": "bc8e5ae3d3512f176a208e61670c501716d4e91d4e6376fec463853fd27b3136",
+      "storedSha256": "bc8e5ae3d3512f176a208e61670c501716d4e91d4e6376fec463853fd27b3136",
+      "byteLength": 524719,
+      "originalFolder": "archive-edges-cbab019c",
+      "originalMimeDateUtc": "2024-01-02T09:00:00+00:00",
+      "messageIdHeader": null,
+      "envelopeFrom": null,
+      "isBodyTruncated": true
+    }
+  ]
+}

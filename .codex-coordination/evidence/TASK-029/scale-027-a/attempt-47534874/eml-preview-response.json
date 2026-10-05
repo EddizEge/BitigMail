@@ -1,0 +1,30 @@
+{
+  "previewId": "bprev_edffb1983f544a039bd4747602cb90f9",
+  "companyId": "company-task020-scale",
+  "projectId": "project-task020-1g-gate",
+  "sourceAccountId": "acc_ad07dbaf54b44cd58bf64e88e037f811",
+  "sourceAccountVersion": 1,
+  "targetDirHandle": "dir_4f76a90ae8bd4edc8e2857fd1633da54",
+  "targetFormat": "eml-tree",
+  "totalSourceItems": 8192,
+  "eligibleItemsCount": 8192,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "deletedExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "Task029/scale-027-a/Bulk",
+      "targetFolder": "fld_001",
+      "totalItems": 8192,
+      "eligibleItems": 8192,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-15T14:22:44.7949354+00:00",
+  "canTransfer": true,
+  "blockerReason": null,
+  "estimatedRequiredBytes": 1876083296,
+  "availableFreeBytes": 163735900160
+}

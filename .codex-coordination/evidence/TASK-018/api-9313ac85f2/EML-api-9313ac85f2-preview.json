@@ -1,0 +1,23 @@
+{
+  "previewId": "aprv_7acb1c85e33f470ca3bb4a1b36398c63",
+  "archiveName": "EML-api-9313ac85f2",
+  "companyId": "api-9313ac85f2-a",
+  "projectId": "proje-a",
+  "companyName": "A Şirketi api-9313ac85f2",
+  "projectName": "Arşiv Kontrolü",
+  "sourceKind": "eml-files",
+  "dialect": "rfc822",
+  "sourceFingerprint": "b2b99494b1c464b57c924ba150063af465d9cc1e3f31d0b9e7926bbdf7e1b09a",
+  "totalFiles": 12,
+  "totalItems": 12,
+  "totalSizeBytes": 13013,
+  "folders": [
+    {
+      "folderName": "Corpus",
+      "itemCount": 12,
+      "totalSizeBytes": 13013
+    }
+  ],
+  "canIngest": true,
+  "blockerReason": null
+}

@@ -1,0 +1,247 @@
+{
+  "jobId": "job-05433307d2d6",
+  "observedDurablePosition": 60,
+  "stagedCount": 60,
+  "stagedFiles": {
+    "msg_00000001.raw": {
+      "size": 700,
+      "sha256": "a214a9d1e1da82870e0da6b785b89f80b9ba096e05e7e9b9d30207c5fe4fbf75"
+    },
+    "msg_00000002.raw": {
+      "size": 696,
+      "sha256": "4ca35cfb23b7453c5d62e9d700eeb3fe99aea3d2cc87531edb0ad51891a68c59"
+    },
+    "msg_00000003.raw": {
+      "size": 700,
+      "sha256": "5c93a9b59756b9b6cd0722199223b1e2c77d7397a6ea3a7c98b64cc48b8aa3c6"
+    },
+    "msg_00000004.raw": {
+      "size": 701,
+      "sha256": "efbd1461fdec04d19fddb044f49338d1f150a87e71d8baded312c35cf0a0fb2b"
+    },
+    "msg_00000005.raw": {
+      "size": 695,
+      "sha256": "ee90a820aefffe65f75d6aaac68aa4b6ee3ec16e0a5f6623e1e6171d2c165a7a"
+    },
+    "msg_00000006.raw": {
+      "size": 701,
+      "sha256": "ea32c0d6e030aa008545ba32f7dc0a2ec580dabf057d742e6520f1b06b5e9e5e"
+    },
+    "msg_00000007.raw": {
+      "size": 700,
+      "sha256": "6a4ab32dfcd508dd4231e03ee14e6926483e242853f0729bc628acc125581dfe"
+    },
+    "msg_00000008.raw": {
+      "size": 696,
+      "sha256": "eee68489d04039765af6d2527dcdfe00a3a78b08ca27ce6d483d442470b78cbc"
+    },
+    "msg_00000009.raw": {
+      "size": 700,
+      "sha256": "303763f2947d528a653358701e487f442467eeda9f241e2595c4332813ebb68c"
+    },
+    "msg_00000010.raw": {
+      "size": 701,
+      "sha256": "4c5e3de54c633e352a28b73202f2940919f7cd8f13ef70a91a2ba3969942503f"
+    },
+    "msg_00000011.raw": {
+      "size": 695,
+      "sha256": "973dda2831b05ddd0c4d4c2fda61ceea8636cf3df7bdd91405135b1201332314"
+    },
+    "msg_00000012.raw": {
+      "size": 701,
+      "sha256": "732de007ea14a6115375942247b89eb1116bb877127c5b3dea4751fd32ed046e"
+    },
+    "msg_00000013.raw": {
+      "size": 700,
+      "sha256": "b1e8353cecda19e93ac0857ef9e74ff2d0468cb0b57dcbebd28f0b404873e4de"
+    },
+    "msg_00000014.raw": {
+      "size": 696,
+      "sha256": "897cc0e1b9cad17ff8503fa64cf7f96ca34f5eec3a738675cc0a03e96e29b2ab"
+    },
+    "msg_00000015.raw": {
+      "size": 700,
+      "sha256": "557b95837adc60a2dd3d6f75ca220ba7b42adc0c1e94e98d0da121e74d752c05"
+    },
+    "msg_00000016.raw": {
+      "size": 701,
+      "sha256": "180efb113a6ee4e454c06936d6bc147537ee540f29148d15953b32a16683f661"
+    },
+    "msg_00000017.raw": {
+      "size": 695,
+      "sha256": "1523283a5f5f422a7cc5df30e36de889df96e01eba193f3fb4b57d0fa0cd4535"
+    },
+    "msg_00000018.raw": {
+      "size": 701,
+      "sha256": "fe88d2b9e4c35dc9af8458b739cf223df457af52ac2c0bfc7244359de80127d8"
+    },
+    "msg_00000019.raw": {
+      "size": 700,
+      "sha256": "368517648a615f1466958ae463d883b8fd9bd98a69f15eb13eb67b3febe112d0"
+    },
+    "msg_00000020.raw": {
+      "size": 696,
+      "sha256": "6796111c71c959848881351bf556f74945a4eff8f4ff67ef372c0f72895bb1ba"
+    },
+    "msg_00000021.raw": {
+      "size": 702,
+      "sha256": "5edf2b7900cbdfffc614548a120288125fee878412a1896da25b12e8affde2aa"
+    },
+    "msg_00000022.raw": {
+      "size": 702,
+      "sha256": "5edf2b7900cbdfffc614548a120288125fee878412a1896da25b12e8affde2aa"
+    },
+    "msg_00000023.raw": {
+      "size": 697,
+      "sha256": "8805e2fea476bb81fb1671bfcbcb6ac6cf17d2f1a935a71b9715dc93b32a6d0e"
+    },
+    "msg_00000024.raw": {
+      "size": 703,
+      "sha256": "7512a0f33a5345a1b445ff3d123f87cec5eaa65f399cc40e8e4c573e057d5d5c"
+    },
+    "msg_00000025.raw": {
+      "size": 702,
+      "sha256": "b705892383d8c396a1631209695137af403aca290257b0047dc368e10bae950d"
+    },
+    "msg_00000026.raw": {
+      "size": 698,
+      "sha256": "51d88a5e9da3412eef4a25550139596f7d5e2ce1adf67a97c8facddbf167efde"
+    },
+    "msg_00000027.raw": {
+      "size": 702,
+      "sha256": "1202475441b83537c310c649c1c7bf09a95f2e339b7daadbca64989cb24fcd97"
+    },
+    "msg_00000028.raw": {
+      "size": 703,
+      "sha256": "5cb481792558d51a20cb36e9802d98dfc4aa053cac18d013795e5f937847ed29"
+    },
+    "msg_00000029.raw": {
+      "size": 697,
+      "sha256": "698300da3e39d17122632e31c1aa5ae9c2e7bb83a501fbd8d04397114cda17d8"
+    },
+    "msg_00000030.raw": {
+      "size": 703,
+      "sha256": "4e767ae022b484868e73802a252bc1140e99594e9306a5012093ae715764e5d2"
+    },
+    "msg_00000031.raw": {
+      "size": 702,
+      "sha256": "b0588b68528f1c6ffe4173743cb1a5000f2055d8c2b62261d9d071bc9b40865c"
+    },
+    "msg_00000032.raw": {
+      "size": 698,
+      "sha256": "4d4f9d0de8000cae2a0d02c174576e687e0f671d244bb5f9bdc0c6aadfccd7f4"
+    },
+    "msg_00000033.raw": {
+      "size": 702,
+      "sha256": "3612bf6ba2fb85618561028e0338394b97a07aa2ce834e334d477f462b196710"
+    },
+    "msg_00000034.raw": {
+      "size": 703,
+      "sha256": "e2a7dca22c50fdd1c43b31fa5c7726105891defea875080de91a7544ee9e0bba"
+    },
+    "msg_00000035.raw": {
+      "size": 697,
+      "sha256": "953f939606f9688ed97125a0d9c3cec9ee86e461405bdd794f935c943af6c689"
+    },
+    "msg_00000036.raw": {
+      "size": 703,
+      "sha256": "5f3cd9dfe5023bc6d64808156aad4f273193c79a8f75a59461328782348e6ff5"
+    },
+    "msg_00000037.raw": {
+      "size": 702,
+      "sha256": "2efd78b39e16948d9b9495969e7a1c5297872ceb5e8200ed721376479901e0b7"
+    },
+    "msg_00000038.raw": {
+      "size": 698,
+      "sha256": "9b54966bbf4ab87a4c4f3546dd803ff44d860f1e698a3b87b772a022b25e1762"
+    },
+    "msg_00000039.raw": {
+      "size": 702,
+      "sha256": "81aa8db4a3036080c62282e2ca9aa4046aee23b59ca69924e2d6d796c15b1056"
+    },
+    "msg_00000040.raw": {
+      "size": 703,
+      "sha256": "fbe1817b0c52cdbb6dae0800df6ace0eb7864c91dea3052d0d53cb4e709c91f3"
+    },
+    "msg_00000041.raw": {
+      "size": 695,
+      "sha256": "8a00c0cdc45cb36dfe2b72e1f2ea5e2ffde8bf35868ffd2f320ce6611b34470a"
+    },
+    "msg_00000042.raw": {
+      "size": 701,
+      "sha256": "09072529abbe3380971948f91b2644a605daafd800a29b51f728c2f1a67050b9"
+    },
+    "msg_00000043.raw": {
+      "size": 700,
+      "sha256": "b29bf84613a4dad522d1a143bbe452846705aedbfb9b52dba5a9977f140e002c"
+    },
+    "msg_00000044.raw": {
+      "size": 696,
+      "sha256": "aba120de50e24b74567e7090ea5838a22170725dbecab393eaaa56968bf93e34"
+    },
+    "msg_00000045.raw": {
+      "size": 700,
+      "sha256": "b79ea5e674953b2532dc7758cd70f62ef2c8d8c30a6696683d41b48090dc552b"
+    },
+    "msg_00000046.raw": {
+      "size": 701,
+      "sha256": "f6bd2770e704fe3a7a7cf2e417142cebfb62becf2f2f6ac5dc5b1c6a9940b430"
+    },
+    "msg_00000047.raw": {
+      "size": 695,
+      "sha256": "5ca7f11915955203707196f312150963353217ae4583fddc25902daff5e218ab"
+    },
+    "msg_00000048.raw": {
+      "size": 701,
+      "sha256": "023ad3f647d3d55e24e9faa8fde6d4bd57f0bdc6f57bfbf0efea345336fff0c1"
+    },
+    "msg_00000049.raw": {
+      "size": 700,
+      "sha256": "025fe31240d2a46dde7a2f9dce99f05574beee39891fa6ff2b4d0a41a39ab80a"
+    },
+    "msg_00000050.raw": {
+      "size": 696,
+      "sha256": "0b516ebb5556e5e7015926a6eea86b3c4faf78a6e822001442ed2b11facb7ff0"
+    },
+    "msg_00000051.raw": {
+      "size": 8610206,
+      "sha256": "af6bba4210eb8f2ec531a3a6a521af7d4d508dc625fb660cf0f96647ae3c30ea"
+    },
+    "msg_00000052.raw": {
+      "size": 701,
+      "sha256": "32cb490d81b5ec1aabe182ec94441d2d9516b5d835e6127551599d1cd919de0d"
+    },
+    "msg_00000053.raw": {
+      "size": 695,
+      "sha256": "ea491de78c0d2b94c3048478eb58e4106ac36b8191825052bec69bd94d28e111"
+    },
+    "msg_00000054.raw": {
+      "size": 701,
+      "sha256": "547943b6b55748cdcadad5052167cf344ecea55ca58910f3e0e40e641e37789f"
+    },
+    "msg_00000055.raw": {
+      "size": 700,
+      "sha256": "b0dbbe3d6edb99e44a69a29f1c0108cab869fed24f83b524670c3b551396b7c2"
+    },
+    "msg_00000056.raw": {
+      "size": 696,
+      "sha256": "913427f26a6045bbf6593187ab0bc205becc9ea06e13b3a1b45bbe646084ce49"
+    },
+    "msg_00000057.raw": {
+      "size": 700,
+      "sha256": "0dc5113a108befe4a2f869b38ed07e80396ddb0609a9189cfa36624fb324f9e4"
+    },
+    "msg_00000058.raw": {
+      "size": 701,
+      "sha256": "3771ec5253eb1176ed5aef11e3440d05be56d8c1c07e8b4a856ab612d9298e12"
+    },
+    "msg_00000059.raw": {
+      "size": 695,
+      "sha256": "2c1830d9283e57b5033ca5657136af26c90fa733566e075407d690d3809edfd0"
+    },
+    "msg_00000060.raw": {
+      "size": 701,
+      "sha256": "9cda58a88c9c1738366f76396ecf92bda10a6103380c9688e2a3fb53a6899fb6"
+    }
+  }
+}

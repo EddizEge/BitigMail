@@ -1,0 +1,92 @@
+{
+  "oracle": "Independent export sidecar metadata and folder mapping",
+  "pass": true,
+  "count": 12,
+  "mappingPass": true,
+  "items": [
+    {
+      "identity": [
+        "INBOX",
+        "1789299650:1"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "INBOX",
+        "1789299650:2"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "INBOX",
+        "1789299650:3"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "INBOX",
+        "1789299650:4"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "INBOX",
+        "1789299650:5"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Gönderilenler",
+        "1789299651:1"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Gönderilenler",
+        "1789299651:2"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Gönderilenler",
+        "1789299651:3"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Projeler/İstanbul",
+        "1789299653:1"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Projeler/İstanbul",
+        "1789299653:2"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Projeler/İstanbul",
+        "1789299653:3"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Projeler/İstanbul",
+        "1789299653:4"
+      ],
+      "pass": true
+    }
+  ]
+}

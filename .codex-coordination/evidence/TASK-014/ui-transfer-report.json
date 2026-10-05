@@ -1,0 +1,30 @@
+[
+  {
+    "width": 1660,
+    "jobId": "job-800ad6c5ba14",
+    "destination": "AstraUi0d844fb5356e/İstanbul",
+    "pass": true,
+    "errors": [],
+    "dims": {
+      "width": 1660,
+      "scrollWidth": 1660
+    },
+    "actualFilteredCount": 3,
+    "downloadPath": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-task014-qa\\ui-transfer-1660-report.json",
+    "reloadHistory": true
+  },
+  {
+    "width": 390,
+    "jobId": "job-d136206adf1a",
+    "destination": "AstraUie0e2f40b609f/İstanbul",
+    "pass": true,
+    "errors": [],
+    "dims": {
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "actualFilteredCount": 3,
+    "downloadPath": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-task014-qa\\ui-transfer-390-report.json",
+    "reloadHistory": true
+  }
+]

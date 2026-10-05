@@ -1,0 +1,107 @@
+{
+  "taskId": "TASK-022",
+  "mode": "baseline",
+  "runId": "baseline-071c02eb",
+  "protectedBefore": {
+    "6174": {
+      "pid": 20792,
+      "executable": "c:\\users\\eddiz\\documents\\chatgpt\\mail manager\\.tools\\dotnet\\dotnet.exe",
+      "arguments": [
+        "c:\\users\\eddiz\\documents\\chatgpt\\mail manager\\.tools\\dotnet\\dotnet.exe",
+        "c:\\users\\eddiz\\documents\\chatgpt\\mail manager\\engine\\bitigmail.localhost\\bin\\release\\net8.0-windows\\bitigmail.localhost.dll"
+      ],
+      "creationTime": 1789465675.2266867
+    },
+    "5173": {
+      "pid": 21576,
+      "executable": "c:\\program files\\nodejs\\node.exe",
+      "arguments": [
+        "node",
+        "c:\\users\\eddiz\\documents\\chatgpt\\mail manager\\prototype\\node_modules\\.bin\\\\..\\vite\\bin\\vite.js",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "5173",
+        "--strictport"
+      ],
+      "creationTime": 1789465592.0584636
+    }
+  },
+  "status": "PASS",
+  "previewElapsedSec": 6.884866800013697,
+  "exportElapsedSec": 45.28923819999909,
+  "jobId": "job-be7077d56dd9",
+  "outputPath": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-qa-split\\split-out-4b30ffb9ed734235a05207b92b108480\\bridge-export-job-be7077d56dd9",
+  "previewTelemetry": {
+    "overallPeakWsBytes": 585519104,
+    "overallPeakPrivateBytes": 612868096,
+    "phases": {
+      "idle_pre_preview": {
+        "samples": 19,
+        "peakWsBytes": 245739520,
+        "minWsBytes": 244985856,
+        "peakPrivateBytes": 242769920,
+        "minPrivateBytes": 242495488,
+        "peakCpuPct": 71.0,
+        "startTime": "2026-09-15T12:44:35.715394+00:00",
+        "endTime": "2026-09-15T12:44:37.715523+00:00"
+      },
+      "preview_active": {
+        "samples": 64,
+        "peakWsBytes": 581910528,
+        "minWsBytes": 248918016,
+        "peakPrivateBytes": 609361920,
+        "minPrivateBytes": 242946048,
+        "peakCpuPct": 326.7,
+        "startTime": "2026-09-15T12:44:37.715523+00:00",
+        "endTime": "2026-09-15T12:44:44.601576+00:00"
+      },
+      "idle_post_preview": {
+        "samples": 19,
+        "peakWsBytes": 585519104,
+        "minWsBytes": 585150464,
+        "peakPrivateBytes": 612868096,
+        "minPrivateBytes": 612802560,
+        "peakCpuPct": 33.6,
+        "startTime": "2026-09-15T12:44:44.601576+00:00",
+        "endTime": "2026-09-15T12:44:46.601932+00:00"
+      }
+    }
+  },
+  "exportTelemetry": {
+    "overallPeakWsBytes": 804315136,
+    "overallPeakPrivateBytes": 867885056,
+    "phases": {
+      "idle_pre_export": {
+        "samples": 19,
+        "peakWsBytes": 584679424,
+        "minWsBytes": 584564736,
+        "peakPrivateBytes": 613236736,
+        "minPrivateBytes": 613228544,
+        "peakCpuPct": 0.0,
+        "startTime": "2026-09-15T12:44:46.603938+00:00",
+        "endTime": "2026-09-15T12:44:48.605040+00:00"
+      },
+      "export_active": {
+        "samples": 421,
+        "peakWsBytes": 804315136,
+        "minWsBytes": 545644544,
+        "peakPrivateBytes": 867885056,
+        "minPrivateBytes": 556969984,
+        "peakCpuPct": 531.9,
+        "startTime": "2026-09-15T12:44:48.605040+00:00",
+        "endTime": "2026-09-15T12:45:33.894289+00:00"
+      },
+      "idle_post_export": {
+        "samples": 19,
+        "peakWsBytes": 628527104,
+        "minWsBytes": 628514816,
+        "peakPrivateBytes": 684838912,
+        "minPrivateBytes": 684838912,
+        "peakCpuPct": 14.3,
+        "startTime": "2026-09-15T12:45:33.894289+00:00",
+        "endTime": "2026-09-15T12:45:35.894716+00:00"
+      }
+    }
+  }
+}

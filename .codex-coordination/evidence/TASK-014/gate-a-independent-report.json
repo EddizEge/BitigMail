@@ -1,0 +1,33 @@
+{
+  "oracle": "independent raw bytes/decoded MIME/header/INTERNALDATE multiset",
+  "pass": true,
+  "folders": [
+    {
+      "source": "INBOX",
+      "target": "AstraGateA95774658e5bb/INBOX",
+      "sourceCount": 5,
+      "targetCount": 5,
+      "missing": 0,
+      "extra": 0,
+      "sourceFlagsRetained": true
+    },
+    {
+      "source": "Gönderilenler",
+      "target": "AstraGateA95774658e5bb/Gönderilenler",
+      "sourceCount": 3,
+      "targetCount": 3,
+      "missing": 0,
+      "extra": 0,
+      "sourceFlagsRetained": true
+    },
+    {
+      "source": "Projeler/İstanbul",
+      "target": "AstraGateA95774658e5bb/Projeler/İstanbul",
+      "sourceCount": 4,
+      "targetCount": 4,
+      "missing": 0,
+      "extra": 0,
+      "sourceFlagsRetained": true
+    }
+  ]
+}

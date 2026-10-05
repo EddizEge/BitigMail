@@ -1,0 +1,9 @@
+{
+  "pid": 49992,
+  "executable": "c:\\users\\eddiz\\documents\\chatgpt\\mail manager\\.tools\\dotnet\\dotnet.exe",
+  "arguments": [
+    "c:\\users\\eddiz\\documents\\chatgpt\\mail manager\\.tools\\dotnet\\dotnet.exe",
+    "c:\\users\\eddiz\\documents\\chatgpt\\mail manager\\engine\\bitigmail.testinghost\\bin\\release\\net8.0-windows\\bitigmail.testinghost.dll"
+  ],
+  "creationTime": 1789477378.9958372
+}

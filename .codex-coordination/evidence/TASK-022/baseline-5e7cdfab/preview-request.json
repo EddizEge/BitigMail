@@ -1,0 +1,12 @@
+{
+  "companyId": "company-task020-scale",
+  "projectId": "project-task020-mbox-bounded",
+  "companyName": "TASK-020 Bounded MBOX Validation",
+  "projectName": "128MiB MBOX Retention and Recovery Audit",
+  "sourceAccountId": "acc_8f7863114fd1430ebc68cf1f2e90c1db",
+  "targetDirHandle": "dir_a1bd29f4c4b14caca5f868104af1f2b2",
+  "selectedFolders": [
+    "Task019/scale-cont-ff44e15b/Bulk"
+  ],
+  "targetFormat": "mboxrd"
+}

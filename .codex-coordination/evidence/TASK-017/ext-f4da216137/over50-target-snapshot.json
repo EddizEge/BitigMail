@@ -1,0 +1,4382 @@
+{
+  "oracle": "Python stdlib read-only IMAP BODY.PEEK/MIME",
+  "messages": [
+    {
+      "identity": "1789299809:1",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "rawBytes": 1044,
+      "canonicalSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Sisteme Hoş Geldiniz - Bilgilendirme"
+        ],
+        [
+          "Date",
+          "Mon, 10 Apr 2023 09:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2023-01-hosgeldiniz@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg01_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c",
+          "decodedBytes": 182
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b",
+          "decodedBytes": 208
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_8b773ce4cfc5ba0efbd5bfd63ef8fa32"
+      ],
+      "internalDateUtc": "2023-04-10T06:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:2",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "rawBytes": 1044,
+      "canonicalSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Sisteme Hoş Geldiniz - Bilgilendirme"
+        ],
+        [
+          "Date",
+          "Mon, 10 Apr 2023 09:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2023-01-hosgeldiniz@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg01_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c",
+          "decodedBytes": 182
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b",
+          "decodedBytes": 208
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_b4803fcdf8caa4214dac88f40e048f73"
+      ],
+      "internalDateUtc": "2023-04-10T06:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:3",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "rawBytes": 957,
+      "canonicalSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "headers": [
+        [
+          "From",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Raporu - İlk Taslak"
+        ],
+        [
+          "Date",
+          "Thu, 15 Feb 2024 14:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<ortak-kimlik-2024-revizyon@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg03_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "4aa2c0ef74eb8f1458cde171b29a5b575b0e262dab11412e730dd5a94d8cb538",
+          "decodedBytes": 136
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "f4159303680b882297966a2119e7fca06727d79fb0ea8b4a3e813b235b24f6aa",
+          "decodedBytes": 156
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_50f813db0e54f0d5ba219830a7b48200"
+      ],
+      "internalDateUtc": "2024-02-15T11:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:4",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "rawBytes": 1013,
+      "canonicalSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Raporu - Güncellenmiş İkinci Taslak"
+        ],
+        [
+          "Date",
+          "Fri, 16 Feb 2024 10:15:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<ortak-kimlik-2024-revizyon@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg04_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "55264d71eb6eecfab37b918f7d635aea779a95b554d83a75b0d9ced616146756",
+          "decodedBytes": 145
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "c83740a04d09e9c6a31346d8fb17407ff768cbdb9d6cba555d20912892d5c635",
+          "decodedBytes": 165
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_ec6a4ed308f3fa4023c85e485d887eee"
+      ],
+      "internalDateUtc": "2024-02-16T07:15:00+00:00"
+    },
+    {
+      "identity": "1789299809:5",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "rawBytes": 1617,
+      "canonicalSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "headers": [
+        [
+          "From",
+          "Ayşe Demir <ayse.demir@sirket.example>"
+        ],
+        [
+          "To",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "Subject",
+          "İhale Şartnamesi Özeti ve Ek Dosya"
+        ],
+        [
+          "Date",
+          "Mon, 20 May 2024 11:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-05-sartname@destek.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg05_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "2bd6d5ff99c70cc5983f6c3db8f1b4c46fad401e9433ad5a55e2f6c5f9182d23",
+          "decodedBytes": 126
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "e5013fbd0b5e3a3c1be52ce3051159a9f1bf53cc7243182e15de92520776b9ee",
+          "decodedBytes": 146
+        },
+        {
+          "type": "text/plain",
+          "name": "şartname_özeti_2024.txt",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "fb65193a9204c3f73cb568bf3e7532cb7c37990affaa9161bcbf4097dbc8543d",
+          "decodedBytes": 226
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_ebdc3eabd330d2daf71b46867e2926e0"
+      ],
+      "internalDateUtc": "2024-05-20T08:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:6",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "rawBytes": 1249,
+      "canonicalSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "headers": [
+        [
+          "From",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "To",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "Deterministik İkili Veri Dosyası (Sistem Parametreleri)"
+        ],
+        [
+          "Date",
+          "Wed, 12 Jun 2024 16:45:00 +0000"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-06-ikili-ek@muhendislik.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg06_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "614e308769dd97acdb17015d0959ce4fb1004e6b60b146b829700dd472e0806a",
+          "decodedBytes": 130
+        },
+        {
+          "type": "application/octet-stream",
+          "name": "sistem_parametreleri.bin",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+          "decodedBytes": 256
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_ddfd810545a5d910e442c27c417c7dd6"
+      ],
+      "internalDateUtc": "2024-06-12T16:45:00+00:00"
+    },
+    {
+      "identity": "1789299809:7",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "rawBytes": 934,
+      "canonicalSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Ayşe Demir <ayse.demir@sirket.example>"
+        ],
+        [
+          "Subject",
+          "Aylık Dağıtım Raporu ve Grafik"
+        ],
+        [
+          "Date",
+          "Mon, 08 Jul 2024 08:30:00 +0200"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-07-png-ek@lojistik.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg07_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "10859f3225332e97be59d73f1d3220e34a4c337c0c4d3c4a3c7c71bdef36d897",
+          "decodedBytes": 117
+        },
+        {
+          "type": "image/png",
+          "name": "rapor_grafik.png",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "e3a1f03fed3df18f6ed537efa47a526d71f792566b0e2dd52dc62f1d18f41b20",
+          "decodedBytes": 74
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_b4361e086a72a876212f1800791f8883"
+      ],
+      "internalDateUtc": "2024-07-08T06:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:8",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "rawBytes": 1580,
+      "canonicalSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mühendislik Ekibi <ekip@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "MBOX Kaçış Kuralları ve Alıntı Denemesi"
+        ],
+        [
+          "Date",
+          "Sun, 25 Aug 2024 13:20:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-08-mbox-kacis@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg08_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "49dc23a699c2b8fb5dfe66d321389f52e2eed5b17e46c26fbed04d5ea554032d",
+          "decodedBytes": 406
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "71604ac84b4cf2c1c66b179c3f128687db3936620f0e20509b664404d8d9a965",
+          "decodedBytes": 475
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_f6ece80b0f7d1732a5a4c328a00e015b"
+      ],
+      "internalDateUtc": "2024-08-25T10:20:00+00:00"
+    },
+    {
+      "identity": "1789299809:9",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "rawBytes": 508,
+      "canonicalSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Eski Arşiv Kaydı - 2022 Yılı Bilgilendirmesi"
+        ],
+        [
+          "Date",
+          "Sat, 05 Nov 2022 15:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2022-09-arsiv@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "text/plain; charset=\"utf-8\""
+        ],
+        [
+          "Content-Transfer-Encoding",
+          "8bit"
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "bd53768516a6b87fb3748344941d2e93cf1f07eb8a68bd3d1255039d23d1537e",
+          "decodedBytes": 120
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_01e80fc6fa15eed91bfe8f77b8e40285"
+      ],
+      "internalDateUtc": "2022-11-05T12:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:10",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "rawBytes": 507,
+      "canonicalSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "2025 Yılı İlk Çeyrek Hedefleri"
+        ],
+        [
+          "Date",
+          "Wed, 15 Jan 2025 11:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2025-10-planlama@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "text/plain; charset=\"utf-8\""
+        ],
+        [
+          "Content-Transfer-Encoding",
+          "8bit"
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "02446853487bc8c8eb2c3ff618460005530d362ab99c96b8cd39f2be11912057",
+          "decodedBytes": 110
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_1ebd02f13b3154f4f9c52f2a704e2d50"
+      ],
+      "internalDateUtc": "2025-01-15T08:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:11",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "rawBytes": 1494,
+      "canonicalSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "headers": [
+        [
+          "From",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "To",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Projesi Kurumsal Kimlik ve Amblem"
+        ],
+        [
+          "Date",
+          "Mon, 01 Jan 2024 00:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-11-inline-cid@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/related; boundary=\"===============_bound_msg11_rel_==\"; type=\"text/html\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "7d1959a0e77495bbf0a48d432190e8cfdbfd7d5c5401b564e677b1c81379c7ea",
+          "decodedBytes": 145
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "6aca1ce092b1b914edc317c2ea01aab85fcaf161376aef78173b55c241127ae4",
+          "decodedBytes": 201
+        },
+        {
+          "type": "image/png",
+          "name": "logo.png",
+          "disposition": "inline",
+          "cid": "<proje_logo_cid>",
+          "decodedSha256": "411e320c1d42fe6857fdf02eb7ee4ae020fe6522782476c81d083014fd56c61f",
+          "decodedBytes": 73
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_e5dad1db6b11912837ea3b3eef421625"
+      ],
+      "internalDateUtc": "2023-12-31T21:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:12",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "rawBytes": 1139,
+      "canonicalSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Çalışmaları Tamamlanma Tutanağı"
+        ],
+        [
+          "Date",
+          "Sat, 30 Nov 2024 10:00:00 +0000"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-12-saha-kapanis@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg12_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "188847d7f28686569829e4fffea2b333cd036fc6aa93872d0e74a906e146aa00",
+          "decodedBytes": 199
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "dea425f032fbf8601ec89243e9282988106a86721dbc5264e3af64c08fb83419",
+          "decodedBytes": 236
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_0d211abce60286e4584e0792883c1ef9"
+      ],
+      "internalDateUtc": "2024-11-30T10:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:13",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "rawBytes": 1044,
+      "canonicalSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Sisteme Hoş Geldiniz - Bilgilendirme"
+        ],
+        [
+          "Date",
+          "Mon, 10 Apr 2023 09:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2023-01-hosgeldiniz@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg01_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c",
+          "decodedBytes": 182
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b",
+          "decodedBytes": 208
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_3970d83be349902240e56c5fd85dbd37"
+      ],
+      "internalDateUtc": "2023-04-10T06:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:14",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "rawBytes": 1044,
+      "canonicalSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Sisteme Hoş Geldiniz - Bilgilendirme"
+        ],
+        [
+          "Date",
+          "Mon, 10 Apr 2023 09:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2023-01-hosgeldiniz@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg01_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c",
+          "decodedBytes": 182
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b",
+          "decodedBytes": 208
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_fad93b81a639b92d3715e64227dad33b"
+      ],
+      "internalDateUtc": "2023-04-10T06:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:15",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "rawBytes": 957,
+      "canonicalSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "headers": [
+        [
+          "From",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Raporu - İlk Taslak"
+        ],
+        [
+          "Date",
+          "Thu, 15 Feb 2024 14:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<ortak-kimlik-2024-revizyon@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg03_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "4aa2c0ef74eb8f1458cde171b29a5b575b0e262dab11412e730dd5a94d8cb538",
+          "decodedBytes": 136
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "f4159303680b882297966a2119e7fca06727d79fb0ea8b4a3e813b235b24f6aa",
+          "decodedBytes": 156
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_98489e58658ce80c3a1875c16d7039fd"
+      ],
+      "internalDateUtc": "2024-02-15T11:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:16",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "rawBytes": 1013,
+      "canonicalSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Raporu - Güncellenmiş İkinci Taslak"
+        ],
+        [
+          "Date",
+          "Fri, 16 Feb 2024 10:15:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<ortak-kimlik-2024-revizyon@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg04_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "55264d71eb6eecfab37b918f7d635aea779a95b554d83a75b0d9ced616146756",
+          "decodedBytes": 145
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "c83740a04d09e9c6a31346d8fb17407ff768cbdb9d6cba555d20912892d5c635",
+          "decodedBytes": 165
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_e04553afb4da1b1555ce35b7246cf816"
+      ],
+      "internalDateUtc": "2024-02-16T07:15:00+00:00"
+    },
+    {
+      "identity": "1789299809:17",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "rawBytes": 1617,
+      "canonicalSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "headers": [
+        [
+          "From",
+          "Ayşe Demir <ayse.demir@sirket.example>"
+        ],
+        [
+          "To",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "Subject",
+          "İhale Şartnamesi Özeti ve Ek Dosya"
+        ],
+        [
+          "Date",
+          "Mon, 20 May 2024 11:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-05-sartname@destek.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg05_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "2bd6d5ff99c70cc5983f6c3db8f1b4c46fad401e9433ad5a55e2f6c5f9182d23",
+          "decodedBytes": 126
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "e5013fbd0b5e3a3c1be52ce3051159a9f1bf53cc7243182e15de92520776b9ee",
+          "decodedBytes": 146
+        },
+        {
+          "type": "text/plain",
+          "name": "şartname_özeti_2024.txt",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "fb65193a9204c3f73cb568bf3e7532cb7c37990affaa9161bcbf4097dbc8543d",
+          "decodedBytes": 226
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_1ccaa6b7257bc716974987ea1535e31b"
+      ],
+      "internalDateUtc": "2024-05-20T08:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:18",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "rawBytes": 1249,
+      "canonicalSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "headers": [
+        [
+          "From",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "To",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "Deterministik İkili Veri Dosyası (Sistem Parametreleri)"
+        ],
+        [
+          "Date",
+          "Wed, 12 Jun 2024 16:45:00 +0000"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-06-ikili-ek@muhendislik.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg06_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "614e308769dd97acdb17015d0959ce4fb1004e6b60b146b829700dd472e0806a",
+          "decodedBytes": 130
+        },
+        {
+          "type": "application/octet-stream",
+          "name": "sistem_parametreleri.bin",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+          "decodedBytes": 256
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_6befaefd7a07c946e1b1aecef5d78ffa"
+      ],
+      "internalDateUtc": "2024-06-12T16:45:00+00:00"
+    },
+    {
+      "identity": "1789299809:19",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "rawBytes": 934,
+      "canonicalSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Ayşe Demir <ayse.demir@sirket.example>"
+        ],
+        [
+          "Subject",
+          "Aylık Dağıtım Raporu ve Grafik"
+        ],
+        [
+          "Date",
+          "Mon, 08 Jul 2024 08:30:00 +0200"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-07-png-ek@lojistik.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg07_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "10859f3225332e97be59d73f1d3220e34a4c337c0c4d3c4a3c7c71bdef36d897",
+          "decodedBytes": 117
+        },
+        {
+          "type": "image/png",
+          "name": "rapor_grafik.png",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "e3a1f03fed3df18f6ed537efa47a526d71f792566b0e2dd52dc62f1d18f41b20",
+          "decodedBytes": 74
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_ffe308b18c64ec85eb85adcd35563f78"
+      ],
+      "internalDateUtc": "2024-07-08T06:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:20",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "rawBytes": 1580,
+      "canonicalSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mühendislik Ekibi <ekip@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "MBOX Kaçış Kuralları ve Alıntı Denemesi"
+        ],
+        [
+          "Date",
+          "Sun, 25 Aug 2024 13:20:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-08-mbox-kacis@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg08_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "49dc23a699c2b8fb5dfe66d321389f52e2eed5b17e46c26fbed04d5ea554032d",
+          "decodedBytes": 406
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "71604ac84b4cf2c1c66b179c3f128687db3936620f0e20509b664404d8d9a965",
+          "decodedBytes": 475
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_38eed8af3d7b64dd4f35551804814fcd"
+      ],
+      "internalDateUtc": "2024-08-25T10:20:00+00:00"
+    },
+    {
+      "identity": "1789299809:21",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "rawBytes": 508,
+      "canonicalSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Eski Arşiv Kaydı - 2022 Yılı Bilgilendirmesi"
+        ],
+        [
+          "Date",
+          "Sat, 05 Nov 2022 15:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2022-09-arsiv@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "text/plain; charset=\"utf-8\""
+        ],
+        [
+          "Content-Transfer-Encoding",
+          "8bit"
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "bd53768516a6b87fb3748344941d2e93cf1f07eb8a68bd3d1255039d23d1537e",
+          "decodedBytes": 120
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_af2e3d41bde8f0cd5a45de5b6da7849e"
+      ],
+      "internalDateUtc": "2022-11-05T12:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:22",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "rawBytes": 507,
+      "canonicalSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "2025 Yılı İlk Çeyrek Hedefleri"
+        ],
+        [
+          "Date",
+          "Wed, 15 Jan 2025 11:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2025-10-planlama@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "text/plain; charset=\"utf-8\""
+        ],
+        [
+          "Content-Transfer-Encoding",
+          "8bit"
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "02446853487bc8c8eb2c3ff618460005530d362ab99c96b8cd39f2be11912057",
+          "decodedBytes": 110
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_9411af16614cde80540e19fb541f6209"
+      ],
+      "internalDateUtc": "2025-01-15T08:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:23",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "rawBytes": 1494,
+      "canonicalSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "headers": [
+        [
+          "From",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "To",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Projesi Kurumsal Kimlik ve Amblem"
+        ],
+        [
+          "Date",
+          "Mon, 01 Jan 2024 00:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-11-inline-cid@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/related; boundary=\"===============_bound_msg11_rel_==\"; type=\"text/html\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "7d1959a0e77495bbf0a48d432190e8cfdbfd7d5c5401b564e677b1c81379c7ea",
+          "decodedBytes": 145
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "6aca1ce092b1b914edc317c2ea01aab85fcaf161376aef78173b55c241127ae4",
+          "decodedBytes": 201
+        },
+        {
+          "type": "image/png",
+          "name": "logo.png",
+          "disposition": "inline",
+          "cid": "<proje_logo_cid>",
+          "decodedSha256": "411e320c1d42fe6857fdf02eb7ee4ae020fe6522782476c81d083014fd56c61f",
+          "decodedBytes": 73
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_72d17dbf1113fce578144d973f5772fb"
+      ],
+      "internalDateUtc": "2023-12-31T21:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:24",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "rawBytes": 1139,
+      "canonicalSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Çalışmaları Tamamlanma Tutanağı"
+        ],
+        [
+          "Date",
+          "Sat, 30 Nov 2024 10:00:00 +0000"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-12-saha-kapanis@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg12_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "188847d7f28686569829e4fffea2b333cd036fc6aa93872d0e74a906e146aa00",
+          "decodedBytes": 199
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "dea425f032fbf8601ec89243e9282988106a86721dbc5264e3af64c08fb83419",
+          "decodedBytes": 236
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_621ac0a3daf1d0be0478dce5efa25db5"
+      ],
+      "internalDateUtc": "2024-11-30T10:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:25",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "rawBytes": 1044,
+      "canonicalSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Sisteme Hoş Geldiniz - Bilgilendirme"
+        ],
+        [
+          "Date",
+          "Mon, 10 Apr 2023 09:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2023-01-hosgeldiniz@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg01_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c",
+          "decodedBytes": 182
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b",
+          "decodedBytes": 208
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_49f636d08f13accc22e2c2aa2759b89b"
+      ],
+      "internalDateUtc": "2023-04-10T06:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:26",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "rawBytes": 1044,
+      "canonicalSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Sisteme Hoş Geldiniz - Bilgilendirme"
+        ],
+        [
+          "Date",
+          "Mon, 10 Apr 2023 09:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2023-01-hosgeldiniz@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg01_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c",
+          "decodedBytes": 182
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b",
+          "decodedBytes": 208
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_baea0133d665f14c2c02847c97a6c9f8"
+      ],
+      "internalDateUtc": "2023-04-10T06:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:27",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "rawBytes": 957,
+      "canonicalSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "headers": [
+        [
+          "From",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Raporu - İlk Taslak"
+        ],
+        [
+          "Date",
+          "Thu, 15 Feb 2024 14:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<ortak-kimlik-2024-revizyon@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg03_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "4aa2c0ef74eb8f1458cde171b29a5b575b0e262dab11412e730dd5a94d8cb538",
+          "decodedBytes": 136
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "f4159303680b882297966a2119e7fca06727d79fb0ea8b4a3e813b235b24f6aa",
+          "decodedBytes": 156
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_c6898c5cdc5e9cb68bc6c3656f4310c9"
+      ],
+      "internalDateUtc": "2024-02-15T11:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:28",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "rawBytes": 1013,
+      "canonicalSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Raporu - Güncellenmiş İkinci Taslak"
+        ],
+        [
+          "Date",
+          "Fri, 16 Feb 2024 10:15:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<ortak-kimlik-2024-revizyon@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg04_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "55264d71eb6eecfab37b918f7d635aea779a95b554d83a75b0d9ced616146756",
+          "decodedBytes": 145
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "c83740a04d09e9c6a31346d8fb17407ff768cbdb9d6cba555d20912892d5c635",
+          "decodedBytes": 165
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_025062fb2f903d3c7600e57689eeee73"
+      ],
+      "internalDateUtc": "2024-02-16T07:15:00+00:00"
+    },
+    {
+      "identity": "1789299809:29",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "rawBytes": 1617,
+      "canonicalSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "headers": [
+        [
+          "From",
+          "Ayşe Demir <ayse.demir@sirket.example>"
+        ],
+        [
+          "To",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "Subject",
+          "İhale Şartnamesi Özeti ve Ek Dosya"
+        ],
+        [
+          "Date",
+          "Mon, 20 May 2024 11:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-05-sartname@destek.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg05_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "2bd6d5ff99c70cc5983f6c3db8f1b4c46fad401e9433ad5a55e2f6c5f9182d23",
+          "decodedBytes": 126
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "e5013fbd0b5e3a3c1be52ce3051159a9f1bf53cc7243182e15de92520776b9ee",
+          "decodedBytes": 146
+        },
+        {
+          "type": "text/plain",
+          "name": "şartname_özeti_2024.txt",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "fb65193a9204c3f73cb568bf3e7532cb7c37990affaa9161bcbf4097dbc8543d",
+          "decodedBytes": 226
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_8dc015f1421c3fdc50aa845b280ecc86"
+      ],
+      "internalDateUtc": "2024-05-20T08:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:30",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "rawBytes": 1249,
+      "canonicalSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "headers": [
+        [
+          "From",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "To",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "Deterministik İkili Veri Dosyası (Sistem Parametreleri)"
+        ],
+        [
+          "Date",
+          "Wed, 12 Jun 2024 16:45:00 +0000"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-06-ikili-ek@muhendislik.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg06_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "614e308769dd97acdb17015d0959ce4fb1004e6b60b146b829700dd472e0806a",
+          "decodedBytes": 130
+        },
+        {
+          "type": "application/octet-stream",
+          "name": "sistem_parametreleri.bin",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+          "decodedBytes": 256
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_74a5b405db6a711ddb94aca9d0ecb1ef"
+      ],
+      "internalDateUtc": "2024-06-12T16:45:00+00:00"
+    },
+    {
+      "identity": "1789299809:31",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "rawBytes": 934,
+      "canonicalSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Ayşe Demir <ayse.demir@sirket.example>"
+        ],
+        [
+          "Subject",
+          "Aylık Dağıtım Raporu ve Grafik"
+        ],
+        [
+          "Date",
+          "Mon, 08 Jul 2024 08:30:00 +0200"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-07-png-ek@lojistik.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg07_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "10859f3225332e97be59d73f1d3220e34a4c337c0c4d3c4a3c7c71bdef36d897",
+          "decodedBytes": 117
+        },
+        {
+          "type": "image/png",
+          "name": "rapor_grafik.png",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "e3a1f03fed3df18f6ed537efa47a526d71f792566b0e2dd52dc62f1d18f41b20",
+          "decodedBytes": 74
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_eda65394e7028067d5168f1e4838a97f"
+      ],
+      "internalDateUtc": "2024-07-08T06:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:32",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "rawBytes": 1580,
+      "canonicalSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mühendislik Ekibi <ekip@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "MBOX Kaçış Kuralları ve Alıntı Denemesi"
+        ],
+        [
+          "Date",
+          "Sun, 25 Aug 2024 13:20:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-08-mbox-kacis@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg08_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "49dc23a699c2b8fb5dfe66d321389f52e2eed5b17e46c26fbed04d5ea554032d",
+          "decodedBytes": 406
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "71604ac84b4cf2c1c66b179c3f128687db3936620f0e20509b664404d8d9a965",
+          "decodedBytes": 475
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_227a0726796943ca32b66ee7bd86086a"
+      ],
+      "internalDateUtc": "2024-08-25T10:20:00+00:00"
+    },
+    {
+      "identity": "1789299809:33",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "rawBytes": 508,
+      "canonicalSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Eski Arşiv Kaydı - 2022 Yılı Bilgilendirmesi"
+        ],
+        [
+          "Date",
+          "Sat, 05 Nov 2022 15:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2022-09-arsiv@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "text/plain; charset=\"utf-8\""
+        ],
+        [
+          "Content-Transfer-Encoding",
+          "8bit"
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "bd53768516a6b87fb3748344941d2e93cf1f07eb8a68bd3d1255039d23d1537e",
+          "decodedBytes": 120
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_15cd7d3fb585597ab95627e6fd56830b"
+      ],
+      "internalDateUtc": "2022-11-05T12:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:34",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "rawBytes": 507,
+      "canonicalSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "2025 Yılı İlk Çeyrek Hedefleri"
+        ],
+        [
+          "Date",
+          "Wed, 15 Jan 2025 11:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2025-10-planlama@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "text/plain; charset=\"utf-8\""
+        ],
+        [
+          "Content-Transfer-Encoding",
+          "8bit"
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "02446853487bc8c8eb2c3ff618460005530d362ab99c96b8cd39f2be11912057",
+          "decodedBytes": 110
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_d45e904af7c51cd2d0145730685078a8"
+      ],
+      "internalDateUtc": "2025-01-15T08:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:35",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "rawBytes": 1494,
+      "canonicalSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "headers": [
+        [
+          "From",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "To",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Projesi Kurumsal Kimlik ve Amblem"
+        ],
+        [
+          "Date",
+          "Mon, 01 Jan 2024 00:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-11-inline-cid@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/related; boundary=\"===============_bound_msg11_rel_==\"; type=\"text/html\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "7d1959a0e77495bbf0a48d432190e8cfdbfd7d5c5401b564e677b1c81379c7ea",
+          "decodedBytes": 145
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "6aca1ce092b1b914edc317c2ea01aab85fcaf161376aef78173b55c241127ae4",
+          "decodedBytes": 201
+        },
+        {
+          "type": "image/png",
+          "name": "logo.png",
+          "disposition": "inline",
+          "cid": "<proje_logo_cid>",
+          "decodedSha256": "411e320c1d42fe6857fdf02eb7ee4ae020fe6522782476c81d083014fd56c61f",
+          "decodedBytes": 73
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_84e640f5da9967d77a8a5593a2074994"
+      ],
+      "internalDateUtc": "2023-12-31T21:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:36",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "rawBytes": 1139,
+      "canonicalSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Çalışmaları Tamamlanma Tutanağı"
+        ],
+        [
+          "Date",
+          "Sat, 30 Nov 2024 10:00:00 +0000"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-12-saha-kapanis@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg12_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "188847d7f28686569829e4fffea2b333cd036fc6aa93872d0e74a906e146aa00",
+          "decodedBytes": 199
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "dea425f032fbf8601ec89243e9282988106a86721dbc5264e3af64c08fb83419",
+          "decodedBytes": 236
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_276b287292b16ac950f901472c6f39c2"
+      ],
+      "internalDateUtc": "2024-11-30T10:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:37",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "rawBytes": 1044,
+      "canonicalSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Sisteme Hoş Geldiniz - Bilgilendirme"
+        ],
+        [
+          "Date",
+          "Mon, 10 Apr 2023 09:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2023-01-hosgeldiniz@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg01_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c",
+          "decodedBytes": 182
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b",
+          "decodedBytes": 208
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_6a728f4d2642e88dda64c70fa8ce7e50"
+      ],
+      "internalDateUtc": "2023-04-10T06:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:38",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "rawBytes": 1044,
+      "canonicalSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Sisteme Hoş Geldiniz - Bilgilendirme"
+        ],
+        [
+          "Date",
+          "Mon, 10 Apr 2023 09:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2023-01-hosgeldiniz@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg01_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c",
+          "decodedBytes": 182
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b",
+          "decodedBytes": 208
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_d649995aa1d77b6bf8359fa2f89825a8"
+      ],
+      "internalDateUtc": "2023-04-10T06:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:39",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "rawBytes": 957,
+      "canonicalSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "headers": [
+        [
+          "From",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Raporu - İlk Taslak"
+        ],
+        [
+          "Date",
+          "Thu, 15 Feb 2024 14:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<ortak-kimlik-2024-revizyon@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg03_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "4aa2c0ef74eb8f1458cde171b29a5b575b0e262dab11412e730dd5a94d8cb538",
+          "decodedBytes": 136
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "f4159303680b882297966a2119e7fca06727d79fb0ea8b4a3e813b235b24f6aa",
+          "decodedBytes": 156
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_d75c835e72af69d3ab73762069cb05bf"
+      ],
+      "internalDateUtc": "2024-02-15T11:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:40",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "rawBytes": 1013,
+      "canonicalSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Raporu - Güncellenmiş İkinci Taslak"
+        ],
+        [
+          "Date",
+          "Fri, 16 Feb 2024 10:15:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<ortak-kimlik-2024-revizyon@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg04_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "55264d71eb6eecfab37b918f7d635aea779a95b554d83a75b0d9ced616146756",
+          "decodedBytes": 145
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "c83740a04d09e9c6a31346d8fb17407ff768cbdb9d6cba555d20912892d5c635",
+          "decodedBytes": 165
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_d5af17d73367850d787adae7fbe986b6"
+      ],
+      "internalDateUtc": "2024-02-16T07:15:00+00:00"
+    },
+    {
+      "identity": "1789299809:41",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "rawBytes": 1617,
+      "canonicalSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "headers": [
+        [
+          "From",
+          "Ayşe Demir <ayse.demir@sirket.example>"
+        ],
+        [
+          "To",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "Subject",
+          "İhale Şartnamesi Özeti ve Ek Dosya"
+        ],
+        [
+          "Date",
+          "Mon, 20 May 2024 11:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-05-sartname@destek.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg05_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "2bd6d5ff99c70cc5983f6c3db8f1b4c46fad401e9433ad5a55e2f6c5f9182d23",
+          "decodedBytes": 126
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "e5013fbd0b5e3a3c1be52ce3051159a9f1bf53cc7243182e15de92520776b9ee",
+          "decodedBytes": 146
+        },
+        {
+          "type": "text/plain",
+          "name": "şartname_özeti_2024.txt",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "fb65193a9204c3f73cb568bf3e7532cb7c37990affaa9161bcbf4097dbc8543d",
+          "decodedBytes": 226
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_9708bb74f438aa99e4956c1bb53d6e74"
+      ],
+      "internalDateUtc": "2024-05-20T08:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:42",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "rawBytes": 1249,
+      "canonicalSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "headers": [
+        [
+          "From",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "To",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "Deterministik İkili Veri Dosyası (Sistem Parametreleri)"
+        ],
+        [
+          "Date",
+          "Wed, 12 Jun 2024 16:45:00 +0000"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-06-ikili-ek@muhendislik.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg06_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "614e308769dd97acdb17015d0959ce4fb1004e6b60b146b829700dd472e0806a",
+          "decodedBytes": 130
+        },
+        {
+          "type": "application/octet-stream",
+          "name": "sistem_parametreleri.bin",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+          "decodedBytes": 256
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_5616c06085cb1006ab27ed90699f8222"
+      ],
+      "internalDateUtc": "2024-06-12T16:45:00+00:00"
+    },
+    {
+      "identity": "1789299809:43",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "rawBytes": 934,
+      "canonicalSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Ayşe Demir <ayse.demir@sirket.example>"
+        ],
+        [
+          "Subject",
+          "Aylık Dağıtım Raporu ve Grafik"
+        ],
+        [
+          "Date",
+          "Mon, 08 Jul 2024 08:30:00 +0200"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-07-png-ek@lojistik.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg07_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "10859f3225332e97be59d73f1d3220e34a4c337c0c4d3c4a3c7c71bdef36d897",
+          "decodedBytes": 117
+        },
+        {
+          "type": "image/png",
+          "name": "rapor_grafik.png",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "e3a1f03fed3df18f6ed537efa47a526d71f792566b0e2dd52dc62f1d18f41b20",
+          "decodedBytes": 74
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_91ad94a79628983d94282718d2b41e83"
+      ],
+      "internalDateUtc": "2024-07-08T06:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:44",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "rawBytes": 1580,
+      "canonicalSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mühendislik Ekibi <ekip@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "MBOX Kaçış Kuralları ve Alıntı Denemesi"
+        ],
+        [
+          "Date",
+          "Sun, 25 Aug 2024 13:20:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-08-mbox-kacis@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg08_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "49dc23a699c2b8fb5dfe66d321389f52e2eed5b17e46c26fbed04d5ea554032d",
+          "decodedBytes": 406
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "71604ac84b4cf2c1c66b179c3f128687db3936620f0e20509b664404d8d9a965",
+          "decodedBytes": 475
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_117e4087823b532021a5654ef4e9bae0"
+      ],
+      "internalDateUtc": "2024-08-25T10:20:00+00:00"
+    },
+    {
+      "identity": "1789299809:45",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "rawBytes": 508,
+      "canonicalSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Eski Arşiv Kaydı - 2022 Yılı Bilgilendirmesi"
+        ],
+        [
+          "Date",
+          "Sat, 05 Nov 2022 15:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2022-09-arsiv@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "text/plain; charset=\"utf-8\""
+        ],
+        [
+          "Content-Transfer-Encoding",
+          "8bit"
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "bd53768516a6b87fb3748344941d2e93cf1f07eb8a68bd3d1255039d23d1537e",
+          "decodedBytes": 120
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_2f9f0029da34bd0cbc8039790a21bb6b"
+      ],
+      "internalDateUtc": "2022-11-05T12:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:46",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "rawBytes": 507,
+      "canonicalSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "2025 Yılı İlk Çeyrek Hedefleri"
+        ],
+        [
+          "Date",
+          "Wed, 15 Jan 2025 11:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2025-10-planlama@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "text/plain; charset=\"utf-8\""
+        ],
+        [
+          "Content-Transfer-Encoding",
+          "8bit"
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "02446853487bc8c8eb2c3ff618460005530d362ab99c96b8cd39f2be11912057",
+          "decodedBytes": 110
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_eeda3615cff8a0cf75a2d04eb6e37ecb"
+      ],
+      "internalDateUtc": "2025-01-15T08:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:47",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "rawBytes": 1494,
+      "canonicalSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "headers": [
+        [
+          "From",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "To",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Projesi Kurumsal Kimlik ve Amblem"
+        ],
+        [
+          "Date",
+          "Mon, 01 Jan 2024 00:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-11-inline-cid@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/related; boundary=\"===============_bound_msg11_rel_==\"; type=\"text/html\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "7d1959a0e77495bbf0a48d432190e8cfdbfd7d5c5401b564e677b1c81379c7ea",
+          "decodedBytes": 145
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "6aca1ce092b1b914edc317c2ea01aab85fcaf161376aef78173b55c241127ae4",
+          "decodedBytes": 201
+        },
+        {
+          "type": "image/png",
+          "name": "logo.png",
+          "disposition": "inline",
+          "cid": "<proje_logo_cid>",
+          "decodedSha256": "411e320c1d42fe6857fdf02eb7ee4ae020fe6522782476c81d083014fd56c61f",
+          "decodedBytes": 73
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_d7e277aae29fe2f8f5a42e7b0b4fc328"
+      ],
+      "internalDateUtc": "2023-12-31T21:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:48",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "rawBytes": 1139,
+      "canonicalSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Çalışmaları Tamamlanma Tutanağı"
+        ],
+        [
+          "Date",
+          "Sat, 30 Nov 2024 10:00:00 +0000"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-12-saha-kapanis@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg12_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "188847d7f28686569829e4fffea2b333cd036fc6aa93872d0e74a906e146aa00",
+          "decodedBytes": 199
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "dea425f032fbf8601ec89243e9282988106a86721dbc5264e3af64c08fb83419",
+          "decodedBytes": 236
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_a7a857e5a958c341dd98640aacff8a77"
+      ],
+      "internalDateUtc": "2024-11-30T10:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:49",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "rawBytes": 1044,
+      "canonicalSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Sisteme Hoş Geldiniz - Bilgilendirme"
+        ],
+        [
+          "Date",
+          "Mon, 10 Apr 2023 09:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2023-01-hosgeldiniz@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg01_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c",
+          "decodedBytes": 182
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b",
+          "decodedBytes": 208
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_ba84f4651625cf476ef4f1c0941d38c7"
+      ],
+      "internalDateUtc": "2023-04-10T06:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:50",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "rawBytes": 1044,
+      "canonicalSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Sisteme Hoş Geldiniz - Bilgilendirme"
+        ],
+        [
+          "Date",
+          "Mon, 10 Apr 2023 09:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2023-01-hosgeldiniz@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg01_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c",
+          "decodedBytes": 182
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b",
+          "decodedBytes": 208
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_4721002c1c37740f1b7d5b66f209e66d"
+      ],
+      "internalDateUtc": "2023-04-10T06:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:51",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "rawBytes": 957,
+      "canonicalSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "headers": [
+        [
+          "From",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Raporu - İlk Taslak"
+        ],
+        [
+          "Date",
+          "Thu, 15 Feb 2024 14:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<ortak-kimlik-2024-revizyon@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg03_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "4aa2c0ef74eb8f1458cde171b29a5b575b0e262dab11412e730dd5a94d8cb538",
+          "decodedBytes": 136
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "f4159303680b882297966a2119e7fca06727d79fb0ea8b4a3e813b235b24f6aa",
+          "decodedBytes": 156
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_2c99e6527cbf1c857609c0acd3de34e7"
+      ],
+      "internalDateUtc": "2024-02-15T11:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:52",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "rawBytes": 1013,
+      "canonicalSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Raporu - Güncellenmiş İkinci Taslak"
+        ],
+        [
+          "Date",
+          "Fri, 16 Feb 2024 10:15:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<ortak-kimlik-2024-revizyon@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg04_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "55264d71eb6eecfab37b918f7d635aea779a95b554d83a75b0d9ced616146756",
+          "decodedBytes": 145
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "c83740a04d09e9c6a31346d8fb17407ff768cbdb9d6cba555d20912892d5c635",
+          "decodedBytes": 165
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_00d7614ac299305efd76d7b76dc34196"
+      ],
+      "internalDateUtc": "2024-02-16T07:15:00+00:00"
+    },
+    {
+      "identity": "1789299809:53",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "rawBytes": 1617,
+      "canonicalSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "headers": [
+        [
+          "From",
+          "Ayşe Demir <ayse.demir@sirket.example>"
+        ],
+        [
+          "To",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "Subject",
+          "İhale Şartnamesi Özeti ve Ek Dosya"
+        ],
+        [
+          "Date",
+          "Mon, 20 May 2024 11:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-05-sartname@destek.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg05_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "2bd6d5ff99c70cc5983f6c3db8f1b4c46fad401e9433ad5a55e2f6c5f9182d23",
+          "decodedBytes": 126
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "e5013fbd0b5e3a3c1be52ce3051159a9f1bf53cc7243182e15de92520776b9ee",
+          "decodedBytes": 146
+        },
+        {
+          "type": "text/plain",
+          "name": "şartname_özeti_2024.txt",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "fb65193a9204c3f73cb568bf3e7532cb7c37990affaa9161bcbf4097dbc8543d",
+          "decodedBytes": 226
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_57a24ea545ea8a6dc33354f707a772e1"
+      ],
+      "internalDateUtc": "2024-05-20T08:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:54",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "rawBytes": 1249,
+      "canonicalSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "headers": [
+        [
+          "From",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "To",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "Deterministik İkili Veri Dosyası (Sistem Parametreleri)"
+        ],
+        [
+          "Date",
+          "Wed, 12 Jun 2024 16:45:00 +0000"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-06-ikili-ek@muhendislik.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg06_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "614e308769dd97acdb17015d0959ce4fb1004e6b60b146b829700dd472e0806a",
+          "decodedBytes": 130
+        },
+        {
+          "type": "application/octet-stream",
+          "name": "sistem_parametreleri.bin",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+          "decodedBytes": 256
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_6624b2f5ef07c5060865a11ffde2e594"
+      ],
+      "internalDateUtc": "2024-06-12T16:45:00+00:00"
+    },
+    {
+      "identity": "1789299809:55",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "rawBytes": 934,
+      "canonicalSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Ayşe Demir <ayse.demir@sirket.example>"
+        ],
+        [
+          "Subject",
+          "Aylık Dağıtım Raporu ve Grafik"
+        ],
+        [
+          "Date",
+          "Mon, 08 Jul 2024 08:30:00 +0200"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-07-png-ek@lojistik.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg07_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "10859f3225332e97be59d73f1d3220e34a4c337c0c4d3c4a3c7c71bdef36d897",
+          "decodedBytes": 117
+        },
+        {
+          "type": "image/png",
+          "name": "rapor_grafik.png",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "e3a1f03fed3df18f6ed537efa47a526d71f792566b0e2dd52dc62f1d18f41b20",
+          "decodedBytes": 74
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_483156421684dc47ec8c08e984e44e0f"
+      ],
+      "internalDateUtc": "2024-07-08T06:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:56",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "rawBytes": 1580,
+      "canonicalSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mühendislik Ekibi <ekip@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "MBOX Kaçış Kuralları ve Alıntı Denemesi"
+        ],
+        [
+          "Date",
+          "Sun, 25 Aug 2024 13:20:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-08-mbox-kacis@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg08_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "49dc23a699c2b8fb5dfe66d321389f52e2eed5b17e46c26fbed04d5ea554032d",
+          "decodedBytes": 406
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "71604ac84b4cf2c1c66b179c3f128687db3936620f0e20509b664404d8d9a965",
+          "decodedBytes": 475
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_93f9323febda9efaa95fa60738ff64b3"
+      ],
+      "internalDateUtc": "2024-08-25T10:20:00+00:00"
+    },
+    {
+      "identity": "1789299809:57",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "rawBytes": 508,
+      "canonicalSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Eski Arşiv Kaydı - 2022 Yılı Bilgilendirmesi"
+        ],
+        [
+          "Date",
+          "Sat, 05 Nov 2022 15:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2022-09-arsiv@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "text/plain; charset=\"utf-8\""
+        ],
+        [
+          "Content-Transfer-Encoding",
+          "8bit"
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "bd53768516a6b87fb3748344941d2e93cf1f07eb8a68bd3d1255039d23d1537e",
+          "decodedBytes": 120
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_87a049b46bc28b2f5ef2efe63717a881"
+      ],
+      "internalDateUtc": "2022-11-05T12:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:58",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "rawBytes": 507,
+      "canonicalSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "2025 Yılı İlk Çeyrek Hedefleri"
+        ],
+        [
+          "Date",
+          "Wed, 15 Jan 2025 11:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2025-10-planlama@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "text/plain; charset=\"utf-8\""
+        ],
+        [
+          "Content-Transfer-Encoding",
+          "8bit"
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "02446853487bc8c8eb2c3ff618460005530d362ab99c96b8cd39f2be11912057",
+          "decodedBytes": 110
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_cc7a27b99d977d9e6275cce8354e0cb0"
+      ],
+      "internalDateUtc": "2025-01-15T08:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:59",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "rawBytes": 1494,
+      "canonicalSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "headers": [
+        [
+          "From",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "To",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Projesi Kurumsal Kimlik ve Amblem"
+        ],
+        [
+          "Date",
+          "Mon, 01 Jan 2024 00:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-11-inline-cid@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/related; boundary=\"===============_bound_msg11_rel_==\"; type=\"text/html\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "7d1959a0e77495bbf0a48d432190e8cfdbfd7d5c5401b564e677b1c81379c7ea",
+          "decodedBytes": 145
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "6aca1ce092b1b914edc317c2ea01aab85fcaf161376aef78173b55c241127ae4",
+          "decodedBytes": 201
+        },
+        {
+          "type": "image/png",
+          "name": "logo.png",
+          "disposition": "inline",
+          "cid": "<proje_logo_cid>",
+          "decodedSha256": "411e320c1d42fe6857fdf02eb7ee4ae020fe6522782476c81d083014fd56c61f",
+          "decodedBytes": 73
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_de45af88a2739f02143f9145e6161933"
+      ],
+      "internalDateUtc": "2023-12-31T21:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:60",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "rawBytes": 1139,
+      "canonicalSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Çalışmaları Tamamlanma Tutanağı"
+        ],
+        [
+          "Date",
+          "Sat, 30 Nov 2024 10:00:00 +0000"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-12-saha-kapanis@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg12_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "188847d7f28686569829e4fffea2b333cd036fc6aa93872d0e74a906e146aa00",
+          "decodedBytes": 199
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "dea425f032fbf8601ec89243e9282988106a86721dbc5264e3af64c08fb83419",
+          "decodedBytes": 236
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_9951fd70064641c8a740ce0b28e9fb16"
+      ],
+      "internalDateUtc": "2024-11-30T10:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:61",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "rawBytes": 1044,
+      "canonicalSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Sisteme Hoş Geldiniz - Bilgilendirme"
+        ],
+        [
+          "Date",
+          "Mon, 10 Apr 2023 09:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2023-01-hosgeldiniz@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg01_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c",
+          "decodedBytes": 182
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b",
+          "decodedBytes": 208
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_aaad64d9fb11f13d327a9141bd529331"
+      ],
+      "internalDateUtc": "2023-04-10T06:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:62",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "rawBytes": 1044,
+      "canonicalSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Sisteme Hoş Geldiniz - Bilgilendirme"
+        ],
+        [
+          "Date",
+          "Mon, 10 Apr 2023 09:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2023-01-hosgeldiniz@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg01_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c",
+          "decodedBytes": 182
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b",
+          "decodedBytes": 208
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_a83e1b430df8e24b2303ac72411a1ba9"
+      ],
+      "internalDateUtc": "2023-04-10T06:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:63",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "rawBytes": 957,
+      "canonicalSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "headers": [
+        [
+          "From",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Raporu - İlk Taslak"
+        ],
+        [
+          "Date",
+          "Thu, 15 Feb 2024 14:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<ortak-kimlik-2024-revizyon@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg03_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "4aa2c0ef74eb8f1458cde171b29a5b575b0e262dab11412e730dd5a94d8cb538",
+          "decodedBytes": 136
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "f4159303680b882297966a2119e7fca06727d79fb0ea8b4a3e813b235b24f6aa",
+          "decodedBytes": 156
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_3a2a3a4fcc8b2fd2ae130f6fbfc32c07"
+      ],
+      "internalDateUtc": "2024-02-15T11:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:64",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "rawBytes": 1013,
+      "canonicalSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Raporu - Güncellenmiş İkinci Taslak"
+        ],
+        [
+          "Date",
+          "Fri, 16 Feb 2024 10:15:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<ortak-kimlik-2024-revizyon@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg04_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "55264d71eb6eecfab37b918f7d635aea779a95b554d83a75b0d9ced616146756",
+          "decodedBytes": 145
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "c83740a04d09e9c6a31346d8fb17407ff768cbdb9d6cba555d20912892d5c635",
+          "decodedBytes": 165
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_471dab6d8b6bfe831890c3e8f1c79094"
+      ],
+      "internalDateUtc": "2024-02-16T07:15:00+00:00"
+    },
+    {
+      "identity": "1789299809:65",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "rawBytes": 1617,
+      "canonicalSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "headers": [
+        [
+          "From",
+          "Ayşe Demir <ayse.demir@sirket.example>"
+        ],
+        [
+          "To",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "Subject",
+          "İhale Şartnamesi Özeti ve Ek Dosya"
+        ],
+        [
+          "Date",
+          "Mon, 20 May 2024 11:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-05-sartname@destek.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg05_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "2bd6d5ff99c70cc5983f6c3db8f1b4c46fad401e9433ad5a55e2f6c5f9182d23",
+          "decodedBytes": 126
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "e5013fbd0b5e3a3c1be52ce3051159a9f1bf53cc7243182e15de92520776b9ee",
+          "decodedBytes": 146
+        },
+        {
+          "type": "text/plain",
+          "name": "şartname_özeti_2024.txt",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "fb65193a9204c3f73cb568bf3e7532cb7c37990affaa9161bcbf4097dbc8543d",
+          "decodedBytes": 226
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_d4a9fa762e86800f824da29a275b4e1e"
+      ],
+      "internalDateUtc": "2024-05-20T08:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:66",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "rawBytes": 1249,
+      "canonicalSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "headers": [
+        [
+          "From",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "To",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "Deterministik İkili Veri Dosyası (Sistem Parametreleri)"
+        ],
+        [
+          "Date",
+          "Wed, 12 Jun 2024 16:45:00 +0000"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-06-ikili-ek@muhendislik.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg06_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "614e308769dd97acdb17015d0959ce4fb1004e6b60b146b829700dd472e0806a",
+          "decodedBytes": 130
+        },
+        {
+          "type": "application/octet-stream",
+          "name": "sistem_parametreleri.bin",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "40aff2e9d2d8922e47afd4648e6967497158785fbd1da870e7110266bf944880",
+          "decodedBytes": 256
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_fb7c2d0f294e5d4891cd14b1771f1297"
+      ],
+      "internalDateUtc": "2024-06-12T16:45:00+00:00"
+    },
+    {
+      "identity": "1789299809:67",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "rawBytes": 934,
+      "canonicalSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Ayşe Demir <ayse.demir@sirket.example>"
+        ],
+        [
+          "Subject",
+          "Aylık Dağıtım Raporu ve Grafik"
+        ],
+        [
+          "Date",
+          "Mon, 08 Jul 2024 08:30:00 +0200"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-07-png-ek@lojistik.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/mixed; boundary=\"===============_bound_msg07_mix_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "10859f3225332e97be59d73f1d3220e34a4c337c0c4d3c4a3c7c71bdef36d897",
+          "decodedBytes": 117
+        },
+        {
+          "type": "image/png",
+          "name": "rapor_grafik.png",
+          "disposition": "attachment",
+          "cid": "",
+          "decodedSha256": "e3a1f03fed3df18f6ed537efa47a526d71f792566b0e2dd52dc62f1d18f41b20",
+          "decodedBytes": 74
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_d5393fbc03663de312dd234e586e5f93"
+      ],
+      "internalDateUtc": "2024-07-08T06:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:68",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "rawBytes": 1580,
+      "canonicalSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mühendislik Ekibi <ekip@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "MBOX Kaçış Kuralları ve Alıntı Denemesi"
+        ],
+        [
+          "Date",
+          "Sun, 25 Aug 2024 13:20:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-08-mbox-kacis@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg08_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "49dc23a699c2b8fb5dfe66d321389f52e2eed5b17e46c26fbed04d5ea554032d",
+          "decodedBytes": 406
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "71604ac84b4cf2c1c66b179c3f128687db3936620f0e20509b664404d8d9a965",
+          "decodedBytes": 475
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_c3ad73391accc8971db214312c1c7c4a"
+      ],
+      "internalDateUtc": "2024-08-25T10:20:00+00:00"
+    },
+    {
+      "identity": "1789299809:69",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "rawBytes": 508,
+      "canonicalSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Eski Arşiv Kaydı - 2022 Yılı Bilgilendirmesi"
+        ],
+        [
+          "Date",
+          "Sat, 05 Nov 2022 15:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2022-09-arsiv@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "text/plain; charset=\"utf-8\""
+        ],
+        [
+          "Content-Transfer-Encoding",
+          "8bit"
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "bd53768516a6b87fb3748344941d2e93cf1f07eb8a68bd3d1255039d23d1537e",
+          "decodedBytes": 120
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_f9abab14364b5ab9c11f8d8e73e91def"
+      ],
+      "internalDateUtc": "2022-11-05T12:00:00+00:00"
+    },
+    {
+      "identity": "1789299809:70",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "rawBytes": 507,
+      "canonicalSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "Subject",
+          "2025 Yılı İlk Çeyrek Hedefleri"
+        ],
+        [
+          "Date",
+          "Wed, 15 Jan 2025 11:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2025-10-planlama@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "text/plain; charset=\"utf-8\""
+        ],
+        [
+          "Content-Transfer-Encoding",
+          "8bit"
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "02446853487bc8c8eb2c3ff618460005530d362ab99c96b8cd39f2be11912057",
+          "decodedBytes": 110
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_ca5143ce2e7cb1f36ab8dcf86c1b776d"
+      ],
+      "internalDateUtc": "2025-01-15T08:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:71",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "rawBytes": 1494,
+      "canonicalSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "headers": [
+        [
+          "From",
+          "Canan Özkan <canan.ozkan@muhendislik.example>"
+        ],
+        [
+          "To",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Projesi Kurumsal Kimlik ve Amblem"
+        ],
+        [
+          "Date",
+          "Mon, 01 Jan 2024 00:30:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-11-inline-cid@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/related; boundary=\"===============_bound_msg11_rel_==\"; type=\"text/html\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "7d1959a0e77495bbf0a48d432190e8cfdbfd7d5c5401b564e677b1c81379c7ea",
+          "decodedBytes": 145
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "6aca1ce092b1b914edc317c2ea01aab85fcaf161376aef78173b55c241127ae4",
+          "decodedBytes": 201
+        },
+        {
+          "type": "image/png",
+          "name": "logo.png",
+          "disposition": "inline",
+          "cid": "<proje_logo_cid>",
+          "decodedSha256": "411e320c1d42fe6857fdf02eb7ee4ae020fe6522782476c81d083014fd56c61f",
+          "decodedBytes": 73
+        }
+      ],
+      "attachments": 1,
+      "flags": [
+        "bitigmail_331a8a185b37ad016ffd80b3599251f4"
+      ],
+      "internalDateUtc": "2023-12-31T21:30:00+00:00"
+    },
+    {
+      "identity": "1789299809:72",
+      "folder": "TASK017-ext-f4da216137-over50",
+      "rawSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "rawBytes": 1139,
+      "canonicalSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "headers": [
+        [
+          "From",
+          "Burak Aktaş <burak.aktas@lojistik.example>"
+        ],
+        [
+          "To",
+          "Proje Grubu <proje.ekibi@sirket.example>"
+        ],
+        [
+          "Subject",
+          "İstanbul Saha Çalışmaları Tamamlanma Tutanağı"
+        ],
+        [
+          "Date",
+          "Sat, 30 Nov 2024 10:00:00 +0000"
+        ],
+        [
+          "Message-ID",
+          "<msg-2024-12-saha-kapanis@projeler.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg12_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "188847d7f28686569829e4fffea2b333cd036fc6aa93872d0e74a906e146aa00",
+          "decodedBytes": 199
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "dea425f032fbf8601ec89243e9282988106a86721dbc5264e3af64c08fb83419",
+          "decodedBytes": 236
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_c96d53f78027fc6b95ff488071a7269b"
+      ],
+      "internalDateUtc": "2024-11-30T10:00:00+00:00"
+    }
+  ],
+  "folders": [
+    {
+      "folder": "TASK017-ext-f4da216137-over50",
+      "uidValidity": 1789299809,
+      "count": 72
+    }
+  ],
+  "count": 72,
+  "attachments": 24
+}

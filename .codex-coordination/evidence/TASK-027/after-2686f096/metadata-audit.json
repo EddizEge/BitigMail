@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "sourceCount": 1024,
+  "targetCount": 1024,
+  "assertions": [
+    "exact raw SHA-256",
+    "exact canonical/MIME SHA-256",
+    "exact internal date",
+    "all source flags/keywords excluding Recent preserved",
+    "exactly one added bitigmail_ token per target"
+  ],
+  "failures": []
+}

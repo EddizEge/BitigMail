@@ -1,0 +1,46 @@
+{
+  "previewId": "bprev_a718799fbc5b4c5fb8a42af8f1312673",
+  "companyId": "task017-ext-87784d7cc8",
+  "projectId": "extended-pilot",
+  "sourceHandle": "msrc_be104790218b486bb91ed44ebda471c9",
+  "sourceFingerprint": "2f869600907996a5f28ef5d51140ea624a5f9e8108f06183bcc9c33f142045b0",
+  "sourceKind": "eml-tree",
+  "targetAccountId": "acc_722db9fe03cd455d9f7d848ce0873513",
+  "targetAccountVersion": 1,
+  "totalSourceItems": 12,
+  "eligibleItemsCount": 12,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "fld_001",
+      "targetFolder": "TASK017-ext-87784d7cc8-roundtrip-fld_001",
+      "totalItems": 5,
+      "eligibleItems": 5,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    },
+    {
+      "sourceFolder": "fld_002",
+      "targetFolder": "TASK017-ext-87784d7cc8-roundtrip-fld_002",
+      "totalItems": 3,
+      "eligibleItems": 3,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    },
+    {
+      "sourceFolder": "fld_003",
+      "targetFolder": "TASK017-ext-87784d7cc8-roundtrip-fld_003",
+      "totalItems": 4,
+      "eligibleItems": 4,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-13T22:46:02.0286128+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

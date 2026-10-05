@@ -1,0 +1,28 @@
+{
+  "previewId": "bprev_1013f415a68b4204b2db7e919df40d0b",
+  "companyId": "company-task020-scale",
+  "projectId": "project-task020-mbox-bounded",
+  "sourceAccountId": "acc_8f7863114fd1430ebc68cf1f2e90c1db",
+  "sourceAccountVersion": 1,
+  "targetDirHandle": "dir_50636a51398c437eadbc60dd513f14cf",
+  "targetFormat": "mboxrd",
+  "totalSourceItems": 1024,
+  "eligibleItemsCount": 1024,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "deletedExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "Task019/scale-cont-ff44e15b/Bulk",
+      "targetFolder": "fld_001",
+      "totalItems": 1024,
+      "eligibleItems": 1024,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-14T14:52:13.9522622+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

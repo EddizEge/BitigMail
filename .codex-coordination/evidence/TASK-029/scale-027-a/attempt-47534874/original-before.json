@@ -1,0 +1,25 @@
+{
+  "oracle": "Source Baseline Invariance Oracle",
+  "pass": true,
+  "expectedCount": 12,
+  "actualCount": 12,
+  "missing": 0,
+  "extra": 0,
+  "folders": [
+    {
+      "folder": "INBOX",
+      "uidValidity": 1789299650,
+      "count": 5
+    },
+    {
+      "folder": "Gönderilenler",
+      "uidValidity": 1789299651,
+      "count": 3
+    },
+    {
+      "folder": "Projeler/İstanbul",
+      "uidValidity": 1789299653,
+      "count": 4
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "backend": {
+    "skipped": 0,
+    "buildWarnings": 0,
+    "buildErrors": 0,
+    "passed": 305,
+    "failed": 0
+  },
+  "ui": {
+    "mobileScrollWidth": 375,
+    "personalTenantFields": 0,
+    "oauthStarted": false,
+    "mobileWidth": 390,
+    "inputEntered": false,
+    "mobileButtonScrollWidth": 286,
+    "viewportReset": true,
+    "desktopWidth": 1660,
+    "mobilePersonalButtonHeight": 40,
+    "finalConsoleWarnings": 0,
+    "passwordFields": 0,
+    "finalConsoleErrors": 0,
+    "mobileButtonClientWidth": 286,
+    "helpExpanded": true,
+    "desktopScrollWidth": 1660
+  },
+  "runtime": {
+    "dev5173Pid": 51968,
+    "normal6174Pid": 50484,
+    "lan5176Pid": 22516
+  },
+  "rootPolicyPassed": 18,
+  "liveLoginPerformed": false,
+  "corporateApiPassed": 129,
+  "task": "TASK-016",
+  "status": "LOCAL_READY / LIVE_PERSONAL_PILOT_PENDING",
+  "frontend": {
+    "bundleWarningKb": 537.86,
+    "passed": 90,
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "failed": 0,
+    "build": "PASS"
+  },
+  "lanPreview": {
+    "jsAsset": "/assets/index-CgHUs5o1.js",
+    "jsStatus": 200,
+    "latestHtmlMatches": true,
+    "url": "http://192.168.1.51:5176/",
+    "status": 200
+  },
+  "personalApiPassed": 147,
+  "personalMailboxAccessPerformed": false,
+  "mailDeletionProhibited": true,
+  "officialMsalConsumersProbePassed": 3,
+  "appRegistrationAvailable": false
+}

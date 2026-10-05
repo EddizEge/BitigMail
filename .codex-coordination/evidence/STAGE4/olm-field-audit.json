@@ -1,0 +1,346 @@
+{
+  "status": "MEASURED_NOT_CONVERSION_ACCEPTANCE",
+  "items": 22,
+  "counts": {
+    "subjectHashDifferent": 22,
+    "plainHashDifferent": 22,
+    "plainLfHashDifferent": 22,
+    "htmlHashDifferent": 22,
+    "htmlLfHashDifferent": 22,
+    "submitLiteralDifferent": 22,
+    "deliveryLiteralDifferent": 22
+  },
+  "details": [
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Sent Items/message_00000.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Sent Items/message_00001.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Sent Items/message_00002.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Sent Items/message_00003.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Sent Items/message_00004.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Sent Items/message_00005.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/message_00000.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/message_00001.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/message_00002.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/message_00003.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/message_00004.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/message_00005.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/Custom Folder/message_00000.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/Custom Folder/message_00001.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Deleted Items/test_olm2010 PST/Folder/message_00000.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Deleted Items/test_olm2010 PST/Deleted Items/message_00000.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST/Folder/message_00000.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST/Deleted Items/message_00000.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/test_olm2010 PST/Folder/message_00000.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/test_olm2010 PST/Deleted Items/message_00000.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST/Folder/message_00000.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    },
+    {
+      "sourceEntry": "Local/com.microsoft.__Messages/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST/Deleted Items/message_00000.xml",
+      "ordinal": 1,
+      "checks": {
+        "subjectHash": false,
+        "plainHash": false,
+        "plainLfHash": false,
+        "htmlHash": false,
+        "htmlLfHash": false,
+        "submitLiteralEqual": false,
+        "deliveryLiteralEqual": false
+      },
+      "sdkSubmitKind": "Local",
+      "sdkDeliveryKind": "Local"
+    }
+  ],
+  "qualification": "Direct OLM-to-SDK field comparison. XML date literals have no offset; matching literals is not a timezone semantics proof. No MIME conversion or UI acceptance."
+}

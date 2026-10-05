@@ -1,0 +1,126 @@
+[
+  {
+    "sha256": "b2e4a99560fae194f8cfc0f5eebc1f82ede95496bed0cccf769bd2ed6a31d5a9",
+    "file": "acceptance-summary.json"
+  },
+  {
+    "sha256": "cfcac8bf29ec0bde2fc483a8338f10b4dcf45f5841b80a1f8ebd52b2b8a1fd0c",
+    "file": "api-accounts-report.json"
+  },
+  {
+    "sha256": "5a74d34f45ba262fdc0e81b3982a9ee202c7364a27cfaac64117d20a16e1884b",
+    "file": "api-oauth-expiry-report.json"
+  },
+  {
+    "sha256": "ca37dc0cd518e39a6954a5888f8ee48176e4eafaf1b2b18ed9a31395fd8c0cac",
+    "file": "api-oauth-real-msal-report.json"
+  },
+  {
+    "sha256": "1949b4e33d1e32e2c1b432976c5e85cc0cb8ec694b269753872b2d8b61e26349",
+    "file": "backend-final.json"
+  },
+  {
+    "sha256": "64d6ccc5e34b729f52b56f7bb4f70aeff11ccb830a7bf1a78c2d45a27d1431df",
+    "file": "implementation-result.md"
+  },
+  {
+    "sha256": "7e48a9d8652c25652889ec0ea4dc036d322e7deb1f6eb02176cb7d9bb8bfe6a5",
+    "file": "lan-final-build.json"
+  },
+  {
+    "sha256": "55c550b9e45284a4d77d0a9a99ad5b92d083218f4f8a449dbc430d10ceed4eb5",
+    "file": "msal-probe-report.json"
+  },
+  {
+    "sha256": "b1ec3fe93789115d683437f44136aaa3f733e4b5183dcb939b2b1263f513cdd3",
+    "file": "normal-imap-boundary.json"
+  },
+  {
+    "sha256": "d67b999351fad4ba96aea733ce4479d2425fe74541346d0307e5e682e60f304d",
+    "file": "transfer-b039bd936274/acceptance.json"
+  },
+  {
+    "sha256": "40d80cedecf0049839973c5e9daf2f012a89949c26efdb8d4caf1aaeec33bf74",
+    "file": "transfer-b039bd936274/filtered-independent.json"
+  },
+  {
+    "sha256": "c46456e2b426f5d0c78892a3262478b2cc8a7231779fd08067bc5de926384308",
+    "file": "transfer-b039bd936274/filtered-job.json"
+  },
+  {
+    "sha256": "8592fc401353f31f4afc23111ecfcd858953bf9cc59c18fa330760dbb643a30f",
+    "file": "transfer-b039bd936274/filtered-preview.json"
+  },
+  {
+    "sha256": "dda6a4a510aa79fe34f959fa634c268bf8b38e53e4f893b3fe1cfd6aefa27c4e",
+    "file": "transfer-b039bd936274/filtered-report.json"
+  },
+  {
+    "sha256": "9da53a00ce39e9aa4b753b6346db5fa9dc26ee741f39c143b0158b12a0c6a4e4",
+    "file": "transfer-b039bd936274/filtered-selected.json"
+  },
+  {
+    "sha256": "64ed07a9a8f4c498ec8f27575b9f4d63a43d56fe5e1a45a4125f26d97398e202",
+    "file": "transfer-b039bd936274/filtered-source.json"
+  },
+  {
+    "sha256": "c8d0d2681f25f807dcde5954bb3d59df6d27df17fc688f51e62a9eeb79af5bac",
+    "file": "transfer-b039bd936274/filtered-target.json"
+  },
+  {
+    "sha256": "6283606829b4fa952f1eb9bdac5977116874c7821a78ab95c2e26edcbd0cf55b",
+    "file": "transfer-b039bd936274/full-independent.json"
+  },
+  {
+    "sha256": "258ba6935cf90f233cfd6f144dfc056afde364e5f65fb81b658272fe0579eeb9",
+    "file": "transfer-b039bd936274/full-job.json"
+  },
+  {
+    "sha256": "ad698212a79f3fe73717980d2b2bd70a61279b0d89cae52a5f5872ab5344ab6e",
+    "file": "transfer-b039bd936274/full-preview.json"
+  },
+  {
+    "sha256": "ef2a69e59c21cbf0c3ba36ce554601009be70d5006d38c444b6e2037654e6bd9",
+    "file": "transfer-b039bd936274/full-report.json"
+  },
+  {
+    "sha256": "e5bcd18e6554062432d96d10c7ce76817e158d68f04460439f7a59a81b1be2b9",
+    "file": "transfer-b039bd936274/full-selected.json"
+  },
+  {
+    "sha256": "e5bcd18e6554062432d96d10c7ce76817e158d68f04460439f7a59a81b1be2b9",
+    "file": "transfer-b039bd936274/full-source.json"
+  },
+  {
+    "sha256": "db737844f0264ef7265d73c0dccf7bd838b90cfff5758e18a0b497f8c72e101a",
+    "file": "transfer-b039bd936274/full-target.json"
+  },
+  {
+    "sha256": "75b6245e617a898595bb2830ee1cb1dc8b79a8863f3c9a2a0aa8d6fc557e6def",
+    "file": "transfer-b039bd936274/reverse-independent.json"
+  },
+  {
+    "sha256": "9c1512f53ef1925444219b399f4f847ddced00411ff8b61277825e1885752776",
+    "file": "transfer-b039bd936274/reverse-job.json"
+  },
+  {
+    "sha256": "135135dc5b93f97d5608cc0a1a9c4d3df9d2822c20d1af7b10d0415595f45b43",
+    "file": "transfer-b039bd936274/reverse-preview.json"
+  },
+  {
+    "sha256": "e06286c62c2c8a6e03eeec173e248a40acaec9723d23d7fdbda3d0acbdd3dc85",
+    "file": "transfer-b039bd936274/reverse-report.json"
+  },
+  {
+    "sha256": "c8d0d2681f25f807dcde5954bb3d59df6d27df17fc688f51e62a9eeb79af5bac",
+    "file": "transfer-b039bd936274/reverse-selected.json"
+  },
+  {
+    "sha256": "c8d0d2681f25f807dcde5954bb3d59df6d27df17fc688f51e62a9eeb79af5bac",
+    "file": "transfer-b039bd936274/reverse-source.json"
+  },
+  {
+    "sha256": "a6771d615fc71caad86deefd9f65548671bd4e8fd5ea94977852bfc14703dc7c",
+    "file": "transfer-b039bd936274/reverse-target.json"
+  }
+]

@@ -1,0 +1,4 @@
+{
+  "name": "Termination targets only this runner's live Popen child",
+  "pass": false
+}

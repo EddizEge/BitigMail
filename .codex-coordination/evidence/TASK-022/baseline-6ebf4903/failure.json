@@ -1,0 +1,103 @@
+{
+  "status": "FAIL",
+  "type": "AssertionError",
+  "error": "Check failed: GET /api/accounts returned 400 (expected (200,))",
+  "checks": [
+    {
+      "name": "6175 free before launch",
+      "pass": true
+    },
+    {
+      "name": "6174 listener present",
+      "pass": true
+    },
+    {
+      "name": "5173 listener present",
+      "pass": true
+    },
+    {
+      "name": "disk reserve >= 11.2 GiB",
+      "pass": true,
+      "details": {
+        "freeGiB": 167.2143440246582
+      }
+    },
+    {
+      "name": "RAM available >= 2 GiB",
+      "pass": true,
+      "details": {
+        "availableGiB": 30.061477661132812
+      }
+    },
+    {
+      "name": "source baseline preflight 12/4",
+      "pass": true,
+      "details": {
+        "oracle": "Source Baseline Invariance Oracle",
+        "pass": true,
+        "expectedCount": 12,
+        "actualCount": 12,
+        "missing": 0,
+        "extra": 0,
+        "folders": [
+          {
+            "folder": "INBOX",
+            "uidValidity": 1789299650,
+            "count": 5
+          },
+          {
+            "folder": "Gönderilenler",
+            "uidValidity": 1789299651,
+            "count": 3
+          },
+          {
+            "folder": "Projeler/İstanbul",
+            "uidValidity": 1789299653,
+            "count": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "preserved bulk is exactly 1024",
+      "pass": true,
+      "details": {
+        "oracle": "Target Account Dovecot Oracle",
+        "prefix": "Task019/scale-cont-ff44e15b/Bulk",
+        "matchingFolders": 1,
+        "totalMessages": 1024,
+        "folders": {
+          "Task019/scale-cont-ff44e15b/Bulk": 1024
+        }
+      }
+    },
+    {
+      "name": "Refuse to adopt or stop a pre-existing listener",
+      "pass": true
+    },
+    {
+      "name": "Launched exact project runtime and TestingHost DLL",
+      "pass": true
+    },
+    {
+      "name": "Started TestingHost responded to /api/session",
+      "pass": true
+    },
+    {
+      "name": "PID file/listener match the newly launched Popen child",
+      "pass": true
+    },
+    {
+      "name": "Ready process retains exact launch identity",
+      "pass": true
+    },
+    {
+      "name": "fresh TestingHost exact child started",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts returned 400 (expected (200,))",
+      "pass": false
+    }
+  ]
+}

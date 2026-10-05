@@ -1,0 +1,28 @@
+{
+  "previewId": "bprev_7c66b318693744d39d85634284843d61",
+  "companyId": "task017-mbox-03bded8cb8",
+  "projectId": "mbox-crash-pilot",
+  "sourceAccountId": "acc_5157b39878c04794a808bbc05f666dca",
+  "sourceAccountVersion": 1,
+  "targetDirHandle": "dir_e09c5460b0f74cf4b9086f8579bd35f2",
+  "targetFormat": "mboxrd",
+  "totalSourceItems": 5,
+  "eligibleItemsCount": 5,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "deletedExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "INBOX",
+      "targetFolder": "fld_001",
+      "totalItems": 5,
+      "eligibleItems": 5,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-13T22:56:05.6938807+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

@@ -1,0 +1,27 @@
+{
+  "previewId": "iprev_c00789d3a3fc4ccba4c69c119c26885d",
+  "companyId": "astra-imap-274074da",
+  "projectId": "imap-pilot",
+  "sourceAccountId": "acc_13f36eee9b4243e99688b712939ca6f3",
+  "sourceAccountVersion": 1,
+  "targetAccountId": "acc_3fdaa51c42c5433a979d1a60c26617c7",
+  "targetAccountVersion": 2,
+  "totalSourceItems": 3,
+  "eligibleItemsCount": 3,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "deletedExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "AstraProduct314e3e04ce/Filtered",
+      "targetFolder": "AstraReverse314e3e04ce",
+      "sourceUidValidity": 1789299758,
+      "totalItems": 3,
+      "eligibleItems": 3,
+      "excludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-13T14:20:24.0026225+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

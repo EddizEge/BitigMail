@@ -1,0 +1,9 @@
+TASK-013 Gate B final experiment extension. Edit GateB test/model only; no commands/product/docs/dependency/fixture edits.
+
+1. Add deterministic assertions using immutable `fixtures/mime-import-v1/escape-edges/expected.json`, its 3 EML files, and `escapes.mbox`. Verify the task-owned explicit mboxrd decoder operates on raw container bytes before MIME transfer decoding exactly once, and that decoded MimeKit text matches expected.mboxText for all three cases: quoted-printable encoded `=3EFrom`, base64 content containing `>From`, and raw `From`/`>From`/`>>From`. Preserve the recorded MBOX-only extra LF; no Trim and no decoded-text dequote. Include escape-edge results in the Gate B JSON report and make failure hard.
+
+2. User decision is final: no Aspose license; continue development with marked evaluation outputs. Update RisksAndDecisionsNeeded so it does NOT ask for production licensing or user confirmation. Record: evaluation output allowed only with conspicuous preflight/report `DIFFERENCES`; clean/lossless PASS forbidden; content or attachment loss forbidden. Do not remove evaluation strings.
+
+3. Keep current proven measurements: MimeKit exact 12, mboxrd exact 12, explicit KnownPropertyList.Body 12/12 plain+HTML SDK->PST, 4 attachment hashes and true CID. Do not alter golden fixtures.
+
+Reply with changed files and test filter only.

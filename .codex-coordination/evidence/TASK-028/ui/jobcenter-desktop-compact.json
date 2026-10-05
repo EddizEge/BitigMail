@@ -1,0 +1,20 @@
+{
+  "project": "desktop-compact",
+  "viewport": {
+    "width": 1366,
+    "height": 768
+  },
+  "renderedAllRows": 50,
+  "renderedQueuedRows": 2,
+  "requestedPages": [
+    1,
+    1,
+    2,
+    1
+  ],
+  "dimensions": {
+    "width": 1366,
+    "body": 1366
+  },
+  "passed": true
+}

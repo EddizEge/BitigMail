@@ -1,0 +1,9 @@
+TASK-011 narrow correction. FILE EDITS ONLY; do not run tests/builds/servers/background tasks.
+
+Fix current compiler errors in engine/BitigMail.LocalHost/Jobs/JobManager.cs around lines 297-299: the OstToPstConverter.Convert arguments are ordered incorrectly. Compiler says argument 6 RegisteredSelection is being passed where IProgress is expected, argument 7 Progress where CancellationToken is expected, and argument 8 CancellationToken where RegisteredSelection is expected. Reconcile with the actual production signature without removing selection.
+
+Also correct the known date integrity bug in OstSelectionEngine.ExtractMessageDate: Utc values stay unchanged, Local values use ToUniversalTime(), and only Unspecified values use DateTime.SpecifyKind(value, Utc). Add production-connected tests including a Local 23:30 calendar-boundary case under a non-UTC local timezone assumption where practical; preserve the fixed Türkiye +03 selection conversion.
+
+Persist human-readable selected folder label/path snapshots alongside opaque folder IDs in the frozen selection/job/report so refresh and opening historical jobs explains the selected filters without depending on current analysis. Keep opaque IDs as authority and do not accept label/path as authority.
+
+Update TASK-011 result as pending SOL verification; do not claim commands ran.

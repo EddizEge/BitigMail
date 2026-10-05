@@ -1,0 +1,4 @@
+{
+  "error": "Check failed: import report verified == expected",
+  "type": "AssertionError"
+}

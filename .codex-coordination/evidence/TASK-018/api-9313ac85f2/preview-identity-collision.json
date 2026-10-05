@@ -1,0 +1,14 @@
+[
+  {
+    "requestedArchiveId": "arc_b91f1b5a4bb44369",
+    "messageId": "msg_00000010",
+    "returnedArchiveId": "arc_b91f1b5a4bb44369",
+    "sameArchive": true
+  },
+  {
+    "requestedArchiveId": "arc_e4cbdb4d5dbe4a70",
+    "messageId": "msg_00000010",
+    "returnedArchiveId": "arc_b91f1b5a4bb44369",
+    "sameArchive": false
+  }
+]

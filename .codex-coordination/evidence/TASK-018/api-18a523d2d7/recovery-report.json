@@ -1,0 +1,411 @@
+{
+  "completed": true,
+  "checks": [
+    {
+      "name": "accepted base or explicitly separate diagnostic run",
+      "pass": true
+    },
+    {
+      "name": "/api/session HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "exact owned TestingHost process",
+      "pass": true
+    },
+    {
+      "name": "PID evidence agrees",
+      "pass": true
+    },
+    {
+      "name": "old listener stopped",
+      "pass": true
+    },
+    {
+      "name": "testing listener free before restart",
+      "pass": true
+    },
+    {
+      "name": "new listener running",
+      "pass": true
+    },
+    {
+      "name": "new PID published",
+      "pass": true
+    },
+    {
+      "name": "/api/session HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "actual new process after restart",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "physical public IDs stable after actual restart",
+      "pass": true
+    },
+    {
+      "name": "exact owned TestingHost process",
+      "pass": true
+    },
+    {
+      "name": "PID evidence agrees",
+      "pass": true
+    },
+    {
+      "name": "old listener stopped",
+      "pass": true
+    },
+    {
+      "name": "index paths remain inside owned archive directory",
+      "pass": true
+    },
+    {
+      "name": "index source not reparse point",
+      "pass": true
+    },
+    {
+      "name": "index paths remain inside owned archive directory",
+      "pass": true
+    },
+    {
+      "name": "index source not reparse point",
+      "pass": true
+    },
+    {
+      "name": "index paths remain inside owned archive directory",
+      "pass": true
+    },
+    {
+      "name": "index source not reparse point",
+      "pass": true
+    },
+    {
+      "name": "existing database preserved",
+      "pass": true
+    },
+    {
+      "name": "testing listener free before restart",
+      "pass": true
+    },
+    {
+      "name": "new listener running",
+      "pass": true
+    },
+    {
+      "name": "new PID published",
+      "pass": true
+    },
+    {
+      "name": "/api/session HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog no-store",
+      "pass": true
+    },
+    {
+      "name": "all managed owners visible despite missing index",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "no silent healthy empty search after missing",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/reindex-all HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/reindex-all no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "physical public IDs stable after missing index rebuild",
+      "pass": true
+    },
+    {
+      "name": "managed MIME and manifests unchanged",
+      "pass": true
+    },
+    {
+      "name": "exact owned TestingHost process",
+      "pass": true
+    },
+    {
+      "name": "PID evidence agrees",
+      "pass": true
+    },
+    {
+      "name": "old listener stopped",
+      "pass": true
+    },
+    {
+      "name": "index paths remain inside owned archive directory",
+      "pass": true
+    },
+    {
+      "name": "index source not reparse point",
+      "pass": true
+    },
+    {
+      "name": "index paths remain inside owned archive directory",
+      "pass": true
+    },
+    {
+      "name": "index source not reparse point",
+      "pass": true
+    },
+    {
+      "name": "index paths remain inside owned archive directory",
+      "pass": true
+    },
+    {
+      "name": "index source not reparse point",
+      "pass": true
+    },
+    {
+      "name": "existing database preserved",
+      "pass": true
+    },
+    {
+      "name": "testing listener free before restart",
+      "pass": true
+    },
+    {
+      "name": "new listener running",
+      "pass": true
+    },
+    {
+      "name": "new PID published",
+      "pass": true
+    },
+    {
+      "name": "/api/session HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog no-store",
+      "pass": true
+    },
+    {
+      "name": "all managed owners visible despite corrupt index",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "no silent healthy empty search after corrupt",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/reindex-all HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/reindex-all no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/search no-store",
+      "pass": true
+    },
+    {
+      "name": "count {}",
+      "pass": true
+    },
+    {
+      "name": "bounded result count",
+      "pass": true
+    },
+    {
+      "name": "scope membership",
+      "pass": true
+    },
+    {
+      "name": "physical public IDs stable after corrupt index rebuild",
+      "pass": true
+    },
+    {
+      "name": "managed MIME and manifests unchanged",
+      "pass": true
+    }
+  ],
+  "archives": [
+    {
+      "archiveId": "arc_dd2705e46f9f4cda",
+      "archiveName": "EML-api-f420241575",
+      "companyId": "api-f420241575-a",
+      "projectId": "proje-a",
+      "companyName": "A Şirketi api-f420241575",
+      "projectName": "Arşiv Kontrolü",
+      "sourceKind": "eml-files",
+      "dialect": "rfc822",
+      "sourceFingerprint": "b2b99494b1c464b57c924ba150063af465d9cc1e3f31d0b9e7926bbdf7e1b09a",
+      "totalItems": 12,
+      "totalSizeBytes": 13013,
+      "truncatedItemsCount": 0,
+      "status": "ready",
+      "createdAtUtc": "2026-09-14T00:18:07.2814416+00:00",
+      "indexedAtUtc": "2026-09-14T00:18:07.3387668+00:00",
+      "indexGeneration": 1
+    },
+    {
+      "archiveId": "arc_a88ab7d974ca42f6",
+      "archiveName": "MBOX-api-f420241575",
+      "companyId": "api-f420241575-b",
+      "projectId": "proje-b",
+      "companyName": "B Şirketi api-f420241575",
+      "projectName": "İstanbul",
+      "sourceKind": "mbox",
+      "dialect": "mboxrd",
+      "sourceFingerprint": "d14374c2e6991ea6d1dd51f7b1d6c44a90b184433b806caa928c3d2a23f85e12",
+      "totalItems": 12,
+      "totalSizeBytes": 13025,
+      "truncatedItemsCount": 0,
+      "status": "ready",
+      "createdAtUtc": "2026-09-14T00:18:07.5083247+00:00",
+      "indexedAtUtc": "2026-09-14T00:18:07.5498923+00:00",
+      "indexGeneration": 1
+    },
+    {
+      "archiveId": "arc_c5aa1d91f0404724",
+      "archiveName": "Sınırlar-api-f420241575",
+      "companyId": "api-f420241575-a",
+      "projectId": "proje-a",
+      "companyName": "A Şirketi api-f420241575",
+      "projectName": "Arşiv Kontrolü",
+      "sourceKind": "eml-tree",
+      "dialect": "rfc822",
+      "sourceFingerprint": "dc7813aba3a39b2fc487a301b30a450836d92a8ca0ba4cd35b38b1d17e8e87a3",
+      "totalItems": 4,
+      "totalSizeBytes": 526845,
+      "truncatedItemsCount": 1,
+      "status": "ready",
+      "createdAtUtc": "2026-09-14T00:18:07.935436+00:00",
+      "indexedAtUtc": "2026-09-14T00:18:07.9785214+00:00",
+      "indexGeneration": 1
+    },
+    {
+      "archiveId": "arc_7977fca470da478c",
+      "archiveName": "Aktarım-api-f420241575",
+      "companyId": "comp-ornek",
+      "projectId": "proj-ornek-gecis",
+      "companyName": "Örnek Şirket",
+      "projectName": "Sistem Geçişi 2024",
+      "sourceKind": "bridge-export",
+      "dialect": "mboxrd",
+      "sourceFingerprint": "bridge-export:job-3b6cab7b2f7c:2026-09-13T23:00:58.9983360+00:00:639bc015ff57951610bb564a4c7a965fb0c0dc0a8d2f76e1fc67ae09de99bb6c",
+      "totalItems": 12,
+      "totalSizeBytes": 13086,
+      "truncatedItemsCount": 0,
+      "status": "ready",
+      "createdAtUtc": "2026-09-14T00:18:09.8920637+00:00",
+      "indexedAtUtc": "2026-09-14T00:18:09.9374501+00:00",
+      "indexGeneration": 1
+    }
+  ]
+}

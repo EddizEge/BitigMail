@@ -1,0 +1,38 @@
+{
+  "source": {
+    "accountId": "acc_2fe8eb7af4f1498d960ba324603be4d7",
+    "companyId": "root-bridge-83f6a9e7",
+    "projectId": "local-pilot",
+    "displayName": "TASK017 source",
+    "email": "source@bitigmail.example",
+    "host": "127.0.0.1",
+    "port": 5143,
+    "username": "source",
+    "authKind": "password",
+    "tenantId": null,
+    "clientId": null,
+    "tlsMode": "none",
+    "securityMode": 3,
+    "version": 1,
+    "createdAtUtc": "2026-09-13T21:53:49.5277254+00:00",
+    "updatedAtUtc": "2026-09-13T21:53:49.5277394+00:00"
+  },
+  "target": {
+    "accountId": "acc_677101107eaf41e68d3bd877a9752725",
+    "companyId": "root-bridge-83f6a9e7",
+    "projectId": "local-pilot",
+    "displayName": "TASK017 target",
+    "email": "target@bitigmail.example",
+    "host": "127.0.0.1",
+    "port": 5143,
+    "username": "target",
+    "authKind": "password",
+    "tenantId": null,
+    "clientId": null,
+    "tlsMode": "none",
+    "securityMode": 3,
+    "version": 1,
+    "createdAtUtc": "2026-09-13T21:53:49.5453185+00:00",
+    "updatedAtUtc": "2026-09-13T21:53:49.5453185+00:00"
+  }
+}

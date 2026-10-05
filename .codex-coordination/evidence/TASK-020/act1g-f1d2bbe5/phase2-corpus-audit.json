@@ -1,0 +1,24 @@
+{
+  "totalItems": 8192,
+  "totalPhysicalRawSizeBytes": 1070776928,
+  "totalPhysicalRawSizeMiB": 1021.17,
+  "nominalRawSizeBytes": 1070775680,
+  "mboxSizeBytes": 1071219616,
+  "audit": {
+    "oracle": "TASK-020 Stage-1g Source Oracle",
+    "pass": true,
+    "totalItems": 8192,
+    "totalPhysicalRawSizeBytes": 1070776928,
+    "totalPhysicalRawSizeMiB": 1021.17,
+    "nominalRawSizeBytes": 1070775680,
+    "mboxSizeBytes": 1071219616,
+    "mboxSizeMiB": 1021.59,
+    "folders": [
+      "Gelen Kutusu",
+      "Gönderilenler",
+      "Projeler/Anadolu",
+      "Arşiv/2026/Finans",
+      "Müşteri İlişkileri/Talepler"
+    ]
+  }
+}

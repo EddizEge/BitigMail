@@ -1,0 +1,117 @@
+{
+  "status": "SYNTHETIC_DIAGNOSTIC_NOT_TIMEZONE_CONTRACT",
+  "rows": [
+    {
+      "sourceLiteral": "2018-10-17T00:16:53",
+      "sdkUtc": "2018-10-17T00:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T01:16:53",
+      "sdkUtc": "2018-10-17T01:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T02:16:53",
+      "sdkUtc": "2018-10-17T02:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T03:16:53",
+      "sdkUtc": "2018-10-17T03:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T04:16:53",
+      "sdkUtc": "2018-10-17T04:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T05:16:53",
+      "sdkUtc": "2018-10-17T05:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T06:16:53",
+      "sdkUtc": "2018-10-17T06:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T07:16:53",
+      "sdkUtc": "2018-10-17T07:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T08:16:53",
+      "sdkUtc": "2018-10-17T08:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T09:16:53",
+      "sdkUtc": "2018-10-17T09:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T10:16:53",
+      "sdkUtc": "2018-10-17T10:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T11:16:53",
+      "sdkUtc": "2018-10-17T11:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T12:16:53",
+      "sdkUtc": "2018-10-17T00:16:53+00:00",
+      "deltaSeconds": -43200
+    },
+    {
+      "sourceLiteral": "2018-10-17T13:16:53",
+      "sdkUtc": "2018-10-17T13:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T14:16:53",
+      "sdkUtc": "2018-10-17T14:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T15:16:53",
+      "sdkUtc": "2018-10-17T15:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T16:16:53",
+      "sdkUtc": "2018-10-17T16:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T17:16:53",
+      "sdkUtc": "2018-10-17T17:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T18:16:53",
+      "sdkUtc": "2018-10-17T18:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T19:16:53",
+      "sdkUtc": "2018-10-17T19:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T20:16:53",
+      "sdkUtc": "2018-10-17T20:16:53+00:00",
+      "deltaSeconds": 0
+    },
+    {
+      "sourceLiteral": "2018-10-17T21:16:53",
+      "sdkUtc": "2018-10-17T21:16:53+00:00",
+      "deltaSeconds": 0
+    }
+  ],
+  "sourceUnchanged": true,
+  "qualification": "Hour-controlled synthetic copy retains original ZIP64 layout. UTC interpretation is diagnostic, not proven OLM timezone semantics; no silent output correction."
+}

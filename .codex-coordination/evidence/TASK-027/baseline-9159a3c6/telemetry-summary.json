@@ -1,0 +1,36 @@
+{
+  "overallPeakWsBytes": 2151235584,
+  "overallPeakPrivateBytes": 2394841088,
+  "phases": {
+    "transfer": {
+      "samples": 1,
+      "peakWsBytes": 678244352,
+      "minWsBytes": 678244352,
+      "peakPrivateBytes": 702144512,
+      "minPrivateBytes": 702144512,
+      "peakCpuPct": 0.0,
+      "startTime": "2026-09-15T13:09:49.939230+00:00",
+      "endTime": "2026-09-15T13:09:49.965086+00:00"
+    },
+    "transferring": {
+      "samples": 691,
+      "peakWsBytes": 2016837632,
+      "minWsBytes": 684158976,
+      "peakPrivateBytes": 2219286528,
+      "minPrivateBytes": 708182016,
+      "peakCpuPct": 847.7,
+      "startTime": "2026-09-15T13:09:49.965086+00:00",
+      "endTime": "2026-09-15T13:11:03.918129+00:00"
+    },
+    "verifying": {
+      "samples": 67,
+      "peakWsBytes": 2151235584,
+      "minWsBytes": 1933107200,
+      "peakPrivateBytes": 2394841088,
+      "minPrivateBytes": 2145685504,
+      "peakCpuPct": 286.7,
+      "startTime": "2026-09-15T13:11:03.918129+00:00",
+      "endTime": "2026-09-15T13:11:11.121363+00:00"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+From: =?utf-8?q?Canan_=C3=96zkan?= <canan.ozkan@muhendislik.example>
+To: =?utf-8?q?Ahmet_Y=C4=B1lmaz?= <ahmet.yilmaz@posta.example>
+Subject: =?utf-8?q?=C4=B0stanbul_Projesi_Kurumsal_Kimlik_ve_Amblem?=
+Date: Mon, 01 Jan 2024 00:30:00 +0300
+Message-ID: <msg-2024-11-inline-cid@projeler.example>
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="===============_bound_msg11_rel_=="; type="text/html"
+
+--===============_bound_msg11_rel_==
+Content-Type: multipart/alternative; boundary="===============_bound_msg11_alt_=="
+
+--===============_bound_msg11_alt_==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Ahmet Bey,
+
+Proje kurumsal kimliği için onaylanan logo aşağıda sunulmuştur.
+[Gömülü Görsel: logo.png]
+
+İyi çalışmalar,
+Canan Özkan
+--===============_bound_msg11_alt_==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<p>Ahmet Bey,</p><p>Proje kurumsal kimliği için onaylanan logo aşağıda sunulmuştur:</p><p><img src="cid:proje_logo_cid" alt="İstanbul Proje Logosu"></p><p>İyi çalışmalar,<br>Canan Özkan</p>
+--===============_bound_msg11_alt_==--
+
+--===============_bound_msg11_rel_==
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-ID: <proje_logo_cid>
+Content-Disposition: inline; filename="logo.png"
+
+iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR42mO4I2IDRwzEcQDxwxLB
+rA2GrQAAAABJRU5ErkJggg==
+--===============_bound_msg11_rel_==--

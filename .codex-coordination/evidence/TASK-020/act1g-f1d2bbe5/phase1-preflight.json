@@ -1,0 +1,31 @@
+{
+  "free_disk_gb": 186.90785598754883,
+  "free_ram_gb": 34.43053436279297,
+  "port_6174_pid": 49876,
+  "port_5173_pid": 13512,
+  "source_baseline_preflight": {
+    "oracle": "Source Baseline Invariance Oracle",
+    "pass": true,
+    "expectedCount": 12,
+    "actualCount": 12,
+    "missing": 0,
+    "extra": 0,
+    "folders": [
+      {
+        "folder": "INBOX",
+        "uidValidity": 1789299650,
+        "count": 5
+      },
+      {
+        "folder": "Gönderilenler",
+        "uidValidity": 1789299651,
+        "count": 3
+      },
+      {
+        "folder": "Projeler/İstanbul",
+        "uidValidity": 1789299653,
+        "count": 4
+      }
+    ]
+  }
+}

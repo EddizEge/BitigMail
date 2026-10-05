@@ -1,0 +1,9 @@
+{
+  "oracle": "Target Account Dovecot Oracle",
+  "prefix": "Task019/scale-cont-ff44e15b/Bulk",
+  "matchingFolders": 1,
+  "totalMessages": 1024,
+  "folders": {
+    "Task019/scale-cont-ff44e15b/Bulk": 1024
+  }
+}

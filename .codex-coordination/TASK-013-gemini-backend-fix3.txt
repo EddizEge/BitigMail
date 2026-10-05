@@ -1,0 +1,12 @@
+TASK-013 targeted compile still fails. EDIT FILES ONLY; no commands/tests/frontend/docs/results/fixture edits.
+
+1. In MimeToPstConverter.cs lines ~147,205,850,856, intended System.Convert calls are again shadowed by the class Convert method. Explicitly qualify every remaining intended System.Convert use in the entire file.
+
+2. Add/complete real deterministic workflow tests already required by acceptance (do not merely assert fabricated models):
+- HTML-only MIME: original has no plain part; any SDK-generated plain is reported as an added representation and no fake empty source plain is manufactured.
+- invalid Date and zoneless Date policy; missing Date is retained without date filter and reopened submit/delivery date is not silently today's date.
+- valid MIME with malformed base64 and malformed/missing multipart closing boundary blocks the whole operation.
+- malformed item blocks the whole source even when folder/date selection would exclude it.
+Keep existing empty/random-non-MIME tests.
+
+Use actual current APIs/models and keep tests compile-ready. Preserve DIFFERENCES qualification and fail-closed integrity. Return changed files only; do not claim tests passed.

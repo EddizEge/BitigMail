@@ -1,0 +1,168 @@
+{
+  "status": "QUALIFIED_REPRESENTATION_AUDIT_NOT_CONVERSION_ACCEPTANCE",
+  "items": 22,
+  "counts": {
+    "sourceBodyEqualsHtml": 22,
+    "subjectOnlyEvaluationSuffix": 22,
+    "htmlVisibleSourceContained": 22,
+    "submitDeltaSeconds:0": 18,
+    "submitDeltaSeconds:-43200": 4
+  },
+  "details": [
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Sent Items/message_00000.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2011-06-21T23:46:39",
+      "sdkSubmitTime": "2011-06-22T02:46:39.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Sent Items/message_00001.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2011-06-21T23:47:01",
+      "sdkSubmitTime": "2011-06-22T02:47:01.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Sent Items/message_00002.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2011-06-21T23:47:23",
+      "sdkSubmitTime": "2011-06-22T02:47:23.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Sent Items/message_00003.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2011-06-21T23:48:10",
+      "sdkSubmitTime": "2011-06-22T02:48:10.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Sent Items/message_00004.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2011-06-21T23:49:21",
+      "sdkSubmitTime": "2011-06-22T02:49:21.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Sent Items/message_00005.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2011-06-21T23:51:07",
+      "sdkSubmitTime": "2011-06-22T02:51:07.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/message_00000.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2011-06-21T23:51:07",
+      "sdkSubmitTime": "2011-06-22T02:51:07.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/message_00001.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2011-06-21T23:49:21",
+      "sdkSubmitTime": "2011-06-22T02:49:21.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/message_00002.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2011-06-21T23:48:10",
+      "sdkSubmitTime": "2011-06-22T02:48:10.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/message_00003.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2019-06-15T09:22:56",
+      "sdkSubmitTime": "2019-06-15T12:22:56.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/message_00004.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2011-06-21T23:47:01",
+      "sdkSubmitTime": "2011-06-22T02:47:01.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/message_00005.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2011-06-21T23:46:39",
+      "sdkSubmitTime": "2011-06-22T02:46:39.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/Custom Folder/message_00000.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2019-06-15T09:22:55",
+      "sdkSubmitTime": "2019-06-15T12:22:55.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Outlook2 PST/Inbox/Custom Folder/message_00001.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2011-06-21T23:47:23",
+      "sdkSubmitTime": "2011-06-22T02:47:23.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Deleted Items/test_olm2010 PST/Folder/message_00000.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2018-10-17T12:16:53",
+      "sdkSubmitTime": "2018-10-17T03:16:53.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": -43200
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Deleted Items/test_olm2010 PST/Deleted Items/message_00000.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2018-10-13T22:39:35",
+      "sdkSubmitTime": "2018-10-14T01:39:35.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST/Folder/message_00000.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2018-10-17T12:16:53",
+      "sdkSubmitTime": "2018-10-17T03:16:53.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": -43200
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST/Deleted Items/message_00000.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2018-10-13T22:39:35",
+      "sdkSubmitTime": "2018-10-14T01:39:35.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/test_olm2010 PST/Folder/message_00000.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2018-10-17T12:16:53",
+      "sdkSubmitTime": "2018-10-17T03:16:53.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": -43200
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/test_olm2010 PST/Deleted Items/message_00000.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2018-10-13T22:39:35",
+      "sdkSubmitTime": "2018-10-14T01:39:35.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST/Folder/message_00000.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2018-10-17T12:16:53",
+      "sdkSubmitTime": "2018-10-17T03:16:53.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": -43200
+    },
+    {
+      "entry": "Local/com.microsoft.__Messages/Deleted Items/Outlook for Mac ArchiveZZZ OLM/On My Computer/Deleted Items/Outlook for Mac Archive_2010 OLM/On My Computer/test_olm2010 PST/Deleted Items/message_00000.xml",
+      "ordinal": 1,
+      "sourceSubmitLiteral": "2018-10-13T22:39:35",
+      "sdkSubmitTime": "2018-10-14T01:39:35.0000000+03:00",
+      "hypotheticalUtcDeltaSeconds": 0
+    }
+  ],
+  "qualification": "All source Body fields in this fixture contain HTML. Visible-text containment does not prove HTML markup/CID/address fidelity. Evaluation additions remain untouched. Source date literals have no offset; UTC comparison is diagnostic only. Four physical copies show a 12-hour difference, not a DST-sized difference. No automatic timestamp correction is authorized."
+}

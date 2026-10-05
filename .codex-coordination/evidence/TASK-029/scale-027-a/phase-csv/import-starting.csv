@@ -1,0 +1,3 @@
+timestamp_utc,phase,cpu_pct,working_set_bytes,private_bytes
+2026-09-15T13:22:59.556803+00:00,import-starting,99.4,443789312,464470016
+2026-09-15T13:22:59.665158+00:00,import-starting,100.3,444813312,465522688

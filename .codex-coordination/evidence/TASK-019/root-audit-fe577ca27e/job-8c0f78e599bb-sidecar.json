@@ -1,0 +1,7176 @@
+{
+  "oracle": "Independent export sidecar metadata and folder mapping",
+  "pass": true,
+  "count": 1024,
+  "mappingPass": true,
+  "items": [
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:1"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:2"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:3"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:4"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:5"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:6"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:7"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:8"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:9"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:10"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:11"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:12"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:13"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:14"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:15"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:16"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:17"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:18"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:19"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:20"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:21"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:22"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:23"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:24"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:25"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:26"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:27"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:28"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:29"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:30"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:31"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:32"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:33"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:34"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:35"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:36"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:37"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:38"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:39"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:40"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:41"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:42"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:43"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:44"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:45"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:46"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:47"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:48"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:49"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:50"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:51"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:52"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:53"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:54"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:55"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:56"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:57"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:58"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:59"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:60"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:61"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:62"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:63"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:64"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:65"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:66"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:67"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:68"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:69"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:70"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:71"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:72"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:73"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:74"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:75"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:76"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:77"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:78"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:79"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:80"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:81"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:82"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:83"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:84"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:85"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:86"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:87"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:88"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:89"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:90"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:91"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:92"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:93"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:94"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:95"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:96"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:97"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:98"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:99"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:100"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:101"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:102"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:103"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:104"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:105"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:106"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:107"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:108"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:109"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:110"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:111"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:112"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:113"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:114"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:115"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:116"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:117"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:118"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:119"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:120"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:121"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:122"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:123"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:124"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:125"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:126"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:127"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:128"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:129"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:130"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:131"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:132"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:133"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:134"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:135"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:136"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:137"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:138"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:139"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:140"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:141"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:142"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:143"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:144"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:145"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:146"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:147"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:148"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:149"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:150"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:151"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:152"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:153"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:154"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:155"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:156"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:157"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:158"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:159"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:160"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:161"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:162"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:163"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:164"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:165"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:166"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:167"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:168"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:169"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:170"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:171"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:172"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:173"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:174"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:175"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:176"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:177"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:178"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:179"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:180"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:181"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:182"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:183"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:184"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:185"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:186"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:187"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:188"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:189"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:190"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:191"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:192"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:193"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:194"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:195"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:196"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:197"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:198"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:199"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:200"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:201"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:202"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:203"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:204"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:205"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:206"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:207"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:208"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:209"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:210"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:211"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:212"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:213"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:214"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:215"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:216"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:217"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:218"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:219"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:220"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:221"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:222"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:223"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:224"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:225"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:226"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:227"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:228"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:229"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:230"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:231"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:232"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:233"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:234"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:235"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:236"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:237"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:238"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:239"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:240"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:241"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:242"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:243"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:244"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:245"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:246"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:247"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:248"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:249"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:250"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:251"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:252"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:253"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:254"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:255"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:256"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:257"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:258"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:259"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:260"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:261"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:262"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:263"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:264"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:265"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:266"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:267"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:268"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:269"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:270"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:271"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:272"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:273"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:274"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:275"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:276"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:277"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:278"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:279"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:280"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:281"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:282"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:283"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:284"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:285"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:286"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:287"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:288"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:289"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:290"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:291"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:292"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:293"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:294"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:295"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:296"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:297"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:298"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:299"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:300"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:301"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:302"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:303"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:304"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:305"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:306"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:307"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:308"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:309"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:310"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:311"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:312"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:313"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:314"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:315"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:316"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:317"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:318"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:319"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:320"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:321"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:322"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:323"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:324"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:325"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:326"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:327"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:328"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:329"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:330"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:331"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:332"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:333"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:334"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:335"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:336"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:337"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:338"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:339"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:340"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:341"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:342"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:343"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:344"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:345"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:346"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:347"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:348"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:349"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:350"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:351"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:352"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:353"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:354"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:355"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:356"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:357"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:358"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:359"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:360"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:361"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:362"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:363"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:364"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:365"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:366"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:367"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:368"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:369"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:370"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:371"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:372"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:373"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:374"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:375"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:376"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:377"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:378"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:379"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:380"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:381"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:382"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:383"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:384"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:385"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:386"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:387"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:388"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:389"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:390"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:391"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:392"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:393"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:394"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:395"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:396"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:397"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:398"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:399"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/GelenKutusu",
+        "1789299861:400"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:1"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:2"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:3"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:4"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:5"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:6"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:7"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:8"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:9"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:10"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:11"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:12"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:13"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:14"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:15"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:16"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:17"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:18"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:19"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:20"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:21"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:22"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:23"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:24"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:25"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:26"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:27"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:28"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:29"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:30"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:31"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:32"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:33"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:34"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:35"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:36"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:37"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:38"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:39"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:40"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:41"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:42"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:43"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:44"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:45"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:46"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:47"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:48"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:49"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:50"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:51"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:52"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:53"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:54"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:55"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:56"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:57"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:58"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:59"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:60"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:61"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:62"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:63"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:64"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:65"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:66"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:67"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:68"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:69"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:70"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:71"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:72"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:73"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:74"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:75"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:76"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:77"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:78"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:79"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:80"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:81"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:82"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:83"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:84"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:85"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:86"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:87"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:88"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:89"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:90"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:91"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:92"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:93"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:94"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:95"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:96"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:97"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:98"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:99"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:100"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:101"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:102"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:103"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:104"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:105"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:106"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:107"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:108"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:109"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:110"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:111"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:112"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:113"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:114"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:115"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:116"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:117"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:118"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:119"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:120"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:121"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:122"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:123"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:124"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:125"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:126"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:127"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:128"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:129"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:130"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:131"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:132"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:133"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:134"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:135"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:136"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:137"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:138"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:139"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:140"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:141"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:142"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:143"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:144"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:145"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:146"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:147"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:148"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:149"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:150"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:151"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:152"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:153"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:154"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:155"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:156"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:157"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:158"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:159"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:160"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:161"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:162"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:163"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:164"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:165"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:166"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:167"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:168"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:169"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:170"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:171"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:172"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:173"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:174"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:175"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:176"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:177"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:178"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:179"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:180"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:181"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:182"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:183"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:184"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:185"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:186"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:187"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:188"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:189"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:190"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:191"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:192"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:193"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:194"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:195"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:196"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:197"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:198"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:199"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Gonderilenler",
+        "1789299862:200"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:1"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:2"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:3"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:4"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:5"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:6"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:7"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:8"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:9"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:10"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:11"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:12"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:13"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:14"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:15"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:16"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:17"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:18"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:19"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:20"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:21"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:22"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:23"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:24"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:25"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:26"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:27"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:28"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:29"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:30"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:31"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:32"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:33"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:34"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:35"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:36"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:37"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:38"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:39"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:40"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:41"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:42"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:43"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:44"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:45"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:46"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:47"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:48"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:49"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:50"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:51"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:52"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:53"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:54"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:55"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:56"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:57"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:58"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:59"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:60"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:61"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:62"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:63"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:64"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:65"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:66"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:67"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:68"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:69"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:70"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:71"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:72"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:73"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:74"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:75"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:76"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:77"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:78"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:79"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:80"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:81"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:82"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:83"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:84"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:85"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:86"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:87"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:88"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:89"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:90"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:91"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:92"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:93"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:94"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:95"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:96"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:97"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:98"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:99"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:100"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:101"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:102"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:103"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:104"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:105"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:106"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:107"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:108"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:109"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:110"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:111"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:112"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:113"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:114"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:115"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:116"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:117"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:118"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:119"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:120"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:121"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:122"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:123"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:124"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:125"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:126"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:127"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:128"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:129"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:130"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:131"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:132"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:133"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:134"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:135"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:136"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:137"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:138"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:139"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:140"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:141"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:142"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:143"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:144"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:145"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:146"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:147"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:148"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:149"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:150"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:151"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:152"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:153"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:154"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:155"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:156"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:157"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:158"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:159"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:160"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:161"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:162"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:163"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:164"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:165"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:166"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:167"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:168"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:169"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:170"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:171"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:172"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:173"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:174"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:175"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:176"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:177"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:178"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:179"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:180"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:181"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:182"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:183"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:184"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:185"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:186"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:187"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:188"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:189"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:190"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:191"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:192"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:193"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:194"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:195"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:196"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:197"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:198"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:199"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Projeler/Anadolu",
+        "1789299864:200"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:1"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:2"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:3"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:4"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:5"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:6"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:7"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:8"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:9"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:10"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:11"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:12"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:13"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:14"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:15"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:16"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:17"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:18"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:19"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:20"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:21"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:22"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:23"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:24"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:25"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:26"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:27"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:28"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:29"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:30"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:31"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:32"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:33"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:34"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:35"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:36"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:37"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:38"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:39"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:40"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:41"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:42"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:43"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:44"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:45"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:46"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:47"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:48"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:49"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:50"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:51"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:52"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:53"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:54"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:55"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:56"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:57"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:58"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:59"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:60"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:61"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:62"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:63"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:64"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:65"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:66"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:67"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:68"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:69"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:70"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:71"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:72"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:73"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:74"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:75"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:76"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:77"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:78"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:79"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:80"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:81"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:82"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:83"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:84"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:85"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:86"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:87"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:88"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:89"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:90"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:91"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:92"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:93"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:94"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:95"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:96"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:97"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:98"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:99"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:100"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:101"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:102"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:103"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:104"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:105"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:106"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:107"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:108"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:109"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:110"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:111"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:112"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:113"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:114"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:115"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:116"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:117"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:118"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:119"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:120"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:121"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:122"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:123"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:124"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:125"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:126"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:127"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:128"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:129"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:130"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:131"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:132"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:133"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:134"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:135"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:136"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:137"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:138"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:139"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:140"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:141"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:142"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:143"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:144"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:145"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:146"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:147"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:148"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:149"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/Arsiv/2026/Finans",
+        "1789299867:150"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:1"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:2"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:3"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:4"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:5"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:6"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:7"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:8"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:9"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:10"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:11"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:12"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:13"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:14"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:15"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:16"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:17"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:18"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:19"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:20"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:21"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:22"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:23"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:24"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:25"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:26"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:27"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:28"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:29"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:30"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:31"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:32"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:33"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:34"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:35"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:36"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:37"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:38"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:39"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:40"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:41"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:42"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:43"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:44"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:45"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:46"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:47"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:48"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:49"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:50"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:51"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:52"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:53"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:54"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:55"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:56"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:57"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:58"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:59"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:60"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:61"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:62"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:63"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:64"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:65"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:66"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:67"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:68"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:69"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:70"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:71"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:72"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:73"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task019/scale-c2171ca3/MusteriIliskileri/Talepler",
+        "1789299869:74"
+      ],
+      "pass": true
+    }
+  ]
+}

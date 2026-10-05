@@ -1,0 +1,21 @@
+{
+  "recordedAt": "2026-09-15T17:54:21.9437249+03:00",
+  "status": "PASS",
+  "backendTests": 469,
+  "previewHttp": 200,
+  "frontendTests": 143,
+  "listeners": [
+    {
+      "LocalPort": 6174,
+      "OwningProcess": 17200
+    },
+    {
+      "LocalPort": 5173,
+      "OwningProcess": 21576
+    }
+  ],
+  "testingHostOff": true,
+  "engineHttp": 200,
+  "ostSourceHash": "B0801758A2E61D4CE6E86799701A81A7A60C38401F73B13C993D94C03A2EE57A",
+  "securityProbe": "Probe without Origin rejected403; GET session rejected405; correct POST with Origin returned200. No app change required."
+}

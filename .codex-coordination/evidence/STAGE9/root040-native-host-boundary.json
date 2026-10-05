@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "profile": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-desktop-host-n6si1qnq",
+  "checks": [
+    "private readiness MAC",
+    "static UI and security headers",
+    "wrong Host refused",
+    "wrong Origin refused",
+    "native-proof administrator setup",
+    "API never falls back to SPA",
+    "duplicate profile refused",
+    "foreign port collision refused without readiness or listener disruption",
+    "parent EOF shutdown",
+    "profile reopen and explicit EXIT",
+    "future data schema refused before readiness without relabeling"
+  ]
+}

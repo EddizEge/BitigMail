@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "profile": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-desktop-host-0gfpd2p_",
+  "checks": [
+    "private refresh authenticated acknowledgement",
+    "old proof rejected with actionable401",
+    "refreshed proof creates administrator",
+    "authenticated current identity",
+    "initialized profile refuses refresh",
+    "created administrator can log in",
+    "clean exit"
+  ]
+}

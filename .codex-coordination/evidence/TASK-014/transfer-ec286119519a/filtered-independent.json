@@ -1,0 +1,15 @@
+{
+  "oracle": "independent raw bytes/decoded MIME/header/INTERNALDATE multiset",
+  "pass": true,
+  "folders": [
+    {
+      "source": "Projeler/İstanbul",
+      "target": "AstraProduct9ed23eed5d/Filtered",
+      "sourceCount": 3,
+      "targetCount": 3,
+      "missing": 0,
+      "extra": 0,
+      "sourceFlagsRetained": true
+    }
+  ]
+}

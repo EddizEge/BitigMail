@@ -1,0 +1,440 @@
+{
+  "purpose": "synthetic vendor-free >50 physical-message acceptance",
+  "directory": "C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\runtime\\task017-qa\\over50-1cd78704",
+  "count": 72,
+  "attachments": 24,
+  "entries": [
+    {
+      "path": "01-msg-01.eml",
+      "source": "msg-01.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "length": 1038
+    },
+    {
+      "path": "01-msg-02.eml",
+      "source": "msg-02.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "length": 1038
+    },
+    {
+      "path": "01-msg-03.eml",
+      "source": "msg-03.eml",
+      "sha256": "e2273fca875fcf29b480af37a24848dc3491f26495c19e771ca61d3bede6021e",
+      "length": 952
+    },
+    {
+      "path": "01-msg-04.eml",
+      "source": "msg-04.eml",
+      "sha256": "2458f638598e26cbaafacca649667da6c318c04abbc607f7fe8593c841ef7f62",
+      "length": 1007
+    },
+    {
+      "path": "01-msg-05.eml",
+      "source": "msg-05.eml",
+      "sha256": "9e4fce34ec9eabd76f408039e137c712a36c7d5e996ac840c13b1c956b00d860",
+      "length": 1612
+    },
+    {
+      "path": "01-msg-06.eml",
+      "source": "msg-06.eml",
+      "sha256": "f8523c4af2881004182f6805a7b1097969c56741c8c2bce672ad2302bd191916",
+      "length": 1243
+    },
+    {
+      "path": "01-msg-07.eml",
+      "source": "msg-07.eml",
+      "sha256": "1c85536698518e71b39c167f034261d39baeac47d6d0848360cc20f51ff09f6a",
+      "length": 929
+    },
+    {
+      "path": "01-msg-08.eml",
+      "source": "msg-08.eml",
+      "sha256": "1d85d15dd3d7523c9004d415719f71c01ce8db1d0ae96cf2b4aaf51ad6496111",
+      "length": 1568
+    },
+    {
+      "path": "01-msg-09.eml",
+      "source": "msg-09.eml",
+      "sha256": "329bc919305ed0d8d6b827c471260d8919db7847de16be2d530a5b7230dd4b2d",
+      "length": 503
+    },
+    {
+      "path": "01-msg-10.eml",
+      "source": "msg-10.eml",
+      "sha256": "ca5c3bb027877e2832e275bddd4c1a10f478b2b0c738bed9cf7260e032acf88e",
+      "length": 502
+    },
+    {
+      "path": "01-msg-11.eml",
+      "source": "msg-11.eml",
+      "sha256": "0772a5fa6725b9e34e78ee5b184b49348741bd09a2e358b15afd12113380e2de",
+      "length": 1488
+    },
+    {
+      "path": "01-msg-12.eml",
+      "source": "msg-12.eml",
+      "sha256": "ac1eafc9308cbe497810bd86662d957b368ef954f0db07b41b6f2c0226ac6926",
+      "length": 1133
+    },
+    {
+      "path": "02-msg-01.eml",
+      "source": "msg-01.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "length": 1038
+    },
+    {
+      "path": "02-msg-02.eml",
+      "source": "msg-02.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "length": 1038
+    },
+    {
+      "path": "02-msg-03.eml",
+      "source": "msg-03.eml",
+      "sha256": "e2273fca875fcf29b480af37a24848dc3491f26495c19e771ca61d3bede6021e",
+      "length": 952
+    },
+    {
+      "path": "02-msg-04.eml",
+      "source": "msg-04.eml",
+      "sha256": "2458f638598e26cbaafacca649667da6c318c04abbc607f7fe8593c841ef7f62",
+      "length": 1007
+    },
+    {
+      "path": "02-msg-05.eml",
+      "source": "msg-05.eml",
+      "sha256": "9e4fce34ec9eabd76f408039e137c712a36c7d5e996ac840c13b1c956b00d860",
+      "length": 1612
+    },
+    {
+      "path": "02-msg-06.eml",
+      "source": "msg-06.eml",
+      "sha256": "f8523c4af2881004182f6805a7b1097969c56741c8c2bce672ad2302bd191916",
+      "length": 1243
+    },
+    {
+      "path": "02-msg-07.eml",
+      "source": "msg-07.eml",
+      "sha256": "1c85536698518e71b39c167f034261d39baeac47d6d0848360cc20f51ff09f6a",
+      "length": 929
+    },
+    {
+      "path": "02-msg-08.eml",
+      "source": "msg-08.eml",
+      "sha256": "1d85d15dd3d7523c9004d415719f71c01ce8db1d0ae96cf2b4aaf51ad6496111",
+      "length": 1568
+    },
+    {
+      "path": "02-msg-09.eml",
+      "source": "msg-09.eml",
+      "sha256": "329bc919305ed0d8d6b827c471260d8919db7847de16be2d530a5b7230dd4b2d",
+      "length": 503
+    },
+    {
+      "path": "02-msg-10.eml",
+      "source": "msg-10.eml",
+      "sha256": "ca5c3bb027877e2832e275bddd4c1a10f478b2b0c738bed9cf7260e032acf88e",
+      "length": 502
+    },
+    {
+      "path": "02-msg-11.eml",
+      "source": "msg-11.eml",
+      "sha256": "0772a5fa6725b9e34e78ee5b184b49348741bd09a2e358b15afd12113380e2de",
+      "length": 1488
+    },
+    {
+      "path": "02-msg-12.eml",
+      "source": "msg-12.eml",
+      "sha256": "ac1eafc9308cbe497810bd86662d957b368ef954f0db07b41b6f2c0226ac6926",
+      "length": 1133
+    },
+    {
+      "path": "03-msg-01.eml",
+      "source": "msg-01.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "length": 1038
+    },
+    {
+      "path": "03-msg-02.eml",
+      "source": "msg-02.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "length": 1038
+    },
+    {
+      "path": "03-msg-03.eml",
+      "source": "msg-03.eml",
+      "sha256": "e2273fca875fcf29b480af37a24848dc3491f26495c19e771ca61d3bede6021e",
+      "length": 952
+    },
+    {
+      "path": "03-msg-04.eml",
+      "source": "msg-04.eml",
+      "sha256": "2458f638598e26cbaafacca649667da6c318c04abbc607f7fe8593c841ef7f62",
+      "length": 1007
+    },
+    {
+      "path": "03-msg-05.eml",
+      "source": "msg-05.eml",
+      "sha256": "9e4fce34ec9eabd76f408039e137c712a36c7d5e996ac840c13b1c956b00d860",
+      "length": 1612
+    },
+    {
+      "path": "03-msg-06.eml",
+      "source": "msg-06.eml",
+      "sha256": "f8523c4af2881004182f6805a7b1097969c56741c8c2bce672ad2302bd191916",
+      "length": 1243
+    },
+    {
+      "path": "03-msg-07.eml",
+      "source": "msg-07.eml",
+      "sha256": "1c85536698518e71b39c167f034261d39baeac47d6d0848360cc20f51ff09f6a",
+      "length": 929
+    },
+    {
+      "path": "03-msg-08.eml",
+      "source": "msg-08.eml",
+      "sha256": "1d85d15dd3d7523c9004d415719f71c01ce8db1d0ae96cf2b4aaf51ad6496111",
+      "length": 1568
+    },
+    {
+      "path": "03-msg-09.eml",
+      "source": "msg-09.eml",
+      "sha256": "329bc919305ed0d8d6b827c471260d8919db7847de16be2d530a5b7230dd4b2d",
+      "length": 503
+    },
+    {
+      "path": "03-msg-10.eml",
+      "source": "msg-10.eml",
+      "sha256": "ca5c3bb027877e2832e275bddd4c1a10f478b2b0c738bed9cf7260e032acf88e",
+      "length": 502
+    },
+    {
+      "path": "03-msg-11.eml",
+      "source": "msg-11.eml",
+      "sha256": "0772a5fa6725b9e34e78ee5b184b49348741bd09a2e358b15afd12113380e2de",
+      "length": 1488
+    },
+    {
+      "path": "03-msg-12.eml",
+      "source": "msg-12.eml",
+      "sha256": "ac1eafc9308cbe497810bd86662d957b368ef954f0db07b41b6f2c0226ac6926",
+      "length": 1133
+    },
+    {
+      "path": "04-msg-01.eml",
+      "source": "msg-01.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "length": 1038
+    },
+    {
+      "path": "04-msg-02.eml",
+      "source": "msg-02.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "length": 1038
+    },
+    {
+      "path": "04-msg-03.eml",
+      "source": "msg-03.eml",
+      "sha256": "e2273fca875fcf29b480af37a24848dc3491f26495c19e771ca61d3bede6021e",
+      "length": 952
+    },
+    {
+      "path": "04-msg-04.eml",
+      "source": "msg-04.eml",
+      "sha256": "2458f638598e26cbaafacca649667da6c318c04abbc607f7fe8593c841ef7f62",
+      "length": 1007
+    },
+    {
+      "path": "04-msg-05.eml",
+      "source": "msg-05.eml",
+      "sha256": "9e4fce34ec9eabd76f408039e137c712a36c7d5e996ac840c13b1c956b00d860",
+      "length": 1612
+    },
+    {
+      "path": "04-msg-06.eml",
+      "source": "msg-06.eml",
+      "sha256": "f8523c4af2881004182f6805a7b1097969c56741c8c2bce672ad2302bd191916",
+      "length": 1243
+    },
+    {
+      "path": "04-msg-07.eml",
+      "source": "msg-07.eml",
+      "sha256": "1c85536698518e71b39c167f034261d39baeac47d6d0848360cc20f51ff09f6a",
+      "length": 929
+    },
+    {
+      "path": "04-msg-08.eml",
+      "source": "msg-08.eml",
+      "sha256": "1d85d15dd3d7523c9004d415719f71c01ce8db1d0ae96cf2b4aaf51ad6496111",
+      "length": 1568
+    },
+    {
+      "path": "04-msg-09.eml",
+      "source": "msg-09.eml",
+      "sha256": "329bc919305ed0d8d6b827c471260d8919db7847de16be2d530a5b7230dd4b2d",
+      "length": 503
+    },
+    {
+      "path": "04-msg-10.eml",
+      "source": "msg-10.eml",
+      "sha256": "ca5c3bb027877e2832e275bddd4c1a10f478b2b0c738bed9cf7260e032acf88e",
+      "length": 502
+    },
+    {
+      "path": "04-msg-11.eml",
+      "source": "msg-11.eml",
+      "sha256": "0772a5fa6725b9e34e78ee5b184b49348741bd09a2e358b15afd12113380e2de",
+      "length": 1488
+    },
+    {
+      "path": "04-msg-12.eml",
+      "source": "msg-12.eml",
+      "sha256": "ac1eafc9308cbe497810bd86662d957b368ef954f0db07b41b6f2c0226ac6926",
+      "length": 1133
+    },
+    {
+      "path": "05-msg-01.eml",
+      "source": "msg-01.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "length": 1038
+    },
+    {
+      "path": "05-msg-02.eml",
+      "source": "msg-02.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "length": 1038
+    },
+    {
+      "path": "05-msg-03.eml",
+      "source": "msg-03.eml",
+      "sha256": "e2273fca875fcf29b480af37a24848dc3491f26495c19e771ca61d3bede6021e",
+      "length": 952
+    },
+    {
+      "path": "05-msg-04.eml",
+      "source": "msg-04.eml",
+      "sha256": "2458f638598e26cbaafacca649667da6c318c04abbc607f7fe8593c841ef7f62",
+      "length": 1007
+    },
+    {
+      "path": "05-msg-05.eml",
+      "source": "msg-05.eml",
+      "sha256": "9e4fce34ec9eabd76f408039e137c712a36c7d5e996ac840c13b1c956b00d860",
+      "length": 1612
+    },
+    {
+      "path": "05-msg-06.eml",
+      "source": "msg-06.eml",
+      "sha256": "f8523c4af2881004182f6805a7b1097969c56741c8c2bce672ad2302bd191916",
+      "length": 1243
+    },
+    {
+      "path": "05-msg-07.eml",
+      "source": "msg-07.eml",
+      "sha256": "1c85536698518e71b39c167f034261d39baeac47d6d0848360cc20f51ff09f6a",
+      "length": 929
+    },
+    {
+      "path": "05-msg-08.eml",
+      "source": "msg-08.eml",
+      "sha256": "1d85d15dd3d7523c9004d415719f71c01ce8db1d0ae96cf2b4aaf51ad6496111",
+      "length": 1568
+    },
+    {
+      "path": "05-msg-09.eml",
+      "source": "msg-09.eml",
+      "sha256": "329bc919305ed0d8d6b827c471260d8919db7847de16be2d530a5b7230dd4b2d",
+      "length": 503
+    },
+    {
+      "path": "05-msg-10.eml",
+      "source": "msg-10.eml",
+      "sha256": "ca5c3bb027877e2832e275bddd4c1a10f478b2b0c738bed9cf7260e032acf88e",
+      "length": 502
+    },
+    {
+      "path": "05-msg-11.eml",
+      "source": "msg-11.eml",
+      "sha256": "0772a5fa6725b9e34e78ee5b184b49348741bd09a2e358b15afd12113380e2de",
+      "length": 1488
+    },
+    {
+      "path": "05-msg-12.eml",
+      "source": "msg-12.eml",
+      "sha256": "ac1eafc9308cbe497810bd86662d957b368ef954f0db07b41b6f2c0226ac6926",
+      "length": 1133
+    },
+    {
+      "path": "06-msg-01.eml",
+      "source": "msg-01.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "length": 1038
+    },
+    {
+      "path": "06-msg-02.eml",
+      "source": "msg-02.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "length": 1038
+    },
+    {
+      "path": "06-msg-03.eml",
+      "source": "msg-03.eml",
+      "sha256": "e2273fca875fcf29b480af37a24848dc3491f26495c19e771ca61d3bede6021e",
+      "length": 952
+    },
+    {
+      "path": "06-msg-04.eml",
+      "source": "msg-04.eml",
+      "sha256": "2458f638598e26cbaafacca649667da6c318c04abbc607f7fe8593c841ef7f62",
+      "length": 1007
+    },
+    {
+      "path": "06-msg-05.eml",
+      "source": "msg-05.eml",
+      "sha256": "9e4fce34ec9eabd76f408039e137c712a36c7d5e996ac840c13b1c956b00d860",
+      "length": 1612
+    },
+    {
+      "path": "06-msg-06.eml",
+      "source": "msg-06.eml",
+      "sha256": "f8523c4af2881004182f6805a7b1097969c56741c8c2bce672ad2302bd191916",
+      "length": 1243
+    },
+    {
+      "path": "06-msg-07.eml",
+      "source": "msg-07.eml",
+      "sha256": "1c85536698518e71b39c167f034261d39baeac47d6d0848360cc20f51ff09f6a",
+      "length": 929
+    },
+    {
+      "path": "06-msg-08.eml",
+      "source": "msg-08.eml",
+      "sha256": "1d85d15dd3d7523c9004d415719f71c01ce8db1d0ae96cf2b4aaf51ad6496111",
+      "length": 1568
+    },
+    {
+      "path": "06-msg-09.eml",
+      "source": "msg-09.eml",
+      "sha256": "329bc919305ed0d8d6b827c471260d8919db7847de16be2d530a5b7230dd4b2d",
+      "length": 503
+    },
+    {
+      "path": "06-msg-10.eml",
+      "source": "msg-10.eml",
+      "sha256": "ca5c3bb027877e2832e275bddd4c1a10f478b2b0c738bed9cf7260e032acf88e",
+      "length": 502
+    },
+    {
+      "path": "06-msg-11.eml",
+      "source": "msg-11.eml",
+      "sha256": "0772a5fa6725b9e34e78ee5b184b49348741bd09a2e358b15afd12113380e2de",
+      "length": 1488
+    },
+    {
+      "path": "06-msg-12.eml",
+      "source": "msg-12.eml",
+      "sha256": "ac1eafc9308cbe497810bd86662d957b368ef954f0db07b41b6f2c0226ac6926",
+      "length": 1133
+    }
+  ]
+}

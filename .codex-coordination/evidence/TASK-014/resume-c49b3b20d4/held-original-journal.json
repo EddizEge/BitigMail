@@ -1,0 +1,64 @@
+{
+  "JobId": "job-d136206adf1a",
+  "PlanId": "iprev_ec5de882239c46e9a3af839efea1abbd",
+  "Entries": {
+    "item-000001": {
+      "ItemId": "item-000001",
+      "Status": 2,
+      "BitigMailKeyword": "bitigmail_02d4486e660bd1299ab8f211bcbe62fe",
+      "SourceFolder": "Projeler/\u0130stanbul",
+      "SourceUid": 1,
+      "SourceUidValidity": 1789299653,
+      "TargetFolder": "AstraUie0e2f40b609f/\u0130stanbul",
+      "TargetUidValidity": 1789299748,
+      "TargetUid": 1,
+      "ExpectedSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "VerifiedSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "TargetInternalDateUtc": "2024-02-15T11:30:00+00:00",
+      "TargetFlags": [
+        "Seen"
+      ],
+      "ErrorMessage": null,
+      "UpdatedAtUtc": "2026-09-13T13:05:10.6445886+00:00"
+    },
+    "item-000002": {
+      "ItemId": "item-000002",
+      "Status": 2,
+      "BitigMailKeyword": "bitigmail_c7224d536e39e8fdcf72a5f50d8639ac",
+      "SourceFolder": "Projeler/\u0130stanbul",
+      "SourceUid": 2,
+      "SourceUidValidity": 1789299653,
+      "TargetFolder": "AstraUie0e2f40b609f/\u0130stanbul",
+      "TargetUidValidity": 1789299748,
+      "TargetUid": 2,
+      "ExpectedSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "VerifiedSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "TargetInternalDateUtc": "2024-02-16T07:15:00+00:00",
+      "TargetFlags": [
+        "Seen"
+      ],
+      "ErrorMessage": null,
+      "UpdatedAtUtc": "2026-09-13T13:05:10.6445906+00:00"
+    },
+    "item-000003": {
+      "ItemId": "item-000003",
+      "Status": 2,
+      "BitigMailKeyword": "bitigmail_044bbcb705b1f3f6af01af9ee405d854",
+      "SourceFolder": "Projeler/\u0130stanbul",
+      "SourceUid": 3,
+      "SourceUidValidity": 1789299653,
+      "TargetFolder": "AstraUie0e2f40b609f/\u0130stanbul",
+      "TargetUidValidity": 1789299748,
+      "TargetUid": 3,
+      "ExpectedSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "VerifiedSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "TargetInternalDateUtc": "2023-12-31T21:30:00+00:00",
+      "TargetFlags": [
+        "Seen"
+      ],
+      "ErrorMessage": null,
+      "UpdatedAtUtc": "2026-09-13T13:05:10.6445907+00:00"
+    }
+  },
+  "UpdatedAtUtc": "2026-09-13T13:09:24.6241548+00:00"
+}

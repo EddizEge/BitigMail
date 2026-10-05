@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="d54ddd5b-e752-4660-9863-e67ad050dfca" name="Eddiz@MERCAN-PC 2026-09-20 02:53:51" runUser="MERCAN-PC\Eddiz" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-20T02:53:51.9712095+03:00" queuing="2026-09-20T02:53:51.9712097+03:00" start="2026-09-20T02:53:50.7462090+03:00" finish="2026-09-20T02:53:51.9756343+03:00" />
+  <TestSettings name="default" id="fa9c6611-c35d-49f4-b058-250a29c8f077">
+    <Deployment runDeploymentRoot="Eddiz_MERCAN-PC_2026-09-20_02_53_51" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="e58b6271-1317-4e3c-a0f0-5d309a24c894" testId="54a5e4e3-d256-9426-b5c2-26b736a33c5e" testName="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidSchemaFailsClosed(key: &quot;companies&quot;, replacement: &quot;null&quot;)" computerName="MERCAN-PC" duration="00:00:00.0523915" startTime="2026-09-20T02:53:51.4554674+03:00" endTime="2026-09-20T02:53:51.4993684+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e58b6271-1317-4e3c-a0f0-5d309a24c894">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: Exception type was not an exact match&#xD;
+Expected: typeof(System.IO.InvalidDataException)&#xD;
+Actual:   typeof(System.NullReferenceException)&#xD;
+---- System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+          <StackTrace>   at BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidSchemaFailsClosed(String key, String replacement) in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\IdentityCatalogBoundaryTests.cs:line 44&#xD;
+--- End of stack trace from previous location ---&#xD;
+----- Inner Stack Trace -----&#xD;
+   at BitigMail.LocalHost.Security.IdentityCatalog.Validate(IdentityCatalogDocument doc) in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.LocalHost\Security\IdentityCatalog.cs:line 53&#xD;
+   at BitigMail.LocalHost.Security.IdentityCatalog.Load() in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.LocalHost\Security\IdentityCatalog.cs:line 52&#xD;
+   at BitigMail.LocalHost.Security.IdentityCatalog.get_IsInitialized() in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.LocalHost\Security\IdentityCatalog.cs:line 20&#xD;
+   at BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.&lt;&gt;c__DisplayClass5_0.&lt;InvalidSchemaFailsClosed&gt;b__0() in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\IdentityCatalogBoundaryTests.cs:line 44</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="863807d0-ef8d-4d55-ac98-dc4a018570be" testId="19717d0f-c4f7-e05d-1b8c-4fc6f9c110f9" testName="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.ConcurrentCatalogInstancesCannotLoseCompanyWrites" computerName="MERCAN-PC" duration="00:00:00.0710665" startTime="2026-09-20T02:53:51.8157948+03:00" endTime="2026-09-20T02:53:51.8867794+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="863807d0-ef8d-4d55-ac98-dc4a018570be" />
+    <UnitTestResult executionId="bc25a522-d260-4726-9ed1-304c1c6897f3" testId="2b0638af-96de-3dc8-e196-aed2f3103cbe" testName="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.SameCompanyDoesNotExposeUngrantedProject" computerName="MERCAN-PC" duration="00:00:00.1116154" startTime="2026-09-20T02:53:51.7043759+03:00" endTime="2026-09-20T02:53:51.8156313+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bc25a522-d260-4726-9ed1-304c1c6897f3" />
+    <UnitTestResult executionId="2ade815a-138e-41fa-8e41-a41481c59387" testId="a096dad1-1579-9442-ed72-2edd789e38ef" testName="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.DuplicateJsonFieldCannotRedefineCatalogVersion" computerName="MERCAN-PC" duration="00:00:00.0506725" startTime="2026-09-20T02:53:51.6534920+03:00" endTime="2026-09-20T02:53:51.7039127+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ade815a-138e-41fa-8e41-a41481c59387">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: No exception was thrown&#xD;
+Expected: typeof(System.IO.InvalidDataException)</Message>
+          <StackTrace>   at BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.DuplicateJsonFieldCannotRedefineCatalogVersion() in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\IdentityCatalogBoundaryTests.cs:line 53&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1369ec66-e85d-4c03-82ea-5b693f37d71e" testId="dcb7edd2-a792-37e1-2a9f-35e58323d62c" testName="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidSchemaFailsClosed(key: &quot;users&quot;, replacement: &quot;null&quot;)" computerName="MERCAN-PC" duration="00:00:00.0975354" startTime="2026-09-20T02:53:51.3383142+03:00" endTime="2026-09-20T02:53:51.4468139+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1369ec66-e85d-4c03-82ea-5b693f37d71e">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: Exception type was not an exact match&#xD;
+Expected: typeof(System.IO.InvalidDataException)&#xD;
+Actual:   typeof(System.NullReferenceException)&#xD;
+---- System.NullReferenceException : Object reference not set to an instance of an object.</Message>
+          <StackTrace>   at BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidSchemaFailsClosed(String key, String replacement) in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\IdentityCatalogBoundaryTests.cs:line 44&#xD;
+--- End of stack trace from previous location ---&#xD;
+----- Inner Stack Trace -----&#xD;
+   at BitigMail.LocalHost.Security.IdentityCatalog.Validate(IdentityCatalogDocument doc) in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.LocalHost\Security\IdentityCatalog.cs:line 53&#xD;
+   at BitigMail.LocalHost.Security.IdentityCatalog.Load() in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.LocalHost\Security\IdentityCatalog.cs:line 52&#xD;
+   at BitigMail.LocalHost.Security.IdentityCatalog.get_IsInitialized() in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.LocalHost\Security\IdentityCatalog.cs:line 20&#xD;
+   at BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.&lt;&gt;c__DisplayClass5_0.&lt;InvalidSchemaFailsClosed&gt;b__0() in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\IdentityCatalogBoundaryTests.cs:line 44</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8aa28536-5e0f-4883-b335-9093f95df880" testId="6e4769db-b95b-27f1-7ef1-b3c31a515def" testName="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidRoleDoesNotPersistUser" computerName="MERCAN-PC" duration="00:00:00.1027171" startTime="2026-09-20T02:53:51.5508249+03:00" endTime="2026-09-20T02:53:51.6529671+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8aa28536-5e0f-4883-b335-9093f95df880">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: No exception was thrown&#xD;
+Expected: typeof(System.ArgumentException)</Message>
+          <StackTrace>   at BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidRoleDoesNotPersistUser() in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\IdentityCatalogBoundaryTests.cs:line 70&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8d3ebd5c-66f4-4e1e-8e23-8979f0ab355f" testId="16d1a8f8-165c-f00c-f426-604d5d7e9464" testName="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidSchemaFailsClosed(key: &quot;version&quot;, replacement: &quot;99&quot;)" computerName="MERCAN-PC" duration="00:00:00.0499473" startTime="2026-09-20T02:53:51.5003223+03:00" endTime="2026-09-20T02:53:51.5496782+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d3ebd5c-66f4-4e1e-8e23-8979f0ab355f" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.ConcurrentCatalogInstancesCannotLoseCompanyWrites" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="19717d0f-c4f7-e05d-1b8c-4fc6f9c110f9">
+      <Execution id="863807d0-ef8d-4d55-ac98-dc4a018570be" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests" name="ConcurrentCatalogInstancesCannotLoseCompanyWrites" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidSchemaFailsClosed(key: &quot;users&quot;, replacement: &quot;null&quot;)" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="dcb7edd2-a792-37e1-2a9f-35e58323d62c">
+      <Execution id="1369ec66-e85d-4c03-82ea-5b693f37d71e" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests" name="InvalidSchemaFailsClosed" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.DuplicateJsonFieldCannotRedefineCatalogVersion" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="a096dad1-1579-9442-ed72-2edd789e38ef">
+      <Execution id="2ade815a-138e-41fa-8e41-a41481c59387" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests" name="DuplicateJsonFieldCannotRedefineCatalogVersion" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidSchemaFailsClosed(key: &quot;version&quot;, replacement: &quot;99&quot;)" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="16d1a8f8-165c-f00c-f426-604d5d7e9464">
+      <Execution id="8d3ebd5c-66f4-4e1e-8e23-8979f0ab355f" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests" name="InvalidSchemaFailsClosed" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidSchemaFailsClosed(key: &quot;companies&quot;, replacement: &quot;null&quot;)" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="54a5e4e3-d256-9426-b5c2-26b736a33c5e">
+      <Execution id="e58b6271-1317-4e3c-a0f0-5d309a24c894" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests" name="InvalidSchemaFailsClosed" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.SameCompanyDoesNotExposeUngrantedProject" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="2b0638af-96de-3dc8-e196-aed2f3103cbe">
+      <Execution id="bc25a522-d260-4726-9ed1-304c1c6897f3" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests" name="SameCompanyDoesNotExposeUngrantedProject" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidRoleDoesNotPersistUser" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="6e4769db-b95b-27f1-7ef1-b3c31a515def">
+      <Execution id="8aa28536-5e0f-4883-b335-9093f95df880" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.IdentityCatalogBoundaryTests" name="InvalidRoleDoesNotPersistUser" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="54a5e4e3-d256-9426-b5c2-26b736a33c5e" executionId="e58b6271-1317-4e3c-a0f0-5d309a24c894" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="19717d0f-c4f7-e05d-1b8c-4fc6f9c110f9" executionId="863807d0-ef8d-4d55-ac98-dc4a018570be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2b0638af-96de-3dc8-e196-aed2f3103cbe" executionId="bc25a522-d260-4726-9ed1-304c1c6897f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a096dad1-1579-9442-ed72-2edd789e38ef" executionId="2ade815a-138e-41fa-8e41-a41481c59387" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dcb7edd2-a792-37e1-2a9f-35e58323d62c" executionId="1369ec66-e85d-4c03-82ea-5b693f37d71e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e4769db-b95b-27f1-7ef1-b3c31a515def" executionId="8aa28536-5e0f-4883-b335-9093f95df880" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="16d1a8f8-165c-f00c-f426-604d5d7e9464" executionId="8d3ebd5c-66f4-4e1e-8e23-8979f0ab355f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Bir Listede Olmayan Sonuçlar" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Yüklenen Tüm Sonuçlar" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="7" executed="7" passed="3" failed="4" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 8.0.31)&#xD;
+[xUnit.net 00:00:00.08]   Discovering: BitigMail.Engine.Tests&#xD;
+[xUnit.net 00:00:00.20]   Discovered:  BitigMail.Engine.Tests&#xD;
+[xUnit.net 00:00:00.22]   Starting:    BitigMail.Engine.Tests&#xD;
+[xUnit.net 00:00:00.34]       Assert.Throws() Failure: Exception type was not an exact match&#xD;
+[xUnit.net 00:00:00.34]       Expected: typeof(System.IO.InvalidDataException)&#xD;
+[xUnit.net 00:00:00.34]       Actual:   typeof(System.NullReferenceException)&#xD;
+[xUnit.net 00:00:00.34]       ---- System.NullReferenceException : Object reference not set to an instance of an object.&#xD;
+[xUnit.net 00:00:00.34]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.34]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\IdentityCatalogBoundaryTests.cs(44,0): at BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidSchemaFailsClosed(String key, String replacement)&#xD;
+[xUnit.net 00:00:00.34]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:00.34]         ----- Inner Stack Trace -----&#xD;
+[xUnit.net 00:00:00.34]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.LocalHost\Security\IdentityCatalog.cs(53,0): at BitigMail.LocalHost.Security.IdentityCatalog.Validate(IdentityCatalogDocument doc)&#xD;
+[xUnit.net 00:00:00.34]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.LocalHost\Security\IdentityCatalog.cs(52,0): at BitigMail.LocalHost.Security.IdentityCatalog.Load()&#xD;
+[xUnit.net 00:00:00.34]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.LocalHost\Security\IdentityCatalog.cs(20,0): at BitigMail.LocalHost.Security.IdentityCatalog.get_IsInitialized()&#xD;
+[xUnit.net 00:00:00.34]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\IdentityCatalogBoundaryTests.cs(44,0): at BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.&lt;&gt;c__DisplayClass5_0.&lt;InvalidSchemaFailsClosed&gt;b__0()&#xD;
+[xUnit.net 00:00:00.39]       Assert.Throws() Failure: Exception type was not an exact match&#xD;
+[xUnit.net 00:00:00.39]       Expected: typeof(System.IO.InvalidDataException)&#xD;
+[xUnit.net 00:00:00.39]       Actual:   typeof(System.NullReferenceException)&#xD;
+[xUnit.net 00:00:00.39]       ---- System.NullReferenceException : Object reference not set to an instance of an object.&#xD;
+[xUnit.net 00:00:00.39]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.39]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\IdentityCatalogBoundaryTests.cs(44,0): at BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidSchemaFailsClosed(String key, String replacement)&#xD;
+[xUnit.net 00:00:00.39]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:00.39]         ----- Inner Stack Trace -----&#xD;
+[xUnit.net 00:00:00.39]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.LocalHost\Security\IdentityCatalog.cs(53,0): at BitigMail.LocalHost.Security.IdentityCatalog.Validate(IdentityCatalogDocument doc)&#xD;
+[xUnit.net 00:00:00.39]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.LocalHost\Security\IdentityCatalog.cs(52,0): at BitigMail.LocalHost.Security.IdentityCatalog.Load()&#xD;
+[xUnit.net 00:00:00.39]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.LocalHost\Security\IdentityCatalog.cs(20,0): at BitigMail.LocalHost.Security.IdentityCatalog.get_IsInitialized()&#xD;
+[xUnit.net 00:00:00.39]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\IdentityCatalogBoundaryTests.cs(44,0): at BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.&lt;&gt;c__DisplayClass5_0.&lt;InvalidSchemaFailsClosed&gt;b__0()&#xD;
+[xUnit.net 00:00:00.55]       Assert.Throws() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:00.55]       Expected: typeof(System.ArgumentException)&#xD;
+[xUnit.net 00:00:00.55]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.55]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\IdentityCatalogBoundaryTests.cs(70,0): at BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidRoleDoesNotPersistUser()&#xD;
+[xUnit.net 00:00:00.55]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:00.60]       Assert.Throws() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:00.60]       Expected: typeof(System.IO.InvalidDataException)&#xD;
+[xUnit.net 00:00:00.60]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.60]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\IdentityCatalogBoundaryTests.cs(53,0): at BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.DuplicateJsonFieldCannotRedefineCatalogVersion()&#xD;
+[xUnit.net 00:00:00.60]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:00.78]   Finished:    BitigMail.Engine.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="MERCAN-PC" outcome="Error" timestamp="2026-09-20T02:53:51.4486393+03:00">
+        <Text>[xUnit.net 00:00:00.34]     BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidSchemaFailsClosed(key: "users", replacement: "null") [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="MERCAN-PC" outcome="Error" timestamp="2026-09-20T02:53:51.4997526+03:00">
+        <Text>[xUnit.net 00:00:00.39]     BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidSchemaFailsClosed(key: "companies", replacement: "null") [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="MERCAN-PC" outcome="Error" timestamp="2026-09-20T02:53:51.6533179+03:00">
+        <Text>[xUnit.net 00:00:00.55]     BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.InvalidRoleDoesNotPersistUser [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="MERCAN-PC" outcome="Error" timestamp="2026-09-20T02:53:51.7042580+03:00">
+        <Text>[xUnit.net 00:00:00.60]     BitigMail.Engine.Tests.IdentityCatalogBoundaryTests.DuplicateJsonFieldCannotRedefineCatalogVersion [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

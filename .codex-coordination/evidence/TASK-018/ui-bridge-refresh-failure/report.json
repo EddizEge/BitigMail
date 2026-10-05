@@ -1,0 +1,10 @@
+{
+  "completed": false,
+  "results": [
+    {
+      "width": 1660,
+      "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByTestId('tree-archive-arc_87125f516008499b')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByTestId('tree-archive-arc_87125f516008499b') with timeout 15000ms\n  - waiting for getByTestId('tree-archive-arc_87125f516008499b')\n",
+      "errors": []
+    }
+  ]
+}

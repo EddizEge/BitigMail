@@ -1,0 +1,421 @@
+{
+  "gate": "Gate A",
+  "pass": false,
+  "timestampUtc": "2026-09-13T11:34:13.9393768Z",
+  "reportPath": ".codex-coordination\\TASK-014-gate-a-report.json",
+  "statePath": "lab\\task014\\gate-a-state.json",
+  "targetFolderPath": "GateA",
+  "serverCapabilities": {
+    "serverBanner": "GreenMail IMAP4rev1 Server v2.1.12",
+    "permanentFlags": [
+      "Seen",
+      "Answered",
+      "Flagged",
+      "Deleted",
+      "Draft",
+      "UserDefined"
+    ],
+    "permitsPermanentKeywords": true,
+    "proof": "Server responses to SELECT/EXAMINE include PERMANENTFLAGS (\\Answered \\Flagged \\Draft \\Deleted \\Seen \\*). MailKit parses \\* as MessageFlags.UserDefined."
+  },
+  "sourceFolders": [
+    "INBOX",
+    "G\u00F6nderilenler",
+    "Projeler.\u0130stanbul"
+  ],
+  "totalSourceItemsVerified": 12,
+  "serializationEqualityAllMatch": true,
+  "keywordPersistenceAllMatch": true,
+  "keywordSearchCountsAllOne": true,
+  "targetRawSha256AllMatchSource": true,
+  "targetRawBytesAllMatchSource": true,
+  "targetDatesAllMatchSource": false,
+  "targetFlagsAllMatchSource": true,
+  "reconciledFromPriorRun": false,
+  "items": [
+    {
+      "fixtureId": "msg-01",
+      "sourceMailbox": "INBOX",
+      "sourceUid": 1,
+      "sourceUidValidity": 1789298756,
+      "sourceRawBytes": 1044,
+      "sourceRawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "serializedRawBytes": 1044,
+      "serializedSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "serializationByteExactMatch": true,
+      "targetMailbox": "GateA",
+      "targetUid": 1,
+      "targetUidValidity": 1789299251,
+      "targetRawBytes": 1044,
+      "targetRawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "targetMatchesSourceExact": true,
+      "bitigMailKeyword": "bitigmail_adbe1eb723db739bf5c17a82de674b5c",
+      "keywordSearchCount": 1,
+      "keywordPersistedInTarget": true,
+      "originalInternalDateUtc": "2023-04-10T06:00:00.0000000\u002B00:00",
+      "targetInternalDateUtc": "2023-04-10T06:00:00.0000000\u002B00:00",
+      "dateMatches": true,
+      "originalFlags": [
+        "\\Seen",
+        "\\Recent"
+      ],
+      "targetFlags": [
+        "\\Seen"
+      ],
+      "flagsRetained": true,
+      "allPropertiesVerified": true
+    },
+    {
+      "fixtureId": "msg-02",
+      "sourceMailbox": "INBOX",
+      "sourceUid": 2,
+      "sourceUidValidity": 1789298756,
+      "sourceRawBytes": 1044,
+      "sourceRawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "serializedRawBytes": 1044,
+      "serializedSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "serializationByteExactMatch": true,
+      "targetMailbox": "GateA",
+      "targetUid": 2,
+      "targetUidValidity": 1789299251,
+      "targetRawBytes": 1044,
+      "targetRawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "targetMatchesSourceExact": true,
+      "bitigMailKeyword": "bitigmail_ee9d6a9483e8351dc0f3b2c371eb3fe5",
+      "keywordSearchCount": 1,
+      "keywordPersistedInTarget": true,
+      "originalInternalDateUtc": "2023-04-10T06:00:00.0000000\u002B00:00",
+      "targetInternalDateUtc": "2023-04-10T06:00:00.0000000\u002B00:00",
+      "dateMatches": true,
+      "originalFlags": [
+        "\\Seen",
+        "\\Recent"
+      ],
+      "targetFlags": [
+        "\\Seen"
+      ],
+      "flagsRetained": true,
+      "allPropertiesVerified": true
+    },
+    {
+      "fixtureId": "msg-05",
+      "sourceMailbox": "INBOX",
+      "sourceUid": 3,
+      "sourceUidValidity": 1789298756,
+      "sourceRawBytes": 1617,
+      "sourceRawSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "serializedRawBytes": 1617,
+      "serializedSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "serializationByteExactMatch": true,
+      "targetMailbox": "GateA",
+      "targetUid": 3,
+      "targetUidValidity": 1789299251,
+      "targetRawBytes": 1617,
+      "targetRawSha256": "c727ea1d3f65bb676717e52409e35708095dcfcb4b93fc80d6f642fec1fc9c56",
+      "targetMatchesSourceExact": true,
+      "bitigMailKeyword": "bitigmail_60642042735f11c526fd105408e0cac9",
+      "keywordSearchCount": 1,
+      "keywordPersistedInTarget": true,
+      "originalInternalDateUtc": "2024-05-20T08:00:00.0000000\u002B00:00",
+      "targetInternalDateUtc": "2024-05-20T08:00:00.0000000\u002B00:00",
+      "dateMatches": true,
+      "originalFlags": [
+        "\\Seen",
+        "\\Recent"
+      ],
+      "targetFlags": [
+        "\\Seen"
+      ],
+      "flagsRetained": true,
+      "allPropertiesVerified": true
+    },
+    {
+      "fixtureId": "msg-06",
+      "sourceMailbox": "INBOX",
+      "sourceUid": 4,
+      "sourceUidValidity": 1789298756,
+      "sourceRawBytes": 1249,
+      "sourceRawSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "serializedRawBytes": 1249,
+      "serializedSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "serializationByteExactMatch": true,
+      "targetMailbox": "GateA",
+      "targetUid": 4,
+      "targetUidValidity": 1789299251,
+      "targetRawBytes": 1249,
+      "targetRawSha256": "c65435eafc0e87bd2cee0840fd3a5b9a5413a21388bb55972b4fa15d1335f94a",
+      "targetMatchesSourceExact": true,
+      "bitigMailKeyword": "bitigmail_acbd0e5c621b878dbf659df40b864f43",
+      "keywordSearchCount": 1,
+      "keywordPersistedInTarget": true,
+      "originalInternalDateUtc": "2024-06-12T16:45:00.0000000\u002B00:00",
+      "targetInternalDateUtc": "2024-06-12T16:45:00.0000000\u002B00:00",
+      "dateMatches": true,
+      "originalFlags": [
+        "\\Seen",
+        "\\Recent"
+      ],
+      "targetFlags": [
+        "\\Seen"
+      ],
+      "flagsRetained": true,
+      "allPropertiesVerified": true
+    },
+    {
+      "fixtureId": "msg-07",
+      "sourceMailbox": "INBOX",
+      "sourceUid": 5,
+      "sourceUidValidity": 1789298756,
+      "sourceRawBytes": 934,
+      "sourceRawSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "serializedRawBytes": 934,
+      "serializedSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "serializationByteExactMatch": true,
+      "targetMailbox": "GateA",
+      "targetUid": 5,
+      "targetUidValidity": 1789299251,
+      "targetRawBytes": 934,
+      "targetRawSha256": "57b911f8bb000cf2df292dd54f89b88c29b09f02eb3f4576f3f07f378c3ad7f0",
+      "targetMatchesSourceExact": true,
+      "bitigMailKeyword": "bitigmail_79c923c4ffe1e4947375e396db8c4ea0",
+      "keywordSearchCount": 1,
+      "keywordPersistedInTarget": true,
+      "originalInternalDateUtc": "2024-07-08T06:30:00.0000000\u002B00:00",
+      "targetInternalDateUtc": "2024-07-08T06:30:00.0000000\u002B00:00",
+      "dateMatches": true,
+      "originalFlags": [
+        "\\Seen",
+        "\\Recent"
+      ],
+      "targetFlags": [
+        "\\Seen"
+      ],
+      "flagsRetained": true,
+      "allPropertiesVerified": true
+    },
+    {
+      "fixtureId": "msg-08",
+      "sourceMailbox": "G\u00F6nderilenler",
+      "sourceUid": 1,
+      "sourceUidValidity": 1789298760,
+      "sourceRawBytes": 1580,
+      "sourceRawSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "serializedRawBytes": 1580,
+      "serializedSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "serializationByteExactMatch": true,
+      "targetMailbox": "GateA",
+      "targetUid": 6,
+      "targetUidValidity": 1789299251,
+      "targetRawBytes": 1580,
+      "targetRawSha256": "8439d0933797558f3cd06547b4d24883385e112eed59170de72ab563679dfd37",
+      "targetMatchesSourceExact": true,
+      "bitigMailKeyword": "bitigmail_fdf9fa9b128afd126546bb596e8c90a3",
+      "keywordSearchCount": 1,
+      "keywordPersistedInTarget": true,
+      "originalInternalDateUtc": "2024-08-25T10:20:00.0000000\u002B00:00",
+      "targetInternalDateUtc": "2024-08-25T10:20:00.0000000\u002B00:00",
+      "dateMatches": true,
+      "originalFlags": [
+        "\\Seen",
+        "\\Recent"
+      ],
+      "targetFlags": [
+        "\\Seen"
+      ],
+      "flagsRetained": true,
+      "allPropertiesVerified": true
+    },
+    {
+      "fixtureId": "msg-09",
+      "sourceMailbox": "G\u00F6nderilenler",
+      "sourceUid": 2,
+      "sourceUidValidity": 1789298760,
+      "sourceRawBytes": 508,
+      "sourceRawSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "serializedRawBytes": 508,
+      "serializedSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "serializationByteExactMatch": true,
+      "targetMailbox": "GateA",
+      "targetUid": 7,
+      "targetUidValidity": 1789299251,
+      "targetRawBytes": 508,
+      "targetRawSha256": "df65f2119e399ac15154efd20006345083ab32fb3b28fcf4448f60ae8dc1b0e7",
+      "targetMatchesSourceExact": true,
+      "bitigMailKeyword": "bitigmail_9e8615fdac113d79c0718d94cf0fec11",
+      "keywordSearchCount": 1,
+      "keywordPersistedInTarget": true,
+      "originalInternalDateUtc": "2022-11-05T12:00:00.0000000\u002B00:00",
+      "targetInternalDateUtc": "2022-11-05T00:00:00.0000000\u002B00:00",
+      "dateMatches": false,
+      "originalFlags": [
+        "\\Seen",
+        "\\Recent"
+      ],
+      "targetFlags": [
+        "\\Seen"
+      ],
+      "flagsRetained": true,
+      "allPropertiesVerified": false
+    },
+    {
+      "fixtureId": "msg-10",
+      "sourceMailbox": "G\u00F6nderilenler",
+      "sourceUid": 3,
+      "sourceUidValidity": 1789298760,
+      "sourceRawBytes": 507,
+      "sourceRawSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "serializedRawBytes": 507,
+      "serializedSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "serializationByteExactMatch": true,
+      "targetMailbox": "GateA",
+      "targetUid": 8,
+      "targetUidValidity": 1789299251,
+      "targetRawBytes": 507,
+      "targetRawSha256": "7a3c8b6ed4ff4be0e22fdf59afa72a09ab3ef8c0f0b1e258aeee9e4be5157931",
+      "targetMatchesSourceExact": true,
+      "bitigMailKeyword": "bitigmail_d6faf6c803a71434ace1af7e57d03d96",
+      "keywordSearchCount": 1,
+      "keywordPersistedInTarget": true,
+      "originalInternalDateUtc": "2025-01-15T08:30:00.0000000\u002B00:00",
+      "targetInternalDateUtc": "2025-01-15T08:30:00.0000000\u002B00:00",
+      "dateMatches": true,
+      "originalFlags": [
+        "\\Seen",
+        "\\Recent"
+      ],
+      "targetFlags": [
+        "\\Seen"
+      ],
+      "flagsRetained": true,
+      "allPropertiesVerified": true
+    },
+    {
+      "fixtureId": "msg-03",
+      "sourceMailbox": "Projeler.\u0130stanbul",
+      "sourceUid": 1,
+      "sourceUidValidity": 1789298760,
+      "sourceRawBytes": 957,
+      "sourceRawSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "serializedRawBytes": 957,
+      "serializedSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "serializationByteExactMatch": true,
+      "targetMailbox": "GateA",
+      "targetUid": 9,
+      "targetUidValidity": 1789299251,
+      "targetRawBytes": 957,
+      "targetRawSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+      "targetMatchesSourceExact": true,
+      "bitigMailKeyword": "bitigmail_a478307416faa27f071f7dda850cd749",
+      "keywordSearchCount": 1,
+      "keywordPersistedInTarget": true,
+      "originalInternalDateUtc": "2024-02-15T11:30:00.0000000\u002B00:00",
+      "targetInternalDateUtc": "2024-02-15T11:30:00.0000000\u002B00:00",
+      "dateMatches": true,
+      "originalFlags": [
+        "\\Seen",
+        "\\Recent"
+      ],
+      "targetFlags": [
+        "\\Seen"
+      ],
+      "flagsRetained": true,
+      "allPropertiesVerified": true
+    },
+    {
+      "fixtureId": "msg-04",
+      "sourceMailbox": "Projeler.\u0130stanbul",
+      "sourceUid": 2,
+      "sourceUidValidity": 1789298760,
+      "sourceRawBytes": 1013,
+      "sourceRawSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "serializedRawBytes": 1013,
+      "serializedSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "serializationByteExactMatch": true,
+      "targetMailbox": "GateA",
+      "targetUid": 10,
+      "targetUidValidity": 1789299251,
+      "targetRawBytes": 1013,
+      "targetRawSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+      "targetMatchesSourceExact": true,
+      "bitigMailKeyword": "bitigmail_257d8624b4e3f1d28eb59c8bd013da8d",
+      "keywordSearchCount": 1,
+      "keywordPersistedInTarget": true,
+      "originalInternalDateUtc": "2024-02-16T07:15:00.0000000\u002B00:00",
+      "targetInternalDateUtc": "2024-02-16T07:15:00.0000000\u002B00:00",
+      "dateMatches": true,
+      "originalFlags": [
+        "\\Seen",
+        "\\Recent"
+      ],
+      "targetFlags": [
+        "\\Seen"
+      ],
+      "flagsRetained": true,
+      "allPropertiesVerified": true
+    },
+    {
+      "fixtureId": "msg-11",
+      "sourceMailbox": "Projeler.\u0130stanbul",
+      "sourceUid": 3,
+      "sourceUidValidity": 1789298760,
+      "sourceRawBytes": 1494,
+      "sourceRawSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "serializedRawBytes": 1494,
+      "serializedSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "serializationByteExactMatch": true,
+      "targetMailbox": "GateA",
+      "targetUid": 11,
+      "targetUidValidity": 1789299251,
+      "targetRawBytes": 1494,
+      "targetRawSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+      "targetMatchesSourceExact": true,
+      "bitigMailKeyword": "bitigmail_8c978ba3e6e5eeb1b082b81f153d6dce",
+      "keywordSearchCount": 1,
+      "keywordPersistedInTarget": true,
+      "originalInternalDateUtc": "2023-12-31T21:30:00.0000000\u002B00:00",
+      "targetInternalDateUtc": "2023-12-31T21:30:00.0000000\u002B00:00",
+      "dateMatches": true,
+      "originalFlags": [
+        "\\Seen",
+        "\\Recent"
+      ],
+      "targetFlags": [
+        "\\Seen"
+      ],
+      "flagsRetained": true,
+      "allPropertiesVerified": true
+    },
+    {
+      "fixtureId": "msg-12",
+      "sourceMailbox": "Projeler.\u0130stanbul",
+      "sourceUid": 4,
+      "sourceUidValidity": 1789298760,
+      "sourceRawBytes": 1139,
+      "sourceRawSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "serializedRawBytes": 1139,
+      "serializedSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "serializationByteExactMatch": true,
+      "targetMailbox": "GateA",
+      "targetUid": 12,
+      "targetUidValidity": 1789299251,
+      "targetRawBytes": 1139,
+      "targetRawSha256": "663ee5e79348c1b53ce35c09f8bf8a7e8604ae119aa0c65fb025d01879d2cf56",
+      "targetMatchesSourceExact": true,
+      "bitigMailKeyword": "bitigmail_dd12fc17ff90182d90f2d86e5d97c8b1",
+      "keywordSearchCount": 1,
+      "keywordPersistedInTarget": true,
+      "originalInternalDateUtc": "2024-11-30T10:00:00.0000000\u002B00:00",
+      "targetInternalDateUtc": "2024-11-30T10:00:00.0000000\u002B00:00",
+      "dateMatches": true,
+      "originalFlags": [
+        "\\Seen",
+        "\\Recent"
+      ],
+      "targetFlags": [
+        "\\Seen"
+      ],
+      "flagsRetained": true,
+      "allPropertiesVerified": true
+    }
+  ]
+}

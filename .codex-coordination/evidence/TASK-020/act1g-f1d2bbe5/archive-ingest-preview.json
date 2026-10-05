@@ -1,0 +1,23 @@
+{
+  "previewId": "aprv_6323d1f8f487470a937d01d94d424ff0",
+  "archiveName": "Task020-Archive-act1g-f1d2bbe5",
+  "companyId": "company-task020-scale",
+  "projectId": "project-task020-1g-gate",
+  "companyName": "TASK-020 1GiB Scale Validation",
+  "projectName": "1GiB MBOX, EML and Archive Scale Audit",
+  "sourceKind": "bridge-export",
+  "dialect": "eml-tree",
+  "sourceFingerprint": "bridge-export:job-2b10f9032e58:2026-09-14T18:15:24.4405595+00:00:9709ebcafb294ddeffa816015c28127c6e297911233492032fc8bf20b5f4a2e8",
+  "totalFiles": 8192,
+  "totalItems": 8192,
+  "totalSizeBytes": 1070776928,
+  "folders": [
+    {
+      "folderName": "Task020/act1g-f1d2bbe5/Bulk",
+      "itemCount": 8192,
+      "totalSizeBytes": 1070776928
+    }
+  ],
+  "canIngest": true,
+  "blockerReason": null
+}

@@ -1,0 +1,25 @@
+TASK_ID: TASK-031
+STATUS: DONE — ROOT local acceptance 2026-09-15, provider-live pending; normal-host deployment not performed
+FROM: ASTRA HIGH
+TO: Existing SOL
+GOAL: Implement Stage3 Google delegated OAuth vertical slice, provider capability/diagnostic model and UI; preserve Microsoft behavior. Azure/real Outlook deferred to10; no live account writes or sign-ins.
+
+ROOT ARCHITECTURE:
+- Own-mailbox Gmail/Workspace only, fixed imap.gmail.com:993 TLS, authKind google. Keep microsoft365 public contract backwards compatible; separate Google DTO/endpoints/operation manager allowed to avoid broad Microsoft rewrite.
+- Root approves official Google.Apis.Auth dependency with pinned stable version; use PkceGoogleAuthorizationCodeFlow and official receiver/code-flow infrastructure rather than invent token exchange. Verify SDK implementation has state validation and cancellable loopback receiver. Use S256 PKCE, fresh random state; loopback-only listener, timeout <=5min, bound operations32. System browser link only, no embedded login, no automatic login. Authorization URL only transient memory, exact Google HTTPS host/path/query allowlist. No code/token/URL logs.
+- Google desktop client configuration may include desktop client secret required by SDK. Keep it in protected backend configuration/cache, never return it or persist in frontend/localStorage; not an application password or security boundary. Prefer backend native JSON credentials picker (type installed, validate fields, do not trust arbitrary endpoints) or protected request field with strict redaction. No actual client credentials exist yet: document setup pending and fail clearly. Account source/target usable once configured; don't fake connected status.
+- Scope https://mail.google.com/ plus openid/email identity only. Validate verified email and stable subject from trusted SDK validated ID token (audience client ID, issuer, expiration; no decode-only trust). Requested mailbox email must match; bind stored Google subject and OAuth client ID, check on reconnect/refresh. IMAP authentication must succeed before account durable publication. No service accounts/domain-wide delegation/custom endpoints.
+- Per-account DPAPI-bound envelope, no default plaintext FileDataStore. Google token/cache serializer private; retain refresh token on responses without replacement. Separate account records/generation; concurrent refresh/delete/reconnect cannot resurrect or overwrite. Preserve typed XOAUTH2 only, reject generic password getter/editor for ALL OAuth kinds; verify loaded record endpoint/TLS policy before any token send. Use existing immutable plan/account version and generation rules.
+- Lifecycle mirrors Microsoft: scope-checked start/status/cancel/reconnect, memory URL clearing on terminal, expiry/late callback-safe, refresh failure reauthorization_required, persistence failure no success. Auth exceptions redacted. Production DI never accepts fake auth flag/input.
+- Provider-neutral additive diagnostics only from trusted structured exceptions/status codes: code/category/retryable/optional retryAfterSeconds, no parsing broad arbitrary provider text into false claims. Do not automatically retry APPEND or any ambiguous mutation. Existing journal/verification remains authoritative.
+- Declare profiles/capabilities for generic IMAP, personal Outlook, Exchange Online, Gmail/Workspace; on-prem Exchange only configured IMAP capability with unsupported EWS/MAPI etc explicitly stated, no advertised verified Exchange support.
+
+ACCEPTANCE: Google add/cancel/reconnect/test/folders and existing source/target selection integrated, old Microsoft/password tests pass. Deterministic wrong scope/identity/client/state/redirect, delayedcancel, refresh deletion/generation/persistfail, unknownauthkind, OAuth password rejection and no-secret DTO cases. Test actual SDK S256/state construction/receiver behavior locally with test seam; no real Google calls needed. UI desktop/mobile rendered with TestingHost seam, no fake-production path. Full backend/frontend/type/lint/build. Evidence+docs/GOOGLE_CONNECTION_WORKFLOW.md and provider capability matrix, THIRD-PARTY-NOTICES. Explicit LOCAL_READY / LIVE_PENDING.
+
+OWNERSHIP: SOL owns product implementation incl security per root design; root only design/critical acceptance and independent planning until handoff. Existing SOL direct exception, no new agents. Do not rerun scale or mutate original fixtures. Coordinate host changes, preserve normal6174/5173; Testing6175 available after fresh ownership check. Escalate concrete security gap while continuing independent work.
+
+PRIMARY SOURCES verified 2026-09-15:
+https://developers.google.com/identity/protocols/oauth2/native-app
+https://developers.google.com/workspace/gmail/imap/xoauth2-protocol
+https://googleapis.dev/dotnet/Google.Apis.Auth/latest/api/Google.Apis.Auth.OAuth2.Flows.PkceGoogleAuthorizationCodeFlow.html
+https://googleapis.dev/dotnet/Google.Apis.Auth/latest/api/Google.Apis.Auth.OAuth2.LocalServerCodeReceiver.html

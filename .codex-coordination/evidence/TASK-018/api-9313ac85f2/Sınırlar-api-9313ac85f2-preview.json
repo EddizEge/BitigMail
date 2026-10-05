@@ -1,0 +1,23 @@
+{
+  "previewId": "aprv_b5cab84493c04ad89f25ec9df5febcdb",
+  "archiveName": "Sınırlar-api-9313ac85f2",
+  "companyId": "api-9313ac85f2-a",
+  "projectId": "proje-a",
+  "companyName": "A Şirketi api-9313ac85f2",
+  "projectName": "Arşiv Kontrolü",
+  "sourceKind": "eml-tree",
+  "dialect": "rfc822",
+  "sourceFingerprint": "dc7813aba3a39b2fc487a301b30a450836d92a8ca0ba4cd35b38b1d17e8e87a3",
+  "totalFiles": 4,
+  "totalItems": 4,
+  "totalSizeBytes": 526845,
+  "folders": [
+    {
+      "folderName": "archive-edges-cbab019c",
+      "itemCount": 4,
+      "totalSizeBytes": 526845
+    }
+  ],
+  "canIngest": true,
+  "blockerReason": null
+}

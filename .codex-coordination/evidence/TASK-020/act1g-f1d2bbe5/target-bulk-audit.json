@@ -1,0 +1,8 @@
+{
+  "oracle": "Target IMAP Bulk Folder Audit",
+  "pass": true,
+  "folder": "Task020/act1g-f1d2bbe5/Bulk",
+  "totalMessages": 8192,
+  "uidCount": 8192,
+  "uidValidity": 1789299887
+}

@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net8.0-windows</TargetFramework><UseWindowsForms>true</UseWindowsForms><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings><AssemblyName>BitigMail</AssemblyName></PropertyGroup>
+  <ItemGroup><ProjectReference Include="..\BitigMail.Engine\BitigMail.Engine.csproj"/><PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4078.44"/></ItemGroup>
+  <ItemGroup><Content Include="..\..\prototype\public\bitigmail-mark-v1.png" Link="bitigmail-mark-v1.png" CopyToOutputDirectory="PreserveNewest"/></ItemGroup>
+</Project>

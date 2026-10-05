@@ -1,0 +1,42 @@
+{
+  "jobId": "job-40c4d33f6ccf",
+  "elapsed_sec": 44.800748100009514,
+  "items": 1024,
+  "items_per_sec": 22.856761179838035,
+  "overall_peak_ws_bytes": 582524928,
+  "overall_peak_ws_mib": 555.5390625,
+  "overall_peak_private_bytes": 649703424,
+  "overall_peak_private_mib": 619.60546875,
+  "phases": {
+    "idle_pre_export": {
+      "samples": 19,
+      "peak_ws": 442118144,
+      "min_ws": 439926784,
+      "peak_private": 461971456,
+      "min_private": 460398592,
+      "peak_cpu": 43.0,
+      "start_time": "2026-09-14T14:51:06.194795+00:00",
+      "end_time": "2026-09-14T14:51:08.194948+00:00"
+    },
+    "export_active": {
+      "samples": 418,
+      "peak_ws": 582524928,
+      "min_ws": 400261120,
+      "peak_private": 649703424,
+      "min_private": 413188096,
+      "peak_cpu": 401.4,
+      "start_time": "2026-09-14T14:51:08.194948+00:00",
+      "end_time": "2026-09-14T14:51:52.995176+00:00"
+    },
+    "idle_post_export": {
+      "samples": 19,
+      "peak_ws": 506916864,
+      "min_ws": 506863616,
+      "peak_private": 565370880,
+      "min_private": 565272576,
+      "peak_cpu": 28.4,
+      "start_time": "2026-09-14T14:51:52.995176+00:00",
+      "end_time": "2026-09-14T14:51:54.996265+00:00"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+
+namespace BitigMail.Engine.Imap;
+
+/// <summary>
+/// Detailed verification record for a single message in TASK-014 Gate A.
+/// </summary>
+public sealed record GateAItemResult
+{
+    public required string FixtureId { get; init; }
+    public required string LogicalFolder { get; init; }
+    public required string SourceFolder { get; init; }
+    public required uint SourceUid { get; init; }
+    public required uint SourceUidValidity { get; init; }
+    public required string MessageId { get; init; }
+    public required string Subject { get; init; }
+    public required string DateHeader { get; init; }
+    public required DateTimeOffset? SourceInternalDate { get; init; }
+    public required string SourceFlags { get; init; }
+    public required int SourceRawBytesLength { get; init; }
+    public required int SerializedBytesLength { get; init; }
+    public required string SourceRawSha256 { get; init; }
+    public required string SerializedSha256 { get; init; }
+    public required bool IsByteForByteEqual { get; init; }
+    public int? MismatchDiffOffset { get; init; }
+    public string? TargetFolder { get; init; }
+    public uint? TargetUid { get; init; }
+    public uint? TargetUidValidity { get; init; }
+    public string? BitigMailKeyword { get; init; }
+    public int? TargetRawBytesLength { get; init; }
+    public string? TargetRawSha256 { get; init; }
+    public bool TargetSourceShaMatch { get; init; }
+    public string? TargetFlags { get; init; }
+    public List<string> TargetKeywords { get; init; } = [];
+    public bool KeywordPersisted { get; init; }
+    public bool KeywordFoundBySearch { get; init; }
+    public bool InternalDatePreserved { get; init; }
+    public required string Status { get; init; }
+    public string? ErrorMessage { get; init; }
+}
+
+/// <summary>
+/// Comprehensive summary report for TASK-014 Gate A execution.
+/// </summary>
+public sealed record GateAReport
+{
+    public required string RunId { get; init; }
+    public required string TimestampUtc { get; init; }
+    public required ImapAccountPublicDto SourceAccount { get; init; }
+    public required ImapAccountPublicDto TargetAccount { get; init; }
+    public required int TotalSourceMessages { get; init; }
+    public required int ByteEqualCount { get; init; }
+    public required int AppendedCount { get; init; }
+    public required int TargetVerifiedCount { get; init; }
+    public required int KeywordsVerifiedCount { get; init; }
+    public required int KeywordsFoundBySearchCount { get; init; }
+    public required string OverallStatus { get; init; }
+    public required string LosslessnessDisclaimer { get; init; }
+    public required Dictionary<string, object> ActualWireExamples { get; init; }
+    public required List<GateAItemResult> Items { get; init; }
+}

@@ -1,0 +1,22 @@
+{
+  "path": "/api/transfer/bridge/import/preview",
+  "body": {
+    "companyId": "company-task020-scale",
+    "projectId": "project-task020-1g-gate",
+    "companyName": "TASK029 Measurement",
+    "projectName": "smoke-12-a",
+    "sourceHandle": "msrc_3ea0d697696540a594b1e0d99d384764",
+    "targetAccountId": "acc_ad07dbaf54b44cd58bf64e88e037f811",
+    "selectedFolders": [
+      "Gelen Kutusu",
+      "Gönderilenler",
+      "Projeler/İstanbul"
+    ],
+    "targetFolderMappings": {
+      "Gelen Kutusu": "Task029/smoke-12-a/Bulk",
+      "Gönderilenler": "Task029/smoke-12-a/Bulk",
+      "Projeler/İstanbul": "Task029/smoke-12-a/Bulk"
+    }
+  },
+  "utc": "2026-09-15T13:13:19.546293+00:00"
+}

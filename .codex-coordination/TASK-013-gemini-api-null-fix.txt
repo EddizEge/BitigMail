@@ -1,0 +1,7 @@
+TASK-013 minimal backend API null-contract fix. EDIT FILES ONLY. Do not run tests/build/server. Do not edit core MIME fidelity/calibration/converter, frontend, docs, fixtures, or results.
+
+Real TestingHost HTTP flow sent `/api/mime/selection/preview` with JSON `folderIds: null`, `startDate: null`, `endDate: null`. Analyze/preview/target returned 200, then `/api/mime/start` returned 400 `{ "error": "Value cannot be null. (Parameter 'collection')" }`.
+
+Static cause: the server-created RegisteredSelection/ConversionSelectionFilter can retain a null FolderIds collection from the optional wire field. JobManager.StartMimeJob calls SaveJobRecordLocked(CloneJobRecord(record)); CloneJobRecord constructs `new List<string>(r.SelectionFilter.FolderIds)`, throwing for the null collection. Optional `folderIds: null` means whole-source selection and must be accepted equivalently to an omitted/empty folder list.
+
+Normalize this at the authoritative MIME preview/selection boundary so persisted models contain non-null collections, and defensively make cloning/deserialization backward-compatible with old/null persisted optional collections. Preserve exact own-folder semantics when an explicit non-empty list is supplied. Add a focused HTTP/model regression test proving null/omitted folderIds can preview then start, while explicit folders remain unchanged. Keep the change minimal and compile-ready. Return changed files only; do not claim tests passed.

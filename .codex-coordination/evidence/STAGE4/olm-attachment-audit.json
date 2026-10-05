@@ -1,0 +1,13 @@
+{
+  "status": "FIDELITY_GAP",
+  "sourceSha256": "A3AA54A01157618B1A45949F25F750D2A762984BE098B786F285930A6A468CE7",
+  "sourceMatchesProbe": true,
+  "xmlEmailElements": 22,
+  "attachmentReferences": 38,
+  "missingPhysicalPayloads": 0,
+  "matchingPhysicalHashes": 33,
+  "expectedUnmatched": 5,
+  "observedUnmatched": 2,
+  "sdkNullBinaryAttachments": 3,
+  "qualification": "BinaryData extraction alone is not accepted for OLM preservation. Does not establish whether a different SDK attachment extraction path preserves the content."
+}

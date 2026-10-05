@@ -1,0 +1,658 @@
+{
+  "pass": true,
+  "finished": true,
+  "checks": [
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/session status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "filtered independent expected count",
+      "pass": true
+    },
+    {
+      "name": "filtered independent expected attachments",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/preview status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "filtered can transfer",
+      "pass": true
+    },
+    {
+      "name": "filtered preview count",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/transfer/imap/preview/iprev_707092d016f6429d9c2bbe48270e9e70?companyId=astra-imap-2e18a206&projectId=imap-pilot status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "filtered frozen preview reload totalSourceItems",
+      "pass": true
+    },
+    {
+      "name": "filtered frozen preview reload eligibleItemsCount",
+      "pass": true
+    },
+    {
+      "name": "filtered frozen preview reload excludedCount",
+      "pass": true
+    },
+    {
+      "name": "filtered frozen preview reload missingDateExcludedCount",
+      "pass": true
+    },
+    {
+      "name": "filtered frozen preview reload deletedExcludedCount",
+      "pass": true
+    },
+    {
+      "name": "filtered frozen preview reload folders",
+      "pass": true
+    },
+    {
+      "name": "filtered frozen preview reload canTransfer",
+      "pass": true
+    },
+    {
+      "name": "filtered frozen preview reload blockerReason",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/start status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/start status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "filtered idempotent start",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-f8db728b68e0 status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-f8db728b68e0 status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "filtered completed",
+      "pass": true
+    },
+    {
+      "name": "filtered frozen scope",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-f8db728b68e0/report status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "filtered dedicated IMAP report",
+      "pass": true
+    },
+    {
+      "name": "filtered report original source count",
+      "pass": true
+    },
+    {
+      "name": "filtered report frozen date filter",
+      "pass": true
+    },
+    {
+      "name": "filtered target UID evidence",
+      "pass": true
+    },
+    {
+      "name": "filtered independent target fidelity",
+      "pass": true
+    },
+    {
+      "name": "filtered source unchanged",
+      "pass": true
+    },
+    {
+      "name": "filtered actual attachment count",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/resume/job-f8db728b68e0 status 409",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "filtered rejected completed resume adds no duplicates",
+      "pass": true
+    },
+    {
+      "name": "full independent expected count",
+      "pass": true
+    },
+    {
+      "name": "full independent expected attachments",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/preview status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "full can transfer",
+      "pass": true
+    },
+    {
+      "name": "full preview count",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/transfer/imap/preview/iprev_3e386a8b747a4d5887891a6948d15fc8?companyId=astra-imap-2e18a206&projectId=imap-pilot status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "full frozen preview reload totalSourceItems",
+      "pass": true
+    },
+    {
+      "name": "full frozen preview reload eligibleItemsCount",
+      "pass": true
+    },
+    {
+      "name": "full frozen preview reload excludedCount",
+      "pass": true
+    },
+    {
+      "name": "full frozen preview reload missingDateExcludedCount",
+      "pass": true
+    },
+    {
+      "name": "full frozen preview reload deletedExcludedCount",
+      "pass": true
+    },
+    {
+      "name": "full frozen preview reload folders",
+      "pass": true
+    },
+    {
+      "name": "full frozen preview reload canTransfer",
+      "pass": true
+    },
+    {
+      "name": "full frozen preview reload blockerReason",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/start status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/start status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "full idempotent start",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-01a862ed0aeb status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-01a862ed0aeb status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-01a862ed0aeb status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "full completed",
+      "pass": true
+    },
+    {
+      "name": "full frozen scope",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-01a862ed0aeb/report status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "full dedicated IMAP report",
+      "pass": true
+    },
+    {
+      "name": "full report original source count",
+      "pass": true
+    },
+    {
+      "name": "full target UID evidence",
+      "pass": true
+    },
+    {
+      "name": "full independent target fidelity",
+      "pass": true
+    },
+    {
+      "name": "full source unchanged",
+      "pass": true
+    },
+    {
+      "name": "full actual attachment count",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/resume/job-01a862ed0aeb status 409",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "full rejected completed resume adds no duplicates",
+      "pass": true
+    },
+    {
+      "name": "reverse independent expected count",
+      "pass": true
+    },
+    {
+      "name": "reverse independent expected attachments",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/preview status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "reverse can transfer",
+      "pass": true
+    },
+    {
+      "name": "reverse preview count",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/transfer/imap/preview/iprev_ccadb5d39c79475db6f6af31df318213?companyId=astra-imap-2e18a206&projectId=imap-pilot status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "reverse frozen preview reload totalSourceItems",
+      "pass": true
+    },
+    {
+      "name": "reverse frozen preview reload eligibleItemsCount",
+      "pass": true
+    },
+    {
+      "name": "reverse frozen preview reload excludedCount",
+      "pass": true
+    },
+    {
+      "name": "reverse frozen preview reload missingDateExcludedCount",
+      "pass": true
+    },
+    {
+      "name": "reverse frozen preview reload deletedExcludedCount",
+      "pass": true
+    },
+    {
+      "name": "reverse frozen preview reload folders",
+      "pass": true
+    },
+    {
+      "name": "reverse frozen preview reload canTransfer",
+      "pass": true
+    },
+    {
+      "name": "reverse frozen preview reload blockerReason",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/start status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/start status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "reverse idempotent start",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-898622e8b805 status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-898622e8b805 status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "reverse completed",
+      "pass": true
+    },
+    {
+      "name": "reverse frozen scope",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-898622e8b805/report status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "reverse dedicated IMAP report",
+      "pass": true
+    },
+    {
+      "name": "reverse report original source count",
+      "pass": true
+    },
+    {
+      "name": "reverse target UID evidence",
+      "pass": true
+    },
+    {
+      "name": "reverse independent target fidelity",
+      "pass": true
+    },
+    {
+      "name": "reverse source unchanged",
+      "pass": true
+    },
+    {
+      "name": "reverse actual attachment count",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/resume/job-898622e8b805 status 409",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "reverse rejected completed resume adds no duplicates",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/preview status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "empty preview blocked",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/imap/start status 409",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "response no secret",
+      "pass": true
+    },
+    {
+      "name": "GET /api/transfer/imap/preview/iprev_707092d016f6429d9c2bbe48270e9e70?companyId=foreign-company&projectId=imap-pilot status 409",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    }
+  ],
+  "jobs": [
+    {
+      "label": "filtered",
+      "jobId": "job-f8db728b68e0",
+      "previewId": "iprev_707092d016f6429d9c2bbe48270e9e70",
+      "idempotencyKey": "169a2a49c42f4b1a9e6ba9da23060ad8",
+      "mapping": {
+        "Projeler/İstanbul": "AstraProduct9ed23eed5d/Filtered"
+      }
+    },
+    {
+      "label": "full",
+      "jobId": "job-01a862ed0aeb",
+      "previewId": "iprev_3e386a8b747a4d5887891a6948d15fc8",
+      "idempotencyKey": "22ac62bcf02a42e68f4a5b0a2fd4f3f9",
+      "mapping": {
+        "INBOX": "AstraProduct9ed23eed5d/Full/INBOX",
+        "Gönderilenler": "AstraProduct9ed23eed5d/Full/Gönderilenler",
+        "Projeler/İstanbul": "AstraProduct9ed23eed5d/Full/Projeler/İstanbul"
+      }
+    },
+    {
+      "label": "reverse",
+      "jobId": "job-898622e8b805",
+      "previewId": "iprev_ccadb5d39c79475db6f6af31df318213",
+      "idempotencyKey": "c9539f3f9bd448149a130f1f5b796866",
+      "mapping": {
+        "AstraProduct9ed23eed5d/Filtered": "AstraReverse9ed23eed5d"
+      }
+    }
+  ],
+  "evidenceDirectory": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-task014-qa\\transfer-ec286119519a"
+}

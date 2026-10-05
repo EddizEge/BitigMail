@@ -1,0 +1,27 @@
+Implement TASK-013 frontend integration and the one authorized TestingHost tree-fixture correction. EDIT FILES ONLY; do not run tests/build/servers. Do not edit MIME engine fidelity/converter/JobManager/backend models, original fixtures, docs, or results.
+
+Read completely:
+- .codex-coordination/TASK-013-frontend-checkpoint.md
+- C:/Users/Eddiz/AppData/Local/Temp/bitigmail-task013-qa/api-3941cd11/full-eml.json
+- C:/Users/Eddiz/AppData/Local/Temp/bitigmail-task013-qa/api-3941cd11/full-mbox.json
+
+Use these real camelCase HTTP objects exactly for TypeScript types, client methods, mocks, live job/report restoration and download. Do not invent handle prefixes or report fields. Backend gates are final: 152/152 full and 29/29 targeted.
+
+UI requirements:
+- Within Aktarım ve dönüşüm -> Dönüştürme, preserve the existing OST workflow and add an explicit EML/MBOX workflow (a focused LocalMimeWorkflow component is preferred).
+- Source modes: multiple EML files, EML directory tree, and one MBOX explicitly labelled mboxrd. Explain tree relative-folder preservation, MBOX single-folder mapping, and that resulting PST can be selected in existing Arşivleme for year/size splitting.
+- Show server-authoritative source/message/attachment/folder counts, ignored non-EML count, missing/invalid dates, source-set fingerprint (never one-file SHA), exact own-folder checkboxes, inclusive UTC+03 dates, immutable preview, native new-PST target, frozen company/project context.
+- IMPORTANT selection semantics: backend null/empty folderIds means all folders. UI 'clear all' must be a local zero-selection state with start disabled; never send [] while displaying none selected. To request all folders, explicitly show all selected and use null/[] consistently. Explicit non-empty list means exact own-folders only.
+- Source/mode/filter/context changes synchronously invalidate target/preview/start and stale async responses must be ignored. Explain every disabled/blocking state.
+- Persisted `jobKind: mime-import` must render in live workflow, Job Center reopen/refresh and report download. Display output path/counts and conspicuous amber `Deneme işaretleri içeriyor` for `overallQualification: DIFFERENCES`; never say lossless/PASS. Distinguish measured retained original content from unmeasured fields.
+- Preserve session/bootstrap/no-store/security behavior and all OST/split UI behavior. No provider connection and no second splitter.
+- Follow Vercel React practices: avoid async waterfalls where independent, stable callbacks/primitive effect dependencies, functional updates, no inline components, minimal new bundle weight.
+
+Tests:
+- Add meaningful Vitest tests for three modes, exact-folder/clear-all semantics, dates/context, stale response invalidation, empty/trial/error blockers, real-wire report restoration/download and amber differences.
+- Add/update headless Playwright tests for the real TestingHost flows expected by the checkpoint; native pickers remain unautomated beyond TestingHost adapters. Browser plugin is unavailable, regular Playwright is authorized.
+
+Authorized TestingHost correction only:
+- In TestingFilePickerService `corpus-tree`, do not point directly at the original flat EML directory. Build an isolated task-owned Temp tree from immutable `fixtures/mail-corpus-v1/manifest.json` mapping and copied original EML bytes: Inbox 5, Sent 3, Projeler/Istanbul 4. Include one harmless non-EML file so ignoredNonEmlFilesCount=1. Closed fixture ID remains `corpus-tree`; no arbitrary path input and originals unchanged. Add a focused deterministic test. Do not change other backend behavior.
+
+Return a concise changed-file list and concrete unresolved issue. Do not claim tests passed.

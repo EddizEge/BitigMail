@@ -1,0 +1,529 @@
+{
+  "pass": true,
+  "base": "http://127.0.0.1:6174",
+  "scope": {
+    "companyId": "astra-oauth-f53cda73",
+    "projectId": "m365-pilot"
+  },
+  "checks": [
+    {
+      "name": "POST /api/session status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/start status 401",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/start status 403",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/start status 400",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/start status 415",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/start status 400",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/start status 400",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/start status 400",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/start status 400",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/start status 400",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/start status 400",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "no initial accounts",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/start status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "GET /api/oauth/microsoft/operations/op_f17221906c6e705b5bceec87d93c7184 status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "cancel produced real MSAL authorization link",
+      "pass": true
+    },
+    {
+      "name": "pinned HTTPS Microsoft authority",
+      "pass": true
+    },
+    {
+      "name": "PKCE S256 and form_post",
+      "pass": true
+    },
+    {
+      "name": "only delegated IMAP plus standard OIDC scopes",
+      "pass": true
+    },
+    {
+      "name": "GET /api/oauth/microsoft/operations/op_f17221906c6e705b5bceec87d93c7184 status 409",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/operations/op_f17221906c6e705b5bceec87d93c7184/cancel status 409",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/operations/op_f17221906c6e705b5bceec87d93c7184/cancel status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "GET /api/oauth/microsoft/operations/op_f17221906c6e705b5bceec87d93c7184 status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "terminal link cleared",
+      "pass": true
+    },
+    {
+      "name": "terminal account absent",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "no phantom account",
+      "pass": true
+    },
+    {
+      "name": "no auth values echoed",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/operations/op_f17221906c6e705b5bceec87d93c7184/cancel status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/start status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "GET /api/oauth/microsoft/operations/op_6496a27d1d8ec07fa7f1f4720d3447f1 status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "wrong-state produced real MSAL authorization link",
+      "pass": true
+    },
+    {
+      "name": "pinned HTTPS Microsoft authority",
+      "pass": true
+    },
+    {
+      "name": "PKCE S256 and form_post",
+      "pass": true
+    },
+    {
+      "name": "only delegated IMAP plus standard OIDC scopes",
+      "pass": true
+    },
+    {
+      "name": "GET /api/oauth/microsoft/operations/op_6496a27d1d8ec07fa7f1f4720d3447f1 status 409",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/operations/op_6496a27d1d8ec07fa7f1f4720d3447f1/cancel status 409",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "callback on loopback",
+      "pass": true
+    },
+    {
+      "name": "GET /api/oauth/microsoft/operations/op_6496a27d1d8ec07fa7f1f4720d3447f1 status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "terminal link cleared",
+      "pass": true
+    },
+    {
+      "name": "terminal account absent",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "no phantom account",
+      "pass": true
+    },
+    {
+      "name": "no auth values echoed",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/operations/op_6496a27d1d8ec07fa7f1f4720d3447f1/cancel status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/start status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "GET /api/oauth/microsoft/operations/op_eb807777456aa1b9e3ced38eb4f83a20 status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "denied produced real MSAL authorization link",
+      "pass": true
+    },
+    {
+      "name": "pinned HTTPS Microsoft authority",
+      "pass": true
+    },
+    {
+      "name": "PKCE S256 and form_post",
+      "pass": true
+    },
+    {
+      "name": "only delegated IMAP plus standard OIDC scopes",
+      "pass": true
+    },
+    {
+      "name": "GET /api/oauth/microsoft/operations/op_eb807777456aa1b9e3ced38eb4f83a20 status 409",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/operations/op_eb807777456aa1b9e3ced38eb4f83a20/cancel status 409",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "callback on loopback",
+      "pass": true
+    },
+    {
+      "name": "GET /api/oauth/microsoft/operations/op_eb807777456aa1b9e3ced38eb4f83a20 status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "terminal link cleared",
+      "pass": true
+    },
+    {
+      "name": "terminal account absent",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    },
+    {
+      "name": "no phantom account",
+      "pass": true
+    },
+    {
+      "name": "no auth values echoed",
+      "pass": true
+    },
+    {
+      "name": "POST /api/oauth/microsoft/operations/op_eb807777456aa1b9e3ced38eb4f83a20/cancel status 200",
+      "pass": true
+    },
+    {
+      "name": "no-store",
+      "pass": true
+    },
+    {
+      "name": "public DTO excludes credentials",
+      "pass": true
+    }
+  ],
+  "realMsal": true,
+  "liveLoginPerformed": false,
+  "mailServerConnected": false
+}

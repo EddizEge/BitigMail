@@ -1,0 +1,105 @@
+{
+  "runId": "smoke-12-a",
+  "small": true,
+  "phases": {
+    "import": {
+      "request": {
+        "companyId": "company-task020-scale",
+        "projectId": "project-task020-1g-gate",
+        "companyName": "TASK029 Measurement",
+        "projectName": "smoke-12-a",
+        "previewId": "bprev_5af6259183fb44978884bd85cafe5197",
+        "idempotencyKey": "f422aaa6bcfd4b73af2c05d17b6b2d59"
+      },
+      "startedAtUtc": "2026-09-15T13:13:19.754265+00:00",
+      "jobId": "job-c762527cde9a",
+      "archiveId": null,
+      "segments": [
+        {
+          "attempt": "attempt-b332115d",
+          "elapsedSec": 1.0688664000190329,
+          "cpuSec": 0.65625,
+          "terminalStatus": "completed"
+        }
+      ],
+      "outputPath": null,
+      "complete": true,
+      "completedAtUtc": "2026-09-15T13:13:20.848616+00:00"
+    },
+    "mbox": {
+      "request": {
+        "companyId": "company-task020-scale",
+        "projectId": "project-task020-1g-gate",
+        "companyName": "TASK029 Measurement",
+        "projectName": "smoke-12-a",
+        "previewId": "bprev_c537b9e46889442d9a25711525660898",
+        "idempotencyKey": "58bd135b8f5247e884ba03cbfc6e8a4a"
+      },
+      "startedAtUtc": "2026-09-15T13:13:20.975535+00:00",
+      "jobId": "job-d21b224e34ee",
+      "archiveId": null,
+      "segments": [
+        {
+          "attempt": "attempt-b332115d",
+          "elapsedSec": 0.5423971000127494,
+          "cpuSec": 0.265625,
+          "terminalStatus": "completed"
+        }
+      ],
+      "outputPath": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-qa-split\\split-out-8590913ebda7402f8a8ddcccc6212b98\\bridge-export-job-d21b224e34ee",
+      "complete": true,
+      "completedAtUtc": "2026-09-15T13:13:21.524819+00:00"
+    },
+    "eml": {
+      "request": {
+        "companyId": "company-task020-scale",
+        "projectId": "project-task020-1g-gate",
+        "companyName": "TASK029 Measurement",
+        "projectName": "smoke-12-a",
+        "previewId": "bprev_05054b5e5fa64b3c8451a68754a92f82",
+        "idempotencyKey": "f108809010bd49bfa99fd9090b4ee987"
+      },
+      "startedAtUtc": "2026-09-15T13:13:21.635743+00:00",
+      "jobId": "job-e835fb1088f6",
+      "archiveId": null,
+      "segments": [
+        {
+          "attempt": "attempt-b332115d",
+          "elapsedSec": 0.5465419000247493,
+          "cpuSec": 0.390625,
+          "terminalStatus": "completed"
+        }
+      ],
+      "outputPath": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-qa-split\\split-out-0aa1ab3ac5c942218a26bc3964737057\\bridge-export-job-e835fb1088f6",
+      "complete": true,
+      "completedAtUtc": "2026-09-15T13:13:22.189363+00:00"
+    },
+    "archive": {
+      "request": {
+        "companyId": "company-task020-scale",
+        "projectId": "project-task020-1g-gate",
+        "companyName": "TASK029 Measurement",
+        "projectName": "smoke-12-a",
+        "previewId": "aprv_19b3a02f7b6948bd883d9469937b9253",
+        "idempotencyKey": "f6e0901e5b1a480e9d83727405f183ed"
+      },
+      "startedAtUtc": "2026-09-15T13:13:22.393352+00:00",
+      "jobId": "job-21c36c21001d",
+      "archiveId": "arc_190c4012af344201",
+      "segments": [
+        {
+          "attempt": "attempt-b332115d",
+          "elapsedSec": 0.5461259000003338,
+          "cpuSec": 0.265625,
+          "terminalStatus": "completed"
+        }
+      ],
+      "complete": true,
+      "completedAtUtc": "2026-09-15T13:13:22.944276+00:00"
+    }
+  },
+  "rawSourceBytes": 13013,
+  "updatedAtUtc": "2026-09-15T13:13:24.140669+00:00",
+  "integrityPass": true,
+  "oracleAttempt": "attempt-b332115d"
+}

@@ -1,0 +1,11 @@
+{
+  "buildErrors": 0,
+  "task": "TASK-015",
+  "finalNormalPid": 39752,
+  "cancellation": "cancel-wins creates no account; connected-wins returns connected account; failed terminal preserved",
+  "liveProviderAccepted": false,
+  "backendPassed": 278,
+  "backendFailed": 0,
+  "backendSkipped": 0,
+  "buildWarnings": 0
+}

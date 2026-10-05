@@ -1,0 +1,485 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "POST /api/session status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/session no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/session public projection",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot status",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot no-store",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot no secret echo",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot public projection",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot status",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot no-store",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot no secret echo",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot public projection",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot status",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot no-store",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot no secret echo",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot public projection",
+      "pass": true
+    },
+    {
+      "name": "initial scope empty",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts public projection",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts public projection",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts public projection",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts public projection",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts public projection",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot status",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot no-store",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot no secret echo",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot public projection",
+      "pass": true
+    },
+    {
+      "name": "both accounts scoped",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/test status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/test no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/test no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/test public projection",
+      "pass": true
+    },
+    {
+      "name": "source actual authentication",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_13f36eee9b4243e99688b712939ca6f3/test status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_13f36eee9b4243e99688b712939ca6f3/test no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_13f36eee9b4243e99688b712939ca6f3/test no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_13f36eee9b4243e99688b712939ca6f3/test public projection",
+      "pass": true
+    },
+    {
+      "name": "target actual authentication",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/test status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/test no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/test no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/test public projection",
+      "pass": true
+    },
+    {
+      "name": "bad password safe failure",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/folders?companyId=astra-imap-274074da&projectId=imap-pilot status",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/folders?companyId=astra-imap-274074da&projectId=imap-pilot no-store",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/folders?companyId=astra-imap-274074da&projectId=imap-pilot no secret echo",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/folders?companyId=astra-imap-274074da&projectId=imap-pilot public projection",
+      "pass": true
+    },
+    {
+      "name": "exact source count INBOX",
+      "pass": true
+    },
+    {
+      "name": "exact source count Gönderilenler",
+      "pass": true
+    },
+    {
+      "name": "exact source count Projeler/İstanbul",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=foreign-company&projectId=imap-pilot status",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=foreign-company&projectId=imap-pilot no-store",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=foreign-company&projectId=imap-pilot no secret echo",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=foreign-company&projectId=imap-pilot public projection",
+      "pass": true
+    },
+    {
+      "name": "foreign scope list empty",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7?companyId=foreign-company&projectId=imap-pilot status",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7?companyId=foreign-company&projectId=imap-pilot no-store",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7?companyId=foreign-company&projectId=imap-pilot no secret echo",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7?companyId=foreign-company&projectId=imap-pilot public projection",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/folders?companyId=foreign-company&projectId=imap-pilot status",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/folders?companyId=foreign-company&projectId=imap-pilot no-store",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/folders?companyId=foreign-company&projectId=imap-pilot no secret echo",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/folders?companyId=foreign-company&projectId=imap-pilot public projection",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/update status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/update no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/update no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/update public projection",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/update status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/update no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/update no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/update public projection",
+      "pass": true
+    },
+    {
+      "name": "version increments",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/update status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/update no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/update no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/update public projection",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7?companyId=astra-imap-274074da&projectId=imap-pilot status",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7?companyId=astra-imap-274074da&projectId=imap-pilot no-store",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7?companyId=astra-imap-274074da&projectId=imap-pilot no secret echo",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7?companyId=astra-imap-274074da&projectId=imap-pilot public projection",
+      "pass": true
+    },
+    {
+      "name": "stale update unchanged",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/test status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/test no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/test no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_3fdaa51c42c5433a979d1a60c26617c7/test public projection",
+      "pass": true
+    },
+    {
+      "name": "password retained after metadata update",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts public projection",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_c8d808f7360f4d4fa9b48818a43b9018/delete status",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_c8d808f7360f4d4fa9b48818a43b9018/delete no-store",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_c8d808f7360f4d4fa9b48818a43b9018/delete no secret echo",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts/acc_c8d808f7360f4d4fa9b48818a43b9018/delete public projection",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_c8d808f7360f4d4fa9b48818a43b9018?companyId=astra-imap-274074da&projectId=imap-pilot status",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_c8d808f7360f4d4fa9b48818a43b9018?companyId=astra-imap-274074da&projectId=imap-pilot no-store",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_c8d808f7360f4d4fa9b48818a43b9018?companyId=astra-imap-274074da&projectId=imap-pilot no secret echo",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_c8d808f7360f4d4fa9b48818a43b9018?companyId=astra-imap-274074da&projectId=imap-pilot public projection",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot status",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot no-store",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot no secret echo",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts?companyId=astra-imap-274074da&projectId=imap-pilot public projection",
+      "pass": true
+    },
+    {
+      "name": "disposable deletion preserves original accounts",
+      "pass": true
+    },
+    {
+      "name": "account persisted",
+      "pass": true
+    },
+    {
+      "name": "no plaintext password on disk",
+      "pass": true
+    },
+    {
+      "name": "DPAPI ciphertext envelope",
+      "pass": true
+    }
+  ]
+}

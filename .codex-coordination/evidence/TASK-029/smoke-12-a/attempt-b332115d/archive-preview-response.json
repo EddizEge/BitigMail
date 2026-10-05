@@ -1,0 +1,26 @@
+{
+  "previewId": "aprv_19b3a02f7b6948bd883d9469937b9253",
+  "archiveName": "Task029-smoke-12-a",
+  "companyId": "company-task020-scale",
+  "projectId": "project-task020-1g-gate",
+  "companyName": "TASK029 Measurement",
+  "projectName": "smoke-12-a",
+  "sourceKind": "bridge-export",
+  "dialect": "eml-tree",
+  "sourceFingerprint": "bridge-export:job-e835fb1088f6:2026-09-15T13:13:21.8447777+00:00:33f896639895a63679ad8bb30f89088cadb9199000c0d1988e0ff877e66fe42b",
+  "totalFiles": 12,
+  "totalItems": 12,
+  "totalSizeBytes": 13086,
+  "folders": [
+    {
+      "folderName": "Task029/smoke-12-a/Bulk",
+      "itemCount": 12,
+      "totalSizeBytes": 13086
+    }
+  ],
+  "canIngest": true,
+  "blockerReason": null,
+  "estimatedRequiredBytes": 269274232,
+  "availableFreeBytes": 167733137408,
+  "estimateBasis": "Aynı hacimde ham staging+yayımlanmış arşiv ile SQLite indeks/WAL geçici alan toplamı"
+}

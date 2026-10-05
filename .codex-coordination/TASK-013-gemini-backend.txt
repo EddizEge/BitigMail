@@ -1,0 +1,16 @@
+You are the implementation executor for TASK-013 backend/API. Work directly in the current repository and EDIT FILES ONLY. Do not run builds/tests/servers, do not launch UI, and do not modify frontend files. SOL will run deterministic verification.
+
+Read these authoritative files completely before editing:
+- .codex-coordination/inbox/TASK-013.md
+- .codex-coordination/TASK-013-backend-checkpoint.md
+- docs/MIME_IMPORT_WORKFLOW.md
+
+Implement the authorized backend/API checkpoint, not a new design. Preserve every existing OST conversion/PST split contract. The proven adapter is mandatory: MimeKitLite 4.17.0 and Aspose.Email 24.8 consume the SAME raw MIME bytes; never MimeKit.WriteTo into Aspose. For MBOX, stream records and perform exactly one raw mboxrd dequote before MIME transfer decoding. Preserve exact source plain and HTML plus all measured evaluation additions; direct-set KnownPropertyList.Body from a separately retained expected marked-plain string. No Trim or marker cutting. Deterministically calibrate/recognize the pinned SDK's vendor additions using internal synthetic sentinels and fail closed on unknown mutations. Output qualification is always DIFFERENCES in evaluation mode. Content/attachment/CID loss blocks publication.
+
+Implement engine, LocalHost native typed source handles/pickers, shared JobManager integration, TestingHost closed fixture IDs, serialization/report persistence, and meaningful backend tests as specified in the checkpoint. Required integrity includes frozen canonical manifest/fingerprint, duplicates, exact own-folder and UTC+03 date selection, immutable preview, pre-consume/pre-publish membership+hash validation, new-target-only atomic publication, restart/idempotency/shared slot behavior, optional MIME section on the common report model with backward-compatible old reports, and an approved completed MIME job ID route into existing split tests. No raw client paths.
+
+Add pinned package/license notice without upgrading other dependencies. TestingHost must retain arbitrary-path refusal. Do not touch original fixtures under fixtures/mail-corpus-v1 or fixtures/mime-import-v1. Do not edit historical GateA/GateB experiments in this turn. Do not edit docs or .codex-coordination/results.
+
+Add a focused integration/contract test that exercises a small allowlisted source through analyze/preview/job/report and serializes the actual JSON examples. The test should write a JSON artifact under the OS temp directory and print an easily searchable line exactly beginning TASK013_BACKEND_WIRE= followed by its absolute path. Cover the checkpoint's high-value failure cases with deterministic tests, prioritizing real corpus 12 messages/4 attachments/1 CID, exact folder/date/duplicates, escape edges, malformed/empty/missing-date, trial limit, mutations/reparse/collision, persistence/shared slot/idempotency/restart, and report reload.
+
+Keep the change bounded and compile-ready. At the end, respond with a concise changed-file list and any concrete unresolved integrity issue. Do not claim tests passed because you did not run them.

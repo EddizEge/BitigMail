@@ -1,0 +1,4 @@
+TASK-012 compile fix only. The controller ran typecheck/build; both fail in prototype/src/components/archive/LocalArchiveWorkflow.tsx:
+- line 131: Property displayPath does not exist on type never.
+- lines 283 and 287: Property sha256 does not exist on the selectedSource/effectiveSource union because the selected source branch lacks sha256.
+Fix the TypeScript modeling/narrowing cleanly while preserving all current behavior. Frontend files only. Do not run commands/tests or edit backend/docs/results. Reply briefly.

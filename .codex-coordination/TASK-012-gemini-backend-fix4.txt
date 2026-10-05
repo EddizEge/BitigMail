@@ -1,0 +1,11 @@
+TASK-012 final compile/publication-integrity correction. FILE EDITS ONLY; run nothing, no frontend.
+
+Build error: PstSplitter.cs ~94 calls EvaluateSelection with nonexistent named parameter `startDateStr`. Reconcile with the actual production signature/property names; do not bypass selection/preflight.
+
+Critical post-verification integrity gap still open:
+- For each part, immediately AFTER the first successful full VerifyReopenedPst/fault-hook, measure and store its verified baseline actual closed bytes and SHA-256.
+- After BeforePublicationHook, recompute each candidate's bytes/SHA and compare to that verified baseline. If either differs, fail closed. Do NOT overwrite the baseline with the mutated measurements and accept count-only equality. Continue enforcing size cap.
+- The final staging exact-set check must use GetFileSystemEntries, not only GetFiles, so unexpected files OR subdirectories block publication. Exact expected set is finalized PST candidates plus the manifest only at the appropriate phase; no leftovers.
+- Add a test where BeforePublicationHook changes body or attachment content while preserving item count; final bundle must not exist. Add unexpected subdirectory negative test. Preserve all sentinel/manifest/path/persistence fixes.
+
+Keep backend pending result and do not claim tests ran.

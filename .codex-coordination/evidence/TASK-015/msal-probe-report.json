@@ -1,0 +1,38 @@
+[
+  {
+    "mode": "cancel",
+    "pass": true,
+    "code": "cancelled",
+    "sdk": "Microsoft.Identity.Client4.89.0",
+    "policyAccepted": true,
+    "pkceS256": true,
+    "statePresent": true,
+    "listenerClosed": true,
+    "browserLaunched": false,
+    "liveLoginPerformed": false
+  },
+  {
+    "mode": "wrong-state",
+    "pass": true,
+    "code": "state_mismatch",
+    "sdk": "Microsoft.Identity.Client4.89.0",
+    "policyAccepted": true,
+    "pkceS256": true,
+    "statePresent": true,
+    "listenerClosed": true,
+    "browserLaunched": false,
+    "liveLoginPerformed": false
+  },
+  {
+    "mode": "denied",
+    "pass": true,
+    "code": "access_denied",
+    "sdk": "Microsoft.Identity.Client4.89.0",
+    "policyAccepted": true,
+    "pkceS256": true,
+    "statePresent": true,
+    "listenerClosed": true,
+    "browserLaunched": false,
+    "liveLoginPerformed": false
+  }
+]

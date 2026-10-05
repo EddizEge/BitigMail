@@ -1,0 +1,12 @@
+{
+  "completed": false,
+  "results": [
+    {
+      "width": 1660,
+      "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByTestId('tree-archive-arc_e0987a2b59fb421d')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByTestId('tree-archive-arc_e0987a2b59fb421d') with timeout 15000ms\n  - waiting for getByTestId('tree-archive-arc_e0987a2b59fb421d')\n",
+      "errors": [],
+      "beacons": []
+    }
+  ],
+  "sourceApiReport": ".codex-coordination/evidence/TASK-018/api-f420241575/report.json"
+}

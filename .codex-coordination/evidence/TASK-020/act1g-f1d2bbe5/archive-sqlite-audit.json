@@ -1,0 +1,9 @@
+{
+  "pass": true,
+  "archiveId": "arc_a682b2f758ca4298",
+  "totalMessages": 8192,
+  "ftsIndexedCount": 8192,
+  "integrityCheck": "ok",
+  "dbPath": "C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\runtime\\testing-engine\\archives\\archive-search.db",
+  "scope": "archive filtered global projection, read only"
+}

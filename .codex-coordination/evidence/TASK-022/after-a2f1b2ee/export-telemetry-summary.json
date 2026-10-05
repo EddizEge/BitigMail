@@ -1,0 +1,36 @@
+{
+  "overallPeakWsBytes": 745275392,
+  "overallPeakPrivateBytes": 810319872,
+  "phases": {
+    "idle_pre_export": {
+      "samples": 19,
+      "peakWsBytes": 530456576,
+      "minWsBytes": 530309120,
+      "peakPrivateBytes": 549019648,
+      "minPrivateBytes": 549011456,
+      "peakCpuPct": 14.3,
+      "startTime": "2026-09-14T19:56:32.675262+00:00",
+      "endTime": "2026-09-14T19:56:34.675723+00:00"
+    },
+    "export_active": {
+      "samples": 479,
+      "peakWsBytes": 745275392,
+      "minWsBytes": 516579328,
+      "peakPrivateBytes": 810319872,
+      "minPrivateBytes": 526487552,
+      "peakCpuPct": 559.1,
+      "startTime": "2026-09-14T19:56:34.675723+00:00",
+      "endTime": "2026-09-14T19:57:26.682077+00:00"
+    },
+    "idle_post_export": {
+      "samples": 18,
+      "peakWsBytes": 658501632,
+      "minWsBytes": 658497536,
+      "peakPrivateBytes": 712364032,
+      "minPrivateBytes": 712364032,
+      "peakCpuPct": 0.0,
+      "startTime": "2026-09-14T19:57:26.682077+00:00",
+      "endTime": "2026-09-14T19:57:28.682721+00:00"
+    }
+  }
+}

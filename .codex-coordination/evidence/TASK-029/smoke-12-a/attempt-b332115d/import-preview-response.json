@@ -1,0 +1,46 @@
+{
+  "previewId": "bprev_5af6259183fb44978884bd85cafe5197",
+  "companyId": "company-task020-scale",
+  "projectId": "project-task020-1g-gate",
+  "sourceHandle": "msrc_3ea0d697696540a594b1e0d99d384764",
+  "sourceFingerprint": "c54061d73242e33e14b6ab1b0ee503b62a5852ae8a2c36aaf5e63c3ac0d85deb",
+  "sourceKind": "eml-tree",
+  "targetAccountId": "acc_ad07dbaf54b44cd58bf64e88e037f811",
+  "targetAccountVersion": 1,
+  "totalSourceItems": 12,
+  "eligibleItemsCount": 12,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "Gelen Kutusu",
+      "targetFolder": "Task029/smoke-12-a/Bulk",
+      "totalItems": 5,
+      "eligibleItems": 5,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    },
+    {
+      "sourceFolder": "Gönderilenler",
+      "targetFolder": "Task029/smoke-12-a/Bulk",
+      "totalItems": 3,
+      "eligibleItems": 3,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    },
+    {
+      "sourceFolder": "Projeler/İstanbul",
+      "targetFolder": "Task029/smoke-12-a/Bulk",
+      "totalItems": 4,
+      "eligibleItems": 4,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-15T13:13:19.6288223+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

@@ -1,0 +1,85 @@
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+using MailKit.Net.Imap;
+using MailKit.Security;
+
+namespace BitigMail.Engine.Imap;
+
+/// <summary>
+/// Safe factory and transport manager for MailKit IMAP client connections.
+/// Enforces contract security policies without credential leakage.
+/// </summary>
+public static class ImapClientFactory
+{
+    public static readonly TimeSpan DefaultTimeout = TimeSpan.FromSeconds(30);
+
+    /// <summary>
+    /// Creates and connects an ImapClient for the given account config.
+    /// </summary>
+    public static ImapClient ConnectAndAuthenticate(ImapAccountConfig config, CancellationToken cancellationToken = default)
+    {
+        config.Validate();
+
+        var client = new ImapClient
+        {
+            Timeout = (int)DefaultTimeout.TotalMilliseconds
+        };
+
+        var socketOptions = config.SecurityMode switch
+        {
+            ImapSecurityMode.SslOnConnect => SecureSocketOptions.SslOnConnect,
+            ImapSecurityMode.StartTls => SecureSocketOptions.StartTls,
+            ImapSecurityMode.PlaintextLoopbackLabOnly => SecureSocketOptions.None,
+            _ => throw new InvalidOperationException($"Unsupported security mode {config.SecurityMode}")
+        };
+
+        try
+        {
+            client.Connect(config.Host, config.Port, socketOptions, cancellationToken);
+            client.Authenticate(config.Username, config.Password, cancellationToken);
+            return client;
+        }
+        catch (Exception ex)
+        {
+            client.Dispose();
+            // Sanitize exception to ensure password is never reflected in error messages
+            throw new InvalidOperationException(
+                $"Failed to connect or authenticate to IMAP endpoint '{config.Host}:{config.Port}' for user '{config.Username}': {ex.Message}", ex);
+        }
+    }
+
+    /// <summary>
+    /// Asynchronously creates and connects an ImapClient for the given account config.
+    /// </summary>
+    public static async Task<ImapClient> ConnectAndAuthenticateAsync(ImapAccountConfig config, CancellationToken cancellationToken = default)
+    {
+        config.Validate();
+
+        var client = new ImapClient
+        {
+            Timeout = (int)DefaultTimeout.TotalMilliseconds
+        };
+
+        var socketOptions = config.SecurityMode switch
+        {
+            ImapSecurityMode.SslOnConnect => SecureSocketOptions.SslOnConnect,
+            ImapSecurityMode.StartTls => SecureSocketOptions.StartTls,
+            ImapSecurityMode.PlaintextLoopbackLabOnly => SecureSocketOptions.None,
+            _ => throw new InvalidOperationException($"Unsupported security mode {config.SecurityMode}")
+        };
+
+        try
+        {
+            await client.ConnectAsync(config.Host, config.Port, socketOptions, cancellationToken);
+            await client.AuthenticateAsync(config.Username, config.Password, cancellationToken);
+            return client;
+        }
+        catch (Exception ex)
+        {
+            client.Dispose();
+            throw new InvalidOperationException(
+                $"Failed to connect or authenticate to IMAP endpoint '{config.Host}:{config.Port}' for user '{config.Username}': {ex.Message}", ex);
+        }
+    }
+}

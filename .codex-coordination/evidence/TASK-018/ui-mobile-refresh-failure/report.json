@@ -1,0 +1,18 @@
+{
+  "completed": false,
+  "results": [
+    {
+      "width": 390,
+      "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByTestId('tree-archive-arc_0bbddc0d221f4e95')\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" getByTestId('tree-archive-arc_0bbddc0d221f4e95') with timeout 15000ms\n  - waiting for getByTestId('tree-archive-arc_0bbddc0d221f4e95')\n",
+      "errors": [],
+      "issues": [
+        {
+          "case": "authoritative preview owner display name",
+          "error": "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  getByTestId('preview-location-company')\nExpected: \"B Şirketi api-f420241575\"\nReceived: \"api-f420241575-b\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"toHaveText\" getByTestId('preview-location-company') with timeout 5000ms\n  - waiting for getByTestId('preview-location-company')\n    14 × locator resolved to <span data-testid=\"preview-location-company\">api-f420241575-b</span>\n       - unexpected value \"api-f420241575-b\"\n"
+        }
+      ],
+      "beacons": []
+    }
+  ],
+  "sourceApiReport": ".codex-coordination/evidence/TASK-018/api-f420241575/report.json"
+}

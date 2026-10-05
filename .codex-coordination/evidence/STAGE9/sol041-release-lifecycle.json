@@ -1,0 +1,52 @@
+{
+  "taskId": "TASK-041",
+  "release": "artifacts/BitigMail-Internal-0.9.1",
+  "releaseBytes": 589211058,
+  "setupSha256": "ce5ec12b881ed0a592fcdfc1f9cfdae7ee73539c2f9650ab39e36ed51f4d31ba",
+  "hashEntries": 1118,
+  "hashFailures": 0,
+  "authenticode": "NotSigned",
+  "cleanWindows": "NOT_RUN_WINDOWS_SANDBOX_ABSENT",
+  "isolatedLifecycle": {
+    "installExit": 0,
+    "durableLauncherExit": 0,
+    "webViewCaptureBytes": 189836,
+    "engineProcessesAfterExit": 0,
+    "uninstallExit": 0,
+    "profileSchemaPreserved": true,
+    "installedVersionFilesAfterUninstall": 0
+  },
+  "upgradeRollback": {
+    "install090Exit": 0,
+    "update091Exit": 0,
+    "activeAfterUpdate": "0.9.1",
+    "rollbackExit": 0,
+    "activeAfterRollback": "0.9.0",
+    "uninstallExit": 0,
+    "profilePreserved": true
+  },
+  "directInstalledLaunch": {
+    "installExit": 0,
+    "launchWithoutInstallRootArgumentExit": 0,
+    "capture": "C:/Users/Eddiz/AppData/Local/Temp/BitigMail-RC-Direct-e5449cc5bffd4a9594c6ba0b66676a3b/direct-installed.png",
+    "captureBytes": 189836,
+    "engineProcessesAfterExit": 0,
+    "uninstallExit": 0
+  },
+  "installedVersionInference": {
+    "fixture": "C:/Users/Eddiz/AppData/Local/Temp/BitigMail-Inference-30f96a2ea4d043b690f0ea77d9de0733",
+    "obsoleteDirectExit": 1,
+    "obsoleteErrorMentionsInactiveVersion": true,
+    "engineProcessesAfterObsoleteAttempt": 0,
+    "currentDirectExit": 0,
+    "currentCaptureBytes": 189836,
+    "engineProcessesAfterCurrentExit": 0
+  },
+  "setupUiCapture": "C:/Users/Eddiz/AppData/Local/Temp/BitigMail-Setup-0.9.1.png",
+  "verification": {
+    "installerBoundary": "13/13 PASS",
+    "productionHostBoundary": "11/11 PASS",
+    "backend": "877/877 PASS",
+    "frontend": "151/151 PASS; typecheck/lint/build PASS"
+  }
+}

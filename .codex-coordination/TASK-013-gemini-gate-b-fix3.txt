@@ -1,0 +1,20 @@
+TASK-013 Gate B compile + source-to-SDK fidelity candidate. GateB files only; edit files, do not run commands or touch product/docs/dependencies/fixtures.
+
+Compile error from escape-edge addition:
+- GateBExperimentTests.cs(1587,24) CS0136 local `unescapedAscii` shadows an enclosing local. Rename/restructure cleanly.
+
+More importantly, Root independent output oracle found Gate B's current claim `all original content preserved` is false even though SDK->PST 12/12 is true:
+- msg09/msg10: original trailing LF is lost at MimeKit/Aspose MailMessage -> SDK stage.
+- msg11: original plain text `[Gömülü Görsel: logo.png]` becomes HTML-derived `[cid:proje_logo_cid]` with punctuation/spacing changes in SDK plain body.
+- Other messages: exact vendor plain prefix + original plain, and HTML vendor wrapper + original HTML.
+Evidence: C:\Users\Eddiz\AppData\Local\Temp\bitigmail-task013-qa\independent-5aaf5197\report.json and independent-f463a8da\report.json.
+
+Extend the experiment with a narrow candidate that preserves the measured Aspose evaluation additions WITHOUT deleting/stripping them, but explicitly restores the exact MimeKit/oracle original `text/plain` (including trailing LF and msg11's source plain) into Aspose MailMessage/Mapi before PST. Derive/measure the evaluation banner from the actual SDK load; do not hardcode away or suppress it. Preserve the SDK HTML including evaluation wrapper and original HTML. Then use the proven explicit KnownPropertyList.Body MAPI assignment and test reopened PST.
+
+Report separately:
+- Oracle/MimeKit -> initial Aspose SDK diffs (must show msg09/msg10/msg11 losses).
+- The explicit source-plain restoration plus retained exact evaluation addition.
+- Restored SDK -> reopened PST exact plain+HTML results.
+The success criterion is not original-clean equality: it is exact original plain and HTML present plus only measured evaluation additions, classified `DIFFERENCES`; attachments/CID remain intact. If no candidate achieves this, report failure and keep product gate closed.
+
+Keep escape-edge hard assertions and user decision text from fix2. Reply with changed files/filter only.

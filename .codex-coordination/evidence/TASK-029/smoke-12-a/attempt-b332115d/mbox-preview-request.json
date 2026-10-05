@@ -1,0 +1,16 @@
+{
+  "path": "/api/transfer/bridge/export/preview",
+  "body": {
+    "companyId": "company-task020-scale",
+    "projectId": "project-task020-1g-gate",
+    "companyName": "TASK029 Measurement",
+    "projectName": "smoke-12-a",
+    "sourceAccountId": "acc_ad07dbaf54b44cd58bf64e88e037f811",
+    "targetDirHandle": "dir_e988f4353d634550ac7a08e507b24364",
+    "selectedFolders": [
+      "Task029/smoke-12-a/Bulk"
+    ],
+    "targetFormat": "mboxrd"
+  },
+  "utc": "2026-09-15T13:13:20.854615+00:00"
+}

@@ -1,0 +1,386 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/api/accounts",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/accounts",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/accounts/{accountId}",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/accounts/{accountId}",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/accounts/{accountId}",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/accounts/{accountId}/delete",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/accounts/{accountId}/folders",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/accounts/{accountId}/folders",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/accounts/{accountId}/test",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/accounts/{accountId}/update",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/accounts/test",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/archive/{archiveId}/manifest",
+      "source": "LocalEngineApiEndpoints.Archive.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/archive/{archiveId}/reindex",
+      "source": "LocalEngineApiEndpoints.Archive.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/archive/catalog",
+      "source": "LocalEngineApiEndpoints.Archive.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/archive/ingest/preview",
+      "source": "LocalEngineApiEndpoints.Archive.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/archive/ingest/preview/{previewId}",
+      "source": "LocalEngineApiEndpoints.Archive.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/archive/ingest/resume",
+      "source": "LocalEngineApiEndpoints.Archive.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/archive/ingest/resume/{jobId}",
+      "source": "LocalEngineApiEndpoints.Archive.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/archive/ingest/start",
+      "source": "LocalEngineApiEndpoints.Archive.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/archive/message/preview",
+      "source": "LocalEngineApiEndpoints.Archive.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/archive/picker/source",
+      "source": "LocalEngineApiEndpoints.Archive.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/archive/reindex-all",
+      "source": "LocalEngineApiEndpoints.Archive.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/archive/search",
+      "source": "LocalEngineApiEndpoints.Archive.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/emlx/preview",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/emlx/start",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/jobs",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/jobs/{jobId}",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/jobs/{jobId}/cancel-pending",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/jobs/{jobId}/report",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/jobs/page",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/jobs/start",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/mime/analyze",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/mime/preview",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/mime/selection/preview",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/mime/source/analyze",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/mime/start",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/oauth/google/operations/{id}",
+      "source": "LocalEngineApiEndpoints.GoogleOAuth.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/oauth/google/operations/{id}/cancel",
+      "source": "LocalEngineApiEndpoints.GoogleOAuth.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/oauth/google/start",
+      "source": "LocalEngineApiEndpoints.GoogleOAuth.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/oauth/microsoft/operations/{id}",
+      "source": "LocalEngineApiEndpoints.OAuth.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/oauth/microsoft/operations/{id}/cancel",
+      "source": "LocalEngineApiEndpoints.OAuth.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/oauth/microsoft/start",
+      "source": "LocalEngineApiEndpoints.OAuth.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/outlook-eml/preview",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/outlook-eml/start",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/picker/archive-source",
+      "source": "LocalEngineApiEndpoints.Archive.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/picker/emlx-source",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/picker/mime-source",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/picker/outlook-eml-source",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/picker/output-dir",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/picker/source",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/picker/split-source",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/picker/target",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/providers/capabilities",
+      "source": "LocalEngineApiEndpoints.GoogleOAuth.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/session",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/session/status",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/source/analyze",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/source/selection/preview",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/split/plan",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/split/source/analyze",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/split/start",
+      "source": "LocalEngineApiEndpoints.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/transfer/bridge/export/preview",
+      "source": "LocalEngineApiEndpoints.BridgeTransfer.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/transfer/bridge/export/preview/{previewId}",
+      "source": "LocalEngineApiEndpoints.BridgeTransfer.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/transfer/bridge/export/resume",
+      "source": "LocalEngineApiEndpoints.BridgeTransfer.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/transfer/bridge/export/resume/{jobId}",
+      "source": "LocalEngineApiEndpoints.BridgeTransfer.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/transfer/bridge/export/start",
+      "source": "LocalEngineApiEndpoints.BridgeTransfer.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/transfer/bridge/import/preview",
+      "source": "LocalEngineApiEndpoints.BridgeTransfer.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/transfer/bridge/import/preview/{previewId}",
+      "source": "LocalEngineApiEndpoints.BridgeTransfer.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/transfer/bridge/import/resume",
+      "source": "LocalEngineApiEndpoints.BridgeTransfer.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/transfer/bridge/import/resume/{jobId}",
+      "source": "LocalEngineApiEndpoints.BridgeTransfer.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/transfer/bridge/import/start",
+      "source": "LocalEngineApiEndpoints.BridgeTransfer.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/transfer/bridge/source/describe",
+      "source": "LocalEngineApiEndpoints.BridgeTransfer.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/transfer/bridge/source/descriptor/{sourceHandle}",
+      "source": "LocalEngineApiEndpoints.BridgeTransfer.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/transfer/imap/preview",
+      "source": "LocalEngineApiEndpoints.ImapTransfer.cs"
+    },
+    {
+      "method": "GET",
+      "path": "/api/transfer/imap/preview/{previewId}",
+      "source": "LocalEngineApiEndpoints.ImapTransfer.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/transfer/imap/resume/{jobId}",
+      "source": "LocalEngineApiEndpoints.ImapTransfer.cs"
+    },
+    {
+      "method": "POST",
+      "path": "/api/transfer/imap/start",
+      "source": "LocalEngineApiEndpoints.ImapTransfer.cs"
+    }
+  ],
+  "recordedAt": "2026-09-19T23:44:32.9641465+03:00",
+  "status": "BASELINE_INVENTORY_NOT_AUTHORIZATION_ACCEPTANCE"
+}

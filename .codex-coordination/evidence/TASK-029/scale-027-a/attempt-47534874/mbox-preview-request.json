@@ -1,0 +1,16 @@
+{
+  "path": "/api/transfer/bridge/export/preview",
+  "body": {
+    "companyId": "company-task020-scale",
+    "projectId": "project-task020-1g-gate",
+    "companyName": "TASK029 Measurement",
+    "projectName": "scale-027-a",
+    "sourceAccountId": "acc_ad07dbaf54b44cd58bf64e88e037f811",
+    "targetDirHandle": "dir_e4aca17fb8b349a8bc5c2b23a1885771",
+    "selectedFolders": [
+      "Task029/scale-027-a/Bulk"
+    ],
+    "targetFormat": "mboxrd"
+  },
+  "utc": "2026-09-15T13:58:21.417459+00:00"
+}

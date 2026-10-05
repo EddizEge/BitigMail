@@ -1,0 +1,25 @@
+From: =?utf-8?q?Burak_Akta=C5=9F?= <burak.aktas@lojistik.example>
+To: Proje Grubu <proje.ekibi@sirket.example>
+Subject: =?utf-8?q?=C4=B0stanbul_Saha_Raporu_-_G=C3=BCncellenmi=C5=9F_=C4=B0kinci_Tas?=
+ =?utf-8?q?lak?=
+Date: Fri, 16 Feb 2024 10:15:00 +0300
+Message-ID: <ortak-kimlik-2024-revizyon@projeler.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="===============_bound_msg04_alt_=="
+
+--===============_bound_msg04_alt_==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Merhaba,
+
+Dünkü toplantıda konuşulan revizyonlar doğrultusunda metin güncellendi. Ek bütçe kalemleri eklendi.
+
+İyi günler,
+Burak Aktaş
+--===============_bound_msg04_alt_==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<p>Merhaba,</p><p>Dünkü toplantıda konuşulan revizyonlar doğrultusunda metin güncellendi. Ek bütçe kalemleri eklendi.</p><p>İyi günler,<br>Burak Aktaş</p>
+--===============_bound_msg04_alt_==--

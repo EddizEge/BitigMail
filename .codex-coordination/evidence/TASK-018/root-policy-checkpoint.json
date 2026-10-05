@@ -1,0 +1,16 @@
+{
+  "status": "ROOT_POLICY_ACCEPTED_ONLY",
+  "testsPassed": 38,
+  "skipped": 0,
+  "createdAtUtc": "2026-09-13T23:28:10.3634175Z",
+  "files": [
+    {
+      "path": "engine/BitigMail.Engine/Archive/ArchiveSearchPolicy.cs",
+      "sha256": "4258035ed43cfd9744706dd3708f8a80ef3cea8edba86879c6b8414e0bf43d5f"
+    },
+    {
+      "path": "engine/BitigMail.Engine.Tests/ArchiveSearchPolicyCriticalTests.cs",
+      "sha256": "c61f182048c8afbd9a9d4882a92de27afa40e3608b34f63cfd2057d065d0691d"
+    }
+  ]
+}

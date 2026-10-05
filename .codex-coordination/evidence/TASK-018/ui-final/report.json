@@ -1,0 +1,32 @@
+{
+  "completed": true,
+  "results": [
+    {
+      "width": 1660,
+      "jobId": "job-3d48c01d4549",
+      "archiveId": "arc_cf6bbc3f92ee4892",
+      "geometry": {
+        "viewport": 1660,
+        "document": 1660,
+        "body": 1660
+      },
+      "errors": [],
+      "issues": [],
+      "remoteFixtureRequests": []
+    },
+    {
+      "width": 390,
+      "jobId": "job-efd79f18fb03",
+      "archiveId": "arc_9f7486a59fc34c9b",
+      "geometry": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      },
+      "errors": [],
+      "issues": [],
+      "remoteFixtureRequests": []
+    }
+  ],
+  "sourceApiReport": ".codex-coordination/evidence/TASK-018/api-f952de49c9/report.json"
+}

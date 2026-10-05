@@ -1,0 +1,18 @@
+{
+  "accountId": "acc_8f7863114fd1430ebc68cf1f2e90c1db",
+  "companyId": "company-task020-scale",
+  "projectId": "project-task020-mbox-bounded",
+  "displayName": "TASK020 Target act128-14946c2d",
+  "email": "target@bitigmail.example",
+  "host": "127.0.0.1",
+  "port": 5143,
+  "username": "target",
+  "authKind": "password",
+  "tenantId": null,
+  "clientId": null,
+  "tlsMode": "none",
+  "securityMode": 3,
+  "version": 1,
+  "createdAtUtc": "2026-09-14T14:50:57.2968276+00:00",
+  "updatedAtUtc": "2026-09-14T14:50:57.2968429+00:00"
+}

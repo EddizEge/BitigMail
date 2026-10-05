@@ -1,0 +1,7 @@
+{
+  "path": "/api/jobs/job-514bd7b28005/report",
+  "status": 404,
+  "body": {
+    "error": "Rapor bulunamadı: job-514bd7b28005"
+  }
+}

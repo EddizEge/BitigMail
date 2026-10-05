@@ -1,0 +1,9 @@
+{
+  "pid": 60920,
+  "listenPort": 6175,
+  "commandLine": "\"C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\.tools\\dotnet\\dotnet.exe\" \"C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\engine\\BitigMail.TestingHost\\bin\\Release\\net8.0-windows\\BitigMail.TestingHost.dll\"",
+  "creationDate": "2026-09-14T01:42:42.02539+03:00",
+  "recordedAt": "2026-09-13T22:42:45.261276+00:00",
+  "popenPid": 60920,
+  "logPath": "C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\.codex-coordination\\evidence\\TASK-017\\ext-c8bada0dec\\initial-host.log"
+}

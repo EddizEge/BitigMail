@@ -1,0 +1,7 @@
+{
+  "path": "/api/transfer/bridge/import/preview",
+  "status": 400,
+  "body": {
+    "error": "Köprü içe aktarım önizlemesi oluşturulurken beklenmeyen bir hata oluştu."
+  }
+}

@@ -1,0 +1,9 @@
+TASK_ID: TASK-029
+STATUS: DONE — ROOT accepted; scale-027-a complete; owned6175 released
+EXECUTOR: ROOT, benchmark harness and independent acceptance only; no production overlap with SOL.
+GOAL: Complete Stage2 missing 1GiB phase telemetry and exact integrity checks with accepted source-memory implementation.
+HARNESS: lab/task029/measure_pipeline.py. Twelve-message complete smoke passed in evidence/TASK-029/smoke-12-a/attempt-b332115d using accepted026 snapshot; this validates the harness, not the final scale acceptance.
+INPUT: Existing immutable 8192-message corpus, 1,070,776,928 physical raw bytes. Do not regenerate, reseed, delete, or modify original lab mail. New uniquely named target/output folders only.
+EXECUTION: Copy stable accepted027 Release into a unique immutable snapshot, hash its files and relevant production sources, reserve6175 exclusively. SOL may build028 and use normal6174 while snapshot runs, but cannot start another6175 host. Record concurrent development as environmental contention, not causal speed comparison.
+EVIDENCE: Persistent request/idempotency/job checkpoints before writes; individual phase CSV and summaries, CPU and memory samples, monotonic durations, independent raw/MIME/metadata checks and archive SQLite/search identities. Missing samples are unavailable, never zero. Preserve failed attempts. Resume only existing supported jobs; do not repeat completed phases because reporting failed.
+ACCEPTANCE: Import, MBOX, EML, archive and search complete; exact output and unchanged physical/original source evidence; phase memory available for substantial phases; checkpoint recovery semantics documented. Stop only the owned snapshot process, release6175. Compare source hashes against final028 production changes; rerun only materially affected checks. Stage2 closes only with028 and root final acceptance also complete.

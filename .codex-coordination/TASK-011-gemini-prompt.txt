@@ -1,0 +1,14 @@
+Implement TASK-011 in this repository. Read `.codex-coordination/inbox/TASK-011.md` and `docs/FILTERED_OST_WORKFLOW.md` completely and follow them as the fixed architecture and acceptance contract.
+
+FILE EDITS ONLY. Do not run builds, tests, servers, Playwright, background agents, or long verification commands. Do not change ROADMAP, project state, or Astra-owned decision documents. Do not create new dependencies or upgrade SDK/runtime.
+
+Implement production backend/API/React support and production-connected tests for:
+- stable source-SHA-bound exact folder identities and all-folders default, with explicit empty meaning zero and unknown IDs rejected;
+- optional inclusive Türkiye UTC+03 ISO dates, open bounds, invalid/reversed rejection, submission-date then delivery-date policy, missing-date counts;
+- immutable source-bound authoritative selection preview with opaque selection ID and canonical frozen filters/counts;
+- filtered conversion consuming only that selection, whole-source trial/preflight enforcement, selected-only reopen fidelity, zero-match block, and no extra/missing output;
+- persisted selection-aware jobs/reports, old unfiltered compatibility, and selection-content-sensitive idempotency across restart;
+- simple Turkish UI for folders/date filters, stale-response cancellation/invalidation, authoritative preview, zero state, actual selected conversion, correct report/reload/historical job behavior;
+- backend tests that call production selection/converter code and frontend/Playwright tests including genuine 13-item OST TestingHost flow, subset output, zero matches, responsive UI, and persistence.
+
+Preserve TASK-010 Host/Origin/token/no-store security, opaque path authority, source locking/hash invariance, atomic publication, output location, exact historical job selection, and native/testing picker boundaries. Keep TestingHost on 6175 only and do not introduce arbitrary path inputs. Update `.codex-coordination/results/TASK-011.md` as IMPLEMENTED_PENDING_SOL_VERIFICATION with changed files and expected verification commands, but do not claim tests ran.

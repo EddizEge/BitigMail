@@ -1,0 +1,26 @@
+{
+  "state": "PAUSED",
+  "reason": "Preserve user 5 percent quota reserve at safe checkpoint",
+  "remainingPercent": 6,
+  "stage": 4,
+  "task033FullAcceptance": false,
+  "backendPassed": 526,
+  "frontendPassed": 145,
+  "renderedPassed": 3,
+  "ostSha256": "B0801758A2E61D4CE6E86799701A81A7A60C38401F73B13C993D94C03A2EE57A",
+  "ostOriginalMatch": true,
+  "olmSha256": "A3AA54A01157618B1A45949F25F750D2A762984BE098B786F285930A6A468CE7",
+  "olmOriginalMatch": true,
+  "listeners": [
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 6174,
+      "OwningProcess": 17200
+    },
+    {
+      "LocalAddress": "127.0.0.1",
+      "LocalPort": 5173,
+      "OwningProcess": 21576
+    }
+  ]
+}

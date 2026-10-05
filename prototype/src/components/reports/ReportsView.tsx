@@ -1,0 +1,210 @@
+import React, { useState, useEffect } from 'react';
+import { localEngineClient } from '../../api/localEngineClient';
+import { LocalJobRecord } from '../../types/localEngine';
+import { IconFile } from '../ui/Icons';
+import { Badge } from '../ui/Badge';
+
+export const ReportsView: React.FC = () => {
+  const [realJobs, setRealJobs] = useState<LocalJobRecord[]>([]);
+
+  useEffect(() => {
+    let isMounted = true;
+    localEngineClient.getAllJobs().then((jobs) => {
+      if (isMounted) {
+        setRealJobs(jobs.filter((j) => j.status === 'completed'));
+      }
+    }).catch(() => {
+      // offline fallback
+    });
+    return () => { isMounted = false; };
+  }, []);
+
+  const handleDownloadRealReport = async (jobId: string) => {
+    try {
+      const report = await localEngineClient.getJobReport(jobId);
+      const json = JSON.stringify(report, null, 2);
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `rapor-${jobId}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch {
+      alert('Rapor indirilemedi.');
+    }
+  };
+
+  const sampleReports = [
+    {
+      id: 'rep-001',
+      title: 'Posta Geçişi Tamamlanma Raporu',
+      jobName: 'Posta geçişi (Örnek Şirket)',
+      date: '18.12.2024 14:35',
+      itemsCount: 248,
+      transferred: 244,
+      skipped: 4,
+      failed: 0,
+      type: 'migration',
+    },
+    {
+      id: 'rep-002',
+      title: 'Mac Arşivi İçe Aktarım Özeti',
+      jobName: 'Mac arşivi aktarımı (Örnek Eğitim)',
+      date: '12.12.2024 09:15',
+      itemsCount: 312,
+      transferred: 310,
+      skipped: 2,
+      failed: 0,
+      type: 'migration',
+    },
+    {
+      id: 'rep-003',
+      title: 'PST Kurtarma ve Ayıklama Günlüğü',
+      jobName: 'Posta kurtarma (Örnek Mimarlık)',
+      date: '08.12.2024 10:10',
+      itemsCount: 1000,
+      transferred: 850,
+      skipped: 0,
+      failed: 150,
+      type: 'recovery',
+    },
+  ];
+
+  const handleDownloadSample = (rep: (typeof sampleReports)[0], ext: 'json' | 'csv') => {
+    const content =
+      ext === 'json'
+        ? JSON.stringify(
+            {
+              rapor: rep.title,
+              is: rep.jobName,
+              tarih: rep.date,
+              ozet: { toplam: rep.itemsCount, aktarilan: rep.transferred, atlanan: rep.skipped, basarisiz: rep.failed },
+              not: 'BitigMail Sentetik Demo Raporu',
+            },
+            null,
+            2
+          )
+        : `Rapor,Is,Tarih,Toplam,Aktarilan,Atlanan,Basarisiz\n"${rep.title}","${rep.jobName}","${rep.date}",${rep.itemsCount},${rep.transferred},${rep.skipped},${rep.failed}`;
+
+    const blob = new Blob([content], { type: ext === 'json' ? 'application/json' : 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${rep.id}-${ext}.${ext}`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }} data-testid="reports-view">
+      <div className="page-subheader">
+        <div>
+          <h1 className="page-title">Raporlar</h1>
+          <p className="page-subtitle">Geçmiş ve tamamlanan aktarım işlerinin sentetik rapor dökümleri</p>
+        </div>
+      </div>
+
+      <div style={{ padding: '24px 32px', flex: 1, overflowY: 'auto' }}>
+        <div style={{ border: '1px solid var(--border-light)', borderRadius: '8px', overflow: 'hidden', background: '#ffffff' }}>
+          <table className="data-table" data-testid="reports-table">
+            <thead>
+              <tr>
+                <th style={{ width: '30%' }}>Rapor Adı</th>
+                <th style={{ width: '25%' }}>İlgili İş</th>
+                <th style={{ width: '15%' }}>Tarih</th>
+                <th style={{ width: '15%' }}>Sonuç Özeti</th>
+                <th style={{ width: '15%', textAlign: 'right' }}>İndir</th>
+              </tr>
+            </thead>
+            <tbody>
+              {realJobs.map((job) => (
+                <tr key={job.jobId} style={{ background: '#fcfdfa' }} data-testid={`report-row-${job.jobId}`}>
+                  <td style={{ fontWeight: 600 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <IconFile size={16} color="#16a34a" />
+                      <span>
+                        {job.jobKind === 'split'
+                          ? `Yerel PST Bölümleme Raporu (${job.sourceFileName})`
+                          : `Yerel OST Dönüştürme Raporu (${job.sourceFileName})`}
+                      </span>
+                      <span style={{ fontSize: '0.6875rem', padding: '1px 6px', borderRadius: '4px', background: '#ecfdf5', color: '#065f46', fontWeight: 600 }}>
+                        Gerçek Yerel Rapor
+                      </span>
+                    </div>
+                  </td>
+                  <td style={{ color: 'var(--text-main)' }}>
+                    {job.jobKind === 'split' ? 'Bölümleme' : 'Dönüştürme'} ({job.clientContext.companyName} / {job.clientContext.projectName})
+                  </td>
+                  <td style={{ color: 'var(--text-muted)' }}>
+                    {job.completedAt ? new Date(job.completedAt).toLocaleString('tr-TR') : new Date(job.createdAt).toLocaleString('tr-TR')}
+                  </td>
+                  <td>
+                    <Badge variant={job.failedItems > 0 ? 'warning' : 'success'}>
+                      {job.itemsWritten} / {job.totalItems || job.itemsRead} öğe doğrulandı
+                    </Badge>
+                  </td>
+                  <td style={{ textAlign: 'right' }}>
+                    <button
+                      className="btn btn-orange"
+                      style={{ padding: '4px 10px', fontSize: '0.75rem' }}
+                      onClick={() => handleDownloadRealReport(job.jobId)}
+                      data-testid={`download-json-${job.jobId}`}
+                    >
+                      JSON İndir
+                    </button>
+                  </td>
+                </tr>
+              ))}
+
+              {sampleReports.map((rep) => (
+                <tr key={rep.id} data-testid={`report-row-${rep.id}`}>
+                  <td style={{ fontWeight: 600 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <IconFile size={16} color="var(--brand-orange)" />
+                      <span>{rep.title}</span>
+                      <span style={{ fontSize: '0.6875rem', padding: '1px 6px', borderRadius: '4px', background: '#f1f5f9', color: '#64748b' }}>
+                        Sentetik Demo
+                      </span>
+                    </div>
+                  </td>
+                  <td style={{ color: 'var(--text-muted)' }}>{rep.jobName}</td>
+                  <td style={{ color: 'var(--text-muted)' }}>{rep.date}</td>
+                  <td>
+                    <Badge variant={rep.failed > 0 ? 'warning' : 'success'}>
+                      {rep.transferred} / {rep.itemsCount} başarılı
+                    </Badge>
+                  </td>
+                  <td style={{ textAlign: 'right' }}>
+                    <div style={{ display: 'inline-flex', gap: '6px' }}>
+                      <button
+                        className="btn btn-outline-gray"
+                        style={{ padding: '4px 8px', fontSize: '0.75rem' }}
+                        onClick={() => handleDownloadSample(rep, 'json')}
+                        data-testid={`download-json-${rep.id}`}
+                      >
+                        JSON
+                      </button>
+                      <button
+                        className="btn btn-outline-gray"
+                        style={{ padding: '4px 8px', fontSize: '0.75rem' }}
+                        onClick={() => handleDownloadSample(rep, 'csv')}
+                        data-testid={`download-csv-${rep.id}`}
+                      >
+                        CSV
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+};

@@ -1,0 +1,33 @@
+{
+  "status": "FAIL",
+  "type": "ConnectionRefusedError",
+  "error": "[WinError 10061] Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı",
+  "checks": [
+    {
+      "name": "6175 free before launch",
+      "pass": true
+    },
+    {
+      "name": "6174 listener present",
+      "pass": true
+    },
+    {
+      "name": "5173 listener present",
+      "pass": true
+    },
+    {
+      "name": "disk reserve >= 11.2 GiB",
+      "pass": true,
+      "details": {
+        "freeGiB": 157.2785873413086
+      }
+    },
+    {
+      "name": "RAM available >= 2 GiB",
+      "pass": true,
+      "details": {
+        "availableGiB": 34.98244857788086
+      }
+    }
+  ]
+}

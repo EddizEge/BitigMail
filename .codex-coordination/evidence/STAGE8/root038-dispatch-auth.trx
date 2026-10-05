@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="f68da3fb-8f92-4833-8c62-f5e1309b866b" name="Eddiz@MERCAN-PC 2026-09-20 03:11:09" runUser="MERCAN-PC\Eddiz" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-20T03:11:09.0367921+03:00" queuing="2026-09-20T03:11:09.0367924+03:00" start="2026-09-20T03:11:07.8363504+03:00" finish="2026-09-20T03:11:09.2889712+03:00" />
+  <TestSettings name="default" id="adaf81ae-5f11-440a-bed1-3876aa2ead05">
+    <Deployment runDeploymentRoot="Eddiz_MERCAN-PC_2026-09-20_03_11_09" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="5018d779-f830-48a4-a445-4655f46df0a9" testId="2f6ccac8-1543-5b0c-cbe1-c70fe03a12c6" testName="BitigMail.Engine.Tests.JobDispatchAuthorizationTests.RevocationBetweenAdmissionAndFirstLaunchIsChecked" computerName="MERCAN-PC" duration="00:00:00.1343055" startTime="2026-09-20T03:11:09.1017143+03:00" endTime="2026-09-20T03:11:09.2360770+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5018d779-f830-48a4-a445-4655f46df0a9" />
+    <UnitTestResult executionId="7cca789d-9c7f-4b9e-9d9a-37c6df0254ec" testId="3a09a45f-d786-40e8-a6d2-bbbce32946f1" testName="BitigMail.Engine.Tests.Task037PolicyTests.WaitingPriorityIsStableAndNeverInterruptsActiveJob" computerName="MERCAN-PC" duration="00:00:00.1144081" startTime="2026-09-20T03:11:08.4126030+03:00" endTime="2026-09-20T03:11:08.5338826+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7cca789d-9c7f-4b9e-9d9a-37c6df0254ec" />
+    <UnitTestResult executionId="4f8e6e07-e006-47e5-83ee-fe9752b4620a" testId="c51a5f1e-44d7-667e-6f00-9c113628a5f9" testName="BitigMail.Engine.Tests.JobDispatchAuthorizationTests.ProductionIdleStartWithoutActorIsRejected" computerName="MERCAN-PC" duration="00:00:00.1069509" startTime="2026-09-20T03:11:09.0113102+03:00" endTime="2026-09-20T03:11:09.1014650+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f8e6e07-e006-47e5-83ee-fe9752b4620a" />
+    <UnitTestResult executionId="f1531be1-74f4-49c0-a4e8-b13fe2fb02e1" testId="5752355c-666a-3c77-a82b-db05ea37968a" testName="BitigMail.Engine.Tests.RecoveryLifecyclePersistenceTests.UnresolvedWorkerLatchSurvivesRestartAndRejectsNewJobs" computerName="MERCAN-PC" duration="00:00:00.0680164" startTime="2026-09-20T03:11:08.7088329+03:00" endTime="2026-09-20T03:11:08.7770720+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1531be1-74f4-49c0-a4e8-b13fe2fb02e1" />
+    <UnitTestResult executionId="1ee17005-c481-4a83-b946-969c3662eaaf" testId="f38f3548-a25e-63e2-03ea-06f510de7124" testName="BitigMail.Engine.Tests.JobDispatchAuthorizationTests.CorruptCatalogDuringQueueBecomesVisibleFailure" computerName="MERCAN-PC" duration="00:00:00.1770232" startTime="2026-09-20T03:11:08.4113932+03:00" endTime="2026-09-20T03:11:08.5991730+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1ee17005-c481-4a83-b946-969c3662eaaf">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Strings differ&#xD;
+           ↓ (pos 0)&#xD;
+Expected: "failed"&#xD;
+Actual:   "queued"&#xD;
+           ↑ (pos 0)</Message>
+          <StackTrace>   at BitigMail.Engine.Tests.JobDispatchAuthorizationTests.CorruptCatalogDuringQueueBecomesVisibleFailure() in C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\JobDispatchAuthorizationTests.cs:line 97&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d68cca8e-922e-4f0e-a69a-79e8dace9097" testId="d76e8b29-7747-ed6a-74e2-163c8f10c0c5" testName="BitigMail.Engine.Tests.RecoveryLifecyclePersistenceTests.CrashDuringRunningRecoveryIsConservativelyUnresolved" computerName="MERCAN-PC" duration="00:00:00.0776865" startTime="2026-09-20T03:11:08.6310013+03:00" endTime="2026-09-20T03:11:08.7086815+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d68cca8e-922e-4f0e-a69a-79e8dace9097" />
+    <UnitTestResult executionId="f4f00911-433b-4f9f-bc08-779649b0c632" testId="49b05e09-e7b2-29bb-4ee6-591c10ffa001" testName="BitigMail.Engine.Tests.RecoveryLifecyclePersistenceTests.OwnerSnapshotAndCompletedOutcomePersistWithoutInMemoryViews" computerName="MERCAN-PC" duration="00:00:00.0712620" startTime="2026-09-20T03:11:08.7772277+03:00" endTime="2026-09-20T03:11:08.8487025+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f4f00911-433b-4f9f-bc08-779649b0c632" />
+    <UnitTestResult executionId="3ade8a2b-fd01-48a1-91cb-99d56a462a3b" testId="a2658010-9454-60fe-5b4c-decb81b903ef" testName="BitigMail.Engine.Tests.JobDispatchAuthorizationTests.RevokedQueuedWorkNeverExecutesAndFailureIsPersisted" computerName="MERCAN-PC" duration="00:00:00.1414324" startTime="2026-09-20T03:11:08.7107209+03:00" endTime="2026-09-20T03:11:08.8523436+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ade8a2b-fd01-48a1-91cb-99d56a462a3b" />
+    <UnitTestResult executionId="7d48ef2c-310b-4398-b534-d9e655d5c256" testId="827a1b9b-73b6-ee79-06a5-f765fa439261" testName="BitigMail.Engine.Tests.JobDispatchAuthorizationTests.SecurityRefusalPersistenceFailureLatchesDispatchAcrossRestart" computerName="MERCAN-PC" duration="00:00:00.1416639" startTime="2026-09-20T03:11:08.8525021+03:00" endTime="2026-09-20T03:11:08.9944139+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7d48ef2c-310b-4398-b534-d9e655d5c256" />
+    <UnitTestResult executionId="f17d164f-c440-4624-990a-bfc44237371e" testId="7d441128-d85c-3f25-80c4-85221765baf8" testName="BitigMail.Engine.Tests.JobDispatchAuthorizationTests.TargetPermissionCannotAuthorizeForeignSourceScope" computerName="MERCAN-PC" duration="00:00:00.1116461" startTime="2026-09-20T03:11:08.6026891+03:00" endTime="2026-09-20T03:11:08.7105946+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f17d164f-c440-4624-990a-bfc44237371e" />
+    <UnitTestResult executionId="382abb37-35da-4efe-a649-a6b7c5b57e36" testId="b9352583-52aa-ff08-3afa-76b38342e16f" testName="BitigMail.Engine.Tests.RecoveryLifecyclePersistenceTests.BootstrapSnapshotIsIndependentOfPendingDiskChanges" computerName="MERCAN-PC" duration="00:00:00.2144082" startTime="2026-09-20T03:11:08.4126319+03:00" endTime="2026-09-20T03:11:08.6306599+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="382abb37-35da-4efe-a649-a6b7c5b57e36" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="BitigMail.Engine.Tests.JobDispatchAuthorizationTests.SecurityRefusalPersistenceFailureLatchesDispatchAcrossRestart" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="827a1b9b-73b6-ee79-06a5-f765fa439261">
+      <Execution id="7d48ef2c-310b-4398-b534-d9e655d5c256" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.JobDispatchAuthorizationTests" name="SecurityRefusalPersistenceFailureLatchesDispatchAcrossRestart" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.RecoveryLifecyclePersistenceTests.BootstrapSnapshotIsIndependentOfPendingDiskChanges" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="b9352583-52aa-ff08-3afa-76b38342e16f">
+      <Execution id="382abb37-35da-4efe-a649-a6b7c5b57e36" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.RecoveryLifecyclePersistenceTests" name="BootstrapSnapshotIsIndependentOfPendingDiskChanges" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.JobDispatchAuthorizationTests.RevocationBetweenAdmissionAndFirstLaunchIsChecked" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="2f6ccac8-1543-5b0c-cbe1-c70fe03a12c6">
+      <Execution id="5018d779-f830-48a4-a445-4655f46df0a9" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.JobDispatchAuthorizationTests" name="RevocationBetweenAdmissionAndFirstLaunchIsChecked" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.JobDispatchAuthorizationTests.RevokedQueuedWorkNeverExecutesAndFailureIsPersisted" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="a2658010-9454-60fe-5b4c-decb81b903ef">
+      <Execution id="3ade8a2b-fd01-48a1-91cb-99d56a462a3b" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.JobDispatchAuthorizationTests" name="RevokedQueuedWorkNeverExecutesAndFailureIsPersisted" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.JobDispatchAuthorizationTests.ProductionIdleStartWithoutActorIsRejected" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="c51a5f1e-44d7-667e-6f00-9c113628a5f9">
+      <Execution id="4f8e6e07-e006-47e5-83ee-fe9752b4620a" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.JobDispatchAuthorizationTests" name="ProductionIdleStartWithoutActorIsRejected" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.RecoveryLifecyclePersistenceTests.UnresolvedWorkerLatchSurvivesRestartAndRejectsNewJobs" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="5752355c-666a-3c77-a82b-db05ea37968a">
+      <Execution id="f1531be1-74f4-49c0-a4e8-b13fe2fb02e1" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.RecoveryLifecyclePersistenceTests" name="UnresolvedWorkerLatchSurvivesRestartAndRejectsNewJobs" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.JobDispatchAuthorizationTests.TargetPermissionCannotAuthorizeForeignSourceScope" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="7d441128-d85c-3f25-80c4-85221765baf8">
+      <Execution id="f17d164f-c440-4624-990a-bfc44237371e" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.JobDispatchAuthorizationTests" name="TargetPermissionCannotAuthorizeForeignSourceScope" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.RecoveryLifecyclePersistenceTests.CrashDuringRunningRecoveryIsConservativelyUnresolved" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="d76e8b29-7747-ed6a-74e2-163c8f10c0c5">
+      <Execution id="d68cca8e-922e-4f0e-a69a-79e8dace9097" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.RecoveryLifecyclePersistenceTests" name="CrashDuringRunningRecoveryIsConservativelyUnresolved" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.JobDispatchAuthorizationTests.CorruptCatalogDuringQueueBecomesVisibleFailure" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="f38f3548-a25e-63e2-03ea-06f510de7124">
+      <Execution id="1ee17005-c481-4a83-b946-969c3662eaaf" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.JobDispatchAuthorizationTests" name="CorruptCatalogDuringQueueBecomesVisibleFailure" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.RecoveryLifecyclePersistenceTests.OwnerSnapshotAndCompletedOutcomePersistWithoutInMemoryViews" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="49b05e09-e7b2-29bb-4ee6-591c10ffa001">
+      <Execution id="f4f00911-433b-4f9f-bc08-779649b0c632" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.RecoveryLifecyclePersistenceTests" name="OwnerSnapshotAndCompletedOutcomePersistWithoutInMemoryViews" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.Task037PolicyTests.WaitingPriorityIsStableAndNeverInterruptsActiveJob" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root038-catalog\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="3a09a45f-d786-40e8-a6d2-bbbce32946f1">
+      <Execution id="7cca789d-9c7f-4b9e-9d9a-37c6df0254ec" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root038-catalog\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.Task037PolicyTests" name="WaitingPriorityIsStableAndNeverInterruptsActiveJob" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="2f6ccac8-1543-5b0c-cbe1-c70fe03a12c6" executionId="5018d779-f830-48a4-a445-4655f46df0a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3a09a45f-d786-40e8-a6d2-bbbce32946f1" executionId="7cca789d-9c7f-4b9e-9d9a-37c6df0254ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c51a5f1e-44d7-667e-6f00-9c113628a5f9" executionId="4f8e6e07-e006-47e5-83ee-fe9752b4620a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5752355c-666a-3c77-a82b-db05ea37968a" executionId="f1531be1-74f4-49c0-a4e8-b13fe2fb02e1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f38f3548-a25e-63e2-03ea-06f510de7124" executionId="1ee17005-c481-4a83-b946-969c3662eaaf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d76e8b29-7747-ed6a-74e2-163c8f10c0c5" executionId="d68cca8e-922e-4f0e-a69a-79e8dace9097" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="49b05e09-e7b2-29bb-4ee6-591c10ffa001" executionId="f4f00911-433b-4f9f-bc08-779649b0c632" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2658010-9454-60fe-5b4c-decb81b903ef" executionId="3ade8a2b-fd01-48a1-91cb-99d56a462a3b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="827a1b9b-73b6-ee79-06a5-f765fa439261" executionId="7d48ef2c-310b-4398-b534-d9e655d5c256" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7d441128-d85c-3f25-80c4-85221765baf8" executionId="f17d164f-c440-4624-990a-bfc44237371e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b9352583-52aa-ff08-3afa-76b38342e16f" executionId="382abb37-35da-4efe-a649-a6b7c5b57e36" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Bir Listede Olmayan Sonuçlar" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Yüklenen Tüm Sonuçlar" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="11" executed="11" passed="10" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 8.0.31)&#xD;
+[xUnit.net 00:00:00.08]   Discovering: BitigMail.Engine.Tests&#xD;
+[xUnit.net 00:00:00.19]   Discovered:  BitigMail.Engine.Tests&#xD;
+[xUnit.net 00:00:00.21]   Starting:    BitigMail.Engine.Tests&#xD;
+[xUnit.net 00:00:00.41]       Assert.Equal() Failure: Strings differ&#xD;
+[xUnit.net 00:00:00.41]                  ↓ (pos 0)&#xD;
+[xUnit.net 00:00:00.41]       Expected: "failed"&#xD;
+[xUnit.net 00:00:00.41]       Actual:   "queued"&#xD;
+[xUnit.net 00:00:00.41]                  ↑ (pos 0)&#xD;
+[xUnit.net 00:00:00.41]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.41]         C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\engine\BitigMail.Engine.Tests\JobDispatchAuthorizationTests.cs(97,0): at BitigMail.Engine.Tests.JobDispatchAuthorizationTests.CorruptCatalogDuringQueueBecomesVisibleFailure()&#xD;
+[xUnit.net 00:00:00.41]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:01.06]   Finished:    BitigMail.Engine.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="MERCAN-PC" outcome="Error" timestamp="2026-09-20T03:11:08.6010124+03:00">
+        <Text>[xUnit.net 00:00:00.41]     BitigMail.Engine.Tests.JobDispatchAuthorizationTests.CorruptCatalogDuringQueueBecomesVisibleFailure [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

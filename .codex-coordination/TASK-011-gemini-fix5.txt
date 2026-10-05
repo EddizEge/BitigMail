@@ -1,0 +1,12 @@
+TASK-011 final consolidated backend correction. FILE EDITS ONLY; run nothing. Preserve Astra's SynchronousConversionProgress in JobManager.cs.
+
+Current backend: 66 total, 64 pass, 2 fail, plus CS8602 warning at OstSelectionEngine.cs line ~299.
+
+Failures:
+1) SelectionPreviewEndpoint_ProtectedUnderSecurityMiddleware_ValidatesHostOriginTokenAndHandles: InvalidOperationException because ILoggerFactory is not registered when executing BadRequest result at test line ~828. Configure a valid minimal ASP.NET service provider/logging in the test or inspect the result interface without executing it; do not alter production middleware security.
+2) SelectionPreviewEndpoint_MutatedOstWithoutSizeChange_RejectedFailClosed_NoSelectionRegistered: raw JSON body contains escaped Turkish Unicode (`B\u00DCT...`), so Assert.Contains("BÜTÜNLÜK ENGELİ") fails. Parse JSON and assert the decoded error value, or otherwise assert semantically; preserve production response.
+3) Resolve CS8602 in OstSelectionEngine.cs around line 299 without null-forgiving away a real risk.
+
+Critical contract correction from ASTRA: whole-source fail-closed applies to ALL `preflight.CanConvert == false` / blocker conditions (enumeration/extraction/read errors as well as the >50 trial blocker), even when the affected folder is not selected. EvaluateSelection preview, registered selection/job start, and converter defense must preserve and reject all whole-source blockers. An exception during EvaluateSelection is not the only valid architecture: a blocked preview with CanConvert=false plus registered blocker and job-start rejection is acceptable. Do not optimize for a test's Assert.Throws at the expense of useful authoritative blocked-preview counts. Add/adjust production-connected coverage for a non-trial whole-source blocker and prove job start/conversion cannot bypass it.
+
+Keep TASK-011 pending SOL verification and do not claim tests ran.

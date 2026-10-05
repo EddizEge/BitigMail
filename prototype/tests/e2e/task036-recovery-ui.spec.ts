@@ -1,0 +1,35 @@
+import { test, expect } from '@playwright/test';
+import fs from 'node:fs/promises';
+
+test('TASK036 real recovery keeps scope and downloads the verified report', async ({ page }) => {
+  await page.addInitScript(() => { (window as any).__BITIGMAIL_ENGINE_URL__ = 'http://127.0.0.1:6175'; });
+  const headers: Record<string, string> = { Origin: 'http://127.0.0.1:5173', 'Content-Type': 'application/json' };
+  const session = await page.request.post('http://127.0.0.1:6175/api/session', { headers, data: {} });
+  headers['X-BitigMail-Session'] = (await session.json()).token;
+  const fixture = await page.request.post('http://127.0.0.1:6175/api/testing/set-split-source', { headers, data: { fixtureId: 'genuine-pst' } });
+  expect(fixture.ok()).toBeTruthy();
+  await page.goto('/'); await page.getByTestId('nav-tab-transfers').click(); await page.getByTestId('op-tab-recovery').click();
+  const workflow = page.getByTestId('recovery-workflow'); await expect(workflow).toContainText('Kaynak dosya değiştirilmez');
+  await workflow.getByRole('button', { name: 'Hasarlı PST/OST seç', exact: true }).click();
+  await workflow.getByRole('button', { name: 'Yeni çıktı klasörü seç', exact: true }).click();
+  await workflow.getByRole('button', { name: 'Salt okunur önizleme', exact: true }).click();
+  await expect(page.getByTestId('recovery-preview')).toContainText('Özgün toplam: Bilinmiyor');
+  const starting = page.waitForResponse(response => response.url().endsWith('/api/recovery/start') && response.request().method() === 'POST');
+  await workflow.getByRole('button', { name: 'Yeni çıktıya kurtarmayı başlat' }).click();
+  const started = await starting; expect(started.ok()).toBeTruthy(); const job = await started.json();
+  await expect(workflow.getByRole('button', { name: 'Ayrıntılı kurtarma raporunu indir' })).toBeVisible({ timeout: 30000 });
+  await expect(page.getByTestId('recovery-result')).toContainText(/Kurtarılan: [1-9]/);
+  const download = page.waitForEvent('download'); await workflow.getByRole('button', { name: 'Ayrıntılı kurtarma raporunu indir' }).click();
+  const reportPath = test.info().outputPath('recovery-report.json'); await (await download).saveAs(reportPath);
+  const report = JSON.parse(await fs.readFile(reportPath, 'utf8')); expect(report.Messages.length).toBeGreaterThan(0);
+  expect(report.Outcome).toBe('healthy_extraction'); expect(report.SourceSha256).toMatch(/^[a-f0-9]{64}$/);
+  const persisted = await page.request.get(`http://127.0.0.1:6175/api/jobs/${job.jobId}`, { headers });
+  expect(persisted.ok()).toBeTruthy(); const record = await persisted.json();
+  expect(record.clientContext.companyId).toBeTruthy(); expect(record.clientContext.companyId).not.toBe('local');
+  expect(record.recoveryReportSha256).toMatch(/^[a-f0-9]{64}$/);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(0);
+  await page.getByTestId('nav-tab-jobs').click();
+  await expect(page.getByTestId('job-download-report-btn')).toBeVisible();
+  const secondDownload = page.waitForEvent('download'); await page.getByTestId('job-download-report-btn').click();
+  expect((await secondDownload).suggestedFilename()).toContain(job.jobId);
+});

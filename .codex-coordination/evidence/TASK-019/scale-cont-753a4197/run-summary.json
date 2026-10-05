@@ -1,0 +1,947 @@
+{
+  "runId": "scale-cont-753a4197",
+  "scope": {
+    "companyId": "company-task019-scale",
+    "projectId": "project-task019-resilience",
+    "companyName": "TASK-019 Ölçek Laboratuvarı",
+    "projectName": "128MiB Dayanıklılık ve Hacim Testi"
+  },
+  "metrics": {
+    "stage1_import": {
+      "jobId": "job-dbe137b82c56",
+      "elapsed_sec": 70.045101,
+      "items_per_sec": 14.619152308738908,
+      "mib_per_sec": 1.8223481018929224,
+      "total_bytes": 133847116,
+      "items": 1024
+    },
+    "stage2a_eml_export": {
+      "jobId": "job-8c0f78e599bb",
+      "elapsed_sec": 26.36921,
+      "items_per_sec": 38.83316944269472,
+      "mib_per_sec": 4.84074254989998,
+      "total_bytes": 133847116,
+      "items": 1024
+    },
+    "stage2b_mbox5_export": {
+      "jobId": "job-89b7d45b64ed",
+      "fresh_partial_elapsed_sec": 30.198,
+      "fresh_partial_items": 800,
+      "recovery_elapsed_sec": 7.607078000000911,
+      "recovery_items_added": 224,
+      "total_items": 1024,
+      "peak_rss_bytes": 685223936,
+      "peak_private_bytes": 691638272,
+      "total_bytes": 133847116,
+      "root_audit_status": "22/22 PASS",
+      "items_per_sec": 29.44626044323105,
+      "mib_per_sec": 3.6706189041131716
+    },
+    "stage2c_bulk_import": {
+      "jobId": "job-19ed705a3aad",
+      "elapsed_sec": 71.727848,
+      "items_per_sec": 14.276184613819726,
+      "items": 1024
+    },
+    "stage2c_mbox_single_retention": {
+      "jobId": "job-280f867cb075",
+      "elapsed_sec": 35.399279,
+      "items_per_sec": 28.927142838135207,
+      "mib_per_sec": 3.6059083817568163,
+      "peak_rss_bytes": 836599808,
+      "peak_private_bytes": 831700992,
+      "telemetry_samples": 332,
+      "total_bytes": 133847116,
+      "items": 1024
+    },
+    "stage3_archive_ingest": {
+      "jobId": "job-861042fbe03c",
+      "archiveId": "arc_ab5ec017b1d54a0c",
+      "elapsed_sec": 10.565278,
+      "items_per_sec": 96.9212546986459,
+      "mib_per_sec": 12.081703562769295,
+      "total_bytes": 133847116,
+      "items": 1024
+    },
+    "search": {
+      "t_first_ms": 390.23379999707686,
+      "t_repeated_ms": 39.9219999962952,
+      "isparta_subject_hits": 10,
+      "isparta_all_hits": 17,
+      "islem_hits": 9,
+      "diyarbakir_hits": 11,
+      "sikistirma_hits": 10,
+      "ankara_hits": 0,
+      "sartname_hits": 74
+    },
+    "actualCrashObservedPosition": 30,
+    "crashedProcessIdentity": {
+      "pid": 57224,
+      "executable": "c:\\users\\eddiz\\documents\\chatgpt\\mail manager\\.tools\\dotnet\\dotnet.exe",
+      "arguments": [
+        "c:\\users\\eddiz\\documents\\chatgpt\\mail manager\\.tools\\dotnet\\dotnet.exe",
+        "c:\\users\\eddiz\\documents\\chatgpt\\mail manager\\engine\\bitigmail.testinghost\\bin\\release\\net8.0-windows\\bitigmail.testinghost.dll"
+      ],
+      "creationTime": 1789384315.6531594
+    },
+    "resilience_crash": {
+      "jobId": "job-604ed5ccedae",
+      "observedDurablePosition": 30,
+      "crashedPid": 57224,
+      "resumedPid": 22772,
+      "recovery_elapsed_sec": 19.583773499995004,
+      "totalVerified": 400,
+      "duplicateCopies": 0
+    },
+    "resilience_lost_response": {
+      "jobId": "job-8d846509d05f",
+      "faultOrdinal": 25,
+      "recovery_elapsed_sec": 7.525692499999423,
+      "totalVerified": 150,
+      "duplicateCopies": 0
+    }
+  },
+  "checks": [
+    {
+      "name": "Free disk on C: >= 11.2 GiB (1.2 GiB run + 10 GiB hard reserve)",
+      "pass": true
+    },
+    {
+      "name": "Available physical RAM >= 2.0 GiB",
+      "pass": true
+    },
+    {
+      "name": "Source baseline invariance preflight passed (12 items / 4 attachments)",
+      "pass": true
+    },
+    {
+      "name": "128MiB synthetic source corpus verified",
+      "pass": true
+    },
+    {
+      "name": "Accepted Stage 1 Import checkpoint report exists",
+      "pass": true
+    },
+    {
+      "name": "Stage 1 Import checkpoint jobId matches",
+      "pass": true
+    },
+    {
+      "name": "Stage 1 Import totalVerified == 1024",
+      "pass": true
+    },
+    {
+      "name": "Stage 1 Import totalFailed == 0",
+      "pass": true
+    },
+    {
+      "name": "Accepted Stage 2A EML Export checkpoint report exists",
+      "pass": true
+    },
+    {
+      "name": "EML Export checkpoint jobId matches",
+      "pass": true
+    },
+    {
+      "name": "EML Export totalVerified == 1024",
+      "pass": true
+    },
+    {
+      "name": "EML Export totalFailed == 0",
+      "pass": true
+    },
+    {
+      "name": "Accepted Stage 2B MBOX 5-Folder resume checkpoint exists",
+      "pass": true
+    },
+    {
+      "name": "MBOX 5-Folder checkpoint jobId matches",
+      "pass": true
+    },
+    {
+      "name": "MBOX 5-Folder completed is True",
+      "pass": true
+    },
+    {
+      "name": "MBOX 5-Folder itemsWritten == 1024",
+      "pass": true
+    },
+    {
+      "name": "Root audit report exists",
+      "pass": true
+    },
+    {
+      "name": "Root audit 22/22 PASS",
+      "pass": true
+    },
+    {
+      "name": "Reused Stage 2C Bulk Import checkpoint report exists",
+      "pass": true
+    },
+    {
+      "name": "Bulk import checkpoint jobId matches",
+      "pass": true
+    },
+    {
+      "name": "Bulk import totalVerified == 1024",
+      "pass": true
+    },
+    {
+      "name": "Bulk import failedItems == 0",
+      "pass": true
+    },
+    {
+      "name": "Reused Stage 2C Single MBOX Export checkpoint report exists",
+      "pass": true
+    },
+    {
+      "name": "Single MBOX checkpoint jobId matches",
+      "pass": true
+    },
+    {
+      "name": "Single MBOX totalVerified == 1024",
+      "pass": true
+    },
+    {
+      "name": "Single MBOX failedItems == 0",
+      "pass": true
+    },
+    {
+      "name": "Telemetry CSV exists",
+      "pass": true
+    },
+    {
+      "name": "Telemetry samples count == 332",
+      "pass": true
+    },
+    {
+      "name": "Telemetry peak working set == 836599808",
+      "pass": true
+    },
+    {
+      "name": "Telemetry peak private bytes == 831700992",
+      "pass": true
+    },
+    {
+      "name": "Reused Stage 3 Archive Ingest checkpoint report exists",
+      "pass": true
+    },
+    {
+      "name": "Archive Ingest checkpoint jobId matches",
+      "pass": true
+    },
+    {
+      "name": "Archive Ingest checkpoint archiveId matches",
+      "pass": true
+    },
+    {
+      "name": "Archive Ingest itemsWritten == 1024",
+      "pass": true
+    },
+    {
+      "name": "Persisted archive manifest exists on disk",
+      "pass": true
+    },
+    {
+      "name": "Persisted archive manifest has 1024 items",
+      "pass": true
+    },
+    {
+      "name": "Existing listener requires explicit owner handoff; never auto-kill",
+      "pass": true
+    },
+    {
+      "name": "Refuse to adopt or stop a pre-existing listener",
+      "pass": true
+    },
+    {
+      "name": "Launched exact project runtime and TestingHost DLL",
+      "pass": true
+    },
+    {
+      "name": "Started TestingHost responded to /api/session",
+      "pass": true
+    },
+    {
+      "name": "PID file/listener match the newly launched Popen child",
+      "pass": true
+    },
+    {
+      "name": "Ready process retains exact launch identity",
+      "pass": true
+    },
+    {
+      "name": "POST /api/accounts returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Target account registered",
+      "pass": true
+    },
+    {
+      "name": "GET /api/archive/arc_ab5ec017b1d54a0c/manifest returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Archive manifest API returned totalItems == 1024",
+      "pass": true
+    },
+    {
+      "name": "Immutable source manifest contains 1024 messages",
+      "pass": true
+    },
+    {
+      "name": "Derived subject isparta matches count == 10",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Search for 'isparta' (subject) totalCount == 10",
+      "pass": true
+    },
+    {
+      "name": "Repeated search for 'isparta' (subject) totalCount == 10",
+      "pass": true
+    },
+    {
+      "name": "Search for 'isparta' (subject) across all result pages retrieved all 10 items",
+      "pass": true
+    },
+    {
+      "name": "Search for 'isparta' (subject) pages_fetched >= 3",
+      "pass": true
+    },
+    {
+      "name": "Search 'isparta' (subject) full public message identity set exact match",
+      "pass": true
+    },
+    {
+      "name": "Search 'isparta' (subject) full subject set exact match",
+      "pass": true
+    },
+    {
+      "name": "Derived all-fields isparta matches count == 17 (10 subject + 7 long body)",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Search for 'isparta' (all fields) totalCount == 17",
+      "pass": true
+    },
+    {
+      "name": "Search for 'isparta' (all fields) across all result pages retrieved all 17 items",
+      "pass": true
+    },
+    {
+      "name": "Search 'isparta' (all fields) public message identity set exact match",
+      "pass": true
+    },
+    {
+      "name": "Derived subject işlem matches count == 9",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Search for 'işlem' (subject) totalCount == 9",
+      "pass": true
+    },
+    {
+      "name": "Search for 'işlem' (subject) across all result pages retrieved all 9 items",
+      "pass": true
+    },
+    {
+      "name": "Search 'işlem' (subject) public message identity set exact match",
+      "pass": true
+    },
+    {
+      "name": "Search 'işlem' (subject) subject set exact match",
+      "pass": true
+    },
+    {
+      "name": "Derived subject diyarbakır matches count == 11",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Search for 'diyarbakır' (subject) totalCount == 11",
+      "pass": true
+    },
+    {
+      "name": "Search for 'diyarbakır' (subject) across all result pages retrieved all 11 items",
+      "pass": true
+    },
+    {
+      "name": "Search 'diyarbakır' (subject) public message identity set exact match",
+      "pass": true
+    },
+    {
+      "name": "Derived subject sıkıştırma matches count == 10",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Search for 'sıkıştırma' (subject) totalCount == 10",
+      "pass": true
+    },
+    {
+      "name": "Search for 'sıkıştırma' (subject) across all result pages retrieved all 10 items",
+      "pass": true
+    },
+    {
+      "name": "Search 'sıkıştırma' (subject) public message identity set exact match",
+      "pass": true
+    },
+    {
+      "name": "Derived sartname matches count > 0",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Search for 'şartname' returned hits",
+      "pass": true
+    },
+    {
+      "name": "Search 'şartname' public message identity set exact match",
+      "pass": true
+    },
+    {
+      "name": "Derived ankara matches count == 0",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/search returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Search for 'ankara' returned exactly 0 hits",
+      "pass": true
+    },
+    {
+      "name": "Search for 'ankara' items empty",
+      "pass": true
+    },
+    {
+      "name": "POST /api/archive/message/preview returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Message preview returned valid subject",
+      "pass": true
+    },
+    {
+      "name": "Message preview subject matches manifest",
+      "pass": true
+    },
+    {
+      "name": "Message preview isBodyTruncated is True",
+      "pass": true
+    },
+    {
+      "name": "Message preview contains sanitized bodyText",
+      "pass": true
+    },
+    {
+      "name": "Message preview sha256 matches manifest",
+      "pass": true
+    },
+    {
+      "name": "POST /api/testing/set-mime-source returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/picker/mime-source returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/bridge/import/preview returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/testing/bridge-fault/reset returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/bridge/import/start returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Observed durable position is genuinely partial",
+      "pass": true
+    },
+    {
+      "name": "Termination targets only this runner's live Popen child",
+      "pass": true
+    },
+    {
+      "name": "Fresh executable/arguments/creation identity unchanged",
+      "pass": true
+    },
+    {
+      "name": "Fresh listener and PID file still owned",
+      "pass": true
+    },
+    {
+      "name": "Owned process HANDLE 57224 confirmed exited",
+      "pass": true
+    },
+    {
+      "name": "Port 6175 confirmed closed",
+      "pass": true
+    },
+    {
+      "name": "Refuse to adopt or stop a pre-existing listener",
+      "pass": true
+    },
+    {
+      "name": "Launched exact project runtime and TestingHost DLL",
+      "pass": true
+    },
+    {
+      "name": "Started TestingHost responded to /api/session",
+      "pass": true
+    },
+    {
+      "name": "PID file/listener match the newly launched Popen child",
+      "pass": true
+    },
+    {
+      "name": "Ready process retains exact launch identity",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Recovered job status is interrupted",
+      "pass": true
+    },
+    {
+      "name": "Durable position preserved across crash",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/bridge/import/resume/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Resume accepted",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Resumed job completed with 100% success",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-604ed5ccedae/report returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Resumed job totalVerified == 400",
+      "pass": true
+    },
+    {
+      "name": "Resumed job totalFailed == 0",
+      "pass": true
+    },
+    {
+      "name": "Target folder Task019/scale-cont-753a4197/CrashTest has exactly 400 messages (zero duplicates)",
+      "pass": true
+    },
+    {
+      "name": "POST /api/testing/set-mime-source returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/picker/mime-source returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/bridge/import/preview returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/testing/bridge-fault returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/bridge/import/start returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-8d846509d05f returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-8d846509d05f returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-8d846509d05f returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "LostResponse job stopped on fault",
+      "pass": true
+    },
+    {
+      "name": "POST /api/testing/bridge-fault/reset returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/bridge/import/resume/job-8d846509d05f returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Lost-response resume accepted",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-8d846509d05f returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-8d846509d05f returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-8d846509d05f returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-8d846509d05f returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-8d846509d05f returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-8d846509d05f returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Resumed lost-response job completed",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-8d846509d05f/report returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "Lost-response job totalVerified == 150",
+      "pass": true
+    },
+    {
+      "name": "Lost-response job totalFailed == 0",
+      "pass": true
+    },
+    {
+      "name": "Target folder TASK017-scale-cont-753a4197-LostResp has exactly 150 messages (zero duplicates)",
+      "pass": true
+    },
+    {
+      "name": "Postflight source baseline audit passed (12 items / 4 attachments untouched)",
+      "pass": true
+    },
+    {
+      "name": "Postflight missing == 0 and extra == 0",
+      "pass": true
+    },
+    {
+      "name": "Termination targets only this runner's live Popen child",
+      "pass": true
+    },
+    {
+      "name": "Fresh executable/arguments/creation identity unchanged",
+      "pass": true
+    },
+    {
+      "name": "Fresh listener and PID file still owned",
+      "pass": true
+    },
+    {
+      "name": "Owned process HANDLE 22772 confirmed exited",
+      "pass": true
+    },
+    {
+      "name": "Port 6175 confirmed closed",
+      "pass": true
+    }
+  ],
+  "passedAll": true
+}

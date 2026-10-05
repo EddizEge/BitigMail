@@ -1,0 +1,177 @@
+{
+  "status": "REFERENCE_ONLY_PRODUCT_NOT_IMPLEMENTED",
+  "sourceMessages": 12,
+  "sourceAttachments": 4,
+  "cases": [
+    {
+      "field": "subject",
+      "query": "İstanbul",
+      "expectedPhysicalIds": [
+        "msg-03.eml",
+        "msg-04.eml",
+        "msg-11.eml",
+        "msg-12.eml"
+      ],
+      "expectedCount": 4
+    },
+    {
+      "field": "subject",
+      "query": "istanbul",
+      "expectedPhysicalIds": [
+        "msg-03.eml",
+        "msg-04.eml",
+        "msg-11.eml",
+        "msg-12.eml"
+      ],
+      "expectedCount": 4
+    },
+    {
+      "field": "subject",
+      "query": "bilgilendirme",
+      "expectedPhysicalIds": [
+        "msg-01.eml",
+        "msg-02.eml"
+      ],
+      "expectedCount": 2
+    },
+    {
+      "field": "body",
+      "query": "Ahmet",
+      "expectedPhysicalIds": [
+        "msg-01.eml",
+        "msg-02.eml",
+        "msg-05.eml",
+        "msg-08.eml",
+        "msg-09.eml",
+        "msg-10.eml",
+        "msg-11.eml"
+      ],
+      "expectedCount": 7
+    },
+    {
+      "field": "attachmentName",
+      "query": "şartname",
+      "expectedPhysicalIds": [
+        "msg-05.eml"
+      ],
+      "expectedCount": 1
+    },
+    {
+      "field": "attachmentName",
+      "query": "logo",
+      "expectedPhysicalIds": [
+        "msg-11.eml"
+      ],
+      "expectedCount": 1
+    },
+    {
+      "field": "sender",
+      "query": "Ahmet",
+      "expectedPhysicalIds": [
+        "msg-01.eml",
+        "msg-02.eml",
+        "msg-08.eml",
+        "msg-09.eml",
+        "msg-10.eml"
+      ],
+      "expectedCount": 5
+    },
+    {
+      "hasAttachments": true,
+      "expectedPhysicalIds": [
+        "msg-05.eml",
+        "msg-06.eml",
+        "msg-07.eml",
+        "msg-11.eml"
+      ],
+      "expectedCount": 4
+    },
+    {
+      "hasAttachments": false,
+      "expectedPhysicalIds": [
+        "msg-01.eml",
+        "msg-02.eml",
+        "msg-03.eml",
+        "msg-04.eml",
+        "msg-08.eml",
+        "msg-09.eml",
+        "msg-10.eml",
+        "msg-12.eml"
+      ],
+      "expectedCount": 8
+    },
+    {
+      "startDate": "2024-01-01",
+      "endDate": "2024-02-16",
+      "timezone": "UTC+03",
+      "expectedPhysicalIds": [
+        "msg-03.eml",
+        "msg-04.eml",
+        "msg-11.eml"
+      ],
+      "expectedCount": 3
+    }
+  ],
+  "physicalSources": [
+    {
+      "identity": "msg-01.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "date": "2023-04-10"
+    },
+    {
+      "identity": "msg-02.eml",
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1",
+      "date": "2023-04-10"
+    },
+    {
+      "identity": "msg-03.eml",
+      "sha256": "e2273fca875fcf29b480af37a24848dc3491f26495c19e771ca61d3bede6021e",
+      "date": "2024-02-15"
+    },
+    {
+      "identity": "msg-04.eml",
+      "sha256": "2458f638598e26cbaafacca649667da6c318c04abbc607f7fe8593c841ef7f62",
+      "date": "2024-02-16"
+    },
+    {
+      "identity": "msg-05.eml",
+      "sha256": "9e4fce34ec9eabd76f408039e137c712a36c7d5e996ac840c13b1c956b00d860",
+      "date": "2024-05-20"
+    },
+    {
+      "identity": "msg-06.eml",
+      "sha256": "f8523c4af2881004182f6805a7b1097969c56741c8c2bce672ad2302bd191916",
+      "date": "2024-06-12"
+    },
+    {
+      "identity": "msg-07.eml",
+      "sha256": "1c85536698518e71b39c167f034261d39baeac47d6d0848360cc20f51ff09f6a",
+      "date": "2024-07-08"
+    },
+    {
+      "identity": "msg-08.eml",
+      "sha256": "1d85d15dd3d7523c9004d415719f71c01ce8db1d0ae96cf2b4aaf51ad6496111",
+      "date": "2024-08-25"
+    },
+    {
+      "identity": "msg-09.eml",
+      "sha256": "329bc919305ed0d8d6b827c471260d8919db7847de16be2d530a5b7230dd4b2d",
+      "date": "2022-11-05"
+    },
+    {
+      "identity": "msg-10.eml",
+      "sha256": "ca5c3bb027877e2832e275bddd4c1a10f478b2b0c738bed9cf7260e032acf88e",
+      "date": "2025-01-15"
+    },
+    {
+      "identity": "msg-11.eml",
+      "sha256": "0772a5fa6725b9e34e78ee5b184b49348741bd09a2e358b15afd12113380e2de",
+      "date": "2024-01-01"
+    },
+    {
+      "identity": "msg-12.eml",
+      "sha256": "ac1eafc9308cbe497810bd86662d957b368ef954f0db07b41b6f2c0226ac6926",
+      "date": "2024-11-30"
+    }
+  ]
+}

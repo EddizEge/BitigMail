@@ -1,0 +1,28 @@
+You are the implementation executor for TASK-012 in repository C:\Users\Eddiz\Documents\ChatGPT\Mail Manager. Implement ONLY the frontend/archive workflow and its frontend tests. Edit files directly. Do not run tests, builds, servers, or browser tools; the controller will do that.
+
+Read first: .codex-coordination/inbox/TASK-012.md, docs/PST_SPLIT_WORKFLOW.md, prototype/package.json, prototype/src/services/localEngineClient.ts, prototype/src/types/index.ts, prototype/src/hooks/useLocalEngine.ts, prototype/src/components/transfer/TransfersTabView.tsx, and relevant existing frontend tests/styles.
+
+Backend endpoints are already implemented:
+- POST /api/picker/split-source -> {cancelled,handle,fileName,displayPath,sizeBytes,error}; accepts .pst/.ost.
+- POST /api/split/source/analyze body {sourceHandle} -> existing AnalysisResult contract.
+- POST /api/selection/preview body {sourceHandle,folderIds,startDate,endDate} -> existing selection preview with immutable selectionId.
+- POST /api/picker/output-dir -> same picker result shape (handle is a typed output-dir handle).
+- POST /api/split/plan body {sourceHandle,selectionId,splitMode,sizeCapBytes,folderIds,startDate,endDate}. splitMode is "year" or "size". For year send sizeCapBytes null; for size send integer bytes. Response: {planId,sourceHandle,sourceSha256,selectionId,splitMode,sizeCapBytes,totalSourceMessages,selectedMessagesCount,excludedMessagesCount,selectedAttachmentsCount,yearGroups:[{year,messageCount,attachmentCount,targetFileName}],canSplit,blockerReason}. Size mode deliberately has no exact part-count preview.
+- POST /api/split/start body {planId,outputDirHandle,idempotencyKey,clientContext} -> LocalJobRecord.
+- existing GET /api/jobs/:id, /api/jobs/:id/report, /api/jobs support split jobs. Split report adds jobKind, splitMode, splitSizeCapBytes, outputDirectoryPath, parts:[{partFileName,partFullPath,partSizeBytes,partSha256,itemsWritten,totalAttachmentsVerified,totalCidVerified,groupKey,reopenedPstVerification}].
+
+Required UI behavior:
+1. Replace the current demo Archive operation in TransfersTabView with a genuine Turkish "Arşivleme ve bölümleme" workflow without regressing Convert.
+2. Source step: genuine PST/OST picker and analysis. Reuse/adapt TASK-011's exact folder/date filtering and selection preview UX. Clear stage-specific loading/error/blocker states.
+3. Split options: year or maximum-size. Maximum-size input is integer MB, default 2048, minimum 1, converted safely to bytes. Year preview lists exact returned year groups. Size preview must explicitly say final part count is determined during execution; never fabricate an exact count.
+4. Output directory picker. Do not use a target file picker.
+5. Immutable plan: source, folder selection, dates, split mode, or cap changes invalidate prior plan/start eligibility. Ignore stale/out-of-order async responses and avoid state updates after unmount. Generate one stable idempotency key per unchanged plan/start attempt.
+6. Start and poll the real split job using the existing local engine patterns. No fake pause. Show verifying/terminal states and surface exact server errors.
+7. Completion/report: show every part name/full path, actual bytes, SHA-256, item/attachment/CID/reopen verification fields; provide copy output location and JSON report download. Reload/history/Job Center must reopen the exact split job, not a synthetic job. Update job mapping/display as needed while preserving conversion jobs.
+8. Responsive at desktop and 390px. Use established visual language and accessible labels/test ids.
+9. Add focused Vitest tests with mocked localEngineClient covering request shapes, plan invalidation/stale results, year preview, honest size preview, blocker/zero selection, output-dir handle, stable idempotency, multipart result rendering, reload/job mapping, and no pause for engine split jobs. Add/update Playwright tests for the real TestingHost paths if the repo's current E2E structure supports them; do not add fake backend behavior.
+10. Do not edit engine/BitigMail.Engine/Services/PstSplitter.cs, engine/BitigMail.Engine/Services/JobManager.cs, engine/BitigMail.Tests/SplitCompletionPublicationTests.cs, any backend code, docs, inbox/results coordination files, or generated artifacts. Do not weaken existing tests.
+
+React constraints: keep effects event-driven where possible, clean up polling/timers, guard stale request identity, do not duplicate derived state, preserve memoized/stable callbacks where helpful, and do not introduce new dependencies unless strictly necessary.
+
+When finished, reply briefly with changed files and any uncertainty. Do not claim tests passed because you are prohibited from running them.

@@ -1,0 +1,55 @@
+{
+  "task": "TASK-015",
+  "backendTests": {
+    "passed": 278,
+    "failed": 0
+  },
+  "realMsalApi": {
+    "passed": 138,
+    "failed": 0,
+    "host": "normal6174"
+  },
+  "realImapAccountsApi": {
+    "passed": 120,
+    "failed": 0
+  },
+  "realImapTransferApi": {
+    "passed": 155,
+    "failed": 0,
+    "run": "transfer-b039bd936274"
+  },
+  "autoExpiry": {
+    "pass": true,
+    "listenerClosedWithoutUiPoll": true
+  },
+  "normalImapBoundary": {
+    "passed": 4,
+    "failed": 0
+  },
+  "uiFormReview": {
+    "surface": "hidden in-app browser; local form and help only",
+    "mobileWidth": 390,
+    "mobileScrollWidth": 375,
+    "desktopWidth": 1660,
+    "desktopScrollWidth": 1660,
+    "consoleErrors": 0,
+    "passwordFields": 0,
+    "desktopScreenshotLimitation": "in-app capture cropped; DOM bounds checked",
+    "liveOAuthBrowserAutomation": "NOT RUN: approval review blocked command; not retried",
+    "liveMicrosoftLogin": false,
+    "lanFormAndHelp": "PASS: local LAN preview rendered Microsoft form and expanded help; no form input or login; account API unavailable on LAN by design"
+  },
+  "frontendTests": {
+    "build": "PASS",
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "bundleWarningKb": 531.98,
+    "passed": 83,
+    "failed": 0
+  },
+  "liveProviderPilot": "PENDING test account and app registration; no login performed",
+  "normalPid": 39752,
+  "testingHost": "stopped",
+  "lanPreview": "http://192.168.1.51:5176/",
+  "status": "LOCAL_READY / LIVE_PILOT_PENDING"
+}

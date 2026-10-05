@@ -1,0 +1,16 @@
+{
+  "path": "/api/transfer/bridge/export/preview",
+  "body": {
+    "companyId": "company-task020-scale",
+    "projectId": "project-task020-1g-gate",
+    "companyName": "TASK029 Measurement",
+    "projectName": "scale-027-a",
+    "sourceAccountId": "acc_ad07dbaf54b44cd58bf64e88e037f811",
+    "targetDirHandle": "dir_4f76a90ae8bd4edc8e2857fd1633da54",
+    "selectedFolders": [
+      "Task029/scale-027-a/Bulk"
+    ],
+    "targetFormat": "eml-tree"
+  },
+  "utc": "2026-09-15T14:22:44.745920+00:00"
+}

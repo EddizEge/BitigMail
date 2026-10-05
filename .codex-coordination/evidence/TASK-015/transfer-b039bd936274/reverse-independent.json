@@ -1,0 +1,15 @@
+{
+  "oracle": "independent raw bytes/decoded MIME/header/INTERNALDATE multiset",
+  "pass": true,
+  "folders": [
+    {
+      "source": "AstraProduct314e3e04ce/Filtered",
+      "target": "AstraReverse314e3e04ce",
+      "sourceCount": 3,
+      "targetCount": 3,
+      "missing": 0,
+      "extra": 0,
+      "sourceFlagsRetained": true
+    }
+  ]
+}

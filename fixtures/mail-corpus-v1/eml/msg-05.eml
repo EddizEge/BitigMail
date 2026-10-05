@@ -1,0 +1,37 @@
+From: =?utf-8?q?Ay=C5=9Fe_Demir?= <ayse.demir@sirket.example>
+To: =?utf-8?q?Ahmet_Y=C4=B1lmaz?= <ahmet.yilmaz@posta.example>
+Subject: =?utf-8?q?=C4=B0hale_=C5=9Eartnamesi_=C3=96zeti_ve_Ek_Dosya?=
+Date: Mon, 20 May 2024 11:00:00 +0300
+Message-ID: <msg-2024-05-sartname@destek.example>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============_bound_msg05_mix_=="
+
+--===============_bound_msg05_mix_==
+Content-Type: multipart/alternative; boundary="===============_bound_msg05_alt_=="
+
+--===============_bound_msg05_alt_==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Ahmet Bey,
+
+İhale şartname özeti ekte yer almaktadır. Türkçe karakter içeren metin dosyasıdır.
+
+Selamlar,
+Ayşe Demir
+--===============_bound_msg05_alt_==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<p>Ahmet Bey,</p><p>İhale şartname özeti ekte yer almaktadır. Türkçe karakter içeren metin dosyasıdır.</p><p>Selamlar,<br>Ayşe Demir</p>
+--===============_bound_msg05_alt_==--
+--===============_bound_msg05_mix_==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename*=utf-8''%C5%9Fartname_%C3%B6zeti_2024.txt
+
+VC5DLiBQcm9qZSDEsGhhbGUgxZ5hcnRuYW1lc2kgw5Z6ZXRpCjEuIEFtYcOnIHZlIEthcHNhbTog
+xLBsZXRpxZ9pbSBhbHR5YXDEsXPEsW7EsW4gbW9kZXJuaXphc3lvbnUuCjIuIFRla25payBLb8Wf
+dWxsYXI6IEtlc2ludGlzaXogdmVyaSBpbGV0aW1pIHZlIGFyxZ9pdmxlbWUuCjMuIEfDvHZlbmxp
+azogVcOndGFuIHVjYSDFn2lmcmVsZW1lIHZlIGLDvHTDvG5sw7xrIGRvxJ9ydWxhbWFzxLEuCg==
+--===============_bound_msg05_mix_==--

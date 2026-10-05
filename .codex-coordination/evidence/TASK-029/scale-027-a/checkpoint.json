@@ -1,0 +1,105 @@
+{
+  "runId": "scale-027-a",
+  "small": false,
+  "phases": {
+    "import": {
+      "request": {
+        "companyId": "company-task020-scale",
+        "projectId": "project-task020-1g-gate",
+        "companyName": "TASK029 Measurement",
+        "projectName": "scale-027-a",
+        "previewId": "bprev_79fef99427e74aa59b2f4f5b9b4dbbb7",
+        "idempotencyKey": "202275f86e2b41638829ae1251098754"
+      },
+      "startedAtUtc": "2026-09-15T13:22:59.541977+00:00",
+      "jobId": "job-af920c9e8859",
+      "archiveId": null,
+      "segments": [
+        {
+          "attempt": "attempt-47534874",
+          "elapsedSec": 2121.5648277,
+          "cpuSec": 1496.9375,
+          "terminalStatus": "completed"
+        }
+      ],
+      "outputPath": null,
+      "complete": true,
+      "completedAtUtc": "2026-09-15T13:58:21.408453+00:00"
+    },
+    "mbox": {
+      "request": {
+        "companyId": "company-task020-scale",
+        "projectId": "project-task020-1g-gate",
+        "companyName": "TASK029 Measurement",
+        "projectName": "scale-027-a",
+        "previewId": "bprev_15ef3d4f9ce349eaaa37d779c70ee6c7",
+        "idempotencyKey": "b86b0862f601458781fe15e64515a030"
+      },
+      "startedAtUtc": "2026-09-15T14:01:41.230109+00:00",
+      "jobId": "job-eba945f2d913",
+      "archiveId": null,
+      "segments": [
+        {
+          "attempt": "attempt-47534874",
+          "elapsedSec": 1263.1858248000208,
+          "cpuSec": 1132.890625,
+          "terminalStatus": "completed"
+        }
+      ],
+      "outputPath": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-qa-split\\split-out-6073e474f05a4be2b3da38aca336eb5c\\bridge-export-job-eba945f2d913",
+      "complete": true,
+      "completedAtUtc": "2026-09-15T14:22:44.738408+00:00"
+    },
+    "eml": {
+      "request": {
+        "companyId": "company-task020-scale",
+        "projectId": "project-task020-1g-gate",
+        "companyName": "TASK029 Measurement",
+        "projectName": "scale-027-a",
+        "previewId": "bprev_edffb1983f544a039bd4747602cb90f9",
+        "idempotencyKey": "0785c0d5611f4bf6a255fc76e0a22252"
+      },
+      "startedAtUtc": "2026-09-15T14:26:01.118204+00:00",
+      "jobId": "job-e9c0b18c670e",
+      "archiveId": null,
+      "segments": [
+        {
+          "attempt": "attempt-47534874",
+          "elapsedSec": 743.783904699987,
+          "cpuSec": 599.59375,
+          "terminalStatus": "completed"
+        }
+      ],
+      "outputPath": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-qa-split\\split-out-0be5e48b0da14236ae1e10aec1fecdef\\bridge-export-job-e9c0b18c670e",
+      "complete": true,
+      "completedAtUtc": "2026-09-15T14:38:25.195421+00:00"
+    },
+    "archive": {
+      "request": {
+        "companyId": "company-task020-scale",
+        "projectId": "project-task020-1g-gate",
+        "companyName": "TASK029 Measurement",
+        "projectName": "scale-027-a",
+        "previewId": "aprv_5108cbbceff04dbb9f254e797de77e41",
+        "idempotencyKey": "a629d2f58f8949a581e277dfc5e058fc"
+      },
+      "startedAtUtc": "2026-09-15T14:38:26.187123+00:00",
+      "jobId": "job-d04b95e2c35d",
+      "archiveId": "arc_bcfbdbccf87e4d6b",
+      "segments": [
+        {
+          "attempt": "attempt-47534874",
+          "elapsedSec": 97.76153600000544,
+          "cpuSec": 118.984375,
+          "terminalStatus": "completed"
+        }
+      ],
+      "complete": true,
+      "completedAtUtc": "2026-09-15T14:40:03.952779+00:00"
+    }
+  },
+  "rawSourceBytes": 1070776928,
+  "updatedAtUtc": "2026-09-15T14:45:26.475966+00:00",
+  "integrityPass": true,
+  "oracleAttempt": "attempt-47534874"
+}

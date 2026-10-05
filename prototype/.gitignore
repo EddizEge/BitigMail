@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production build
+dist/
+build/
+
+# Testing & E2E
+coverage/
+test-results/
+.playwright/
+playwright-report/
+qa/*.png
+!qa/.gitkeep
+
+# Environment & Cache
+.env
+.env.local
+.eslintcache
+*.tsbuildinfo
+.DS_Store
+Thumbs.db

@@ -1,0 +1,28 @@
+{
+  "previewId": "bprev_046d2eebe92d48c98e5a572cdeb7fe69",
+  "companyId": "task017-ext-f9d33e5f66",
+  "projectId": "extended-pilot",
+  "sourceAccountId": "acc_5bb259385a614fa098d1bfed946bb7ae",
+  "sourceAccountVersion": 1,
+  "targetDirHandle": "dir_89471ef332b44592b28787b5117270a5",
+  "targetFormat": "eml-tree",
+  "totalSourceItems": 4,
+  "eligibleItemsCount": 3,
+  "excludedCount": 1,
+  "missingDateExcludedCount": 0,
+  "deletedExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "Projeler/İstanbul",
+      "targetFolder": "fld_001",
+      "totalItems": 4,
+      "eligibleItems": 3,
+      "excludedCount": 1,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-13T22:35:23.200803+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

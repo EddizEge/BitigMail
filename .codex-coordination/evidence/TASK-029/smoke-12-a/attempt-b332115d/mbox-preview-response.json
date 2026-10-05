@@ -1,0 +1,30 @@
+{
+  "previewId": "bprev_c537b9e46889442d9a25711525660898",
+  "companyId": "company-task020-scale",
+  "projectId": "project-task020-1g-gate",
+  "sourceAccountId": "acc_ad07dbaf54b44cd58bf64e88e037f811",
+  "sourceAccountVersion": 1,
+  "targetDirHandle": "dir_e988f4353d634550ac7a08e507b24364",
+  "targetFormat": "mboxrd",
+  "totalSourceItems": 12,
+  "eligibleItemsCount": 12,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "deletedExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "Task029/smoke-12-a/Bulk",
+      "targetFolder": "fld_001",
+      "totalItems": 12,
+      "eligibleItems": 12,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-15T13:13:20.8914359+00:00",
+  "canTransfer": true,
+  "blockerReason": null,
+  "estimatedRequiredBytes": 269261146,
+  "availableFreeBytes": 167733936128
+}

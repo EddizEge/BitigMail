@@ -1,0 +1,114 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "path": "/api/session",
+      "status": 200,
+      "expected": [
+        200
+      ],
+      "safeError": true,
+      "pass": true
+    },
+    {
+      "path": "/api/transfer/bridge/import/start",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safeError": true,
+      "pass": true
+    },
+    {
+      "path": "/api/transfer/bridge/import/start",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safeError": true,
+      "pass": true
+    },
+    {
+      "path": "/api/transfer/bridge/import/start",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safeError": true,
+      "pass": true
+    },
+    {
+      "path": "/api/transfer/bridge/import/start",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safeError": true,
+      "pass": true
+    },
+    {
+      "path": "/api/transfer/bridge/import/start",
+      "status": 409,
+      "expected": [
+        400,
+        409
+      ],
+      "safeError": true,
+      "pass": true
+    },
+    {
+      "path": "/api/transfer/bridge/export/start",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safeError": true,
+      "pass": true
+    },
+    {
+      "path": "/api/transfer/bridge/export/start",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safeError": true,
+      "pass": true
+    },
+    {
+      "path": "/api/transfer/bridge/export/start",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safeError": true,
+      "pass": true
+    },
+    {
+      "path": "/api/transfer/bridge/export/start",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safeError": true,
+      "pass": true
+    },
+    {
+      "path": "/api/transfer/bridge/export/start",
+      "status": 409,
+      "expected": [
+        400,
+        409
+      ],
+      "safeError": true,
+      "pass": true
+    }
+  ]
+}

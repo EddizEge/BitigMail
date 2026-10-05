@@ -1,0 +1,155 @@
+{
+  "jobId": "job-f8db728b68e0",
+  "evidenceLabel": "IMAP_SERVER_TRANSFER (MailKit APPEND/FETCH Verification)",
+  "clientContext": {
+    "companyId": "astra-imap-2e18a206",
+    "companyName": "astra-imap-2e18a206",
+    "projectId": "imap-pilot",
+    "projectName": "imap-pilot",
+    "clientId": null,
+    "clientName": null
+  },
+  "sourceFileName": "ASTRA source updated",
+  "sourceSizeBytes": 0,
+  "sourceSha256Before": "",
+  "sourceSha256After": "",
+  "sourceHashMatch": false,
+  "outputPstFileName": "ASTRA target",
+  "outputPath": "",
+  "outputPstSizeBytes": 0,
+  "outputPstSha256": "",
+  "conversionSuccess": true,
+  "itemsRead": 3,
+  "itemsWritten": 3,
+  "failedItems": 0,
+  "elapsedMilliseconds": 0,
+  "totalFoldersProcessed": 0,
+  "fidelityStatus": "DIFFERENCES",
+  "overallStatus": "SUCCESS",
+  "trialDifferences": {
+    "hasObservedTrialModifications": false,
+    "observedModificationsInThisRun": [],
+    "observedSummary": "None observed (0 trial watermarks detected).",
+    "documentedTrialCapabilitiesAndLimits": [
+      "Evaluation license enforces a 50-item limit per folder (vendor constraint).",
+      "Documented potential watermark: '(Aspose.Email Evaluation)' suffix appended to subject.",
+      "Documented potential watermark: 'Evaluation Only. Created with Aspose.Email for .NET...' prepended to body."
+    ],
+    "watermarkPolicy": "Evaluation watermarks are strictly monitored and preserved without stripping; never synthesized."
+  },
+  "unmeasuredFields": {
+    "status": "UNKNOWN",
+    "fields": [
+      "PR_TRANSPORT_MESSAGE_HEADERS (Raw RFC 822 transport headers)",
+      "PR_INTERNET_CPID (Codepage identifiers)",
+      "MAPI Named Properties (Outlook custom property stream / GUID namespaces)",
+      "RTF Compressed Body Stream (PR_RTF_COMPRESSED) and RTF Sync status",
+      "PR_ENTRYID and PR_RECORD_KEY (Binary storage identifiers)"
+    ],
+    "note": "Unmeasured fields are explicitly recorded as UNKNOWN per contract; never assumed matching."
+  },
+  "reopenedPstVerification": {
+    "verifiedWith": "N/A (IMAP Transfer: MailKit APPEND/FETCH exact byte SHA-256)",
+    "verificationSuccess": false,
+    "totalFoldersFound": 0,
+    "activeFoldersFound": 0,
+    "emptyFoldersFound": 0,
+    "systemFoldersFound": 0,
+    "totalPhysicalItemsFound": 0,
+    "itemCountMatch": false,
+    "totalAttachmentsVerified": 0,
+    "totalCidVerified": 0,
+    "verificationNotes": [
+      "PST verification is not applicable for IMAP transfer jobs."
+    ]
+  },
+  "isFiltered": true,
+  "selectionFilter": null,
+  "totalSourceMessages": 4,
+  "totalItems": 4,
+  "selectedMessagesCount": 3,
+  "excludedMessagesCount": 1,
+  "missingDateExcludedCount": 0,
+  "selectedAttachmentsCount": 0,
+  "selectionId": null,
+  "jobKind": "imap-transfer",
+  "splitMode": null,
+  "splitSizeCapBytes": null,
+  "outputDirectoryPath": null,
+  "parts": [],
+  "sourceSetFingerprint": null,
+  "sourceKind": null,
+  "dialect": null,
+  "ignoredNonEmlFilesCount": 0,
+  "mimeImport": null,
+  "imapTransfer": {
+    "jobId": "job-f8db728b68e0",
+    "planId": "iprev_707092d016f6429d9c2bbe48270e9e70",
+    "sourceAccountId": "acc_1e80740689184ec680b19fd8b55b5af2",
+    "sourceAccountVersion": 2,
+    "targetAccountId": "acc_d91fa97e55c64e7487ae176fa54df8c2",
+    "targetAccountVersion": 1,
+    "startDate": "2024-01-01",
+    "endDate": "2024-02-16",
+    "folders": [
+      {
+        "sourceFolder": "Projeler/İstanbul",
+        "targetFolder": "AstraProduct9ed23eed5d/Filtered",
+        "sourceUidValidity": 1789299653,
+        "totalItems": 4,
+        "eligibleItems": 3,
+        "excludedCount": 1
+      }
+    ],
+    "totalPlanned": 3,
+    "totalVerified": 3,
+    "totalFailed": 0,
+    "totalNeedsAttention": 0,
+    "items": [
+      {
+        "itemId": "item-000001",
+        "sourceFolder": "Projeler/İstanbul",
+        "sourceUid": 1,
+        "targetFolder": "AstraProduct9ed23eed5d/Filtered",
+        "targetUid": 1,
+        "bitigMailKeyword": "bitigmail_216217f13d49ea88ff089e404b7a0735",
+        "status": "Verified",
+        "sourceSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+        "verifiedSha256": "2a585a9ced238640a25b7b0327b71263842057dcad4bd15f0da55661d74ef2f3",
+        "originalMimeDateUtc": "2024-02-15T11:30:00+00:00",
+        "internalDateUtc": "2024-02-15T11:30:00+00:00",
+        "errorMessage": null
+      },
+      {
+        "itemId": "item-000002",
+        "sourceFolder": "Projeler/İstanbul",
+        "sourceUid": 2,
+        "targetFolder": "AstraProduct9ed23eed5d/Filtered",
+        "targetUid": 2,
+        "bitigMailKeyword": "bitigmail_84426b6d97d38f83185a21f79b439cf8",
+        "status": "Verified",
+        "sourceSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+        "verifiedSha256": "68ea5f92b6ef423ab0bbbe7c236f42a149054a59dfed20423b19a4cc0ed7f8e0",
+        "originalMimeDateUtc": "2024-02-16T07:15:00+00:00",
+        "internalDateUtc": "2024-02-16T07:15:00+00:00",
+        "errorMessage": null
+      },
+      {
+        "itemId": "item-000003",
+        "sourceFolder": "Projeler/İstanbul",
+        "sourceUid": 3,
+        "targetFolder": "AstraProduct9ed23eed5d/Filtered",
+        "targetUid": 3,
+        "bitigMailKeyword": "bitigmail_b132e7b2ff98bbb5fa1af0b1fbee1150",
+        "status": "Verified",
+        "sourceSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+        "verifiedSha256": "3230f65b00390838424fcc290f0394c3d5046ad24fe1b8cef4c3bccff59ec639",
+        "originalMimeDateUtc": "2023-12-31T21:30:00+00:00",
+        "internalDateUtc": "2023-12-31T21:30:00+00:00",
+        "errorMessage": null
+      }
+    ]
+  },
+  "errors": [],
+  "warnings": []
+}

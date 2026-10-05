@@ -1,0 +1,80 @@
+BitigMail
+İş merkezi
+Müşteriler
+Aktarım ve dönüşüm
+Arşiv ve arama
+Raporlar
+Ayarlar
+MÜŞTERİ:
+Örnek Şirket (ORNEK)
+Anadolu Lojistik A.Ş. (ANADOLU)
+/
+PROJE:
+Sistem Geçişi 2024
+Hukuk ve Uyum Arşivi
+/
+KAYNAK:
+Birincil IMAP (Kutu)
+Yönetici Posta Kutusu (Kutu)
+Eski Arşiv 2022-2023.pst (Dosya)
+→
+HEDEF:
+Microsoft 365
+Yerel IMAP Sunucusu
+Google Workspace
+Yeni PST Dosyası
+Taşıma
+Dönüştürme
+Arşivleme
+Kurtarma
+İŞ AKIŞI MODU:
+Gerçek Aktarım (IMAP / Köprü)
+Örnek mod
+|
+YÖN:
+Dosya → IMAP
+IMAP → Dosya
+IMAP ↔ IMAP
+Dosya ↔ Posta Hesabı Köprüsü
+Dosya ↔ Posta Hesabı Köprüsü
+Gerçek Mod
+
+TASK017 Genişletilmiş Kabul Testi / Dosya ve Hesap Köprüsü Genişletilmiş Test · EML/MBOX dosyaları ile kayıtlı IMAP hesapları arasında güvenli, doğrulamalı ve kesintiden devam edebilir köprü.
+
+Hesapları Yenile
+Hesapları Yönet
+AKTARIM YÖNÜ SEÇİMİ:
+Dosya → IMAP (İçe Aktarım)
+IMAP → Dosya (Dışa Aktarım)
+IMAP ↔ IMAP Taşıma
+ℹ️ Kaynak Bütünlüğü:
+Kaynak posta ve dosyalar salt okunur olarak taranır. Kaynak üzerindeki iletiler hiçbir şekilde silinmez veya değiştirilmez.
+📄 Standart Format Sınırları:
+EML ve MBOX standart dosya biçimleri IMAP bayraklarını, teslim tarihlerini ve anahtar sözcükleri gövdede taşımaz. Dışa aktarımda tüm IMAP üstverileri yan dosyaya (manifest.json) kaydedilir.
+⚠️ Mboxrd Kuralı:
+MBOX işlemlerinde yalnızca standart mboxrd biçimi desteklenir.
+1. Kaynak Dosya / Arşiv ve Hedef Hesap Seçimi
+KAYNAK TÜRÜ VE DOSYA SEÇİMİ:
+EML Dosyaları Seç...
+EML Klasör Ağacı Seç...
+Mboxrd Arşivi (.mbox) Seç...
+HEDEF IMAP HESABI:
+-- Hedef IMAP Hesabı Seçin --
+TASK017 Ext source (Standart IMAP) · source@bitigmail.example
+TASK017 Ext target (Standart IMAP) · target@bitigmail.example
+TARİH FİLTRESİ (UTC+03 Kapsayıcı Günler, İsteğe Bağlı):
+Başlangıç:
+Bitiş:
+Önizleme ve Doğrulama Oluştur
+İş Durumu: job-2fe1ff9c295c
+Müdahale Bekliyor
+Aşama: Hata
+%8
+İşlenen: 1 / 12
+Başarısız: 0
+AppendIntent kaydı için hedefte anahtar kelime bulunamadı. Yinelenen ileti riskini önlemek için otomatik yeniden ekleme yapılmadı.
+Kesintiden Devam Et
+Örnek proje
+|
+(Örnek simülasyon) 248 ileti filtreye uyuyor (Örnek Şirket / Birincil IMAP)
+v0.1 · Tasarım taslağı

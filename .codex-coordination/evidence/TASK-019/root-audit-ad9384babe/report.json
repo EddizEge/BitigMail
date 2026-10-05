@@ -1,0 +1,113 @@
+{
+  "completed": true,
+  "stage": "128m",
+  "checks": [
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "at least1024 physical source messages",
+      "pass": true
+    },
+    {
+      "name": "source size within2percent target",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-a3d2e097b416 no-store",
+      "pass": true
+    },
+    {
+      "name": "completed owned export job-a3d2e097b416",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-a3d2e097b416/report no-store",
+      "pass": true
+    },
+    {
+      "name": "only owned target folders",
+      "pass": true
+    },
+    {
+      "name": "source to IMAP canonical/header/MIME physical multiset",
+      "pass": true
+    },
+    {
+      "name": "IMAP to export exact raw/header/MIME physical multiset",
+      "pass": true
+    },
+    {
+      "name": "export folder/date/flags/UID sidecar",
+      "pass": true
+    },
+    {
+      "name": "target not deleted",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/catalog no-store",
+      "pass": true
+    },
+    {
+      "name": "source immutable throughout read-only audit",
+      "pass": true
+    },
+    {
+      "name": "original source12/4 unchanged",
+      "pass": true
+    }
+  ],
+  "exports": [
+    {
+      "jobId": "job-a3d2e097b416",
+      "format": "eml-tree",
+      "output": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-qa-split\\split-out-6fedbb21479441d3ad24a5cd7724f4b3\\bridge-export-job-a3d2e097b416",
+      "sourceToImap": {
+        "oracle": "Independent physical-message multiset",
+        "pass": true,
+        "exactRaw": false,
+        "metadataCompared": false,
+        "sourceCount": 1024,
+        "targetCount": 1024,
+        "missing": 0,
+        "extra": 0,
+        "sourceAttachments": 308,
+        "targetAttachments": 308
+      },
+      "imapToFile": {
+        "oracle": "Independent physical-message multiset",
+        "pass": true,
+        "exactRaw": true,
+        "metadataCompared": false,
+        "sourceCount": 1024,
+        "targetCount": 1024,
+        "missing": 0,
+        "extra": 0,
+        "sourceAttachments": 308,
+        "targetAttachments": 308
+      },
+      "sidecarPass": true
+    }
+  ],
+  "archives": [],
+  "timings": [
+    {
+      "route": "/api/session",
+      "httpAndJsonMs": 27.415799999289447
+    },
+    {
+      "route": "/api/jobs/job-a3d2e097b416",
+      "httpAndJsonMs": 28.996600001846673
+    },
+    {
+      "route": "/api/jobs/job-a3d2e097b416/report",
+      "httpAndJsonMs": 5.481899999722373
+    },
+    {
+      "route": "/api/archive/catalog",
+      "httpAndJsonMs": 78.3835000002
+    }
+  ]
+}

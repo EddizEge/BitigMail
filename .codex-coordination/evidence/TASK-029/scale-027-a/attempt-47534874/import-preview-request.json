@@ -1,0 +1,26 @@
+{
+  "path": "/api/transfer/bridge/import/preview",
+  "body": {
+    "companyId": "company-task020-scale",
+    "projectId": "project-task020-1g-gate",
+    "companyName": "TASK029 Measurement",
+    "projectName": "scale-027-a",
+    "sourceHandle": "msrc_da159f351c6942b0b8cc9fd1cb105c6d",
+    "targetAccountId": "acc_ad07dbaf54b44cd58bf64e88e037f811",
+    "selectedFolders": [
+      "Arşiv/2026/Finans",
+      "Gelen Kutusu",
+      "Gönderilenler",
+      "Müşteri İlişkileri/Talepler",
+      "Projeler/Anadolu"
+    ],
+    "targetFolderMappings": {
+      "Arşiv/2026/Finans": "Task029/scale-027-a/Bulk",
+      "Gelen Kutusu": "Task029/scale-027-a/Bulk",
+      "Gönderilenler": "Task029/scale-027-a/Bulk",
+      "Müşteri İlişkileri/Talepler": "Task029/scale-027-a/Bulk",
+      "Projeler/Anadolu": "Task029/scale-027-a/Bulk"
+    }
+  },
+  "utc": "2026-09-15T13:22:50.959333+00:00"
+}

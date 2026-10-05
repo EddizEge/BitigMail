@@ -1,0 +1,12 @@
+From: Edge Sender <sender@example.test>
+To: Edge Receiver <receiver@example.test>
+Subject: From escaping raw
+Message-ID: <escape-raw@example.test>
+Date: Mon, 01 Jan 2024 00:30:00 +0300
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+From raw literal
+>From raw quoted
+>>From raw twice

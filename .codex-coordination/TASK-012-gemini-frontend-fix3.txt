@@ -1,0 +1,7 @@
+TASK-012 final focused stale-response fix. Edit frontend hook/tests only; do not run commands/tests and do not touch backend/docs/results.
+
+The current hook still has two real races:
+1. invalidatePlan() only clears state. If mode/cap/source/folder/date changes during the plan debounce window, an already in-flight old plan response can land before the next request begins and re-enable Start with the stale plan. On every relevant mutation, synchronously invalidate/increment planRequestIdRef; for source/folder/date changes also synchronously invalidate/increment previewRequestIdRef. Reset the corresponding loading flags so cancellation cannot leave spinners stuck. Add a unit test specifically for an old response arriving after mutation but before the debounced replacement request starts.
+2. New source selection must synchronously invalidate any in-flight loadJob/pollJobStatus/getJobReport response from the prior job. Add/use a workflow generation/request epoch captured by those async routines. Increment it and clear the poll timer when a new source is accepted. Explicit targetJobId loading may start a new generation; initial restore remains supported. An old job/report response must never overwrite the new-source form. Add a focused unit test or deterministic hook test for this stale prior-job response.
+
+Preserve all fix2 behavior and user-facing text. Reply with changed files only and a short rationale.

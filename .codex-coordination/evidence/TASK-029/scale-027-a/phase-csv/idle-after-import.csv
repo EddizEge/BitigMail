@@ -1,0 +1,3 @@
+timestamp_utc,phase,cpu_pct,working_set_bytes,private_bytes
+2026-09-15T13:58:21.208946+00:00,idle-after-import,0.0,733290496,748838912
+2026-09-15T13:58:21.316828+00:00,idle-after-import,14.3,733396992,748912640

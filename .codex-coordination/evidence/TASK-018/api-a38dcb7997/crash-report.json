@@ -1,0 +1,154 @@
+{
+  "completed": false,
+  "checks": [
+    {
+      "name": "/api/session HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/archive-source HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/archive-source no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/preview HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "closed synthetic fixture72",
+      "pass": true
+    },
+    {
+      "name": "plan exact owner",
+      "pass": true
+    },
+    {
+      "name": "every frozen source hash verified before test",
+      "pass": true
+    },
+    {
+      "name": "exact TestingHost executable and command",
+      "pass": true
+    },
+    {
+      "name": "exact TestingHost executable and command",
+      "pass": true
+    },
+    {
+      "name": "stable process identity before arming",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/start no-store",
+      "pass": true
+    },
+    {
+      "name": "actual mid-job termination occurred",
+      "pass": true
+    },
+    {
+      "name": "same process handle exited",
+      "pass": true
+    },
+    {
+      "name": "old testing listener closed",
+      "pass": true
+    },
+    {
+      "name": "real partial staging retained",
+      "pass": true
+    },
+    {
+      "name": "partial archive not published",
+      "pass": true
+    },
+    {
+      "name": "testing listener free before restart",
+      "pass": true
+    },
+    {
+      "name": "new listener running",
+      "pass": true
+    },
+    {
+      "name": "new PID published",
+      "pass": true
+    },
+    {
+      "name": "/api/session HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-677b30e60267 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-677b30e60267 no-store",
+      "pass": true
+    },
+    {
+      "name": "startup marks real interrupted job",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/resume HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/archive/ingest/resume no-store",
+      "pass": true
+    },
+    {
+      "name": "resume uses same job and archive",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-677b30e60267 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-677b30e60267 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-677b30e60267 HTTP 200",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-677b30e60267 no-store",
+      "pass": true
+    },
+    {
+      "name": "job completed job-677b30e60267",
+      "pass": false
+    }
+  ],
+  "archives": []
+}

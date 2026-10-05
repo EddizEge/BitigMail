@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-21",
+  "version": "0.9.1",
+  "installExit": 0,
+  "installRoot": "C:\\Users\\Eddiz\\AppData\\Local\\Programs\\BitigMail",
+  "profile": "C:\\Users\\Eddiz\\AppData\\Local\\BitigMail\\desktop",
+  "activeVersion": "0.9.1",
+  "startMenuShortcutExists": true,
+  "appPid": 13384,
+  "appPath": "C:\\Users\\Eddiz\\AppData\\Local\\Programs\\BitigMail\\versions\\0.9.1\\BitigMail.exe",
+  "windowTitle": "BitigMail",
+  "windowHandle": 2884346,
+  "state": "Opened for user review; left running",
+  "qualification": "Unsigned internal build; clean Windows and trusted publisher acceptance open"
+}

@@ -1,0 +1,286 @@
+{
+  "overallPeakWsBytes": 3370983424,
+  "overallPeakPrivateBytes": 3384791040,
+  "phases": {
+    "idle-preflight": {
+      "samples": 25,
+      "peakWsBytes": 280567808,
+      "minWsBytes": 65437696,
+      "peakPrivateBytes": 278945792,
+      "minPrivateBytes": 52625408,
+      "peakCpuPct": 227.3,
+      "startTime": "2026-09-15T13:22:48.269821+00:00",
+      "endTime": "2026-09-15T13:22:50.945068+00:00"
+    },
+    "source-describe": {
+      "samples": 0,
+      "peakWsBytes": null,
+      "minWsBytes": null,
+      "peakPrivateBytes": null,
+      "minPrivateBytes": null,
+      "peakCpuPct": null,
+      "startTime": "2026-09-15T13:22:50.945068+00:00",
+      "endTime": "2026-09-15T13:22:50.955220+00:00"
+    },
+    "idle-source-describe": {
+      "samples": 0,
+      "peakWsBytes": null,
+      "minWsBytes": null,
+      "peakPrivateBytes": null,
+      "minPrivateBytes": null,
+      "peakCpuPct": null,
+      "startTime": "2026-09-15T13:22:50.955220+00:00",
+      "endTime": "2026-09-15T13:22:50.960952+00:00"
+    },
+    "import-preview": {
+      "samples": 79,
+      "peakWsBytes": 618958848,
+      "minWsBytes": 270680064,
+      "peakPrivateBytes": 650977280,
+      "minPrivateBytes": 265207808,
+      "peakCpuPct": 946.1,
+      "startTime": "2026-09-15T13:22:50.960952+00:00",
+      "endTime": "2026-09-15T13:22:59.537957+00:00"
+    },
+    "idle-import-preview": {
+      "samples": 0,
+      "peakWsBytes": null,
+      "minWsBytes": null,
+      "peakPrivateBytes": null,
+      "minPrivateBytes": null,
+      "peakCpuPct": null,
+      "startTime": "2026-09-15T13:22:59.537957+00:00",
+      "endTime": "2026-09-15T13:22:59.541977+00:00"
+    },
+    "import-starting": {
+      "samples": 2,
+      "peakWsBytes": 444813312,
+      "minWsBytes": 443789312,
+      "peakPrivateBytes": 465522688,
+      "minPrivateBytes": 464470016,
+      "peakCpuPct": 100.3,
+      "startTime": "2026-09-15T13:22:59.541977+00:00",
+      "endTime": "2026-09-15T13:22:59.685101+00:00"
+    },
+    "import-transfer": {
+      "samples": 17561,
+      "peakWsBytes": 3229024256,
+      "minWsBytes": 456433664,
+      "peakPrivateBytes": 3321036800,
+      "minPrivateBytes": 475926528,
+      "peakCpuPct": 1017.8,
+      "startTime": "2026-09-15T13:22:59.685101+00:00",
+      "endTime": "2026-09-15T13:54:28.267505+00:00"
+    },
+    "import-verifying": {
+      "samples": 2179,
+      "peakWsBytes": 2976768000,
+      "minWsBytes": 590663680,
+      "peakPrivateBytes": 3021291520,
+      "minPrivateBytes": 599760896,
+      "peakCpuPct": 473.1,
+      "startTime": "2026-09-15T13:54:28.267505+00:00",
+      "endTime": "2026-09-15T13:58:21.106179+00:00"
+    },
+    "idle-after-import": {
+      "samples": 2,
+      "peakWsBytes": 733396992,
+      "minWsBytes": 733290496,
+      "peakPrivateBytes": 748912640,
+      "minPrivateBytes": 748838912,
+      "peakCpuPct": 14.3,
+      "startTime": "2026-09-15T13:58:21.106179+00:00",
+      "endTime": "2026-09-15T13:58:21.420458+00:00"
+    },
+    "mbox-preview": {
+      "samples": 1871,
+      "peakWsBytes": 849469440,
+      "minWsBytes": 582328320,
+      "peakPrivateBytes": 874786816,
+      "minPrivateBytes": 589099008,
+      "peakCpuPct": 498.7,
+      "startTime": "2026-09-15T13:58:21.420458+00:00",
+      "endTime": "2026-09-15T14:01:41.225761+00:00"
+    },
+    "idle-mbox-preview": {
+      "samples": 0,
+      "peakWsBytes": null,
+      "minWsBytes": null,
+      "peakPrivateBytes": null,
+      "minPrivateBytes": null,
+      "peakCpuPct": null,
+      "startTime": "2026-09-15T14:01:41.225761+00:00",
+      "endTime": "2026-09-15T14:01:41.230109+00:00"
+    },
+    "mbox-starting": {
+      "samples": 0,
+      "peakWsBytes": null,
+      "minWsBytes": null,
+      "peakPrivateBytes": null,
+      "minPrivateBytes": null,
+      "peakCpuPct": null,
+      "startTime": "2026-09-15T14:01:41.230109+00:00",
+      "endTime": "2026-09-15T14:01:41.285050+00:00"
+    },
+    "mbox-transfer": {
+      "samples": 11700,
+      "peakWsBytes": 3370983424,
+      "minWsBytes": 715575296,
+      "peakPrivateBytes": 3384791040,
+      "minPrivateBytes": 731537408,
+      "peakCpuPct": 860.1,
+      "startTime": "2026-09-15T14:01:41.285050+00:00",
+      "endTime": "2026-09-15T14:22:44.415443+00:00"
+    },
+    "idle-after-mbox": {
+      "samples": 4,
+      "peakWsBytes": 2078752768,
+      "minWsBytes": 2078412800,
+      "peakPrivateBytes": 2091220992,
+      "minPrivateBytes": 2091016192,
+      "peakCpuPct": 28.7,
+      "startTime": "2026-09-15T14:22:44.415443+00:00",
+      "endTime": "2026-09-15T14:22:44.747919+00:00"
+    },
+    "eml-preview": {
+      "samples": 1836,
+      "peakWsBytes": 2196410368,
+      "minWsBytes": 656207872,
+      "peakPrivateBytes": 2233200640,
+      "minPrivateBytes": 659857408,
+      "peakCpuPct": 487.4,
+      "startTime": "2026-09-15T14:22:44.747919+00:00",
+      "endTime": "2026-09-15T14:26:01.114298+00:00"
+    },
+    "idle-eml-preview": {
+      "samples": 0,
+      "peakWsBytes": null,
+      "minWsBytes": null,
+      "peakPrivateBytes": null,
+      "minPrivateBytes": null,
+      "peakCpuPct": null,
+      "startTime": "2026-09-15T14:26:01.114298+00:00",
+      "endTime": "2026-09-15T14:26:01.118204+00:00"
+    },
+    "eml-starting": {
+      "samples": 0,
+      "peakWsBytes": null,
+      "minWsBytes": null,
+      "peakPrivateBytes": null,
+      "minPrivateBytes": null,
+      "peakCpuPct": null,
+      "startTime": "2026-09-15T14:26:01.118204+00:00",
+      "endTime": "2026-09-15T14:26:01.164178+00:00"
+    },
+    "eml-transfer": {
+      "samples": 6901,
+      "peakWsBytes": 3097886720,
+      "minWsBytes": 754888704,
+      "peakPrivateBytes": 3185926144,
+      "minPrivateBytes": 769863680,
+      "peakCpuPct": 852.3,
+      "startTime": "2026-09-15T14:26:01.164178+00:00",
+      "endTime": "2026-09-15T14:38:24.365763+00:00"
+    },
+    "eml-verifying": {
+      "samples": 5,
+      "peakWsBytes": 2710417408,
+      "minWsBytes": 2710355968,
+      "peakPrivateBytes": 2736267264,
+      "minPrivateBytes": 2736201728,
+      "peakCpuPct": 57.3,
+      "startTime": "2026-09-15T14:38:24.365763+00:00",
+      "endTime": "2026-09-15T14:38:24.901987+00:00"
+    },
+    "idle-after-eml": {
+      "samples": 2,
+      "peakWsBytes": 2710478848,
+      "minWsBytes": 2710417408,
+      "peakPrivateBytes": 2736332800,
+      "minPrivateBytes": 2736267264,
+      "peakCpuPct": 0.0,
+      "startTime": "2026-09-15T14:38:24.901987+00:00",
+      "endTime": "2026-09-15T14:38:25.203425+00:00"
+    },
+    "archive-preview": {
+      "samples": 9,
+      "peakWsBytes": 2725171200,
+      "minWsBytes": 2712944640,
+      "peakPrivateBytes": 2749698048,
+      "minPrivateBytes": 2736922624,
+      "peakCpuPct": 116.4,
+      "startTime": "2026-09-15T14:38:25.203425+00:00",
+      "endTime": "2026-09-15T14:38:26.182978+00:00"
+    },
+    "idle-archive-preview": {
+      "samples": 0,
+      "peakWsBytes": null,
+      "minWsBytes": null,
+      "peakPrivateBytes": null,
+      "minPrivateBytes": null,
+      "peakCpuPct": null,
+      "startTime": "2026-09-15T14:38:26.182978+00:00",
+      "endTime": "2026-09-15T14:38:26.187123+00:00"
+    },
+    "archive-starting": {
+      "samples": 1,
+      "peakWsBytes": 2725314560,
+      "minWsBytes": 2725314560,
+      "peakPrivateBytes": 2749767680,
+      "minPrivateBytes": 2749767680,
+      "peakCpuPct": 71.7,
+      "startTime": "2026-09-15T14:38:26.187123+00:00",
+      "endTime": "2026-09-15T14:38:26.290768+00:00"
+    },
+    "archive-transfer": {
+      "samples": 553,
+      "peakWsBytes": 2827493376,
+      "minWsBytes": 835837952,
+      "peakPrivateBytes": 2876469248,
+      "minPrivateBytes": 835649536,
+      "peakCpuPct": 598.4,
+      "startTime": "2026-09-15T14:38:26.290768+00:00",
+      "endTime": "2026-09-15T14:39:26.203039+00:00"
+    },
+    "archive-verifying": {
+      "samples": 347,
+      "peakWsBytes": 1158225920,
+      "minWsBytes": 846864384,
+      "peakPrivateBytes": 1208836096,
+      "minPrivateBytes": 850661376,
+      "peakCpuPct": 487.4,
+      "startTime": "2026-09-15T14:39:26.203039+00:00",
+      "endTime": "2026-09-15T14:40:03.948601+00:00"
+    },
+    "idle-after-archive": {
+      "samples": 1,
+      "peakWsBytes": 848404480,
+      "minWsBytes": 848404480,
+      "peakPrivateBytes": 852275200,
+      "minPrivateBytes": 852275200,
+      "peakCpuPct": 0.0,
+      "startTime": "2026-09-15T14:40:03.948601+00:00",
+      "endTime": "2026-09-15T14:40:03.955778+00:00"
+    },
+    "independent-oracle": {
+      "samples": 2033,
+      "peakWsBytes": 849166336,
+      "minWsBytes": 848424960,
+      "peakPrivateBytes": 853475328,
+      "minPrivateBytes": 852279296,
+      "peakCpuPct": 49.9,
+      "startTime": "2026-09-15T14:40:03.955778+00:00",
+      "endTime": "2026-09-15T14:44:05.359252+00:00"
+    },
+    "archive-search": {
+      "samples": 686,
+      "peakWsBytes": 1101500416,
+      "minWsBytes": 839319552,
+      "peakPrivateBytes": 1107439616,
+      "minPrivateBytes": 843247616,
+      "peakCpuPct": 340.9,
+      "startTime": "2026-09-15T14:44:05.359252+00:00",
+      "endTime": "2026-09-15T14:45:26.480132+00:00"
+    }
+  }
+}

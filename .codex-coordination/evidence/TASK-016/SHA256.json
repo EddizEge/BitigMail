@@ -1,0 +1,22 @@
+[
+  {
+    "sha256": "975546018d9e35406477a848fa3ef5832340861934abc93e8626f796e34a5aa3",
+    "file": "acceptance-summary.json"
+  },
+  {
+    "sha256": "3fb8f7300720a87d7b47a0386aad11fe55a13d0abec264083b141d38e672eaa3",
+    "file": "api-corporate-regression-report.json"
+  },
+  {
+    "sha256": "bd9452a2253842367bbf9f394df05fe8958368ecfbff6064abaaa56df390febb",
+    "file": "api-personal-real-msal-report.json"
+  },
+  {
+    "sha256": "cfc9866c822c7c582bb19f41e26c0f398a81521df9dc872f6ea8c328ad345c94",
+    "file": "implementation-result.md"
+  },
+  {
+    "sha256": "55c550b9e45284a4d77d0a9a99ad5b92d083218f4f8a449dbc430d10ceed4eb5",
+    "file": "msal-probe-report.json"
+  }
+]

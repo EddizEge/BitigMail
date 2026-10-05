@@ -1,0 +1,11 @@
+TASK-012 TestingHost compile/security fix. FILE EDITS ONLY; run nothing, no frontend.
+
+Actual Program.cs structure at lines 93-110 is:
+`app.Run();`
+`public record SetSplitSourceRequest(string? Path);`
+then `static string ResolveRepoRoot()`.
+This causes CS8803 because top-level statements/local functions must precede type declarations. Reorder/remove declarations correctly.
+
+More importantly, `/api/testing/set-split-source` currently accepts `req.Path` and calls SetSplitSourceOverride. This is a forbidden arbitrary client path endpoint even in TestingHost. Remove it or replace it with a closed allowlisted fixture selector enum/ID whose paths are resolved exclusively server-side to approved fixtures (genuine OST, genuine full PST, synthetic size fixture/oversize fixture created by the test harness). Never accept path, rooted path, relative path, traversal, or arbitrary filename. All testing endpoints remain behind the same production security middleware.
+
+Add security tests proving path-shaped/unknown fixture inputs cannot select files and production host never maps testing endpoints. Preserve exact TestingHost behavior needed for deterministic PST vs OST test selection using opaque/allowlisted fixture IDs only. Keep backend pending result; do not claim commands ran.

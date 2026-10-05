@@ -1,0 +1,74 @@
+{
+  "oracle": "Python stdlib read-only IMAP BODY.PEEK/MIME",
+  "messages": [
+    {
+      "identity": "1789299805:1",
+      "folder": "TASK017-ext-87784d7cc8-restart-imp",
+      "rawSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "rawBytes": 1044,
+      "canonicalSha256": "dc3d44602e02d72f408f3724c8eec5da85b5c15449bfea88cefc34dded84eda8",
+      "headers": [
+        [
+          "From",
+          "Ahmet Yılmaz <ahmet.yilmaz@posta.example>"
+        ],
+        [
+          "To",
+          "Mehmet Kaya <mehmet.kaya@destek.example>"
+        ],
+        [
+          "Subject",
+          "Sisteme Hoş Geldiniz - Bilgilendirme"
+        ],
+        [
+          "Date",
+          "Mon, 10 Apr 2023 09:00:00 +0300"
+        ],
+        [
+          "Message-ID",
+          "<msg-2023-01-hosgeldiniz@posta.example>"
+        ],
+        [
+          "MIME-Version",
+          "1.0"
+        ],
+        [
+          "Content-Type",
+          "multipart/alternative; boundary=\"===============_bound_msg01_alt_==\""
+        ]
+      ],
+      "parts": [
+        {
+          "type": "text/plain",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "427997069fc135bf096091302190d879be58caa82cfcc636b0385df84b85121c",
+          "decodedBytes": 182
+        },
+        {
+          "type": "text/html",
+          "name": null,
+          "disposition": null,
+          "cid": "",
+          "decodedSha256": "95a5d3e2579b31467dc5ccb4cd876c33eab238ca457345f716cc1ca48caf336b",
+          "decodedBytes": 208
+        }
+      ],
+      "attachments": 0,
+      "flags": [
+        "bitigmail_aa20d86158ff5a627b1edfbc7810b0d9"
+      ],
+      "internalDateUtc": "2023-04-10T06:00:00+00:00"
+    }
+  ],
+  "folders": [
+    {
+      "folder": "TASK017-ext-87784d7cc8-restart-imp",
+      "uidValidity": 1789299805,
+      "count": 1
+    }
+  ],
+  "count": 1,
+  "attachments": 0
+}

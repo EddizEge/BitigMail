@@ -1,0 +1,109 @@
+BitigMail
+İş merkezi
+Müşteriler
+Aktarım ve dönüşüm
+Arşiv ve arama
+Raporlar
+Ayarlar
+MÜŞTERİ:
+Örnek Şirket (ORNEK)
+Anadolu Lojistik A.Ş. (ANADOLU)
+/
+PROJE:
+Sistem Geçişi 2024
+Hukuk ve Uyum Arşivi
+/
+KAYNAK:
+Birincil IMAP (Kutu)
+Yönetici Posta Kutusu (Kutu)
+Eski Arşiv 2022-2023.pst (Dosya)
+→
+HEDEF:
+Microsoft 365
+Yerel IMAP Sunucusu
+Google Workspace
+Yeni PST Dosyası
+Taşıma
+Dönüştürme
+Arşivleme
+Kurtarma
+İŞ AKIŞI MODU:
+Gerçek Aktarım (IMAP / Köprü)
+Örnek mod
+|
+YÖN:
+Dosya → IMAP
+IMAP → Dosya
+IMAP ↔ IMAP
+Dosya ↔ Posta Hesabı Köprüsü
+Dosya ↔ Posta Hesabı Köprüsü
+Gerçek Mod
+
+Örnek Şirket / Sistem Geçişi 2024 · EML/MBOX dosyaları ile kayıtlı IMAP hesapları arasında deterministik, doğrulamalı ve kesintiden devam edebilir köprü.
+
+Hesapları Yenile
+Hesapları Yönet
+AKTARIM YÖNÜ SEÇİMİ:
+Dosya → IMAP (İçe Aktarım)
+IMAP → Dosya (Dışa Aktarım)
+IMAP ↔ IMAP Taşıma
+ℹ️ Kaynak Bütünlüğü:
+Kaynak posta ve dosyalar salt okunur olarak taranır. Kaynak üzerinde kesinlikle DELETE, EXPUNGE, MOVE veya otomatik posta silme işlemi yapılmaz.
+📄 Standart Format Sınırları:
+EML ve MBOX standart dosya biçimleri IMAP bayraklarını, teslim tarihlerini ve anahtar sözcükleri gövdede taşımaz. Dışa aktarımda tüm IMAP üstverileri manifest.json yan dosyasına kaydedilir.
+⚠️ Mboxrd Kuralı:
+MBOX işlemlerinde yalnızca standart mboxrd biçimi desteklenir; satır başındaki 'From ' satırları '>' ile kaçışlanır.
+1. Kaynak Dosya / Arşiv ve Hedef Hesap Seçimi
+KAYNAK TÜRÜ VE DOSYA SEÇİMİ:
+EML Dosyaları Seç...
+EML Klasör Ağacı Seç...
+Mboxrd Arşivi (.mbox) Seç...
+Seçili Kaynak: corpus-tree (özgün klasör haritası) (Tanıtıcı: msrc_50a69d19c6cb4fa1963f8bc561338528) · 0.01 MB
+HEDEF IMAP HESABI:
+-- Hedef IMAP Hesabı Seçin --
+QA 1660 source (Standart IMAP) · source@bitigmail.example
+QA 1660 target (Standart IMAP) · target@bitigmail.example
+KAYNAK KLASÖRLER VE HEDEF EŞLEŞTİRMELERİ (3 / 3 seçili):
+Tümünü Seç
+Temizle
+Gelen Kutusu
+(5 ileti)
+Hedef Klasör:
+Gönderilenler
+(3 ileti)
+Hedef Klasör:
+Projeler/İstanbul
+(4 ileti)
+Hedef Klasör:
+TARİH FİLTRESİ (UTC+03 Kapsayıcı Günler, İsteğe Bağlı):
+Başlangıç:
+Bitiş:
+Önizleme ve Doğrulama Oluştur
+Doğrulanmış Değişmez Önizleme Planı
+Aktarıma Hazır
+Plan No: bprev_cd92a33f66044c84822a2c0677f16059
+Toplam Kaynak
+12
+Uygun İletiler
+12
+Filtre Dışı
+0
+KLASÖR DÖKÜMÜ:
+Gelen Kutusu → TASK017-UI-mu0dn5pn-0
+5 / 5 ileti uygun
+Gönderilenler → TASK017-UI-mu0dn5pn-1
+3 / 3 ileti uygun
+Projeler/İstanbul → TASK017-UI-mu0dn5pn-2
+4 / 4 ileti uygun
+Aktarımı Başlat
+İş Durumu: job-4c868b2fc7ac
+Tamamlandı
+Aşama: İçe Aktarım Başarıyla Tamamlandı
+%100
+İşlenen: 12 / 12
+Başarısız: 0
+Köprü Aktarım Raporunu İndir (.json)
+Örnek proje
+|
+248 ileti filtreye uyuyor (Örnek Şirket / Birincil IMAP)
+v0.1 · Tasarım taslağı

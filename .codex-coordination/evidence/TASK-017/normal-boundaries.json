@@ -1,0 +1,227 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "label": "session",
+      "status": 200,
+      "expected": [
+        200
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "source/describe: no session",
+      "status": 401,
+      "expected": [
+        401
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "source/describe: external origin",
+      "status": 403,
+      "expected": [
+        403
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "source/describe: invalid input",
+      "status": 404,
+      "expected": [
+        404
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "import/preview: no session",
+      "status": 401,
+      "expected": [
+        401
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "import/preview: external origin",
+      "status": 403,
+      "expected": [
+        403
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "import/preview: invalid input",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "export/preview: no session",
+      "status": 401,
+      "expected": [
+        401
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "export/preview: external origin",
+      "status": 403,
+      "expected": [
+        403
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "export/preview: invalid input",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "import/start: no session",
+      "status": 401,
+      "expected": [
+        401
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "import/start: external origin",
+      "status": 403,
+      "expected": [
+        403
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "import/start: invalid input",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "export/start: no session",
+      "status": 401,
+      "expected": [
+        401
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "export/start: external origin",
+      "status": 403,
+      "expected": [
+        403
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "export/start: invalid input",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "import/resume: no session",
+      "status": 401,
+      "expected": [
+        401
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "import/resume: external origin",
+      "status": 403,
+      "expected": [
+        403
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "import/resume: invalid input",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "export/resume: no session",
+      "status": 401,
+      "expected": [
+        401
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "export/resume: external origin",
+      "status": 403,
+      "expected": [
+        403
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "export/resume: invalid input",
+      "status": 400,
+      "expected": [
+        400,
+        409
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "TestingHost picker absent",
+      "status": 404,
+      "expected": [
+        404
+      ],
+      "safe": true,
+      "pass": true
+    },
+    {
+      "label": "TestingHost seed absent",
+      "status": 404,
+      "expected": [
+        404
+      ],
+      "safe": true,
+      "pass": true
+    }
+  ]
+}

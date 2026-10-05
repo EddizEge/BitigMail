@@ -1,0 +1,6 @@
+TASK-013 Gate A compile fix only. SOL ran the filtered test; compilation failed:
+- GateAExperimentTests.cs(564,48) CS1503: argument 1 cannot convert Aspose.Email.Mapi.PidTagPropertyDescriptor to long.
+- (575,92) CS1615: argument 2 may not be passed with out.
+- (579,99) CS1615: argument 2 may not be passed with out.
+
+Inspect the exact Aspose.Email 24.8 XML/assembly signatures and fix these calls correctly. Do not guess or use dynamic/reflection to conceal compile errors. Keep the experiment/report behavior. GateA files only; do not run commands/tests or touch product/docs/dependencies/fixtures. Reply briefly.

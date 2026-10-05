@@ -1,0 +1,28 @@
+{
+  "previewId": "bprev_fdb1493424b74a31a5c21c8992dc5267",
+  "companyId": "task026-d27d73f8",
+  "projectId": "composite-verification",
+  "sourceHandle": "msrc_d3a790db79804bf6a0128080442e62e9",
+  "sourceFingerprint": "b2b99494b1c464b57c924ba150063af465d9cc1e3f31d0b9e7926bbdf7e1b09a",
+  "sourceKind": "eml-files",
+  "targetAccountId": "acc_5fe5fdb14d484bf589f442b69fac8f72",
+  "targetAccountVersion": 1,
+  "totalSourceItems": 12,
+  "eligibleItemsCount": 12,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "Corpus",
+      "targetFolder": "TASK026/after-4016a80a",
+      "totalItems": 12,
+      "eligibleItems": 12,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-15T13:03:02.3065403+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

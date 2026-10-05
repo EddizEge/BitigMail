@@ -1,0 +1,14 @@
+{
+  "files": [
+    {
+      "name": "000001.eml",
+      "bytes": 1038,
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1"
+    },
+    {
+      "name": "000002.eml",
+      "bytes": 1038,
+      "sha256": "d87530c9aa71e07519a9213e85ed31c00d2c627decaf6bb8e515edf108b655c1"
+    }
+  ]
+}

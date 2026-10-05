@@ -1,0 +1,64 @@
+{
+  "previewId": "bprev_327142637e144e8382f42692e5b0220d",
+  "companyId": "company-task020-scale",
+  "projectId": "project-task020-1g-gate",
+  "sourceHandle": "msrc_44c338311632420d81d30b8059c0f5f6",
+  "sourceFingerprint": "ff63702dab4c0a7fbb19eb607ad11d8842c3e052617714c1ff2a865821f0d087",
+  "sourceKind": "eml-tree",
+  "targetAccountId": "acc_ad07dbaf54b44cd58bf64e88e037f811",
+  "targetAccountVersion": 1,
+  "totalSourceItems": 8192,
+  "eligibleItemsCount": 8192,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "Arşiv/2026/Finans",
+      "targetFolder": "Task020/act1g-f1d2bbe5/Bulk",
+      "totalItems": 1200,
+      "eligibleItems": 1200,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    },
+    {
+      "sourceFolder": "Gelen Kutusu",
+      "targetFolder": "Task020/act1g-f1d2bbe5/Bulk",
+      "totalItems": 3200,
+      "eligibleItems": 3200,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    },
+    {
+      "sourceFolder": "Gönderilenler",
+      "targetFolder": "Task020/act1g-f1d2bbe5/Bulk",
+      "totalItems": 1600,
+      "eligibleItems": 1600,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    },
+    {
+      "sourceFolder": "Müşteri İlişkileri/Talepler",
+      "targetFolder": "Task020/act1g-f1d2bbe5/Bulk",
+      "totalItems": 592,
+      "eligibleItems": 592,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    },
+    {
+      "sourceFolder": "Projeler/Anadolu",
+      "targetFolder": "Task020/act1g-f1d2bbe5/Bulk",
+      "totalItems": 1600,
+      "eligibleItems": 1600,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-14T15:10:29.1605095+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

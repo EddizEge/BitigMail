@@ -1,0 +1,7 @@
+TASK-013 backend targeted compilation failed. EDIT FILES ONLY; do not run commands/tests. Fix these concrete compiler errors with the smallest correct changes, preserving all integrity contracts and avoiding frontend/GateA/GateB/docs/results changes:
+
+- MimeSelectionEngine.cs(256,53): CS0019 operator ?? cannot combine List<string> and Dictionary<string,string>.KeyCollection. Also address the related nullable warning at line 27 if straightforward.
+- MimeToPstConverter.cs lines 226, 356, 446, 451, 548: CS0119 because the class method named Convert shadows System.Convert. Qualify intended System.Convert calls explicitly.
+- Remove the unused snapshotIdx warning at line 493 if safe.
+
+Review the immediately surrounding code for equivalent compile-time name/type mistakes introduced in this backend turn, but do not redesign. Return changed files only and do not claim tests passed.

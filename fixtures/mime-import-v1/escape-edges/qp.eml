@@ -1,0 +1,12 @@
+From: Edge Sender <sender@example.test>
+To: Edge Receiver <receiver@example.test>
+Subject: From escaping qp
+Message-ID: <escape-qp@example.test>
+Date: Mon, 01 Jan 2024 00:30:00 +0300
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+=46rom QP literal
+=3EFrom QP quoted
+=3E=3EFrom QP twice

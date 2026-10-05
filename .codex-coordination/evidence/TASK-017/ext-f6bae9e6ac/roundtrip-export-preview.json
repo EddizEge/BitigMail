@@ -1,0 +1,46 @@
+{
+  "previewId": "bprev_00c7136a04c24b399ca03fb823670a5c",
+  "companyId": "task017-ext-f6bae9e6ac",
+  "projectId": "extended-pilot",
+  "sourceAccountId": "acc_ea5966ae06744506a3a256030a805562",
+  "sourceAccountVersion": 1,
+  "targetDirHandle": "dir_df3dabf101d24dae84a2084c3d955d52",
+  "targetFormat": "eml-tree",
+  "totalSourceItems": 12,
+  "eligibleItemsCount": 12,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "deletedExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "INBOX",
+      "targetFolder": "fld_001",
+      "totalItems": 5,
+      "eligibleItems": 5,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    },
+    {
+      "sourceFolder": "Gönderilenler",
+      "targetFolder": "fld_002",
+      "totalItems": 3,
+      "eligibleItems": 3,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    },
+    {
+      "sourceFolder": "Projeler/İstanbul",
+      "targetFolder": "fld_003",
+      "totalItems": 4,
+      "eligibleItems": 4,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-13T22:36:38.6605332+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

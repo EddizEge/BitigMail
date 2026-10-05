@@ -1,0 +1,55 @@
+{
+  "oracle": "Managed Archive Paged Identity Search Oracle (8 Copies)",
+  "pass": false,
+  "queries": [
+    {
+      "query": "isparta",
+      "expectedTotalMatches": 80,
+      "observedTotalHits": 136,
+      "retrievedItemsCount": 136,
+      "firstPageLatencyMs": 105.12,
+      "pass": false
+    },
+    {
+      "query": "izmir",
+      "expectedTotalMatches": 0,
+      "observedTotalHits": 144,
+      "retrievedItemsCount": 144,
+      "firstPageLatencyMs": 90.73,
+      "pass": false
+    },
+    {
+      "query": "işlem",
+      "expectedTotalMatches": 72,
+      "observedTotalHits": 2472,
+      "retrievedItemsCount": 2472,
+      "firstPageLatencyMs": 84.41,
+      "pass": false
+    },
+    {
+      "query": "diyarbakır",
+      "expectedTotalMatches": 88,
+      "observedTotalHits": 88,
+      "retrievedItemsCount": 88,
+      "firstPageLatencyMs": 27.37,
+      "pass": true
+    },
+    {
+      "query": "sıkıştırma",
+      "expectedTotalMatches": 80,
+      "observedTotalHits": 80,
+      "retrievedItemsCount": 80,
+      "firstPageLatencyMs": 46.25,
+      "pass": true
+    },
+    {
+      "query": "ankara (negative check)",
+      "expectedTotalMatches": 0,
+      "observedTotalHits": 0,
+      "retrievedItemsCount": 0,
+      "firstPageLatencyMs": 43.6,
+      "pass": true
+    }
+  ],
+  "t_repeated_ms": 29.12
+}

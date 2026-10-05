@@ -1,0 +1,7 @@
+{
+  "path": "/api/transfer/bridge/export/resume",
+  "status": 409,
+  "response": {
+    "error": "Köprü dışa aktarım işlemi devam ettirilirken beklenmeyen bir hata oluştu."
+  }
+}

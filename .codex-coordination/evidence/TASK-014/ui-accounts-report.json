@@ -1,0 +1,44 @@
+[
+  {
+    "width": 1660,
+    "pass": true,
+    "errors": [],
+    "dims": {
+      "width": 1660,
+      "scrollWidth": 1660
+    },
+    "realAccountsVisible": true,
+    "realConnection": true,
+    "realFolderCounts": [
+      5,
+      3,
+      4
+    ],
+    "passwordCancelClears": true,
+    "tls": [
+      "ssl",
+      "starttls"
+    ]
+  },
+  {
+    "width": 390,
+    "pass": true,
+    "errors": [],
+    "dims": {
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "realAccountsVisible": true,
+    "realConnection": true,
+    "realFolderCounts": [
+      5,
+      3,
+      4
+    ],
+    "passwordCancelClears": true,
+    "tls": [
+      "ssl",
+      "starttls"
+    ]
+  }
+]

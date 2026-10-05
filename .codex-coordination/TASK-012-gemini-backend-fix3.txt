@@ -1,0 +1,14 @@
+TASK-012 backend compile + persistence-fault correction. FILE EDITS ONLY; run nothing, no frontend.
+
+Current build has 2 Engine errors:
+- PstSplitter.cs ~88 calls nonexistent OstSelectionEngine.InspectPreflightAuthoritatively.
+- PstSplitter.cs ~650 calls nonexistent OstToPstConverter.CaptureSourceSnapshot.
+Use/extract the actual existing production preflight traversal and selected snapshot/verifier cores. Do not create weak duplicate logic; internal extraction with InternalsVisibleTo is fine. Preserve strict split PST/OST source validation and all legacy OST behavior.
+
+Critical publication/persistence contract in JobManager:
+- PstSplitter.Split returns only after bundle publication. Populate the in-memory job/report with known final bundle path, manifest path, parts and counts BEFORE the first post-publication SaveReportLocked/SaveJobRecordLocked attempt.
+- If report/job persistence fails after a valid bundle was published, never erase the bundle; job becomes failed/interrupted with visible error while retaining known final location/manifest/parts for diagnosis. A secondary persistence failure in catch must not prevent `_activeRunningJobId` release in finally.
+- If initial StartSplitJob persistence fails before execution, roll back `_jobs`, internal path state, idempotency index and active-job reservation; never leave a phantom running job or poisoned key.
+- Add controlled internal persistence fault hooks or injected persistence abstraction for tests. Prove: initial persistence failure leaves no active/job/idempotency state; post-publication report failure preserves bundle and known final/manifest/parts in failed in-memory/recoverable state; secondary catch persistence failure still releases active slot. Preserve SynchronousConversionProgress.
+
+Keep publication safety fixes from prior round and backend-pending result. Do not claim tests ran.

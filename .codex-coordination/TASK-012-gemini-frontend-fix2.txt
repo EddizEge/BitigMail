@@ -1,0 +1,7 @@
+TASK-012 fix2. Your fix1 did not satisfy the product requirement: it purged persisted test-engine job/report JSON and reordered tests to avoid the scenario. Remove that purge/reordering-as-isolation workaround. A real user can have a completed split job, open Archive, then click `Farklı Dosya Seç`; the selected new source must clear activeJob/jobReport and reveal the new plan/start workflow. Implement that real behavior in useLocalSplitEngine/LocalArchiveWorkflow as appropriate, without deleting history or weakening initial reload/exact targetJobId restoration. Ensure background auto-restore cannot re-clobber the user's new-source flow. Update the real E2E to deliberately begin with an existing completed split, then choose a new source and prove start-split-btn becomes available; after starting, reload must restore exactly the newly completed job and Job Center selection must still work. Do not remove server history.
+
+Keep the correct dir_<32hex>, partFullPath, actual bytes and SHA fixes from fix1.
+
+Also replace the developer-facing size explanation in LocalArchiveWorkflow (`tahmini parça sayısı uydurulmaz` / `tüm işlem atomik olarak reddedilir`) with this exact user-facing meaning in Turkish: `Parça sayısı işlem sırasında belirlenir. Tek bir ileti ekleriyle birlikte bu sınırı aşarsa işlem durur; daha yüksek bir sınır seçmeniz gerekir.` Avoid exposing planId/SDK details in the main flow.
+
+Frontend and E2E files only. Do not edit backend/docs/coordination results. Do not run tests/build/server. Reply with changed files and rationale.

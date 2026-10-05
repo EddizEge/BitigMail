@@ -1,0 +1,5 @@
+TASK-011 critical preview integrity fix. FILE EDITS ONLY; run no commands/tests/servers/background tasks.
+
+The production `/api/source/selection/preview` path currently opens a FileStream but does not calculate the actual SHA-256; it passes the stale BoundSha256 into EvaluateSelection after checking only file size. Fix it fail-closed: while holding one read-only lock on the real source stream, compute actual SHA-256, compare it to the registered BoundSha256, reject before producing any preview on mismatch, reset Position to 0, then analyze/evaluate through that same locked stream (use NonClosingStream if Aspose disposal requires it). Preserve converter rehash protection.
+
+Add a production-endpoint or production-service-connected negative test that mutates a copy of a real valid OST without changing file size after analysis/binding and proves preview is rejected and no RegisteredSelection is created. A size-only or duplicated conditional test is insufficient. Preserve Host/Origin/token security and opaque handles. Update TASK-011 pending result without claiming tests ran.

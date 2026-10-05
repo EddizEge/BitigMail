@@ -1,0 +1,47 @@
+{
+  "status": "SYNTHETIC_REFERENCE_ONLY",
+  "directory": "C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\runtime\\task018-qa\\archive-edges-cbab019c",
+  "physicalMessages": 4,
+  "namedAttachments": 1,
+  "entries": [
+    {
+      "file": "01-html-only.eml",
+      "bytes": 891,
+      "sha256": "e120f61e5208698a896886e471e274690af94e9db0786f853758a15c2d183401"
+    },
+    {
+      "file": "02-text-attachment.eml",
+      "bytes": 871,
+      "sha256": "97929df356d54597f3ebfd0809f54747f382234b52ad65b2295ea9fff1b267ca"
+    },
+    {
+      "file": "03-missing-date.eml",
+      "bytes": 364,
+      "sha256": "5940534c92ca1c631321e2c74efdeebe0a58b98d95eee69a0bdfaa1a9cde6dae"
+    },
+    {
+      "file": "04-long-body.eml",
+      "bytes": 524719,
+      "sha256": "bc8e5ae3d3512f176a208e61670c501716d4e91d4e6376fec463853fd27b3136"
+    }
+  ],
+  "expected": {
+    "htmlVisibleText": [
+      "Özgün İstanbul & INVOICE",
+      "Güvenli gövde sonu"
+    ],
+    "notInBodyIndex": [
+      "HEAD_SENTINEL_018",
+      "STYLE_SENTINEL_018",
+      "SCRIPT_SENTINEL_018",
+      "ATTACHMENT_CONTENT_ONLY_018",
+      "AFTER_TRUNCATION_018"
+    ],
+    "remoteRequests": 0,
+    "scriptsExecuted": false,
+    "missingDates": 1,
+    "bodyTruncatedMessages": 1,
+    "date2024Jan02Count": 3,
+    "attachmentNameSartnameCount": 1
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "error": "Invalid format specifier 'D8' for object of type 'int'",
+  "type": "ValueError"
+}

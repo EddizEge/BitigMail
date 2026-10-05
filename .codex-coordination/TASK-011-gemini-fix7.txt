@@ -1,0 +1,3 @@
+TASK-011 one final UI metric fix. FILE EDITS ONLY; run nothing.
+
+The real filtered UI conversion succeeds and correctly shows frozen `3 selected / 13 source`, `10 excluded`, `1 attachment/CID`, but the generic result metric labeled `DÖNÜŞTÜRÜLEN / OKUNAN` still renders `3 / 13 öğe`. For a filtered report this must visibly prove Successful Selected = Written: render written/selected as `3 / 3 öğe` (and use an accurate filtered label if needed), while preserving the existing unfiltered behavior and the separate authoritative selected/source/excluded summary. Use report.isFiltered and report.selectedMessagesCount, not client guesses. Keep tests expecting 3/3. No other changes; keep TASK-011 pending SOL verification.

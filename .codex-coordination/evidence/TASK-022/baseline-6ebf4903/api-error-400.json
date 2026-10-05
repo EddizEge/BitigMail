@@ -1,0 +1,7 @@
+{
+  "path": "/api/accounts",
+  "status": 400,
+  "body": {
+    "error": "Müşteri kimliği (companyId) ve proje kimliği (projectId) parametreleri zorunludur."
+  }
+}

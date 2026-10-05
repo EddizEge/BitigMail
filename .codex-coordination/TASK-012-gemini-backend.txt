@@ -1,0 +1,21 @@
+Implement TASK-012 BACKEND CORE + BACKEND TESTS ONLY. Read `.codex-coordination/inbox/TASK-012.md` and `docs/PST_SPLIT_WORKFLOW.md` completely; architecture is fixed.
+
+FILE EDITS ONLY. Do not run builds/tests/servers/Playwright/background tasks. Do not edit React/frontend yet. Do not change Astra-owned roadmap/project-state/decision docs. No dependencies or SDK/runtime upgrades.
+
+Implement a new genuine PST-or-OST multipart archive path while preserving legacy strict OST-only Analyze/Convert APIs and all TASK-010/011 behavior:
+- authoritative header+SDK format agreement for split source, server-derived typed source format; extension is not authority and PST never enters legacy OST-only route;
+- typed opaque output-directory handles distinct from source and target-file handles; no client paths;
+- reuse source-SHA-bound exact-folder/date selection and whole-source blockers;
+- immutable split plan bound to source/hash/canonical selection and validated options; modes year or size; size cap integer bytes 1,000,000..100,000,000,000 and unknown/invalid rejected;
+- year grouping by same Türkiye UTC+03 stored-date policy, exact nonempty years plus Tarihsiz; deterministic filenames; physical duplicates preserved;
+- actual CLOSED file hard cap for every size part using correctness-first deterministic recursive partition/rebuild; single-message oversize fails; message+attachments inseparable; no claimed predicted part count;
+- one outer read lock across validation/hash/all work/final rehash; every part uses existing full selected fidelity verifier; aggregate disjoint physical entry coverage exactly equals selection; part/manifest filenames exact;
+- task-owned unique `.partial` staging directory under selected parent and atomic same-parent rename only after all parts/coverage/hash/manifest checks; no part-by-part publication, no shared cleanup, collisions preserve sentinel;
+- split jobs/reports persist kind/strategy/cap/frozen filters/context/counts/hashes/final directory/per-part full path/actual bytes/SHA/count/attachment/CID; selection/options/target/context-sensitive idempotency across restart; one active job shared with single conversion; interrupted state and synchronous progress semantics preserved;
+- TestingHost deterministic approved PST/OST sources and unique output-parent picker support only, never arbitrary paths or 6174.
+
+Add production-connected backend tests for the complete contract: genuine `lab/ost-spike/output/genuine-full-converted-04.pst` year oracle 2022:1, 2023:2, 2024:8, 2025:1, 2026:1; OST route; Türkiye year boundary/CID; Tarihsiz; empty years; physical duplicates; exact aggregate coverage; multiple actual-size parts; every closed length <= cap; oversized single message no publication; invalid caps/modes; late-part verification fault prevents bundle; output collision sentinel unchanged; source mutation; selection/mode/cap idempotency after restart; incomplete recovery; legacy single-PST/filtered regressions.
+
+Provide a deterministic runtime fixture builder/test for nine messages with 256 KiB attachments (folders <50), plus a larger single-message oversize fixture. Binary outputs must be ignored and generated only in unique lab/temp paths; persist a fixture manifest with expected subject/folder/year/attachment hashes/source SHA for verification.
+
+Create/update `.codex-coordination/results/TASK-012.md` as IMPLEMENTED_BACKEND_PENDING_SOL_VERIFICATION with changed files and expected commands, but do not claim any command ran.

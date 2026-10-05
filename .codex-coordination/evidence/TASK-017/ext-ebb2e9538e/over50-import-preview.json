@@ -1,0 +1,28 @@
+{
+  "previewId": "bprev_287f32fd50334ceeba0dfd9443ddb6ae",
+  "companyId": "task017-ext-ebb2e9538e",
+  "projectId": "extended-pilot",
+  "sourceHandle": "msrc_791d207bfcba4baba451951b0325369d",
+  "sourceFingerprint": "afb58c5687ce3b7556325005e5a428c844c6e0cdbadbd9720f2ef012f08deb86",
+  "sourceKind": "eml-tree",
+  "targetAccountId": "acc_cb0d4d14b3c64a42b87e22e924efeee5",
+  "targetAccountVersion": 1,
+  "totalSourceItems": 72,
+  "eligibleItemsCount": 72,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "over50-1cd78704",
+      "targetFolder": "TASK017-ext-ebb2e9538e-over50",
+      "totalItems": 72,
+      "eligibleItems": 72,
+      "excludedCount": 0,
+      "missingDateExcludedCount": 0,
+      "deletedExcludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-13T22:44:39.6159475+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

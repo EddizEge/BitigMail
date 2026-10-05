@@ -1,0 +1,74 @@
+[
+  {
+    "Name": "message 1.eml",
+    "bytes": 2476,
+    "sourceHash": "D8055ECCE1E6E08A104AE8EB181EFDC7230CF45E097E3E03E9777A25A6487144",
+    "exactRawOccurrences": 1,
+    "parsedType": "MessagePart",
+    "contentType": "message/rfc822",
+    "qualification": "Binary message/rfc822 raw serialization probe only; service transport acceptance not tested."
+  },
+  {
+    "Name": "message 2.eml",
+    "bytes": 2674,
+    "sourceHash": "629EB59096A74D716FCD9A838DC827BBBD7314CCD0CF491065F5DC5F94063C3D",
+    "exactRawOccurrences": 1,
+    "parsedType": "MessagePart",
+    "contentType": "message/rfc822",
+    "qualification": "Binary message/rfc822 raw serialization probe only; service transport acceptance not tested."
+  },
+  {
+    "Name": "message 1.eml",
+    "bytes": 2476,
+    "sourceHash": "B933FBA9964413CA8D6B77ABB715ABA17A2B93317E098F78A7C14109C6F87B6D",
+    "exactRawOccurrences": 1,
+    "parsedType": "MessagePart",
+    "contentType": "message/rfc822",
+    "qualification": "Binary message/rfc822 raw serialization probe only; service transport acceptance not tested."
+  },
+  {
+    "Name": "message 2.eml",
+    "bytes": 2682,
+    "sourceHash": "C84ACEE971A1E5C2552D3DBB19B971EDDD8652BA79852E29A412D92991CDAE6F",
+    "exactRawOccurrences": 1,
+    "parsedType": "MessagePart",
+    "contentType": "message/rfc822",
+    "qualification": "Binary message/rfc822 raw serialization probe only; service transport acceptance not tested."
+  },
+  {
+    "Name": "[spb jira] (EMAILNET-33867) Support for Outlook for Mac Data File (.OLM) using Aspose.Email.eml",
+    "bytes": 7390,
+    "sourceHash": "9D7D9CC32A02FAF463FA359CCC49AE3484B03565415D5F8C5B783F4AA533931D",
+    "exactRawOccurrences": 1,
+    "parsedType": "MessagePart",
+    "contentType": "message/rfc822",
+    "qualification": "Binary message/rfc822 raw serialization probe only; service transport acceptance not tested."
+  },
+  {
+    "Name": "[spb jira] (EMAILNET-33867) Support for Outlook for Mac Data File (.OLM) using Aspose.Email.eml",
+    "bytes": 7390,
+    "sourceHash": "419206BE4C70FECAB7AD2C992F12D607A19C13C34DD5BB1DF7336B7B221EFF97",
+    "exactRawOccurrences": 1,
+    "parsedType": "MessagePart",
+    "contentType": "message/rfc822",
+    "qualification": "Binary message/rfc822 raw serialization probe only; service transport acceptance not tested."
+  },
+  {
+    "Name": "[spb jira] (EMAILNET-33867) Support for Outlook for Mac Data File (.OLM) using Aspose.Email.eml",
+    "bytes": 7390,
+    "sourceHash": "419206BE4C70FECAB7AD2C992F12D607A19C13C34DD5BB1DF7336B7B221EFF97",
+    "exactRawOccurrences": 1,
+    "parsedType": "MessagePart",
+    "contentType": "message/rfc822",
+    "qualification": "Binary message/rfc822 raw serialization probe only; service transport acceptance not tested."
+  },
+  {
+    "Name": "synthetic-mixed.eml",
+    "bytes": 79,
+    "sourceHash": "31F83D51C792E23CB2DF872FDE35252C5C1BE25AF3505D44D496DAF7D0B85A36",
+    "exactRawOccurrences": 1,
+    "parsedType": "MessagePart",
+    "contentType": "message/rfc822",
+    "qualification": "Binary message/rfc822 raw serialization probe only; service transport acceptance not tested."
+  }
+]

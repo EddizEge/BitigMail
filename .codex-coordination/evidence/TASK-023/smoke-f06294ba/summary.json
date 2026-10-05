@@ -1,0 +1,98 @@
+{
+  "taskId": "TASK-023",
+  "runId": "smoke-f06294ba",
+  "status": "PASS",
+  "jobId": "job-367f0834bf8c",
+  "estimatedRequiredBytes": 269234974,
+  "availableFreeBytes": 178881306624,
+  "checks": [
+    {
+      "name": "6175 free",
+      "pass": true
+    },
+    {
+      "name": "original source is 12/4",
+      "pass": true
+    },
+    {
+      "name": "Refuse to adopt or stop a pre-existing listener",
+      "pass": true
+    },
+    {
+      "name": "Launched exact project runtime and TestingHost DLL",
+      "pass": true
+    },
+    {
+      "name": "Started TestingHost responded to /api/session",
+      "pass": true
+    },
+    {
+      "name": "PID file/listener match the newly launched Popen child",
+      "pass": true
+    },
+    {
+      "name": "Ready process retains exact launch identity",
+      "pass": true
+    },
+    {
+      "name": "owned TestingHost child",
+      "pass": true
+    },
+    {
+      "name": "GET /api/accounts/acc_2fe8eb7af4f1498d960ba324603be4d7?companyId=root-bridge-83f6a9e7&projectId=local-pilot returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "preserved source account",
+      "pass": true
+    },
+    {
+      "name": "POST /api/picker/output-dir returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/bridge/export/preview returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "preview eligible 12 and transferable",
+      "pass": true
+    },
+    {
+      "name": "estimated required bytes positive",
+      "pass": true
+    },
+    {
+      "name": "available bytes sufficient",
+      "pass": true
+    },
+    {
+      "name": "POST /api/transfer/bridge/export/start returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-367f0834bf8c returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-367f0834bf8c returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "small export completed",
+      "pass": true
+    },
+    {
+      "name": "GET /api/jobs/job-367f0834bf8c/report returned 200 (expected (200,))",
+      "pass": true
+    },
+    {
+      "name": "12-message exact raw output",
+      "pass": true
+    },
+    {
+      "name": "source unchanged",
+      "pass": true
+    }
+  ]
+}

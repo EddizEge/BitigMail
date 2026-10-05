@@ -1,0 +1,19 @@
+TASK-012 test compile correction using exact real signatures. FILE EDITS ONLY; run nothing, no frontend.
+
+Do not invent helpers/properties. Exact production APIs:
+- `OutlookStorageInspector` is static.
+- `public static OutlookStorageFormatInfo ValidateSplitSourceAuthoritatively(string filePath)` returns one object with `IsValidOutlookStorage`, `IsOstSignature`, `IsPstSignature`, `FormatName`, `AuthoritativeRuntimeFormat`, etc.; it is not deconstructable.
+- `OstAnalysisResult` has `FormatInfo`, not `SourceFormat`.
+- `ReopenedPstVerificationInfo` has `VerificationSuccess` and `TotalPhysicalItemsFound`, not `VerifiedSuccessfully` or `TotalMessagesVerified`.
+- JobManager exact internal members already exist: `internal Action<LocalJobRecord>? OnBeforeSaveJobRecord`, `internal Action<ConversionReport>? OnBeforeSaveReport`, and `internal void ExecuteSplitJob(string jobId, string sourcePath, string outputDirParentPath, ClientProjectContext clientContext, RegisteredSplitPlan splitPlan, RegisteredSelection? selection)`.
+
+Current Engine.Tests compile failures in PstSplitWorkflowTests:
+- lines ~68/161 instantiate static OutlookStorageInspector and deconstruct its result; use static call and actual properties.
+- lines ~76/169 use analysis.SourceFormat; use analysis.FormatInfo authoritative fields.
+- lines ~127/128 use nonexistent verifier fields; use exact fields above.
+- lines ~107-112 nullable dictionary key warnings: use non-null deterministic part filenames and assert non-null before ToDictionary.
+- lines ~1638 onward cannot see JobManager internal hooks/ExecuteSplitJob. Add `InternalsVisibleTo("BitigMail.Engine.Tests")` to BitigMail.LocalHost assembly (csproj AssemblyAttribute is acceptable), keeping hooks/internal method non-public. Then tests can access the exact existing members; do not duplicate them.
+
+Keep tests production-connected and preserve all behavior. Update backend-pending result without claiming execution.
+
+Also unify the approved `synthetic-size` TestingHost fixture: current resolver creates only 3 x 50 KiB and cannot prove multipart under the minimum 1,000,000-byte cap. Use the contract's canonical deterministic 9 messages x 256 KiB attachments, every folder <50, with source SHA and manifest containing expected subjects/folders/years/attachment hashes. At 1 MB it must produce more than one real closed PST part, every part <= cap. Avoid duplicating a weaker generator. Keep it in TestingHost/test-support (not production Engine behavior), use a versioned task-owned ignored lab/temp path, validate any existing fixture against manifest/hash before reuse, never blindly delete a shared/static temp file. Fixture IDs remain exactly `genuine-pst`, `genuine-ost`, `synthetic-size` (plus oversize if used).

@@ -1,0 +1,31 @@
+{
+  "taskId": "TASK-024",
+  "status": "PASS",
+  "backend": {
+    "fullRelease": { "passed": 460, "failed": 0, "skipped": 0 },
+    "targetedCapacity": { "passed": 12, "failed": 0 },
+    "actualFixtureTestsIncludedInFullRegression": [
+      "FidelityAndMultisetVerificationTests.Storage_PhysicalItemsAtRoot_AreEnumeratedAndPreserved",
+      "PstSplitWorkflowTests.PstSplitter_SizeMode_MultipleParts_EveryPartRespectsHardCap",
+      "MimeImportWorkflowTests.RealCorpus12Messages_EmlFiles_PreservesAll12MessagesAttachmentsAndCid",
+      "ArchiveStorageAndIngestTests.IngestCorpusEmlDir_And_VerifyAll10ReferenceSearchCases"
+    ]
+  },
+  "frontend": {
+    "targeted": { "files": 2, "passed": 36, "failed": 0 },
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "build": "PASS",
+    "buildWarning": "Existing non-blocking bundle chunk larger than 500 kB"
+  },
+  "immutableFixtures": [
+    { "path": "lab/ost-spike/input/bitigmail-lab-full.ost", "bytes": 16818176, "sha256": "B0801758A2E61D4CE6E86799701A81A7A60C38401F73B13C993D94C03A2EE57A" },
+    { "path": "fixtures/mail-corpus-v1/corpus.mbox", "bytes": 13726, "sha256": "C5B1C21511DA24177704BE4671392B80C49556C37668E5C85E280D094C1738B7" },
+    { "path": "fixtures/mail-corpus-v1/eml", "files": 12, "bytes": 13013 }
+  ],
+  "notes": [
+    "Actual SDK fixture paths ran inside the 460-test full Release suite; mocked probes were used only to force deterministic insufficient/unavailable/drop conditions.",
+    "Evaluation SDK marks remain accepted and are not represented as licensed production output.",
+    "No 128 MiB or 1 GiB benchmark was rerun."
+  ]
+}

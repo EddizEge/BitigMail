@@ -1,0 +1,773 @@
+{
+  "pass": true,
+  "finished": true,
+  "checks": [
+    {
+      "name": "/api/session secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/session status",
+      "pass": true
+    },
+    {
+      "name": "/api/accounts secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/accounts no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/accounts status",
+      "pass": true
+    },
+    {
+      "name": "/api/accounts secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/accounts no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/accounts status",
+      "pass": true
+    },
+    {
+      "name": "original source baseline12/4",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source status",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/mime-source secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/mime-source no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/mime-source status",
+      "pass": true
+    },
+    {
+      "name": "corpus-eml picker accepted",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/preview secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/preview status",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/preview secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/preview status",
+      "pass": true
+    },
+    {
+      "name": "corpus-eml preview12",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start status",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start status",
+      "pass": true
+    },
+    {
+      "name": "import same key returns same job",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start status",
+      "pass": true
+    },
+    {
+      "name": "import same plan never starts new job",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004 status",
+      "pass": true
+    },
+    {
+      "name": "import completed",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004/report secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004/report no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-af2de9bb8004/report status",
+      "pass": true
+    },
+    {
+      "name": "import verified physical count",
+      "pass": true
+    },
+    {
+      "name": "import no failed or ambiguous items",
+      "pass": true
+    },
+    {
+      "name": "corpus-eml independent byte/header/decoded multiset",
+      "pass": true
+    },
+    {
+      "name": "corpus-eml unread default",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/testing/set-mime-source status",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/mime-source secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/mime-source no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/mime-source status",
+      "pass": true
+    },
+    {
+      "name": "corpus-mbox picker accepted",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/preview secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/preview status",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/preview secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/preview status",
+      "pass": true
+    },
+    {
+      "name": "corpus-mbox preview12",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start status",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start status",
+      "pass": true
+    },
+    {
+      "name": "import same key returns same job",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/import/start status",
+      "pass": true
+    },
+    {
+      "name": "import same plan never starts new job",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27 status",
+      "pass": true
+    },
+    {
+      "name": "import completed",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27/report secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27/report no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-96cd534bcb27/report status",
+      "pass": true
+    },
+    {
+      "name": "import verified physical count",
+      "pass": true
+    },
+    {
+      "name": "import no failed or ambiguous items",
+      "pass": true
+    },
+    {
+      "name": "corpus-mbox independent byte/header/decoded multiset",
+      "pass": true
+    },
+    {
+      "name": "corpus-mbox unread default",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/output-dir secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/output-dir no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/output-dir status",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/preview secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/preview status",
+      "pass": true
+    },
+    {
+      "name": "eml-tree preview12",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start status",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start status",
+      "pass": true
+    },
+    {
+      "name": "export same key returns same job",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start status",
+      "pass": true
+    },
+    {
+      "name": "export same plan never starts new job",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-875c0f5bb5c7 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-875c0f5bb5c7 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-875c0f5bb5c7 status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-875c0f5bb5c7 secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-875c0f5bb5c7 no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-875c0f5bb5c7 status",
+      "pass": true
+    },
+    {
+      "name": "export completed",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-875c0f5bb5c7/report secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-875c0f5bb5c7/report no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-875c0f5bb5c7/report status",
+      "pass": true
+    },
+    {
+      "name": "export verified physical count",
+      "pass": true
+    },
+    {
+      "name": "export no failed or ambiguous items",
+      "pass": true
+    },
+    {
+      "name": "eml-tree independent exact raw/header/parts",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/output-dir secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/output-dir no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/picker/output-dir status",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/preview secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/preview no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/preview status",
+      "pass": true
+    },
+    {
+      "name": "mboxrd preview12",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start status",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start status",
+      "pass": true
+    },
+    {
+      "name": "export same key returns same job",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/transfer/bridge/export/start status",
+      "pass": true
+    },
+    {
+      "name": "export same plan never starts new job",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-16249089339e secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-16249089339e no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-16249089339e status",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-16249089339e secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-16249089339e no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-16249089339e status",
+      "pass": true
+    },
+    {
+      "name": "export completed",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-16249089339e/report secret-free",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-16249089339e/report no-store",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-16249089339e/report status",
+      "pass": true
+    },
+    {
+      "name": "export verified physical count",
+      "pass": true
+    },
+    {
+      "name": "export no failed or ambiguous items",
+      "pass": true
+    },
+    {
+      "name": "mboxrd independent exact raw/header/parts",
+      "pass": true
+    },
+    {
+      "name": "source unchanged including flags/dates/UIDs",
+      "pass": true
+    }
+  ],
+  "jobs": [
+    "job-af2de9bb8004",
+    "job-96cd534bcb27",
+    "job-875c0f5bb5c7",
+    "job-16249089339e"
+  ],
+  "evidenceDirectory": "C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\.codex-coordination\\evidence\\TASK-017\\api-a6473db107"
+}

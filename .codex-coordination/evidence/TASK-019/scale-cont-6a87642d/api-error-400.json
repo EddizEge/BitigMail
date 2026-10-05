@@ -1,0 +1,7 @@
+{
+  "path": "/api/testing/bridge-fault",
+  "status": 400,
+  "body": {
+    "error": "Hedef sıra numarası 1 ile 1000 arasında olmalıdır: 0"
+  }
+}

@@ -1,0 +1,13 @@
+TASK-013 Gate A runtime fix/report accuracy. SOL ran the experiment. It compiled and emitted:
+C:\Users\Eddiz\AppData\Local\Temp\bitigmail-task013-gate-a\run-2a6d7483fd494720a5bcf22139193978\report.json
+The test failed only at GateAExperimentTests.cs line 320: expected Mboxo physical count 12, actual 0.
+
+This corpus is mboxrd. MboxoStorageReader API exists but reading this mboxrd corpus as mboxo returns 0. Per Gate A, this is an explicit incompatible-dialect observation, not a reason to fake 12 or silently reinterpret. Change the hard assertion so mboxrd must retain 12, while mboxo records actual 0 and marks the mode/corpus pairing incompatible/unsupported for this input; its empty PST still must be explicitly reported. Do not weaken EML/mboxrd physical-message and attachment assertions.
+
+Correct static report text to match measured evidence precisely:
+- Subject is suffixed exactly `(Aspose.Email Evaluation)`, not prefixed by a generic phrase.
+- MailMessage/body carries the observed uppercase Turkish-I evaluation banner; reopened PST plain body is often replaced by the title-cased evaluation body while HTML remains separately measurable. Describe exact measured strings/locations, do not generalize as lossless.
+- mboxrd raw `>From` and `>>From` remained `>From` and `>>From` after SDK reading in this run; the reader did NOT unescape once, so original literal `From ` was not restored. Mark that as a fidelity blocker/decision point.
+- Ordinary attachments appear to receive generated Content-ID values while the true inline msg11 CID `proje_logo_cid` survives; distinguish generated CID additions from source CID preservation.
+
+Ensure the next report contains these decisions from measured fields and the test passes when structural EML=12, mboxrd=12, both reopen, four attachment bytes/hashes remain, one source CID survives; mboxo=0 is reported rather than asserted as 12. GateA files only, no commands/tests/product/dependencies/docs. Reply briefly.

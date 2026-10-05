@@ -1,0 +1,6 @@
+TASK-012 two narrow backend fixes. FILE EDITS ONLY; run nothing, no frontend, and DO NOT EDIT JobManager.cs (Astra owns it now).
+
+1) Test compile error PstSplitWorkflowTests.cs ~1530: Aspose 24.8 `FolderInfo` has no `ChangeMessage`. Implement the post-verification same-item-count tamper using an API that actually exists in the referenced Aspose assembly. Prefer replacing the existing physical item in writable PST via owning PersonalStorage API if available; if in-place replacement is unavailable, rebuild/modify the candidate deterministically while preserving the same physical message count and proving the candidate remains readable before PstSplitter rejects changed baseline SHA/size. Do not turn this into raw-pattern or count-changing corruption. Inspect existing assembly/API or repository usage rather than inventing another method name.
+2) PstSplitter.cs ~137 CS8604 possible null expectedSourceSha256 in overload. Validate splitPlan.SourceSha256 non-null/non-empty fail-closed before forwarding, then pass a proven non-null value; do not suppress a real missing fingerprint.
+
+Preserve all other changes and backend-pending result. Do not claim execution.

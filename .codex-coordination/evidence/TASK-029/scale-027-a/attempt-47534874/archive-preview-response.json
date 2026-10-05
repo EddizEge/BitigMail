@@ -1,0 +1,26 @@
+{
+  "previewId": "aprv_5108cbbceff04dbb9f254e797de77e41",
+  "archiveName": "Task029-scale-027-a",
+  "companyId": "company-task020-scale",
+  "projectId": "project-task020-1g-gate",
+  "companyName": "TASK029 Measurement",
+  "projectName": "scale-027-a",
+  "sourceKind": "bridge-export",
+  "dialect": "eml-tree",
+  "sourceFingerprint": "bridge-export:job-e9c0b18c670e:2026-09-15T14:38:24.3221253+00:00:9709ebcafb294ddeffa816015c28127c6e297911233492032fc8bf20b5f4a2e8",
+  "totalFiles": 8192,
+  "totalItems": 8192,
+  "totalSizeBytes": 1070776928,
+  "folders": [
+    {
+      "folderName": "Task029/scale-027-a/Bulk",
+      "itemCount": 8192,
+      "totalSizeBytes": 1070776928
+    }
+  ],
+  "canIngest": true,
+  "blockerReason": null,
+  "estimatedRequiredBytes": 5088414080,
+  "availableFreeBytes": 162363977728,
+  "estimateBasis": "Aynı hacimde ham staging+yayımlanmış arşiv ile SQLite indeks/WAL geçici alan toplamı"
+}

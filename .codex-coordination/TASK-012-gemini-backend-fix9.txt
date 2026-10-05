@@ -1,0 +1,7 @@
+TASK-012 one test-helper fix. FILE EDITS ONLY; run nothing, no frontend, DO NOT EDIT JobManager.cs or SplitCompletionPublicationTests.cs.
+
+Backend: 118 total, 117 pass, one fail: PstSplitter_BeforePublicationHook_MutatesBodyOrAttachment_PreservingItemCount_FailsClosed line ~1561 expected `[BÜTÜNLÜK HATASI]` but clone hook failed earlier with `Failed to create the folder. The folder with same name already exists`.
+
+The rebuild helper is trying to recreate the source storage root in a newly created target PST where the root already exists. Copy physical root messages directly into target.RootFolder, then recursively create/copy only source root's child folders beneath target.RootFolder. Avoid duplicate system/root folder creation as appropriate, preserve message count/folder hierarchy needed by the victim candidate, mutate exactly one body, keep output readable and same count, then allow production post-hook SHA/size guard to raise `[BÜTÜNLÜK HATASI]`. Do not loosen the assertion or product integrity check.
+
+Keep backend-pending result; no claimed execution.

@@ -1,0 +1,27 @@
+{
+  "previewId": "iprev_63fcca3e701f46729ec580645035b67e",
+  "companyId": "task027-ba8fe9a5",
+  "projectId": "source-memory",
+  "sourceAccountId": "acc_3b9987f094a643b48e2b9fbcac91bbd1",
+  "sourceAccountVersion": 1,
+  "targetAccountId": "acc_d72776ee6c2c439893d7ecf6b1e86833",
+  "targetAccountVersion": 1,
+  "totalSourceItems": 1024,
+  "eligibleItemsCount": 1024,
+  "excludedCount": 0,
+  "missingDateExcludedCount": 0,
+  "deletedExcludedCount": 0,
+  "folders": [
+    {
+      "sourceFolder": "Task019/scale-cont-ff44e15b/Bulk",
+      "targetFolder": "TASK027/baseline-c20a0f26",
+      "sourceUidValidity": 1789299877,
+      "totalItems": 1024,
+      "eligibleItems": 1024,
+      "excludedCount": 0
+    }
+  ],
+  "createdAtUtc": "2026-09-15T13:08:14.9908986+00:00",
+  "canTransfer": true,
+  "blockerReason": null
+}

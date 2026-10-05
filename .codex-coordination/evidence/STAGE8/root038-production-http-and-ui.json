@@ -1,0 +1,21 @@
+{
+  "stage": 8,
+  "task": "TASK-038",
+  "qualification": "LOCAL_PRODUCTION_SECURITY_WITH_TEST_PROVIDERS",
+  "command": "node node_modules/@playwright/test/cli.js test tests/e2e/task038-production-identity.spec.ts --reporter=list",
+  "result": { "passed": 4, "skipped": 2, "failed": 0 },
+  "intentionalSkips": "HTTP matrix runs once on desktop-reference; UI runs on all three viewport projects.",
+  "verified": [
+    "Native test proof first admin, admin company/operator creation, operator login and logout at three viewport sizes",
+    "Owner MIME handle analyze and selection preview succeed; other user and same user new session fail404",
+    "Foreign selectionId start fails404 even with caller-owned valid source and target handles",
+    "Operator admin endpoint denied404",
+    "Foreign accountId substituted with allowed company/project denied404",
+    "Two company archives are created through normal production ingest preview/start/job completion routes",
+    "Archive preview GET/start reject other user and new session; originating session start succeeds",
+    "Operator own archive search returns results and catalog only includes allowed archive",
+    "Mixed authorized/unauthorized archive search rejects whole request404",
+    "Foreign archiveId substituted with allowed scope denied404"
+  ],
+  "boundaries": "No real Google/Microsoft/IMAP account used. Only owned TestingHost6175 process terminated; normal6174 preserved. Test data isolated in runtime/testing-engine-secure. Commercial license, Windows distribution and clean-host acceptance not covered."
+}

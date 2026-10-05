@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "checks": {
+    "source-snapshot.json": true,
+    "imap-snapshot.json": true,
+    "baseline-071c02eb/imap-to-mbox.json": true,
+    "baseline-071c02eb/source-to-imap.json": true,
+    "baseline-071c02eb/sidecar.json": true,
+    "baseline-071c02eb/source-after.json": true,
+    "after-09f01443/imap-to-mbox.json": true,
+    "after-09f01443/source-to-imap.json": true,
+    "after-09f01443/sidecar.json": true,
+    "after-09f01443/source-after.json": true
+  },
+  "rawSourceBytes": 133847116,
+  "before": "baseline-071c02eb",
+  "after": "after-09f01443",
+  "phaseComparisons": {
+    "preview": {
+      "secondsBefore": 6.884866800013697,
+      "secondsAfter": 6.649300699995365,
+      "wsBefore": 581910528,
+      "wsAfter": 496398336,
+      "wsReductionPercent": 14.695075597601148,
+      "privateBefore": 609361920,
+      "privateAfter": 525160448
+    },
+    "export": {
+      "secondsBefore": 45.28923819999909,
+      "secondsAfter": 43.790730699984124,
+      "wsBefore": 804315136,
+      "wsAfter": 732250112,
+      "wsReductionPercent": 8.959799557968285,
+      "privateBefore": 867885056,
+      "privateAfter": 793628672
+    }
+  },
+  "limit": "One paired local run, not a universal performance or memory guarantee."
+}

@@ -1,0 +1,8 @@
+{
+  "companyId": "company-task020-scale",
+  "projectId": "project-task020-mbox-bounded",
+  "companyName": "TASK-020 Bounded MBOX Validation",
+  "projectName": "128MiB MBOX Retention and Recovery Audit",
+  "previewId": "bprev_56f90ae713884de0b438ccd53c943360",
+  "idempotencyKey": "74dd422e6db640d081a884eed66e25a5"
+}

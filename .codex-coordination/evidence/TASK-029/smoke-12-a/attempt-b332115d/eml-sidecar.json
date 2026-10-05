@@ -1,0 +1,92 @@
+{
+  "oracle": "Independent export sidecar metadata and folder mapping",
+  "pass": true,
+  "count": 12,
+  "mappingPass": true,
+  "items": [
+    {
+      "identity": [
+        "Task029/smoke-12-a/Bulk",
+        "1789299907:1"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task029/smoke-12-a/Bulk",
+        "1789299907:2"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task029/smoke-12-a/Bulk",
+        "1789299907:3"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task029/smoke-12-a/Bulk",
+        "1789299907:4"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task029/smoke-12-a/Bulk",
+        "1789299907:5"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task029/smoke-12-a/Bulk",
+        "1789299907:6"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task029/smoke-12-a/Bulk",
+        "1789299907:7"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task029/smoke-12-a/Bulk",
+        "1789299907:8"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task029/smoke-12-a/Bulk",
+        "1789299907:9"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task029/smoke-12-a/Bulk",
+        "1789299907:10"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task029/smoke-12-a/Bulk",
+        "1789299907:11"
+      ],
+      "pass": true
+    },
+    {
+      "identity": [
+        "Task029/smoke-12-a/Bulk",
+        "1789299907:12"
+      ],
+      "pass": true
+    }
+  ]
+}

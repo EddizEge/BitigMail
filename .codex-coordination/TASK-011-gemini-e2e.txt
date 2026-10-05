@@ -1,0 +1,11 @@
+TASK-011 genuine fixture E2E acceptance edits only. Do not run tests/builds/servers/background tasks.
+
+Update/add TestingHost real HTTP and real browser UI tests to exercise the exact independent oracle scenario, not merely all 4 Istanbul messages:
+- exact source folder `Projeler/İstanbul` using its opaque folderId (avoid ASCII `istanbul` casing assumptions; Turkish dotted İ must resolve reliably),
+- inclusive Türkiye dates startDate `2024-01-01`, endDate `2024-02-16`,
+- preview expects source 13, selected 3, excluded 10, selected attachments 1, missing-date exclusion as authoritative response, canConvert true,
+- convert the selectionId and expect written 3, failed 0; reopened PST exactly 3 physical messages, 1 attachment and CID preserved; source hash unchanged; full output path retained.
+
+Real UI test must actually change/select that folder and those dates, observe authoritative 3/1/10 preview, convert, render frozen selected folder path/date/timezone and exact counts, reload, and show the same exact persisted report/output. Also exercise explicit empty folder selection zero-match with conversion blocked before restoring the real 3-message selection. Cover desktop and 390px through existing projects, with no body horizontal overflow. Keep existing unfiltered 13-item regression test.
+
+Do not use route.fulfill for this real acceptance test. Keep TestingHost lifecycle helpers but do not start it now. Persist generated real output/report for independent inspection; cleanup only this run's explicitly tracked disposable artifacts, never shared temp directories. Update TASK-011 pending result without claiming execution.

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "evidence": [
+    {
+      "width": 390,
+      "resumes": 0,
+      "passed": true
+    },
+    {
+      "width": 1660,
+      "resumes": 1,
+      "passed": true
+    }
+  ],
+  "jobId": "job-24fdf9713767"
+}

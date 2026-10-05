@@ -1,0 +1,14 @@
+{
+  "runId": "mbox-03bded8cb8",
+  "pass": true,
+  "totalChecks": 78,
+  "passedChecks": 78,
+  "failedChecks": [],
+  "evidenceDirectory": "C:\\Users\\Eddiz\\Documents\\ChatGPT\\Mail Manager\\.codex-coordination\\evidence\\TASK-017\\mbox-03bded8cb8",
+  "jobId": "job-d14cb7a97c82",
+  "pidBeforeKill": 60584,
+  "pidAfterRestart": 4484,
+  "mboxFile": "C:\\Users\\Eddiz\\AppData\\Local\\Temp\\bitigmail-qa-split\\split-out-fddf293e87cb4829873e9ffe414ce338\\bridge-export-job-d14cb7a97c82\\fld_001.mbox",
+  "mboxSizeBytes": 6173,
+  "messageCount": 5
+}

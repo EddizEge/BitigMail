@@ -1,0 +1,62 @@
+{
+  "completed": false,
+  "stage": "128m",
+  "checks": [
+    {
+      "name": "/api/session no-store",
+      "pass": true
+    },
+    {
+      "name": "at least1024 physical source messages",
+      "pass": true
+    },
+    {
+      "name": "source size within2percent target",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-a3d2e097b416 no-store",
+      "pass": true
+    },
+    {
+      "name": "completed owned export job-a3d2e097b416",
+      "pass": true
+    },
+    {
+      "name": "/api/jobs/job-a3d2e097b416/report no-store",
+      "pass": true
+    },
+    {
+      "name": "only owned target folders",
+      "pass": true
+    },
+    {
+      "name": "source to IMAP canonical/header/MIME physical multiset",
+      "pass": true
+    },
+    {
+      "name": "IMAP to export exact raw/header/MIME physical multiset",
+      "pass": true
+    },
+    {
+      "name": "export folder/date/flags/UID sidecar",
+      "pass": false
+    }
+  ],
+  "exports": [],
+  "archives": [],
+  "timings": [
+    {
+      "route": "/api/session",
+      "httpAndJsonMs": 26.432399998157052
+    },
+    {
+      "route": "/api/jobs/job-a3d2e097b416",
+      "httpAndJsonMs": 5.501799998455681
+    },
+    {
+      "route": "/api/jobs/job-a3d2e097b416/report",
+      "httpAndJsonMs": 4.801399998541456
+    }
+  ]
+}

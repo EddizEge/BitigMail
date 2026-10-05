@@ -1,0 +1,12 @@
+{
+  "path": "/api/archive/ingest/preview",
+  "body": {
+    "companyId": "company-task020-scale",
+    "projectId": "project-task020-1g-gate",
+    "companyName": "TASK029 Measurement",
+    "projectName": "scale-027-a",
+    "sourceJobId": "job-e9c0b18c670e",
+    "archiveName": "Task029-scale-027-a"
+  },
+  "utc": "2026-09-15T14:38:25.201426+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "path": "/api/transfer/bridge/source/describe",
+  "body": {
+    "sourceHandle": "msrc_da159f351c6942b0b8cc9fd1cb105c6d"
+  },
+  "utc": "2026-09-15T13:22:50.943318+00:00"
+}

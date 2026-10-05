@@ -1,0 +1,4 @@
+{
+  "name": "POST /api/transfer/bridge/import/preview returned 400 (expected (200,))",
+  "pass": false
+}

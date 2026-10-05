@@ -1,0 +1,7 @@
+TASK-013 Gate B compile/portability fix. SOL test failed:
+- GateBExperimentTests.cs(613,13) CS0117: MboxrdFromLineFacts has no FidelityStatus.
+- Nullable warnings at 414, 1076, 1080; resolve cleanly where evidence can be absent rather than hiding with blanket pragmas.
+
+Also Root has now committed the permanent independent oracle at fixtures/mime-import-v1/expected-mime.json with README. Update BOTH GateA and GateB experiments to resolve and read this repository fixture instead of hard-depending on the temporary oracle-ce4c5897 path. The expected file uses relative source paths and the same messages/mboxMessages/original hashes/12-4-1 baseline. Do not edit the oracle fixture. Keep generated reports in temp and include the resolved permanent oracle path.
+
+GateA/GateB test files/models and test csproj only; no commands, production, docs, UI, or fixture edits. Fix the compile error with the actual model shape. Reply briefly.

@@ -1,0 +1,26 @@
+{
+  "sourceToImap": {
+    "oracle": "Independent physical-message multiset",
+    "pass": true,
+    "exactRaw": false,
+    "metadataCompared": false,
+    "sourceCount": 1024,
+    "targetCount": 1024,
+    "missing": 0,
+    "extra": 0,
+    "sourceAttachments": 308,
+    "targetAttachments": 308
+  },
+  "imapToFile": {
+    "oracle": "Independent physical-message multiset",
+    "pass": true,
+    "exactRaw": true,
+    "metadataCompared": false,
+    "sourceCount": 1024,
+    "targetCount": 1024,
+    "missing": 0,
+    "extra": 0,
+    "sourceAttachments": 308,
+    "targetAttachments": 308
+  }
+}

@@ -1,0 +1,24 @@
+From: =?utf-8?q?Canan_=C3=96zkan?= <canan.ozkan@muhendislik.example>
+To: Proje Grubu <proje.ekibi@sirket.example>
+Subject: =?utf-8?q?=C4=B0stanbul_Saha_Raporu_-_=C4=B0lk_Taslak?=
+Date: Thu, 15 Feb 2024 14:30:00 +0300
+Message-ID: <ortak-kimlik-2024-revizyon@projeler.example>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="===============_bound_msg03_alt_=="
+
+--===============_bound_msg03_alt_==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Merhabalar,
+
+İstanbul saha çalışmasına ait ilk taslak rapor hazırlandı. İncelenmesini rica ederim.
+
+Saygılarımla,
+Canan Özkan
+--===============_bound_msg03_alt_==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<p>Merhabalar,</p><p>İstanbul saha çalışmasına ait ilk taslak rapor hazırlandı. İncelenmesini rica ederim.</p><p>Saygılarımla,<br>Canan Özkan</p>
+--===============_bound_msg03_alt_==--

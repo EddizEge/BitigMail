@@ -1,0 +1,13 @@
+TASK-011 consolidated deterministic failure correction. FILE EDITS ONLY; do not run tests/builds/servers/background tasks. Fix production behavior where required; do not weaken acceptance expectations or turn production-connected tests into SDK-only tests. Preserve Astra's SynchronousConversionProgress change in JobManager.cs.
+
+Backend test result: 66 total, 60 pass, 6 fail:
+1. FilteredConversion_GenuineOstFixture_SelectSubset_ConvertsAndVerifiesExactly line 314: Assert.NotNull failed.
+2. SelectionPreviewEndpoint_ProtectedUnderSecurityMiddleware_ValidatesHostOriginTokenAndHandles line 833: expected 400, actual 403. Keep exact middleware semantics; correct the test request/expectation according to the established Host-before-Origin/token ordering, not security weakening.
+3. ExtractMessageDate_ProductionMapiMessage_ClientSubmitTimeAndDeliveryTime_NormalizeProperly line 572: expected 2026-05-10T23:30Z, actual current-ish 2026-09-12T20:24:42Z. Aspose MapiMessage test construction likely does not persist ClientSubmitTime as assumed; make a deterministic production-connected MAPI date test using valid setters/properties or test NormalizeToUtc directly for Kind branches while separately verifying actual extraction fallback. Do not change correct Utc/Local/Unspecified policy.
+4. SelectionPreviewEndpoint_MutatedOstWithoutSizeChange_RejectedFailClosed_NoSelectionRegistered line 764: Assert.NotNull failed before intended mutation assertion. Make real OST analysis/registry setup valid and keep the endpoint SHA mismatch/no-selection proof.
+5. SelectionEvaluation_WholeSourceTrialBlocker_RejectsEvenIfSubsetIsSmall line 283: expected InvalidOperationException, none thrown. Production selection preview must preserve whole-source preflight blockers, including any folder >50, even if selected subset is small.
+6. SelectionEvaluation_MissingDates_ExcludedWhenDateFilterActive_IncludedWhenInactive line 154: expected missing-date excluded 1, actual 0. Ensure truly missing submission+delivery dates are included without date filter, excluded and separately counted with any active date bound.
+
+Frontend typecheck errors: localEngineClient.test.ts lines 169,170,203,204 construct FolderSummary without required folderId. Add stable distinct test folder IDs consistent with exact identity semantics.
+
+Also ensure prior UI corrections landed: JSON blockerReason name matches TS/JSX, persisted report folders prefer folderPath, preview attachment accent uses var(--brand-orange). Update TASK-011 result pending SOL verification without claiming tests ran.

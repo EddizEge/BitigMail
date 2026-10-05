@@ -1,0 +1,20 @@
+{
+  "project": "mobile-narrow",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "renderedAllRows": 50,
+  "renderedQueuedRows": 2,
+  "requestedPages": [
+    1,
+    1,
+    2,
+    1
+  ],
+  "dimensions": {
+    "width": 390,
+    "body": 390
+  },
+  "passed": true
+}

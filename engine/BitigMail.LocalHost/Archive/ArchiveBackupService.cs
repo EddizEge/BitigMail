@@ -1,0 +1,30 @@
+using System.IO.Compression;
+using System.Security.Cryptography;
+using System.Text.Json;
+using BitigMail.Engine.Archive;
+using BitigMail.Engine.Security;
+
+namespace BitigMail.LocalHost.Archive;
+public sealed record ArchiveBackupFile(string PackagePath,string ArchiveId,string RelativePath,long Length,string Sha256);
+public sealed record ArchiveBackupArchive(string SourceArchiveId,string CompanyId,string ProjectId,string ManifestSha256,int MessageCount,long TotalBytes);
+public sealed record ArchiveBackupManifest(int Version,DateTimeOffset CreatedAtUtc,string IndexRebuildSchema,IReadOnlyList<ArchiveBackupArchive> Archives,IReadOnlyList<ArchiveBackupFile> Files,string PortabilityNotice);
+public sealed record ArchiveBackupResult(string FileName,long Length,string Sha256,int ArchiveCount,int MessageCount);
+
+public sealed class ArchiveBackupService
+{
+ private static readonly JsonSerializerOptions Json=new(){PropertyNamingPolicy=JsonNamingPolicy.CamelCase,WriteIndented=true};
+ private readonly ArchiveCatalogService _catalog;
+ public ArchiveBackupService(ArchiveCatalogService catalog)=>_catalog=catalog;
+ public async Task<ArchiveBackupResult> CreateAsync(IReadOnlyList<ArchiveScopeSelection> scopes,string outputDirectory,CancellationToken ct,Func<bool>? authorizePublication=null)
+ {
+  if(scopes.Count is <1 or >1000||scopes.Distinct().Count()!=scopes.Count)throw new ArgumentException("Yedek kapsamı geçersiz.");outputDirectory=Path.GetFullPath(outputDirectory);RejectLinks(outputDirectory);Directory.CreateDirectory(outputDirectory);
+  var registered=_catalog.GetRegisteredManifests();var files=new List<ArchiveBackupFile>();var archives=new List<ArchiveBackupArchive>();
+  foreach(var scope in scopes){ct.ThrowIfCancellationRequested();if(!registered.TryGetValue(scope.ArchiveId,out var manifest)||manifest.CompanyId!=scope.CompanyId||manifest.ProjectId!=scope.ProjectId)throw new KeyNotFoundException();string root=Path.Combine(_catalog.StorageManager.ArchivesBaseDirectory,manifest.ArchiveId);RejectLinks(root);string manifestPath=Path.Combine(root,"manifest.json");var manifestInfo=Describe(manifestPath,$"archives/{manifest.ArchiveId}/manifest.json",manifest.ArchiveId,"manifest.json");files.Add(manifestInfo);foreach(var item in manifest.Items){string path=Path.GetFullPath(Path.Combine(root,item.RelativeEmlPath));if(!path.StartsWith(root+Path.DirectorySeparatorChar,StringComparison.OrdinalIgnoreCase))throw new InvalidDataException();var described=Describe(path,$"archives/{manifest.ArchiveId}/{item.RelativeEmlPath.Replace('\\','/')}",manifest.ArchiveId,item.RelativeEmlPath);if(!described.Sha256.Equals(item.StoredSha256,StringComparison.OrdinalIgnoreCase)||described.Length!=item.ByteLength)throw new InvalidDataException("Arşiv ham içeriği manifestle uyuşmuyor.");files.Add(described);}archives.Add(new(manifest.ArchiveId,manifest.CompanyId,manifest.ProjectId,manifestInfo.Sha256,manifest.TotalItems,manifest.TotalSizeBytes));}
+  if(files.Count+1>ArchiveZipPayloadVerifier.MaximumEntries||files.Sum(x=>x.Length)>ArchiveZipPayloadVerifier.MaximumTotalBytes)throw new InvalidDataException("Yedek paket sınırı aşıldı.");var package=new ArchiveBackupManifest(1,DateTimeOffset.UtcNow,"BitigMail.ArchiveIndex.Rebuild.v1",archives.AsReadOnly(),files.AsReadOnly(),"Hesaplar ve DPAPI sırları taşınmaz; hedef cihazda yeniden bağlantı gerekir.");byte[] manifestBytes=JsonSerializer.SerializeToUtf8Bytes(package,Json);if(manifestBytes.Length>16*1024*1024)throw new InvalidDataException("Yedek manifesti boyut sınırını aşıyor.");
+  string name="bitigmail-archive-backup-"+DateTimeOffset.UtcNow.ToString("yyyyMMddHHmmss")+"-"+Guid.NewGuid().ToString("N")[..8]+".zip",final=Path.Combine(outputDirectory,name),temp=final+".partial";
+  try{await using(var stream=new FileStream(temp,FileMode.CreateNew,FileAccess.ReadWrite,FileShare.None,64*1024,true)){using(var zip=new ZipArchive(stream,ZipArchiveMode.Create,true)){var me=zip.CreateEntry("manifest.json",CompressionLevel.NoCompression);await using(var dest=me.Open())await dest.WriteAsync(manifestBytes,ct);foreach(var file in files){ct.ThrowIfCancellationRequested();string sourcePath=Path.Combine(_catalog.StorageManager.ArchivesBaseDirectory,file.ArchiveId,file.RelativePath);RejectLinks(sourcePath);var entry=zip.CreateEntry(file.PackagePath,CompressionLevel.Optimal);await using var source=new FileStream(sourcePath,FileMode.Open,FileAccess.Read,FileShare.Read);await using var dest=entry.Open();await VerifiedStreamCopy.CopyAsync(source,dest,file.Length,file.Sha256,ct);}}await stream.FlushAsync(ct);stream.Flush(true);}foreach(var archive in archives){string current=HashFile(Path.Combine(_catalog.StorageManager.ArchivesBaseDirectory,archive.SourceArchiveId,"manifest.json"));if(!current.Equals(archive.ManifestSha256,StringComparison.OrdinalIgnoreCase))throw new InvalidDataException("Kaynak arşiv manifesti yedekleme sırasında değişti.");}if(authorizePublication is not null&&!authorizePublication())throw new UnauthorizedAccessException();File.Move(temp,final,false);return new(name,new FileInfo(final).Length,HashFile(final),archives.Count,archives.Sum(x=>x.MessageCount));}finally{try{if(File.Exists(temp))File.Delete(temp);}catch{}}
+ }
+ private static ArchiveBackupFile Describe(string path,string package,string archiveId,string relative){RejectLinks(path);var info=new FileInfo(path);if(!info.Exists||info.Length>ArchiveZipPayloadVerifier.MaximumEntryBytes)throw new InvalidDataException("Yedek dosyası sınırı aşıyor.");return new(package,archiveId,relative,info.Length,HashFile(path));}
+ private static string HashFile(string path){using var stream=new FileStream(path,FileMode.Open,FileAccess.Read,FileShare.Read);return Convert.ToHexString(SHA256.HashData(stream)).ToLowerInvariant();}
+ private static void RejectLinks(string path){for(string? current=Path.GetFullPath(path);current is not null;current=Path.GetDirectoryName(current))if((File.Exists(current)||Directory.Exists(current))&&(File.GetAttributes(current)&FileAttributes.ReparsePoint)!=0)throw new InvalidDataException("Bağlantılı yol kabul edilmez.");}
+}

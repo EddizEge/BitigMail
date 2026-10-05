@@ -1,0 +1,22 @@
+TASK_ID: TASK-035
+STATUS: WAIT — Stage5, after Stage4 local implementation accounting
+EXECUTOR: SOL DIRECT, existing thread only; EXECUTION_OVERRIDE.md applies.
+GOAL: Production SDK licensing integration and truthful scale acceptance controls, without a license bypass.
+
+Implement one process-start license service using installed Aspose.Email SDK SetLicense. User-selected protected local license configuration; never persist license bytes in source control, logs, API DTOs or templates. Loading failure must remain unlicensed/configuration_error, not silently claim licensed. SDK license state and measured canary differences are separate fields; SDK successful SetLicense is authoritative for loading, output canary checks measure behavior. Load before all conversion/calibration and never hot-change licensing during active jobs. Handle restart requirement clearly. Do not remove trial watermark or evade per-folder trial limits.
+
+Expose status and actionable qualification in Settings, relevant preview/job/report. No external purchase, registration or arbitrary discovered-license use. Actual commercial license absent: keep LICENSED_OUTPUT_ACCEPTANCE_PENDING, while invalid/missing/read-error and trial paths are fully tested. Existing fidelity calibration must remain intact.
+
+Add a reproducible staged scale harness with explicit target directory, available capacity/preflight and independent MIME/attachment/folder/date/flags oracles. Planning does not imply execution. Use available small fixtures for harness self-check. Do not rerun prior1GiB benchmark without a new performance change/failure. Do not create fake100GB sparse/zero-filled stores. Large licensed PST/OST10/25/50/100GB remains honestly pending unless real data, capacity and license actually available. Never use unrelated user files. Record limits and next external acceptance gates. Stage5 local software can be accepted separately from production license/scale.
+
+Verify targeted failure/fidelity tests + full relevant regression/type/lint/build and rendered Settings/preview status. Report exact tests, implemented behavior, current license state, and what was not run. Then root dispatches Stage6.
+
+ROOT OBSERVED INITIALIZATION RISK 2026-09-20:
+One033 full parallel test process threw Aspose.Email.Mapi.KnownPropertyList duplicate key PidTagImportance (task033-root-boundaries-full.trx, lines41-45); isolated and clean full reruns passed. Do not call this resolved by rerun. During process-start license integration, serialize/warm the SDK's required MAPI property initialization before accepting concurrent previews/jobs, if a controlled cold-start parallel probe confirms race. Keep a separate-process repeated cold-start probe (bounded e.g5runs), not an in-process already-warmed test; record evidence and exact scope. No blanket SDK upgrade or disabled concurrency test to hide it. If unconfirmed, retain explicit observed external SDK risk; initialization and licensing must still execute once beforeconversion.
+
+ObservedSDKcoldinitialization entrypoint: MimeToPstConverter.cs line520 mapi.SetProperty(KnownPropertyList.Body, markedPlain), PropertyDescriptor→KnownPropertyList.c/d. A standalone tinyMapiMessage.SetProperty(KnownPropertyList.Body, synthetictext) is a candidate serialwarmup afterlicenseload; verifywithcoldparallelprobe, not assumption.
+
+ROOT RACE REPRODUCED — 2026-09-20:
+Root standalone lab/stage5-sdk-initialization ran 3 cold processes x32 simultaneous MapiMessage.SetProperty(Body/InternetCodepage): two processes each threw one KnownPropertyList collision. Three fresh processes with one serial synthetic call before concurrency had zero failures. Evidence .codex-coordination/evidence/STAGE5/sdk-cold-start-probe.json; readable report docs/SDK_INITIALIZATION_VALIDATION.md. Implement one-time serial SDK warmup AFTER license loading and BEFORE accepting requests, including future recovery child process startup. Fail clearly if initialization fails; no hidden retry or test-concurrency disabling. This is scoped evidence, not blanket SDK thread safety. Lab source is ready for post-integration cold-process verification; no need recreate the experiment.
+
+ROOT DISPATCH 2026-09-20: STATUS READY. Stage4 local matrix acceptance closed. Implement process-start license status/configuration, proven SDK serial warmup, truthful scale harness and UI. Read appended actual cold-start probe evidence. No live commercial license available; do all independent development/test without bypass. Return deterministic evidence before036.

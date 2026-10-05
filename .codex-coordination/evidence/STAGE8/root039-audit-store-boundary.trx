@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="7f2ccb86-e3c5-40cc-93b8-9dffd3974413" name="Eddiz@MERCAN-PC 2026-09-20 05:43:54" runUser="MERCAN-PC\Eddiz" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-20T05:43:54.7787674+03:00" queuing="2026-09-20T05:43:54.7787677+03:00" start="2026-09-20T05:43:53.4343602+03:00" finish="2026-09-20T05:43:54.7837247+03:00" />
+  <TestSettings name="default" id="a95e5a82-e8b6-4868-b3bd-b641cab564a5">
+    <Deployment runDeploymentRoot="Eddiz_MERCAN-PC_2026-09-20_05_43_54" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="47cae148-1047-42d9-99d7-857a1e93878f" testId="e9eae4d1-8b19-696c-ac54-8ad5dc431d41" testName="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests.CorruptStorageProducesSafeWarning(mode: &quot;oversized-head&quot;)" computerName="MERCAN-PC" duration="00:00:00.0195959" startTime="2026-09-20T05:43:54.2306300+03:00" endTime="2026-09-20T05:43:54.2485142+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="47cae148-1047-42d9-99d7-857a1e93878f" />
+    <UnitTestResult executionId="547837fc-489c-4f92-ad66-249aea0e1e8d" testId="b744df37-add7-f590-2d8e-4b82de3f6994" testName="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests.RecoversFlushedTailWithoutDuplicatingEntries" computerName="MERCAN-PC" duration="00:00:00.0445543" startTime="2026-09-20T05:43:54.6199822+03:00" endTime="2026-09-20T05:43:54.6646593+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="547837fc-489c-4f92-ad66-249aea0e1e8d" />
+    <UnitTestResult executionId="91c2de3f-f356-4bfe-86e2-bdea3fbc87e8" testId="c4b66cfc-302a-6caa-b764-ff68209f2782" testName="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests.CorruptStorageProducesSafeWarning(mode: &quot;invalid&quot;)" computerName="MERCAN-PC" duration="00:00:00.0219847" startTime="2026-09-20T05:43:54.2140037+03:00" endTime="2026-09-20T05:43:54.2288696+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="91c2de3f-f356-4bfe-86e2-bdea3fbc87e8" />
+    <UnitTestResult executionId="107506b8-0ca4-4e9f-a2f3-07d674e20da3" testId="82c72515-ee5b-0297-1084-3c26f04e400e" testName="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests.CorruptStorageProducesSafeWarning(mode: &quot;oversized-log&quot;)" computerName="MERCAN-PC" duration="00:00:00.0675454" startTime="2026-09-20T05:43:54.1330534+03:00" endTime="2026-09-20T05:43:54.2067096+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="107506b8-0ca4-4e9f-a2f3-07d674e20da3" />
+    <UnitTestResult executionId="ac3fab12-2111-4a06-81cb-cbad275f21c9" testId="a0c4c93d-c7fc-687c-4fe2-40ad902445ec" testName="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests.CorruptStorageProducesSafeWarning(mode: &quot;duplicate&quot;)" computerName="MERCAN-PC" duration="00:00:00.0185485" startTime="2026-09-20T05:43:54.2486435+03:00" endTime="2026-09-20T05:43:54.2671500+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac3fab12-2111-4a06-81cb-cbad275f21c9" />
+    <UnitTestResult executionId="5b996756-10c4-4d96-839d-3ca4acc21fb6" testId="09ba5808-f589-7485-4b4e-6a674884ac70" testName="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests.IndependentWritersKeepEveryEvent" computerName="MERCAN-PC" duration="00:00:00.3496945" startTime="2026-09-20T05:43:54.2678285+03:00" endTime="2026-09-20T05:43:54.6189178+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5b996756-10c4-4d96-839d-3ca4acc21fb6" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests.RecoversFlushedTailWithoutDuplicatingEntries" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root039-fresh\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="b744df37-add7-f590-2d8e-4b82de3f6994">
+      <Execution id="547837fc-489c-4f92-ad66-249aea0e1e8d" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root039-fresh\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests" name="RecoversFlushedTailWithoutDuplicatingEntries" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests.IndependentWritersKeepEveryEvent" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root039-fresh\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="09ba5808-f589-7485-4b4e-6a674884ac70">
+      <Execution id="5b996756-10c4-4d96-839d-3ca4acc21fb6" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root039-fresh\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests" name="IndependentWritersKeepEveryEvent" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests.CorruptStorageProducesSafeWarning(mode: &quot;duplicate&quot;)" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root039-fresh\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="a0c4c93d-c7fc-687c-4fe2-40ad902445ec">
+      <Execution id="ac3fab12-2111-4a06-81cb-cbad275f21c9" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root039-fresh\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests" name="CorruptStorageProducesSafeWarning" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests.CorruptStorageProducesSafeWarning(mode: &quot;invalid&quot;)" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root039-fresh\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="c4b66cfc-302a-6caa-b764-ff68209f2782">
+      <Execution id="91c2de3f-f356-4bfe-86e2-bdea3fbc87e8" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root039-fresh\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests" name="CorruptStorageProducesSafeWarning" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests.CorruptStorageProducesSafeWarning(mode: &quot;oversized-log&quot;)" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root039-fresh\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="82c72515-ee5b-0297-1084-3c26f04e400e">
+      <Execution id="107506b8-0ca4-4e9f-a2f3-07d674e20da3" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root039-fresh\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests" name="CorruptStorageProducesSafeWarning" />
+    </UnitTest>
+    <UnitTest name="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests.CorruptStorageProducesSafeWarning(mode: &quot;oversized-head&quot;)" storage="c:\users\eddiz\documents\chatgpt\mail manager\.codex-coordination\build\root039-fresh\bin\bitigmail.engine.tests\release\bitigmail.engine.tests.dll" id="e9eae4d1-8b19-696c-ac54-8ad5dc431d41">
+      <Execution id="47cae148-1047-42d9-99d7-857a1e93878f" />
+      <TestMethod codeBase="C:\Users\Eddiz\Documents\ChatGPT\Mail Manager\.codex-coordination\build\root039-fresh\bin\BitigMail.Engine.Tests\release\BitigMail.Engine.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="BitigMail.Engine.Tests.AuditLogStoreBoundaryTests" name="CorruptStorageProducesSafeWarning" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="e9eae4d1-8b19-696c-ac54-8ad5dc431d41" executionId="47cae148-1047-42d9-99d7-857a1e93878f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b744df37-add7-f590-2d8e-4b82de3f6994" executionId="547837fc-489c-4f92-ad66-249aea0e1e8d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4b66cfc-302a-6caa-b764-ff68209f2782" executionId="91c2de3f-f356-4bfe-86e2-bdea3fbc87e8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="82c72515-ee5b-0297-1084-3c26f04e400e" executionId="107506b8-0ca4-4e9f-a2f3-07d674e20da3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a0c4c93d-c7fc-687c-4fe2-40ad902445ec" executionId="ac3fab12-2111-4a06-81cb-cbad275f21c9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="09ba5808-f589-7485-4b4e-6a674884ac70" executionId="5b996756-10c4-4d96-839d-3ca4acc21fb6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Bir Listede Olmayan Sonuçlar" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Yüklenen Tüm Sonuçlar" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="6" executed="6" passed="6" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.5+1b188a7b0a (64-bit .NET 8.0.31)&#xD;
+[xUnit.net 00:00:00.10]   Discovering: BitigMail.Engine.Tests&#xD;
+[xUnit.net 00:00:00.24]   Discovered:  BitigMail.Engine.Tests&#xD;
+[xUnit.net 00:00:00.27]   Starting:    BitigMail.Engine.Tests&#xD;
+[xUnit.net 00:00:00.83]   Finished:    BitigMail.Engine.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

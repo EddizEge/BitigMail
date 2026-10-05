@@ -1,0 +1,7 @@
+TASK-012 backend correction. FILE EDITS ONLY; run nothing and do not edit frontend.
+
+Compiler failure: engine/BitigMail.Engine/Storage/PstSplitter.cs(21,72) CS0053 inconsistent accessibility: `Action<string, List<OstToPstConverter.SourceItemSnapshot>>` is less accessible than `PstSplitter.BeforePartVerificationHook`. Keep the fault hook internal/test-only and reconcile visibility without making internal snapshots public.
+
+Critical persisted idempotency requirement: do not copy JobManager's basename-only restart fallback for split jobs. Persist a canonical request fingerprint/hash derived from server-authoritative full source path + source SHA, full target parent path, canonical selection content hash, mode/cap, and frozen company/project context. In-memory and restart retry comparison must use that same fingerprint. Jobs without fingerprint remain readable for backward compatibility, but must not be unsafely matched by basename; if an old key cannot be proven identical, return conflict/require a new idempotency key. Add production-connected tests including identical basenames in two different directories and restart-sensitive changed mode/cap/selection/context/target.
+
+Preserve SynchronousConversionProgress, typed handles, and all existing semantics. Update TASK-012 backend-pending result without claiming commands ran.

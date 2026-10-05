@@ -1,0 +1,7 @@
+{
+  "ObservedAtUtc": "2026-09-14T01:36:29.3274288Z",
+  "DiskFreeBytes": 167503888384,
+  "TotalRamBytes": 68641931264,
+  "FreeRamBytes": 46424887296,
+  "Note": "Independent observation only; runner must recheck capacity immediately before allocation."
+}

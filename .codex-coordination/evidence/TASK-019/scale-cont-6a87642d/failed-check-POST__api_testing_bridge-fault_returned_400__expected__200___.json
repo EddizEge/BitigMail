@@ -1,0 +1,4 @@
+{
+  "name": "POST /api/testing/bridge-fault returned 400 (expected (200,))",
+  "pass": false
+}
