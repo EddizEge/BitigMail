@@ -1,67 +1,122 @@
+<div align="center">
+
+<img src="docs/images/logo.png" alt="BitigMail logosu" width="96" />
+
 # BitigMail
 
-BitigMail, Windows için geliştirilen posta yönetim uygulamasıdır. Gerçek dosya akışları **OST → yeni PST**, **EML dosyaları / EML klasörü / MBOX → yeni PST** ve **PST/OST → yıl veya boyuta göre PST bölümleme**: dosya analizi, tarih/klasör seçimi, ileti/ek önizlemesi, kaynak koruması, müşteri/proje bağlamı, ilerleme ve kalıcı rapor çalışır. **IMAP hesapları arasında filtreli, kesintiden devam edebilen kopyalama** küçük gerçek laboratuvar verisiyle doğrulandı. Microsoft OAuth altyapısı yerel olarak hazır; gerçek Microsoft posta pilotları bekliyor. Birleşik arşiv araması ve kurtarma henüz örnek verilerle çalışır.
+**Kurumsal posta yönetim platformu**
 
-**Tamamlanan yeni akış (TASK-017):** EML/MBOX ↔ IMAP dosya/hesap köprüsü; tarih/klasör seçimi, kalıcı rapor, kesintiden devam ve İş Merkezi'nden geçmiş işe dönüş gerçek API ve masaüstü/telefon görünümünde kabul edildi. 72 fiziksel ileti/24 ek ve gerçek süreç çökmesi sonrası EML/MBOX devamı doğrulandı; [sözleşme](docs/FILE_ACCOUNT_BRIDGE_WORKFLOW.md), [kabul kaydı](docs/FILE_ACCOUNT_BRIDGE_VALIDATION.md). Sonraki onaylı aşama [gerçek arşiv/arama](docs/LOCAL_ARCHIVE_SEARCH_WORKFLOW.md), ardından [kademeli ölçek/dayanıklılık](docs/SCALE_AND_RESILIENCE_PLAN.md). Azure kaydı ve gerçek Outlook pilotu bu işlerin ardından sohbet içinde hatırlatılacak; kullanıcı isteğiyle zamanlayıcı kullanılmaz.
+Taşı · Dönüştür · Arşivle · Kurtar
 
-Güncel kapsam: [Yol haritası](ROADMAP.md). Gerçek dosya test sonuçları ve sınırlar: [Yerel OST doğrulaması](docs/LOCAL_OST_VALIDATION.md), [filtreli dönüşüm doğrulaması](docs/FILTERED_OST_VALIDATION.md), [PST bölümleme doğrulaması](docs/PST_SPLIT_VALIDATION.md).
+![Sürüm](https://img.shields.io/badge/sürüm-0.9.3-F26F1B)
+![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-F7BC2B)
+![Durum](https://img.shields.io/badge/durum-iç%20test-lightgrey)
 
-Yeni EML/MBOX akışı ve bağımsız içerik karşılaştırması: [kullanım ve kapsam](docs/MIME_IMPORT_WORKFLOW.md), [doğrulama kaydı](docs/MIME_IMPORT_VALIDATION.md).
+</div>
 
-## Proje Bileşenleri
+BitigMail, müşteri şirketlere hizmet veren BT firmaları için geliştirilen bir Windows uygulamasıdır. Posta dosyaları (PST, OST, EML, MBOX, OLM, Apple Mail) ile posta hesapları (IMAP, POP, Microsoft 365, Google) arasında filtreli aktarım, dönüştürme, arşivleme, arama ve kurtarma işlerini tek yerden yönetir.
 
-- **`prototype/`**: React 18, TypeScript, Vite arayüz prototipi (`http://127.0.0.1:5173`).
-- **`engine/BitigMail.Engine`**: .NET 8 ve Aspose.Email 24.8.0 tabanlı OST okuma ve yeni Unicode PST yazma kütüphanesi.
-- **`engine/BitigMail.LocalHost`**: ASP.NET Core `net8.0-windows` yerel servis köprüsü (`http://127.0.0.1:6174`), STA Windows Forms dosya diyalogları.
-- **`engine/BitigMail.TestingHost`**: Headless E2E ve entegrasyon testleri için izole test sunucusu (`http://127.0.0.1:6175`).
-- **`engine/BitigMail.Engine.Tests`**: Güvenlik, format doğrulaması, 50-öğe kısıtı ve bütünlük negatif kontrollerini doğrulayan xUnit test paketi.
+Uygulama tamamen yerel çalışır: postalarınız bilgisayarınızdan çıkıp bir ara sunucuya gitmez.
 
-## Hızlı Başlangıç
+![Aktarım ve dönüşüm ekranı](docs/images/aktarim.png)
 
-### 1. Arayüzü Başlatma (Vite)
+## Neler yapar?
+
+| İş | Açıklama |
+|---|---|
+| **Posta aktarımı** | IMAP hesapları arasında, dosyadan hesaba ve hesaptan dosyaya kopyalama. Klasör eşleme, filtre, önizleme ve kesintiden devam. |
+| **Dosya dönüşümü** | OST → PST, EML/MBOX → PST, PST/OST/OLM/Apple Mail → EML. |
+| **Arşiv ve bölme** | Büyük PST/OST dosyalarını yıla veya boyuta göre parçalara ayırma. Yönetilen yerel arşiv ve birden fazla şirket/proje üzerinde arama. |
+| **Veri kurtarma** | Hasarlı PST/OST dosyalarının okunabilen kısmını EML olarak çıkarma; kurtarılan, kısmi ve okunamayan öğeler ayrı raporlanır. |
+| **Müşteri ve proje yönetimi** | Şirket → proje → posta kaynağı düzeni; yönetici ve operatör rolleri, proje bazlı yetki. |
+
+Her kaynak → hedef yönü ayrı uygulanır ve ayrı doğrulanır; "her formatı her formata çevirir" iddiası yoktur. Tam kapsam: [format ve yön matrisi](docs/FORMAT_DIRECTION_MATRIX.md).
+
+## Temel ilkeler
+
+- **Kaynak korunur.** Kaynak dosya ve posta kutuları salt okunur taranır; sunucuda silme komutu kullanılmaz.
+- **Önce önizleme.** Her iş, kapsamı ve filtreleri sabitleyen bir önizleme planıyla başlar; seçim değişirse önizleme yenilenir.
+- **Dosya oluşması başarı sayılmaz.** Çıktılar yeniden açılıp özet (hash), ileti ve ek sayılarıyla doğrulanır; sonuç kalıcı bir rapora yazılır.
+- **Mevcut hedefin üzerine yazılmaz.**
+- **Sırlar yerelde korunur.** Posta parolaları ve OAuth belirteçleri Windows DPAPI ile şifrelenir; varsayılan bağlantı SSL/TLS'dir.
+
+<img src="docs/images/yonetim.png" alt="Hesap ve çalışma alanları paneli" width="720" />
+
+## Kurulum
+
+> [!WARNING]
+> 0.9.3 **imzasız bir iç test sürümüdür**. Windows yayıncıyı doğrulayamaz. Önce içeriğini bildiğiniz küçük bir test kaynağıyla deneyin.
+
+Gereksinim: Windows 10/11 (x64) ve Microsoft Edge WebView2 çalışma zamanı. Ayrı .NET veya Node kurulumu gerekmez.
+
+1. [Sürümler](../../releases) sayfasından `BitigMail-Internal-0.9.3.zip` dosyasını indirip bir klasöre açın.
+2. Açtığınız klasörde PowerShell ile kurun:
+
+   ```powershell
+   .\BitigMail.Setup.exe install --package . --allow-unsigned-internal
+   ```
+
+3. Başlatın:
+
+   ```powershell
+   .\BitigMail.Setup.exe launch
+   ```
+
+İlk açılışta kendi yönetici kullanıcınızı oluşturursunuz. Pencerenin kapatma düğmesi uygulamayı sistem tepsisine indirir; tamamen çıkmak için tepsi simgesinden **Çıkış** seçin. Güncelleme, geri dönüş ve kaldırma: [Windows hızlı başlangıç](docs/WINDOWS_QUICK_START_TR.md).
+
+## Durum ve bilinen sınırlar
+
+Sürüm 0.9.3'te yerel kabul testleri geçti (21 Eylül 2026: 892 motor testi, 151 arayüz testi). Ticari 1.0 için açık kalanlar:
+
+- Kod imzalama sertifikası ve temiz bir Windows kurulumunda kabul testi yok.
+- Aspose.Email **deneme lisansıyla** çalışıyor: PST çıktılarında değerlendirme işaretleri bulunur ve klasör başına 50 öğeyi aşan PST/OST kaynakları engellenir.
+- 10–100 GB ölçeğinde ve gerçek hasarlı dosyalarla kabul yapılmadı.
+- Microsoft 365, Outlook.com ve Google bağlantıları yerel olarak hazır; gerçek hesaplarla canlı pilot henüz yapılmadı.
+- MBOX yalnızca **mboxrd** biçiminde kabul edilir.
+
+Ayrıntılar: [yol haritası](docs/FULL_RELEASE_ROADMAP.md) · [Windows sürüm kabulü](docs/WINDOWS_RELEASE_ACCEPTANCE.md)
+
+## Mimari
+
+```text
+BitigMail.Setup      kurulum, güncelleme, geri dönüş, başlatıcı
+└─ BitigMail.Desktop      Windows kabuğu (WinForms + WebView2)
+   └─ BitigMail.LocalHost     yerel API, kimlik/yetki, iş kuyruğu
+      ├─ React arayüzü            (prototype/)
+      ├─ BitigMail.Engine         formatlar, MIME, arşiv, SQLite FTS5 arama
+      └─ BitigMail.RecoveryWorker hasarlı dosya okuma için yalıtılmış süreç
+```
+
+| Klasör | İçerik |
+|---|---|
+| `prototype/` | React 18 + TypeScript + Vite arayüzü (adı "prototype" olsa da ürünün gerçek arayüzü) |
+| `engine/` | .NET 8 motoru, yerel servis, masaüstü kabuğu, kurulum ve testler |
+| `docs/` | Ürün, iş akışı, kabul ve tasarım belgeleri |
+| `fixtures/`, `lab/` | Sentetik test verileri ve deneyler |
+| `scripts/` | Derleme ve geliştirme yardımcıları |
+
+## Geliştirme
+
 ```powershell
+# Arayüz
 cd prototype
 npm install
 npm run dev
-```
-Arayüz `http://127.0.0.1:5173` adresinde açılır.
 
-### 2. Yerel Dönüştürme Motorunu Başlatma
-
-İkinci bir terminali projenin ana klasöründe (`Mail Manager`) açın:
-```powershell
+# Yerel motor (proje kökünden)
 .\scripts\start-local-engine.ps1
-```
-Servis `http://127.0.0.1:6174` adresinde dinler ve tarayıcıdan gelen talepleri Origin/Host/Token doğrulaması ile kabul eder.
 
-Arayüzde **Aktarım ve dönüşüm → Dönüştürme** yolunu açın. Müşteri ve projeyi seçin; **OST dosyası seç** ile dosyayı inceleyin. Aktarılacak klasörleri ve isteğe bağlı tarih aralığını seçip ileti/ek önizlemesini kontrol edin; yeni PST için bir konum belirleyin ve dönüştürmeyi başlatın. Tarihler Türkiye saatine (UTC+03) göre, başlangıç ve bitiş günleri dahil uygulanır. Her klasörün kutusu kendi iletilerini seçer; alt klasörler ayrıca seçilir. Boş sonuçta dönüşüm başlamaz. Sonuç, kullanılan filtreler ve kayıt konumu İş merkezi/Raporlar üzerinden tekrar bulunabilir. Mevcut hedef dosyanın üzerine yazılmaz. Deneme motoru, seçilen kapsam daha küçük olsa bile herhangi bir klasöründe 50'den fazla öğe bulunan kaynak PST/OST dosyalarını engeller. Bu Aspose deneme sınırı IMAP aktarımına uygulanmaz.
-
-Gerçek IMAP aktarımı için önce müşteri/proje ayrıntılarında hesapları ekleyip bağlantı ve klasör sayılarını doğrulayın. Ardından **Aktarım ve dönüşüm → Taşıma → Gerçek IMAP Taşıma** yolunda kaynak/hedef hesapları, tam klasör yollarını, hedef eşlemelerini ve isteğe bağlı tarih aralığını seçin. Önizleme gerekirse hedefte boş klasörler oluşturabilir; iletiler yalnız aktarımı başlatınca kopyalanır. Kullanıcı adı/parola + zorunlu TLS yanında kurumsal Microsoft 365 ve kişisel Outlook.com/Hotmail delegated OAuth bağlantıları yerel olarak hazırdır. Kurumsal canlı pilot **LIVE_PILOT_PENDING**, kişisel canlı pilot **LIVE_PERSONAL_PILOT_PENDING** durumundadır.
-
-**Aktarım ve dönüşüm → Arşivleme** ekranında PST veya OST seçin; klasör/tarih filtresini belirleyip yıllara ya da dosya boyutuna göre bölümlemeyi seçin. Hedef üst klasörü belirlediğinizde uygulama yeni bir arşiv klasörüne doğrulanmış PST parçalarını ve manifesti kaydeder. Boyut sınırı gerçek kapatılmış dosya boyutuna uygulanır; tek bir ileti ekleriyle sınırı aşıyorsa işlem durur. Parça listesi, toplam ek sayısı ve rapor İş merkezi üzerinden yeniden açılır. Küçük test verileriyle doğrulanmıştır; 100 GB performansı, bozuk dosya kurtarma ve kesintiden devam henüz desteklenmez.
-
-### 3. EML / MBOX İçe Aktarma
-
-**EML / MBOX için:** Aktarım ve dönüşüm → Dönüştürme → **EML / MBOX → PST** yolunu açın. Çoklu EML dosyası, alt klasörleriyle EML dizini veya tek MBOX seçin. MBOX bu sürümde açıkça **mboxrd** olarak okunur ve tek PST klasörüne aktarılır. EML dizininin klasörleri korunur; diğer dosyaların kaçının atlandığı gösterilir. Klasörleri ve isteğe bağlı tarih aralığını seçip güncel önizlemeyi kontrol edin, yeni PST konumunu belirleyin ve aktarın. Hiç klasör seçilmemişse işlem başlamaz; tarih filtresinde özgün tarihi eksik/geçersiz iletiler dışlanır.
-
-Sonuçta **Deneme işaretleri içeriyor** bildirimi görünür: Aspose değerlendirme sürümü konu ve gövdeye işaret ekler. İşaretler kaldırılmaz; ölçülen özgün içerik korunur, bilinmeyen içerik değişikliği veya bozuk kaynak işlemi engeller. Rapor indirilebilir ve İş Merkezi'nden yenileme sonrasında açılabilir. **Arşivlemeye geç** ile mevcut bölümleme ekranını açıp oluşan PST'yi kaynak seçerek yıllara veya boyuta göre bölün. EML/MBOX 12 ileti/4 ek, filtreli EML ağacı 3 ileti/1 ek ve yeni PST'den dört yıllık parça küçük testlerle doğrulandı. Bu, 100 GB, bozuk dosya kurtarma, tüm MBOX türleri veya tüm Outlook alanları için üretim garantisi değildir.
-
-### 4. Yerel Motoru Durdurma
-
-```powershell
-.\scripts\stop-local-engine.ps1
-```
-
-## Doğrulama ve Testler
-
-```powershell
-# .NET Motor Testleri
+# Testler
 & .\.tools\dotnet\dotnet.exe test engine/BitigMail.Engine.Tests/BitigMail.Engine.Tests.csproj -c Release
-
-# Arayüz Birim Testleri (Vitest)
-cd prototype
-npm run test
-
-# Arayüz Uçtan Uca Testleri (Playwright)
-npm run test:e2e
+cd prototype; npm run test; npm run test:e2e
 ```
+
+Ayrıntılı geliştirici notları: [docs/DEVELOPER_GUIDE.md](docs/DEVELOPER_GUIDE.md). Devir ve mimari özeti: [CLAUDE_PROJECT_HANDOFF_TR.md](CLAUDE_PROJECT_HANDOFF_TR.md).
+
+## Adı nereden geliyor?
+
+**Bitig**, eski Türkçede yazı, mektup ve belge anlamına gelir. BitigMail bu kökü "Mail" ile birleştirir.
+
+## Lisans
+
+Bu depo için henüz bir açık kaynak lisansı belirlenmedi; tüm hakları saklıdır. Kullanılan üçüncü taraf bileşenler: [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
