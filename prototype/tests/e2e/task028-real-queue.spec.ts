@@ -1,7 +1,10 @@
 import { expect, test } from '@playwright/test';
+import { openDevelopmentSession, useDevelopmentTestingHost } from './support/testingHost';
+
+useDevelopmentTestingHost();
 
 test('TASK-028 real queued jobs are visible with frozen owner and completed results', async ({ page }) => {
-  await page.addInitScript(() => { (window as any).__BITIGMAIL_ENGINE_URL__ = 'http://127.0.0.1:6175'; });
+  await openDevelopmentSession(page);
   await page.goto('/');
   await page.getByTestId('nav-tab-jobs').click();
   await page.getByTestId('job-search-input').fill('TASK028 Queue');

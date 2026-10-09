@@ -1,7 +1,10 @@
 import {expect,test} from '@playwright/test';
+import { openDevelopmentSession, useDevelopmentTestingHost } from './support/testingHost';
+
+useDevelopmentTestingHost();
 
 test('TASK-037C gerçek MIME ekranında filtre, eşleme, tekilleştirme ve şablon yeniden önizlemesi',async({page})=>{
-  await page.addInitScript(()=>{(window as any).__BITIGMAIL_ENGINE_URL__='http://127.0.0.1:6175';});
+  await openDevelopmentSession(page);
   const headers:Record<string,string>={Origin:'http://127.0.0.1:5173','Content-Type':'application/json'};
   const session=await page.request.post('http://127.0.0.1:6175/api/session',{headers,data:{}});
   headers['X-BitigMail-Session']=(await session.json()).token;
@@ -17,6 +20,7 @@ test('TASK-037C gerçek MIME ekranında filtre, eşleme, tekilleştirme ve şabl
   await expect(page.getByTestId('mime-preview-selected')).toHaveText('12');
 
   const builder=page.getByTestId('mime-advanced-filter');
+  await builder.locator('summary').click();
   await builder.getByRole('button',{name:'Kural ekle'}).click();
   const value=builder.getByLabel('Değer 1');
   const filterRequestPromise=page.waitForRequest(r=>r.url().endsWith('/api/mime/selection/preview')&&r.postDataJSON()?.advancedFilter?.root?.children?.[0]?.text==='alpha beta');

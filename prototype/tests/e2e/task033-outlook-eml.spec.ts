@@ -1,5 +1,8 @@
 import { test, expect } from '@playwright/test';
 import path from 'node:path';
+import { openDevelopmentSession, useDevelopmentTestingHost } from './support/testingHost';
+
+useDevelopmentTestingHost();
 
 test('TASK-033 real UI completes qualified Outlook-to-EML extraction', async ({ page }) => {
   const browserErrors: string[] = [];
@@ -7,9 +10,7 @@ test('TASK-033 real UI completes qualified Outlook-to-EML extraction', async ({ 
   page.on('console', message => {
     if (message.type() === 'error') browserErrors.push(`console: ${message.text()}`);
   });
-  await page.addInitScript(() => {
-    (window as typeof window & { __BITIGMAIL_ENGINE_URL__?: string }).__BITIGMAIL_ENGINE_URL__ = 'http://127.0.0.1:6175';
-  });
+  await openDevelopmentSession(page);
 
   await page.goto('/');
   await page.getByTestId('nav-tab-transfers').click();

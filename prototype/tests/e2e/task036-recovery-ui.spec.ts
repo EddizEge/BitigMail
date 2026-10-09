@@ -1,8 +1,11 @@
 import { test, expect } from '@playwright/test';
 import fs from 'node:fs/promises';
+import { openDevelopmentSession, useDevelopmentTestingHost } from './support/testingHost';
+
+useDevelopmentTestingHost();
 
 test('TASK036 real recovery keeps scope and downloads the verified report', async ({ page }) => {
-  await page.addInitScript(() => { (window as any).__BITIGMAIL_ENGINE_URL__ = 'http://127.0.0.1:6175'; });
+  await openDevelopmentSession(page);
   const headers: Record<string, string> = { Origin: 'http://127.0.0.1:5173', 'Content-Type': 'application/json' };
   const session = await page.request.post('http://127.0.0.1:6175/api/session', { headers, data: {} });
   headers['X-BitigMail-Session'] = (await session.json()).token;

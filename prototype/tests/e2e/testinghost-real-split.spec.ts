@@ -1,108 +1,22 @@
 import { test, expect } from '@playwright/test';
-import { spawn, execSync } from 'child_process';
 import * as path from 'path';
 import * as fs from 'fs';
-import * as http from 'http';
 import * as crypto from 'crypto';
-import { fileURLToPath } from 'url';
+import { openDevelopmentSession, REPO_ROOT, startTestingHost, TESTING_HOST_PORT, TESTING_HOST_URL, type TestingHost } from './support/testingHost';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const REPO_ROOT = path.resolve(__dirname, '../../..');
-const DOTNET_EXE = path.join(REPO_ROOT, '.tools', 'dotnet', 'dotnet.exe');
-const PROJECT_FILE = path.join(REPO_ROOT, 'engine', 'BitigMail.TestingHost', 'BitigMail.TestingHost.csproj');
-const STOP_SCRIPT = path.join(REPO_ROOT, 'scripts', 'stop-testing-engine.ps1');
-const TESTING_HOST_PORT = 6175;
-const TESTING_HOST_URL = `http://127.0.0.1:${TESTING_HOST_PORT}`;
 const QA_SCREENSHOT_DIR = path.join(process.env.LOCALAPPDATA ?? process.env.TEMP ?? REPO_ROOT, 'Temp', 'bitigmail-task012-qa');
 
-let testingHostProcess: any = null;
-
-async function isPortListening(port: number): Promise<boolean> {
-  return new Promise((resolve) => {
-    const req = http.request(
-      {
-        host: '127.0.0.1',
-        port,
-        path: '/api/session',
-        method: 'POST',
-        headers: {
-          Host: `127.0.0.1:${port}`,
-          Origin: 'http://127.0.0.1:5173',
-          'Content-Type': 'application/json',
-          'Content-Length': '2',
-        },
-        timeout: 1000,
-      },
-      (res) => {
-        res.resume();
-        resolve(res.statusCode === 200);
-      }
-    );
-    req.on('error', () => resolve(false));
-    req.on('timeout', () => {
-      req.destroy();
-      resolve(false);
-    });
-    req.end('{}');
-  });
-}
-
-async function waitForHostReady(timeoutMs: number = 30000): Promise<void> {
-  const start = Date.now();
-  while (Date.now() - start < timeoutMs) {
-    if (await isPortListening(TESTING_HOST_PORT)) {
-      return;
-    }
-    await new Promise((r) => setTimeout(r, 500));
-  }
-  throw new Error(`BitigMail.TestingHost 127.0.0.1:${TESTING_HOST_PORT} adresinde dinlemeye başlayamadı (Zaman aşımı).`);
-}
-
-function stopTestingHost() {
-  try {
-    execSync(`powershell -ExecutionPolicy Bypass -File "${STOP_SCRIPT}"`, {
-      stdio: 'pipe',
-      timeout: 10000,
-    });
-  } catch {
-    // Ignore script stop error and kill direct child process if alive
-  }
-
-  if (testingHostProcess && !testingHostProcess.killed) {
-    try {
-      testingHostProcess.kill('SIGKILL');
-    } catch { }
-    testingHostProcess = null;
-  }
-}
+// TestingHost derlenmiş DLL'den doğrudan başlatılır (dotnet run yok); afterAll yalnız bu dosyanın başlattığı süreç ağacını kapatır.
+let testingHost: TestingHost | null = null;
 
 test.describe('TestingHost Real PST/OST Split & Archive E2E (TASK-012)', () => {
   test.beforeAll(async () => {
-    // 1. Ensure testing host is not currently running from an earlier dirty state
-    stopTestingHost();
-
-    // 2. Spawn BitigMail.TestingHost strictly on port 6175 (server history is preserved)
-    testingHostProcess = spawn(DOTNET_EXE, ['run', '--project', PROJECT_FILE], {
-      cwd: REPO_ROOT,
-      stdio: 'pipe',
-      windowsHide: true,
-      env: {
-        ...process.env,
-        DOTNET_SKIP_FIRST_TIME_EXPERIENCE: '1',
-        DOTNET_CLI_TELEMETRY_OPTOUT: '1',
-        DOTNET_NOLOGO: '1',
-        DOTNET_MULTILEVEL_LOOKUP: '0',
-      },
-    });
-
-    // 3. Wait until the host is verified listening on port 6175
-    await waitForHostReady(30000);
+    testingHost = await startTestingHost();
   });
 
   test.afterAll(async () => {
-    // Cleanly stop TestingHost using official stop script
-    stopTestingHost();
+    await testingHost?.stop();
+    testingHost = null;
   });
 
   test('HTTP split security & parameter negative controls: enforces session auth, validates split mode and size cap constraints', async ({ request }) => {
@@ -555,9 +469,7 @@ test.describe('TestingHost Real PST/OST Split & Archive E2E (TASK-012)', () => {
 
   test('UI E2E: connects to real TestingHost, executes full Year split workflow beginning from an existing completed split, verifies new source flow, multipart report, reload restoration, and Job Center selection', async ({ page, request }) => {
     // 1. Point browser to real TestingHost runtime (port 6175)
-    await page.addInitScript((url) => {
-      (window as any).__BITIGMAIL_ENGINE_URL__ = url;
-    }, TESTING_HOST_URL);
+    await openDevelopmentSession(page);
 
     const sessionRes = await request.post(`${TESTING_HOST_URL}/api/session`, {
       headers: {
@@ -750,9 +662,7 @@ test.describe('TestingHost Real PST/OST Split & Archive E2E (TASK-012)', () => {
 
   test('UI E2E: Size mode shows honest preview banner, blocks zero-match filter, and reflects real size cap', async ({ page, request }) => {
     // 1. Point browser to real TestingHost runtime
-    await page.addInitScript((url) => {
-      (window as any).__BITIGMAIL_ENGINE_URL__ = url;
-    }, TESTING_HOST_URL);
+    await openDevelopmentSession(page);
 
     // Ensure fixture is reset to genuine-pst
     const sessionRes = await request.post(`${TESTING_HOST_URL}/api/session`, {
@@ -884,9 +794,7 @@ test.describe('TestingHost Real PST/OST Split & Archive E2E (TASK-012)', () => {
     expect(completed.status).toBe('completed');
 
     // 3. Open UI and navigate to Job Center
-    await page.addInitScript((url) => {
-      (window as any).__BITIGMAIL_ENGINE_URL__ = url;
-    }, TESTING_HOST_URL);
+    await openDevelopmentSession(page);
 
     await page.goto('/');
     await page.evaluate(() => localStorage.clear());

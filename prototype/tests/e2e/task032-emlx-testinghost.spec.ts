@@ -2,6 +2,9 @@ import { test, expect } from '@playwright/test';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { openDevelopmentSession, useDevelopmentTestingHost } from './support/testingHost';
+
+useDevelopmentTestingHost();
 
 const base = 'http://127.0.0.1:6175';
 const corpus = path.join('..', 'fixtures', 'emlx-corpus-v1', 'complete');
@@ -30,7 +33,7 @@ test('TASK-032 TestingHost picker preview job report and Job Center flow', async
   expect(report.itemsWritten).toBe(12); expect(report.reopenedPstVerification.totalAttachmentsVerified).toBe(4);
   expect(corpusHash()).toBe(before);
 
-  await page.addInitScript(() => { (window as any).__BITIGMAIL_ENGINE_URL__ = 'http://127.0.0.1:6175'; });
+  await openDevelopmentSession(page);
   await page.goto('/'); await page.getByTestId('nav-tab-jobs').click();
   await expect(page.getByTestId('job-center-view')).toBeVisible();
   await page.getByTestId('job-search-input').fill(started.jobId);

@@ -2,8 +2,11 @@ import { test, expect } from '@playwright/test';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { openDevelopmentSession, useDevelopmentTestingHost } from './support/testingHost';
 
-// Run against the separately started, current Release TestingHost on 6175.
+useDevelopmentTestingHost();
+
+// Starts its own current Release TestingHost on 6175 (support/testingHost).
 // No production native picker or real user mailbox is automated.
 const base = 'http://127.0.0.1:6175';
 const evidence = path.join(os.tmpdir(), 'bitigmail-task013-qa', 'ui-final');
@@ -16,7 +19,7 @@ test('real MIME conversion, immutable selection, history and report', async ({ p
   const errors: string[] = [];
   page.on('pageerror', e => errors.push(e.message));
   page.on('console', entry => { if (entry.type() === 'error') errors.push(entry.text()); });
-  await page.addInitScript(() => { (window as any).__BITIGMAIL_ENGINE_URL__ = 'http://127.0.0.1:6175'; });
+  await openDevelopmentSession(page);
   const headers: Record<string, string> = { Origin: 'http://127.0.0.1:5173', 'Content-Type': 'application/json' };
   const handshake = await page.request.post(base + '/api/session', { headers, data: {} });
   expect(handshake.status()).toBe(200);

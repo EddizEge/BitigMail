@@ -1,4 +1,7 @@
 import { expect, test } from '@playwright/test';
+import { openDevelopmentSession, useDevelopmentTestingHost } from './support/testingHost';
+
+useDevelopmentTestingHost();
 
 const engine = 'http://127.0.0.1:6175';
 
@@ -16,9 +19,7 @@ test('TASK-037B renders selected archive export and completes a verified real jo
   } })).json();
   await expect.poll(async () => (await (await page.request.get(`${engine}/api/jobs/${ingest.jobId}`, { headers })).json()).status, { timeout: 20_000 }).toBe('completed');
 
-  await page.addInitScript(() => {
-    (window as typeof window & { __BITIGMAIL_ENGINE_URL__?: string }).__BITIGMAIL_ENGINE_URL__ = 'http://127.0.0.1:6175';
-  });
+  await openDevelopmentSession(page);
   await page.goto('/');
   await page.getByTestId('nav-tab-search').click();
   await expect(page.getByTestId('archive-search-view')).toBeVisible();
