@@ -4,7 +4,7 @@ if ($Version -notmatch '^\d{1,4}\.\d{1,4}\.\d{1,4}(?:\.\d{1,4})?$') { throw "Ver
 $repo = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot ".."))
 $release = [IO.Path]::GetFullPath((Join-Path $repo "artifacts\BitigMail-Internal-$Version"))
 if (-not $release.StartsWith($repo + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) { throw "Unexpected release path." }
-& (Join-Path $repo "scripts\build-desktop.ps1") -Configuration $Configuration
+& (Join-Path $repo "scripts\build-desktop.ps1") -Configuration $Configuration -Version $Version
 if ($LASTEXITCODE -ne 0) { throw "Desktop package build failed." }
 if (Test-Path -LiteralPath $release) { Remove-Item -LiteralPath $release -Recurse -Force }
 New-Item -ItemType Directory -Path (Join-Path $release "payload") -Force | Out-Null

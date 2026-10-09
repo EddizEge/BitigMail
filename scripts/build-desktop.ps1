@@ -1,4 +1,4 @@
-param([string]$Configuration = "Release")
+param([string]$Configuration = "Release", [string]$Version = "")
 $ErrorActionPreference = "Stop"
 $repo = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot ".."))
 $output = [IO.Path]::GetFullPath((Join-Path $repo "artifacts\desktop-win-x64"))
@@ -6,10 +6,13 @@ if (-not $output.StartsWith($repo + [IO.Path]::DirectorySeparatorChar, [StringCo
 if (Test-Path -LiteralPath $output) { Remove-Item -LiteralPath $output -Recurse -Force }
 New-Item -ItemType Directory -Path $output | Out-Null
 Push-Location (Join-Path $repo "prototype")
+$previousVersion = $env:BITIGMAIL_VERSION
 try {
+    # Arayüzün durum çubuğundaki sürüm paket sürümüyle aynı olsun.
+    if ($Version) { $env:BITIGMAIL_VERSION = $Version }
     npm run build
     if ($LASTEXITCODE -ne 0) { throw "Frontend build failed." }
-} finally { Pop-Location }
+} finally { $env:BITIGMAIL_VERSION = $previousVersion; Pop-Location }
 & (Join-Path $repo ".tools\dotnet\dotnet.exe") publish (Join-Path $repo "engine\BitigMail.Desktop\BitigMail.Desktop.csproj") -c $Configuration -r win-x64 --self-contained true -o $output
 if ($LASTEXITCODE -ne 0) { throw "Desktop publish failed." }
 $engineOutput = [IO.Path]::GetFullPath((Join-Path $output "engine"))
