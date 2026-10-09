@@ -16,8 +16,8 @@ test.describe('Local PST Split & Archive Workflow E2E (Mocked Engine)', () => {
     const workflow = page.getByTestId('local-archive-workflow');
     await expect(workflow).toBeVisible();
 
-    // Verify heading is 'Arşivleme ve bölümleme'
-    await expect(page.getByRole('heading', { name: 'Arşivleme ve bölümleme' })).toBeVisible();
+    // Verify heading is 'PST / OST bölme'
+    await expect(page.getByRole('heading', { name: 'PST / OST bölme' })).toBeVisible();
 
     // Verify demo source and target dropdowns are hidden in archive mode
     await expect(page.getByTestId('transfer-source-select')).toHaveCount(0);
@@ -39,8 +39,10 @@ test.describe('Local PST Split & Archive Workflow E2E (Mocked Engine)', () => {
 
     const offlineBanner = page.getByTestId('service-offline-banner');
     await expect(offlineBanner).toBeVisible();
-    await expect(offlineBanner).toContainText('127.0.0.1:6174');
-    await expect(offlineBanner).toContainText('start-local-engine.ps1');
+    // Kullanıcıya port veya betik adı değil, uygulamayı yeniden açma yönlendirmesi gösterilir.
+    await expect(offlineBanner).toContainText('yeniden açın');
+    await expect(offlineBanner).not.toContainText('127.0.0.1');
+    await expect(offlineBanner).not.toContainText('.ps1');
 
     const pickBtn = page.getByTestId('pick-source-btn');
     await expect(pickBtn).toBeDisabled();

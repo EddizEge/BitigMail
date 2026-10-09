@@ -616,10 +616,10 @@ test.describe('TestingHost Real PST/OST Split & Archive E2E (TASK-012)', () => {
     await expect(page.getByTestId('target-account-select')).toHaveCount(0);
     await expect(page.getByTestId('status-bar-count')).toHaveCount(0);
 
-    // 6. Verify engine status shows 127.0.0.1:6175 Çevrimiçi
-    await expect(page.locator('text=127.0.0.1:6175 Çevrimiçi')).toBeVisible({ timeout: 10000 });
+    // 6. Verify engine status shows Motor hazır
+    await expect(page.locator('text=Motor hazır')).toBeVisible({ timeout: 10000 });
 
-    // 7. Deliberately begin with existing completed split: assert restored report card and 'Farklı Dosya Seç' button
+    // 7. Deliberately begin with existing completed split: assert restored report card and 'Farklı dosya seç' button
     const preExistingReportCard = page.getByTestId('conversion-report-card');
     await expect(preExistingReportCard).toBeVisible({ timeout: 15000 });
     const preExistingJobId = (await page.getByTestId('report-job-id').innerText()).trim();
@@ -627,7 +627,7 @@ test.describe('TestingHost Real PST/OST Split & Archive E2E (TASK-012)', () => {
 
     const reselectBtn = page.getByTestId('reselect-source-btn');
     await expect(reselectBtn).toBeVisible();
-    await expect(reselectBtn).toHaveText('Farklı Dosya Seç');
+    await expect(reselectBtn).toHaveText('Farklı dosya seç');
 
     // 8. Ensure test-source fixture is set for the new split flow
     await request.post(`${TESTING_HOST_URL}/api/testing/set-split-source`, {
@@ -635,7 +635,7 @@ test.describe('TestingHost Real PST/OST Split & Archive E2E (TASK-012)', () => {
       data: { fixtureId: 'genuine-pst' },
     });
 
-    // 9. Click 'Farklı Dosya Seç' - new source selection must clear activeJob/jobReport and reveal the new plan/start workflow
+    // 9. Click 'Farklı dosya seç' - new source selection must clear activeJob/jobReport and reveal the new plan/start workflow
     await reselectBtn.click();
 
     // Pre-existing completed report MUST be cleared from the DOM

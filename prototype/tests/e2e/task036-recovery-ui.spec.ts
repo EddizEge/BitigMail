@@ -12,7 +12,7 @@ test('TASK036 real recovery keeps scope and downloads the verified report', asyn
   const workflow = page.getByTestId('recovery-workflow'); await expect(workflow).toContainText('Kaynak dosya değiştirilmez');
   await workflow.getByRole('button', { name: 'Hasarlı PST/OST seç', exact: true }).click();
   await workflow.getByRole('button', { name: 'Yeni çıktı klasörü seç', exact: true }).click();
-  await workflow.getByRole('button', { name: 'Salt okunur önizleme', exact: true }).click();
+  await workflow.getByRole('button', { name: 'Önizle (kaynak değiştirilmez)', exact: true }).click();
   await expect(page.getByTestId('recovery-preview')).toContainText('Özgün toplam: Bilinmiyor');
   const starting = page.waitForResponse(response => response.url().endsWith('/api/recovery/start') && response.request().method() === 'POST');
   await workflow.getByRole('button', { name: 'Yeni çıktıya kurtarmayı başlat' }).click();

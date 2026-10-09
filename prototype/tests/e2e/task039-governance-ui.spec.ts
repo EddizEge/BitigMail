@@ -18,6 +18,7 @@ test('TASK-039 renders archive governance actions and honest safety notice',asyn
   await page.getByTestId('nav-tab-search').click();await expect(page.getByText('TASK039 Source Archive',{exact:true})).toBeVisible();await page.getByTestId(`checkbox-archive-${ingest.archiveId}`).check();
   const panel=page.getByTestId('archive-governance-panel');
   await expect(panel).toBeVisible();
+  await panel.locator('summary').click();
   await expect(panel.getByRole('button',{name:'Doğrulanmış yedek oluştur'})).toBeVisible();
   await expect(panel.getByRole('button',{name:'Yedeği yeni arşive geri yükle'})).toBeVisible();
   await expect(panel.getByRole('button',{name:'Saklama önizlemesi'})).toBeVisible();

@@ -36,8 +36,10 @@ test.describe('Local OST Convert Workflow E2E', () => {
     // Simulate the outage explicitly so this test is independent of the user's running service.
     const offlineBanner = page.getByTestId('service-offline-banner');
     await expect(offlineBanner).toBeVisible();
-    await expect(offlineBanner).toContainText('127.0.0.1:6174');
-    await expect(offlineBanner).toContainText('start-local-engine.ps1');
+    // Kullanıcıya port veya betik adı değil, uygulamayı yeniden açma yönlendirmesi gösterilir.
+    await expect(offlineBanner).toContainText('yeniden açın');
+    await expect(offlineBanner).not.toContainText('127.0.0.1');
+    await expect(offlineBanner).not.toContainText('.ps1');
 
     // Button should be disabled or prompt when offline
     const pickBtn = page.getByTestId('pick-source-btn');
@@ -440,7 +442,7 @@ test.describe('Local OST Convert Workflow E2E', () => {
     const startBtn = page.getByTestId('start-conversion-btn');
     await expect(startBtn).toBeEnabled();
 
-    // Click "Tümünü Kaldır"
+    // Click "Tümünü kaldır"
     await page.getByTestId('clear-all-folders-btn').click();
 
     // Zero-match alert and preview-block-alert must be shown and start button absent OR disabled
@@ -455,7 +457,7 @@ test.describe('Local OST Convert Workflow E2E', () => {
       await expect(startBtnZeroMatch).toHaveCount(0);
     }
 
-    // Click "Tümünü Seç" to restore
+    // Click "Tümünü seç" to restore
     await page.getByTestId('select-all-folders-btn').click();
     await expect(page.getByTestId('preview-selected-count')).toHaveText('5');
     const restoredStartBtn = page.getByTestId('start-conversion-btn');

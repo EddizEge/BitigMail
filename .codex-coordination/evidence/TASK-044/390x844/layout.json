@@ -1,0 +1,163 @@
+{
+  "viewport": {
+    "name": "390x844",
+    "width": 390,
+    "height": 844
+  },
+  "shots": [
+    {
+      "name": "01-musteriler-baslarken",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 784,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "02-aktarim-proje-yok",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 479,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "03-hesap-ve-calisma-alanlari",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 1650,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "04-musteriler",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 365,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "05-musteri-detay",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 525,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "06-aktarim-dosyadan-hesaba",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 1650,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "07-aktarim-hesaptan-dosyaya",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 1715,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "08-aktarim-hesaptan-hesaba",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 1007,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "09-aktarim-pop-eml",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 1562,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "10-donusum-ost-pst",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 1066,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "11-donusum-eml-mbox-pst",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 1360,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "12-donusum-pst-ost-olm-eml",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 1347,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "13-donusum-emlx-eml",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 1395,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "14-pst-bolme",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 899,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "15-veri-kurtarma",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 964,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "16-is-merkezi",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 458,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "17-arsiv-ve-arama",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 1313,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "18-raporlar",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 360,
+      "visibleDemoWords": false
+    },
+    {
+      "name": "19-ayarlar",
+      "documentOverflow": 0,
+      "bodyOverflow": 0,
+      "errorOverlay": false,
+      "textLength": 730,
+      "visibleDemoWords": false
+    }
+  ],
+  "browserErrors": [],
+  "failedResponses": []
+}

@@ -345,8 +345,8 @@ test.describe('TestingHost Real OST Conversion & Security E2E', () => {
     // 6. Verify status bar demo counter ('248 ileti filtreye uyuyor') is HIDDEN in Convert mode
     await expect(page.getByTestId('status-bar-count')).toHaveCount(0);
 
-    // 7. Verify online status shows 127.0.0.1:6175 Çevrimiçi
-    await expect(page.locator('text=127.0.0.1:6175 Çevrimiçi')).toBeVisible();
+    // 7. Verify online status shows Motor hazır
+    await expect(page.locator('text=Motor hazır')).toBeVisible();
 
     // 8. Verify Pick Source button has exact copy 'OST dosyası seç'
     const pickSourceBtn = page.getByTestId('pick-source-btn');
@@ -388,7 +388,7 @@ test.describe('TestingHost Real OST Conversion & Security E2E', () => {
 
     // 14. Assert verification summary details and Output Location in the UI
     await expect(page.locator('text=13 / 13 öğe')).toBeVisible();
-    await expect(page.locator('text=BİT DÜZEYİNDE EŞLEŞTİ')).toBeVisible();
+    await expect(page.locator('text=Bit düzeyinde eşleşti')).toBeVisible();
     await expect(page.locator('text=4 Ek, 1 CID')).toBeVisible();
     const pageWidth = await page.evaluate(() => ({
       scrollWidth: document.documentElement.scrollWidth,
@@ -759,7 +759,7 @@ test.describe('TestingHost Real OST Conversion & Security E2E', () => {
 
     const workflow = page.getByTestId('local-convert-workflow');
     await expect(workflow).toBeVisible();
-    await expect(page.locator('text=127.0.0.1:6175 Çevrimiçi')).toBeVisible({ timeout: 10000 });
+    await expect(page.locator('text=Motor hazır')).toBeVisible({ timeout: 10000 });
 
     // 3. Pick real source OST fixture
     const pickSourceBtn = page.getByTestId('pick-source-btn');
@@ -827,7 +827,7 @@ test.describe('TestingHost Real OST Conversion & Security E2E', () => {
     await expect(page.getByTestId('report-selected-messages')).toHaveText('3 / 13');
     await expect(page.getByTestId('report-excluded-messages')).toHaveText('10');
     await expect(page.locator('text=3 / 3 öğe')).toBeVisible();
-    await expect(page.locator('text=BİT DÜZEYİNDE EŞLEŞTİ')).toBeVisible();
+    await expect(page.locator('text=Bit düzeyinde eşleşti')).toBeVisible();
     await expect(page.locator('text=1 Ek, 1 CID')).toBeVisible();
     await expect(page.locator('text=PR_ATTACH_CONTENT_ID korundu')).toBeVisible();
 
