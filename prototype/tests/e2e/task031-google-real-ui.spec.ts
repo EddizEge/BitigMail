@@ -1,9 +1,12 @@
 import { test, expect } from '@playwright/test';
 import path from 'path';
+import { openDevelopmentSession, useDevelopmentTestingHost } from './support/testingHost';
+
+useDevelopmentTestingHost();
 
 test('TASK-031 TestingHost Google add flow reaches durable connected state', async ({ page }) => {
   const owner = `TASK031 Gmail ${Date.now()}`;
-  await page.addInitScript(() => { (window as any).__BITIGMAIL_ENGINE_URL__ = 'http://127.0.0.1:6175'; });
+  await openDevelopmentSession(page);
   await page.goto('/');
   await page.getByTestId('view-company-btn-comp-ornek').click();
   await page.locator('[data-testid^="add-account-btn-"]').first().click();

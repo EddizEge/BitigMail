@@ -902,7 +902,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
         title={accountTypeTab === 'microsoft365' ? 'Microsoft hesabı bağla' : accountTypeTab === 'google' ? 'Google hesabı bağla' : 'Posta hesabı bağla'}
         size="md"
       >
-        <div style={{ display: 'flex', gap: '8px', borderBottom: '1px solid var(--border-light)', paddingBottom: '12px', marginBottom: '14px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', borderBottom: '1px solid var(--border-light)', paddingBottom: '12px', marginBottom: '14px' }}>
           <button
             type="button"
             className={`btn ${accountTypeTab === 'imap' ? 'btn-orange' : 'btn-outline-gray'}`}
@@ -913,7 +913,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
             }}
             data-testid="tab-standard-imap"
           >
-            Diğer sunucu (IMAP)
+            IMAP sunucusu
           </button>
           <button
             type="button"
@@ -926,7 +926,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
           </button>
           <button type="button" className={`btn ${accountTypeTab === 'google' ? 'btn-orange' : 'btn-outline-gray'}`}
             style={{ padding: '6px 14px', fontSize: '0.8125rem' }} onClick={() => { setAccountTypeTab('google'); m365OAuth.resetSession(true); }} data-testid="tab-google-oauth">
-            Gmail / Google Workspace
+            Gmail / Workspace
           </button>
         </div>
 
@@ -1227,7 +1227,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
               <summary style={{ cursor: 'pointer', fontWeight: 600 }}>Teknik ayrıntılar</summary>
               <ul style={{ margin: '6px 0 0', paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 4, lineHeight: 1.5 }}>
                 <li>Parola Windows DPAPI ile bu Windows kullanıcısına bağlı şifrelenir; düz metin tutulmaz.</li>
-                <li>Varsayılan bağlantı SSL/TLS'tir (genellikle 993 portu). STARTTLS genellikle 143 portunu kullanır.</li>
+                <li>Varsayılan ve önerilen bağlantı SSL/TLS'tir (genellikle 993 portu). STARTTLS genellikle 143 portunu kullanır.</li>
                 <li>Şifresiz bağlantı yalnız açıkça seçilip risk onaylanınca kaydedilir.</li>
               </ul>
             </details>
@@ -1256,7 +1256,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
 
               <div>
                 <label style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                  E-posta Adresi *
+                  E-posta adresi *
                 </label>
                 <input
                   type="email"
@@ -1270,7 +1270,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
               </div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '12px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1.6fr', gap: '12px' }}>
               <div>
                 <label style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
                   Sunucu adresi *
@@ -1304,7 +1304,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
 
               <div>
                 <label style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                  Bağlantı güvenliği *
+                  Güvenlik *
                 </label>
                 <select
                   className="text-input"
@@ -1312,8 +1312,8 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                   onChange={(e) => handleTlsModeChange(e.target.value as 'ssl' | 'starttls' | 'none')}
                   data-testid="create-account-tls-select"
                 >
-                  <option value="ssl">Şifreli: SSL/TLS (993, önerilen)</option>
-                  <option value="starttls">Şifreli: STARTTLS (143)</option>
+                  <option value="ssl">SSL/TLS</option>
+                  <option value="starttls">STARTTLS</option>
                   <option value="none">Şifresiz (önerilmez)</option>
                 </select>
               </div>
@@ -1521,7 +1521,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
 
                 <div>
                   <label htmlFor="edit-account-email-input" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                    E-posta Adresi *
+                    E-posta adresi *
                   </label>
                   <input
                     id="edit-account-email-input"
@@ -1535,7 +1535,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '12px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1.6fr', gap: '12px' }}>
                 <div>
                   <label htmlFor="edit-account-host-input" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
                     Sunucu adresi *
@@ -1570,7 +1570,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
 
                 <div>
                   <label htmlFor="edit-account-tls-select" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                    Bağlantı güvenliği *
+                    Güvenlik *
                   </label>
                   <select
                     id="edit-account-tls-select"
@@ -1580,8 +1580,8 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                     data-testid="edit-account-tls-select"
                   >
                     <option value="none">Şifresiz (önerilmez)</option>
-                    <option value="ssl">Şifreli: SSL/TLS (993, önerilen)</option>
-                    <option value="starttls">Şifreli: STARTTLS (143)</option>
+                    <option value="ssl">SSL/TLS</option>
+                    <option value="starttls">STARTTLS</option>
                   </select>
                 </div>
               </div>
