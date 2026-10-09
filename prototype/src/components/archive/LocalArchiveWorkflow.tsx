@@ -12,6 +12,7 @@ import {
   IconRefreshCw,
 } from '../ui/Icons';
 import { Badge } from '../ui/Badge';
+import { EngineOfflineNotice } from '../layout/PageHeader';
 
 interface LocalArchiveWorkflowProps {
   state: AppState;
@@ -168,41 +169,42 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', minWidth: 0, maxWidth: '100%' }}>
           <div style={{ minWidth: 0, flex: '1 1 auto' }}>
             <h2 style={{ margin: '0 0 6px 0', fontSize: '1.125rem', fontWeight: 700, color: 'var(--text-primary)', overflowWrap: 'anywhere' }}>
-              Arşivleme ve bölümleme
+              PST / OST bölme
             </h2>
-            <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '6px 8px', fontSize: '0.875rem', fontWeight: 600, minWidth: 0 }}>
+            {frozenContext && (
+              <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '6px 8px', fontSize: '0.875rem', fontWeight: 600, minWidth: 0 }}>
               <span style={{ minWidth: 0, overflowWrap: 'anywhere', wordBreak: 'break-word' }}>
-                Müşteri: <strong data-testid="context-company-name">{clientContext.companyName}</strong>
+                İş kaydı: <strong data-testid="context-company-name">{clientContext.companyName}</strong>
               </span>
               <span style={{ color: 'var(--border-mid)' }}>/</span>
               <span style={{ minWidth: 0, overflowWrap: 'anywhere', wordBreak: 'break-word' }}>
-                Proje: <strong data-testid="context-project-name">{clientContext.projectName}</strong>
+                <strong data-testid="context-project-name">{clientContext.projectName}</strong>
               </span>
             </div>
+            )}
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px', flexShrink: 0 }}>
-            <span style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>Motor Durumu:</span>
-            {splitEngine.serviceStatus === 'checking' && (
+                        {splitEngine.serviceStatus === 'checking' && (
               <Badge variant="warning">Bağlanıyor...</Badge>
             )}
             {splitEngine.serviceStatus === 'online' && (
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#16a34a', fontWeight: 600, fontSize: '0.8125rem' }}>
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#16a34a' }} />
-                <span>{splitEngine.client.getBaseUrl().replace(/^https?:\/\//, '')} Çevrimiçi</span>
+                <span>Motor hazır</span>
               </span>
             )}
             {splitEngine.serviceStatus === 'offline' && (
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#dc2626', fontWeight: 600, fontSize: '0.8125rem' }}>
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#dc2626' }} />
-                <span>Çevrimdışı</span>
+                <span>Motor bağlantısı yok</span>
               </span>
             )}
             <button
               className="btn btn-outline-gray"
               style={{ padding: '4px 8px', fontSize: '0.75rem', flexShrink: 0 }}
               onClick={splitEngine.checkService}
-              title="Bağlantıyı Yenile"
+              title="Bağlantıyı yenile" aria-label="Bağlantıyı yenile"
               data-testid="refresh-service-status-btn"
             >
               <IconRefreshCw size={12} />
@@ -211,44 +213,14 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
         </div>
       </div>
 
-      {/* 2. Service Offline Warning Banner */}
-      {splitEngine.serviceStatus === 'offline' && (
-        <div
-          style={{
-            background: '#fffbeb',
-            border: '1px solid #fde68a',
-            borderRadius: '8px',
-            padding: '14px 16px',
-            display: 'flex',
-            gap: '12px',
-            alignItems: 'flex-start',
-            minWidth: 0,
-            maxWidth: '100%',
-            boxSizing: 'border-box',
-          }}
-          data-testid="service-offline-banner"
-        >
-          <IconAlertCircle size={24} color="#d97706" style={{ flexShrink: 0, marginTop: '2px' }} />
-          <div style={{ minWidth: 0, flex: 1, overflowWrap: 'anywhere' }}>
-            <h4 style={{ margin: '0 0 4px 0', fontSize: '0.9375rem', fontWeight: 700, color: '#92400e', overflowWrap: 'anywhere' }}>
-              Yerel hizmet çevrimdışı (127.0.0.1:6174)
-            </h4>
-            <p style={{ margin: '0 0 8px 0', fontSize: '0.875rem', color: '#b45309', overflowWrap: 'anywhere' }}>
-              Bölümlemeye başlamak için BitigMail yerel hizmetini çalıştırın.
-            </p>
-            <div style={{ background: '#fef3c7', padding: '8px 12px', borderRadius: '4px', fontFamily: 'monospace', fontSize: '0.8125rem', color: '#78350f', overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }}>
-              .\scripts\start-local-engine.ps1
-            </div>
-          </div>
-        </div>
-      )}
+      {splitEngine.serviceStatus === 'offline' && <EngineOfflineNotice action="Bölmeye başlamak" />}
 
       {/* 3. Source PST/OST File Selection Card */}
       <div className="card" style={{ padding: '16px 20px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }} data-testid="source-selection-card">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
           <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0 }}>
             <IconFile size={18} color="var(--brand-orange)" style={{ flexShrink: 0 }} />
-            <span style={{ overflowWrap: 'anywhere' }}>1. Kaynak PST / OST Dosyası</span>
+            <span style={{ overflowWrap: 'anywhere' }}>1. Kaynak PST / OST dosyası</span>
           </h3>
           {effectiveSource && effectiveSource.fileName ? (
             <button
@@ -258,7 +230,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
               disabled={splitEngine.serviceStatus !== 'online' || splitEngine.isAnalyzing || splitEngine.activeJob?.status === 'converting' || splitEngine.activeJob?.status === 'verifying'}
               data-testid="reselect-source-btn"
             >
-              Farklı Dosya Seç
+              Farklı dosya seç
             </button>
           ) : null}
         </div>
@@ -284,34 +256,30 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
           <div style={{ minWidth: 0, maxWidth: '100%' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '12px', background: 'var(--bg-subtle)', padding: '14px', borderRadius: '6px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
               <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>DOSYA ADI</span>
+                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Dosya adı</span>
                 <div style={{ fontWeight: 600, overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }} data-testid="source-filename">
                   {effectiveSource.fileName}
                 </div>
               </div>
               <div style={{ minWidth: 0 }}>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>BOYUT</span>
+                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Boyut</span>
                 <div style={{ fontWeight: 600 }}>{formatBytes(effectiveSource.sizeBytes)}</div>
               </div>
               {(splitEngine.analysis?.sourceSha256 || effectiveSource.sha256) && (
-                <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>SHA-256 HASH</span>
+                <details className="tech-details" style={{ gridColumn: '1 / -1' }}><summary>Teknik ayrıntılar: SHA-256 özeti</summary><div className="tech-details-body">
                   <div style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-muted)', overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }} data-testid="source-sha256">
                     {splitEngine.analysis?.sourceSha256 || effectiveSource.sha256}
-                  </div>
-                </div>
+                  </div></div></details>
               )}
               {splitEngine.analysis?.formatInfo && (
-                <div style={{ minWidth: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>BİÇİM İMZASI</span>
+                <details className="tech-details" style={{ gridColumn: '1 / -1' }}><summary>Teknik ayrıntılar: biçim imzası</summary><div className="tech-details-body">
                   <div style={{ fontWeight: 600, fontSize: '0.8125rem', color: '#15803d' }}>
                     {splitEngine.analysis.formatInfo.formatName}
-                  </div>
-                </div>
+                  </div></div></details>
               )}
               {effectiveSource.displayPath && (
                 <div style={{ gridColumn: '1 / -1', minWidth: 0, maxWidth: '100%', overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>KAYNAK DOSYA KONUMU</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Kaynak dosya konumu</span>
                   <div style={{ fontSize: '0.8125rem', fontFamily: 'monospace', overflowWrap: 'anywhere', wordBreak: 'break-all', color: 'var(--text-primary)', minWidth: 0 }} data-testid="source-display-path">
                     {effectiveSource.displayPath}
                   </div>
@@ -340,7 +308,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
         <div className="card" style={{ padding: '16px 20px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }} data-testid="analysis-preflight-card">
           <h3 style={{ margin: '0 0 16px 0', fontSize: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0, overflowWrap: 'anywhere' }}>
             <IconCheck size={18} color="#16a34a" style={{ flexShrink: 0 }} />
-            <span>2. Dosya Analizi ve Ön Kontrol Bulguları</span>
+            <span>2. Dosya analizi ve ön kontrol</span>
           </h3>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 120px), 1fr))', gap: '10px', marginBottom: '16px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
@@ -354,24 +322,24 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
             </div>
             <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px', textAlign: 'center', minWidth: 0 }}>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#16a34a' }}>{splitEngine.analysis.activeFoldersCount}</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Dolu Klasör</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Dolu klasör</div>
             </div>
             <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px', textAlign: 'center', minWidth: 0 }}>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }}>{splitEngine.analysis.emptyFoldersCount}</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Boş Klasör</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Boş klasör</div>
             </div>
           </div>
 
           {/* Folder Breakdown */}
           <div style={{ marginBottom: '16px', minWidth: 0, maxWidth: '100%' }}>
             <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px' }}>
-              KLASÖR YAPISI VE SAYIMLAR
+              Klasör yapısı ve sayımlar
             </div>
             <div style={{ maxHeight: '180px', overflowY: 'auto', overflowX: 'auto', WebkitOverflowScrolling: 'touch', border: '1px solid var(--border-light)', borderRadius: '6px', maxWidth: '100%', minWidth: 0, boxSizing: 'border-box' }}>
               <table className="data-table" style={{ fontSize: '0.8125rem', width: '100%', minWidth: '320px' }}>
                 <thead>
                   <tr>
-                    <th>Klasör Yolu</th>
+                    <th>Klasör yolu</th>
                     <th>Öğe Sayısı</th>
                     <th>Durum</th>
                   </tr>
@@ -416,7 +384,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
             >
               <div style={{ fontWeight: 700, display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
                 <IconAlertCircle size={18} style={{ flexShrink: 0 }} />
-                <span>Deneme Sürümü Sınırı Engeli: Bölümleme Başlatılamaz</span>
+                <span>Deneme sürümü sınırı: bölme başlatılamaz</span>
               </div>
               <div>{splitEngine.analysis.preflight.trialBlockerReason}</div>
               <div style={{ fontSize: '0.75rem', marginTop: '6px', color: '#b91c1c' }}>
@@ -458,19 +426,19 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
               <span>3. Filtreleme ve Seçim Önizlemesi</span>
             </h3>
             <div style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>
-              Türkiye Saati (UTC+03:00)
+              Türkiye saati (UTC+03:00)
             </div>
           </div>
 
           {/* Date Filter Inputs */}
           <div style={{ background: 'var(--bg-subtle)', padding: '14px', borderRadius: '6px', marginBottom: '16px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
             <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px' }}>
-              TARİH ARALIĞI (İsteğe Bağlı)
+              Tarih aralığı (isteğe bağlı)
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '12px', alignItems: 'center' }}>
               <div>
                 <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '4px' }}>
-                  Başlangıç Tarihi (Dahil)
+                  Başlangıç tarihi (dahil)
                 </label>
                 <input
                   type="date"
@@ -483,7 +451,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '4px' }}>
-                  Bitiş Tarihi (Dahil)
+                  Bitiş tarihi (dahil)
                 </label>
                 <input
                   type="date"
@@ -505,7 +473,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
                     }}
                     data-testid="clear-dates-btn"
                   >
-                    Tarihleri Temizle
+                    Tarihleri temizle
                   </button>
                 </div>
               )}
@@ -519,7 +487,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
           <div style={{ marginBottom: '16px', minWidth: 0, maxWidth: '100%' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', flexWrap: 'wrap', gap: '8px' }}>
               <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text-muted)' }}>
-                KLASÖR SEÇİMİ
+                Klasör seçimi
               </div>
               <div style={{ display: 'flex', gap: '8px' }}>
                 <button
@@ -528,7 +496,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
                   onClick={splitEngine.selectAllFolders}
                   data-testid="select-all-folders-btn"
                 >
-                  Tümünü Seç
+                  Tümünü seç
                 </button>
                 <button
                   className="btn btn-outline-gray"
@@ -536,7 +504,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
                   onClick={splitEngine.clearAllFolders}
                   data-testid="clear-all-folders-btn"
                 >
-                  Tümünü Kaldır
+                  Tümünü kaldır
                 </button>
               </div>
             </div>
@@ -582,7 +550,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
           {/* Authoritative Preview Section */}
           <div style={{ minWidth: 0, maxWidth: '100%' }}>
             <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px' }}>
-              SEÇİM ÖZETİ
+              Seçim özeti
             </div>
 
             {splitEngine.isLoadingPreview && (
@@ -611,19 +579,19 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
                     <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--brand-orange)' }} data-testid="preview-attachments-count">
                       {splitEngine.selectionPreview.selectedAttachmentsCount}
                     </div>
-                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Seçilen Ek</div>
+                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Seçilen ek</div>
                   </div>
                   <div style={{ background: '#ffffff', padding: '10px', borderRadius: '6px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
                     <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }} data-testid="preview-excluded-count">
                       {splitEngine.selectionPreview.excludedMessagesCount}
                     </div>
-                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Hariç Tutulan</div>
+                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Hariç tutulan</div>
                   </div>
                   <div style={{ background: '#ffffff', padding: '10px', borderRadius: '6px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
                     <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }} data-testid="preview-total-count">
                       {splitEngine.selectionPreview.totalSourceMessages}
                     </div>
-                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Kaynak Toplam</div>
+                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Kaynak toplam</div>
                   </div>
                 </div>
 
@@ -655,13 +623,13 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
         <div className="card" style={{ padding: '16px 20px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }} data-testid="split-options-card">
           <h3 style={{ margin: '0 0 16px 0', fontSize: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0 }}>
             <IconArchiveBox size={18} color="var(--brand-orange)" style={{ flexShrink: 0 }} />
-            <span>4. Bölümleme Seçenekleri ve Plan Önizlemesi</span>
+            <span>4. Bölme seçenekleri ve plan önizlemesi</span>
           </h3>
 
           {/* Mode Selection */}
           <div style={{ background: 'var(--bg-subtle)', padding: '14px', borderRadius: '6px', marginBottom: '16px' }}>
             <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '10px' }}>
-              BÖLÜMLEME YÖNTEMİ
+              Bölme yöntemi
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', alignItems: 'center' }}>
               <label
@@ -721,7 +689,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
             {splitEngine.splitMode === 'size' && (
               <div style={{ marginTop: '14px', paddingTop: '14px', borderTop: '1px solid var(--border-light)' }}>
                 <label style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '6px' }}>
-                  Azami Parça Boyutu Sınırı (MB):
+                  En büyük parça boyutu (MB):
                 </label>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', maxWidth: '280px' }}>
                   <input
@@ -753,7 +721,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
 
           {splitEngine.planError && (
             <div style={{ padding: '10px 14px', background: '#fef2f2', border: '1px solid #fecaca', borderRadius: '6px', color: '#991b1b', fontSize: '0.875rem', marginBottom: '14px' }} data-testid="split-plan-error">
-              <strong>Plan Hatası:</strong> {splitEngine.planError}
+              <strong>Plan hatası:</strong> {splitEngine.planError}
             </div>
           )}
 
@@ -775,8 +743,8 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
                           <tr>
                             <th>Yıl / Grup</th>
                             <th>İleti Sayısı</th>
-                            <th>Ek Sayısı</th>
-                            <th>Hedef PST Dosya Adı</th>
+                            <th>Ek sayısı</th>
+                            <th>Hedef PST dosya adı</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -834,7 +802,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '8px', minWidth: 0, maxWidth: '100%' }}>
             <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0 }}>
               <IconFile size={18} color="var(--brand-orange)" style={{ flexShrink: 0 }} />
-              <span>5. Hedef Çıktı Klasörü</span>
+              <span>5. Hedef çıktı klasörü</span>
             </h3>
             {splitEngine.selectedOutputDir && (
               <button
@@ -844,7 +812,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
                 disabled={splitEngine.activeJob?.status === 'converting'}
                 data-testid="reselect-output-dir-btn"
               >
-                Farklı Klasör Seç
+                Farklı klasör seç
               </button>
             )}
           </div>
@@ -857,7 +825,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
                 data-testid="pick-output-dir-btn"
                 style={{ maxWidth: '100%' }}
               >
-                Hedef Klasör Seç (Üst Dizin)
+                Hedef klasör seç (üst klasör)
               </button>
               <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '8px', overflowWrap: 'anywhere' }}>
                 Seçilen dizin altında yeni ve benzersiz bir arşiv paketi klasörü oluşturulur. Mevcut dosyaların üzerine yazılmaz.
@@ -867,18 +835,18 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', background: 'var(--bg-subtle)', padding: '12px 16px', borderRadius: '6px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', minWidth: 0, maxWidth: '100%' }}>
                 <div style={{ minWidth: 0, flex: '1 1 auto', overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>SEÇİLEN ÜST DİZİN</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Seçilen üst klasör</span>
                   <div style={{ fontWeight: 600, overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }} data-testid="output-dir-name">
                     {splitEngine.selectedOutputDir.fileName}
                   </div>
                 </div>
                 <span style={{ flexShrink: 0 }}>
-                  <Badge variant="success">Hedef Dizin Hazır</Badge>
+                  <Badge variant="success">Hedef klasör hazır</Badge>
                 </span>
               </div>
               {splitEngine.selectedOutputDir.displayPath && (
                 <div style={{ minWidth: 0, maxWidth: '100%', overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>TAM DİZİN YOLU</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Tam klasör yolu</span>
                   <div style={{ fontSize: '0.8125rem', fontFamily: 'monospace', overflowWrap: 'anywhere', wordBreak: 'break-all', color: 'var(--text-primary)', minWidth: 0 }} data-testid="output-dir-path">
                     {splitEngine.selectedOutputDir.displayPath}
                   </div>
@@ -941,21 +909,21 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
               {/* Progress Counters */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 120px), 1fr))', gap: '10px', background: 'var(--bg-subtle)', padding: '14px', borderRadius: '6px', marginBottom: '14px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
                 <div style={{ minWidth: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>OKUNAN</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Okunan</span>
                   <div style={{ fontSize: '1.125rem', fontWeight: 700 }} data-testid="counter-items-read">{splitEngine.activeJob.itemsRead}</div>
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>YAZILAN</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Yazılan</span>
                   <div style={{ fontSize: '1.125rem', fontWeight: 700, color: '#16a34a' }} data-testid="counter-items-written">{splitEngine.activeJob.itemsWritten}</div>
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>BAŞARISIZ</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Başarısız</span>
                   <div style={{ fontSize: '1.125rem', fontWeight: 700, color: splitEngine.activeJob.failedItems > 0 ? '#dc2626' : 'var(--text-muted)' }}>
                     {splitEngine.activeJob.failedItems}
                   </div>
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>İŞLENEN KLASÖR</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>İşlenen klasör</span>
                   <div style={{ fontSize: '0.8125rem', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflowWrap: 'anywhere', wordBreak: 'break-all' }}>
                     {splitEngine.activeJob.currentFolder || '—'}
                   </div>
@@ -986,7 +954,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '8px', minWidth: 0, maxWidth: '100%' }}>
               <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, color: '#166534', display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0, overflowWrap: 'anywhere' }}>
                 <IconCheck size={20} color="#16a34a" style={{ flexShrink: 0 }} />
-                <span>Arşivleme, Bölümleme ve Çok Parçalı Doğrulama Tamamlandı</span>
+                <span>Bölme ve parça doğrulaması tamamlandı</span>
               </h3>
 
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', maxWidth: '100%' }}>
@@ -1025,7 +993,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
               {outputLocation && (
                 <div style={{ gridColumn: '1 / -1', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '10px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px', flexWrap: 'wrap', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
                   <div style={{ minWidth: 0, flex: '1 1 200px', overflowWrap: 'anywhere' }}>
-                    <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>YENİ ARŞİV ÇIKTI DİZİNİ</span>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Yeni çıktı klasörü</span>
                     <div style={{ fontSize: '0.8125rem', fontFamily: 'monospace', overflowWrap: 'anywhere', wordBreak: 'break-all', color: 'var(--text-primary)', fontWeight: 600, minWidth: 0 }} data-testid="output-location-path">
                       {outputLocation}
                     </div>
@@ -1046,34 +1014,34 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
               {/* Summary Stats */}
               {splitEngine.jobReport.clientContext && (
                 <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>MÜŞTERİ / PROJE</span>
+                  <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>Müşteri / proje</span>
                   <div style={{ fontWeight: 700, overflowWrap: 'anywhere', wordBreak: 'break-word', minWidth: 0 }} data-testid="report-client-context">
                     {splitEngine.jobReport.clientContext.companyName} / {splitEngine.jobReport.clientContext.projectName}
                   </div>
-                  <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Kayıtlı Sözleşme Bağlamı</div>
+                  <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Kayıtlı müşteri / proje</div>
                 </div>
               )}
 
               <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-                <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>İŞ NO</span>
+                <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>İş no</span>
                 <div style={{ fontWeight: 700, fontFamily: 'monospace', fontSize: '0.8125rem', overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }} data-testid="report-job-id">
                   {splitEngine.jobReport.jobId}
                 </div>
-                <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Doğrulanmış Bölümleme İşi</div>
+                <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Doğrulanmış bölme işi</div>
               </div>
 
               <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-                <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>BÖLÜMLEME MODU</span>
+                <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>Bölme yöntemi</span>
                 <div style={{ fontWeight: 700, overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }} data-testid="report-split-mode">
                   {splitEngine.jobReport.splitMode === 'year'
-                    ? 'Yıllara Göre'
+                    ? 'Yıllara göre'
                     : `Boyuta Göre (${formatBytes(splitEngine.jobReport.splitSizeCapBytes || 0)})`}
                 </div>
                 <div style={{ fontSize: '0.75rem', color: '#15803d' }}>{parts.length} Doğrulanmış PST Parçası</div>
               </div>
 
               <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-                <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>YAZILAN / SEÇİLEN</span>
+                <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>Yazılan / seçilen</span>
                 <div style={{ fontWeight: 700 }} data-testid="report-items-count">
                   {splitEngine.jobReport.itemsWritten} / {splitEngine.jobReport.selectedMessagesCount ?? splitEngine.jobReport.itemsWritten} öğe
                 </div>
@@ -1081,15 +1049,15 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
               </div>
 
               <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-                <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>KAYNAK HASH KORUMASI</span>
+                <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>Kaynak dosya bütünlüğü</span>
                 <div style={{ fontWeight: 700, color: splitEngine.jobReport.sourceHashMatch ? '#166534' : '#dc2626' }}>
-                  {splitEngine.jobReport.sourceHashMatch ? 'BİT DÜZEYİNDE EŞLEŞTİ' : 'UYUŞMAZLIK'}
+                  {splitEngine.jobReport.sourceHashMatch ? 'Bit düzeyinde eşleşti' : 'Uyuşmazlık'}
                 </div>
-                <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Sıfır Değişiklik</div>
+                <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Sıfır değişiklik</div>
               </div>
 
               <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-                <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>EK & CID DOĞRULAMASI</span>
+                <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>Ek ve CID doğrulaması</span>
                 <div style={{ fontWeight: 700 }}>
                   {splitEngine.jobReport.reopenedPstVerification.totalAttachmentsVerified} Ek, {splitEngine.jobReport.reopenedPstVerification.totalCidVerified} CID
                 </div>
@@ -1101,7 +1069,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
             {splitEngine.jobReport.isFiltered && (
               <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '12px 14px', marginBottom: '16px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }} data-testid="report-filter-summary">
                 <div style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 700, marginBottom: '6px' }}>
-                  FİLTRELİ ARŞİV BİLGİSİ
+                  Filtreli bölme bilgisi
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 150px), 1fr))', gap: '8px', fontSize: '0.8125rem' }}>
                   <div>
@@ -1109,12 +1077,12 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
                     <strong data-testid="report-selected-messages">{splitEngine.jobReport.selectedMessagesCount} / {splitEngine.jobReport.totalSourceMessages}</strong>
                   </div>
                   <div>
-                    <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Filtre Dışı Kalan: </span>
+                    <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Filtre dışı kalan: </span>
                     <strong data-testid="report-excluded-messages">{splitEngine.jobReport.excludedMessagesCount}</strong>
                   </div>
                   {splitEngine.jobReport.missingDateExcludedCount !== undefined && splitEngine.jobReport.missingDateExcludedCount > 0 && (
                     <div>
-                      <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Tarihsiz Hariç: </span>
+                      <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Tarihsiz hariç: </span>
                       <strong data-testid="report-missing-date-excluded">{splitEngine.jobReport.missingDateExcludedCount}</strong>
                     </div>
                   )}
@@ -1147,12 +1115,12 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
                   <table className="data-table" style={{ fontSize: '0.8125rem', width: '100%' }} data-testid="split-parts-table">
                     <thead>
                       <tr>
-                        <th>Parça Dosyası</th>
+                        <th>Parça dosyası</th>
                         <th>Boyut</th>
                         <th>İleti</th>
                         <th>Ek / CID</th>
                         <th>SHA-256 Hash</th>
-                        <th>Yeniden Açma Doğrulaması</th>
+                        <th>Yeniden açma doğrulaması</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -1184,7 +1152,7 @@ export const LocalArchiveWorkflow: React.FC<LocalArchiveWorkflowProps> = ({ stat
 
             {/* Contract Disclaimer */}
             <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', borderTop: '1px solid var(--border-light)', paddingTop: '10px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box', overflowWrap: 'anywhere' }}>
-              <strong>Sözleşme Notu:</strong> Tüm arşiv parçaları kapatıldıktan sonra bağımsız olarak yeniden açılmış, ekler ve satır içi görseller (CID) doğrulanmıştır. Her parça için üst klasör hiyerarşisi korunmuştur.
+              <strong>Not:</strong> Tüm arşiv parçaları kapatıldıktan sonra bağımsız olarak yeniden açılmış, ekler ve satır içi görseller (CID) doğrulanmıştır. Her parça için üst klasör hiyerarşisi korunmuştur.
             </div>
           </div>
         );

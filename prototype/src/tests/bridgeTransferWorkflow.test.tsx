@@ -587,14 +587,14 @@ describe('TASK-017 Bridge Transfer Workflow & UI Integration Tests', () => {
       );
 
       // Verify product title lacks TASK-017
-      expect(screen.getByText('Dosya ↔ Posta Hesabı Köprüsü')).toBeDefined();
+      expect(screen.getByText('Dosya ve posta hesabı arasında aktarım')).toBeDefined();
       expect(screen.queryByText(/TASK-017/)).toBeNull();
 
       // Safety notices
       expect(screen.getByTestId('bridge-safety-notices')).toBeDefined();
-      expect(screen.getByText(/Kaynak Bütünlüğü/)).toBeDefined();
-      expect(screen.getByText(/Standart Format Sınırları/)).toBeDefined();
-      expect(screen.getByText(/Mboxrd Kuralı/)).toBeDefined();
+      expect(screen.getByText(/Kaynak korunur/)).toBeDefined();
+      expect(screen.getByText(/Standart biçim sınırları/)).toBeDefined();
+      expect(screen.getByText(/Mboxrd kuralı/)).toBeDefined();
     });
 
     it('switches between File->IMAP and IMAP->File forms and preserves IMAP<->IMAP', async () => {
@@ -1214,8 +1214,8 @@ describe('TASK-017 Bridge Transfer Workflow & UI Integration Tests', () => {
       expect(screen.queryByTestId('bridge-export-form')).toBeNull();
       expect(screen.queryByTestId('bridge-job-monitor')).toBeNull();
 
-      // Now switch inner direction to IMAP -> Dosya explicitly: stale job must still not return!
-      const innerExportBtn = screen.getByTestId('direction-imap-to-file-btn');
+      // Now switch the single top-level direction to IMAP -> Dosya explicitly: stale job must still not return!
+      const innerExportBtn = screen.getByTestId('tab-direction-imap-to-file');
       fireEvent.click(innerExportBtn);
 
       await waitFor(() => {

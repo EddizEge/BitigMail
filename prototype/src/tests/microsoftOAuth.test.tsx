@@ -513,7 +513,7 @@ describe('TASK-015 Microsoft 365 Connection UI Tests', () => {
         screen.getByText(/Giriş bağlantısı bu bilgisayardaki tarayıcıda açılmalıdır/i)
       ).toBeDefined();
       expect(
-        screen.getByText(/Telefon veya farklı bir cihazdaki tarayıcıda localhost dönüş akışı tamamlanamaz/i)
+        screen.getByText(/Telefon veya farklı bir cihazdaki tarayıcıda giriş tamamlanamaz/i)
       ).toBeDefined();
 
       // Check safe link anchor attributes

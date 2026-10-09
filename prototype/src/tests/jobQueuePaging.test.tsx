@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import { JobCenter } from '../components/jobs/JobCenter';
 import { LocalEngineClient } from '../api/localEngineClient';
@@ -28,12 +28,12 @@ describe('TASK-028 bounded job history and pending controls', () => {
       let resolvePage!: (value: any) => void;
       client.getJobsPage = vi.fn().mockReturnValue(new Promise(resolve => { resolvePage = resolve; }));
       render(<JobCenter jobs={[]} onToggleJobPause={vi.fn()} onNavigateToWorkspace={vi.fn()} onAddNewJob={vi.fn()} client={client} />);
-      await vi.advanceTimersByTimeAsync(5_000);
+      await act(async () => { await vi.advanceTimersByTimeAsync(5_000); });
       expect(client.getJobsPage).toHaveBeenCalledTimes(1);
-      resolvePage({ items: [{ ...record(1), status: 'queued', waitingAtShutdown: true }], page: 1, pageSize: 50, totalCount: 1 });
-      await vi.advanceTimersByTimeAsync(1_199);
+      await act(async () => { resolvePage({ items: [{ ...record(1), status: 'queued', waitingAtShutdown: true }], page: 1, pageSize: 50, totalCount: 1 }); });
+      await act(async () => { await vi.advanceTimersByTimeAsync(1_199); });
       expect(client.getJobsPage).toHaveBeenCalledTimes(1);
-      await vi.advanceTimersByTimeAsync(1);
+      await act(async () => { await vi.advanceTimersByTimeAsync(1); });
       expect(client.getJobsPage).toHaveBeenCalledTimes(2);
     } finally {
       vi.useRealTimers();
@@ -50,9 +50,9 @@ describe('TASK-028 bounded job history and pending controls', () => {
         .mockRejectedValueOnce(new Error('transient'))
         .mockResolvedValue({ items: [{ ...active, status: 'completed' }], page: 1, pageSize: 50, totalCount: 1 });
       render(<JobCenter jobs={[]} onToggleJobPause={vi.fn()} onNavigateToWorkspace={vi.fn()} onAddNewJob={vi.fn()} client={client} />);
-      await vi.advanceTimersByTimeAsync(1_200);
+      await act(async () => { await vi.advanceTimersByTimeAsync(1_200); });
       expect(client.getJobsPage).toHaveBeenCalledTimes(2);
-      await vi.advanceTimersByTimeAsync(2_400);
+      await act(async () => { await vi.advanceTimersByTimeAsync(2_400); });
       expect(client.getJobsPage).toHaveBeenCalledTimes(3);
     } finally {
       vi.useRealTimers();

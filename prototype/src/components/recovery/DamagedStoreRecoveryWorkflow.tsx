@@ -42,26 +42,27 @@ export const DamagedStoreRecoveryWorkflow: React.FC<{
   };
 
   return <div style={{ padding: '24px', maxWidth: 900, margin: '0 auto', overflowWrap: 'anywhere' }} data-testid="recovery-workflow">
-    <h2>Salt Okunur PST/OST Kurtarma</h2>
-    <p>Kaynak dosya değiştirilmez. Kurtarılan iletiler yeni bir klasöre, doğrulanmış EML dosyaları olarak yazılır.</p>
-    <p><strong>Müşteri:</strong> {clientContext.companyName || 'Seçilmedi'} · <strong>Proje:</strong> {clientContext.projectName || 'Seçilmedi'}</p>
+    <h2 style={{ fontSize: '1.15rem', marginBottom: 4 }}>Hasarlı PST / OST dosyasından kurtarma</h2>
+    <p style={{ color: 'var(--text-muted)', marginBottom: 12 }}>Kaynak dosya değiştirilmez. Okunabilen iletiler yeni bir klasöre, doğrulanmış EML dosyaları olarak yazılır.</p>
     {!validScope && <p role="status">Başlamadan önce bir müşteri ve proje seçin.</p>}
     <div className="card" style={{ padding: 20, display: 'grid', gap: 12 }}>
-      <button className="btn btn-secondary" disabled={busy || !!job} onClick={() => act(async () => {
+      <span className="step-label">1. Hasarlı dosyayı seçin</span>
+      <button className="btn btn-outline-gray" disabled={busy || !!job} onClick={() => act(async () => {
         const picked = await client.pickSplitSource(); if (!picked.cancelled) { setSource(picked); setPreview(null); }
       })}>Hasarlı PST/OST seç</button>
       <span>{source?.fileName || 'Kaynak seçilmedi'}</span>
-      <button className="btn btn-secondary" disabled={busy || !!job} onClick={() => act(async () => {
+      <span className="step-label">2. Kurtarılan iletilerin yazılacağı yeni klasörü seçin</span>
+      <button className="btn btn-outline-gray" disabled={busy || !!job} onClick={() => act(async () => {
         const picked = await client.pickOutputDir(); if (!picked.cancelled) { setOutput(picked); setPreview(null); }
       })}>Yeni çıktı klasörü seç</button>
       <span>{output?.displayPath || output?.fileName || 'Hedef seçilmedi'}</span>
       <button className="btn btn-orange" disabled={busy || !validScope || !source?.handle || !output?.handle || !!job}
-        onClick={() => act(async () => setPreview(await client.previewRecovery(source!.handle!, output!.handle!)))}>Salt okunur önizleme</button>
+        onClick={() => act(async () => setPreview(await client.previewRecovery(source!.handle!, output!.handle!)))}>Önizle (kaynak değiştirilmez)</button>
       {preview && !job && <section data-testid="recovery-preview">
         <p>Özgün toplam: {preview.originalTotal ?? 'Bilinmiyor'}</p>
         <p>Temsilî hasarlı dosyalarda geniş kapsamlı kabul henüz tamamlanmadı.</p>
         {preview.warnings.map(warning => <p key={warning}>⚠️ {warning}</p>)}
-        <details><summary>Dosya doğrulama bilgisi</summary><p>{preview.sourceSha256}</p></details>
+        <details className="tech-details"><summary>Teknik ayrıntılar: kaynak SHA-256 özeti</summary><div className="tech-details-body">{preview.sourceSha256}</div></details>
         <button className="btn btn-orange" disabled={busy || !validScope || !preview.canStart}
           onClick={() => act(async () => setJob(await client.startRecovery(preview.sourceHandle, preview.outputDirectoryHandle, preview.sourceSha256, clientContext)))}>
           Yeni çıktıya kurtarmayı başlat

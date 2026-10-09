@@ -578,26 +578,26 @@ export const AddArchiveModal: React.FC<AddArchiveModalProps> = ({
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))', gap: '8px', marginBottom: '10px' }}>
               <div style={{ background: '#fff', padding: '6px 10px', borderRadius: '4px', border: '1px solid var(--border-light)' }}>
-                <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)' }}>TOPLAM ÖĞE</span>
+                <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)' }}>Toplam öğe</span>
                 <div style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--brand-orange)' }}>{preview.totalItems}</div>
               </div>
               <div style={{ background: '#fff', padding: '6px 10px', borderRadius: '4px', border: '1px solid var(--border-light)' }}>
-                <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)' }}>TOPLAM BOYUT</span>
+                <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)' }}>Toplam boyut</span>
                 <div style={{ fontWeight: 700, fontSize: '1rem' }}>{formatBytes(preview.totalSizeBytes)}</div>
               </div>
               <div style={{ background: '#fff', padding: '6px 10px', borderRadius: '4px', border: '1px solid var(--border-light)' }}>
-                <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)' }}>KLASÖR SAYISI</span>
+                <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)' }}>Klasör sayısı</span>
                 <div style={{ fontWeight: 700, fontSize: '1rem' }}>{preview.folders.length}</div>
               </div>
               {preview.estimatedRequiredBytes != null ? (
                 <div style={{ background: '#fff', padding: '6px 10px', borderRadius: '4px', border: '1px solid var(--border-light)' }}>
-                  <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)' }}>TAHMİNİ GEREKEN ALAN</span>
+                  <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)' }}>Tahmini gereken alan</span>
                   <div style={{ fontWeight: 700, fontSize: '1rem' }} data-testid="archive-estimated-required-bytes">{formatBytes(preview.estimatedRequiredBytes)}</div>
                 </div>
               ) : null}
               {preview.availableFreeBytes != null ? (
                 <div style={{ background: '#fff', padding: '6px 10px', borderRadius: '4px', border: '1px solid var(--border-light)' }}>
-                  <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)' }}>KULLANILABİLİR ALAN</span>
+                  <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)' }}>Kullanılabilir alan</span>
                   <div style={{ fontWeight: 700, fontSize: '1rem' }} data-testid="archive-available-free-bytes">{formatBytes(preview.availableFreeBytes)}</div>
                 </div>
               ) : null}

@@ -3,18 +3,44 @@ import { localEngineClient } from '../../api/localEngineClient';
 import { LocalJobRecord } from '../../types/localEngine';
 import { IconFile } from '../ui/Icons';
 import { Badge } from '../ui/Badge';
+import { PageHeader } from '../layout/PageHeader';
 
-export const ReportsView: React.FC = () => {
+const JOB_KIND_LABELS: Record<string, string> = {
+  split: 'PST bölme',
+  convert: 'OST → PST dönüşümü',
+  'mime-import': 'EML / MBOX → PST dönüşümü',
+  'outlook-eml-normalize': 'PST / OST / OLM → EML dönüşümü',
+  'emlx-normalize': 'Apple Mail EMLX → EML dönüşümü',
+  'imap-transfer': 'Hesaptan hesaba aktarım',
+  'bridge-import': 'Dosyadan hesaba aktarım',
+  'bridge-export': 'Hesaptan dosyaya aktarım',
+  'pop-snapshot': "POP'tan EML'e aktarım",
+  'archive-ingest': 'Arşive alma',
+  'archive-reindex': 'Arşiv dizinini yenileme',
+  'damaged-recovery': 'Hasarlı dosya kurtarma',
+};
+
+export const jobKindLabel = (jobKind?: string | null) => JOB_KIND_LABELS[jobKind || ''] || 'Yerel iş';
+
+interface ReportsViewProps {
+  /** Oturum açılmış gerçek uygulama: örnek rapor satırları gösterilmez. */
+  productionMode?: boolean;
+}
+
+export const ReportsView: React.FC<ReportsViewProps> = ({ productionMode = false }) => {
   const [realJobs, setRealJobs] = useState<LocalJobRecord[]>([]);
+  const [loaded, setLoaded] = useState(false);
+  const [downloadError, setDownloadError] = useState('');
 
   useEffect(() => {
     let isMounted = true;
     localEngineClient.getAllJobs().then((jobs) => {
       if (isMounted) {
         setRealJobs(jobs.filter((j) => j.status === 'completed'));
+        setLoaded(true);
       }
     }).catch(() => {
-      // offline fallback
+      if (isMounted) setLoaded(true);
     });
     return () => { isMounted = false; };
   }, []);
@@ -32,12 +58,13 @@ export const ReportsView: React.FC = () => {
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
+      setDownloadError('');
     } catch {
-      alert('Rapor indirilemedi.');
+      setDownloadError('Rapor indirilemedi. Uygulamayı kapatıp yeniden açtıktan sonra tekrar deneyin.');
     }
   };
 
-  const sampleReports = [
+  const sampleReports = productionMode ? [] : [
     {
       id: 'rep-001',
       title: 'Posta Geçişi Tamamlanma Raporu',
@@ -102,22 +129,30 @@ export const ReportsView: React.FC = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }} data-testid="reports-view">
-      <div className="page-subheader">
-        <div>
-          <h1 className="page-title">Raporlar</h1>
-          <p className="page-subtitle">Geçmiş ve tamamlanan aktarım işlerinin sentetik rapor dökümleri</p>
-        </div>
-      </div>
+      <PageHeader
+        title="Raporlar"
+        description={productionMode
+          ? 'Tamamlanan işlerin doğrulama raporlarını buradan indirin; müşteriye teslim için saklayın.'
+          : 'Tamamlanan işlerin raporları ve örnek rapor dökümleri'}
+        testId="reports-page-header"
+      />
 
-      <div style={{ padding: '24px 32px', flex: 1, overflowY: 'auto' }}>
-        <div style={{ border: '1px solid var(--border-light)', borderRadius: '8px', overflow: 'hidden', background: '#ffffff' }}>
+      <div className="reports-body">
+        {downloadError && <div className="notice notice-warning" role="alert" style={{ marginBottom: '12px' }}>{downloadError}</div>}
+        {productionMode && loaded && realJobs.length === 0 ? (
+          <div className="empty-state-card" data-testid="reports-empty-state">
+            <h2>Henüz rapor yok</h2>
+            <div className="empty-state-copy">Bir iş tamamlandığında doğrulama raporu burada listelenir. İşleri İş merkezi'nden izleyebilirsiniz.</div>
+          </div>
+        ) : (
+        <div style={{ border: '1px solid var(--border-light)', borderRadius: '8px', overflowX: 'auto', background: '#ffffff' }}>
           <table className="data-table" data-testid="reports-table">
             <thead>
               <tr>
-                <th style={{ width: '30%' }}>Rapor Adı</th>
-                <th style={{ width: '25%' }}>İlgili İş</th>
+                <th style={{ width: '30%' }}>Rapor</th>
+                <th style={{ width: '25%' }}>Müşteri / proje</th>
                 <th style={{ width: '15%' }}>Tarih</th>
-                <th style={{ width: '15%' }}>Sonuç Özeti</th>
+                <th style={{ width: '15%' }}>Sonuç</th>
                 <th style={{ width: '15%', textAlign: 'right' }}>İndir</th>
               </tr>
             </thead>
@@ -128,17 +163,17 @@ export const ReportsView: React.FC = () => {
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <IconFile size={16} color="#16a34a" />
                       <span>
-                        {job.jobKind === 'split'
-                          ? `Yerel PST Bölümleme Raporu (${job.sourceFileName})`
-                          : `Yerel OST Dönüştürme Raporu (${job.sourceFileName})`}
+                        {jobKindLabel(job.jobKind)} raporu{job.sourceFileName ? ` (${job.sourceFileName})` : ''}
                       </span>
-                      <span style={{ fontSize: '0.6875rem', padding: '1px 6px', borderRadius: '4px', background: '#ecfdf5', color: '#065f46', fontWeight: 600 }}>
-                        Gerçek Yerel Rapor
-                      </span>
+                      {!productionMode && (
+                        <span style={{ fontSize: '0.6875rem', padding: '1px 6px', borderRadius: '4px', background: '#ecfdf5', color: '#065f46', fontWeight: 600 }}>
+                          Gerçek yerel rapor
+                        </span>
+                      )}
                     </div>
                   </td>
                   <td style={{ color: 'var(--text-main)' }}>
-                    {job.jobKind === 'split' ? 'Bölümleme' : 'Dönüştürme'} ({job.clientContext.companyName} / {job.clientContext.projectName})
+                    {job.clientContext.companyName} / {job.clientContext.projectName}
                   </td>
                   <td style={{ color: 'var(--text-muted)' }}>
                     {job.completedAt ? new Date(job.completedAt).toLocaleString('tr-TR') : new Date(job.createdAt).toLocaleString('tr-TR')}
@@ -155,7 +190,7 @@ export const ReportsView: React.FC = () => {
                       onClick={() => handleDownloadRealReport(job.jobId)}
                       data-testid={`download-json-${job.jobId}`}
                     >
-                      JSON İndir
+                      Raporu indir (JSON)
                     </button>
                   </td>
                 </tr>
@@ -168,7 +203,7 @@ export const ReportsView: React.FC = () => {
                       <IconFile size={16} color="var(--brand-orange)" />
                       <span>{rep.title}</span>
                       <span style={{ fontSize: '0.6875rem', padding: '1px 6px', borderRadius: '4px', background: '#f1f5f9', color: '#64748b' }}>
-                        Sentetik Demo
+                        Örnek
                       </span>
                     </div>
                   </td>
@@ -204,6 +239,7 @@ export const ReportsView: React.FC = () => {
             </tbody>
           </table>
         </div>
+        )}
       </div>
     </div>
   );

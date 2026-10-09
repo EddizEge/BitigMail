@@ -8,12 +8,12 @@ import {
   IconDownload,
   IconFolder,
   IconClock,
-  IconAlertCircle,
 } from '../ui/Icons';
 import { Badge } from '../ui/Badge';
 import { LocalEngineClient } from '../../api/localEngineClient';
 import { LocalJobRecord } from '../../types/localEngine';
 import { AdvancedFilterBuilder } from '../filters/AdvancedFilterBuilder';
+import { TechnicalDetails } from '../layout/PageHeader';
 
 interface ImapTransferWorkflowProps {
   companyId: string;
@@ -24,6 +24,8 @@ interface ImapTransferWorkflowProps {
   onSelectBridge?: (direction: 'file-to-imap' | 'imap-to-file') => void;
   client?: LocalEngineClient;
   initialJob?: LocalJobRecord | null;
+  /** Aktarım sekmesine gömülüyken başlık, müşteri/proje ve yön seçici üst ekranda gösterilir. */
+  embedded?: boolean;
 }
 
 export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
@@ -35,6 +37,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
   onSelectBridge,
   client,
   initialJob,
+  embedded = false,
 }) => {
   const {
     accounts,
@@ -115,12 +118,23 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', padding: '24px 28px', maxWidth: '1100px', margin: '0 auto', width: '100%', boxSizing: 'border-box' }} data-testid="imap-transfer-workflow">
       {/* Header & Scope Banner */}
+      {embedded ? (
+        <div className="workflow-actions-bar">
+          <button className="btn btn-outline-gray" onClick={loadAccounts} disabled={loadingAccounts} data-testid="refresh-imap-transfer-accounts-btn">
+            <IconRefreshCw size={14} className={loadingAccounts ? 'animate-spin' : ''} />
+            <span>Hesapları yenile</span>
+          </button>
+          {onNavigateToAccounts && (
+            <button className="btn btn-outline-orange" onClick={onNavigateToAccounts} data-testid="goto-client-accounts-btn">Hesapları yönet</button>
+          )}
+        </div>
+      ) : (
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '12px' }}>
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <IconServer size={22} color="var(--brand-orange)" />
             <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: 0, color: 'var(--text-main)' }}>
-              IMAP Posta Kutuları Arası Doğrudan Aktarım
+              Hesaptan hesaba aktarım
             </h2>
             <Badge variant="info">Gerçek Mod</Badge>
           </div>
@@ -139,7 +153,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
             data-testid="refresh-imap-transfer-accounts-btn"
           >
             <IconRefreshCw size={14} className={loadingAccounts ? 'animate-spin' : ''} />
-            <span>Hesapları Yenile</span>
+            <span>Hesapları yenile</span>
           </button>
           {onNavigateToAccounts && (
             <button
@@ -148,13 +162,14 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
               onClick={onNavigateToAccounts}
               data-testid="goto-client-accounts-btn"
             >
-              <span>Hesapları Yönet</span>
+              <span>Hesapları yönet</span>
             </button>
           )}
         </div>
       </div>
+      )}
 
-      {onSelectBridge && (
+      {onSelectBridge && !embedded && (
         <div
           className="card"
           style={{
@@ -171,7 +186,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
           data-testid="imap-to-bridge-switcher"
         >
           <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
-            DİĞER AKTARIM YÖNLERİ:
+            Diğer aktarım yönleri
           </span>
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
             <button
@@ -193,7 +208,6 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
               IMAP → Dosya (Dışa Aktarım)
             </button>
           </div>
-          <div style={{marginTop:'14px'}}><AdvancedFilterBuilder testId="imap-advanced-filter" value={advancedFilter} onChange={setAdvancedFilter} unknownCount={preview?.advancedFilterUnknownCount ?? 0} /></div>
         </div>
       )}
 
@@ -206,7 +220,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
       {/* Step 1: Account Selection */}
       <div className="card" style={{ padding: '20px' }}>
         <h3 style={{ fontSize: '1rem', fontWeight: 600, margin: '0 0 14px 0', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span>1. Kaynak ve Hedef Hesap Seçimi</span>
+          <span>1. Kaynak ve hedef hesap</span>
         </h3>
 
         {accounts.length === 0 && !loadingAccounts ? (
@@ -218,7 +232,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
             {/* Source Account Picker */}
             <div>
               <label htmlFor="source-account-select" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '6px' }}>
-                Kaynak Hesap (Kopyalanacak Posta Kutusu) *
+                Kaynak hesap (kopyalanacak posta kutusu) *
               </label>
               <select
                 id="source-account-select"
@@ -228,7 +242,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
                 disabled={Boolean(currentJob && (currentJob.status === 'converting' || currentJob.status === 'verifying'))}
                 data-testid="source-account-select"
               >
-                <option value="">-- Kaynak Hesap Seçin --</option>
+                <option value="">Kaynak hesabı seçin</option>
                 {accounts.map((acc) => {
                   const isPersonal = acc.authKind === 'microsoft365' && acc.tenantId === 'consumers';
                   const isCorporate = acc.authKind === 'microsoft365' && acc.tenantId !== 'consumers';
@@ -257,7 +271,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
             {/* Target Account Picker */}
             <div>
               <label htmlFor="target-account-select" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '6px' }}>
-                Hedef Hesap (Yazılacak Posta Kutusu) *
+                Hedef hesap (yazılacak posta kutusu) *
               </label>
               <select
                 id="target-account-select"
@@ -267,7 +281,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
                 disabled={Boolean(currentJob && (currentJob.status === 'converting' || currentJob.status === 'verifying'))}
                 data-testid="target-account-select"
               >
-                <option value="">-- Hedef Hesap Seçin --</option>
+                <option value="">Hedef hesabı seçin</option>
                 {accounts.map((acc) => {
                   const isPersonal = acc.authKind === 'microsoft365' && acc.tenantId === 'consumers';
                   const isCorporate = acc.authKind === 'microsoft365' && acc.tenantId !== 'consumers';
@@ -308,7 +322,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
         <div className="card" style={{ padding: '20px' }} data-testid="folder-selection-card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', flexWrap: 'wrap', gap: '8px' }}>
             <h3 style={{ fontSize: '1rem', fontWeight: 600, margin: 0 }}>
-              2. Kaynak Klasörler ve Hedef Klasör Eşlemesi
+              2. Kaynak klasörler ve hedef eşlemesi
             </h3>
             <div style={{ display: 'flex', gap: '8px' }}>
               <button
@@ -318,7 +332,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
                 onClick={selectAllFolders}
                 data-testid="select-all-folders-btn"
               >
-                Tümünü Seç
+                Tümünü seç
               </button>
               <button
                 type="button"
@@ -356,9 +370,9 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
                   <thead>
                     <tr style={{ background: 'var(--bg-subtle)', textAlign: 'left', fontSize: '0.75rem' }}>
                       <th style={{ width: '40px', padding: '8px 12px' }}>Seç</th>
-                      <th style={{ padding: '8px 12px' }}>Kaynak Klasör (Tam Yol)</th>
+                      <th style={{ padding: '8px 12px' }}>Kaynak klasör (tam yol)</th>
                       <th style={{ width: '120px', padding: '8px 12px' }}>İleti Sayısı</th>
-                      <th style={{ padding: '8px 12px' }}>Hedef Klasör Yolu</th>
+                      <th style={{ padding: '8px 12px' }}>Hedef klasör yolu</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -432,20 +446,17 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
       {sourceAccountId && (
         <div className="card" style={{ padding: '20px' }}>
           <h3 style={{ fontSize: '1rem', fontWeight: 600, margin: '0 0 10px 0' }}>
-            3. Tarih Filtresi (İsteğe Bağlı)
+            3. Tarih ve gelişmiş filtre (isteğe bağlı)
           </h3>
 
-          <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '12px 14px', marginBottom: '14px', fontSize: '0.8125rem', color: '#334155', display: 'flex', gap: '10px' }}>
-            <IconAlertCircle size={18} color="#b45309" style={{ flexShrink: 0, marginTop: '2px' }} />
-            <div>
-              <strong>Kapsayıcı UTC+03:00 Tarih Sınırı:</strong> Tarih filtresi özgün MIME <code>Date</code> başlığı ve açık saat dilimi sınırlarıyla değerlendirilir. Belirtilen günlerin tamamı (00:00:00..23:59:59 UTC+03:00) kapsanır. Tarih başlığı eksik iletiler filtrede dışlanır ve sayısı önizleme ile raporda bildirilir. IMAP <code>INTERNALDATE</code> ayrıca korunur, filtreye sessiz ikame edilmez.
-            </div>
-          </div>
+          <p style={{ margin: '0 0 12px 0', fontSize: '0.8125rem', color: 'var(--text-muted)' }}>
+            Seçilen günler başından sonuna dahildir. Tarihi olmayan iletiler dışarıda kalır ve sayısı raporda yazılır.
+          </p>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '14px' }}>
             <div>
               <label htmlFor="filter-start-date" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                Başlangıç Tarihi (Kapsayıcı)
+                Başlangıç tarihi (dahil)
               </label>
               <input
                 id="filter-start-date"
@@ -458,7 +469,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
             </div>
             <div>
               <label htmlFor="filter-end-date" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                Bitiş Tarihi (Kapsayıcı)
+                Bitiş tarihi (dahil)
               </label>
               <input
                 id="filter-end-date"
@@ -469,6 +480,12 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
                 data-testid="filter-end-date-input"
               />
             </div>
+          </div>
+          <div style={{ marginTop: '14px' }}><AdvancedFilterBuilder testId="imap-advanced-filter" value={advancedFilter} onChange={setAdvancedFilter} unknownCount={preview?.advancedFilterUnknownCount ?? 0} /></div>
+          <div style={{ marginTop: '10px' }}>
+            <TechnicalDetails summary="Teknik ayrıntılar: tarih sınırı">
+              <p><strong>Kapsayıcı UTC+03:00 tarih sınırı:</strong> Tarih filtresi özgün MIME <code>Date</code> başlığı ve açık saat dilimi sınırlarıyla değerlendirilir. Belirtilen günlerin tamamı (00:00:00..23:59:59 UTC+03:00) kapsanır. Tarih başlığı eksik iletiler filtrede dışlanır ve sayısı önizleme ile raporda bildirilir. IMAP <code>INTERNALDATE</code> ayrıca korunur, filtreye sessiz ikame edilmez.</p>
+            </TechnicalDetails>
           </div>
         </div>
       )}
@@ -505,7 +522,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
             <div>
               <h3 style={{ fontSize: '1.0625rem', fontWeight: 700, margin: 0, color: 'var(--text-main)' }}>
-                Dondurulmuş Sunucu Önizleme Özeti
+                Önizleme özeti (sabitlendi)
               </h3>
               <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '2px' }}>
                 Önizleme ID: <code>{preview.previewId}</code> · Oluşturulma: {new Date(preview.createdAtUtc).toLocaleString('tr-TR')}
@@ -513,50 +530,50 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
             </div>
 
             {preview.canTransfer ? (
-              <Badge variant="success">Aktarıma Hazır</Badge>
+              <Badge variant="success">Aktarıma hazır</Badge>
             ) : (
-              <Badge variant="error">Aktarım Engellendi</Badge>
+              <Badge variant="error">Aktarım engellendi</Badge>
             )}
           </div>
 
           {!preview.canTransfer && preview.blockerReason && (
             <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: '6px', padding: '12px 16px', fontSize: '0.875rem', color: '#b91c1c', marginBottom: '16px' }} data-testid="blocker-reason-alert">
-              <strong>Aktarım Engeli:</strong> {preview.blockerReason}
+              <strong>Aktarım engeli:</strong> {preview.blockerReason}
             </div>
           )}
 
           {/* Counts Grid */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '12px', marginBottom: '18px' }}>
             <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>TOPLAM KAYNAK</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Toplam kaynak</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '2px' }} data-testid="preview-total-count">
                 {preview.totalSourceItems}
               </div>
             </div>
 
             <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', padding: '12px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>UYGUN (KOPYALANACAK)</div>
+              <div style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>Kopyalanacak</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#15803d', marginTop: '2px' }} data-testid="preview-eligible-count">
                 {preview.eligibleItemsCount}
               </div>
             </div>
 
             <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>FİLTRE DIŞI KALAN</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Filtre dışı kalan</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '2px' }} data-testid="preview-excluded-count">
                 {preview.excludedCount}
               </div>
             </div>
 
             <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>TARİH EKSİK DIŞLANAN</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Tarihi eksik (dışlanan)</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '2px' }} data-testid="preview-missing-date-count">
                 {preview.missingDateExcludedCount}
               </div>
             </div>
 
             <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>DELETED BAYRAKLI</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Silindi işaretli</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, color: preview.deletedExcludedCount > 0 ? '#b91c1c' : 'inherit', marginTop: '2px' }} data-testid="preview-deleted-count">
                 {preview.deletedExcludedCount}
               </div>
@@ -568,8 +585,8 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
             <table className="data-table" style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.8125rem' }}>
               <thead>
                 <tr style={{ background: 'var(--bg-subtle)', textAlign: 'left' }}>
-                  <th style={{ padding: '8px 12px' }}>Kaynak Klasör</th>
-                  <th style={{ padding: '8px 12px' }}>Hedef Klasör</th>
+                  <th style={{ padding: '8px 12px' }}>Kaynak klasör</th>
+                  <th style={{ padding: '8px 12px' }}>Hedef klasör</th>
                   <th style={{ padding: '8px 12px' }}>Toplam İleti</th>
                   <th style={{ padding: '8px 12px' }}>Kopyalanacak</th>
                   <th style={{ padding: '8px 12px' }}>Dışlanan</th>
@@ -612,7 +629,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
 
       {activeJobError && (
         <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: '6px', padding: '14px', fontSize: '0.875rem', color: '#b91c1c' }}>
-          <strong>Başlatma Hatası:</strong> {activeJobError}
+          <strong>Başlatma hatası:</strong> {activeJobError}
         </div>
       )}
 
@@ -689,7 +706,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
                   onClick={onNavigateToAccounts}
                   data-testid="reauth-navigate-btn"
                 >
-                  Hesapları Yönet ve Yeniden Bağlan
+                  Hesapları yönet ve yeniden bağlan
                 </button>
               )}
             </div>
@@ -736,7 +753,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
                 data-testid="download-transfer-report-btn"
               >
                 <IconDownload size={14} />
-                <span>Kalıcı Raporu İndir (JSON)</span>
+                <span>Raporu indir (JSON)</span>
               </button>
             )}
 
@@ -746,7 +763,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
               onClick={resetTransfer}
               data-testid="new-transfer-btn"
             >
-              Yeni Aktarım Başlat
+              Yeni aktarım başlat
             </button>
           </div>
         </div>
@@ -762,19 +779,19 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
           {(report.imapTransfer.startDate || report.imapTransfer.endDate) && <p>Tarih aralığı: {report.imapTransfer.startDate || 'Başlangıç sınırı yok'} — {report.imapTransfer.endDate || 'Bitiş sınırı yok'} (UTC+03)</p>}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '12px', marginBottom: '16px' }}>
             <div style={{ background: 'var(--bg-subtle)', padding: '10px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>PLANLANAN</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Planlanan</div>
               <div style={{ fontSize: '1.125rem', fontWeight: 700 }}>{report.imapTransfer.totalPlanned}</div>
             </div>
             <div style={{ background: '#f0fdf4', padding: '10px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: '#166534' }}>TAM DOĞRULANAN (VERIFIED)</div>
+              <div style={{ fontSize: '0.75rem', color: '#166534' }}>Tam doğrulanan</div>
               <div style={{ fontSize: '1.125rem', fontWeight: 700, color: '#15803d' }}>{report.imapTransfer.totalVerified}</div>
             </div>
             <div style={{ background: 'var(--bg-subtle)', padding: '10px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>İNCELEME GEREKLİ</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>İnceleme gerekli</div>
               <div style={{ fontSize: '1.125rem', fontWeight: 700 }}>{report.imapTransfer.totalNeedsAttention}</div>
             </div>
             <div style={{ background: 'var(--bg-subtle)', padding: '10px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>BAŞARISIZ</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Başarısız</div>
               <div style={{ fontSize: '1.125rem', fontWeight: 700 }}>{report.imapTransfer.totalFailed}</div>
             </div>
           </div>
@@ -789,8 +806,8 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
               <table className="data-table" style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.75rem' }}>
                 <thead>
                   <tr style={{ background: 'var(--bg-subtle)', textAlign: 'left' }}>
-                    <th style={{ padding: '6px 10px' }}>Kaynak Klasör / UID</th>
-                    <th style={{ padding: '6px 10px' }}>Hedef Klasör / UID</th>
+                    <th style={{ padding: '6px 10px' }}>Kaynak klasör / UID</th>
+                    <th style={{ padding: '6px 10px' }}>Hedef klasör / UID</th>
                     <th style={{ padding: '6px 10px' }}>BitigMail Keyword</th>
                     <th style={{ padding: '6px 10px' }}>Durum</th>
                     <th style={{ padding: '6px 10px' }}>SHA-256 Özeti</th>

@@ -3,6 +3,7 @@ import { IconRefreshCw, IconX } from '../ui/Icons';
 import { Button } from '../ui/Button';
 import { localEngineClient } from '../../api/localEngineClient';
 import type { AsposeSdkStatus } from '../../types/localEngine';
+import { APP_VERSION } from '../layout/StatusBar';
 
 interface SettingsDrawerProps {
   isOpen: boolean;
@@ -40,10 +41,10 @@ export const SettingsDrawer: React.FC<SettingsDrawerProps> = ({
         >
           <div>
             <h3 style={{ fontSize: '1.125rem', fontWeight: 700, color: 'var(--text-main)' }}>
-              {authenticated ? 'Sistem Ayarları' : 'Prototip Ayarları'}
+              {authenticated ? 'Ayarlar' : 'Prototip ayarları'}
             </h3>
             <p style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>
-              {authenticated ? 'Yerel motor, lisans ve çalışma alanı tercihleri' : 'Yerel demo tercihleri ve veri sıfırlama'}
+              {authenticated ? `Lisans durumu ve uygulama bilgisi · BitigMail ${APP_VERSION}` : 'Yerel demo tercihleri ve veri sıfırlama'}
             </p>
           </div>
           <button
@@ -57,16 +58,16 @@ export const SettingsDrawer: React.FC<SettingsDrawerProps> = ({
         </div>
 
         <div style={{ padding: '20px', flex: 1, display: 'flex', flexDirection: 'column', gap: '20px', overflowY: 'auto' }}>
-          <div data-testid="sdk-license-status"><span className="plan-label">Aspose SDK ve lisans</span><p>{sdk ? `${sdk.licenseState==='unlicensed'?'Lisans yapılandırılmadı':sdk.licenseState==='licensed_loaded'?'Lisans başlangıçta yüklendi':'Lisans yapılandırma hatası'} · ${sdk.initializationState==='initialized'?'SDK başlangıcı hazır':'SDK başlangıç hatası'}` : 'Durum alınamadı'}</p><p style={{fontSize:'0.8125rem',color:'var(--text-muted)'}}>Lisans dosyası yalnız bu Windows kullanıcısına bağlı korumalı yerel depoda tutulur. Değişiklik çalışan işlere uygulanmaz; uygulamanın yeniden başlatılması gerekir.</p><p>{sdk?.qualification==='LICENSED_OUTPUT_ACCEPTANCE_PENDING'?'Lisanslı çıktı kabulü henüz yapılmadı.':sdk?.qualification}</p><Button variant="outline-gray" onClick={async()=>{const r=await localEngineClient.selectSdkLicense();setRestartRequired(r.restartRequired)}}>Lisans dosyası seç</Button>{restartRequired&&<p role="alert">Lisans yapılandırması kaydedildi. Uygulamayı yeniden başlatın.</p>}</div>
+          <div data-testid="sdk-license-status"><span className="plan-label">Posta biçimi kitaplığı (Aspose) ve lisans</span><p>{sdk ? `${sdk.licenseState==='unlicensed'?'Lisans yapılandırılmadı':sdk.licenseState==='licensed_loaded'?'Lisans başlangıçta yüklendi':'Lisans yapılandırma hatası'} · ${sdk.initializationState==='initialized'?'SDK başlangıcı hazır':'SDK başlangıç hatası'}` : 'Durum alınamadı. Uygulamayı kapatıp yeniden açın.'}</p><p style={{fontSize:'0.8125rem',color:'var(--text-muted)'}}>Lisans dosyası yalnız bu Windows kullanıcısına bağlı korumalı yerel depoda tutulur. Değişiklik çalışan işlere uygulanmaz; uygulamanın yeniden başlatılması gerekir.</p><p>{sdk?.qualification==='LICENSED_OUTPUT_ACCEPTANCE_PENDING'?'Lisanslı çıktı kabulü henüz yapılmadı.':sdk?.qualification}</p><Button variant="outline-gray" onClick={async()=>{const r=await localEngineClient.selectSdkLicense();setRestartRequired(r.restartRequired)}}>Lisans dosyası seç</Button>{restartRequired&&<p role="alert">Lisans yapılandırması kaydedildi. Uygulamayı yeniden başlatın.</p>}</div>
           {!authenticated && <div>
-            <span className="plan-label">Sentetik Veri Sözleşmesi</span>
+            <span className="plan-label">Sentetik veri sözleşmesi</span>
             <p style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', marginTop: '4px' }}>
               Demo kayıtları sentetiktir. Gerçek yerel motor akışları, kullanıcı tarafından yapılandırılan posta hesaplarına ve dosyalara yalnız açık işlemler sırasında bağlanabilir.
             </p>
           </div>}
 
           {!authenticated && <div>
-            <span className="plan-label">Örnek Hedef Sınırı</span>
+            <span className="plan-label">Örnek hedef sınırı</span>
             <p style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', marginTop: '4px' }}>
               Microsoft 365 hedefi için temsili tekil ileti sınırı <strong>35 MB</strong> olarak
               ayarlanmıştır. 38 MB boyutundaki örnek ileti bu kuralı doğrulamak için ön kontrolde
@@ -75,7 +76,7 @@ export const SettingsDrawer: React.FC<SettingsDrawerProps> = ({
           </div>}
 
           {!authenticated && <div style={{ borderTop: '1px solid var(--border-light)', paddingTop: '16px' }}>
-            <span className="plan-label">Yerel Bellek ve Sıfırlama</span>
+            <span className="plan-label">Yerel bellek ve sıfırlama</span>
             <p style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', marginTop: '4px', marginBottom: '12px' }}>
               Tarayıcı yerel depolamasında (localStorage) saklanan plan, simülasyon ve iş durumlarını
               varsayılan fabrika değerlerine geri döndürür.
@@ -88,7 +89,7 @@ export const SettingsDrawer: React.FC<SettingsDrawerProps> = ({
               style={{ width: '100%' }}
             >
               <IconRefreshCw size={16} />
-              <span>Demo Verilerini Sıfırla</span>
+              <span>Demo verilerini sıfırla</span>
             </Button>
           </div>}
         </div>

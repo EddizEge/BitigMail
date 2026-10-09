@@ -13,6 +13,7 @@ import { IdentityGate, useIdentity } from './components/auth/IdentityGate';
 const AuthenticatedApp: React.FC = () => {
   const state = useAppState();
   const identityState = useIdentity();
+  const authenticated = Boolean(identityState?.identity);
 
   React.useEffect(() => {
     const catalog = identityState?.identity?.companies;
@@ -50,6 +51,13 @@ const AuthenticatedApp: React.FC = () => {
             onAddToArchive={(job) => {
               state.openArchiveSearchAdd?.(job.id, job.companyId, job.projectId);
             }}
+            productionMode={authenticated}
+            onStartNewJob={authenticated ? (type) => {
+              state.setSelectedLocalJobId(null);
+              state.updatePlan((previous) => ({ ...previous, operationType: type }));
+              state.setCurrentView('workspace');
+              state.setCurrentTab('transfers');
+            } : undefined}
           />
         );
       case 'clients':
@@ -59,7 +67,7 @@ const AuthenticatedApp: React.FC = () => {
       case 'search':
         return <ArchiveSearchView state={state} />;
       case 'reports':
-        return <ReportsView />;
+        return <ReportsView productionMode={authenticated} />;
       default:
         return <ClientDirectoryView state={state} />;
     }
@@ -95,12 +103,14 @@ const AuthenticatedApp: React.FC = () => {
       }
       return `${state.archiveSearchScopeCount} arşiv seçili arama kapsamı`;
     }
+    if (identityState?.identity) return '';
     return 'Örnek arşiv hazır';
   };
 
   const getProjectName = () => {
     if (identityState?.identity) {
-      return state.projects.find((project) => project.id === state.plan.projectId)?.name || 'Çalışma alanı seçilmedi';
+      if (state.currentTab !== 'transfers') return '';
+      return state.projects.find((project) => project.id === state.plan.projectId)?.name || '';
     }
     if (state.currentTab === 'search') {
       return 'Yerel Arşiv';

@@ -11,6 +11,7 @@ import {
   IconRefreshCw,
 } from '../ui/Icons';
 import { Badge } from '../ui/Badge';
+import { EngineOfflineNotice } from '../layout/PageHeader';
 
 interface LocalConvertWorkflowProps {
   state: AppState;
@@ -142,35 +143,36 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
             <h2 style={{ margin: '0 0 6px 0', fontSize: '1.125rem', fontWeight: 700, color: 'var(--text-primary)', overflowWrap: 'anywhere' }}>
               OST → PST dönüştürme
             </h2>
-            <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '6px 8px', fontSize: '0.875rem', fontWeight: 600, minWidth: 0 }}>
-              <span style={{ minWidth: 0, overflowWrap: 'anywhere', wordBreak: 'break-word' }}>Müşteri: <strong data-testid="context-company-name">{clientContext.companyName}</strong></span>
+            {frozenContext && (
+              <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '6px 8px', fontSize: '0.875rem', fontWeight: 600, minWidth: 0 }}>
+              <span style={{ minWidth: 0, overflowWrap: 'anywhere', wordBreak: 'break-word' }}>İş kaydı: <strong data-testid="context-company-name">{clientContext.companyName}</strong></span>
               <span style={{ color: 'var(--border-mid)' }}>/</span>
-              <span style={{ minWidth: 0, overflowWrap: 'anywhere', wordBreak: 'break-word' }}>Proje: <strong data-testid="context-project-name">{clientContext.projectName}</strong></span>
+              <span style={{ minWidth: 0, overflowWrap: 'anywhere', wordBreak: 'break-word' }}><strong data-testid="context-project-name">{clientContext.projectName}</strong></span>
             </div>
+            )}
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px', flexShrink: 0 }}>
-            <span style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>Motor Durumu:</span>
-            {localEngine.serviceStatus === 'checking' && (
+                        {localEngine.serviceStatus === 'checking' && (
               <Badge variant="warning">Bağlanıyor...</Badge>
             )}
             {localEngine.serviceStatus === 'online' && (
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#16a34a', fontWeight: 600, fontSize: '0.8125rem' }}>
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#16a34a' }} />
-                <span>{localEngine.client.getBaseUrl().replace(/^https?:\/\//, '')} Çevrimiçi</span>
+                <span>Motor hazır</span>
               </span>
             )}
             {localEngine.serviceStatus === 'offline' && (
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#dc2626', fontWeight: 600, fontSize: '0.8125rem' }}>
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#dc2626' }} />
-                <span>Çevrimdışı</span>
+                <span>Motor bağlantısı yok</span>
               </span>
             )}
             <button
               className="btn btn-outline-gray"
               style={{ padding: '4px 8px', fontSize: '0.75rem', flexShrink: 0 }}
               onClick={localEngine.checkService}
-              title="Bağlantıyı Yenile"
+              title="Bağlantıyı yenile" aria-label="Bağlantıyı yenile"
               data-testid="refresh-service-status-btn"
             >
               <IconRefreshCw size={12} />
@@ -179,44 +181,14 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
         </div>
       </div>
 
-      {/* 2. Service Offline Warning Banner */}
-      {localEngine.serviceStatus === 'offline' && (
-        <div
-          style={{
-            background: '#fffbeb',
-            border: '1px solid #fde68a',
-            borderRadius: '8px',
-            padding: '14px 16px',
-            display: 'flex',
-            gap: '12px',
-            alignItems: 'flex-start',
-            minWidth: 0,
-            maxWidth: '100%',
-            boxSizing: 'border-box',
-          }}
-          data-testid="service-offline-banner"
-        >
-          <IconAlertCircle size={24} color="#d97706" style={{ flexShrink: 0, marginTop: '2px' }} />
-          <div style={{ minWidth: 0, flex: 1, overflowWrap: 'anywhere' }}>
-            <h4 style={{ margin: '0 0 4px 0', fontSize: '0.9375rem', fontWeight: 700, color: '#92400e', overflowWrap: 'anywhere' }}>
-              Yerel hizmet çevrimdışı (127.0.0.1:6174)
-            </h4>
-            <p style={{ margin: '0 0 8px 0', fontSize: '0.875rem', color: '#b45309', overflowWrap: 'anywhere' }}>
-              Dönüştürmeye başlamak için BitigMail yerel hizmetini çalıştırın.
-            </p>
-            <div style={{ background: '#fef3c7', padding: '8px 12px', borderRadius: '4px', fontFamily: 'monospace', fontSize: '0.8125rem', color: '#78350f', overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }}>
-              .\scripts\start-local-engine.ps1
-            </div>
-          </div>
-        </div>
-      )}
+      {localEngine.serviceStatus === 'offline' && <EngineOfflineNotice action="Dönüştürmeye başlamak" />}
 
       {/* 3. Source OST File Selection Card */}
       <div className="card" style={{ padding: '16px 20px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }} data-testid="source-selection-card">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
           <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0 }}>
             <IconFile size={18} color="var(--brand-orange)" style={{ flexShrink: 0 }} />
-            <span style={{ overflowWrap: 'anywhere' }}>1. Kaynak OST Dosyası</span>
+            <span style={{ overflowWrap: 'anywhere' }}>1. Kaynak OST dosyası</span>
           </h3>
           {localEngine.selectedSource && (
             <button
@@ -226,7 +198,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
               disabled={localEngine.serviceStatus !== 'online' || localEngine.isAnalyzing || localEngine.activeJob?.status === 'converting'}
               data-testid="reselect-source-btn"
             >
-              Farklı Dosya Seç
+              Farklı dosya seç
             </button>
           )}
         </div>
@@ -252,26 +224,24 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
           <div style={{ minWidth: 0, maxWidth: '100%' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '12px', background: 'var(--bg-subtle)', padding: '14px', borderRadius: '6px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
               <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>DOSYA ADI</span>
+                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Dosya adı</span>
                 <div style={{ fontWeight: 600, overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }} data-testid="source-filename">
                   {localEngine.selectedSource.fileName}
                 </div>
               </div>
               <div style={{ minWidth: 0 }}>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>BOYUT</span>
+                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Boyut</span>
                 <div style={{ fontWeight: 600 }}>{formatBytes(localEngine.selectedSource.sizeBytes)}</div>
               </div>
               {localEngine.analysis && (
-                <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>SHA-256 HASH</span>
+                <details className="tech-details" style={{ gridColumn: '1 / -1' }}><summary>Teknik ayrıntılar: SHA-256 özeti</summary><div className="tech-details-body">
                   <div style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--text-muted)', overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }} data-testid="source-sha256">
                     {localEngine.analysis.sourceSha256}
-                  </div>
-                </div>
+                  </div></div></details>
               )}
               {localEngine.selectedSource.displayPath && (
                 <div style={{ gridColumn: '1 / -1', minWidth: 0, maxWidth: '100%', overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>KAYNAK DOSYA KONUMU</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Kaynak dosya konumu</span>
                   <div style={{ fontSize: '0.8125rem', fontFamily: 'monospace', overflowWrap: 'anywhere', wordBreak: 'break-all', color: 'var(--text-primary)', minWidth: 0 }} data-testid="source-display-path">
                     {localEngine.selectedSource.displayPath}
                   </div>
@@ -300,7 +270,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
         <div className="card" style={{ padding: '16px 20px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }} data-testid="analysis-preflight-card">
           <h3 style={{ margin: '0 0 16px 0', fontSize: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0, overflowWrap: 'anywhere' }}>
             <IconCheck size={18} color="#16a34a" style={{ flexShrink: 0 }} />
-            <span>2. Dosya Analizi ve Ön Kontrol Bulguları</span>
+            <span>2. Dosya analizi ve ön kontrol</span>
           </h3>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 120px), 1fr))', gap: '10px', marginBottom: '16px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
@@ -314,24 +284,24 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
             </div>
             <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px', textAlign: 'center', minWidth: 0 }}>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#16a34a' }}>{localEngine.analysis.activeFoldersCount}</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Dolu Klasör</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Dolu klasör</div>
             </div>
             <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px', textAlign: 'center', minWidth: 0 }}>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }}>{localEngine.analysis.emptyFoldersCount}</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Boş Klasör</div>
+              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Boş klasör</div>
             </div>
           </div>
 
           {/* Folder Breakdown */}
           <div style={{ marginBottom: '16px', minWidth: 0, maxWidth: '100%' }}>
             <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px' }}>
-              KLASÖR YAPISI VE SAYIMLAR
+              Klasör yapısı ve sayımlar
             </div>
             <div style={{ maxHeight: '180px', overflowY: 'auto', overflowX: 'auto', WebkitOverflowScrolling: 'touch', border: '1px solid var(--border-light)', borderRadius: '6px', maxWidth: '100%', minWidth: 0, boxSizing: 'border-box' }}>
               <table className="data-table" style={{ fontSize: '0.8125rem', width: '100%', minWidth: '320px' }}>
                 <thead>
                   <tr>
-                    <th>Klasör Yolu</th>
+                    <th>Klasör yolu</th>
                     <th>Öğe Sayısı</th>
                     <th>Durum</th>
                   </tr>
@@ -407,7 +377,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
             >
               <div style={{ fontWeight: 700, display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
                 <IconAlertCircle size={18} style={{ flexShrink: 0 }} />
-                <span>Deneme Sürümü Sınırı Engeli: Dönüştürme Başlatılamaz</span>
+                <span>Deneme sürümü sınırı: dönüştürme başlatılamaz</span>
               </div>
               <div>{localEngine.analysis.preflight.trialBlockerReason}</div>
               <div style={{ fontSize: '0.75rem', marginTop: '6px', color: '#b91c1c' }}>
@@ -449,19 +419,19 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
               <span>3. Filtreleme ve Seçim Önizlemesi</span>
             </h3>
             <div style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>
-              Türkiye Saati (UTC+03:00)
+              Türkiye saati (UTC+03:00)
             </div>
           </div>
 
           {/* Date Filter Inputs */}
           <div style={{ background: 'var(--bg-subtle)', padding: '14px', borderRadius: '6px', marginBottom: '16px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
             <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px' }}>
-              TARİH ARALIĞI (İsteğe Bağlı)
+              Tarih aralığı (isteğe bağlı)
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '12px', alignItems: 'center' }}>
               <div>
                 <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '4px' }}>
-                  Başlangıç Tarihi (Dahil)
+                  Başlangıç tarihi (dahil)
                 </label>
                 <input
                   type="date"
@@ -474,7 +444,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
               </div>
               <div>
                 <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-muted)', marginBottom: '4px' }}>
-                  Bitiş Tarihi (Dahil)
+                  Bitiş tarihi (dahil)
                 </label>
                 <input
                   type="date"
@@ -496,7 +466,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
                     }}
                     data-testid="clear-dates-btn"
                   >
-                    Tarihleri Temizle
+                    Tarihleri temizle
                   </button>
                 </div>
               )}
@@ -510,7 +480,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
           <div style={{ marginBottom: '16px', minWidth: 0, maxWidth: '100%' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', flexWrap: 'wrap', gap: '8px' }}>
               <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text-muted)' }}>
-                KLASÖR SEÇİMİ
+                Klasör seçimi
               </div>
               <div style={{ display: 'flex', gap: '8px' }}>
                 <button
@@ -519,7 +489,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
                   onClick={localEngine.selectAllFolders}
                   data-testid="select-all-folders-btn"
                 >
-                  Tümünü Seç
+                  Tümünü seç
                 </button>
                 <button
                   className="btn btn-outline-gray"
@@ -527,7 +497,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
                   onClick={localEngine.clearAllFolders}
                   data-testid="clear-all-folders-btn"
                 >
-                  Tümünü Kaldır
+                  Tümünü kaldır
                 </button>
               </div>
             </div>
@@ -573,7 +543,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
           {/* Authoritative Preview Section */}
           <div style={{ minWidth: 0, maxWidth: '100%' }}>
             <div style={{ fontSize: '0.8125rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px' }}>
-              SEÇİM ÖZETİ
+              Seçim özeti
             </div>
 
             {localEngine.isLoadingPreview && (
@@ -602,19 +572,19 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
                     <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--brand-orange)' }} data-testid="preview-attachments-count">
                       {localEngine.selectionPreview.selectedAttachmentsCount}
                     </div>
-                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Seçilen Ek</div>
+                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Seçilen ek</div>
                   </div>
                   <div style={{ background: '#ffffff', padding: '10px', borderRadius: '6px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
                     <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }} data-testid="preview-excluded-count">
                       {localEngine.selectionPreview.excludedMessagesCount}
                     </div>
-                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Hariç Tutulan</div>
+                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Hariç tutulan</div>
                   </div>
                   <div style={{ background: '#ffffff', padding: '10px', borderRadius: '6px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
                     <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }} data-testid="preview-total-count">
                       {localEngine.selectionPreview.totalSourceMessages}
                     </div>
-                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Kaynak Toplam</div>
+                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Kaynak toplam</div>
                   </div>
                 </div>
 
@@ -657,7 +627,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
                 disabled={localEngine.activeJob?.status === 'converting'}
                 data-testid="reselect-target-btn"
               >
-                Farklı Konum Seç
+                Farklı konum seç
               </button>
             )}
           </div>
@@ -670,7 +640,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
                 data-testid="pick-target-btn"
                 style={{ maxWidth: '100%' }}
               >
-                Hedef PST Dosyası Seç (Yeni Konum)
+                Hedef PST dosyası seç (yeni konum)
               </button>
               <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '8px', overflowWrap: 'anywhere' }}>
                 Mevcut dosyaların üzerine yazılmaz. Çıktı önce geçici dosya olarak yazılır, doğrulama sonrası atomik olarak taşınır.
@@ -680,16 +650,16 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', background: 'var(--bg-subtle)', padding: '12px 16px', borderRadius: '6px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', minWidth: 0, maxWidth: '100%' }}>
                 <div style={{ minWidth: 0, flex: '1 1 auto', overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>HEDEF DOSYA ADI</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Hedef dosya adı</span>
                   <div style={{ fontWeight: 600, overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }} data-testid="target-filename">{localEngine.selectedTarget.fileName}</div>
                 </div>
                 <span style={{ flexShrink: 0 }}>
-                  <Badge variant="success">Hedef Hazır</Badge>
+                  <Badge variant="success">Hedef hazır</Badge>
                 </span>
               </div>
               {localEngine.selectedTarget.displayPath && (
                 <div style={{ minWidth: 0, maxWidth: '100%', overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>HEDEF DOSYA KONUMU</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Hedef dosya konumu</span>
                   <div style={{ fontSize: '0.8125rem', fontFamily: 'monospace', overflowWrap: 'anywhere', wordBreak: 'break-all', color: 'var(--text-primary)', minWidth: 0 }} data-testid="target-display-path">
                     {localEngine.selectedTarget.displayPath}
                   </div>
@@ -747,21 +717,21 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
               {/* Progress Counters */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 120px), 1fr))', gap: '10px', background: 'var(--bg-subtle)', padding: '14px', borderRadius: '6px', marginBottom: '14px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
                 <div style={{ minWidth: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>OKUNAN</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Okunan</span>
                   <div style={{ fontSize: '1.125rem', fontWeight: 700 }} data-testid="counter-items-read">{localEngine.activeJob.itemsRead}</div>
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>YAZILAN</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Yazılan</span>
                   <div style={{ fontSize: '1.125rem', fontWeight: 700, color: '#16a34a' }} data-testid="counter-items-written">{localEngine.activeJob.itemsWritten}</div>
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>BAŞARISIZ</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Başarısız</span>
                   <div style={{ fontSize: '1.125rem', fontWeight: 700, color: localEngine.activeJob.failedItems > 0 ? '#dc2626' : 'var(--text-muted)' }}>
                     {localEngine.activeJob.failedItems}
                   </div>
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>İŞLENEN KLASÖR</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>İşlenen klasör</span>
                   <div style={{ fontSize: '0.8125rem', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflowWrap: 'anywhere', wordBreak: 'break-all' }}>
                     {localEngine.activeJob.currentFolder || '—'}
                   </div>
@@ -786,7 +756,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '8px', minWidth: 0, maxWidth: '100%' }}>
             <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, color: '#166534', display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0, overflowWrap: 'anywhere' }}>
               <IconCheck size={20} color="#16a34a" style={{ flexShrink: 0 }} />
-              <span>Dönüştürme ve Yeniden Okuma Doğrulaması Tamamlandı</span>
+              <span>Dönüştürme ve yeniden okuma doğrulaması tamamlandı</span>
             </h3>
 
             <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', maxWidth: '100%' }}>
@@ -824,7 +794,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
             {outputLocation && (
               <div style={{ gridColumn: '1 / -1', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '10px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px', flexWrap: 'wrap', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
                 <div style={{ minWidth: 0, flex: '1 1 200px', overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>TAMAMLANAN ÇIKTI KONUMU</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Tamamlanan çıktı konumu</span>
                   <div style={{ fontSize: '0.8125rem', fontFamily: 'monospace', overflowWrap: 'anywhere', wordBreak: 'break-all', color: 'var(--text-primary)', fontWeight: 600, minWidth: 0 }} data-testid="output-location-path">
                     {outputLocation}
                   </div>
@@ -844,7 +814,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
             {localEngine.jobReport.isFiltered && (
               <div style={{ gridColumn: '1 / -1', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '12px 14px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }} data-testid="report-filter-summary">
                 <div style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 700, marginBottom: '6px' }}>
-                  FİLTRELİ DÖNÜŞTÜRME BİLGİSİ
+                  Filtreli dönüştürme bilgisi
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 150px), 1fr))', gap: '8px', fontSize: '0.8125rem' }}>
                   <div>
@@ -852,12 +822,12 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
                     <strong data-testid="report-selected-messages">{localEngine.jobReport.selectedMessagesCount} / {localEngine.jobReport.totalSourceMessages}</strong>
                   </div>
                   <div>
-                    <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Filtre Dışı Kalan: </span>
+                    <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Filtre dışı kalan: </span>
                     <strong data-testid="report-excluded-messages">{localEngine.jobReport.excludedMessagesCount}</strong>
                   </div>
                   {localEngine.jobReport.missingDateExcludedCount !== undefined && localEngine.jobReport.missingDateExcludedCount > 0 && (
                     <div>
-                      <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Tarihsiz Hariç: </span>
+                      <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Tarihsiz hariç: </span>
                       <strong data-testid="report-missing-date-excluded">{localEngine.jobReport.missingDateExcludedCount}</strong>
                     </div>
                   )}
@@ -881,15 +851,15 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
             )}
             {localEngine.jobReport.clientContext && (
               <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-                <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>MÜŞTERİ / PROJE</span>
+                <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>Müşteri / proje</span>
                 <div style={{ fontWeight: 700, overflowWrap: 'anywhere', wordBreak: 'break-word', minWidth: 0 }} data-testid="report-client-context">
                   {localEngine.jobReport.clientContext.companyName} / {localEngine.jobReport.clientContext.projectName}
                 </div>
-                <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Kayıtlı Sözleşme Bağlamı</div>
+                <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Kayıtlı müşteri / proje</div>
               </div>
             )}
             <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-              <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>İŞ NO</span>
+              <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>İş no</span>
               <div style={{ fontWeight: 700, fontFamily: 'monospace', fontSize: '0.8125rem', overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }} data-testid="report-job-id">
                 {localEngine.jobReport.jobId}
               </div>
@@ -902,7 +872,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
             </div>
             <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
               <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>
-                {localEngine.jobReport.isFiltered ? 'DÖNÜŞTÜRÜLEN / SEÇİLEN' : 'DÖNÜŞTÜRÜLEN / OKUNAN'}
+                {localEngine.jobReport.isFiltered ? 'Dönüştürülen / seçilen' : 'Dönüştürülen / okunan'}
               </span>
               <div style={{ fontWeight: 700 }}>
                 {localEngine.jobReport.isFiltered
@@ -912,14 +882,14 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
               <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Süre: {localEngine.jobReport.elapsedMilliseconds} ms</div>
             </div>
             <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-              <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>KAYNAK HASH KORUMASI</span>
+              <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>Kaynak dosya bütünlüğü</span>
               <div style={{ fontWeight: 700, color: localEngine.jobReport.sourceHashMatch ? '#166534' : '#dc2626' }}>
-                {localEngine.jobReport.sourceHashMatch ? 'BİT DÜZEYİNDE EŞLEŞTİ' : 'UYUŞMAZLIK'}
+                {localEngine.jobReport.sourceHashMatch ? 'Bit düzeyinde eşleşti' : 'Uyuşmazlık'}
               </div>
-              <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Sıfır Değişiklik</div>
+              <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Sıfır değişiklik</div>
             </div>
             <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-              <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>EK & CID DOĞRULAMASI</span>
+              <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>Ek ve CID doğrulaması</span>
               <div style={{ fontWeight: 700 }}>
                 {localEngine.jobReport.reopenedPstVerification.totalAttachmentsVerified} Ek, {localEngine.jobReport.reopenedPstVerification.totalCidVerified} CID
               </div>
@@ -929,7 +899,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
 
           {/* Unmeasured Fields Disclaimer */}
           <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', borderTop: '1px solid var(--border-light)', paddingTop: '10px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box', overflowWrap: 'anywhere' }}>
-            <strong>Sözleşme Notu:</strong> Taşıma üstbilgileri (RFC 822 transport headers) ve özel MAPI named properties gibi henüz ölçülmeyen alanlar raporda <code>UNKNOWN</code> olarak işaretlenmiştir; kanıt olmadan varsayılmaz.
+            <strong>Not:</strong> Taşıma üstbilgileri (RFC 822 transport headers) ve özel MAPI named properties gibi henüz ölçülmeyen alanlar raporda <code>UNKNOWN</code> olarak işaretlenmiştir; kanıt olmadan varsayılmaz.
           </div>
         </div>
         );

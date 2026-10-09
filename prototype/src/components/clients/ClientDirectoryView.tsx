@@ -14,6 +14,8 @@ import { Badge } from '../ui/Badge';
 import { getMessagesBySourceId } from '../../data/sampleMessages';
 import { ProjectImapAccounts } from './ProjectImapAccounts';
 import { useIdentity } from '../auth/IdentityGate';
+import { PageHeader } from '../layout/PageHeader';
+import { GettingStarted } from '../layout/GettingStarted';
 
 interface ClientDirectoryViewProps {
   state: AppState;
@@ -22,6 +24,8 @@ interface ClientDirectoryViewProps {
 export const ClientDirectoryView: React.FC<ClientDirectoryViewProps> = ({ state }) => {
   const identityState = useIdentity();
   const authenticated = Boolean(identityState?.identity);
+  const isAdmin = identityState?.identity?.role === 'Admin';
+  const openManagement = () => identityState?.setManagementOpen(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [addCompanyModalOpen, setAddCompanyModalOpen] = useState(false);
   const [addProjectModalOpen, setAddProjectModalOpen] = useState(false);
@@ -117,42 +121,44 @@ export const ClientDirectoryView: React.FC<ClientDirectoryViewProps> = ({ state 
   if (!selectedCompany) {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }} data-testid="client-directory-view">
-        <div className="page-subheader">
-          <div>
-            <h1 className="page-title">Müşteriler</h1>
-            <p className="page-subtitle">Şirket dizini, projeler ve bağlı veri kaynakları</p>
-          </div>
-
-          <div style={{ display: 'flex', gap: '12px' }}>
+        <PageHeader
+          title="Müşteriler"
+          description="Müşteri şirketlerini, projelerini ve projelere bağlı posta hesaplarını buradan yönetin."
+          testId="clients-page-header"
+          actions={(!authenticated || isAdmin) ? (
             <button
               className="btn btn-orange"
-              onClick={() => authenticated ? identityState?.setManagementOpen(true) : setAddCompanyModalOpen(true)}
+              onClick={() => authenticated ? openManagement() : setAddCompanyModalOpen(true)}
               data-testid="add-company-btn"
             >
               <IconPlus size={16} />
-              <span>{authenticated ? 'Çalışma alanlarını yönet' : 'Yeni şirket ekle'}</span>
+              <span>{authenticated ? 'Müşteri veya proje ekle' : 'Yeni şirket ekle'}</span>
             </button>
-          </div>
-        </div>
+          ) : undefined}
+        />
 
-        <div style={{ padding: '16px 28px', maxWidth: '1200px', width: '100%', margin: '0 auto' }}>
+        <div className="clients-body">
+          {authenticated && state.projects.length === 0 && (
+            <GettingStarted isAdmin={isAdmin} onCreateWorkspace={openManagement} />
+          )}
+
           {/* Search bar */}
-          <div style={{ marginBottom: '20px', display: 'flex', gap: '12px' }}>
+          {(!authenticated || state.companies.length > 0) && <div style={{ marginBottom: '20px', display: 'flex', gap: '12px' }}>
             <div className="search-input-wrapper" style={{ maxWidth: '400px', flex: 1 }}>
               <IconSearch size={16} className="search-input-icon" />
               <input
                 type="text"
                 className="text-input"
-                placeholder="Şirket adı veya koduna göre ara..."
+                placeholder={authenticated ? 'Müşteri adına göre ara' : 'Şirket adı veya koduna göre ara...'}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 data-testid="client-search-input"
               />
             </div>
-          </div>
+          </div>}
 
           {/* Companies Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '16px' }}>
+          <div className="company-grid">
             {filteredCompanies.map((comp) => {
               const compProjects = state.projects.filter((p) => p.companyId === comp.id);
               const compSources = state.sources.filter((s) => s.companyId === comp.id);
@@ -173,22 +179,10 @@ export const ClientDirectoryView: React.FC<ClientDirectoryViewProps> = ({ state 
                   data-testid={`company-card-${comp.id}`}
                 >
                   <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-                      <span
-                        style={{
-                          background: 'var(--brand-yellow-light)',
-                          color: '#78350f',
-                          padding: '3px 8px',
-                          borderRadius: '4px',
-                          fontSize: '0.75rem',
-                          fontWeight: 700,
-                          letterSpacing: '0.05em',
-                        }}
-                      >
-                        {comp.code}
-                      </span>
-                      <span style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>
-                        {compProjects.length} Proje · {compSources.length} Kaynak
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
+                      {comp.code ? <span className="company-code">{comp.code}</span> : <span />}
+                      <span className="company-meta">
+                        {authenticated ? `${compProjects.length} proje` : `${compProjects.length} Proje · ${compSources.length} Kaynak`}
                       </span>
                     </div>
 
@@ -196,14 +190,17 @@ export const ClientDirectoryView: React.FC<ClientDirectoryViewProps> = ({ state 
                       {comp.name}
                     </h3>
                     <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', margin: 0, minHeight: '40px' }}>
-                      {comp.description || 'Kayıtlı açıklama bulunmuyor.'}
+                      {authenticated
+                        ? (compProjects.map((project) => project.name).join(' · ') || 'Henüz proje yok')
+                        : (comp.description || 'Kayıtlı açıklama bulunmuyor.')}
                     </p>
                   </div>
 
                   <div style={{ marginTop: '16px', paddingTop: '14px', borderTop: '1px solid var(--border-light)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <span style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>
-                      {comp.contactEmail || 'İletişim tanımlı'}
+                      {authenticated ? 'Projeleri ve posta hesaplarını aç' : (comp.contactEmail || 'İletişim tanımlı')}
                     </span>
+                    {authenticated && <IconArrowRight size={14} color="var(--brand-orange)" />}
                     {!authenticated && <button
                       className="btn btn-outline-gray"
                       style={{ padding: '6px 12px', fontSize: '0.8125rem' }}
@@ -307,35 +304,35 @@ export const ClientDirectoryView: React.FC<ClientDirectoryViewProps> = ({ state 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }} data-testid="client-detail-view">
       {/* Subheader */}
-      <div className="page-subheader">
-        <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-            <button
-              className="btn-outline-gray"
-              style={{ padding: '3px 8px', fontSize: '0.8125rem', cursor: 'pointer', borderRadius: '4px' }}
-              onClick={() => state.setSelectedCompanyId(null)}
-              data-testid="back-to-directory-btn"
-            >
-              ← Şirketler
-            </button>
-            <span style={{ color: 'var(--text-light)' }}>/</span>
-            <span style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>{selectedCompany.name}</span>
-          </div>
-          <h1 className="page-title">{selectedCompany.name}</h1>
-          <p className="page-subtitle">{selectedCompany.description || 'Şirket ayrıntıları ve bağlı veri kaynakları'}</p>
-        </div>
-
-        <div style={{ display: 'flex', gap: '12px' }}>
+      <PageHeader
+        title={selectedCompany.name}
+        description={authenticated
+          ? 'Bu müşterinin projeleri ve projelere bağlı posta hesapları. Hesap eklemek için proje kartındaki düğmeyi kullanın.'
+          : (selectedCompany.description || 'Şirket ayrıntıları ve bağlı veri kaynakları')}
+        testId="client-detail-header"
+        breadcrumb={<>
+          <button
+            className="btn-outline-gray"
+            style={{ padding: '3px 8px', fontSize: '0.8125rem', cursor: 'pointer', borderRadius: '4px' }}
+            onClick={() => state.setSelectedCompanyId(null)}
+            data-testid="back-to-directory-btn"
+          >
+            ← Müşteriler
+          </button>
+          <span style={{ color: 'var(--text-light)' }}>/</span>
+          <span>{selectedCompany.name}</span>
+        </>}
+        actions={(!authenticated || isAdmin) ? (
           <button
             className="btn btn-outline-orange"
-            onClick={() => authenticated ? identityState?.setManagementOpen(true) : setAddProjectModalOpen(true)}
+            onClick={() => authenticated ? openManagement() : setAddProjectModalOpen(true)}
             data-testid="add-project-btn"
           >
             <IconPlus size={16} />
-            <span>{authenticated ? 'Çalışma alanlarını yönet' : 'Yeni proje ekle'}</span>
+            <span>{authenticated ? 'Proje ekle' : 'Yeni proje ekle'}</span>
           </button>
-        </div>
-      </div>
+        ) : undefined}
+      />
 
       <div style={{ padding: '20px 28px', maxWidth: '1280px', width: '100%', margin: '0 auto', overflowY: 'auto' }}>
         {/* Projects Section */}
@@ -347,9 +344,9 @@ export const ClientDirectoryView: React.FC<ClientDirectoryViewProps> = ({ state 
               <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', marginBottom: '16px' }}>
                 Bu şirkete ait posta kutularını ve dosya arşivlerini gruplamak için bir proje oluşturun.
               </p>
-              {!authenticated && <button
+              {(!authenticated || isAdmin) && <button
                 className="btn btn-orange"
-                onClick={() => setAddProjectModalOpen(true)}
+                onClick={() => authenticated ? openManagement() : setAddProjectModalOpen(true)}
               >
                 Proje oluştur
               </button>}
@@ -369,9 +366,9 @@ export const ClientDirectoryView: React.FC<ClientDirectoryViewProps> = ({ state 
                         </h2>
                         {!authenticated && <Badge variant="neutral">{projectSources.length} Kaynak</Badge>}
                       </div>
-                      <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', margin: '4px 0 0 0' }}>
+                      {!authenticated && <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', margin: '4px 0 0 0' }}>
                         {project.description || 'Tanımlı proje açıklaması'}
-                      </p>
+                      </p>}
                     </div>
 
                     {!authenticated && <button

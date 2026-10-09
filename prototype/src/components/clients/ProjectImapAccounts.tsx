@@ -421,9 +421,9 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
         return (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }} data-testid="m365-status-awaiting-signin">
             <div style={{ background: '#eff6ff', border: '1px solid #bfdbfe', borderRadius: '6px', padding: '12px 14px', fontSize: '0.8125rem', color: '#1e40af' }}>
-              <div style={{ fontWeight: 700, marginBottom: '4px' }}>⚠️ Tarayıcı Bu Bilgisayarda Açılmalıdır</div>
+              <div style={{ fontWeight: 700, marginBottom: '4px' }}>⚠️ Tarayıcı bu bilgisayarda açılmalıdır</div>
               <p style={{ margin: 0 }} data-testid="m365-desktop-browser-guidance">
-                <strong>Giriş bağlantısı bu bilgisayardaki tarayıcıda açılmalıdır.</strong> Telefon veya farklı bir cihazdaki tarayıcıda localhost dönüş akışı tamamlanamaz. Backend otomatik tarayıcı açmaz.
+                <strong>Giriş bağlantısı bu bilgisayardaki tarayıcıda açılmalıdır.</strong> Telefon veya farklı bir cihazdaki tarayıcıda giriş tamamlanamaz. BitigMail tarayıcıyı kendisi açmaz; bağlantıyı bu bilgisayarda açın.
               </p>
             </div>
 

@@ -31,7 +31,7 @@ export function LocalMimeWorkflow({ state }: { state: AppState }) {
   }
   return <section className="mime-workflow" data-testid="local-mime-workflow" aria-label="EML ve MBOX içe aktarma">
     <header className="mime-header">
-      <div><span className="mime-eyebrow">DOSYADAN POSTA ARŞİVİNE</span><h2>EML / MBOX → PST</h2>
+      <div><span className="mime-eyebrow">Dosyadan posta arşivine</span><h2>EML / MBOX → PST</h2>
         <p>İletilerini seç, kapsamı belirle ve yeni bir Outlook arşivi oluştur.</p></div>
       <div className="mime-service" data-testid="mime-service-status">
         <span className={`mime-dot ${engine.status === 'online' ? 'online' : ''}`} />
@@ -39,7 +39,6 @@ export function LocalMimeWorkflow({ state }: { state: AppState }) {
         {engine.status === 'offline' && <button className="btn btn-outline-gray" onClick={engine.connect}>Yeniden bağlan</button>}
       </div>
     </header>
-    <div className="mime-context"><span>Müşteri <strong data-testid="mime-draft-company">{context.companyName}</strong></span><span>Proje <strong>{context.projectName}</strong></span></div>
     <div className="mime-notice" data-testid="mime-trial-notice"><strong>Deneme sürümü</strong><span>Çıktıların konu ve gövdelerinde değerlendirme işaretleri bulunur. Kaynakta klasör başına 50 ileti sınırı uygulanır.</span></div>
     {engine.error && <div className="mime-error" role="alert">{engine.error}</div>}
 

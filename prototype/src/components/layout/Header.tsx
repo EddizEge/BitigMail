@@ -4,6 +4,15 @@ import { BitigMark } from '../ui/BitigMark';
 import { IconSettings } from '../ui/Icons';
 import { useIdentity } from '../auth/IdentityGate';
 
+// İş akışı sırası: müşteriyi/projeyi kur → işi başlat → izle → arşivde ara → raporu al.
+const NAV_ITEMS: { tab: NavigationTab; label: string; hint: string }[] = [
+  { tab: 'clients', label: 'Müşteriler', hint: 'Şirketler, projeler ve posta hesapları' },
+  { tab: 'transfers', label: 'Aktarım ve dönüşüm', hint: 'Yeni aktarım, dönüşüm, bölme veya kurtarma işi başlatın' },
+  { tab: 'jobs', label: 'İş merkezi', hint: 'Çalışan ve biten işleri izleyin' },
+  { tab: 'search', label: 'Arşiv ve arama', hint: 'Arşivlerde birlikte arama yapın' },
+  { tab: 'reports', label: 'Raporlar', hint: 'Tamamlanan işlerin raporlarını indirin' },
+];
+
 interface HeaderProps {
   currentTab: NavigationTab;
   onTabChange: (tab: NavigationTab) => void;
@@ -24,47 +33,19 @@ export const Header: React.FC<HeaderProps> = ({
         <span className="brand-name">BitigMail</span>
       </div>
 
-      <nav className="nav-tabs" role="navigation" aria-label="Ana Navigasyon">
-        <button
-          className={`nav-tab-btn ${currentTab === 'jobs' ? 'active' : ''}`}
-          onClick={() => onTabChange('jobs')}
-          data-testid="nav-tab-jobs"
-          aria-current={currentTab === 'jobs' ? 'page' : undefined}
-        >
-          İş merkezi
-        </button>
-        <button
-          className={`nav-tab-btn ${currentTab === 'clients' ? 'active' : ''}`}
-          onClick={() => onTabChange('clients')}
-          data-testid="nav-tab-clients"
-          aria-current={currentTab === 'clients' ? 'page' : undefined}
-        >
-          Müşteriler
-        </button>
-        <button
-          className={`nav-tab-btn ${currentTab === 'transfers' ? 'active' : ''}`}
-          onClick={() => onTabChange('transfers')}
-          data-testid="nav-tab-transfers"
-          aria-current={currentTab === 'transfers' ? 'page' : undefined}
-        >
-          Aktarım ve dönüşüm
-        </button>
-        <button
-          className={`nav-tab-btn ${currentTab === 'search' ? 'active' : ''}`}
-          onClick={() => onTabChange('search')}
-          data-testid="nav-tab-search"
-          aria-current={currentTab === 'search' ? 'page' : undefined}
-        >
-          Arşiv ve arama
-        </button>
-        <button
-          className={`nav-tab-btn ${currentTab === 'reports' ? 'active' : ''}`}
-          onClick={() => onTabChange('reports')}
-          data-testid="nav-tab-reports"
-          aria-current={currentTab === 'reports' ? 'page' : undefined}
-        >
-          Raporlar
-        </button>
+      <nav className="nav-tabs" role="navigation" aria-label="Ana menü">
+        {NAV_ITEMS.map((item) => (
+          <button
+            key={item.tab}
+            className={`nav-tab-btn ${currentTab === item.tab ? 'active' : ''}`}
+            onClick={() => onTabChange(item.tab)}
+            data-testid={`nav-tab-${item.tab}`}
+            aria-current={currentTab === item.tab ? 'page' : undefined}
+            title={item.hint}
+          >
+            {item.label}
+          </button>
+        ))}
       </nav>
 
       <div className="header-right">
@@ -72,7 +53,7 @@ export const Header: React.FC<HeaderProps> = ({
           className="settings-btn"
           onClick={onOpenSettings}
           data-testid="header-settings-btn"
-          aria-label="Sistem Ayarları ve Demo Tercihleri"
+          aria-label="Ayarlar"
         >
           <IconSettings size={17} />
           <span>Ayarlar</span>

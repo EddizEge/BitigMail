@@ -15,6 +15,7 @@ import {
   LocalJobRecord,
 } from '../types/localEngine';
 import { AppState } from '../state/useAppState';
+import { IdentityContext } from '../components/auth/IdentityGate';
 
 describe('TASK-018 Local Archive and Search Frontend Tests', () => {
   let mockClient: LocalEngineClient;
@@ -1259,5 +1260,24 @@ describe('TASK-018 Local Archive and Search Frontend Tests', () => {
     fireEvent.click(toggleBtn);
     expect(toggleBtn.getAttribute('aria-expanded')).toBe('true');
     expect(locationPanel.classList.contains('mobile-hidden')).toBe(false);
+  });
+  // TASK-044: oturum açılmış uygulamada örnek veri anahtarı yok, güvenlik araçları açılır bölümde
+  it('hides the demo data switch for an authenticated identity and keeps governance tools collapsible', async () => {
+    const state = createMockAppState({ companies: [], projects: [] });
+    mockClient.getCurrentIdentity = vi.fn().mockResolvedValue({ userId: 'u', role: 'Admin', companies: [] }) as any;
+    const { unmount } = render(
+      <IdentityContext.Provider value={{ identity: { userId: 'u', role: 'Admin', companies: [] }, developmentMode: false, setManagementOpen: vi.fn(), logout: vi.fn() }}>
+        <ArchiveSearchView state={state} client={mockClient} />
+      </IdentityContext.Provider>
+    );
+    await waitFor(() => expect(mockClient.getArchiveCatalog).toHaveBeenCalled());
+    expect(screen.queryByTestId('archive-mode-demo-btn')).toBeNull();
+    expect(screen.queryByTestId('archive-mode-real-btn')).toBeNull();
+    expect(screen.getByTestId('search-page-header-description').textContent).toContain('birlikte arayın');
+    expect(screen.getByTestId('archive-governance-panel').tagName).toBe('DETAILS');
+    unmount();
+
+    render(<ArchiveSearchView state={state} client={mockClient} />);
+    expect(screen.getByTestId('archive-mode-demo-btn')).toBeDefined();
   });
 });

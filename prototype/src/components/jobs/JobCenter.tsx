@@ -18,6 +18,7 @@ import {
 } from '../ui/Icons';
 import { Badge } from '../ui/Badge';
 import { NewJobModal } from './NewJobModal';
+import { PageHeader } from '../layout/PageHeader';
 
 interface JobCenterProps {
   jobs: Job[];
@@ -26,6 +27,10 @@ interface JobCenterProps {
   onAddNewJob: (newJob: Job) => void;
   client?: LocalEngineClient;
   onAddToArchive?: (job: Job) => void;
+  /** Oturum açılmış gerçek uygulama: örnek işler ve taslak pencereleri gösterilmez. */
+  productionMode?: boolean;
+  /** "Yeni iş" menüsü gerçek uygulamada ilgili Aktarım ve dönüşüm işlemini açar. */
+  onStartNewJob?: (type: JobType) => void;
 }
 
 export const JobCenter: React.FC<JobCenterProps> = ({
@@ -35,6 +40,8 @@ export const JobCenter: React.FC<JobCenterProps> = ({
   onAddNewJob,
   client = localEngineClient,
   onAddToArchive,
+  productionMode = false,
+  onStartNewJob,
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState<'all' | 'running' | 'queued' | 'attention' | 'completed'>('all');
@@ -161,8 +168,18 @@ export const JobCenter: React.FC<JobCenterProps> = ({
       if (statusFilter === 'completed') return job.status === 'completed';
       return true;
     });
-    return [...realLocalJobs, ...filteredDemoJobs];
-  }, [realLocalJobs, jobs, searchQuery, statusFilter]);
+    return productionMode ? realLocalJobs : [...realLocalJobs, ...filteredDemoJobs];
+  }, [realLocalJobs, jobs, searchQuery, statusFilter, productionMode]);
+
+  const startNewJob = (type: JobType) => {
+    setMenuOpen(false);
+    if (onStartNewJob) {
+      onStartNewJob(type);
+      return;
+    }
+    if (type === 'migration') onNavigateToWorkspace();
+    else setDraftModalType(type);
+  };
 
   const selectedJob = useMemo(() => {
     return filteredJobs.find((j) => j.id === selectedJobId) || filteredJobs[0];
@@ -238,16 +255,13 @@ export const JobCenter: React.FC<JobCenterProps> = ({
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }} data-testid="job-center-view">
-      {/* Sub-header */}
-      <div className="page-subheader">
-        <div>
-          <h1 className="page-title">İş merkezi</h1>
-          <p className="page-subtitle">
-            {realLocalJobs.length > 0 ? 'Yerel motor işleri ve kuyruk' : 'Örnek veriler · Tasarım taslağı'}
-          </p>
-        </div>
-
-        {/* Yeni İş Dropdown */}
+      <PageHeader
+        title="İş merkezi"
+        description={productionMode || realLocalJobs.length > 0
+          ? 'Başlatılan aktarım, dönüşüm, bölme ve kurtarma işlerini buradan izleyin; kesilen işleri devam ettirin.'
+          : 'Örnek veriler · Tasarım taslağı'}
+        testId="jobs-page-header"
+        actions={
         <div style={{ position: 'relative' }}>
           <button
             className="btn btn-primary-orange"
@@ -290,14 +304,11 @@ export const JobCenter: React.FC<JobCenterProps> = ({
                   fontSize: '0.875rem',
                   color: 'var(--text-main)',
                 }}
-                onClick={() => {
-                  setMenuOpen(false);
-                  onNavigateToWorkspace();
-                }}
+                onClick={() => startNewJob('migration')}
                 data-testid="new-job-mail-migration"
               >
                 <IconMail size={16} color="var(--brand-orange)" />
-                <span>Posta taşı</span>
+                <span>Posta aktar</span>
               </button>
 
               <button
@@ -315,10 +326,7 @@ export const JobCenter: React.FC<JobCenterProps> = ({
                   color: 'var(--text-main)',
                   borderTop: '1px solid var(--border-light)',
                 }}
-                onClick={() => {
-                  setMenuOpen(false);
-                  setDraftModalType('convert');
-                }}
+                onClick={() => startNewJob('convert')}
                 data-testid="new-job-convert"
               >
                 <IconFile size={16} color="#64748b" />
@@ -340,14 +348,11 @@ export const JobCenter: React.FC<JobCenterProps> = ({
                   color: 'var(--text-main)',
                   borderTop: '1px solid var(--border-light)',
                 }}
-                onClick={() => {
-                  setMenuOpen(false);
-                  setDraftModalType('archive');
-                }}
+                onClick={() => startNewJob('archive')}
                 data-testid="new-job-archive"
               >
                 <IconArchiveBox size={16} color="#64748b" />
-                <span>Arşivle ve böl</span>
+                <span>PST böl</span>
               </button>
 
               <button
@@ -365,19 +370,17 @@ export const JobCenter: React.FC<JobCenterProps> = ({
                   color: 'var(--text-main)',
                   borderTop: '1px solid var(--border-light)',
                 }}
-                onClick={() => {
-                  setMenuOpen(false);
-                  setDraftModalType('recovery');
-                }}
+                onClick={() => startNewJob('recovery')}
                 data-testid="new-job-recovery"
               >
                 <IconRefreshCw size={16} color="#64748b" />
-                <span>Dosyadan kurtar</span>
+                <span>Veri kurtar</span>
               </button>
             </div>
           )}
         </div>
-      </div>
+        }
+      />
 
       {/* Main 2-column Job Center Layout */}
       <div className="job-center-grid">
@@ -437,8 +440,23 @@ export const JobCenter: React.FC<JobCenterProps> = ({
             </div>
           </div>
 
+          {productionMode && filteredJobs.length === 0 && (
+            <div className="empty-state-card" data-testid="jobs-empty-state">
+              <h2>{statusFilter === 'all' && !searchQuery ? 'Henüz iş yok' : 'Bu filtreye uyan iş yok'}</h2>
+              <div className="empty-state-copy">
+                {statusFilter === 'all' && !searchQuery
+                  ? 'Aktarım ve dönüşüm ekranından bir iş başlattığınızda burada ilerlemesini görürsünüz.'
+                  : 'Arama metnini veya durum filtresini değiştirin.'}
+              </div>
+              {statusFilter === 'all' && !searchQuery && (
+                <div className="empty-state-action">
+                  <button className="btn btn-primary-orange" onClick={() => startNewJob('migration')} data-testid="jobs-empty-start-btn">Yeni iş başlat</button>
+                </div>
+              )}
+            </div>
+          )}
           {/* Jobs List Table */}
-          <div className="table-container">
+          <div className="table-container" style={productionMode && filteredJobs.length === 0 ? { display: 'none' } : undefined}>
             <table className="data-table" data-testid="jobs-table">
               <thead>
                 <tr>
@@ -463,7 +481,7 @@ export const JobCenter: React.FC<JobCenterProps> = ({
                           <div>
                             <div style={{ fontWeight: 600, color: 'var(--text-main)', display: 'flex', alignItems: 'center', gap: '6px' }}>
                               <span>{job.title}</span>
-                              {job.isLocalEngine && (
+                              {job.isLocalEngine && !productionMode && (
                                 <span style={{ fontSize: '0.6875rem', padding: '1px 6px', borderRadius: '4px', background: '#ecfdf5', color: '#065f46', fontWeight: 600 }}>
                                   Yerel Motor
                                 </span>
@@ -770,7 +788,7 @@ export const JobCenter: React.FC<JobCenterProps> = ({
 
       <NewJobModal
         type={draftModalType}
-        isOpen={draftModalType !== null}
+        isOpen={!productionMode && draftModalType !== null}
         onClose={() => setDraftModalType(null)}
         onSaveDraftJob={onAddNewJob}
       />

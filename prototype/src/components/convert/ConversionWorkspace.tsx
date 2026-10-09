@@ -5,9 +5,12 @@ import { LocalConvertWorkflow } from './LocalConvertWorkflow';
 import { LocalMimeWorkflow } from './LocalMimeWorkflow';
 import { EmlxNormalizationWorkflow } from './EmlxNormalizationWorkflow';
 import { OutlookEmlWorkflow } from './OutlookEmlWorkflow';
+import { ChoiceSelector } from '../layout/PageHeader';
+
+type ConversionKind = 'ost' | 'mime' | 'emlx' | 'outlook-eml';
 
 export function ConversionWorkspace({ state }: { state: AppState }) {
-  const [kind, setKind] = useState<'ost' | 'mime' | 'emlx' | 'outlook-eml'>(() => {
+  const [kind, setKind] = useState<ConversionKind>(() => {
     try { const saved = localStorage.getItem('bitigmail-convert-input'); return saved === 'mime' || saved === 'emlx' || saved === 'outlook-eml' ? saved : 'ost'; } catch { return 'ost'; }
   });
   const [resolvedJob, setResolvedJob] = useState<string | null>(null);
@@ -28,10 +31,19 @@ export function ConversionWorkspace({ state }: { state: AppState }) {
   useEffect(() => { try { localStorage.setItem('bitigmail-convert-input', kind); } catch { /* optional preference */ } }, [kind]);
   const pending = !!state.selectedLocalJobId && resolvedJob !== state.selectedLocalJobId;
   return <div style={{ display: 'flex', flexDirection: 'column', minHeight: 0, minWidth: 0, flex: 1, overflow: 'hidden' }}>
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, padding: '12px 16px 0' }} aria-label="Dönüşüm kaynağı">
-      {(['ost', 'mime', 'emlx', 'outlook-eml'] as const).map(value => <button key={value} className={`btn ${kind === value ? 'btn-primary-orange' : 'btn-outline-gray'}`} aria-pressed={kind === value} data-testid={`convert-input-${value}`} onClick={() => {
-        state.setSelectedLocalJobId(null); setResolvedJob(null); setError(''); setKind(value);
-      }}>{value === 'ost' ? 'OST → PST' : value === 'mime' ? 'EML / MBOX → PST' : value === 'emlx' ? 'Apple Mail EMLX → EML' : 'PST / OST / OLM → EML'}</button>)}
+    <div className="conversion-kind-step">
+      <ChoiceSelector<ConversionKind>
+        label="2. Dönüşüm türünü seçin"
+        value={kind}
+        testId="convert-kind-selector"
+        onChange={(value) => { state.setSelectedLocalJobId(null); setResolvedJob(null); setError(''); setKind(value); }}
+        options={[
+          { value: 'ost', label: 'OST → PST', hint: 'Outlook önbelleğinden yeni PST', testId: 'convert-input-ost' },
+          { value: 'mime', label: 'EML / MBOX → PST', hint: "Posta dosyalarını PST'ye toplayın", testId: 'convert-input-mime' },
+          { value: 'outlook-eml', label: 'PST / OST / OLM → EML', hint: "Outlook dosyalarını EML'e açın", testId: 'convert-input-outlook-eml' },
+          { value: 'emlx', label: 'Apple Mail EMLX → EML', hint: "Mac postalarını EML'e çevirin", testId: 'convert-input-emlx' },
+        ]}
+      />
     </div>
     {pending ? <p role={error ? 'alert' : 'status'} style={{ padding: 16 }}>{error || 'İş kaydı açılıyor…'}</p>
       : kind === 'mime' ? <LocalMimeWorkflow state={state} /> : kind === 'emlx' ? <EmlxNormalizationWorkflow state={state} /> : kind === 'outlook-eml' ? <OutlookEmlWorkflow state={state} /> : <LocalConvertWorkflow state={state} />}

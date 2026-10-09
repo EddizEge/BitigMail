@@ -242,7 +242,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
             <IconServer size={22} color="var(--brand-orange)" />
             <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: 0, color: 'var(--text-main)' }}>
-              Dosya ↔ Posta Hesabı Köprüsü
+              Dosya ve posta hesabı arasında aktarım
             </h2>
             <Badge variant="info">Gerçek Mod</Badge>
           </div>
@@ -261,7 +261,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
             data-testid="refresh-bridge-accounts-btn"
           >
             <IconRefreshCw size={14} className={loadingAccounts ? 'animate-spin' : ''} />
-            <span>Hesapları Yenile</span>
+            <span>Hesapları yenile</span>
           </button>
           {onNavigateToAccounts && (
             <button
@@ -270,7 +270,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
               onClick={onNavigateToAccounts}
               data-testid="bridge-manage-accounts-btn"
             >
-              <span>Hesapları Yönet</span>
+              <span>Hesapları yönet</span>
             </button>
           )}
         </div>
@@ -297,7 +297,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
         data-testid="bridge-direction-selector"
       >
         <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)', letterSpacing: '0.5px' }}>
-          AKTARIM YÖNÜ SEÇİMİ:
+          Aktarım yönü
         </span>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
           <button
@@ -337,7 +337,11 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
         </div>
       </div></>}
 
-      {embedded && <div className="bridge-embedded-actions"><span><strong>{effectiveCompanyName}</strong> · {effectiveProjectName}</span><div><button className="btn btn-outline-gray" onClick={loadAccounts} disabled={loadingAccounts} data-testid="refresh-bridge-accounts-btn"><IconRefreshCw size={14}/><span>Hesapları yenile</span></button>{onNavigateToAccounts && <button className="btn btn-outline-orange" onClick={onNavigateToAccounts} data-testid="bridge-manage-accounts-btn">Hesapları yönet</button>}</div></div>}
+      {embedded && accountsError && (
+        <div className="notice notice-warning" role="alert"><strong>Hesaplar yüklenemedi</strong><p>{accountsError}</p></div>
+      )}
+
+      {embedded && <div className="bridge-embedded-actions workflow-actions-bar">{(effectiveCompanyName !== companyName || effectiveProjectName !== projectName) && <span>{`Açık iş kaydının projesi: ${effectiveCompanyName} / ${effectiveProjectName}`}</span>}<div><button className="btn btn-outline-gray" onClick={loadAccounts} disabled={loadingAccounts} data-testid="refresh-bridge-accounts-btn"><IconRefreshCw size={14}/><span>Hesapları yenile</span></button>{onNavigateToAccounts && <button className="btn btn-outline-orange" onClick={onNavigateToAccounts} data-testid="bridge-manage-accounts-btn">Hesapları yönet</button>}</div></div>}
 
       {/* Safety & User Copy Notices */}
       <div
@@ -356,12 +360,12 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
         data-testid="bridge-safety-notices"
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span style={{ color: '#a64f0c', fontWeight: 700 }}>Kaynak Bütünlüğü:</span>
+          <span style={{ color: '#a64f0c', fontWeight: 700 }}>Kaynak korunur:</span>
           <span>
-            Kaynak posta ve dosyalar salt okunur olarak taranır. Kaynak üzerindeki iletiler hiçbir şekilde silinmez veya değiştirilmez.
+            Kaynak posta ve dosyalar yalnız okunur; kaynaktaki iletiler silinmez veya değiştirilmez.
           </span>
         </div>
-        <details><summary>Format ve doğrulama ayrıntıları</summary><p><strong>Standart Format Sınırları:</strong> EML ve MBOX biçimleri bazı IMAP üstverilerini gövdede taşımaz. Dışa aktarımda bu bilgiler doğrulama manifestine kaydedilir. <strong>Mboxrd Kuralı:</strong> MBOX işlemlerinde standart mboxrd kullanılır.</p></details>
+        <details><summary>Teknik ayrıntılar: biçim ve doğrulama</summary><p><strong>Standart biçim sınırları:</strong> EML ve MBOX biçimleri bazı IMAP üstverilerini gövdede taşımaz. Dışa aktarımda bu bilgiler doğrulama manifestine kaydedilir. <strong>Mboxrd kuralı:</strong> MBOX işlemlerinde standart mboxrd kullanılır.</p></details>
       </div>
 
       {/* Direction Form 1: File -> IMAP */}
@@ -380,13 +384,13 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           data-testid="bridge-import-form"
         >
           <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, color: 'var(--text-main)' }}>
-            1. Kaynak Dosya / Arşiv ve Hedef Hesap Seçimi
+            1. Kaynak dosya ve hedef hesap
           </h3>
 
           {/* Source Mode Pickers */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
-              KAYNAK TÜRÜ VE DOSYA SEÇİMİ:
+              Kaynak türü ve dosya
             </span>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
               <button
@@ -397,7 +401,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                 disabled={pickingSource}
                 data-testid="pick-eml-files-btn"
               >
-                <span>EML Dosyaları Seç...</span>
+                <span>EML dosyaları seç</span>
               </button>
               <button
                 type="button"
@@ -407,7 +411,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                 disabled={pickingSource}
                 data-testid="pick-eml-tree-btn"
               >
-                <span>EML Klasör Ağacı Seç...</span>
+                <span>EML klasör ağacı seç</span>
               </button>
               <button
                 type="button"
@@ -417,7 +421,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                 disabled={pickingSource}
                 data-testid="pick-mbox-btn"
               >
-                <span>Mboxrd Arşivi (.mbox) Seç...</span>
+                <span>MBOX dosyası (.mbox) seç</span>
               </button>
             </div>
 
@@ -438,9 +442,9 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
               >
                 <IconCheck size={16} color="#166534" />
                 <span>
-                  <strong>Seçili Kaynak:</strong> {sourceDisplayPath}{sourceTotalSize > 0 ? ` · ${(sourceTotalSize / (1024 * 1024)).toFixed(2)} MB` : ''}
+                  <strong>Seçili kaynak:</strong> {sourceDisplayPath}{sourceTotalSize > 0 ? ` · ${(sourceTotalSize / (1024 * 1024)).toFixed(2)} MB` : ''}
                   <details style={{ display: 'inline-block', marginLeft: '6px', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                    <summary style={{ cursor: 'pointer', display: 'inline' }}>Teknik Ayrıntı</summary>
+                    <summary style={{ cursor: 'pointer', display: 'inline' }}>Teknik ayrıntılar</summary>
                     <span> (Tanıtıcı: {sourceHandle})</span>
                   </details>
                 </span>
@@ -462,7 +466,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           {/* Target Account Dropdown with Corporate/Personal labels */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
             <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
-              HEDEF IMAP HESABI:
+              Hedef posta hesabı
             </span>
             <select
               className="select-input"
@@ -471,7 +475,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
               onChange={(e) => setTargetAccountId(e.target.value)}
               data-testid="bridge-target-account-select"
             >
-              <option value="">-- Hedef IMAP Hesabı Seçin --</option>
+              <option value="">Hedef posta hesabını seçin</option>
               {accounts.map((acc) => {
                 const badge = getAccountBadgeText(acc);
                 return (
@@ -498,7 +502,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                     onClick={selectAllSourceFolders}
                     data-testid="select-all-source-folders-btn"
                   >
-                    Tümünü Seç
+                    Tümünü seç
                   </button>
                   <button
                     type="button"
@@ -554,7 +558,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
 
                       {isChecked && (
                         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Hedef Klasör:</span>
+                          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Hedef klasör:</span>
                           <input
                             type="text"
                             className="text-input"
@@ -576,7 +580,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           {/* Date Filter */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
             <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
-              TARİH FİLTRESİ (UTC+03 Kapsayıcı Günler, İsteğe Bağlı):
+              Tarih filtresi (isteğe bağlı, seçilen günler dahil)
             </span>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
@@ -617,7 +621,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
               data-testid="create-bridge-import-preview-btn"
             >
               <IconPlay size={16} />
-              <span>{previewLoading ? 'Önizleme Alınıyor...' : 'Önizleme ve Doğrulama Oluştur'}</span>
+              <span>{previewLoading ? 'Önizleme Alınıyor...' : 'Önizleme ve doğrulama oluştur'}</span>
             </button>
             {previewError && (
               <p role="alert" style={{ color: 'var(--status-error)', fontSize: '0.8125rem', marginTop: '6px' }}>
@@ -644,13 +648,13 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           data-testid="bridge-export-form"
         >
           <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, color: 'var(--text-main)' }}>
-            1. Kaynak Hesap, Klasörler ve Çıktı Biçimi Seçimi
+            1. Kaynak hesap, klasörler ve çıktı biçimi
           </h3>
 
           {/* Source Account Dropdown */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
             <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
-              KAYNAK IMAP HESABI:
+              Kaynak posta hesabı
             </span>
             <select
               className="select-input"
@@ -659,7 +663,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
               onChange={(e) => setSourceAccountId(e.target.value)}
               data-testid="bridge-source-account-select"
             >
-              <option value="">-- Kaynak IMAP Hesabı Seçin --</option>
+              <option value="">Kaynak posta hesabını seçin</option>
               {accounts.map((acc) => {
                 const badge = getAccountBadgeText(acc);
                 return (
@@ -696,7 +700,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                     onClick={selectAllImapFolders}
                     data-testid="select-all-imap-folders-btn"
                   >
-                    Tümünü Seç
+                    Tümünü seç
                   </button>
                   <button
                     type="button"
@@ -756,7 +760,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           {/* Target Output Parent Directory Picker */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
             <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
-              HEDEF ÇIKTI ÜST KLASÖRÜ:
+              Çıktının yazılacağı üst klasör
             </span>
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
               <button
@@ -768,7 +772,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                 data-testid="pick-output-dir-btn"
               >
                 <IconFolder size={14} />
-                <span>Hedef Üst Klasör Seç...</span>
+                <span>Üst klasör seç</span>
               </button>
               {targetDirHandle && (
                 <div
@@ -791,7 +795,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           {/* Target Output Format */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
             <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
-              ÇIKTI ARŞİV BİÇİMİ:
+              Çıktı biçimi
             </span>
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
               <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
@@ -803,7 +807,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                   onChange={() => setTargetFormat('eml-tree')}
                   data-testid="format-eml-tree-radio"
                 />
-                <span style={{ fontSize: '0.875rem' }}>EML Klasör Ağacı (Her ileti .eml)</span>
+                <span style={{ fontSize: '0.875rem' }}>EML klasör ağacı (her ileti ayrı .eml)</span>
               </label>
 
               <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
@@ -815,7 +819,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                   onChange={() => setTargetFormat('mboxrd')}
                   data-testid="format-mboxrd-radio"
                 />
-                <span style={{ fontSize: '0.875rem' }}>Klasör Başına Mboxrd Arşivi (.mbox)</span>
+                <span style={{ fontSize: '0.875rem' }}>Klasör başına bir MBOX dosyası (.mbox)</span>
               </label>
             </div>
           </div>
@@ -823,7 +827,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           {/* Date Filter */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
             <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
-              TARİH FİLTRESİ (UTC+03 Kapsayıcı Günler, İsteğe Bağlı):
+              Tarih filtresi (isteğe bağlı, seçilen günler dahil)
             </span>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
@@ -864,7 +868,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
               data-testid="create-bridge-export-preview-btn"
             >
               <IconPlay size={16} />
-              <span>{previewLoading ? 'Önizleme Alınıyor...' : 'Önizleme ve Doğrulama Oluştur'}</span>
+              <span>{previewLoading ? 'Önizleme Alınıyor...' : 'Önizleme ve doğrulama oluştur'}</span>
             </button>
             {previewError && (
               <p role="alert" style={{ color: 'var(--status-error)', fontSize: '0.8125rem', marginTop: '6px' }}>
@@ -893,14 +897,14 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ fontWeight: 700, fontSize: '1rem', color: 'var(--text-main)' }}>
-                Doğrulanmış Değişmez Önizleme Planı
+                Doğrulanmış önizleme planı
               </span>
               <Badge variant={preview.canTransfer ? 'success' : 'error'}>
-                {preview.canTransfer ? 'Aktarıma Hazır' : 'Ön Kontrol Engeli Var'}
+                {preview.canTransfer ? 'Aktarıma hazır' : 'Ön Kontrol Engeli Var'}
               </Badge>
             </div>
             <details style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-              <summary style={{ cursor: 'pointer', display: 'inline' }}>Plan Ayrıntısı</summary>
+              <summary style={{ cursor: 'pointer', display: 'inline' }}>Plan ayrıntısı</summary>
               <span> Plan No: {preview.previewId}</span>
             </details>
           </div>
@@ -914,7 +918,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
             }}
           >
             <div style={{ background: '#ffffff', padding: '10px 14px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
-              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Toplam Kaynak</span>
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Toplam kaynak</span>
               <div style={{ fontSize: '1.25rem', fontWeight: 700 }} data-testid="preview-total-items">
                 {preview.totalSourceItems}
               </div>
@@ -922,7 +926,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
 
             {'estimatedRequiredBytes' in preview && preview.estimatedRequiredBytes != null && (
               <div style={{ background: '#ffffff', padding: '10px 14px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Tahmini Gereken Alan</span>
+                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Tahmini gereken alan</span>
                 <div style={{ fontSize: '1rem', fontWeight: 700 }} data-testid="preview-estimated-required-bytes">
                   {formatCapacity(preview.estimatedRequiredBytes)}
                 </div>
@@ -931,7 +935,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
 
             {'availableFreeBytes' in preview && preview.availableFreeBytes != null && (
               <div style={{ background: '#ffffff', padding: '10px 14px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Kullanılabilir Alan</span>
+                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Kullanılabilir alan</span>
                 <div style={{ fontSize: '1rem', fontWeight: 700 }} data-testid="preview-available-free-bytes">
                   {formatCapacity(preview.availableFreeBytes)}
                 </div>
@@ -946,7 +950,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
             </div>
 
             <div style={{ background: '#ffffff', padding: '10px 14px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
-              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Filtre Dışı</span>
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Filtre dışı</span>
               <div style={{ fontSize: '1.25rem', fontWeight: 700 }} data-testid="preview-excluded-items">
                 {preview.excludedCount}
               </div>
@@ -973,7 +977,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           {preview.folders && preview.folders.length > 0 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
               <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
-                KLASÖR DÖKÜMÜ:
+                Klasör dökümü
               </span>
               <div style={{ border: '1px solid var(--border-light)', borderRadius: '6px', background: '#ffffff', overflow: 'hidden' }}>
                 {preview.folders.map((f, idx) => (
@@ -1013,7 +1017,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
               role="alert"
               data-testid="preview-blocker-alert"
             >
-              <strong>Ön Kontrol Engeli:</strong> {preview.blockerReason || 'Aktarım başlatılamaz.'}
+              <strong>Ön kontrol engeli:</strong> {preview.blockerReason || 'Aktarım başlatılamaz.'}
             </div>
           )}
 
@@ -1071,7 +1075,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                 {currentJob.status === 'completed'
                   ? 'Tamamlandı'
                   : currentJob.status === 'failed' || currentJob.status === 'interrupted'
-                  ? 'Müdahale Bekliyor'
+                  ? 'Müdahale bekliyor'
                   : 'Çalışıyor'}
               </Badge>
             </div>
@@ -1156,7 +1160,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                 data-testid="bridge-download-report-btn"
               >
                 <IconDownload size={14} />
-                <span>Köprü Aktarım Raporunu İndir (.json)</span>
+                <span>Aktarım raporunu indir (JSON)</span>
               </button>
               {currentJob.jobKind === 'bridge-export' && onAddToArchive && (
                 <button

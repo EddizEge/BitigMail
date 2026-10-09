@@ -642,7 +642,7 @@ describe('Split Workflow Business Rules, Invalidation & Idempotency', () => {
     let selectedOutputDir: any = { handle: 'outdir_old', fileName: 'OldDir' };
     let userChosenSource = false;
 
-    // Simulate user clicking 'Farklı Dosya Seç' and selecting a new source file
+    // Simulate user clicking 'Farklı dosya seç' and selecting a new source file
     const onNewSourceSelected = (newSource: { handle: string; fileName: string; sizeBytes: number }) => {
       userChosenSource = true;
       selectedSource = newSource;

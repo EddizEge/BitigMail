@@ -27,6 +27,8 @@ import { Badge } from '../ui/Badge';
 import { MessagePreview, MessageLocationContext } from '../workspace/MessagePreview';
 import { AddArchiveModal } from '../archive/AddArchiveModal';
 import { AdvancedFilterBuilder } from '../filters/AdvancedFilterBuilder';
+import { PageHeader } from '../layout/PageHeader';
+import { useIdentity } from '../auth/IdentityGate';
 
 interface ArchiveSearchViewProps {
   state: AppState;
@@ -38,7 +40,11 @@ export const ArchiveSearchView: React.FC<ArchiveSearchViewProps> = ({
   client = localEngineClient,
 }) => {
   // Mode toggle: Real Local Archive (default) vs Sample Demo Data
-  const [mode, setMode] = useState<'real' | 'demo'>('real');
+  const identityState = useIdentity();
+  // Oturum açılmış uygulamada yalnız gerçek arşiv; örnek veri yalnız kimliksiz geliştirme görünümünde.
+  const productionMode = Boolean(identityState?.identity);
+  const [modeState, setMode] = useState<'real' | 'demo'>('real');
+  const mode = productionMode ? 'real' : modeState;
 
   // Real Mode Catalog State
   const [catalog, setCatalog] = useState<ArchiveCatalogItemDto[]>([]);
@@ -661,39 +667,36 @@ export const ArchiveSearchView: React.FC<ArchiveSearchViewProps> = ({
       style={{ display: 'flex', flexDirection: 'column', flex: 1, height: '100%', minWidth: 0, overflowX: 'hidden' }}
       data-testid="archive-search-view"
     >
-      {/* 1. Subheader & Mode Toggle */}
-      <div className="page-subheader" style={{ flexWrap: 'wrap', gap: '12px' }}>
-        <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-            <h1 className="page-title" style={{ margin: 0 }}>Arşiv ve arama</h1>
-            <div style={{ display: 'flex', gap: '4px', background: 'var(--bg-subtle)', padding: '2px', borderRadius: '6px' }}>
-              <button
-                type="button"
-                className={`btn ${mode === 'real' ? 'btn-primary-orange' : 'btn-outline-gray'}`}
-                style={{ padding: '3px 10px', fontSize: '0.75rem', fontWeight: 600 }}
-                onClick={() => setMode('real')}
-                data-testid="archive-mode-real-btn"
-              >
-                Gerçek Yerel Arşiv
-              </button>
-              <button
-                type="button"
-                className={`btn ${mode === 'demo' ? 'btn-primary-orange' : 'btn-outline-gray'}`}
-                style={{ padding: '3px 10px', fontSize: '0.75rem', fontWeight: 600 }}
-                onClick={() => setMode('demo')}
-                data-testid="archive-mode-demo-btn"
-              >
-                Örnek Veri (Demo)
-              </button>
-            </div>
+      {/* 1. Başlık ve (yalnız geliştirme görünümünde) örnek veri anahtarı */}
+      <PageHeader
+        title="Arşiv ve arama"
+        description={mode === 'real'
+          ? 'Bir veya birden fazla müşteri, proje ve arşivi seçip birlikte arayın; arşive yeni posta dosyası ekleyin.'
+          : 'Örnek simülasyon verileri görüntüleniyor · Gerçek verilerle karışmaz'}
+        testId="search-page-header"
+        breadcrumb={productionMode ? undefined : (
+          <div style={{ display: 'flex', gap: '4px', background: 'var(--bg-subtle)', padding: '2px', borderRadius: '6px' }}>
+            <button
+              type="button"
+              className={`btn ${mode === 'real' ? 'btn-primary-orange' : 'btn-outline-gray'}`}
+              style={{ padding: '3px 10px', fontSize: '0.75rem', fontWeight: 600 }}
+              onClick={() => setMode('real')}
+              data-testid="archive-mode-real-btn"
+            >
+              Gerçek yerel arşiv
+            </button>
+            <button
+              type="button"
+              className={`btn ${mode === 'demo' ? 'btn-primary-orange' : 'btn-outline-gray'}`}
+              style={{ padding: '3px 10px', fontSize: '0.75rem', fontWeight: 600 }}
+              onClick={() => setMode('demo')}
+              data-testid="archive-mode-demo-btn"
+            >
+              Örnek veri (geliştirme)
+            </button>
           </div>
-          <p className="page-subtitle">
-            {mode === 'real'
-              ? 'Şirketlerinize ait arşivlerde birlikte arama yapın.'
-              : 'Örnek simülasyon verileri görüntüleniyor · Gerçek verilerle karışmaz'}
-          </p>
-        </div>
-
+        )}
+        actions={
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
           {mode === 'real' && (
             <button
@@ -704,7 +707,7 @@ export const ArchiveSearchView: React.FC<ArchiveSearchViewProps> = ({
               data-testid="archive-open-add-modal-btn"
             >
               <IconArchiveBox size={14} />
-              <span>Yeni Arşiv Ekle</span>
+              <span>Arşive dosya ekle</span>
             </button>
           )}
 
@@ -715,7 +718,7 @@ export const ArchiveSearchView: React.FC<ArchiveSearchViewProps> = ({
             data-testid="mobile-location-toggle-btn"
             aria-expanded={mobileLocationOpen}
           >
-            <span>{mobileLocationOpen ? '▲ Konumları Gizle' : '▼ Konumları Göster'}</span>
+            <span>{mobileLocationOpen ? '▲ Konumları gizle' : '▼ Konumları göster'}</span>
           </button>
 
           <span
@@ -740,12 +743,13 @@ export const ArchiveSearchView: React.FC<ArchiveSearchViewProps> = ({
             )}
           </span>
         </div>
-      </div>
+        }
+      />
 
       {mode === 'real' && (
-        <section data-testid="archive-governance-panel" style={{margin:'0 16px 8px',padding:'10px 12px',border:'1px solid var(--border-color)',borderRadius:6,background:'var(--bg-surface)'}}>
-          <div style={{display:'flex',alignItems:'center',gap:8,flexWrap:'wrap'}}>
-            <strong>Arşiv güvenliği</strong>
+        <details className="archive-governance" data-testid="archive-governance-panel" style={{margin:'8px 16px',padding:'10px 12px',border:'1px solid var(--border-light)',borderRadius:8,background:'#fff'}}>
+          <summary>Yedekleme, geri yükleme ve denetim<span>Arşiv güvenliği araçları</span></summary>
+          <div style={{display:'flex',alignItems:'center',gap:8,flexWrap:'wrap',marginTop:8}}>
             <select aria-label="Yedek hedef müşterisi" value={governanceCompanyId} onChange={e=>{setGovernanceCompanyId(e.target.value);setGovernanceProjectId(governanceCompanies.find(c=>c.companyId===e.target.value)?.projects?.[0]?.projectId??'');}}><option value="">Müşteri seçin</option>{governanceCompanies.map(c=><option key={c.companyId} value={c.companyId}>{c.name}</option>)}</select>
             <select aria-label="Yedek hedef projesi" value={governanceProjectId} onChange={e=>setGovernanceProjectId(e.target.value)}><option value="">Proje seçin</option>{governanceCompanies.find(c=>c.companyId===governanceCompanyId)?.projects?.map((p:any)=><option key={p.projectId} value={p.projectId}>{p.name}</option>)}</select>
             <button className="btn btn-outline-gray" disabled={governanceBusy} onClick={()=>void runGovernance('backup')}>Doğrulanmış yedek oluştur</button>
@@ -757,7 +761,7 @@ export const ArchiveSearchView: React.FC<ArchiveSearchViewProps> = ({
           <div style={{display:'flex',gap:8,alignItems:'center',marginTop:6,flexWrap:'wrap'}}><label>Saklama yaşı (gün) <input aria-label="Saklama yaşı gün" type="number" min={1} max={36500} value={retentionDays} onChange={e=>setRetentionDays(Number(e.target.value))}/></label><label>En az boyut (MB, isteğe bağlı) <input aria-label="Saklama boyutu MB" type="number" min={0} value={retentionSizeMb} onChange={e=>setRetentionSizeMb(e.target.value)}/></label></div>
           <small style={{display:'block',marginTop:6,color:'var(--text-muted)'}}>Geri yükleme yeni kimliklerle yapılır; mevcut arşivler korunur. Hesaplar ve kimlik bilgileri yedeğe dahil edilmez. Saklama işlemi yalnızca önizlemedir.</small>
           {governanceStatus && <div role="status" style={{marginTop:6}}>{governanceStatus}</div>}
-        </section>
+        </details>
       )}
 
       {mode === 'real' && ingestProgress && (
@@ -859,7 +863,7 @@ export const ArchiveSearchView: React.FC<ArchiveSearchViewProps> = ({
             }}
           >
             <span style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--text-main)' }}>
-              {mode === 'real' ? 'Arşiv Konumları' : 'Örnek Konumlar'}
+              {mode === 'real' ? 'Arşiv konumları' : 'Örnek konumlar'}
             </span>
             <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
               <button
@@ -915,7 +919,7 @@ export const ArchiveSearchView: React.FC<ArchiveSearchViewProps> = ({
                     style={{ fontSize: '0.75rem', padding: '4px 8px' }}
                     onClick={() => setIsAddModalOpen(true)}
                   >
-                    Yeni Arşiv Ekle
+                    Arşive dosya ekle
                   </button>
                 </div>
               ) : (
@@ -1300,7 +1304,7 @@ export const ArchiveSearchView: React.FC<ArchiveSearchViewProps> = ({
                     }}
                     data-testid="archive-search-field-select"
                   >
-                    <option value="all">Tüm Alanlar</option>
+                    <option value="all">Tüm alanlar</option>
                     <option value="subject">Konu</option>
                     <option value="sender">Gönderen</option>
                     <option value="recipient">Alıcı</option>
@@ -1363,7 +1367,7 @@ export const ArchiveSearchView: React.FC<ArchiveSearchViewProps> = ({
                 }}
                 data-testid="archive-folder-filter"
               >
-                <option value="all">Tüm Klasörler</option>
+                <option value="all">Tüm klasörler</option>
                 {availableFolders
                   .map((f) => (
                     <option key={f} value={f}>

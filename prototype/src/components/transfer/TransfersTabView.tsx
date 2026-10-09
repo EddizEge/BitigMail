@@ -10,7 +10,7 @@ import { LocalArchiveWorkflow } from '../archive/LocalArchiveWorkflow';
 import { ImapTransferWorkflow } from './ImapTransferWorkflow';
 import { BridgeTransferWorkflow } from './BridgeTransferWorkflow';
 import { PopSnapshotWorkflow } from './PopSnapshotWorkflow';
-import { IconFile } from '../ui/Icons';
+import { ChoiceSelector, EmptyState, PageHeader } from '../layout/PageHeader';
 import { DamagedStoreRecoveryWorkflow } from '../recovery/DamagedStoreRecoveryWorkflow';
 import { LocalEngineClient, localEngineClient } from '../../api/localEngineClient';
 import { useIdentity } from '../auth/IdentityGate';
@@ -54,7 +54,6 @@ export const TransfersTabView: React.FC<TransfersTabViewProps> = ({ state, clien
   const companyProjects = projects.filter((p) => p.companyId === (currentCompany?.id || ''));
   const currentProject = companyProjects.find((p) => p.id === state.plan.projectId) || companyProjects[0];
   const projectSources = state.sources.filter((s) => s.projectId === (currentProject?.id || ''));
-  const currentSource = projectSources.find((s) => s.id === state.plan.sourceId) || projectSources[0];
 
   const currentOperation = state.plan.operationType || 'migration';
 
@@ -154,70 +153,6 @@ export const TransfersTabView: React.FC<TransfersTabViewProps> = ({ state, clien
         clientContext={{ companyId: currentCompany?.id || '', companyName: currentCompany?.name || '', projectId: currentProject?.id || '', projectName: currentProject?.name || '' }} />;
     }
 
-    if (currentOperation !== 'migration') {
-      const titles: Record<JobType, string> = {
-        migration: 'Posta Geçişi ve Taşıma',
-        convert: 'OST / PST Format Dönüştürme',
-        archive: 'Yıllık Arşivleme ve PST/MBOX Bölme',
-        recovery: 'Bozuk Veri ve Posta Kurtarma',
-      };
-
-      const descriptions: Record<JobType, string> = {
-        migration: 'Kaynak ve hedef arasında güvenli ve doğrulamalı posta taşıması.',
-        convert: 'OST dosyasından yeni Unicode PST oluşturma ve yerel dönüştürme.',
-        archive: 'Belirli tarih aralıklarına göre arşiv oluşturma ve boyut sınırına göre bölme.',
-        recovery: 'Hasarlı PST/OST dosyalarındaki okunabilir iletileri yeni çıktıya kurtarma.',
-      };
-
-      return (
-        <div style={{ padding: '32px 28px', maxWidth: '900px', width: '100%', margin: '0 auto' }}>
-          <div className="card" style={{ padding: '32px', textAlign: 'center' }}>
-            <div style={{ display: 'inline-flex', padding: '16px', background: 'var(--brand-yellow-light)', borderRadius: '50%', marginBottom: '16px' }}>
-              <IconFile size={36} color="#b45309" />
-            </div>
-
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, margin: '0 0 8px 0' }}>
-              {titles[currentOperation]}
-            </h2>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9375rem', maxWidth: '560px', margin: '0 auto 20px auto' }}>
-              {descriptions[currentOperation]}
-            </p>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '14px', background: 'var(--bg-subtle)', padding: '16px', borderRadius: '8px', textAlign: 'left', marginBottom: '24px' }}>
-              <div>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>SEÇİLİ MÜŞTERİ</span>
-                <div style={{ fontWeight: 600 }}>{currentCompany?.name || state.plan.client}</div>
-              </div>
-              <div>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>SEÇİLİ PROJE</span>
-                <div style={{ fontWeight: 600 }}>{currentProject?.name || state.plan.projectName || '—'}</div>
-              </div>
-              <div>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>KAYNAK</span>
-                <div style={{ fontWeight: 600 }}>{currentSource?.name || state.plan.sourceType}</div>
-              </div>
-              <div>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>HEDEF</span>
-                <div style={{ fontWeight: 600 }}>{state.plan.targetType}</div>
-              </div>
-            </div>
-
-            <div style={{ background: '#fffbeb', border: '1px solid #fde68a', borderRadius: '6px', padding: '12px 16px', fontSize: '0.875rem', color: '#92400e', marginBottom: '24px', textAlign: 'left' }}>
-              ⚠️ <strong>Sözleşme & Yol Haritası Bildirimi:</strong> Bu işlem türü BitigMail P2–P5 aşamalarında gerçek dönüşüm motorlarıyla entegre edilecektir. Prototip kapsamında çalışan uçtan uca simülasyon <strong>Taşıma</strong> modunda doğrulanmaktadır.
-            </div>
-
-            {!identityState?.identity && <button
-              className="btn btn-orange"
-              onClick={() => handleOperationTypeChange('migration')}
-              data-testid="switch-to-migration-btn"
-            >
-              Taşıma simülasyonuna dön
-            </button>}
-          </div>
-        </div>
-      );
-    }
-
     if (transferMode === 'real') {
       if (realDirection === 'pop-to-file') {
         return <PopSnapshotWorkflow companyId={currentCompany?.id || ''} projectId={currentProject?.id || ''} client={client} />;
@@ -230,10 +165,7 @@ export const TransfersTabView: React.FC<TransfersTabViewProps> = ({ state, clien
             projectId={currentProject?.id || state.plan.projectId || ''}
             projectName={currentProject?.name || state.plan.projectName || ''}
             onNavigateToAccounts={() => state.setCurrentTab('clients')}
-            onSelectBridge={(dir) => {
-              state.setSelectedLocalJobId?.(null);
-              setRealDirection(dir);
-            }}
+            embedded
           />
         );
       }
@@ -245,10 +177,6 @@ export const TransfersTabView: React.FC<TransfersTabViewProps> = ({ state, clien
           projectId={currentProject?.id || state.plan.projectId || ''}
           projectName={currentProject?.name || state.plan.projectName || ''}
           onNavigateToAccounts={() => state.setCurrentTab('clients')}
-          onSelectImapToImap={() => {
-            state.setSelectedLocalJobId?.(null);
-            setRealDirection('imap-to-imap');
-          }}
           initialDirection={realDirection === 'imap-to-file' ? 'imap-to-file' : 'file-to-imap'}
           onDirectionChange={(dir) => {
             state.setSelectedLocalJobId?.(null);
@@ -264,7 +192,7 @@ export const TransfersTabView: React.FC<TransfersTabViewProps> = ({ state, clien
               job.clientContext?.projectId
             );
           }}
-          embedded={Boolean(identityState?.identity)}
+          embedded
         />
       );
     }
@@ -278,43 +206,23 @@ export const TransfersTabView: React.FC<TransfersTabViewProps> = ({ state, clien
     return <WorkspaceView state={state} />;
   };
 
-  return (
-    <div className="transfer-hub" data-testid="transfers-tab-view">
-      <section className="transfer-hero">
-        <div><p className="identity-kicker">AKILLI POSTA İŞLEMLERİ</p><h1>Ne yapmak istiyorsunuz?</h1><p>İşlemi seçin; BitigMail yalnızca gerekli adımları gösterir.</p></div>
-        <div className="operation-grid" role="group" aria-label="İşlem seçimi">
-          <button className={currentOperation === 'migration' ? 'active' : ''} onClick={() => handleOperationTypeChange('migration')} data-testid="op-tab-migration"><strong>Posta aktarımı</strong><span>IMAP, POP veya dosya arasında taşıyın</span></button>
-          <button className={currentOperation === 'convert' ? 'active' : ''} onClick={() => handleOperationTypeChange('convert')} data-testid="op-tab-convert"><strong>Dosya dönüşümü</strong><span>PST, OST, MBOX ve EML dönüştürün</span></button>
-          <button className={currentOperation === 'archive' ? 'active' : ''} onClick={() => handleOperationTypeChange('archive')} data-testid="op-tab-archive"><strong>Arşiv ve bölme</strong><span>Doğrulayın, arşivleyin ve parçalara ayırın</span></button>
-          <button className={currentOperation === 'recovery' ? 'active' : ''} onClick={() => handleOperationTypeChange('recovery')} data-testid="op-tab-recovery"><strong>Veri kurtarma</strong><span>Hasarlı posta depolarını güvenle tarayın</span></button>
-        </div>
-      </section>
-      {/* Top Context & Operation Selection Bar */}
-      <div
-        style={{
-          background: 'var(--bg-white)',
-          borderBottom: '1px solid var(--border-light)',
-          padding: '8px 16px',
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: '8px 12px',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          minWidth: 0,
-          maxWidth: '100%',
-          boxSizing: 'border-box',
-        }}
-        data-testid="transfer-context-bar"
-      >
-        {/* Left: Context Pickers (Company, Project, Source) */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px 10px', alignItems: 'center', minWidth: 0, maxWidth: '100%' }}>
-          {/* Company Picker */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>MÜŞTERİ:</span>
+  const selectDirection = (direction: RealMigrationDirection) => {
+    state.setSelectedLocalJobId?.(null);
+    setRealDirection(direction);
+  };
+
+  const header = (
+    <PageHeader
+      title="Aktarım ve dönüşüm"
+      description="Posta aktarımı, dosya dönüşümü, bölme ve kurtarma işlerini buradan başlatın: önce işlemi, sonra türünü seçin."
+      testId="transfers-page-header"
+      actions={companies.length > 0 ? (
+        <div className="transfer-project-picker" data-testid="transfer-context-bar">
+          <label>
+            <span>Müşteri</span>
             <select
               className="select-input"
-              style={{ fontSize: '0.8125rem', padding: '4px 8px', height: '30px' }}
-              value={state.plan.companyId}
+              value={currentCompany?.id || ''}
               onChange={(e) => handleCompanyChange(e.target.value)}
               data-testid="transfer-company-select"
             >
@@ -324,17 +232,12 @@ export const TransfersTabView: React.FC<TransfersTabViewProps> = ({ state, clien
                 </option>
               ))}
             </select>
-          </div>
-
-          <span style={{ color: 'var(--border-mid)' }}>/</span>
-
-          {/* Project Picker */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>PROJE:</span>
+          </label>
+          <label>
+            <span>Proje</span>
             <select
               className="select-input"
-              style={{ fontSize: '0.8125rem', padding: '4px 8px', height: '30px' }}
-              value={state.plan.projectId}
+              value={currentProject?.id || ''}
               onChange={(e) => handleProjectChange(e.target.value)}
               data-testid="transfer-project-select"
             >
@@ -344,18 +247,50 @@ export const TransfersTabView: React.FC<TransfersTabViewProps> = ({ state, clien
                 </option>
               ))}
             </select>
-          </div>
+          </label>
+        </div>
+      ) : undefined}
+    />
+  );
 
-          {currentOperation === 'migration' && transferMode === 'sample' && (
-            <>
-              <span style={{ color: 'var(--border-mid)' }}>/</span>
+  if (identityState?.identity && !currentProject) {
+    return (
+      <div className="transfer-hub" data-testid="transfers-tab-view">
+        {header}
+        <EmptyState
+          title="Önce bir proje gerekiyor"
+          testId="transfers-empty-state"
+          action={<button className="btn btn-primary-orange" onClick={() => state.setCurrentTab('clients')} data-testid="transfers-goto-clients-btn">Müşteriler ekranına git</button>}
+        >
+          Her aktarım ve dönüşüm bir müşteri projesine kaydedilir. Müşteriler ekranında şirket ve proje oluşturun,
+          posta hesabını projeye ekleyin, sonra buraya dönün.
+        </EmptyState>
+      </div>
+    );
+  }
 
-              {/* Source Picker */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>KAYNAK:</span>
+  return (
+    <div className="transfer-hub" data-testid="transfers-tab-view">
+      {header}
+      <section className="transfer-steps" aria-label="İşlem seçimi">
+        <span className="step-label">1. İşlemi seçin</span>
+        <div className="operation-grid" role="group" aria-label="İşlem türü">
+          <button className={currentOperation === 'migration' ? 'active' : ''} aria-pressed={currentOperation === 'migration'} onClick={() => handleOperationTypeChange('migration')} data-testid="op-tab-migration"><strong>Posta aktarımı</strong><span>Posta hesapları ve dosyalar arasında kopyalayın</span></button>
+          <button className={currentOperation === 'convert' ? 'active' : ''} aria-pressed={currentOperation === 'convert'} onClick={() => handleOperationTypeChange('convert')} data-testid="op-tab-convert"><strong>Dosya dönüşümü</strong><span>PST, OST, OLM, MBOX, EML ve Apple Mail dosyalarını dönüştürün</span></button>
+          <button className={currentOperation === 'archive' ? 'active' : ''} aria-pressed={currentOperation === 'archive'} onClick={() => handleOperationTypeChange('archive')} data-testid="op-tab-archive"><strong>PST bölme</strong><span>Büyük PST / OST dosyasını yıla veya boyuta göre parçalara ayırın</span></button>
+          <button className={currentOperation === 'recovery' ? 'active' : ''} aria-pressed={currentOperation === 'recovery'} onClick={() => handleOperationTypeChange('recovery')} data-testid="op-tab-recovery"><strong>Veri kurtarma</strong><span>Hasarlı PST / OST dosyasındaki okunabilen iletileri kurtarın</span></button>
+        </div>
+
+        {currentOperation === 'migration' && !identityState?.identity && (
+          <div className="transfer-dev-mode" data-testid="transfer-mode-switcher">
+            <span>Geliştirme görünümü:</span>
+            <button type="button" className={`btn ${transferMode === 'real' ? 'btn-orange' : 'btn-outline-gray'}`} onClick={() => setTransferMode('real')} data-testid="mode-real-imap">Gerçek aktarım</button>
+            <button type="button" className={`btn ${transferMode === 'sample' ? 'btn-orange' : 'btn-outline-gray'}`} onClick={() => setTransferMode('sample')} data-testid="mode-sample">Örnek mod</button>
+            {transferMode === 'sample' && (
+              <>
                 <select
                   className="select-input"
-                  style={{ fontSize: '0.8125rem', padding: '4px 8px', height: '30px', maxWidth: '180px' }}
+                  aria-label="Örnek kaynak"
                   value={state.plan.sourceId}
                   onChange={(e) => handleSourceChange(e.target.value)}
                   data-testid="transfer-source-select"
@@ -366,16 +301,10 @@ export const TransfersTabView: React.FC<TransfersTabViewProps> = ({ state, clien
                     </option>
                   ))}
                 </select>
-              </div>
-
-              <span style={{ color: 'var(--border-mid)' }}>→</span>
-
-              {/* Target Picker */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>HEDEF:</span>
+                <span aria-hidden="true">→</span>
                 <select
                   className="select-input"
-                  style={{ fontSize: '0.8125rem', padding: '4px 8px', height: '30px' }}
+                  aria-label="Örnek hedef"
                   value={state.plan.targetType}
                   onChange={(e) => {
                     const target = TARGET_OPTIONS.find((t) => t.name === e.target.value);
@@ -393,118 +322,28 @@ export const TransfersTabView: React.FC<TransfersTabViewProps> = ({ state, clien
                     </option>
                   ))}
                 </select>
-              </div>
-            </>
-          )}
-        </div>
-
-        <div className="context-summary" aria-label="Seçili akış özeti"><span>{currentOperation === 'migration' && transferMode === 'real' ? (realDirection === 'file-to-imap' ? 'Dosya' : realDirection === 'imap-to-file' ? 'IMAP hesabı' : realDirection === 'imap-to-imap' ? 'IMAP hesabı' : 'POP hesabı') : currentCompany?.name || 'Kaynak seçin'}</span><b>→</b><span>{currentOperation === 'migration' && transferMode === 'real' ? (realDirection === 'file-to-imap' ? 'IMAP hesabı' : realDirection === 'imap-to-file' ? 'Dosya' : realDirection === 'imap-to-imap' ? 'IMAP hesabı' : 'EML klasörü') : currentOperation === 'migration' ? state.plan.targetType : currentOperation === 'convert' ? 'Dönüştürülmüş dosya' : currentOperation === 'archive' ? 'Doğrulanmış arşiv' : 'Kurtarılmış çıktı'}</span></div>
-      </div>
-
-      {/* Mode Switcher for Migration: Real IMAP vs Sample Mode */}
-      {currentOperation === 'migration' && (
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            flexWrap: 'wrap',
-            gap: '8px 16px',
-            padding: '6px 16px',
-            background: 'var(--bg-subtle)',
-            borderBottom: '1px solid var(--border-light)',
-          }}
-          data-testid="transfer-mode-switcher"
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
-              {identityState?.identity ? 'AKTARIM YÖNÜ:' : 'İŞ AKIŞI MODU:'}
-            </span>
-            {!identityState?.identity && <button
-              type="button"
-              className={`btn ${transferMode === 'real' ? 'btn-orange' : 'btn-outline-gray'}`}
-              style={{ padding: '3px 10px', fontSize: '0.75rem' }}
-              onClick={() => setTransferMode('real')}
-              data-testid="mode-real-imap"
-            >
-              Gerçek Aktarım (IMAP / Köprü)
-            </button>}
-            {!identityState?.identity && <button
-              type="button"
-              className={`btn ${transferMode === 'sample' ? 'btn-orange' : 'btn-outline-gray'}`}
-              style={{ padding: '3px 10px', fontSize: '0.75rem' }}
-              onClick={() => setTransferMode('sample')}
-              data-testid="mode-sample"
-            >
-              Örnek mod
-            </button>}
-
-            {transferMode === 'real' && (
-              <>
-                {!identityState?.identity && <span style={{ color: 'var(--border-mid)', margin: '0 4px' }}>|</span>}
-                {!identityState?.identity && <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
-                  YÖN:
-                </span>}
-                <button
-                  type="button"
-                  className={`btn ${realDirection === 'file-to-imap' ? 'btn-orange' : 'btn-outline-gray'}`}
-                  style={{ padding: '3px 10px', fontSize: '0.75rem' }}
-                  onClick={() => {
-                    state.setSelectedLocalJobId?.(null);
-                    setRealDirection('file-to-imap');
-                  }}
-                  data-testid="tab-direction-file-to-imap"
-                >
-                  Dosya → IMAP
-                </button>
-                <button
-                  type="button"
-                  className={`btn ${realDirection === 'imap-to-file' ? 'btn-orange' : 'btn-outline-gray'}`}
-                  style={{ padding: '3px 10px', fontSize: '0.75rem' }}
-                  onClick={() => {
-                    state.setSelectedLocalJobId?.(null);
-                    setRealDirection('imap-to-file');
-                  }}
-                  data-testid="tab-direction-imap-to-file"
-                >
-                  IMAP → Dosya
-                </button>
-                <button
-                  type="button"
-                  className={`btn ${realDirection === 'imap-to-imap' ? 'btn-orange' : 'btn-outline-gray'}`}
-                  style={{ padding: '3px 10px', fontSize: '0.75rem' }}
-                  onClick={() => {
-                    state.setSelectedLocalJobId?.(null);
-                    setRealDirection('imap-to-imap');
-                  }}
-                  data-testid="tab-direction-imap-to-imap"
-                >
-                  IMAP ↔ IMAP
-                </button>
-                <button
-                  type="button"
-                  className={`btn ${realDirection === 'pop-to-file' ? 'btn-orange' : 'btn-outline-gray'}`}
-                  style={{ padding: '3px 10px', fontSize: '0.75rem' }}
-                  onClick={() => { state.setSelectedLocalJobId?.(null); setRealDirection('pop-to-file'); }}
-                  data-testid="tab-direction-pop-to-file"
-                >
-                  POP → EML
-                </button>
               </>
             )}
           </div>
-          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-            {transferMode === 'real'
-              ? realDirection === 'imap-to-imap'
-                ? 'Doğrudan IMAP sunucu bağlantısı ve kontrollü aktarım'
-                : 'Dosya ↔ Posta Hesabı Köprüsü'
-              : 'Statik şablon ve simülasyon görünümü'}
-          </span>
-        </div>
-      )}
+        )}
 
-      {/* Main View for the selected operation */}
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0, minWidth: 0, maxWidth: '100%', overflow: 'hidden' }}>
+        {currentOperation === 'migration' && transferMode === 'real' && (
+          <ChoiceSelector<RealMigrationDirection>
+            label="2. Aktarım yönünü seçin"
+            value={realDirection}
+            onChange={selectDirection}
+            testId="transfer-direction-selector"
+            options={[
+              { value: 'file-to-imap', label: 'Dosyadan hesaba', hint: 'EML / MBOX → posta hesabı', testId: 'tab-direction-file-to-imap' },
+              { value: 'imap-to-file', label: 'Hesaptan dosyaya', hint: 'Posta hesabı → EML / MBOX', testId: 'tab-direction-imap-to-file' },
+              { value: 'imap-to-imap', label: 'Hesaptan hesaba', hint: 'İki posta hesabı arasında', testId: 'tab-direction-imap-to-imap' },
+              { value: 'pop-to-file', label: "POP'tan EML'e", hint: 'POP hesabı → EML klasörü', testId: 'tab-direction-pop-to-file' },
+            ]}
+          />
+        )}
+      </section>
+
+      <div className="transfer-body">
         {renderOperationContent()}
       </div>
     </div>
