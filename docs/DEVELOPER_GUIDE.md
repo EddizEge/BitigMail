@@ -1,6 +1,6 @@
 # BitigMail — geliştirici notları
 
-Güncelleme: 2026-10-09 (sürüm 0.9.4). Kullanıcı gözünden ekranlar: [kullanım rehberi](KULLANIM_REHBERI.md). Aşama durumu: [yol haritası](../ROADMAP.md) ve [tam sürüm listesi](FULL_RELEASE_ROADMAP.md). Gerçek yön kapsamı: [format ve yön matrisi](FORMAT_DIRECTION_MATRIX.md).
+Güncelleme: 2026-10-10 (sürüm 0.9.5). Kullanıcı gözünden ekranlar: [kullanım rehberi](KULLANIM_REHBERI.md). Aşama durumu: [yol haritası](../ROADMAP.md) ve [tam sürüm listesi](FULL_RELEASE_ROADMAP.md). Gerçek yön kapsamı: [format ve yön matrisi](FORMAT_DIRECTION_MATRIX.md).
 
 ## Durum özeti
 

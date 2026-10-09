@@ -1,6 +1,6 @@
-# BitigMail kullanım rehberi (sürüm 0.9.4)
+# BitigMail kullanım rehberi (sürüm 0.9.5)
 
-Bu rehber BitigMail'i yeniden tanımak isteyen biri için yazıldı: uygulama ne yapar, nasıl kurulur, her ekran ne işe yarar ve nerede durur. Ekran görüntüleri 0.9.4'ün 1440×900 penceresinden alındı ve **sentetik test verisi** içerir ("Kuzey Lojistik (test)", "2026 posta geçişi" gibi).
+Bu rehber BitigMail'i yeniden tanımak isteyen biri için yazıldı: uygulama ne yapar, nasıl kurulur, her ekran ne işe yarar ve nerede durur. Ekran görüntüleri 1440×900 boyutundaki pencereden alındı ve **sentetik test verisi** içerir ("Kuzey Lojistik (test)", "2026 posta geçişi" gibi).
 
 ## İçindekiler
 
@@ -67,9 +67,9 @@ Kaynak hiçbir işte silinmez, mevcut bir hedefin üzerine yazılmaz.
 
 Gereksinim: Windows 10/11 (x64) ve Microsoft Edge WebView2 çalışma zamanı. Ayrı .NET ya da Node kurulumu gerekmez.
 
-> **Uyarı:** 0.9.4 **imzasız bir iç test sürümüdür**. Windows yayıncıyı doğrulayamaz. Paketteki SHA-256 özetleri yalnız dosyaların bozulmadığını gösterir, yayıncı kimliğini kanıtlamaz.
+> **Uyarı:** 0.9.5 **imzasız bir iç test sürümüdür**. Windows yayıncıyı doğrulayamaz. Paketteki SHA-256 özetleri yalnız dosyaların bozulmadığını gösterir, yayıncı kimliğini kanıtlamaz.
 
-`BitigMail-Internal-0.9.4.zip` dosyasını bir klasöre açın. O klasörde PowerShell ile:
+`BitigMail-Internal-0.9.5.zip` dosyasını bir klasöre açın. O klasörde PowerShell ile:
 
 | İş | Komut |
 |---|---|
@@ -120,7 +120,7 @@ Proje yokken Aktarım ve dönüşüm ekranı iş başlatmaz; sizi Müşteriler e
 - **Üst menü**, iş sırasıyla: **Müşteriler → Aktarım ve dönüşüm → İş merkezi → Arşiv ve arama → Raporlar**.
 - Sağ üstte **Ayarlar** ve **hesap düğmesi** (ör. "Yerel yönetici · Hesap ve erişim").
 - Her ekranın başında bir başlık ve tek cümlelik açıklama vardır.
-- Alttaki durum çubuğu solda seçili projeyi ya da müşteri/proje sayısını, sağda sürümü gösterir: "BitigMail v0.9.4 · Veriler bu bilgisayarda".
+- Alttaki durum çubuğu solda seçili projeyi ya da müşteri/proje sayısını, sağda sürümü gösterir: "BitigMail v0.9.5 · Veriler bu bilgisayarda".
 - Biçim imzası, hash gibi teknik bilgiler ekranlarda **Teknik ayrıntılar** başlığı altında kapalı durur; gerektiğinde açılır.
 - Oturum açılmış uygulamada örnek/demo kayıt yoktur. Gördüğünüz her müşteri, proje ve iş gerçek kayıttır.
 
@@ -140,8 +140,8 @@ Müşteri şirketlerini, projelerini ve projelere bağlı posta hesaplarını y�
 
 ![Müşteri sayfası ve proje kartı](images/rehber/05-musteri-detay.png)
 
-- Müşteri sayfasında her proje bir karttır. **Hesap bağla** ile projeye posta hesabı eklenir (IMAP; Microsoft ve Google bağlantıları da buradan). **Yenile** hesap listesini tazeler. Sağ üstte **Proje ekle** vardır.
-- IMAP ve POP hesaplarında bağlantı güvenliği seçilir: SSL/TLS (varsayılan), zorunlu STARTTLS ya da açıkça onaylanan şifresiz bağlantı. Sunucu ya da port değişirse şifresiz bağlantı onayı yeniden istenir.
+- Müşteri sayfasında her projenin altında **Posta hesapları** bölümü vardır. **Hesap bağla** ile projeye posta hesabı eklenir (IMAP; Microsoft ve Google bağlantıları da buradan). **Yenile** hesap listesini tazeler. Sağ üstte **Proje ekle** vardır.
+- IMAP ve POP hesaplarında bağlantı güvenliği seçilir: SSL/TLS (varsayılan), zorunlu STARTTLS ya da açıkça onaylanan şifresiz bağlantı. Sunucu ya da port değişirse şifresiz bağlantı onayı yeniden istenir. Şifresiz bağlantılı hesaplar listede kırmızı **Şifresiz** etiketiyle görünür.
 
 **Sınırlar**
 
@@ -333,7 +333,7 @@ Bu bilgisayardaki yönetilen arşivde bir ya da birden fazla müşteri, proje ve
 
 - **Posta biçimi kitaplığı (Aspose) ve lisans:** lisans durumu (ör. "Lisans yapılandırılmadı · SDK başlangıcı hazır").
 - **Lisans dosyası seç:** lisans dosyası yalnız bu Windows kullanıcısına bağlı korumalı yerel depoda tutulur. Değişiklik çalışan işlere uygulanmaz; uygulamayı tepsiden **Çıkış** ile kapatıp yeniden açın.
-- Başlıkta sürüm bilgisi (ör. "BitigMail v0.9.4").
+- Başlıkta sürüm bilgisi (ör. "BitigMail v0.9.5").
 - Ticari lisans henüz yok; "Lisanslı çıktı kabulü henüz yapılmadı" uyarısı bu yüzdendir.
 
 <a id="guvenlik"></a>
@@ -388,7 +388,7 @@ Bu Aspose deneme sürümünün değerlendirme işaretidir. Ticari lisans olmadan
 Deneme sürümü, herhangi bir klasöründe 50'den fazla öğe olan PST/OST kaynaklarını engeller. Ticari lisans gelene kadar bu sınır sürer.
 
 **MBOX dosyam kabul edilmiyor.**
-Yalnız mboxrd biçimi desteklenir. Başka bir MBOX türüyse önce desteklenen bir yoldan EML'e çevirmeniz gerekir.
+Yalnız mboxrd biçimi desteklenir. Başka bir MBOX türüyse BitigMail bu dosyayı işleyemez; önce başka bir araçla mboxrd ya da EML biçimine çevirmeniz gerekir.
 
 **Operatör bir projeyi göremiyor.**
 Yönetici, hesap düğmesindeki panelden operatöre o proje için yetki vermelidir. Yeni projeler operatöre kendiliğinden açılmaz.

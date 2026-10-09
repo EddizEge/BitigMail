@@ -1,12 +1,14 @@
 # BitigMail — Ana plan ve yol haritası
 
-Son güncelleme: 2026-10-09 (sürüm 0.9.4)
+Son güncelleme: 2026-10-10 (sürüm 0.9.5)
 
 Bu dosya projenin başlangıç noktasıdır: güncel aşama durumu, kalıcı ürün ilkeleri ve tarihli geçmiş kayıt. Daha ayrıntılı ve tarihli kabul listesi: [tam sürüm listesi](docs/FULL_RELEASE_ROADMAP.md). Kullanıcı rehberi: [docs/KULLANIM_REHBERI.md](docs/KULLANIM_REHBERI.md).
 
 ## Güncel durum
 
 **Sürüm 0.9.4 (imzasız iç test sürümü).** Ekranlar sadeleştirildi: üst menü iş sırasında (Müşteriler → Aktarım ve dönüşüm → İş merkezi → Arşiv ve arama → Raporlar), her ekranda tek tip başlık ve açıklama, üç adımlı aktarım ekranı (işlemi seç → türünü/yönünü seç → yalnız o akışın adımları), boş kurulumda dört adımlı "Başlarken" kartı, oturum açılmış uygulamada örnek kayıt yok. 0.9.3'te oturum açıkken OST → PST, PST bölme ve EML/MBOX → PST ekranlarının motoru "çevrimdışı" sanması düzeltildi. Durum çubuğundaki sürüm derlemeden gelir.
+
+**Sürüm 0.9.5 (imzasız iç test sürümü).** Müşteri sayfasındaki posta hesapları bölümü ve Microsoft/Google bağlantı yönergeleri sade dile çevrildi; şifresiz hesabın listede "STARTTLS" görünmesi ve POP ekranının iş durumunu yenilememesi düzeltildi; Temp profilli testler kullanıcının WebView2 verisinden ayrıldı; eski tarayıcı testleri oturum açacak biçimde onarıldı. 10 Ekim 2026 yerel test kaydı: 908 motor testi (zamanlamaya duyarlı bir dosya kilidi testi yük altında bir kez düştü, tek başına 3/3 geçti) ve 166 arayüz birim testi.
 
 Gerçek akışlar (yerel kabul): OST → PST; EML/mboxrd → PST; PST/OST bölme; EML/mboxrd ↔ IMAP; IMAP → IMAP kopyalama; POP → EML; PST/OST/OLM → EML; Apple Mail EMLX → EML; yönetilen yerel arşiv ve çok müşterili arama; arşivden seçili sonuçları EML'e çıkarma; hasarlı PST/OST'tan yeni EML klasörüne kurtarma. Kapsam ve sınırlar: [format ve yön matrisi](docs/FORMAT_DIRECTION_MATRIX.md).
 
@@ -26,7 +28,7 @@ Son tarihli tam test kaydı 0.9.3'e aittir: 21 Eylül 2026, 892 motor / 151 aray
 | 6 — Kurtarma | Yerel kabul: ayrı işçi süreç, kontrollü küçük hasarlar, öğe düzeyi rapor. Gerçek hasarlı geniş veri seti açık |
 | 7 — Gelişmiş yönetim | Yerel kabul (TASK037): VE/VEYA filtre, klasör eşleme, şablon, seçili arşiv çıktısı, öncelik, yinelenme politikası |
 | 8 — Kurumsal işletim | Yerel kabul (TASK038/039): yerel yetki, denetim kaydı, yedek/geri yükleme, saklama önizlemesi, teslim raporu |
-| 9 — Windows ürünü | Kabuk, kurulum, güncelleme, geri dönüş, kaldırma yerel kabul. 0.9.3 (TASK043) ve 0.9.4 arayüz sürümleri. Kod imzalama ve temiz Windows kabulü açık |
+| 9 — Windows ürünü | Kabuk, kurulum, güncelleme, geri dönüş, kaldırma yerel kabul. 0.9.3 (TASK043), 0.9.4 ve 0.9.5 arayüz sürümleri. Kod imzalama ve temiz Windows kabulü açık |
 | 10 — Pilot ve ticari 1.0 | Bilerek ertelendi: Azure uygulama kaydı ve gerçek kişisel Outlook hesabında kaynak silmeden pilot; diğer canlı sağlayıcılar; BT firması pilotları; lisans, fiyat, marka ve yayın kararları |
 
 "Yerel kabul" geliştirme bilgisayarında testlerle doğrulandı demektir; gerçek sağlayıcı, lisanslı çıktı ve ticari yayın kabulü ayrı şeylerdir.

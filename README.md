@@ -8,7 +8,7 @@
 
 Taşı · Dönüştür · Arşivle · Kurtar
 
-![Sürüm](https://img.shields.io/badge/sürüm-0.9.4-F26F1B)
+![Sürüm](https://img.shields.io/badge/sürüm-0.9.5-F26F1B)
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-F7BC2B)
 ![Durum](https://img.shields.io/badge/durum-iç%20test-lightgrey)
 
@@ -52,11 +52,11 @@ Her kaynak → hedef yönü ayrı uygulanır ve ayrı doğrulanır; "her format�
 ## Kurulum
 
 > [!WARNING]
-> 0.9.4 **imzasız bir iç test sürümüdür**. Windows yayıncıyı doğrulayamaz. Önce içeriğini bildiğiniz küçük bir test kaynağıyla deneyin.
+> 0.9.5 **imzasız bir iç test sürümüdür**. Windows yayıncıyı doğrulayamaz. Önce içeriğini bildiğiniz küçük bir test kaynağıyla deneyin.
 
 Gereksinim: Windows 10/11 (x64) ve Microsoft Edge WebView2 çalışma zamanı. Ayrı .NET veya Node kurulumu gerekmez.
 
-1. [Sürümler](../../releases) sayfasından `BitigMail-Internal-0.9.4.zip` dosyasını indirip bir klasöre açın.
+1. [Sürümler](../../releases) sayfasından `BitigMail-Internal-0.9.5.zip` dosyasını indirip bir klasöre açın.
 2. Açtığınız klasörde PowerShell ile kurun:
 
    ```powershell
@@ -73,7 +73,7 @@ Gereksinim: Windows 10/11 (x64) ve Microsoft Edge WebView2 çalışma zamanı. A
 
 ## Durum ve bilinen sınırlar
 
-Sürüm 0.9.4 bir arayüz sürümüdür: menüler iş sırasına dizildi, aktarım ekranı üç adıma indi (işlemi seç → türünü seç → yalnız o akışın adımları), boş kurulumda "Başlarken" kartı geldi, oturum açılmış uygulamada örnek kayıt kalmadı. 0.9.3'te oturum açıkken OST → PST, PST bölme ve EML/MBOX → PST ekranlarının motoru yanlışlıkla "çevrimdışı" görmesi düzeltildi.
+0.9.4 ve 0.9.5 arayüz sürümleridir. 0.9.4'te menüler iş sırasına dizildi, aktarım ekranı üç adıma indi (işlemi seç → türünü seç → yalnız o akışın adımları), boş kurulumda "Başlarken" kartı geldi, oturum açılmış uygulamada örnek kayıt kalmadı. 0.9.3'te oturum açıkken OST → PST, PST bölme ve EML/MBOX → PST ekranlarının motoru yanlışlıkla "çevrimdışı" görmesi düzeltildi. 0.9.5'te müşteri sayfasındaki posta hesapları bölümü sade dile çevrildi; şifresiz hesabın listede yanlışlıkla "STARTTLS" görünmesi ve POP ekranının iş durumunu yenilememesi düzeltildi; tarayıcı testlerinin altyapısı onarıldı.
 
 Son tarihli tam kabul kaydı 0.9.3'e aittir (21 Eylül 2026: 892 motor testi, 151 arayüz testi; [Windows sürüm kabulü](docs/WINDOWS_RELEASE_ACCEPTANCE.md)). Ticari 1.0 için açık kalanlar:
 

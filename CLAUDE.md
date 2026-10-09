@@ -36,7 +36,7 @@ verisi girmez. `Notlar/` ve `CLAUDE.local.md` git dışıdır (`.git/info/exclud
 cd prototype; npm run typecheck; npm run lint; npm test; npm run build
 # Masaüstü derleme / sürüm paketi (yeni sürüm numarası seç; çalışan paketin üstüne yazma)
 ./scripts/build-desktop.ps1
-./scripts/build-windows-release.ps1 -Version 0.9.4
+./scripts/build-windows-release.ps1 -Version 0.9.6
 # Kurulu uygulamayı aç
 & "$env:LOCALAPPDATA/Programs/BitigMail/BitigMail.Setup.exe" launch
 ```
@@ -52,5 +52,5 @@ Playwright E2E testlerini körlemesine hepsini çalıştırma; bazıları özel 
 - Güncellemeden önce uygulama tepsiden **Çıkış** ile kapanmış olmalı; süreç yalnız kendi başlattığın PID ile kapatılır.
 
 ## Sürüm
-Kurulu ve GitHub'da yayınlı: **0.9.3** (ön sürüm, imzasız). Yeni sürüm: kaynak değişikliği → testler →
+Kurulu ve GitHub'da yayınlı: **0.9.5** (ön sürüm, imzasız). Kullanıcı rehberi: `docs/KULLANIM_REHBERI.md`. Kurulum programı aynı sürüm numarasıyla farklı paketi reddeder; her yeni derleme yeni sürüm numarası alır. Yeni sürüm: kaynak değişikliği → testler →
 `build-windows-release.ps1 -Version 0.9.x` → kullanıcı onayıyla kurulum ve GitHub sürümü.
