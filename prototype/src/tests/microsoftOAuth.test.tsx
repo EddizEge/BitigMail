@@ -664,9 +664,7 @@ describe('TASK-015 Microsoft 365 Connection UI Tests', () => {
       expect(
         screen.getByText(/Microsoft tarafında verilmiş olan izinleri iptal etmez/i)
       ).toBeDefined();
-      expect(
-        screen.getByText(/grant revocation yapılmaz/i)
-      ).toBeDefined();
+      expect(screen.queryByText(/grant revocation/i)).toBeNull();
       expect(screen.getByTestId('confirm-delete-account-btn').textContent).toContain('Yerel bağlantıyı kaldır');
     });
   });
@@ -1041,8 +1039,8 @@ describe('TASK-015 Microsoft 365 Connection UI Tests', () => {
       const badge = screen.getByTestId('m365-badge-acc-personal-01');
       expect(badge.textContent).toBe('Kişisel Outlook');
 
-      // Check tenant display indicates personal consumers
-      expect(screen.getByText(/\(Kişisel \/ consumers\)/i)).toBeDefined();
+      // Check tenant display indicates a personal account
+      expect(screen.getByText(/\(Kişisel hesap\)/i)).toBeDefined();
 
       // Open Reconnect modal
       fireEvent.click(screen.getByTestId('reconnect-account-acc-personal-01'));

@@ -6,7 +6,7 @@ Bu sürüm Windows üzerinde yerel çalışır. Sarı–turuncu BitigMail pencer
 
 İlk yönetici ekranında kendiniz bir kullanıcı adı ve parola belirleyin. Parolanızı sohbetle paylaşmayın. Sonraki açılışlarda aynı kullanıcıyla giriş yapın. Uygulama verileri Windows kullanıcı profilinizde saklanır; geliştirme önizlemesindeki hesaplar yeni masaüstü profiline otomatik aktarılmaz.
 
-Önce **Müşteriler** bölümünde şirketi ve projeyi oluşturun, ardından o projeye posta kaynaklarını ekleyin. Aktarım işleri **Aktarım ve dönüştürme** bölümünden, arşiv işlemleri **Arşiv ve arama** bölümünden yönetilir. Birden fazla şirket ve posta kaynağının kapsamını işlem öncesinde kontrol edin.
+Üst menü iş sırasını izler: **Müşteriler → Aktarım ve dönüşüm → İş merkezi → Arşiv ve arama → Raporlar**. Önce **Müşteriler** ekranında şirketi ve projeyi oluşturun (sağ üstteki hesap düğmesi → hesap ve çalışma alanları), ardından proje kartındaki **Hesap bağla** ile posta hesaplarını ekleyin. Aktarım, dönüşüm, PST bölme ve kurtarma işleri **Aktarım ve dönüşüm** ekranından başlatılır; çalışan işler **İş merkezi**nde izlenir, raporlar **Raporlar** ekranından indirilir, arşiv işlemleri **Arşiv ve arama** ekranındadır. Birden fazla şirket ve posta kaynağının kapsamını işlem öncesinde kontrol edin.
 
 ## İlk deneme
 

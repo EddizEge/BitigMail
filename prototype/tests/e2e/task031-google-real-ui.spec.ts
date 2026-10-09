@@ -24,7 +24,7 @@ test('TASK-031 TestingHost Google add flow reaches durable connected state', asy
   await page.keyboard.press('Escape');
   const row = page.getByTestId(`account-row-${connected.accountId}`);
   await expect(row).toContainText(owner);
-  await expect(row).toContainText('Gmail / XOAUTH2');
+  await expect(row).toContainText('Google ile giriş');
   await expect(row.getByText('Bağlantıyı Sına')).toBeVisible();
   await expect(row.getByText('Yeniden Bağlan')).toBeVisible();
   await row.scrollIntoViewIfNeeded();

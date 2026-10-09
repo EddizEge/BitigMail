@@ -303,10 +303,10 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
   const handleGoogleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(); setGoogleFormError(null);
     if (!googleDisplayName.trim() || !googleEmail.trim() || !googleClientId.trim() || !googleClientSecret) {
-      setGoogleFormError('Hesap adı, e-posta, Google masaüstü Client ID ve Client Secret zorunludur.'); return;
+      setGoogleFormError('Hesap adı, e-posta, Client ID ve Client Secret gerekli.'); return;
     }
     if (!googleClientId.trim().endsWith('.apps.googleusercontent.com')) {
-      setGoogleFormError('Geçerli bir Google masaüstü OAuth Client ID girin.'); return;
+      setGoogleFormError('Geçerli bir Google Client ID girin (sonu .apps.googleusercontent.com olmalı).'); return;
     }
     try {
       await googleOAuth.startOperation({ displayName: googleDisplayName.trim(), email: googleEmail.trim(),
@@ -451,7 +451,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                   data-testid="m365-authorization-link"
                 >
                   <IconServer size={16} />
-                  <span>Microsoft 365 ile Giriş Yap</span>
+                  <span>Microsoft ile giriş yap</span>
                 </a>
                 <span style={{ fontSize: '0.6875rem', color: 'var(--text-muted)' }}>
                   login.microsoftonline.com üzerinden doğrulanmış bağlantı (yeni sekmede açılır)
@@ -481,8 +481,8 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
         return (
           <div style={{ textAlign: 'center', padding: '24px', background: 'var(--bg-subtle)', borderRadius: '6px' }} data-testid="m365-status-verifying">
             <IconRefreshCw size={24} className="animate-spin" color="var(--brand-orange)" style={{ margin: '0 auto 12px' }} />
-            <div style={{ fontWeight: 600, fontSize: '0.875rem' }}>Giriş ve IMAP bağlantısı doğrulanıyor...</div>
-            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '4px' }}>outlook.office365.com:993 üzerinde OAuth2 doğrulanıyor.</div>
+            <div style={{ fontWeight: 600, fontSize: '0.875rem' }}>Giriş ve posta bağlantısı doğrulanıyor...</div>
+            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '4px' }}>Microsoft posta sunucusuna bağlantı sınanıyor.</div>
           </div>
         );
 
@@ -490,9 +490,9 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
         return (
           <div style={{ textAlign: 'center', padding: '24px', background: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '6px' }} data-testid="m365-status-connected">
             <IconCheckCircle size={28} color="#16a34a" style={{ margin: '0 auto 10px' }} />
-            <div style={{ fontWeight: 700, fontSize: '1rem', color: '#15803d' }}>Microsoft 365 Hesabı Başarıyla Bağlandı!</div>
+            <div style={{ fontWeight: 700, fontSize: '1rem', color: '#15803d' }}>Microsoft hesabı bağlandı</div>
             <div style={{ fontSize: '0.8125rem', color: '#166534', marginTop: '6px' }}>
-              Hesap IMAP transferleri ve arşivleme işlemleri için hazır.
+              Hesap aktarım ve arşivleme için hazır.
             </div>
           </div>
         );
@@ -573,9 +573,9 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <IconServer size={18} color="var(--brand-orange)" />
           <h3 style={{ fontSize: '1rem', fontWeight: 600, margin: 0, color: 'var(--text-main)' }}>
-            IMAP Posta Kutuları
+            Posta hesapları
           </h3>
-          <Badge variant="neutral">{accounts.length} Hesap</Badge>
+          <Badge variant="neutral">{accounts.length} hesap</Badge>
         </div>
 
         <div style={{ display: 'flex', gap: '8px' }}>
@@ -620,7 +620,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
             <IconAlertTriangle size={20} color="#ea580c" />
             <div>
               <div style={{ fontSize: '0.875rem', fontWeight: 700, color: '#9a3412' }}>
-                409 Sürüm Uyuşmazlığı (Eşzamanlı Değişiklik)
+                Hesap başka bir yerde değiştirildi
               </div>
               <div style={{ fontSize: '0.8125rem', color: '#c2410c' }}>
                 {conflictInfo.message}
@@ -639,7 +639,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
             }}
             data-testid="conflict-refresh-btn"
           >
-            Yenile ve Tekrar Dene
+            Yenile ve yeniden dene
           </button>
         </div>
       )}
@@ -669,7 +669,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
       {/* Accounts List / Table */}
       {loading && accounts.length === 0 ? (
         <div style={{ padding: '24px', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
-          IMAP hesapları yükleniyor...
+          Posta hesapları yükleniyor...
         </div>
       ) : accounts.length === 0 ? (
         <div
@@ -683,17 +683,17 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
           }}
           data-testid={`no-accounts-message-${projectId}`}
         >
-          Bu projeye henüz IMAP hesabı bağlanmadı. Taşıma veya arşivleme işlemlerinde kullanmak için yeni bir IMAP hesabı ekleyin.
+          Bu projeye henüz posta hesabı bağlanmadı. Aktarım ve arşivleme için “Hesap bağla” ile bir hesap ekleyin.
         </div>
       ) : (
         <div className="table-container" style={{ borderRadius: '6px', border: '1px solid var(--border-light)' }}>
           <table className="data-table" data-testid={`imap-accounts-table-${projectId}`}>
             <thead>
               <tr>
-                <th style={{ width: '28%' }}>Hesap & E-posta</th>
-                <th style={{ width: '22%' }}>Sunucu & Güvenlik</th>
+                <th style={{ width: '28%' }}>Hesap</th>
+                <th style={{ width: '22%' }}>Sunucu ve güvenlik</th>
                 <th style={{ width: '12%' }}>Sürüm</th>
-                <th style={{ width: '18%' }}>Bağlantı Sınaması</th>
+                <th style={{ width: '18%' }}>Bağlantı</th>
                 <th style={{ width: '20%', textAlign: 'right' }}>İşlemler</th>
               </tr>
             </thead>
@@ -745,7 +745,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                             {account.email}
                             {isM365 && account.tenantId && (
                               <span style={{ marginLeft: '6px', fontSize: '0.6875rem', color: '#64748b' }}>
-                                {isPersonal ? '(Kişisel / consumers)' : `(Tenant: ${account.tenantId.substring(0, 8)}...)`}
+                                {isPersonal ? '(Kişisel hesap)' : `(Kiracı: ${account.tenantId.substring(0, 8)}...)`}
                               </span>
                             )}
                           </div>
@@ -765,11 +765,11 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                             fontWeight: 600,
                             padding: '2px 6px',
                             borderRadius: '4px',
-                            background: isM365 ? (isPersonal ? '#fef3c7' : '#f0f9ff') : (account.tlsMode === 'ssl' ? '#eff6ff' : '#f0fdf4'),
-                            color: isM365 ? (isPersonal ? '#92400e' : '#0284c7') : (account.tlsMode === 'ssl' ? '#1d4ed8' : '#15803d'),
+                            background: isM365 ? (isPersonal ? '#fef3c7' : '#f0f9ff') : account.tlsMode === 'none' ? '#fef2f2' : (account.tlsMode === 'ssl' ? '#eff6ff' : '#f0fdf4'),
+                            color: isM365 ? (isPersonal ? '#92400e' : '#0284c7') : account.tlsMode === 'none' ? '#b91c1c' : (account.tlsMode === 'ssl' ? '#1d4ed8' : '#15803d'),
                           }}
                         >
-                          {isGoogle ? 'Gmail / XOAUTH2' : isM365 ? (isPersonal ? 'Outlook.com / XOAUTH2' : 'OAuth2 / SSL') : (account.tlsMode === 'ssl' ? 'SSL/TLS' : 'STARTTLS')}
+                          {isGoogle ? 'Google ile giriş' : isM365 ? 'Microsoft ile giriş' : account.tlsMode === 'ssl' ? 'Şifreli (SSL/TLS)' : account.tlsMode === 'starttls' ? 'Şifreli (STARTTLS)' : 'Şifresiz'}
                         </span>
                         {isReauthRequired && (
                           <span
@@ -784,7 +784,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                             }}
                             data-testid={`reauth-badge-${account.accountId}`}
                           >
-                            Yeniden Yetkilendirme Gerekli
+                            Yeniden giriş gerekli
                           </span>
                         )}
                       </div>
@@ -817,7 +817,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                           data-testid={`test-account-${account.accountId}`}
                         >
                           <IconRefreshCw size={12} className={isTesting ? 'animate-spin' : ''} />
-                          <span>{isTesting ? 'Sınanıyor...' : 'Bağlantıyı Sına'}</span>
+                          <span>{isTesting ? 'Sınanıyor...' : 'Bağlantıyı sına'}</span>
                         </button>
 
                         {testResult && (
@@ -848,22 +848,22 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                               m365OAuth.resetSession();
                             }}
                             data-testid={`reconnect-account-${account.accountId}`}
-                            title="Microsoft 365 yetkisini yenile"
+                            title="Microsoft girişini yenile"
                           >
-                            Yeniden Bağlan
+                            Yeniden bağlan
                           </button>
                         )}
                         {isGoogle && (
                           <button className="btn btn-outline-gray" style={{ padding: '4px 8px', fontSize: '0.75rem' }}
                             onClick={() => { setGoogleReconnectAccount(account); setGoogleReconnectSecret(''); googleOAuth.resetSession(); }}
-                            data-testid={`reconnect-account-${account.accountId}`} title="Google yetkisini yenile">Yeniden Bağlan</button>
+                            data-testid={`reconnect-account-${account.accountId}`} title="Google girişini yenile">Yeniden bağlan</button>
                         )}
                         <button
                           className="btn btn-outline-gray"
                           style={{ padding: '4px 8px', fontSize: '0.75rem' }}
                           onClick={() => handleOpenFolders(account)}
                           data-testid={`view-folders-${account.accountId}`}
-                          title="Gerçek klasörleri ve ileti sayılarını incele"
+                          title="Sunucudaki klasörleri ve ileti sayılarını göster"
                         >
                           <IconFolder size={12} />
                           <span>Klasörler</span>
@@ -881,7 +881,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                           style={{ padding: '4px 8px', fontSize: '0.75rem', color: '#dc2626' }}
                           onClick={() => setDeleteModalAccount(account)}
                           data-testid={`delete-account-${account.accountId}`}
-                          title={isOAuth ? 'Yerel OAuth bağlantısını kaldır (sağlayıcı izinleri iptal edilmez)' : 'Hesabı sil'}
+                          title={isOAuth ? 'Bu bilgisayardaki bağlantıyı kaldır (Microsoft / Google izinleri iptal edilmez)' : 'Hesabı BitigMail\'den sil'}
                         >
                           {isOAuth ? 'Yerel bağlantıyı kaldır' : 'Sil'}
                         </button>
@@ -899,7 +899,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
       <Modal
         isOpen={createModalOpen}
         onClose={closeCreateModal}
-        title={accountTypeTab === 'microsoft365' ? 'Microsoft 365 Hesabı Bağla' : accountTypeTab === 'google' ? 'Gmail / Workspace Hesabı Bağla' : 'Yeni IMAP Hesabı Bağla'}
+        title={accountTypeTab === 'microsoft365' ? 'Microsoft hesabı bağla' : accountTypeTab === 'google' ? 'Google hesabı bağla' : 'Posta hesabı bağla'}
         size="md"
       >
         <div style={{ display: 'flex', gap: '8px', borderBottom: '1px solid var(--border-light)', paddingBottom: '12px', marginBottom: '14px' }}>
@@ -913,7 +913,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
             }}
             data-testid="tab-standard-imap"
           >
-            IMAP
+            Diğer sunucu (IMAP)
           </button>
           <button
             type="button"
@@ -922,11 +922,11 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
             onClick={() => setAccountTypeTab('microsoft365')}
             data-testid="tab-microsoft-365"
           >
-            Microsoft 365
+            Microsoft 365 / Outlook
           </button>
           <button type="button" className={`btn ${accountTypeTab === 'google' ? 'btn-orange' : 'btn-outline-gray'}`}
             style={{ padding: '6px 14px', fontSize: '0.8125rem' }} onClick={() => { setAccountTypeTab('google'); m365OAuth.resetSession(true); }} data-testid="tab-google-oauth">
-            Gmail / Workspace
+            Gmail / Google Workspace
           </button>
         </div>
 
@@ -935,17 +935,22 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
             {googleOAuth.status === 'idle' ? (
               <form onSubmit={handleGoogleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                 <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 6, padding: 12, fontSize: '0.8125rem' }}>
-                  Gmail veya Google Workspace hesabınızı bağlayın. Giriş Google'ın tarayıcı sayfasında tamamlanır; mailleriniz kaynak hesapta korunur.
+                  Gmail veya Google Workspace hesabınızı bağlayın. Giriş, bu bilgisayarın tarayıcısında Google'ın kendi sayfasında yapılır; parolanız BitigMail'e girilmez ve e-postalarınız hesapta olduğu gibi kalır.
+                  <div style={{ marginTop: 6 }}>Bunun için bir kez Google Cloud'da &quot;masaüstü uygulaması&quot; türünde bağlantı bilgisi (Client ID ve Client Secret) oluşturulur; adımlar teknik ayrıntılarda.</div>
                 </div>
                 <details style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: 6, padding: 12, fontSize: '0.8125rem' }} data-testid="google-setup-guide">
-                  <summary style={{ cursor: 'pointer', fontWeight: 600 }}>Bağlantı kurulumu</summary>
-                  <p>Google Cloud Console'da Desktop app OAuth istemcisi oluşturun. Sabit bağlantı <code>imap.gmail.com:993</code> ve OAuth2 kullanır; servis hesabı veya alan genelinde yetki desteklenmez. Client Secret form gönderilene kadar yalnız geçici arayüz belleğindedir; sonrasında temizlenir ve yalnız hesap kimliğine bağlı korumalı yerel backend zarfında kalıcılaştırılır.</p>
+                  <summary style={{ cursor: 'pointer', fontWeight: 600 }}>Teknik ayrıntılar</summary>
+                  <ul style={{ margin: '8px 0 0', paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 4, lineHeight: 1.5 }}>
+                    <li>Google Cloud Console'da <strong>Desktop app</strong> türünde bir OAuth istemcisi oluşturun; Client ID ve Client Secret değerlerini aşağıya girin.</li>
+                    <li>Bağlantı sabittir: <code>imap.gmail.com:993</code>, OAuth2 (XOAUTH2). Servis hesabı ve alan genelinde yetki desteklenmez.</li>
+                    <li>Client Secret yalnız bağlanırken kullanılır ve formdan hemen silinir; bu bilgisayarda yalnız bu hesaba bağlı korumalı kayıtta saklanır.</li>
+                  </ul>
                 </details>
                 {googleFormError && <div data-testid="google-form-error" style={{ color: '#b91c1c' }}>{googleFormError}</div>}
                 <input className="text-input" value={googleDisplayName} onChange={e => setGoogleDisplayName(e.target.value)} placeholder="Hesap adı" data-testid="google-displayname-input" />
                 <input className="text-input" type="email" value={googleEmail} onChange={e => setGoogleEmail(e.target.value)} placeholder="kullanici@gmail.com" data-testid="google-email-input" />
-                <input className="text-input" value={googleClientId} onChange={e => setGoogleClientId(e.target.value)} placeholder="...apps.googleusercontent.com" data-testid="google-clientid-input" />
-                <input className="text-input" type="password" autoComplete="off" value={googleClientSecret} onChange={e => setGoogleClientSecret(e.target.value)} placeholder="Google masaüstü Client Secret" data-testid="google-clientsecret-input" />
+                <input className="text-input" value={googleClientId} onChange={e => setGoogleClientId(e.target.value)} placeholder="Client ID (...apps.googleusercontent.com)" data-testid="google-clientid-input" />
+                <input className="text-input" type="password" autoComplete="off" value={googleClientSecret} onChange={e => setGoogleClientSecret(e.target.value)} placeholder="Client Secret" data-testid="google-clientsecret-input" />
                 <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 10 }}><button type="button" className="btn btn-outline-gray" onClick={closeCreateModal}>İptal</button><button type="submit" className="btn btn-orange" data-testid="submit-google-connect-btn">Google ile Bağlan</button></div>
               </form>
             ) : (
@@ -1011,6 +1016,11 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
 
             {m365OAuth.status === 'idle' ? (
               <form onSubmit={handleM365Submit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '12px 14px', fontSize: '0.8125rem', color: '#334155', lineHeight: 1.5 }} data-testid="m365-plain-intro">
+                  {m365AuthMode === 'corporate'
+                    ? 'Şirket posta kutusunu bağlamak için BT yöneticinizin Microsoft\'ta bir kez uygulama kaydı yapması gerekir. Size iki kimlik verilir: Uygulama (Client) ID ve Kiracı (Tenant) ID. Giriş, bu bilgisayarın tarayıcısında Microsoft\'un kendi sayfasında yapılır; parolanız BitigMail\'e girilmez.'
+                    : 'Outlook.com / Hotmail hesabınızı Microsoft\'un kendi giriş sayfasıyla bağlarsınız; parolanız BitigMail\'e girilmez. Gerekirse önce Outlook web ayarlarında IMAP erişimini açın.'}
+                </div>
                 {m365AuthMode === 'corporate' ? (
                   <details
                     style={{
@@ -1024,18 +1034,18 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                     data-testid="m365-setup-guide"
                   >
                     <summary style={{ cursor: 'pointer', fontWeight: 600, color: 'var(--brand-orange)', userSelect: 'none' }}>
-                      Microsoft 365 Kurulum ve Yetkilendirme Kılavuzu (Genişlet)
+                      Teknik ayrıntılar: Microsoft 365 kurulum ve yetkilendirme kılavuzu
                     </summary>
                     <div style={{ marginTop: '10px', display: 'flex', flexDirection: 'column', gap: '8px', lineHeight: 1.5 }}>
                       <p style={{ margin: 0 }}>
-                        Microsoft 365 kurumsal posta kutunuzu bağlamak için Microsoft Entra ID üzerinde bir uygulama kaydı oluşturmanız gerekir:
+                        BT yöneticisi Microsoft Entra ID'de bir kez şu uygulama kaydını yapar:
                       </p>
                       <ol style={{ margin: 0, paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                        <li>Microsoft Entra yönetim merkezine (entra.microsoft.com) giriş yapın.</li>
-                        <li><strong>Uygulama Kayıtları (App registrations) &gt; Yeni kayıt</strong> adımından tek kiracılı uygulama kaydı (single-tenant app registration) oluşturun.</li>
-                        <li>Yeniden yönlendirme URI'si türü olarak <strong>Mobil ve masaüstü uygulamaları (Mobile and desktop applications)</strong> seçin ve <code>http://localhost</code> adresini ekleyin.</li>
-                        <li><strong>API İzinleri (API permissions)</strong> altında <strong>Office 365 Exchange Online</strong> seçip temsilci izni (delegated) olarak <code>IMAP.AccessAsUser.All</code> ekleyin. MSAL standart <code>offline_access</code> kapsamını otomatik olarak yönetir (MSAL automatically handles the standard offline_access scope). Uygulama izinleri veya istemci parolası oluşturmayın (do not create app-only/application permission or a client secret). Yönetici onayı yalnızca kiracı politikası gerektiriyorsa gerekir (admin consent is needed only if tenant policy requires it).</li>
-                        <li>Genel Bakış (Overview) sayfasındaki <strong>Uygulama (İstemci) Kimliği (Client ID)</strong> ve <strong>Dizin (Kiracı) Kimliği (Tenant ID)</strong> değerlerini aşağıdaki forma girin.</li>
+                        <li>Microsoft Entra yönetim merkezinde (entra.microsoft.com) oturum açın.</li>
+                        <li><strong>Uygulama kayıtları (App registrations) &gt; Yeni kayıt</strong>: tek kiracılı (single-tenant) bir kayıt oluşturun.</li>
+                        <li>Yönlendirme adresi: <strong>Mobil ve masaüstü uygulamaları</strong> türünde <code>http://localhost</code> ekleyin.</li>
+                        <li><strong>API izinleri</strong>: <strong>Office 365 Exchange Online</strong> altında temsilci izni (delegated) olarak <code>IMAP.AccessAsUser.All</code> ekleyin. <code>offline_access</code> kapsamını BitigMail (MSAL) kendisi ister. Uygulama izni ya da istemci parolası (client secret) oluşturmayın. Yönetici onayı yalnız kiracı ilkesi gerektiriyorsa gerekir.</li>
+                        <li><strong>Genel bakış</strong> sayfasındaki <strong>Uygulama (istemci) kimliği</strong> (Client ID) ve <strong>Dizin (kiracı) kimliği</strong> (Tenant ID) değerlerini aşağıdaki forma girin.</li>
                       </ol>
                       <div style={{ marginTop: '4px' }}>
                         <a
@@ -1045,7 +1055,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                           style={{ color: 'var(--brand-orange)', fontWeight: 600, textDecoration: 'underline' }}
                           data-testid="m365-official-help-link"
                         >
-                          Resmi Microsoft Entra Uygulama Kaydı Rehberi
+                          Microsoft'un uygulama kaydı rehberi
                         </a>
                       </div>
                     </div>
@@ -1063,20 +1073,20 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                     data-testid="m365-personal-setup-guide"
                   >
                     <summary style={{ cursor: 'pointer', fontWeight: 600, color: 'var(--brand-orange)', userSelect: 'none' }}>
-                      Kişisel Outlook.com / Hotmail Kurulum ve Güvenlik Kılavuzu (Genişlet)
+                      Teknik ayrıntılar: kişisel Outlook.com / Hotmail bağlantısı
                     </summary>
                     <div style={{ marginTop: '10px', display: 'flex', flexDirection: 'column', gap: '8px', lineHeight: 1.5 }}>
                       <p style={{ margin: 0 }}>
                         Kişisel Outlook.com / Hotmail hesabınızı bağlamak için kişisel Microsoft hesaplarını destekleyen BitigMail Entra uygulama kaydı kullanılır:
                       </p>
                       <ul style={{ margin: 0, paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                        <li><strong>Uygulama Kaydı:</strong> Kişisel Microsoft hesaplarını destekleyen bir uygulama kaydı ve ilgili <strong>Client ID</strong> değeri gereklidir.</li>
-                        <li><strong>Redirect URI:</strong> Masaüstü loopback yönlendirmesi için <code>http://localhost</code> kullanılır.</li>
-                        <li><strong>API İzni:</strong> Office 365 Exchange Online için temsilci izni olarak <code>IMAP.AccessAsUser.All</code> eklenir.</li>
-                        <li><strong>İstemci Parolası:</strong> İstemci parolası gerekmez; yetkilendirme güvenli PKCE akışıyla tamamlanır.</li>
-                        <li><strong>Oturum Açma:</strong> Yetkilendirme bu bilgisayardaki tarayıcıda kullanıcı girişi ile tamamlanır.</li>
-                        <li><strong>Outlook Ayarları:</strong> Gerekirse Outlook web ayarlarında (Ayarlar &gt; Posta &gt; POP ve IMAP) IMAP erişimi seçeneğinin açık olduğu doğrulanmalıdır.</li>
-                        <li><strong>Canlı Pilot Güvenliği:</strong> Gelecekteki canlı pilot, mevcut kişisel e-postalarınıza erişmeden veya silme yapmadan, yalnızca ayrı bir <code>BitigMail-Test</code> klasöründeki yapay (sentetik) test e-postalarıyla çalışacaktır. Otomatik testlerde gerçek posta kutusu taranmaz.</li>
+                        <li><strong>Uygulama kaydı:</strong> kişisel Microsoft hesaplarını destekleyen bir kayıt ve onun <strong>Client ID</strong> değeri gerekir.</li>
+                        <li><strong>Yönlendirme adresi:</strong> masaüstü için <code>http://localhost</code>.</li>
+                        <li><strong>API izni:</strong> Office 365 Exchange Online için temsilci izni olarak <code>IMAP.AccessAsUser.All</code>.</li>
+                        <li><strong>İstemci parolası:</strong> İstemci parolası gerekmez; giriş güvenli PKCE akışıyla tamamlanır.</li>
+                        <li><strong>Oturum açma:</strong> bu bilgisayardaki tarayıcıda kullanıcı girişi ile yapılır.</li>
+                        <li><strong>Outlook ayarları:</strong> gerekirse Outlook web ayarlarında (Ayarlar &gt; Posta &gt; POP ve IMAP) IMAP erişimini açın.</li>
+                        <li><strong>Canlı pilot güvenliği:</strong> ileride yapılacak canlı pilot, mevcut kişisel e-postalarınıza erişmeden veya silme yapmadan, yalnız ayrı bir <code>BitigMail-Test</code> klasöründeki yapay test e-postalarıyla çalışır. Otomatik testlerde gerçek posta kutusu taranmaz.</li>
                       </ul>
                       <div style={{ marginTop: '4px' }}>
                         <a
@@ -1086,7 +1096,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                           style={{ color: 'var(--brand-orange)', fontWeight: 600, textDecoration: 'underline' }}
                           data-testid="m365-personal-official-help-link"
                         >
-                          Resmi Outlook IMAP OAuth Rehberi
+                          Microsoft'un Outlook IMAP OAuth rehberi
                         </a>
                       </div>
                     </div>
@@ -1102,7 +1112,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '12px' }}>
                   <div style={{ minWidth: 0 }}>
                     <label htmlFor="m365-name-input" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                      Hesap Adı (Görünen Ad) *
+                      Hesap adı *
                     </label>
                     <input
                       id="m365-name-input"
@@ -1119,7 +1129,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
 
                   <div style={{ minWidth: 0 }}>
                     <label htmlFor="m365-email-input" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                      Posta Kutusu (E-posta Adresi) *
+                      E-posta adresi *
                     </label>
                     <input
                       id="m365-email-input"
@@ -1138,7 +1148,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                 <div style={{ display: 'grid', gridTemplateColumns: m365AuthMode === 'personal' ? '1fr' : 'repeat(auto-fit, minmax(240px, 1fr))', gap: '12px' }}>
                   <div style={{ minWidth: 0 }}>
                     <label htmlFor="m365-client-input" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                      Application (Client) ID (GUID) *
+                      Uygulama (Client) ID *
                     </label>
                     <input
                       id="m365-client-input"
@@ -1156,7 +1166,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                   {m365AuthMode === 'corporate' && (
                     <div style={{ minWidth: 0 }}>
                       <label htmlFor="m365-tenant-input" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                        Directory (Tenant) ID (GUID) *
+                        Kiracı (Tenant) ID *
                       </label>
                       <input
                         id="m365-tenant-input"
@@ -1211,8 +1221,16 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
         ) : (
           <form onSubmit={handleCreateSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
             <div style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>
-              <strong>{projectName}</strong> projesine güvenli IMAP hesabı tanımlayın. Parolanız Windows DPAPI ile şifrelenerek saklanır, düz metin tutulmaz.
+              <strong>{projectName}</strong> projesine IMAP ile bağlanan bir posta hesabı ekleyin. Parola bu bilgisayarda şifreli saklanır.
             </div>
+            <details style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }} data-testid="imap-technical-details">
+              <summary style={{ cursor: 'pointer', fontWeight: 600 }}>Teknik ayrıntılar</summary>
+              <ul style={{ margin: '6px 0 0', paddingLeft: 20, display: 'flex', flexDirection: 'column', gap: 4, lineHeight: 1.5 }}>
+                <li>Parola Windows DPAPI ile bu Windows kullanıcısına bağlı şifrelenir; düz metin tutulmaz.</li>
+                <li>Varsayılan bağlantı SSL/TLS'tir (genellikle 993 portu). STARTTLS genellikle 143 portunu kullanır.</li>
+                <li>Şifresiz bağlantı yalnız açıkça seçilip risk onaylanınca kaydedilir.</li>
+              </ul>
+            </details>
 
             {formError && (
               <div style={{ background: '#fef2f2', border: '1px solid #fecaca', borderRadius: '4px', padding: '8px 12px', fontSize: '0.8125rem', color: '#b91c1c' }}>
@@ -1223,7 +1241,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
               <div>
                 <label style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                  Hesap Adı *
+                  Hesap adı *
                 </label>
                 <input
                   type="text"
@@ -1255,7 +1273,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
             <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '12px' }}>
               <div>
                 <label style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                  IMAP Sunucusu (Host) *
+                  Sunucu adresi *
                 </label>
                 <input
                   type="text"
@@ -1286,7 +1304,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
 
               <div>
                 <label style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                  Güvenlik (TLS) *
+                  Bağlantı güvenliği *
                 </label>
                 <select
                   className="text-input"
@@ -1294,9 +1312,9 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                   onChange={(e) => handleTlsModeChange(e.target.value as 'ssl' | 'starttls' | 'none')}
                   data-testid="create-account-tls-select"
                 >
-                  <option value="ssl">SSL/TLS (Port 993)</option>
-                  <option value="starttls">STARTTLS (Port 143)</option>
-                  <option value="none">Şifreleme yok (önerilmez)</option>
+                  <option value="ssl">Şifreli: SSL/TLS (993, önerilen)</option>
+                  <option value="starttls">Şifreli: STARTTLS (143)</option>
+                  <option value="none">Şifresiz (önerilmez)</option>
                 </select>
               </div>
             </div>
@@ -1306,7 +1324,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
               <div>
                 <label style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                  Kullanıcı Adı *
+                  Kullanıcı adı *
                 </label>
                 <input
                   type="text"
@@ -1348,7 +1366,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                   data-testid="test-new-account-conn-btn"
                 >
                   <IconRefreshCw size={12} className={createTestLoading ? 'animate-spin' : ''} />
-                  <span>{createTestLoading ? 'Sınanıyor...' : 'Kaydetmeden Önce Sına'}</span>
+                  <span>{createTestLoading ? 'Sınanıyor...' : 'Kaydetmeden önce sına'}</span>
                 </button>
               </div>
 
@@ -1377,7 +1395,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                 disabled={isSubmitting || (formTlsMode === 'none' && !formAllowUnencrypted)}
                 data-testid="submit-new-account-btn"
               >
-                {isSubmitting ? 'Kaydediliyor...' : 'Hesabı Kaydet'}
+                {isSubmitting ? 'Kaydediliyor...' : 'Hesabı kaydet'}
               </button>
             </div>
           </form>
@@ -1389,7 +1407,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
       <Modal
         isOpen={editModalAccount !== null}
         onClose={closeEditModal}
-        title={editModalAccount?.authKind === 'microsoft365' ? 'Microsoft 365 Hesabını Düzenle' : 'IMAP Hesabını Düzenle'}
+        title={editModalAccount?.authKind === 'microsoft365' ? 'Microsoft hesabını düzenle' : 'Posta hesabını düzenle'}
         size="md"
       >
         {editModalAccount && (
@@ -1401,7 +1419,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
               </div>
 
               <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '10px 12px', fontSize: '0.8125rem', color: '#475569' }}>
-                Microsoft 365 hesaplarında sunucu, port, güvenlik, kullanıcı adı ve parola değiştirilemez. Yalnızca görünen adı güncelleyebilirsiniz.
+                Microsoft hesaplarında yalnız hesap adı değiştirilebilir; sunucu ve giriş bilgileri Microsoft tarafından yönetilir.
               </div>
 
               {editError && (
@@ -1412,7 +1430,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
 
               <div>
                 <label htmlFor="edit-m365-name-input" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                  Hesap Adı (Görünen Ad) *
+                  Hesap adı *
                 </label>
                 <input
                   id="edit-m365-name-input"
@@ -1428,7 +1446,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                 <div>
                   <label htmlFor="edit-m365-email-readonly" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px', color: 'var(--text-muted)' }}>
-                    Posta Kutusu (Değişmez)
+                    E-posta adresi (değişmez)
                   </label>
                   <input
                     id="edit-m365-email-readonly"
@@ -1441,7 +1459,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                 </div>
                 <div>
                   <label htmlFor="edit-m365-server-readonly" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px', color: 'var(--text-muted)' }}>
-                    Sunucu (Sabit Exchange Online)
+                    Sunucu (Microsoft, sabit)
                   </label>
                   <input
                     id="edit-m365-server-readonly"
@@ -1488,7 +1506,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                 <div>
                   <label htmlFor="edit-account-name-input" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                    Hesap Adı *
+                    Hesap adı *
                   </label>
                   <input
                     id="edit-account-name-input"
@@ -1520,7 +1538,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
               <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '12px' }}>
                 <div>
                   <label htmlFor="edit-account-host-input" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                    IMAP Sunucusu (Host) *
+                    Sunucu adresi *
                   </label>
                   <input
                     id="edit-account-host-input"
@@ -1552,7 +1570,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
 
                 <div>
                   <label htmlFor="edit-account-tls-select" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                    Güvenlik (TLS) *
+                    Bağlantı güvenliği *
                   </label>
                   <select
                     id="edit-account-tls-select"
@@ -1561,9 +1579,9 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                     onChange={(e) => handleEditTlsModeChange(e.target.value as 'ssl' | 'starttls' | 'none')}
                     data-testid="edit-account-tls-select"
                   >
-                    <option value="none">Şifreleme yok (önerilmez)</option>
-                    <option value="ssl">SSL/TLS (Port 993)</option>
-                    <option value="starttls">STARTTLS (Port 143)</option>
+                    <option value="none">Şifresiz (önerilmez)</option>
+                    <option value="ssl">Şifreli: SSL/TLS (993, önerilen)</option>
+                    <option value="starttls">Şifreli: STARTTLS (143)</option>
                   </select>
                 </div>
               </div>
@@ -1573,7 +1591,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                 <div>
                   <label htmlFor="edit-account-username-input" style={{ display: 'block', fontSize: '0.8125rem', fontWeight: 600, marginBottom: '4px' }}>
-                    Kullanıcı Adı *
+                    Kullanıcı adı *
                   </label>
                   <input
                     id="edit-account-username-input"
@@ -1641,7 +1659,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
         {reconnectModalAccount && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
             <div style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>
-              <strong>{reconnectModalAccount.displayName}</strong> ({reconnectModalAccount.tenantId === 'consumers' ? 'Kişisel Outlook.com / Hotmail' : 'Kurumsal Microsoft 365'}) hesabının oturumunu güvenle yenileyin. {reconnectModalAccount.tenantId === 'consumers' ? 'İstemci (Client) ve Posta Kutusu kimlikleri değişmezdir.' : 'Kiracı (Tenant), İstemci (Client) ve Posta Kutusu kimlikleri değişmezdir.'}
+              <strong>{reconnectModalAccount.displayName}</strong> ({reconnectModalAccount.tenantId === 'consumers' ? 'Kişisel Outlook.com / Hotmail' : 'Kurumsal Microsoft 365'}) hesabının Microsoft girişini yenileyin. {reconnectModalAccount.tenantId === 'consumers' ? 'Hesap ve uygulama kimlikleri değişmez.' : 'Hesap, uygulama ve kiracı kimlikleri değişmez.'}
             </div>
 
             <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px', fontSize: '0.8125rem', display: 'flex', flexDirection: 'column', gap: '6px', wordBreak: 'break-all' }}>
@@ -1691,11 +1709,11 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
         )}
       </Modal>
 
-      <Modal isOpen={googleReconnectAccount !== null} onClose={() => { googleOAuth.resetSession(true); setGoogleReconnectSecret(''); setGoogleReconnectAccount(null); }} title="Google Hesabını Yeniden Yetkilendir" size="md">
+      <Modal isOpen={googleReconnectAccount !== null} onClose={() => { googleOAuth.resetSession(true); setGoogleReconnectSecret(''); setGoogleReconnectAccount(null); }} title="Google girişini yenile" size="md">
         {googleReconnectAccount && <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }} data-testid="google-reconnect-panel">
           <div><strong>{googleReconnectAccount.displayName}</strong> · {googleReconnectAccount.email}</div>
           {googleOAuth.status === 'idle' ? <>
-            <input className="text-input" type="password" autoComplete="off" value={googleReconnectSecret} onChange={e => setGoogleReconnectSecret(e.target.value)} placeholder="Google masaüstü Client Secret" data-testid="google-reconnect-secret" />
+            <input className="text-input" type="password" autoComplete="off" value={googleReconnectSecret} onChange={e => setGoogleReconnectSecret(e.target.value)} placeholder="Client Secret" data-testid="google-reconnect-secret" />
             <button type="button" className="btn btn-orange" onClick={handleGoogleReconnect} disabled={!googleReconnectSecret} data-testid="start-google-reconnect-btn">Yeniden Yetkilendirmeyi Başlat</button>
           </> : <div>{googleOAuth.validatedUrl && <a href={googleOAuth.validatedUrl} target="_blank" rel="noreferrer noopener" className="btn btn-orange">Google ile giriş yap</a>}{googleOAuth.message || googleOAuth.error}</div>}
         </div>}
@@ -1705,7 +1723,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
       <Modal
         isOpen={deleteModalAccount !== null}
         onClose={() => setDeleteModalAccount(null)}
-        title={deleteModalAccount?.authKind === 'microsoft365' ? 'Microsoft 365 Yerel Bağlantısını Kaldır' : deleteModalAccount?.authKind === 'google' ? 'Google Yerel Bağlantısını Kaldır' : 'IMAP Hesabını Sil'}
+        title={deleteModalAccount?.authKind === 'microsoft365' ? 'Microsoft bağlantısını kaldır' : deleteModalAccount?.authKind === 'google' ? 'Google bağlantısını kaldır' : 'Posta hesabını sil'}
         size="sm"
       >
         {deleteModalAccount && (
@@ -1719,12 +1737,12 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                 {deleteModalAccount.authKind === 'microsoft365' || deleteModalAccount.authKind === 'google' ? (
                   <p style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', margin: 0 }}>
                     Bu işlem yalnızca BitigMail içindeki yerel hesap kaydını ve kimlik önbelleğini kaldırır.
-                    <strong> {deleteModalAccount.authKind === 'microsoft365' ? 'Microsoft tarafında verilmiş olan izinleri iptal etmez' : 'Google tarafında verilmiş olan izinleri iptal etmez'} (grant revocation yapılmaz).</strong> Uzak posta kutusundaki iletiler veya klasörler kesinlikle silinmez.
+                    <strong> {deleteModalAccount.authKind === 'microsoft365' ? 'Microsoft tarafında verilmiş olan izinleri iptal etmez' : 'Google tarafında verilmiş olan izinleri iptal etmez'}.</strong> Uzak posta kutusundaki iletiler veya klasörler kesinlikle silinmez.
                   </p>
                 ) : (
                   <p style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', margin: 0 }}>
                     Bu işlem yalnızca BitigMail içindeki yerel hesap kaydını ve şifrelenmiş kimlik bilgilerini siler.
-                    <strong> Uzak IMAP sunucusundaki iletiler veya klasörler kesinlikle silinmez.</strong>
+                    <strong> Posta sunucusundaki iletiler veya klasörler kesinlikle silinmez.</strong>
                   </p>
                 )}
               </div>
@@ -1746,7 +1764,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
                 disabled={isSubmitting}
                 data-testid="confirm-delete-account-btn"
               >
-                {isSubmitting ? 'Kaldırılıyor...' : (deleteModalAccount.authKind === 'microsoft365' || deleteModalAccount.authKind === 'google' ? 'Yerel bağlantıyı kaldır' : 'Evet, Hesabı Kaldır')}
+                {isSubmitting ? 'Kaldırılıyor...' : (deleteModalAccount.authKind === 'microsoft365' || deleteModalAccount.authKind === 'google' ? 'Yerel bağlantıyı kaldır' : 'Evet, hesabı kaldır')}
               </button>
             </div>
           </div>
@@ -1764,7 +1782,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
           <div>
             <div style={{ marginBottom: '14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>
-                Sunucudan doğrudan okunan gerçek klasör hiyerarşisi ve ileti sayıları
+                Sunucudan okunan klasörler ve ileti sayıları
               </span>
               <button
                 className="btn btn-outline-gray"
@@ -1783,7 +1801,7 @@ export const ProjectImapAccounts: React.FC<ProjectImapAccountsProps> = ({
               if (!state || state.loading) {
                 return (
                   <div style={{ padding: '36px', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
-                    IMAP klasörleri taranıyor...
+                    Klasörler okunuyor...
                   </div>
                 );
               }
