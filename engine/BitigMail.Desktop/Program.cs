@@ -66,7 +66,7 @@ internal sealed class MainForm:Form
             var psi=new ProcessStartInfo(engine,$"--desktop-port {_port} --profile \"{_profile}\" --static-root \"{ui}\""){UseShellExecute=false,RedirectStandardInput=true,RedirectStandardOutput=true,CreateNoWindow=true,WorkingDirectory=AppContext.BaseDirectory};
             _engine=Process.Start(psi)??throw new InvalidOperationException("Yerel motor başlatılamadı.");await _engine.StandardInput.BaseStream.WriteAsync(proof);await _engine.StandardInput.BaseStream.FlushAsync();CryptographicOperations.ZeroMemory(proof);
             await WaitOwnedReadyAsync(expected);_ = PumpOutputAsync();await WaitHttpReadyAsync();
-            string webData=Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"BitigMail","WebView2");await _web.EnsureCoreWebView2Async(await CoreWebView2Environment.CreateAsync(null,webData));
+            string webData=DesktopWebViewDataFolder.Resolve(_profile,Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));await _web.EnsureCoreWebView2Async(await CoreWebView2Environment.CreateAsync(null,webData));
             await _web.CoreWebView2.AddScriptToExecuteOnDocumentCreatedAsync($"if(window===top)window.__BITIGMAIL_ENGINE_URL__={JsonSerializer.Serialize(_origin.TrimEnd('/'))};");
             _web.CoreWebView2.NavigationStarting+=(s,e)=>{if(!_policy.IsTrustedDocument(e.Uri))e.Cancel=true;};
             _web.CoreWebView2.NewWindowRequested+=(s,e)=>{e.Handled=true;if(_policy.MayOpenInSystemBrowser(e.Uri,e.IsUserInitiated))Process.Start(new ProcessStartInfo(e.Uri){UseShellExecute=true});};
