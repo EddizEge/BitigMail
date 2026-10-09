@@ -1496,3 +1496,13 @@ input[type="radio"]:focus-visible {
 .clients-body { padding: 16px 28px; max-width: 1200px; width: 100%; margin: 0 auto; overflow-y: auto; min-width: 0; }
 .company-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; }
 @media (max-width: 680px) { .clients-body { padding: 14px 12px; } }
+
+/* Aktarım / dönüşüm akışları: yinelenen satır içi stillerin birebir karşılığı (görünüm değişmez). */
+.wf-note { font-size: 0.75rem; color: var(--text-muted); }
+.wf-note-strong { font-size: 0.75rem; color: var(--text-muted); font-weight: 600; }
+.wf-caption { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); }
+.wf-wrap { min-width: 0; overflow-wrap: anywhere; }
+.wf-row { display: flex; align-items: center; gap: 6px; }
+.wf-stack { display: flex; flex-direction: column; gap: 6px; }
+.wf-panel { background: #ffffff; padding: 10px 14px; border-radius: 6px; border: 1px solid var(--border-light); }
+.wf-subtle-box { background: var(--bg-subtle); padding: 12px; border-radius: 6px; }

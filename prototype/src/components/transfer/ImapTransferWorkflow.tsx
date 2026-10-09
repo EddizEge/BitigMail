@@ -185,7 +185,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
           }}
           data-testid="imap-to-bridge-switcher"
         >
-          <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
+          <span className="wf-caption">
             Diğer aktarım yönleri
           </span>
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
@@ -392,7 +392,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
                             />
                           </td>
                           <td style={{ padding: '8px 12px', fontSize: '0.8125rem' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                            <div className="wf-row">
                               <IconFolder size={14} color="var(--brand-orange)" />
                               <span style={{ fontWeight: isSelected ? 600 : 400 }}>{f.fullPath}</span>
                               {!f.isSelectable && (
@@ -544,8 +544,8 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
 
           {/* Counts Grid */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '12px', marginBottom: '18px' }}>
-            <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Toplam kaynak</div>
+            <div className="wf-subtle-box">
+              <div className="wf-note-strong">Toplam kaynak</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '2px' }} data-testid="preview-total-count">
                 {preview.totalSourceItems}
               </div>
@@ -558,22 +558,22 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
               </div>
             </div>
 
-            <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Filtre dışı kalan</div>
+            <div className="wf-subtle-box">
+              <div className="wf-note-strong">Filtre dışı kalan</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '2px' }} data-testid="preview-excluded-count">
                 {preview.excludedCount}
               </div>
             </div>
 
-            <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Tarihi eksik (dışlanan)</div>
+            <div className="wf-subtle-box">
+              <div className="wf-note-strong">Tarihi eksik (dışlanan)</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, marginTop: '2px' }} data-testid="preview-missing-date-count">
                 {preview.missingDateExcludedCount}
               </div>
             </div>
 
-            <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Silindi işaretli</div>
+            <div className="wf-subtle-box">
+              <div className="wf-note-strong">Silindi işaretli</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, color: preview.deletedExcludedCount > 0 ? '#b91c1c' : 'inherit', marginTop: '2px' }} data-testid="preview-deleted-count">
                 {preview.deletedExcludedCount}
               </div>
@@ -641,7 +641,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
               <h3 style={{ fontSize: '1.0625rem', fontWeight: 700, margin: 0 }}>
                 İşlem Durumu: {currentJob.stage}
               </h3>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+              <div className="wf-note">
                 İş No: <code>{currentJob.jobId}</code>
               </div>
             </div>
@@ -779,7 +779,7 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
           {(report.imapTransfer.startDate || report.imapTransfer.endDate) && <p>Tarih aralığı: {report.imapTransfer.startDate || 'Başlangıç sınırı yok'} — {report.imapTransfer.endDate || 'Bitiş sınırı yok'} (UTC+03)</p>}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: '12px', marginBottom: '16px' }}>
             <div style={{ background: 'var(--bg-subtle)', padding: '10px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Planlanan</div>
+              <div className="wf-note">Planlanan</div>
               <div style={{ fontSize: '1.125rem', fontWeight: 700 }}>{report.imapTransfer.totalPlanned}</div>
             </div>
             <div style={{ background: '#f0fdf4', padding: '10px', borderRadius: '6px' }}>
@@ -787,11 +787,11 @@ export const ImapTransferWorkflow: React.FC<ImapTransferWorkflowProps> = ({
               <div style={{ fontSize: '1.125rem', fontWeight: 700, color: '#15803d' }}>{report.imapTransfer.totalVerified}</div>
             </div>
             <div style={{ background: 'var(--bg-subtle)', padding: '10px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>İnceleme gerekli</div>
+              <div className="wf-note">İnceleme gerekli</div>
               <div style={{ fontSize: '1.125rem', fontWeight: 700 }}>{report.imapTransfer.totalNeedsAttention}</div>
             </div>
             <div style={{ background: 'var(--bg-subtle)', padding: '10px', borderRadius: '6px' }}>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Başarısız</div>
+              <div className="wf-note">Başarısız</div>
               <div style={{ fontSize: '1.125rem', fontWeight: 700 }}>{report.imapTransfer.totalFailed}</div>
             </div>
           </div>

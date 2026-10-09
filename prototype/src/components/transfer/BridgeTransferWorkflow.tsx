@@ -389,7 +389,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
 
           {/* Source Mode Pickers */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
+            <span className="wf-caption">
               Kaynak türü ve dosya
             </span>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
@@ -464,8 +464,8 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           </div>
 
           {/* Target Account Dropdown with Corporate/Personal labels */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
+          <div className="wf-stack">
+            <span className="wf-caption">
               Hedef posta hesabı
             </span>
             <select
@@ -491,7 +491,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           {sourceDescriptor && sourceDescriptor.folders.length > 0 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '8px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
+                <span className="wf-caption">
                   KAYNAK KLASÖRLER VE HEDEF EŞLEŞTİRMELERİ ({selectedSourceFolders.length} / {sourceDescriptor.folders.length} seçili):
                 </span>
                 <div style={{ display: 'flex', gap: '8px' }}>
@@ -553,12 +553,12 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                           data-testid={`checkbox-folder-${name}`}
                         />
                         <span style={{ fontWeight: 600, fontSize: '0.875rem' }}>{name}</span>
-                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>({count} ileti)</span>
+                        <span className="wf-note">({count} ileti)</span>
                       </label>
 
                       {isChecked && (
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Hedef klasör:</span>
+                        <div className="wf-row">
+                          <span className="wf-note">Hedef klasör:</span>
                           <input
                             type="text"
                             className="text-input"
@@ -579,11 +579,11 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
 
           {/* Date Filter */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
+            <span className="wf-caption">
               Tarih filtresi (isteğe bağlı, seçilen günler dahil)
             </span>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <div className="wf-row">
                 <span style={{ fontSize: '0.8125rem' }}>Başlangıç:</span>
                 <input
                   type="date"
@@ -594,7 +594,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                   data-testid="bridge-start-date-input"
                 />
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <div className="wf-row">
                 <span style={{ fontSize: '0.8125rem' }}>Bitiş:</span>
                 <input
                   type="date"
@@ -652,8 +652,8 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           </h3>
 
           {/* Source Account Dropdown */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
+          <div className="wf-stack">
+            <span className="wf-caption">
               Kaynak posta hesabı
             </span>
             <select
@@ -689,7 +689,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           {sourceFolders.length > 0 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
+                <span className="wf-caption">
                   DIŞA AKTARILACAK KLASÖRLER ({selectedImapFolders.length} / {sourceFolders.length} seçili):
                 </span>
                 <div style={{ display: 'flex', gap: '8px' }}>
@@ -746,7 +746,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                       />
                       <span style={{ fontWeight: 600, fontSize: '0.875rem' }}>{fld.fullPath}</span>
                       {fld.messageCount != null && (
-                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                        <span className="wf-note">
                           ({fld.messageCount} ileti)
                         </span>
                       )}
@@ -758,8 +758,8 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           )}
 
           {/* Target Output Parent Directory Picker */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
+          <div className="wf-stack">
+            <span className="wf-caption">
               Çıktının yazılacağı üst klasör
             </span>
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
@@ -793,8 +793,8 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
           </div>
 
           {/* Target Output Format */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
+          <div className="wf-stack">
+            <span className="wf-caption">
               Çıktı biçimi
             </span>
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
@@ -826,11 +826,11 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
 
           {/* Date Filter */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
+            <span className="wf-caption">
               Tarih filtresi (isteğe bağlı, seçilen günler dahil)
             </span>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <div className="wf-row">
                 <span style={{ fontSize: '0.8125rem' }}>Başlangıç:</span>
                 <input
                   type="date"
@@ -841,7 +841,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                   data-testid="bridge-export-start-date-input"
                 />
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <div className="wf-row">
                 <span style={{ fontSize: '0.8125rem' }}>Bitiş:</span>
                 <input
                   type="date"
@@ -903,7 +903,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                 {preview.canTransfer ? 'Aktarıma hazır' : 'Ön Kontrol Engeli Var'}
               </Badge>
             </div>
-            <details style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+            <details className="wf-note">
               <summary style={{ cursor: 'pointer', display: 'inline' }}>Plan ayrıntısı</summary>
               <span> Plan No: {preview.previewId}</span>
             </details>
@@ -917,16 +917,16 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
               gap: '12px',
             }}
           >
-            <div style={{ background: '#ffffff', padding: '10px 14px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
-              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Toplam kaynak</span>
+            <div className="wf-panel">
+              <span className="wf-note">Toplam kaynak</span>
               <div style={{ fontSize: '1.25rem', fontWeight: 700 }} data-testid="preview-total-items">
                 {preview.totalSourceItems}
               </div>
             </div>
 
             {'estimatedRequiredBytes' in preview && preview.estimatedRequiredBytes != null && (
-              <div style={{ background: '#ffffff', padding: '10px 14px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Tahmini gereken alan</span>
+              <div className="wf-panel">
+                <span className="wf-note">Tahmini gereken alan</span>
                 <div style={{ fontSize: '1rem', fontWeight: 700 }} data-testid="preview-estimated-required-bytes">
                   {formatCapacity(preview.estimatedRequiredBytes)}
                 </div>
@@ -934,30 +934,30 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
             )}
 
             {'availableFreeBytes' in preview && preview.availableFreeBytes != null && (
-              <div style={{ background: '#ffffff', padding: '10px 14px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Kullanılabilir alan</span>
+              <div className="wf-panel">
+                <span className="wf-note">Kullanılabilir alan</span>
                 <div style={{ fontSize: '1rem', fontWeight: 700 }} data-testid="preview-available-free-bytes">
                   {formatCapacity(preview.availableFreeBytes)}
                 </div>
               </div>
             )}
 
-            <div style={{ background: '#ffffff', padding: '10px 14px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
+            <div className="wf-panel">
               <span style={{ fontSize: '0.75rem', color: 'var(--status-success)' }}>Uygun İletiler</span>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--status-success)' }} data-testid="preview-eligible-items">
                 {preview.eligibleItemsCount}
               </div>
             </div>
 
-            <div style={{ background: '#ffffff', padding: '10px 14px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
-              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Filtre dışı</span>
+            <div className="wf-panel">
+              <span className="wf-note">Filtre dışı</span>
               <div style={{ fontSize: '1.25rem', fontWeight: 700 }} data-testid="preview-excluded-items">
                 {preview.excludedCount}
               </div>
             </div>
 
             {'deletedExcludedCount' in preview && (preview as any).deletedExcludedCount > 0 && (
-              <div style={{ background: '#ffffff', padding: '10px 14px', borderRadius: '6px', border: '1px solid var(--border-light)' }}>
+              <div className="wf-panel">
                 <span style={{ fontSize: '0.75rem', color: 'var(--status-error)' }}>Silinmiş (\\Deleted)</span>
                 <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--status-error)' }} data-testid="preview-deleted-excluded">
                   {(preview as any).deletedExcludedCount}
@@ -975,8 +975,8 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
 
           {/* Folder Breakdown */}
           {preview.folders && preview.folders.length > 0 && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-muted)' }}>
+            <div className="wf-stack">
+              <span className="wf-caption">
                 Klasör dökümü
               </span>
               <div style={{ border: '1px solid var(--border-light)', borderRadius: '6px', background: '#ffffff', overflow: 'hidden' }}>
@@ -1079,7 +1079,7 @@ export const BridgeTransferWorkflow: React.FC<BridgeTransferWorkflowProps> = ({
                   : 'Çalışıyor'}
               </Badge>
             </div>
-            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+            <span className="wf-note">
               Aşama: {currentJob.stage}
             </span>
           </div>

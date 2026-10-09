@@ -223,14 +223,14 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
         ) : (
           <div style={{ minWidth: 0, maxWidth: '100%' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '12px', background: 'var(--bg-subtle)', padding: '14px', borderRadius: '6px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
-              <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Dosya adı</span>
+              <div className="wf-wrap">
+                <span className="wf-note-strong">Dosya adı</span>
                 <div style={{ fontWeight: 600, overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }} data-testid="source-filename">
                   {localEngine.selectedSource.fileName}
                 </div>
               </div>
               <div style={{ minWidth: 0 }}>
-                <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Boyut</span>
+                <span className="wf-note-strong">Boyut</span>
                 <div style={{ fontWeight: 600 }}>{formatBytes(localEngine.selectedSource.sizeBytes)}</div>
               </div>
               {localEngine.analysis && (
@@ -241,7 +241,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
               )}
               {localEngine.selectedSource.displayPath && (
                 <div style={{ gridColumn: '1 / -1', minWidth: 0, maxWidth: '100%', overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Kaynak dosya konumu</span>
+                  <span className="wf-note-strong">Kaynak dosya konumu</span>
                   <div style={{ fontSize: '0.8125rem', fontFamily: 'monospace', overflowWrap: 'anywhere', wordBreak: 'break-all', color: 'var(--text-primary)', minWidth: 0 }} data-testid="source-display-path">
                     {localEngine.selectedSource.displayPath}
                   </div>
@@ -276,19 +276,19 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 120px), 1fr))', gap: '10px', marginBottom: '16px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
             <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px', textAlign: 'center', minWidth: 0 }}>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--brand-orange)' }}>{localEngine.analysis.totalItems}</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Fiziksel İleti</div>
+              <div className="wf-note">Fiziksel İleti</div>
             </div>
             <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px', textAlign: 'center', minWidth: 0 }}>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#2563eb' }}>{localEngine.analysis.totalAttachments}</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Ek / Görsel</div>
+              <div className="wf-note">Ek / Görsel</div>
             </div>
             <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px', textAlign: 'center', minWidth: 0 }}>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#16a34a' }}>{localEngine.analysis.activeFoldersCount}</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Dolu klasör</div>
+              <div className="wf-note">Dolu klasör</div>
             </div>
             <div style={{ background: 'var(--bg-subtle)', padding: '12px', borderRadius: '6px', textAlign: 'center', minWidth: 0 }}>
               <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }}>{localEngine.analysis.emptyFoldersCount}</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Boş klasör</div>
+              <div className="wf-note">Boş klasör</div>
             </div>
           </div>
 
@@ -566,25 +566,25 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
                     <div style={{ fontSize: '1.25rem', fontWeight: 700, color: '#16a34a' }} data-testid="preview-selected-count">
                       {localEngine.selectionPreview.selectedMessagesCount}
                     </div>
-                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Seçilen İleti</div>
+                    <div className="wf-note">Seçilen İleti</div>
                   </div>
                   <div style={{ background: '#ffffff', padding: '10px', borderRadius: '6px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
                     <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--brand-orange)' }} data-testid="preview-attachments-count">
                       {localEngine.selectionPreview.selectedAttachmentsCount}
                     </div>
-                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Seçilen ek</div>
+                    <div className="wf-note">Seçilen ek</div>
                   </div>
                   <div style={{ background: '#ffffff', padding: '10px', borderRadius: '6px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
                     <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }} data-testid="preview-excluded-count">
                       {localEngine.selectionPreview.excludedMessagesCount}
                     </div>
-                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Hariç tutulan</div>
+                    <div className="wf-note">Hariç tutulan</div>
                   </div>
                   <div style={{ background: '#ffffff', padding: '10px', borderRadius: '6px', textAlign: 'center', border: '1px solid #e2e8f0' }}>
                     <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--text-muted)' }} data-testid="preview-total-count">
                       {localEngine.selectionPreview.totalSourceMessages}
                     </div>
-                    <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Kaynak toplam</div>
+                    <div className="wf-note">Kaynak toplam</div>
                   </div>
                 </div>
 
@@ -650,7 +650,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', background: 'var(--bg-subtle)', padding: '12px 16px', borderRadius: '6px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px', minWidth: 0, maxWidth: '100%' }}>
                 <div style={{ minWidth: 0, flex: '1 1 auto', overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Hedef dosya adı</span>
+                  <span className="wf-note-strong">Hedef dosya adı</span>
                   <div style={{ fontWeight: 600, overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }} data-testid="target-filename">{localEngine.selectedTarget.fileName}</div>
                 </div>
                 <span style={{ flexShrink: 0 }}>
@@ -659,7 +659,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
               </div>
               {localEngine.selectedTarget.displayPath && (
                 <div style={{ minWidth: 0, maxWidth: '100%', overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Hedef dosya konumu</span>
+                  <span className="wf-note-strong">Hedef dosya konumu</span>
                   <div style={{ fontSize: '0.8125rem', fontFamily: 'monospace', overflowWrap: 'anywhere', wordBreak: 'break-all', color: 'var(--text-primary)', minWidth: 0 }} data-testid="target-display-path">
                     {localEngine.selectedTarget.displayPath}
                   </div>
@@ -717,21 +717,21 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
               {/* Progress Counters */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 120px), 1fr))', gap: '10px', background: 'var(--bg-subtle)', padding: '14px', borderRadius: '6px', marginBottom: '14px', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
                 <div style={{ minWidth: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Okunan</span>
+                  <span className="wf-note-strong">Okunan</span>
                   <div style={{ fontSize: '1.125rem', fontWeight: 700 }} data-testid="counter-items-read">{localEngine.activeJob.itemsRead}</div>
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Yazılan</span>
+                  <span className="wf-note-strong">Yazılan</span>
                   <div style={{ fontSize: '1.125rem', fontWeight: 700, color: '#16a34a' }} data-testid="counter-items-written">{localEngine.activeJob.itemsWritten}</div>
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Başarısız</span>
+                  <span className="wf-note-strong">Başarısız</span>
                   <div style={{ fontSize: '1.125rem', fontWeight: 700, color: localEngine.activeJob.failedItems > 0 ? '#dc2626' : 'var(--text-muted)' }}>
                     {localEngine.activeJob.failedItems}
                   </div>
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>İşlenen klasör</span>
+                  <span className="wf-note-strong">İşlenen klasör</span>
                   <div style={{ fontSize: '0.8125rem', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', overflowWrap: 'anywhere', wordBreak: 'break-all' }}>
                     {localEngine.activeJob.currentFolder || '—'}
                   </div>
@@ -794,7 +794,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
             {outputLocation && (
               <div style={{ gridColumn: '1 / -1', background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '10px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px', flexWrap: 'wrap', minWidth: 0, maxWidth: '100%', boxSizing: 'border-box' }}>
                 <div style={{ minWidth: 0, flex: '1 1 200px', overflowWrap: 'anywhere' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 600 }}>Tamamlanan çıktı konumu</span>
+                  <span className="wf-note-strong">Tamamlanan çıktı konumu</span>
                   <div style={{ fontSize: '0.8125rem', fontFamily: 'monospace', overflowWrap: 'anywhere', wordBreak: 'break-all', color: 'var(--text-primary)', fontWeight: 600, minWidth: 0 }} data-testid="output-location-path">
                     {outputLocation}
                   </div>
@@ -850,7 +850,7 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
               </div>
             )}
             {localEngine.jobReport.clientContext && (
-              <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
+              <div className="wf-wrap">
                 <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>Müşteri / proje</span>
                 <div style={{ fontWeight: 700, overflowWrap: 'anywhere', wordBreak: 'break-word', minWidth: 0 }} data-testid="report-client-context">
                   {localEngine.jobReport.clientContext.companyName} / {localEngine.jobReport.clientContext.projectName}
@@ -858,19 +858,19 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
                 <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Kayıtlı müşteri / proje</div>
               </div>
             )}
-            <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
+            <div className="wf-wrap">
               <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>İş no</span>
               <div style={{ fontWeight: 700, fontFamily: 'monospace', fontSize: '0.8125rem', overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }} data-testid="report-job-id">
                 {localEngine.jobReport.jobId}
               </div>
               <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Doğrulanmış İş Kaydı</div>
             </div>
-            <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
+            <div className="wf-wrap">
               <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>OLUŞTURULAN PST</span>
               <div style={{ fontWeight: 700, overflowWrap: 'anywhere', wordBreak: 'break-all', minWidth: 0 }}>{localEngine.jobReport.outputPstFileName}</div>
               <div style={{ fontSize: '0.75rem', color: '#15803d' }}>{formatBytes(localEngine.jobReport.outputPstSizeBytes)}</div>
             </div>
-            <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
+            <div className="wf-wrap">
               <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>
                 {localEngine.jobReport.isFiltered ? 'Dönüştürülen / seçilen' : 'Dönüştürülen / okunan'}
               </span>
@@ -881,14 +881,14 @@ export const LocalConvertWorkflow: React.FC<LocalConvertWorkflowProps> = ({ stat
               </div>
               <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Süre: {localEngine.jobReport.elapsedMilliseconds} ms</div>
             </div>
-            <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
+            <div className="wf-wrap">
               <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>Kaynak dosya bütünlüğü</span>
               <div style={{ fontWeight: 700, color: localEngine.jobReport.sourceHashMatch ? '#166534' : '#dc2626' }}>
                 {localEngine.jobReport.sourceHashMatch ? 'Bit düzeyinde eşleşti' : 'Uyuşmazlık'}
               </div>
               <div style={{ fontSize: '0.75rem', color: '#15803d' }}>Sıfır değişiklik</div>
             </div>
-            <div style={{ minWidth: 0, overflowWrap: 'anywhere' }}>
+            <div className="wf-wrap">
               <span style={{ fontSize: '0.75rem', color: '#166534', fontWeight: 600 }}>Ek ve CID doğrulaması</span>
               <div style={{ fontWeight: 700 }}>
                 {localEngine.jobReport.reopenedPstVerification.totalAttachmentsVerified} Ek, {localEngine.jobReport.reopenedPstVerification.totalCidVerified} CID
