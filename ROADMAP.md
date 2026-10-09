@@ -1,10 +1,102 @@
 # BitigMail — Ana plan ve yol haritası
 
-Son güncelleme: 2026-09-15
+Son güncelleme: 2026-10-09 (sürüm 0.9.4)
 
-Bu dosya projenin başlangıç noktasıdır. Yeni bir çalışma başlamadan güncel aşama, kararlar ve sıradaki iş buradan okunur. Kullanıcının sonraki kararları bu dosyaya işlenir; sohbet geçmişine bağımlı kalınmaz.
+Bu dosya projenin başlangıç noktasıdır: güncel aşama durumu, kalıcı ürün ilkeleri ve tarihli geçmiş kayıt. Daha ayrıntılı ve tarihli kabul listesi: [tam sürüm listesi](docs/FULL_RELEASE_ROADMAP.md). Kullanıcı rehberi: [docs/KULLANIM_REHBERI.md](docs/KULLANIM_REHBERI.md).
 
-## 1. Bugünkü durum
+## Güncel durum
+
+**Sürüm 0.9.4 (imzasız iç test sürümü).** Ekranlar sadeleştirildi: üst menü iş sırasında (Müşteriler → Aktarım ve dönüşüm → İş merkezi → Arşiv ve arama → Raporlar), her ekranda tek tip başlık ve açıklama, üç adımlı aktarım ekranı (işlemi seç → türünü/yönünü seç → yalnız o akışın adımları), boş kurulumda dört adımlı "Başlarken" kartı, oturum açılmış uygulamada örnek kayıt yok. 0.9.3'te oturum açıkken OST → PST, PST bölme ve EML/MBOX → PST ekranlarının motoru "çevrimdışı" sanması düzeltildi. Durum çubuğundaki sürüm derlemeden gelir.
+
+Gerçek akışlar (yerel kabul): OST → PST; EML/mboxrd → PST; PST/OST bölme; EML/mboxrd ↔ IMAP; IMAP → IMAP kopyalama; POP → EML; PST/OST/OLM → EML; Apple Mail EMLX → EML; yönetilen yerel arşiv ve çok müşterili arama; arşivden seçili sonuçları EML'e çıkarma; hasarlı PST/OST'tan yeni EML klasörüne kurtarma. Kapsam ve sınırlar: [format ve yön matrisi](docs/FORMAT_DIRECTION_MATRIX.md).
+
+Bağlantı güvenliği: parola tabanlı IMAP/POP'ta varsayılan SSL/TLS; zorunlu STARTTLS seçilebilir; şifresiz bağlantı yalnız hesap bazında açık onayla (TASK043). Kendiliğinden şifresize düşme yok.
+
+Son tarihli tam test kaydı 0.9.3'e aittir: 21 Eylül 2026, 892 motor / 151 arayüz testi ([Windows kabul kaydı](docs/WINDOWS_RELEASE_ACCEPTANCE.md)).
+
+### Aşama tablosu
+
+| Aşama | Durum |
+|---|---|
+| 1 — İş deneyimi | Tamamlandı (TASK021): ilerleme, son doğrulama, desteklenen işlerde açık devam |
+| 2 — Performans ve kuyruk | Yerel kabul (TASK022–029): tek çalışan iş, 32 bekleyen; yaklaşık 1 GiB ölçüm ve bütünlük. Büyük ölçek açık |
+| 3 — Servis bağlantıları | Yerel kabul (TASK031): Microsoft ve Google OAuth altyapısı. Canlı sağlayıcı kabulü açık |
+| 4 — Formatlar | Yerel kabul: Mac (OLM/EMLX) normalizasyonu, Outlook → EML, POP → EML, uyarıların sonraki işlere taşınması. Biçim ve tarih sınırları sürer |
+| 5 — Üretim SDK ve ölçek | Lisans doğrulama altyapısı var. Ticari Aspose lisansı ve temsilî büyük dosya (10–100 GB) kabulü açık |
+| 6 — Kurtarma | Yerel kabul: ayrı işçi süreç, kontrollü küçük hasarlar, öğe düzeyi rapor. Gerçek hasarlı geniş veri seti açık |
+| 7 — Gelişmiş yönetim | Yerel kabul (TASK037): VE/VEYA filtre, klasör eşleme, şablon, seçili arşiv çıktısı, öncelik, yinelenme politikası |
+| 8 — Kurumsal işletim | Yerel kabul (TASK038/039): yerel yetki, denetim kaydı, yedek/geri yükleme, saklama önizlemesi, teslim raporu |
+| 9 — Windows ürünü | Kabuk, kurulum, güncelleme, geri dönüş, kaldırma yerel kabul. 0.9.3 (TASK043) ve 0.9.4 arayüz sürümleri. Kod imzalama ve temiz Windows kabulü açık |
+| 10 — Pilot ve ticari 1.0 | Bilerek ertelendi: Azure uygulama kaydı ve gerçek kişisel Outlook hesabında kaynak silmeden pilot; diğer canlı sağlayıcılar; BT firması pilotları; lisans, fiyat, marka ve yayın kararları |
+
+"Yerel kabul" geliştirme bilgisayarında testlerle doğrulandı demektir; gerçek sağlayıcı, lisanslı çıktı ve ticari yayın kabulü ayrı şeylerdir.
+
+### Açık kapılar (1.0 öncesi)
+
+- Kod imzalama sertifikası yok; temiz Windows kurulumunda kabul yapılmadı.
+- Aspose deneme sürümü: PST çıktılarında değerlendirme işaretleri, klasör başına 50 öğeyi aşan PST/OST kaynaklarında engel (IMAP aktarımında yok).
+- 10–100 GB ve gerçek hasarlı dosya kabulü yok.
+- Microsoft 365, kişisel Outlook ve Google ile canlı pilot yok (10. aşama).
+- MBOX yalnız mboxrd; OLM/EMLX özgün tarih anlamı çözülmedi.
+
+## Ürün amacı ve kesinleşen kapsam
+
+
+BitigMail, müşteri şirketlere hizmet veren BT firmalarının farklı posta dosyaları ve servisleri arasında iletileri taşımasını, dönüştürmesini, arşivlemesini, bölümlemesini ve kurtarmasını kolaylaştıracak bir Windows uygulamasıdır. Mac'ten gelen arşivleri de işlemesi hedeflenir.
+
+- Çok yönlü kapsam: hesap ↔ hesap, dosya ↔ hesap, dosya ↔ dosya.
+- Dosyalar: MBOX, PST, EML, OST, OLM.
+- Servisler ve protokoller: IMAP, POP, Google Workspace, Exchange Online ve ihtiyacı ayrıca netleştirilecek şirket içi Exchange.
+- Eski hesap/orijinal Outlook profili olmadan yalnız OST dosyasından PST dönüşümü ve bozuk PST'den kurtarma.
+- Yaklaşık 100 GB'a ulaşan girdileri işleme; tarih/yıl, klasör ve boyuta göre arşiv bölümleme.
+- Tarih, klasör, gönderen/alıcı, alan adı, konu, içerik, ek ve boyut üzerinden seçili aktarım.
+- Aynı sağlayıcıdaki farklı hesaplar ve kurumlar arasında aktarım.
+
+Bu liste ürün hedefidir. Bir biçimin okunması yazılabildiği anlamına gelmez. Destek her kaynak/hedef yönü ve sürüm için ayrı kanıtlanacak. Çok yönlü aktarım, sürekli çift yönlü eşitleme veya silme yayılımı taahhüdü değildir.
+
+
+## Görsel ve kullanım temeli
+
+
+- Adın standart yazımı: **BitigMail**.
+- Beyaz çalışma yüzeyleri, sarı seçim vurguları, turuncu eylemler, koyu okunaklı metin.
+- Logo: iki katlanmış belgeyi B harfinde birleştiren işaret.
+- Kullanım referansı: MailStore Home'un klasör gezinmesi ve arama davranışları; ürün kimliği özgün.
+- İş düzeni: Müşteri → Proje → Kaynak/hedef → İş planı → Çalıştırma → Rapor (0.9.4 üst menüsü de bu sırayı izler).
+- Müşteriler sekmesi şirketleri, projeleri ve posta kaynaklarını gösterir; doğrudan tek posta kutusu açmaz.
+- Aktarım ve dönüşüm ayrı ana sekmedir: solda kaynaklar; ortada liste, filtre ve altında önizleme; sağda aktarım planı. İş merkezi izleme ekranıdır.
+- Arşiv ve aramada şirket → proje → posta kutusu/dosya arşivi ağacından birden fazla konum birlikte seçilir; sonuçlarda kaynak bağlamı korunur.
+- Satır odağı/önizleme ile aktarılacak ileti seçimi birbirinden ayrı tutulur.
+- Ön kontrolde çözülmemiş sorun varken aktarım başlatılamaz.
+
+Referanslar: [görsel tasarım kaydı](docs/VISUAL_DESIGN_V1.md), [logo](design/concepts/bitigmail-brand-v1.png), [proje ekranı](design/concepts/bitigmail-workspace-v1.png), [İş merkezi](design/concepts/bitigmail-job-center-v1.png), [Ön kontrol](design/concepts/bitigmail-preflight-v1.png).
+
+
+## Gerçek ürün için mimari ilkeler
+
+
+1. Kaynağı koruyan kopyalama varsayılanı; kurtarma yeni çıktıya yapılır.
+2. Arayüz ve arka plan işçisi ayrı sorumluluk taşır; iş ilerlemesi kalıcıdır.
+3. Büyük içerik akışla işlenir, tüm arşiv belleğe alınmaz. Disk alanı gerçek motor davranışına göre hesaplanır.
+4. Kaynak okuyucu, hedef yazıcı ve yetenekleri ayrı modellenir.
+5. Plan sürümü çalıştırma başladığında sabitlenir; sonraki filtre değişikliği eski raporu değiştirmez.
+6. Aktarılan, atlanan, kısmi, başarısız ve belirsiz sonuçlar öğe düzeyinde izlenir. Yeniden deneme kontrolsüz çoğaltmaya yol açmaz.
+7. Doğrudan taşıma için zorunlu tam ara arşiv oluşturulmaz. Kalıcı yönetilen arşiv ayrı kullanım biçimidir.
+8. Müşteri verileri ve bağlantıları ayrılır; sırlar raporlara yazılmaz. Gerçek kimlik bilgileri için Windows korumalı saklama tasarlanır.
+9. İleti önizlemesi etkin içerik çalıştırmaz ve uzak görselleri kendiliğinden yüklemez.
+10. Üretici bulutundan posta içeriği geçirmek varsayılan çözüm değildir; merkezi yönetim ayrıca kararlaştırılır.
+
+Bu ilkeler bugünkü motorda uygulanır ve sonraki geliştirmede korunur.
+
+
+---
+
+# Geçmiş kayıt
+
+> **Bu bölümün altı tarihli geçmiş kayıttır; güncel durum değildir.** Eylül 2026'da yazıldı ve o günkü durumu anlatır. Buradaki "henüz örnek veriyle", "gerçek posta hesabı bağlantısı yok", "Azure/Outlook Aşama 3" ve P0–P6 aşama adları gibi ifadeler sonradan aşıldı: arşiv/arama ve kurtarma bugün gerçek akışlardır; Azure ve kişisel Outlook pilotu 10. aşamadadır; bağlantıda SSL/TLS, STARTTLS ya da açık onayla şifresiz seçilebilir. Güncel durum için yukarıdaki bölümlere bakın. Çalışma düzeni ve ajan adları (ASTRA, SOL, Gemini) da eski düzene aittir.
+
+## Geçmiş — Eylül 2026 durum kayıtları
+
 
 **Son tamamlanan: Aşama 2 / TASK022–029 — performans ölçümleri, disk kontrolü, bellek iyileştirmeleri ve temel işlem kuyruğu.** Tek etkin işlem/32 bekleyen iş, sayfalı geçmiş, güvenli iptal ve yeniden açılış davranışları kabul edildi. Backend469/469, frontend143/143; üç ekran boyutu ve gerçek iki işlik sıra denemesi geçti. Yaklaşık1GiB testinde8192ileti/2464ek, MBOX/EML/arşiv/arama ve kaynak değişmezliği doğrulandı; eksik faz ölçümleri tamamlandı. Ayrıntılar: [Aşama 2 kapanışı](docs/STAGE2_COMPLETION_CHECKLIST.md), [tam sürüm planı](docs/FULL_RELEASE_ROADMAP.md).
 
@@ -37,7 +129,7 @@ Bu dosya projenin başlangıç noktasıdır. Yeni bir çalışma başlamadan gü
 
 **Önceki hazırlıklar: TASK-006 ve TASK-007 tamamlandı.** Kullanıcı eski hesap/orijinal Outlook profili olmadan OST→PST gereksinimini doğruladı ve örnek dosyası olmadığı için yapay veri hazırlanmasını istedi. [Motor adayları](docs/OST_ENGINE_DECISION.md) doğrudan dönüşüm ile öğeleri okuyup yeni PST'ye yazmayı ayrı sınar. [Deneme kümesi](fixtures/mail-corpus-v1/README.md): 12 EML, MBOX, 4 ek, 3 klasör ve beklenen sonuç manifesti. İki bağımsız üretim 13/13 kontrolden geçti; 14 üretilen dosyada hash farkı 0. Üretim motoru seçilmedi.
 
-**Son tamamlanan genel aşama: P1 — Kullanıcı geri bildirimleri uygulandı (TASK-005 DONE).** Müşteriler şirket/proje/kaynak dizinidir; Aktarım ve dönüşüm ayrı ana sekmedir. Arşiv ve arama birden fazla şirket, proje, posta kutusu ve dosya arşivini birlikte seçer; sonuçlar kaynak bağlamını gösterir. Örnek şirket/proje/kaynak ekleme ve seçim kalıcılığı çalışır. Ayrıntılı karar ve kabul ölçütleri: [ikinci yineleme](docs/PROTOTYPE_ITERATION_2.md). P1 teslimi örnek veriliydi; gerçek OST dönüşümü sonraki TASK-010 teslimiyle eklendi. Gerçek posta hesabı bağlantıları henüz yoktur.
+**Son tamamlanan genel aşama: P1 — Kullanıcı geri bildirimleri uygulandı (TASK-005 DONE).** Müşteriler şirket/proje/kaynak dizinidir; Aktarım ve dönüşüm ayrı ana sekmedir. Arşiv ve arama birden fazla şirket, proje, posta kutusu ve dosya arşivini birlikte seçer; sonuçlar kaynak bağlamını gösterir. Örnek şirket/proje/kaynak ekleme ve seçim kalıcılığı çalışır. Ayrıntılı karar ve kabul ölçütleri: [ikinci yineleme](docs/PROTOTYPE_ITERATION_2.md). P1 teslimi örnek veriliydi; gerçek OST dönüşümü sonraki TASK-010 teslimiyle eklendi. Gerçek posta hesabı bağlantıları henüz yoktur *(o tarihte; sonradan IMAP, POP ve OAuth bağlantıları eklendi)*.
 
 - Ürün gereksinimleri kaydedildi.
 - BitigMail adı ve sarı/turuncu/beyaz kimlik seçildi.
@@ -49,36 +141,8 @@ Bu dosya projenin başlangıç noktasıdır. Yeni bir çalışma başlamadan gü
 - Güncel doğrulama: 152 backend, 56 frontend testi; tip kontrolü, lint ve üretim derlemesi PASS. Eski OST/arşiv mock regresyonları 30/30 (24 ilk koşu + altı açıkça simüle edilen çevrimdışı koşulun hedefli tekrarı); gerçek MIME UI 3/3, root filtreli MIME HTTP 25/25 ve normal motor erişim sınırları 37/37 PASS. Üç ekran boyutunda kaynak/filtre/rapor/geçmiş akışı ve sabit müşteri bilgisi doğrulandı; bozuk/boş/deneme sınırını aşan kaynaklar UI'da da engellendi. Bağımsız libpff özgün MIME gövdelerini, temel üstveriyi ve ekleri ölçülen değerlendirme ekleriyle doğruladı. Önceki TASK012 kanıtları korunur; ayrıntılar MIME kabul belgesindedir.
 - Önizleme: http://127.0.0.1:5173/; normal yerel hizmet: 127.0.0.1:6174. Teslimde ikisi açık, test hizmeti 6175 kapalı. Yeniden başlatma: [çalıştırma kılavuzu](README.md). Güncel kanıtlar: [PST bölümleme doğrulaması](docs/PST_SPLIT_VALIDATION.md).
 
-## 2. Ürün amacı ve kesinleşen kapsam
+## Geçmiş — Aşamalar ve bitiş ölçütleri
 
-BitigMail, müşteri şirketlere hizmet veren BT firmalarının farklı posta dosyaları ve servisleri arasında iletileri taşımasını, dönüştürmesini, arşivlemesini, bölümlemesini ve kurtarmasını kolaylaştıracak bir Windows uygulamasıdır. Mac'ten gelen arşivleri de işlemesi hedeflenir.
-
-- Çok yönlü kapsam: hesap ↔ hesap, dosya ↔ hesap, dosya ↔ dosya.
-- Dosyalar: MBOX, PST, EML, OST, OLM.
-- Servisler ve protokoller: IMAP, POP, Google Workspace, Exchange Online ve ihtiyacı ayrıca netleştirilecek şirket içi Exchange.
-- Eski hesap/orijinal Outlook profili olmadan yalnız OST dosyasından PST dönüşümü ve bozuk PST'den kurtarma.
-- Yaklaşık 100 GB'a ulaşan girdileri işleme; tarih/yıl, klasör ve boyuta göre arşiv bölümleme.
-- Tarih, klasör, gönderen/alıcı, alan adı, konu, içerik, ek ve boyut üzerinden seçili aktarım.
-- Aynı sağlayıcıdaki farklı hesaplar ve kurumlar arasında aktarım.
-
-Bu liste ürün hedefidir. Bir biçimin okunması yazılabildiği anlamına gelmez. Destek her kaynak/hedef yönü ve sürüm için ayrı kanıtlanacak. Çok yönlü aktarım, sürekli çift yönlü eşitleme veya silme yayılımı taahhüdü değildir.
-
-## 3. Görsel ve kullanım temeli
-
-- Adın standart yazımı: **BitigMail**.
-- Beyaz çalışma yüzeyleri, sarı seçim vurguları, turuncu eylemler, koyu okunaklı metin.
-- Logo: iki katlanmış belgeyi B harfinde birleştiren işaret.
-- Kullanım referansı: MailStore Home'un klasör gezinmesi ve arama davranışları; ürün kimliği özgün.
-- İş düzeni: Müşteri → Proje → Kaynak/hedef → İş planı → Çalıştırma → Rapor.
-- Müşteriler sekmesi şirketleri, projeleri ve posta kaynaklarını gösterir; doğrudan tek posta kutusu açmaz.
-- Aktarım ve dönüşüm ayrı ana sekmedir: solda kaynaklar; ortada liste, filtre ve altında önizleme; sağda aktarım planı. İş merkezi izleme ekranıdır.
-- Arşiv ve aramada şirket → proje → posta kutusu/dosya arşivi ağacından birden fazla konum birlikte seçilir; sonuçlarda kaynak bağlamı korunur.
-- Satır odağı/önizleme ile aktarılacak ileti seçimi birbirinden ayrı tutulur.
-- Ön kontrolde çözülmemiş sorun varken aktarım başlatılamaz.
-
-Referanslar: [görsel tasarım kaydı](docs/VISUAL_DESIGN_V1.md), [logo](design/concepts/bitigmail-brand-v1.png), [proje ekranı](design/concepts/bitigmail-workspace-v1.png), [İş merkezi](design/concepts/bitigmail-job-center-v1.png), [Ön kontrol](design/concepts/bitigmail-preflight-v1.png).
-
-## 4. Aşamalar ve bitiş ölçütleri
 
 | Aşama | Kapsam | Bitiş ölçütü | Durum |
 |---|---|---|---|
@@ -92,7 +156,8 @@ Referanslar: [görsel tasarım kaydı](docs/VISUAL_DESIGN_V1.md), [logo](design/
 
 Aşamalar geliştirme sırasıdır; ürünün kapsamını tek yönlü aktarım aracına daraltmaz. Takvim ve ticari sürüm taahhüdü gerçek fizibilite sonuçları çıkmadan verilmez. Bağımsız teknik denemeler gerektiğinde P2 içinde birlikte yürütülebilir; P3/P4 üretim işleri ilgili motor kararına bağlıdır.
 
-## 5. P1 prototip kapsamı ve teslimi
+## Geçmiş — P1 prototip kapsamı ve teslimi
+
 
 Prototip `prototype/` altında yerelde açılan React + TypeScript + Vite arayüzüdür. Bu seçim üretim Windows kabuğunu, gerçek motor dilini veya veritabanını kesinleştirmez. Örnek verilerle etkileşim, Türkçe arayüz ve mevcut görsellere sadakat temel alınmıştır. Aşağıdaki kapsam P1 yapım sözleşmesidir; güncel doğrulama sonuçları üstteki durum bölümündedir.
 
@@ -107,22 +172,8 @@ Ana senaryo: Müşteriler veya İş merkezi → Aktarım ve dönüşüm → mü�
 
 Ayrıntılı yapım sözleşmesi: [PROTOTYPE_SPEC.md](docs/PROTOTYPE_SPEC.md).
 
-## 6. Gerçek ürün için mimari ilkeler
+## Geçmiş — Açık kararlar ve ele alınacağı aşama
 
-1. Kaynağı koruyan kopyalama varsayılanı; kurtarma yeni çıktıya yapılır.
-2. Arayüz ve arka plan işçisi ayrı sorumluluk taşır; iş ilerlemesi kalıcıdır.
-3. Büyük içerik akışla işlenir, tüm arşiv belleğe alınmaz. Disk alanı gerçek motor davranışına göre hesaplanır.
-4. Kaynak okuyucu, hedef yazıcı ve yetenekleri ayrı modellenir.
-5. Plan sürümü çalıştırma başladığında sabitlenir; sonraki filtre değişikliği eski raporu değiştirmez.
-6. Aktarılan, atlanan, kısmi, başarısız ve belirsiz sonuçlar öğe düzeyinde izlenir. Yeniden deneme kontrolsüz çoğaltmaya yol açmaz.
-7. Doğrudan taşıma için zorunlu tam ara arşiv oluşturulmaz. Kalıcı yönetilen arşiv ayrı kullanım biçimidir.
-8. Müşteri verileri ve bağlantıları ayrılır; sırlar raporlara yazılmaz. Gerçek kimlik bilgileri için Windows korumalı saklama tasarlanır.
-9. İleti önizlemesi etkin içerik çalıştırmaz ve uzak görselleri kendiliğinden yüklemez.
-10. Üretici bulutundan posta içeriği geçirmek varsayılan çözüm değildir; merkezi yönetim ayrıca kararlaştırılır.
-
-Bu ilkeler prototipte gerçek motor varmış gibi sunulmaz; üretim mimarisini yönlendirir.
-
-## 7. Açık kararlar ve ele alınacağı aşama
 
 | Karar | Ne zaman gerekli? |
 |---|---|
@@ -137,7 +188,8 @@ Bu ilkeler prototipte gerçek motor varmış gibi sunulmaz; üretim mimarisini y
 
 Bu kararlar örnek verili P1 prototipini engellemez. Alan adı satın alınmadı ve marka tescili yapılmadı.
 
-## 8. Çalışma ve doğrulama düzeni
+## Geçmiş — Çalışma ve doğrulama düzeni
+
 
 - Yönetim ve mimari: ASTRA HIGH. Normal uygulama: mevcut SOL denetiminde resmi Antigravity CLI üzerinden Gemini.
 - Yeni Codex görevi veya Codex alt ajanı oluşturulmaz. Mevcut iki görev korunur.
@@ -147,7 +199,8 @@ Bu kararlar örnek verili P1 prototipini engellemez. Alan adı satın alınmadı
 - Kritik veri bütünlüğü/mimari kararları Astra'da kalır.
 - Koordinasyon dosyaları .codex-coordination altında yereldir, commit edilmez. Git kurulursa yerel exclude kullanılır.
 
-## 9. Devam ederken izlenecek kayıt düzeni
+## Geçmiş — Devam ederken izlenecek kayıt düzeni
+
 
 Her anlamlı teslim sonunda bu dosyanın “Bugünkü durum” bölümü ve aşağıdaki kayıt güncellenir: yapılan iş, kanıt dosyası, kalan sınırlama ve sıradaki somut adım. Ürün kararları yalnız görev sohbetinde bırakılmaz. Tamamlanmayan aşama tamamlandı işaretlenmez.
 
@@ -170,9 +223,10 @@ Her anlamlı teslim sonunda bu dosyanın “Bugünkü durum” bölümü ve aşa
 | 2026-09-13 | TASK-013 tamamlandı: EML/EML ağacı/mboxrd→PST, kalıcı rapor ve mevcut arşivleme entegrasyonu; özgün ölçülen içerik değerlendirme ekleriyle korundu. Kullanıcı lisans almadan deneme çıktılarıyla devam etmeyi seçti | docs/MIME_IMPORT_WORKFLOW.md, docs/MIME_IMPORT_VALIDATION.md |
 | 2026-09-13 | TASK-014 tamamlandı: gerçek IMAP hesapları, dondurulmuş filtreli önizleme, iki yönlü kopyalama, durable journal/resume, rapor ve gerçek responsive UI | docs/IMAP_TRANSFER_WORKFLOW.md, docs/IMAP_TRANSFER_VALIDATION.md |
 
-**Güncel durum:** TASK-016 yerel kabulü tamamlandı (**LOCAL_READY / LIVE_PERSONAL_PILOT_PENDING**). Kurumsal Microsoft 365 yanında kişisel Outlook.com/Hotmail `consumers` authority modu, MSA tenant kimliği doğrulaması, mode-switch izolasyonu, reconnect ve kaynak/hedef seçicileri deterministik olarak doğrulandı. BitigMail kişisel uygulama kaydı/Client ID, gerçek giriş ve ayrı BitigMail-Test klasöründeki yapay iletilerle silmesiz pilot henüz yapılmadı. Kurumsal pilot ayrıca **LIVE_PILOT_PENDING** kalır. Google OAuth, 100 GB ve kurtarma desteği henüz kanıtlanmadı.
+**Güncel durum:** TASK-016 yerel kabulü tamamlandı (**LOCAL_READY / LIVE_PERSONAL_PILOT_PENDING**). Kurumsal Microsoft 365 yanında kişisel Outlook.com/Hotmail `consumers` authority modu, MSA tenant kimliği doğrulaması, mode-switch izolasyonu, reconnect ve kaynak/hedef seçicileri deterministik olarak doğrulandı. BitigMail kişisel uygulama kaydı/Client ID, gerçek giriş ve ayrı BitigMail-Test klasöründeki yapay iletilerle silmesiz pilot henüz yapılmadı. Kurumsal pilot ayrıca **LIVE_PILOT_PENDING** kalır. Google OAuth, 100 GB ve kurtarma desteği henüz kanıtlanmadı. *(Sonradan: Google OAuth altyapısı TASK031, kurtarma Aşama 6 ile yerel kabul aldı; 100 GB açık.)*
 
-## 10. İlgili belgeler
+## Geçmiş — İlgili belgeler
+
 
 ### 2026-09-14 — Canlı Microsoft pilotunun ertelenmesi ve yerel işlerin onayı
 
@@ -194,25 +248,20 @@ Kullanıcı bu işlerden sonra Azure ve gerçek Outlook pilotunun mutlaka hatır
 
 Eski belgelerdeki “kodlama başlamadı / kullanıcı seçimi bekleniyor” ifadeleri tarihsel bağlamdır; güncel uygulama durumu bu dosyada tutulur. Öncelik: kullanıcının son kararı → bu ana plan → ilgili ayrıntı belgesi → görev paketi. Çelişki fark edilirse kayıtlar düzeltilir.
 
-
-
-
-
-
 2026-09-14 — TASK022 ilk performans dilimi TAMAMLANDI; Aşama2 devam ediyor.
 Aynı iletinin ikinci kez indirilmesi kaldırıldı. 1024 ileti/308 ek,133847116 ham bayt ile önce/sonra kabulü: önizleme10,63 ->8,93 sn; aktarım57,53 ->52,01 sn. Tek yerel karşılaştırma; genel hız garantisi değildir. Önizleme tepe belleği biraz arttı; aktarım tepe belleği azaldı. Backend448/448PASS; ham içerik/ek/metadata ve kaynak12/4 korunmasıPASS. Kanıt: .codex-coordination/results/TASK-022.md ve evidence/TASK-022/root-comparison.json.
-Sıradaki Aşama2 işi: çıktı alanı için disk ön kontrolü; ardından son doğrulama/klasör erişimi, büyük liste/kuyruk davranışı ve eksik1GiB ölçümleri. Azure/gerçekOutlook Aşama3 manuel hatırlatma olarak açık; zamanlayıcı yok.
+Sıradaki Aşama2 işi: çıktı alanı için disk ön kontrolü; ardından son doğrulama/klasör erişimi, büyük liste/kuyruk davranışı ve eksik1GiB ölçümleri. Azure/gerçek Outlook pilotu o tarihte Aşama 3 notuydu; sonradan Aşama 10'a taşındı; zamanlayıcı yok.
 
 2026-09-14 — TASK023 disk kontrolünün ilk dilimi TAMAMLANDI; Aşama2 devam ediyor.
 IMAP -> EML/mboxrd önizlemesinde tahmini gereken/kullanılabilir alan görünür. Yetersiz veya sorgulanamayan alanda yeni plan engellenir; iş başlamadan tekrar kontrol edilir. Backend454/454 ve aktarım ekranı21/21PASS; typecheck/lint/buildPASS. Gerçek12ileti EML aktarımı eksiksiz; kaynak12/4 korundu. Normal6174 güncelReleasePID24924; Vite5173PID13512; test6175kapalı.
-Kapsam ve kalan disk işleri: docs/DISK_CAPACITY_SCOPE.md. Eski tahminsiz planlar önceki devam davranışını korur; kontrol alan rezervasyonu değildir. PST/OST/bölme/yönetilen arşiv disk kontrolleri henüz bu kabulde yok. Ardından son doğrulama/klasör erişimi, bellek/büyük liste/kuyruk ve eksik1GiB ölçümleri açık. Azure/Outlook Aşama3; zamanlayıcı yok.
+Kapsam ve kalan disk işleri: docs/DISK_CAPACITY_SCOPE.md. Eski tahminsiz planlar önceki devam davranışını korur; kontrol alan rezervasyonu değildir. PST/OST/bölme/yönetilen arşiv disk kontrolleri henüz bu kabulde yok. Ardından son doğrulama/klasör erişimi, bellek/büyük liste/kuyruk ve eksik1GiB ölçümleri açık. Azure/Outlook pilotu (sonradan Aşama 10); zamanlayıcı yok.
 
 2026-09-15 — TASK024 TAMAMLANDI ve root tarafından kabul edildi. Ortak disk kapasitesi kontrolü OST->PST, PST/OST bölme, EML/mboxrd->PST ve yönetilen arşivleme akışlarına eklendi; TASK023 IMAP->EML/mboxrd davranışı korunur. Hedef kullanılabilir alanı ilk çıktı yazımından önce kontrol edilir; bilinmeyen/yetersiz alan açık engeldir. Tahminler güvenlik payıdır, alan rezervasyonu/garantisi değildir. Arşivde mevcut ortak taban için ham+indeks/WAL toplamı hesaplanır; ayrı indeks hedefi desteklenmez.
 Kabul: backend460/460PASS0skip; kapasite12/12PASS; ilgili frontend36/36PASS; typecheck/lint/buildPASS. Küçük SDK dönüşüm/bölme ve gerçek corpus arşiv/arama senaryoları tam regresyon içinde çalıştı; bağımsız yeni canlı sağlayıcı testi veya büyük ölçek deneyi yapılmadı. Kanıt .codex-coordination/results/TASK-024.md ve evidence/TASK-024/verification-summary.json. Kapsam docs/DISK_CAPACITY_SCOPE.md.
-Normal güncelRelease6174PID20792; Vite5173PID21576; test6175kapalı. Aşama2 DEVAM EDİYOR: sırada son doğrulama/klasör erişimi performansı, bellek ve büyük liste/kuyruk davranışı, eksik1GiB ölçümleri. Azure/gerçekOutlook Aşama3; zamanlayıcı yok.
+Normal güncelRelease6174PID20792; Vite5173PID21576; test6175kapalı. Aşama2 DEVAM EDİYOR: sırada son doğrulama/klasör erişimi performansı, bellek ve büyük liste/kuyruk davranışı, eksik1GiB ölçümleri. Azure/gerçek Outlook pilotu (sonradan Aşama 10); zamanlayıcı yok.
 
 2026-09-15 — TASK025 TAMAMLANDI. Dışa aktarımda sadece hash kontrolü için kullanılan üç tam dosya tamponu akış okumasına çevrildi; kısa ömürlü MIME nesneleri kullanım sonrası kapatılır. MBOX yazıcısı ve bütünlük kontrolleri korunur. Backend460/460, hedefli16/16PASS. Aynı1024ileti/308ek,133847116 ham baytta iki koşunun raw/MIME/metadata kontrolüPASS; kaynak12/4 ve önce/sonra kaynak+IMAPsnapshotları değişmedi.
 Tek yerel önce/sonra gözlemi: önizleme6,885->6,649sn, tepeWS581910528->496398336bayt(-%14,70); aktarım45,289->43,791sn, tepeWS804315136->732250112bayt(-%8,96). Genel hız/bellek garantisi değildir. Kanıt .codex-coordination/results/TASK-025.md ve evidence/TASK-025/root-comparison.json.
-Güncel normalRelease6174PID48492; Vite5173PID21576; test6175kapalı. Aşama2 DEVAM: sunucudaki son hedef doğrulamasında tekrarlanan klasör erişimi için güvenli kapsamlı oturum tasarımı/ölçümü, diğer bellek ve büyük liste/kuyruk işleri, eksik1GiBtelemetri. Klasör oturumu/batch değişikliği henüz yapılmadı; clientmetot sayısı gerçekprotokolkomut ölçümü değildir. Azure/gerçekOutlook Aşama3; zamanlayıcı yok.
+Güncel normalRelease6174PID48492; Vite5173PID21576; test6175kapalı. Aşama2 DEVAM: sunucudaki son hedef doğrulamasında tekrarlanan klasör erişimi için güvenli kapsamlı oturum tasarımı/ölçümü, diğer bellek ve büyük liste/kuyruk işleri, eksik1GiBtelemetri. Klasör oturumu/batch değişikliği henüz yapılmadı; clientmetot sayısı gerçekprotokolkomut ölçümü değildir. Azure/gerçek Outlook pilotu (sonradan Aşama 10); zamanlayıcı yok.
 
 2026-09-15 — TASK031 yerel geliştirme kabulü tamamlandı:511motor/145arayüztesti, GoogleOAuth+sağlayıcıprofilleri/tanılama ve gerçekTestingHost UI. CanlıGoogle/tenant/kota/APPEND doğrulanmadı. Azure/gerçekOutlook10. TASK032 EMLXaktarımı ile Aşama4 başladı. Normalhost yenidenbaşlatma otomatikonaydenetiminde reddedildi; eskimotorönizlemesi korunuyor, geliştirmeler ayrıtestortamında sürer.
