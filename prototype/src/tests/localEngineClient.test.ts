@@ -368,4 +368,35 @@ describe('Local OST Workflow Logic & Contract Negatives', () => {
     expect(report.jobId).toBe(job1Id);
     expect(report.clientContext.companyName).toBe('Müşteri Alfa');
   });
+  // TASK-044: üretim kimliğiyle motorun anonim oturum uçları kapalıdır; hazır denetimi kimlik ucunu kullanmalı.
+  it('checks readiness through the identity endpoint after login and never calls legacy anonymous session routes', async () => {
+    const client = new LocalEngineClient('http://127.0.0.1:6174');
+    const calls: string[] = [];
+    globalThis.fetch = vi.fn().mockImplementation(async (url: string, init?: RequestInit) => {
+      const path = new URL(url).pathname;
+      calls.push(`${init?.method || 'GET'} ${path}`);
+      if (path === '/api/auth/login') return { ok: true, json: async () => ({ token: 'identity-token' }) } as Response;
+      if (path === '/api/auth/me') return { ok: true, json: async () => ({ userId: 'u', role: 'Admin' }) } as Response;
+      return { ok: false, status: 404, json: async () => ({}) } as Response;
+    });
+    await client.login('admin', 'correct horse battery');
+    await client.checkReady();
+    await client.checkReady({ reuseSession: true });
+    expect(calls).toEqual(['POST /api/auth/login', 'GET /api/auth/me', 'GET /api/auth/me']);
+    const meCall = (globalThis.fetch as any).mock.calls[1];
+    expect(meCall[1].headers['X-BitigMail-Session']).toBe('identity-token');
+  });
+
+  it('keeps the anonymous development readiness check when no identity session exists', async () => {
+    const client = new LocalEngineClient('http://127.0.0.1:6174');
+    const calls: string[] = [];
+    globalThis.fetch = vi.fn().mockImplementation(async (url: string, init?: RequestInit) => {
+      const path = new URL(url).pathname;
+      calls.push(`${init?.method || 'GET'} ${path}`);
+      if (path === '/api/session') return { ok: true, json: async () => ({ token: 'dev-token', version: '0.1.0' }) } as Response;
+      return { ok: true, json: async () => ({ status: 'ok', hasActiveSession: true }) } as Response;
+    });
+    await client.checkReady();
+    expect(calls).toEqual(['POST /api/session', 'GET /api/session/status']);
+  });
 });

@@ -145,9 +145,8 @@ export function useLocalSplitEngine(options?: UseLocalSplitEngineOptions) {
   const checkService = useCallback(async () => {
     try {
       setServiceStatus('checking');
-      await client.initSession();
-      const status = await client.getStatus();
-      if (status && isMountedRef.current) {
+      await client.checkReady();
+      if (isMountedRef.current) {
         setServiceStatus('online');
         try {
           const currentEpoch = workflowEpochRef.current;

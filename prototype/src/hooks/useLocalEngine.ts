@@ -126,9 +126,8 @@ export function useLocalEngine(options?: UseLocalEngineOptions) {
   const checkService = useCallback(async () => {
     try {
       setServiceStatus('checking');
-      await client.initSession();
-      const status = await client.getStatus();
-      if (status && isMountedRef.current) {
+      await client.checkReady();
+      if (isMountedRef.current) {
         setServiceStatus('online');
         // Refresh past jobs
         try {

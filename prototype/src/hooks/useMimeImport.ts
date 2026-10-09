@@ -76,7 +76,7 @@ export function useMimeImport(context: ClientProjectContext, targetJobId: string
 
   async function connect() {
     setStatus('checking');
-    try { await client.getStatus().catch(async () => { await client.initSession(); await client.getStatus(); }); if (mounted.current) setStatus('online'); }
+    try { await client.checkReady({ reuseSession: true }); if (mounted.current) setStatus('online'); }
     catch { if (mounted.current) setStatus('offline'); }
   }
 

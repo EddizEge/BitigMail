@@ -130,6 +130,8 @@ export class LocalEngineClient {
   }
   private baseUrl: string;
   private sessionToken: string | null = null;
+  // Oturum, ilk yönetici kurulumu ya da giriş ile (üretim kimliği) açıldıysa true; anonim geliştirme oturumunda false.
+  private identitySession = false;
 
   constructor(baseUrl?: string) {
     const configuredUrl =
@@ -156,12 +158,32 @@ export class LocalEngineClient {
 
   public clearSession(): void {
     this.sessionToken = null;
+    this.identitySession = false;
+  }
+
+  /**
+   * Motorun hazır olup olmadığını denetler. Üretim kimliğiyle oturum açılmışsa anonim oturum uçları
+   * (/api/session, /api/session/status) motor tarafından bilerek kapalıdır; bu durumda kimlik ucu kullanılır.
+   * Kimliksiz geliştirme / test oturumunda eski davranış korunur.
+   */
+  public async checkReady(options: { reuseSession?: boolean } = {}): Promise<void> {
+    if (this.identitySession && this.sessionToken) {
+      const res = await fetch(`${this.getBaseUrl()}/api/auth/me`, { headers: this.getHeaders(), cache: 'no-store' });
+      if (!res.ok) throw new Error(`Servis durumu alınamadı: HTTP ${res.status}`);
+      return;
+    }
+    if (options.reuseSession) {
+      await this.getStatus().catch(async () => { await this.initSession(); await this.getStatus(); });
+      return;
+    }
+    await this.initSession();
+    await this.getStatus();
   }
 
   public async getSetupStatus():Promise<{initialized:boolean;nativeProofAvailable:boolean}>{const res=await fetch(`${this.getBaseUrl()}/api/setup/status`,{headers:this.getHeaders()});if(!res.ok)throw new Error(`Kurulum durumu alınamadı: HTTP ${res.status}`);return res.json();}
-  public async setupFirstAdmin(userName:string,password:string,proof:string):Promise<any>{const res=await fetch(`${this.getBaseUrl()}/api/setup/first-admin`,{method:'POST',headers:this.getHeaders(true),body:JSON.stringify({userName,password,proof})});if(!res.ok){const e=await res.json().catch(()=>null);if(res.status===401)throw new Error('Güvenli kurulum kanıtının süresi doldu veya doğrulanamadı. Yeniden deneyin; sorun sürerse BitigMail uygulamasını kapatıp açın.');throw new Error(e?.error||'İlk yönetici oluşturulamadı.');}const data=await res.json();this.sessionToken=data.token;return data;}
-  public async login(userName:string,password:string):Promise<any>{const res=await fetch(`${this.getBaseUrl()}/api/auth/login`,{method:'POST',headers:this.getHeaders(true),body:JSON.stringify({userName,password})});if(!res.ok)throw new Error('Kullanıcı adı veya parola geçersiz.');const data=await res.json();this.sessionToken=data.token;return data;}
-  public async logout():Promise<void>{if(this.sessionToken)await fetch(`${this.getBaseUrl()}/api/auth/logout`,{method:'POST',headers:this.getHeaders(true),body:'{}'});this.sessionToken=null;}
+  public async setupFirstAdmin(userName:string,password:string,proof:string):Promise<any>{const res=await fetch(`${this.getBaseUrl()}/api/setup/first-admin`,{method:'POST',headers:this.getHeaders(true),body:JSON.stringify({userName,password,proof})});if(!res.ok){const e=await res.json().catch(()=>null);if(res.status===401)throw new Error('Güvenli kurulum kanıtının süresi doldu veya doğrulanamadı. Yeniden deneyin; sorun sürerse BitigMail uygulamasını kapatıp açın.');throw new Error(e?.error||'İlk yönetici oluşturulamadı.');}const data=await res.json();this.sessionToken=data.token;this.identitySession=true;return data;}
+  public async login(userName:string,password:string):Promise<any>{const res=await fetch(`${this.getBaseUrl()}/api/auth/login`,{method:'POST',headers:this.getHeaders(true),body:JSON.stringify({userName,password})});if(!res.ok)throw new Error('Kullanıcı adı veya parola geçersiz.');const data=await res.json();this.sessionToken=data.token;this.identitySession=true;return data;}
+  public async logout():Promise<void>{if(this.sessionToken)await fetch(`${this.getBaseUrl()}/api/auth/logout`,{method:'POST',headers:this.getHeaders(true),body:'{}'});this.sessionToken=null;this.identitySession=false;}
   public async getCurrentIdentity():Promise<any>{await this.ensureSession();const res=await fetch(`${this.getBaseUrl()}/api/auth/me`,{headers:this.getHeaders()});if(!res.ok)throw new Error('Oturum bilgisi alınamadı.');return res.json();}
   public async createCatalogCompany(name:string,projectName:string):Promise<any>{return this.mimePost('/api/catalog/companies',{name,projectName});}
   public async createCatalogProject(companyId:string,name:string):Promise<any>{return this.mimePost(`/api/catalog/companies/${encodeURIComponent(companyId)}/projects`,{name});}
