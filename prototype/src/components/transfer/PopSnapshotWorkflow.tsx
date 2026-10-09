@@ -14,6 +14,12 @@ export function PopSnapshotWorkflow({ companyId, projectId, client }: { companyI
   async function preview() { try { setPlan(await client.previewPop({ accountId, companyId, projectId })); } catch (caught) { setError(caught instanceof Error ? caught.message : String(caught)); } }
   async function pickOutput() { const selected = await client.pickOutputDir(); if (!selected.cancelled && selected.handle) setOutput(selected.handle); }
   async function start() { if (!plan || !output) return; setJob(await client.startPop({ planId: plan.planId, companyId, projectId, outputDirHandle: output, idempotencyKey: crypto.randomUUID(), enqueueIfBusy: true })); }
+  // İş bitene dek durumu yenile; aksi hâlde ekran başlangıç yanıtında ("indiriliyor 0/N") kalır.
+  useEffect(() => {
+    if (!job || job.status === 'completed' || job.status === 'failed' || job.status === 'interrupted') return;
+    const timer = window.setTimeout(() => { client.getJob(job.jobId).then(setJob).catch((caught) => setError(caught instanceof Error ? caught.message : String(caught))); }, 1000);
+    return () => window.clearTimeout(timer);
+  }, [job, client]);
   return <section className="mime-workflow" data-testid="pop-workflow"><header className="mime-header"><div><span className="mime-eyebrow">POP'tan EML'e</span><h2>POP kaynağından alın: doğrulanmış EML</h2><p>Postalar sunucuda kalır; BitigMail silme komutu göndermez. POP hedefi ve silme işlemi yoktur.</p><p className="mime-muted" data-testid="pop-filter-guidance">POP'ta indirmeden önce tam gövde filtresi desteklenmez; filtreyi indirdikten sonra EML / MBOX → PST akışında uygulayabilirsiniz.</p></div></header>{error && <p role="alert" className="mime-error">{error}</p>}
     <section className="card mime-card"><h3>1. POP hesabını bağlayın</h3><div className="form-grid">
       <label>Hesap adı<input placeholder="Örn. Eski destek kutusu" value={form.displayName} onChange={(e) => setForm({ ...form, displayName: e.target.value })}/></label>
@@ -27,6 +33,6 @@ export function PopSnapshotWorkflow({ companyId, projectId, client }: { companyI
       <button className="btn btn-outline-gray" disabled={form.tlsMode === 'none' && !form.allowUnencryptedConnection} onClick={create}>POP hesabını kaydet</button>
     </section>
     <section className="card mime-card"><h3>2. İndirilecek iletileri doğrulayın</h3><label>Kayıtlı hesap<select aria-label="POP hesabı" value={accountId} onChange={(e) => setAccountId(e.target.value)}>{accounts.map((account) => <option key={account.accountId} value={account.accountId}>{account.displayName}</option>)}</select></label><button className="btn btn-primary-orange" data-testid="pop-preview" disabled={!accountId} onClick={preview}>İndirilecek iletileri listele</button>{plan && <p>{plan.items.length} ileti listelendi · liste bu iş için sabitlendi</p>}<details className="tech-details"><summary>Teknik ayrıntılar</summary><div className="tech-details-body">Liste, sunucunun UIDL / LIST yanıtından değişmez bir anlık görüntü olarak alınır. Sunucudaki sıra veya kimlikler değişirse iş güvenli biçimde durur; kaynakta DELE komutu gönderilmez.</div></details></section>
-    {plan && <section className="card mime-card"><h3>3. Doğrulanmış EML çıktısı</h3><button className="btn btn-outline-gray" onClick={pickOutput}>Çıktı klasörü seç</button><button className="btn btn-primary-orange" data-testid="pop-start" disabled={!output} onClick={start}>İndirmeyi başlat</button>{job && <p data-testid="pop-job-status">{job.stage} · {job.itemsWritten}/{job.totalItems}</p>}</section>}
+    {plan && <section className="card mime-card"><h3>3. Doğrulanmış EML çıktısı</h3><button className="btn btn-outline-gray" onClick={pickOutput}>Çıktı klasörü seç</button><button className="btn btn-primary-orange" data-testid="pop-start" disabled={!output} onClick={start}>İndirmeyi başlat</button>{job && <p data-testid="pop-job-status">{job.stage} · {job.itemsWritten}/{job.totalItems}</p>}{job?.status === 'failed' && job.errorMessage && <p role="alert" className="mime-error" data-testid="pop-job-error">{job.errorMessage}</p>}</section>}
   </section>;
 }
